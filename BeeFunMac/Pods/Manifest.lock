@@ -1,0 +1,119 @@
+PODS:
+  - Alamofire (4.7.0)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - CryptoSwift (0.8.3)
+  - Fabric (1.7.5)
+  - FlatButton (1.4)
+  - Kanna (4.0.0)
+  - KeychainAccess (3.1.0)
+  - Kingfisher (4.6.3)
+  - MASPreferences (1.3)
+  - MASShortcut (2.3.6)
+  - Moya (11.0.1):
+    - Moya/Core (= 11.0.1)
+  - Moya/Core (11.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - OAuthSwift (1.2.0)
+  - ObjectMapper (3.1.0)
+  - ProgressKit (0.6.1)
+  - ReachabilitySwift (4.1.0)
+  - Result (3.2.4)
+  - SnapKit (4.0.0)
+  - Sparkle (1.18.1)
+  - SQLite.swift (0.11.4):
+    - SQLite.swift/standard (= 0.11.4)
+  - SQLite.swift/standard (0.11.4)
+  - SwiftDate (4.5.1)
+  - SwifterSwift (4.2.0):
+    - SwifterSwift/AppKit (= 4.2.0)
+    - SwifterSwift/CoreGraphics (= 4.2.0)
+    - SwifterSwift/CoreLocation (= 4.2.0)
+    - SwifterSwift/Foundation (= 4.2.0)
+    - SwifterSwift/MapKit (= 4.2.0)
+    - SwifterSwift/SwiftStdlib (= 4.2.0)
+    - SwifterSwift/UIKit (= 4.2.0)
+  - SwifterSwift/AppKit (4.2.0)
+  - SwifterSwift/CoreGraphics (4.2.0)
+  - SwifterSwift/CoreLocation (4.2.0)
+  - SwifterSwift/Foundation (4.2.0)
+  - SwifterSwift/MapKit (4.2.0)
+  - SwifterSwift/SwiftStdlib (4.2.0)
+  - SwifterSwift/UIKit (4.2.0)
+  - SwiftyBeaver (1.5.1)
+  - SwiftyJSON (4.0.0)
+  - SwiftyStoreKit (0.13.1)
+  - Zip (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Crashlytics
+  - CryptoSwift
+  - Fabric
+  - FlatButton (from `https://github.com/OskarGroth/FlatButton.git`)
+  - Kanna (from `https://github.com/tid-kijyun/Kanna.git`, branch `feature/v4.0.0`)
+  - KeychainAccess
+  - Kingfisher
+  - MASPreferences
+  - MASShortcut
+  - Moya
+  - OAuthSwift
+  - ObjectMapper
+  - ProgressKit
+  - ReachabilitySwift
+  - SnapKit
+  - Sparkle
+  - SQLite.swift
+  - SwiftDate
+  - SwifterSwift
+  - SwiftyBeaver
+  - SwiftyJSON
+  - SwiftyStoreKit
+  - Zip
+
+EXTERNAL SOURCES:
+  FlatButton:
+    :git: https://github.com/OskarGroth/FlatButton.git
+  Kanna:
+    :branch: feature/v4.0.0
+    :git: https://github.com/tid-kijyun/Kanna.git
+
+CHECKOUT OPTIONS:
+  FlatButton:
+    :commit: d2adc605a469168df148d000c50d78ed8aae0bf3
+    :git: https://github.com/OskarGroth/FlatButton.git
+  Kanna:
+    :commit: 81ce91fd485b637517c340c73590a9b59ac9f7d5
+    :git: https://github.com/tid-kijyun/Kanna.git
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  CryptoSwift: 033efc3523865d19cc6ab6612fa17a62613b5dfa
+  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
+  FlatButton: d894cd742a908be216ae1a3e90542fbe82ba3768
+  Kanna: d5ae2a26472f7e7a474e7f36a9cd8aa2c8c63ad3
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
+  MASPreferences: c08b8622dd17b47da87669e741efd7c92e970e8c
+  MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
+  Moya: 3d594ada51a21cc02b18739ab578a1984f900c8a
+  OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  ProgressKit: c6c640344bb7512db1c9c7e33dee63c8f663b98f
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Sparkle: 06ea33170007c5937ee54da481b4481af98fac79
+  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwifterSwift: 1d101dcfb0c3123226900f3b4d220d57fb60d546
+  SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwiftyStoreKit: c36bb7841dd51a485ce5c38abf9e96fba988741f
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
+
+PODFILE CHECKSUM: 3dade0676dcec1b479e8e68ec2de8bce549d4807
+
+COCOAPODS: 1.4.0

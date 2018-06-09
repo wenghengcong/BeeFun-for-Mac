@@ -1,0 +1,71 @@
+
+platform :osx, '10.12'
+# http://guides.cocoapods.org/using/the-podfile.html
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target 'BeeFun' do
+	use_frameworks!
+    #UI
+    pod 'Sparkle'
+
+#Uti
+    pod 'Zip'
+    pod 'Fabric'
+#    pod 'HotKey'
+    pod 'Crashlytics'
+	pod 'Alamofire'
+    pod 'SnapKit'
+    pod 'Moya'
+    pod 'ObjectMapper'
+    pod 'Kingfisher'
+    pod 'SwiftyJSON'
+    pod 'SwiftyBeaver'
+    pod 'SwiftDate'
+#	pod 'Bugly'
+    pod 'SwiftyStoreKit'
+#    pod 'AVOSCloud'
+#   pod 'SwiftLint'
+    pod 'SQLite.swift'
+    
+#    pod 'p2.OAuth2'
+    pod 'OAuthSwift'
+#    pod 'CallbackURLKit'
+#    pod 'DJProgressHUD_OSX'
+    #加密
+    pod 'CryptoSwift'
+    pod 'ProgressKit'
+#    pod 'AudioKit'
+    pod 'SwifterSwift'
+    pod 'KeychainAccess'
+    pod 'FlatButton', :git => 'https://github.com/OskarGroth/FlatButton.git'
+#    pod 'SwiftOCR'
+#    pod 'FlagKit'
+    #动画
+#    pod 'YapAnimator'
+    pod 'MASPreferences'
+    pod 'MASShortcut'
+#    pod 'ShortcutRecorder'
+    pod 'ReachabilitySwift'
+    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
+#    pod 'Reveal-SDK', :configurations => ['Debug']
+    #    pod 'GodEye', '~> 1.0.0', :configurations => ['Debug']  
+end
+
+#post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#        target.build_configurations.each do |config|
+#            if [ 'SwiftDate'].include?(target.name)
+#                config.build_settings['SWIFT_VERSION'] = "2.3"
+#            end
+#        end
+#    end
+#end
+
+#post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#        target.build_configurations.each do |config|
+#            config.build_settings['SWIFT_VERSION'] = '3.2'
+#        end
+#    end
+#end

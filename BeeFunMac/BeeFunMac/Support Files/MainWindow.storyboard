@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="jHx-w4-deJ">
+            <objects>
+                <windowController storyboardIdentifier="loginwindow" id="ZWO-Qj-oqw" customClass="BFWindowController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Sign in" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="tAq-mx-EcB" customClass="BFWindow" customModule="BeeFun" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="196" y="291" width="260" height="320"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="ZWO-Qj-oqw" id="FCF-Qj-bWB"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="lcN-W1-Hcx" kind="relationship" relationship="window.shadowedContentViewController" id="UUI-va-VGc"/>
+                    </connections>
+                </windowController>
+                <customObject id="w1o-uF-sFD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2256" y="-651"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="CpD-vj-H6f">
+            <objects>
+                <viewController id="lcN-W1-Hcx" customClass="BFLoginController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Ed2-mL-nXp" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="320"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="yna-d2-SNe">
+                                <rect key="frame" x="67" y="160" width="127" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="BHp-Kc-b09"/>
+                                    <constraint firstAttribute="height" constant="119" id="ky9-l0-8pZ"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="logo_1024" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JNQ-hF-tiZ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vrh-sp-QYs">
+                                <rect key="frame" x="96" y="79" width="69" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="oHQ-kX-JUA"/>
+                                    <constraint firstAttribute="height" constant="25" id="syi-PF-DFM"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Sign in" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bCS-Nw-VWq">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loginAction:" target="lcN-W1-Hcx" id="Vhx-4P-veV"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dgd-G8-oZH">
+                                <rect key="frame" x="0.0" y="6" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="XkC-FF-oNA"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" title="www.beefun.top" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="a2t-pM-e7U">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="oepnOfficeWebsite:" target="lcN-W1-Hcx" id="Buu-i4-rlJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yna-d2-SNe" firstAttribute="top" secondItem="Ed2-mL-nXp" secondAttribute="top" constant="41" id="AvN-K5-jIo"/>
+                            <constraint firstItem="vrh-sp-QYs" firstAttribute="centerX" secondItem="Ed2-mL-nXp" secondAttribute="centerX" id="BLJ-AQ-iKF"/>
+                            <constraint firstAttribute="bottom" secondItem="Dgd-G8-oZH" secondAttribute="bottom" constant="6" id="GvW-TN-cj8"/>
+                            <constraint firstAttribute="trailing" secondItem="Dgd-G8-oZH" secondAttribute="trailing" id="NyJ-Ag-e7L"/>
+                            <constraint firstItem="yna-d2-SNe" firstAttribute="centerX" secondItem="Ed2-mL-nXp" secondAttribute="centerX" id="dZM-3D-Bvb"/>
+                            <constraint firstItem="Dgd-G8-oZH" firstAttribute="leading" secondItem="Ed2-mL-nXp" secondAttribute="leading" id="lBT-aZ-GSL"/>
+                            <constraint firstItem="vrh-sp-QYs" firstAttribute="top" secondItem="yna-d2-SNe" secondAttribute="bottom" constant="56" id="ue5-rz-vP9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="officeWebBtn" destination="Dgd-G8-oZH" id="GOt-gf-fOk"/>
+                        <outlet property="signInBtn" destination="vrh-sp-QYs" id="wg5-z5-gco"/>
+                    </connections>
+                </viewController>
+                <customObject id="Q4D-aT-UXS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1740" y="-651"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="qSM-Km-URk">
+            <objects>
+                <windowController storyboardIdentifier="mainwindow" id="hcR-NT-ZmM" customClass="BFWindowController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="BeeFun" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="PCu-4d-IiO" customClass="BFWindow" customModule="BeeFun" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="400" y="204" width="1150" height="700"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <value key="minSize" type="size" width="950" height="600"/>
+                        <connections>
+                            <outlet property="delegate" destination="hcR-NT-ZmM" id="bi2-za-cux"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="p5Z-LR-xIZ" kind="relationship" relationship="window.shadowedContentViewController" id="lC9-CI-7ty"/>
+                    </connections>
+                </windowController>
+                <customObject id="E1n-l1-mmK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1628" y="-18"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="I13-zF-lCK">
+            <objects>
+                <viewController id="p5Z-LR-xIZ" customClass="BFMainController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="IAr-D1-Llg" customClass="BFMainView" customModule="BeeFun" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1350" height="700"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ahE-yA-1ez" customClass="IconBarView" customModule="BeeFun" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="65" height="700"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="tg5-Q9-feW" userLabel="Person">
+                                        <rect key="frame" x="10" y="597" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="5zP-aE-nan"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_p_normal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="d3R-Gw-Ob9">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="wSf-Ng-aSM"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="cIU-PW-5rx" userLabel="Home">
+                                        <rect key="frame" x="15" y="515" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="07u-lu-i2g"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_h_normal" imagePosition="overlaps" alignment="center" alternateImage="iconbar_h_sel" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="pgG-1l-1DX">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="PGV-hO-jLN"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Txg-V2-xi2" userLabel="Star">
+                                        <rect key="frame" x="15" y="452" width="35" height="35"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_s_normal" imagePosition="only" alignment="center" alternateImage="iconbar_s_sel" imageScaling="proportionallyUpOrDown" inset="2" id="Vll-W1-b8o">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="tL6-EO-v9m"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="1l4-1b-ELb" userLabel="Setting">
+                                        <rect key="frame" x="20" y="27" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="rIz-bq-Znf"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_setting" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="UBH-nB-tGG">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="hKq-6a-WPG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1l4-1b-ELb" secondAttribute="trailing" constant="20" id="5Db-2v-xkF"/>
+                                    <constraint firstAttribute="trailing" secondItem="cIU-PW-5rx" secondAttribute="trailing" constant="15" id="Asb-s8-Yfw"/>
+                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="top" secondItem="cIU-PW-5rx" secondAttribute="bottom" constant="28" id="Cbq-kE-DAf"/>
+                                    <constraint firstAttribute="trailing" secondItem="tg5-Q9-feW" secondAttribute="trailing" constant="10" id="DhO-kp-Hj4"/>
+                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="leading" secondItem="cIU-PW-5rx" secondAttribute="leading" id="NOU-5s-l5G"/>
+                                    <constraint firstItem="1l4-1b-ELb" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" constant="20" id="bnB-bL-4vr"/>
+                                    <constraint firstItem="tg5-Q9-feW" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" constant="10" id="dXm-Uv-Oik"/>
+                                    <constraint firstItem="cIU-PW-5rx" firstAttribute="top" secondItem="tg5-Q9-feW" secondAttribute="bottom" constant="47" id="dlR-Tu-V4c"/>
+                                    <constraint firstAttribute="bottom" secondItem="1l4-1b-ELb" secondAttribute="bottom" constant="27" id="fGp-QX-NuC"/>
+                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="height" secondItem="cIU-PW-5rx" secondAttribute="height" id="l8V-EK-tKc"/>
+                                    <constraint firstAttribute="width" constant="65" id="oQ4-9s-Vm3"/>
+                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="width" secondItem="cIU-PW-5rx" secondAttribute="width" id="pE4-ht-qZ5"/>
+                                    <constraint firstItem="cIU-PW-5rx" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" constant="15" id="tDm-uV-1iy"/>
+                                    <constraint firstItem="tg5-Q9-feW" firstAttribute="top" secondItem="ahE-yA-1ez" secondAttribute="top" constant="58" id="xbC-9M-2f3"/>
+                                </constraints>
+                            </customView>
+                            <box borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="QlK-hB-EHS">
+                                <rect key="frame" x="65" y="0.0" width="1285" height="700"/>
+                                <view key="contentView" id="b8Z-WH-s5W">
+                                    <rect key="frame" x="0.0" y="0.0" width="1285" height="700"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QlK-hB-EHS" firstAttribute="top" secondItem="IAr-D1-Llg" secondAttribute="top" constant="2" id="76O-Fz-ato"/>
+                            <constraint firstAttribute="bottom" secondItem="ahE-yA-1ez" secondAttribute="bottom" id="HMe-8b-iTL"/>
+                            <constraint firstItem="ahE-yA-1ez" firstAttribute="top" secondItem="IAr-D1-Llg" secondAttribute="top" id="J2Q-IA-PxB"/>
+                            <constraint firstItem="QlK-hB-EHS" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="trailing" constant="3" id="Rgp-2p-pal"/>
+                            <constraint firstAttribute="bottom" secondItem="QlK-hB-EHS" secondAttribute="bottom" constant="4" id="hdR-o7-EIE"/>
+                            <constraint firstAttribute="trailing" secondItem="QlK-hB-EHS" secondAttribute="trailing" constant="3" id="o9V-ok-gYr"/>
+                            <constraint firstItem="ahE-yA-1ez" firstAttribute="leading" secondItem="IAr-D1-Llg" secondAttribute="leading" id="vwM-LW-PQP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeButton" destination="cIU-PW-5rx" id="Ilw-eK-5AX"/>
+                        <outlet property="iconBar" destination="ahE-yA-1ez" id="Ca2-oH-Cos"/>
+                        <outlet property="pageBox" destination="QlK-hB-EHS" id="l0B-j1-HV6"/>
+                        <outlet property="profileButton" destination="tg5-Q9-feW" id="4Vy-85-DQe"/>
+                        <outlet property="settingButton" destination="1l4-1b-ELb" id="s0K-an-Bfw"/>
+                        <outlet property="starButton" destination="Txg-V2-xi2" id="6tb-Kc-5jo"/>
+                    </connections>
+                </viewController>
+                <customObject id="3xq-OT-Ud3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299" y="-10"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconbar_h_normal" width="262" height="256"/>
+        <image name="iconbar_h_sel" width="262" height="256"/>
+        <image name="iconbar_p_normal" width="160" height="160"/>
+        <image name="iconbar_s_normal" width="256" height="256"/>
+        <image name="iconbar_s_sel" width="256" height="256"/>
+        <image name="iconbar_setting" width="100" height="100"/>
+        <image name="logo_1024" width="1024" height="1024"/>
+    </resources>
+</document>

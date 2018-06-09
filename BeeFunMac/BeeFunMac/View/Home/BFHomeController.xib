@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="BFHomeController" customModule="BeeFunMac" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="WTU-mJ-X4E" id="4Ss-qj-UX2"/>
+                <outlet property="forwardButton" destination="fnQ-av-b8x" id="pkc-df-cdh"/>
+                <outlet property="homeButton" destination="ELX-JS-B9T" id="eAe-15-mbP"/>
+                <outlet property="refreshButton" destination="yz4-DW-wgJ" id="ck4-Dr-6D5"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webProgress" destination="3kp-wq-4hu" id="LOU-6J-rM8"/>
+                <outlet property="webView" destination="CdK-Ov-iE3" id="KcD-7w-xjI"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="1085" height="700"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-Ov-iE3">
+                    <rect key="frame" x="0.0" y="0.0" width="1085" height="634"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="WTU-mJ-X4E">
+                    <rect key="frame" x="20" y="654" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Qx8-32-S7O"/>
+                        <constraint firstAttribute="width" constant="30" id="ovV-9H-Pt3"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_arrow_left" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6ge-9Z-Y42">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goBack:" target="-2" id="Ow6-aq-Dw5"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="fnQ-av-b8x">
+                    <rect key="frame" x="72" y="654" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="6cp-wY-fSW"/>
+                        <constraint firstAttribute="height" constant="30" id="zu5-nM-gaf"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_arrow_right" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="16p-lX-TaC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goForward:" target="-2" id="Eyd-7K-uWb"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="yz4-DW-wgJ">
+                    <rect key="frame" x="120" y="652" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="kNv-EJ-xC8"/>
+                        <constraint firstAttribute="height" constant="35" id="xR5-2j-JrH"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_refresh" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="fHo-nm-1cs">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="webRefresh:" target="-2" id="uki-ws-Bf5"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="ELX-JS-B9T">
+                    <rect key="frame" x="180" y="652" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Au3-wD-fwn"/>
+                        <constraint firstAttribute="height" constant="35" id="jmH-J9-QX9"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_home" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="jAB-IF-4Ff">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goHome:" target="-2" id="u5Q-Px-xp1"/>
+                    </connections>
+                </button>
+                <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="3kp-wq-4hu">
+                    <rect key="frame" x="0.0" y="620" width="1085" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </progressIndicator>
+            </subviews>
+            <constraints>
+                <constraint firstItem="WTU-mJ-X4E" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="62a-7l-0Bs"/>
+                <constraint firstAttribute="trailing" secondItem="CdK-Ov-iE3" secondAttribute="trailing" id="8P4-31-LW9"/>
+                <constraint firstItem="yz4-DW-wgJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="13" id="BF9-ES-zbK"/>
+                <constraint firstItem="ELX-JS-B9T" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="13" id="Bjq-4o-goE"/>
+                <constraint firstItem="fnQ-av-b8x" firstAttribute="leading" secondItem="WTU-mJ-X4E" secondAttribute="trailing" constant="22" id="ClT-x0-IaX"/>
+                <constraint firstItem="fnQ-av-b8x" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="16" id="DTN-aY-0fm"/>
+                <constraint firstItem="CdK-Ov-iE3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="66" id="HuE-9K-mzj"/>
+                <constraint firstItem="yz4-DW-wgJ" firstAttribute="leading" secondItem="fnQ-av-b8x" secondAttribute="trailing" constant="18" id="OBo-kp-kEN"/>
+                <constraint firstAttribute="bottom" secondItem="CdK-Ov-iE3" secondAttribute="bottom" id="hCJ-8v-ib7"/>
+                <constraint firstItem="ELX-JS-B9T" firstAttribute="leading" secondItem="yz4-DW-wgJ" secondAttribute="trailing" constant="25" id="l6d-lg-R36"/>
+                <constraint firstItem="CdK-Ov-iE3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="m7V-K1-nlK"/>
+                <constraint firstItem="WTU-mJ-X4E" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="16" id="v3t-1p-4xz"/>
+            </constraints>
+            <point key="canvasLocation" x="138.5" y="168"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="star_web_arrow_left" width="60" height="60"/>
+        <image name="star_web_arrow_right" width="60" height="60"/>
+        <image name="star_web_home" width="60" height="60"/>
+        <image name="star_web_refresh" width="60" height="60"/>
+    </resources>
+</document>
