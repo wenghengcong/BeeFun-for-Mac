@@ -15,13 +15,16 @@ extension BFStarViewController {
     func starPageToolsViewTagTipTableView() {
         tagTipsTable.delegate = self
         tagTipsTable.dataSource = self
+//        tagTipsTable.isHidden = true
+        //TODO:
+        tagTipsTable.backgroundColor = NSColor.red
         tagTipsTable.register(NSNib.init(nibNamed: NSNib.Name(rawValue: "BFTagsTipCellView"), bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.TagTipCell))
         tagTipsTable.selectionHighlightStyle = .none
         tagTipsTable.allowsMultipleSelection = false
         tagTipsTable.target = self
         tagTipsTable.action = #selector(didSelectedTagTipsTableView)
         tagTipsTable.enclosingScrollView?.borderType = .noBorder
-        toolsView.addSubview(tagTipsTable, positioned: NSWindow.OrderingMode.above, relativeTo: nil)
+        toolsView.addSubview(tagTipsContainView, positioned: NSWindow.OrderingMode.above, relativeTo: nil)
     }
     
     /// 选中Tag Tip

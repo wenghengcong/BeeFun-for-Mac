@@ -17,7 +17,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         self.toolsView.backgroundColor = NSColor.white
         self.toolsView.layer?.masksToBounds = false
         
-        self.rightContentView.addSubview(self.toolsView, positioned: .above, relativeTo: repoWebView)
+        self.rightContentView.addSubview(self.toolsView, positioned: .above, relativeTo: nil)
         
         //下面是通知方式来监察text change
         //        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(notification:)), name: NSControl.textDidChangeNotification, object: nil)
@@ -153,10 +153,19 @@ extension BFStarViewController: NSTextFieldDelegate {
         }
     
         let fieldX = firstColumnX
-        let fieldY = lastBtnY + lineH
-        
+        var fieldY = lastBtnY + lineH
+        if workingTagsButtongs.count == 0 {
+            fieldY = lastBtnY
+        }
         inputRepoTagField.frame = CGRect(x: fieldX, y: fieldY, width: width-5, height: fieldH)
-        tagTipsTable.frame = CGRect(x: fieldX, y: inputRepoTagField.bottom, width: inputRepoTagField.width, height: 160)
+        let tagTableHeight: CGFloat = 180
+//        tagTipsContainView.frame = CGRect(x: fieldX, y: addTagContainView.bottom-tagTableHeight, width: inputRepoTagField.width, height: tagTableHeight)
+        self.tagTipsContainView!.snp.remakeConstraints { (make) in
+            make.top.equalTo(self.addTagContainView.bottom).offset(0)
+            make.leading.equalTo(self.addTagContainView.left).offset(0)
+            make.width.equalTo(inputRepoTagField.width)
+            make.height.equalTo(tagTableHeight)
+        }
     }
     
     //left距离左边边距，right距离右边边距
@@ -172,7 +181,14 @@ extension BFStarViewController: NSTextFieldDelegate {
         let containH: CGFloat = 23.0
         addTagContainView.frame = CGRect(x: containX, y: containY, width: containW, height: containH)
         workingTagsView.frame = addTagContainView.bounds
-        tagTipsTable.frame = CGRect(x: containX, y: addTagContainView.bottom, width: containW, height: 180)
+        let tagTableHeight: CGFloat = 180
+//        tagTipsContainView.frame = CGRect(x: containX, y: addTagContainView.bottom-tagTableHeight, width: containW-5.0, height: tagTableHeight)
+        self.tagTipsContainView!.snp.remakeConstraints { (make) in
+            make.top.equalTo(self.addTagContainView.bottom).offset(0)
+            make.leading.equalTo(self.addTagContainView.left).offset(0)
+            make.width.equalTo(inputRepoTagField.width)
+            make.height.equalTo(tagTableHeight)
+        }
     }
     
     // MARK: - Action
@@ -217,7 +233,8 @@ extension BFStarViewController: NSTextFieldDelegate {
             } else if textfield == inputRepoTagField {
                 print("controlTextDidChange input new tag \(self.inputRepoTagField.stringValue)")
                 //TODO:
-                inputTagsTipArr = ["a", "b", "c"]
+                inputTagsTipArr = ["Good", "Fine", "hahaha"]
+                reLayoutWorkingLayout()
                 tagTipsTable.reloadData()
             }
         }

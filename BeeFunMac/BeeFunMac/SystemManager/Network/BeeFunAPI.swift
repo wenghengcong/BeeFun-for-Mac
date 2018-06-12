@@ -94,13 +94,13 @@ extension BeeFunAPI: TargetType {
         default:
                     //远程部署环境
             //            return URL(string: "http://106.14.174.202:8081/beefun")!     //远程测试环境
-            return URL(string: "http://106.14.174.202:8082/beefun")!     //远程正式环境
+//            return URL(string: "http://106.14.174.202:8082/beefun")!     //远程正式环境
                     //本地部署环境
             //            return URL(string: "http://localhost:8081/beefun")!          //本地测试环境
             //            return URL(string: "http://localhost:8082/beefun")!            //本地正式环境
                     //本地运行环境
             //            return URL(string: "http://localhost:8081/beefun")!          //本地测试环境
-            //            return URL(string: "http://localhost:8082")!            //本地正式环境
+                        return URL(string: "http://localhost:8082")!            //本地正式环境
         }
     }
     

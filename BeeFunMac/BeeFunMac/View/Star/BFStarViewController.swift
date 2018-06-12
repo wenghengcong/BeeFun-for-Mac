@@ -101,6 +101,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var inputRepoTagField: BFTextField!       /// 输入新tag
     
     //tag提示列表
+    @IBOutlet weak var tagTipsContainView: NSScrollView!
     @IBOutlet weak var tagTipsTable: NSTableView!
     
     //布局
