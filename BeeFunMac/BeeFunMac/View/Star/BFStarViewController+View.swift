@@ -111,6 +111,13 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
             make.height.equalTo(1)
         }
         
+        self.tagTipsContainView!.snp.remakeConstraints { (make) in
+            make.leading.equalTo(addTagContainLeftMargin)
+            make.top.equalTo(self.rightContentView).offset(toolsH)
+            make.trailing.equalTo(0)
+            make.height.equalTo(160)
+        }
+        
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
             make.leading.equalTo(0)

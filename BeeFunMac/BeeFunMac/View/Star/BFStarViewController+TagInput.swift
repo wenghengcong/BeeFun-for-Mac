@@ -158,14 +158,6 @@ extension BFStarViewController: NSTextFieldDelegate {
             fieldY = lastBtnY
         }
         inputRepoTagField.frame = CGRect(x: fieldX, y: fieldY, width: width-5, height: fieldH)
-        let tagTableHeight: CGFloat = 180
-//        tagTipsContainView.frame = CGRect(x: fieldX, y: addTagContainView.bottom-tagTableHeight, width: inputRepoTagField.width, height: tagTableHeight)
-        self.tagTipsContainView!.snp.remakeConstraints { (make) in
-            make.top.equalTo(self.addTagContainView.bottom).offset(0)
-            make.leading.equalTo(self.addTagContainView.left).offset(0)
-            make.width.equalTo(inputRepoTagField.width)
-            make.height.equalTo(tagTableHeight)
-        }
     }
     
     //left距离左边边距，right距离右边边距
@@ -181,14 +173,6 @@ extension BFStarViewController: NSTextFieldDelegate {
         let containH: CGFloat = 23.0
         addTagContainView.frame = CGRect(x: containX, y: containY, width: containW, height: containH)
         workingTagsView.frame = addTagContainView.bounds
-        let tagTableHeight: CGFloat = 180
-//        tagTipsContainView.frame = CGRect(x: containX, y: addTagContainView.bottom-tagTableHeight, width: containW-5.0, height: tagTableHeight)
-        self.tagTipsContainView!.snp.remakeConstraints { (make) in
-            make.top.equalTo(self.addTagContainView.bottom).offset(0)
-            make.leading.equalTo(self.addTagContainView.left).offset(0)
-            make.width.equalTo(inputRepoTagField.width)
-            make.height.equalTo(tagTableHeight)
-        }
     }
     
     // MARK: - Action

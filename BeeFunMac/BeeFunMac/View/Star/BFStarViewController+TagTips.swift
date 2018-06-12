@@ -24,7 +24,7 @@ extension BFStarViewController {
         tagTipsTable.target = self
         tagTipsTable.action = #selector(didSelectedTagTipsTableView)
         tagTipsTable.enclosingScrollView?.borderType = .noBorder
-        toolsView.addSubview(tagTipsContainView, positioned: NSWindow.OrderingMode.above, relativeTo: nil)
+        self.rightContentView.addSubview(tagTipsContainView, positioned: NSWindow.OrderingMode.above, relativeTo: self.repoWebView)
     }
     
     /// 选中Tag Tip
