@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <tableCellView id="Al9-tf-B0l" customClass="BFTagsTipCellView" customModule="BeeFun" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="292" height="27"/>
+        <tableCellView identifier="BFTagsTipCellView" id="Al9-tf-B0l" customClass="BFTagsTipCellView" customModule="BeeFun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="292" height="17"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WkC-xE-Lk5">
-                    <rect key="frame" x="142" y="3" width="37" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Ubh-Km-SJD">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U1K-e8-law">
+                    <rect key="frame" x="0.0" y="0.0" width="291" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="label" id="flP-35-Z8d">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="tipsLabel:" target="-1" id="Uzv-w2-yM3"/>
-                    </connections>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="U1K-e8-law" secondAttribute="trailing" constant="3" id="OGZ-5F-r4x"/>
+                <constraint firstItem="U1K-e8-law" firstAttribute="top" secondItem="Al9-tf-B0l" secondAttribute="top" id="Ze0-cq-iGh"/>
+                <constraint firstItem="U1K-e8-law" firstAttribute="leading" secondItem="Al9-tf-B0l" secondAttribute="leading" constant="2" id="fzC-0e-22Z"/>
+                <constraint firstAttribute="bottom" secondItem="U1K-e8-law" secondAttribute="bottom" id="tZT-yA-2gw"/>
+            </constraints>
             <connections>
-                <outlet property="tipsLabel" destination="WkC-xE-Lk5" id="dpT-M6-Vz6"/>
+                <outlet property="tipsLabel" destination="U1K-e8-law" id="qXO-Xz-CUZ"/>
             </connections>
             <point key="canvasLocation" x="109" y="151.5"/>
         </tableCellView>

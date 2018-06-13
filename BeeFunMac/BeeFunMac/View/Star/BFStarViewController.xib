@@ -440,7 +440,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -513,7 +513,7 @@
                         <constraint firstAttribute="height" constant="1" id="Plb-Iz-HHd"/>
                     </constraints>
                 </box>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-cF-78c" customClass="BFTextField" customModule="BeeFun" customModuleProvider="target">
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-cF-78c" customClass="AutoCompleteTextField" customModule="BeeFun" customModuleProvider="target">
                     <rect key="frame" x="403" y="9" width="96" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="1Wt-58-ypH" customClass="BFTextFieldCell" customModule="BeeFun" customModuleProvider="target">

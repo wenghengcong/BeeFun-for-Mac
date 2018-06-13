@@ -20,7 +20,17 @@ class BFTagsTipCellView: LCBaseTableCellView {
     
     var tip: String? {
         didSet {
-            fillTipsDataToUI()
+            if let tipStr = tip {
+                tipsLabel.stringValue = tipStr
+            }
+        }
+    }
+    
+    var tipAttributeString: NSMutableAttributedString? {
+        didSet {
+            if let attri = tipAttributeString {
+                tipsLabel.attributedStringValue = attri
+            }
         }
     }
 
@@ -61,6 +71,7 @@ class BFTagsTipCellView: LCBaseTableCellView {
             make.height.equalTo(111)
         }
         selectedMask.isHidden = true
+        tipsLabel.textColor = subTitleColor
     }
     
     func didSelectedCell(selected: Bool) {
@@ -72,12 +83,5 @@ class BFTagsTipCellView: LCBaseTableCellView {
             tipsLabel.textColor = subTitleColor
         }
     }
-    
-    
-    fileprivate func fillTipsDataToUI() {
-        if let tipStr = tip {
-            tipsLabel.stringValue = tipStr
-        }
-        tipsLabel.textColor = subTitleColor
-    }
+
 }

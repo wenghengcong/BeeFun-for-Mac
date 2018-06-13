@@ -111,12 +111,9 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
             make.height.equalTo(1)
         }
         
-        self.tagTipsContainView!.snp.remakeConstraints { (make) in
-            make.leading.equalTo(addTagContainLeftMargin)
-            make.top.equalTo(self.rightContentView).offset(toolsH)
-            make.trailing.equalTo(0)
-            make.height.equalTo(160)
-        }
+        //重新布局Tags内部布局布局
+        layoutWorkingTagsButton()
+        inputRepoTagField.popOverWidth = inputRepoTagField.width-20
         
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)

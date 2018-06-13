@@ -77,5 +77,4 @@ extension BFStarViewController {
         }
     }
     
-    
 }

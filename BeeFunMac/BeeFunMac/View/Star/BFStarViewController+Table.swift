@@ -15,8 +15,6 @@ extension BFStarViewController {
             return starReposData.count
         } else if tableView == tagTable {
             return allTags.count
-        } else if tableView == tagTipsTable {
-            return inputTagsTipArr.count
         }
         return 0
     }
@@ -26,8 +24,6 @@ extension BFStarViewController {
             return 109
         } else if tableView == tagTable {
             return 40
-        } else if tableView == tagTipsTable {
-            return 18
         }
         return 0
     }
@@ -49,15 +45,7 @@ extension BFStarViewController {
                 cell.starTag = tag
                 return cell
             }
-        } else if tableView == tagTipsTable {
-            if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.TagTipCell), owner: nil) as? BFTagsTipCellView {
-                let tip = inputTagsTipArr[row]
-                cell.didSelectedCell(selected: row == selectedTipRow)
-                cell.tip = tip
-                return cell
-            }
         }
-
         return nil
     }
     

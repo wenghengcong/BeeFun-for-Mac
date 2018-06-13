@@ -10,7 +10,6 @@
 		5E042CFC20AFBB3A00767E56 /* BeeFunDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */; };
 		5E042CFE20B1125700767E56 /* BFTagsTipCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */; };
 		5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */; };
-		5E042D0220B1467700767E56 /* BFStarViewController+TagTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042D0120B1467700767E56 /* BFStarViewController+TagTips.swift */; };
 		5E065FAB1FF236B400721926 /* BFStarSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAA1FF236B400721926 /* BFStarSyncManager.swift */; };
 		5E065FAD1FF3353000721926 /* ObjStarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAC1FF3353000721926 /* ObjStarRepos.swift */; };
 		5E098DC42017F3C900AD50BA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DC32017F3C900AD50BA /* OAuthManager.swift */; };
@@ -57,6 +56,9 @@
 		5E4833501FD249CF00CEB336 /* BFHomeController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */; };
 		5E4833521FD252BA00CEB336 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4833511FD252BA00CEB336 /* Home.xcassets */; };
 		5E4833541FD2578600CEB336 /* BFHomeController+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4833531FD2578600CEB336 /* BFHomeController+Button.swift */; };
+		5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */; };
+		5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */; };
+		5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */; };
 		5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */; };
 		5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */; };
 		5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F681FDD7F460050B50F /* LCButton.swift */; };
@@ -172,7 +174,6 @@
 		5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeFunDBManager.swift; sourceTree = "<group>"; };
 		5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTagsTipCellView.swift; sourceTree = "<group>"; };
 		5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFTagsTipCellView.xib; sourceTree = "<group>"; };
-		5E042D0120B1467700767E56 /* BFStarViewController+TagTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagTips.swift"; sourceTree = "<group>"; };
 		5E065FAA1FF236B400721926 /* BFStarSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarSyncManager.swift; sourceTree = "<group>"; };
 		5E065FAC1FF3353000721926 /* ObjStarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjStarRepos.swift; sourceTree = "<group>"; };
 		5E098DC32017F3C900AD50BA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
@@ -223,6 +224,9 @@
 		5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Util.swift"; sourceTree = "<group>"; };
 		5E4833511FD252BA00CEB336 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
 		5E4833531FD2578600CEB336 /* BFHomeController+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Button.swift"; sourceTree = "<group>"; };
+		5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+AutoCom.swift"; sourceTree = "<group>"; };
+		5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteTextField.xib; sourceTree = "<group>"; };
 		5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Network.swift"; sourceTree = "<group>"; };
 		5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+View.swift"; sourceTree = "<group>"; };
 		5E7F6F681FDD7F460050B50F /* LCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCButton.swift; sourceTree = "<group>"; };
@@ -773,6 +777,8 @@
 				5EAB03092003B66500323A86 /* BFStarTagCellView.xib */,
 				5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */,
 				5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */,
+				5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */,
+				5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -786,7 +792,6 @@
 				5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */,
 				5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */,
 				5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */,
-				5E042D0120B1467700767E56 /* BFStarViewController+TagTips.swift */,
 				5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */,
 				5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */,
 				5E9ECE241FE0325300C02B3F /* BFStarViewController+Web.swift */,
@@ -794,6 +799,7 @@
 				5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */,
 				5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */,
 				5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */,
+				5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */,
 				5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */,
 				5EA435071FDADF4400034578 /* Star.xcassets */,
 			);
@@ -954,6 +960,7 @@
 				5E4833521FD252BA00CEB336 /* Home.xcassets in Resources */,
 				5EBF53F81FCFF82000D7A2A5 /* BFHomeController.xib in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
+				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1087,7 @@
 			files = (
 				5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */,
 				5E9867EF1FD05189007EE86F /* ObjUserSum.swift in Sources */,
+				5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */,
 				5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */,
 				5E9867E01FD05189007EE86F /* ObjMilestone.swift in Sources */,
 				5EAC2F1E2022D82D000442FE /* SQLStar+Delete.swift in Sources */,
@@ -1117,7 +1125,6 @@
 				5EA3BF4220AAA41C00D3CC79 /* GetReposResponse.swift in Sources */,
 				5E9867E51FD05189007EE86F /* ObjResponser.swift in Sources */,
 				5E1C13621FD6F36300726A0C /* CloudObjectId.swift in Sources */,
-				5E042D0220B1467700767E56 /* BFStarViewController+TagTips.swift in Sources */,
 				5E9867EA1FD05189007EE86F /* ObjShowcase.swift in Sources */,
 				5E9867DC1FD05189007EE86F /* ObjSearchCode.swift in Sources */,
 				5EC3CC642016AAAE00701C23 /* BFLoginWindowController.swift in Sources */,
@@ -1194,6 +1201,7 @@
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
 				5E065FAB1FF236B400721926 /* BFStarSyncManager.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
+				5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,

@@ -22,7 +22,6 @@ extension BFStarViewController: NSTextFieldDelegate {
         //下面是通知方式来监察text change
         //        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(notification:)), name: NSControl.textDidChangeNotification, object: nil)
         starPageCustomTagsContainer()
-        starPageToolsViewTagTipTableView()
     }
     
     func starPageCustomTagsContainer() {
@@ -41,7 +40,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         workingTagsView.backgroundColor = NSColor.green
         addTagContainView.addSubview(workingTagsView)
         //首次加载toolsView区域
-        layoutOneLineContainView()
+        layoutTagsContainView()
         addInputRepoTagField()
     }
     
@@ -76,6 +75,7 @@ extension BFStarViewController: NSTextFieldDelegate {
             inputRepoTagField.usesSingleLineMode = true
             inputRepoTagField.delegate = self
             inputRepoTagField.responDelegate = self
+            inputRepoTagField.tableViewDelegate = self
             workingTagsView.addSubview(inputRepoTagField)
         }
     }
@@ -86,12 +86,40 @@ extension BFStarViewController: NSTextFieldDelegate {
     func reLayoutWorkingLayout() {
         addWorkingTagsButtons()
         layoutWorkingTagsButton()
-        self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
+//        self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
+        reLayoutRightContentViewAfterWorkingTagsChange()
+    }
+    
+    /// Tag更改后，重新绘制右边视图布局
+    func reLayoutRightContentViewAfterWorkingTagsChange() {
+        let allTasgH = lineH * CGFloat(currentTagsOfLines)
+        let toolsH: CGFloat = 65 + allTasgH - lineH
+        toolsView.backgroundColor = NSColor.white
+        toolsView.snp.remakeConstraints { (make) in
+            make.top.equalTo(self.rightContentView).offset(0)
+            make.leading.equalTo(0)
+            make.trailing.equalTo(0)
+            make.height.equalTo(toolsH)
+        }
+        
+        toolsViewSepLine.snp.remakeConstraints { (make) in
+            make.bottom.equalTo(0)
+            make.leading.equalTo(0)
+            make.trailing.equalTo(0)
+            make.height.equalTo(1)
+        }
+                
+        self.repoWebView!.snp.remakeConstraints { (make) in
+            make.bottom.equalTo(0)
+            make.leading.equalTo(0)
+            make.top.equalTo(self.rightContentView).offset(toolsH)
+            make.trailing.equalTo(0)
+        }
     }
     
     func layoutWorkingTagsButton() {
         //包含inputNewTagField的布局
-        let width = addTagContainView.width
+        let width = tagsContainViewWidth()
         let btnH: CGFloat = 25
         let btnInsideXMargin:CGFloat = 0.0
         let firstColumnX: CGFloat = 3.0
@@ -163,15 +191,15 @@ extension BFStarViewController: NSTextFieldDelegate {
     //left距离左边边距，right距离右边边距
     func tagsContainViewWidth() -> CGFloat {
         //默认为左边离tag图标距离9+25+7，右边距10
-        return toolsView.width-addTagContainLeftMargin
+        return toolsView.width-addTagContainLeftMargin-10
     }
     
-    func layoutOneLineContainView() {
+    func layoutTagsContainView() {
+        let allTasgH = lineH * CGFloat(currentTagsOfLines)
         let containW = tagsContainViewWidth()
         let containX: CGFloat = addTagContainLeftMargin
         let containY: CGFloat = 5.0
-        let containH: CGFloat = 23.0
-        addTagContainView.frame = CGRect(x: containX, y: containY, width: containW, height: containH)
+        addTagContainView.frame = CGRect(x: containX, y: containY, width: containW, height: allTasgH)
         workingTagsView.frame = addTagContainView.bounds
     }
     
@@ -218,11 +246,11 @@ extension BFStarViewController: NSTextFieldDelegate {
                 print("controlTextDidChange input new tag \(self.inputRepoTagField.stringValue)")
                 //TODO:
                 inputTagsTipArr = ["Good", "Fine", "hahaha"]
-                reLayoutWorkingLayout()
-                tagTipsTable.reloadData()
+//                tagTipsTableShow()
             }
         }
     }
+    
     //离开输入框，调用该方法
     //搜索框，右边取消按钮：调用controlTextDidEndEditing->controlTextDidBeginEditing->searchFieldDidEndSearching->controlTextDidChange->controlTextDidEndEditing
     override func controlTextDidEndEditing(_ obj: Notification) {
@@ -257,7 +285,11 @@ extension BFStarViewController: NSTextFieldDelegate {
                 } else if textfield == inputRepoTagField {
                     addTagToRepo()
                 }
-            }
+            } 
+            result = true
+        } else if( commandSelector == #selector(moveUp(_:)) ){
+            result = true
+        } else if( commandSelector ==  #selector(moveDown(_:) )){
             result = true
         }
         return result
@@ -326,8 +358,8 @@ extension BFStarViewController: NSTextFieldDelegate {
 }
 
 // MARK: - Responder Delegate
-extension BFStarViewController: BFTextFieldDelegate {
-    func didBecomeFirstResponder(textField: BFTextField) {
+extension BFStarViewController: AutoCompleteTextFieldDelegate {
+    func didBecomeFirstResponder(textField: AutoCompleteTextField) {
         print("become first responder")
         if textField == inputRepoTagField {
             
@@ -335,8 +367,9 @@ extension BFStarViewController: BFTextFieldDelegate {
     }
     
     //进入输入框，先调用resign，后才是become
-    func didResignFirstResponder(textField: BFTextField) {
+    func didResignFirstResponder(textField: AutoCompleteTextField) {
         print("resign first responder")
+
     }
 }
 

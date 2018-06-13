@@ -98,17 +98,12 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var workingTagsButtongs: [NSButton] = []
 
     let inputNewTagFieldTag = 2222
-    @IBOutlet weak var inputRepoTagField: BFTextField!       /// 输入新tag
-    
-    //tag提示列表
-    @IBOutlet weak var tagTipsContainView: NSScrollView!
-    @IBOutlet weak var tagTipsTable: NSTableView!
+    @IBOutlet weak var inputRepoTagField: AutoCompleteTextField!       /// 输入新tag
     
     //布局
     var addTagContainLeftMargin: CGFloat = 41 //addTagContainView距离toolsView的左边距，就是tag图标的地方
     let lineH: CGFloat = 23         //tag每行的高度
     var currentTagsOfLines: CGFloat = 1     //总共有几行，注意inputRepoTagField要单独加1行
-    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
