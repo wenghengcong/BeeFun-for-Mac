@@ -12,22 +12,31 @@ import Cocoa
 extension BFStarViewController: AutoCompleteTableViewDelegate{
     func textField(_ textField: NSTextField, completions words: [String], forPartialWordRange charRange: NSRange, indexOfSelectedItem index: Int) -> [String] {
         var matches = [String]()
-        //先按简拼  再按全拼  并保留上一次的match
-        matches.append("weare")
-        matches.append("good")
-        matches.append("fine")
-        matches.append("haha")
+        
+        for tag in allTags {
+            if let tagName = tag.name {
+                if let _ = tagName.range(of: textField.stringValue, options: NSString.CompareOptions.anchored)
+                {
+                    matches.append(tagName)
+                }
+            }
+        }
 
         if(matches.isEmpty)
         {
-          
+            for tag in allTags {
+                if let tagName = tag.name {
+                    matches.append(tagName)
+                }
+            }
         }
         
         return matches
     }
     
     func textField(_ textField: NSTextField, didSelectItem item: String) {
-        
+        addTagToRepo()
+        inputRepoTagField.stringValue = ""
     }
 }
 

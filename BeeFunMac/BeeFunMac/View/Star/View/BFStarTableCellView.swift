@@ -62,7 +62,8 @@ import Cocoa
             make.height.equalTo(1)
         }
         
-        selectedMask.backgroundColor = NSColor(hex: "#0099FF", alpha: 0.2)
+//        selectedMask.backgroundColor = NSColor(hex: "#8999FF", alpha: 0.1)
+        selectedMask.backgroundColor = NSColor(hex: "#4899fb", alpha: 0.8)
         self.addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
@@ -86,26 +87,31 @@ import Cocoa
     }
     
     func didSelectedCell(selected: Bool) {
-        selectedMask.isHidden = !selected
+//        selectedMask.isHidden = !selected
+        var repoNameColor = titleColor
+        var textColor: NSColor = subTitleColor
+        var backgroundColor = NSColor.white
         if selected {
-            let color = NSColor.hex("7b7b7b", alpha: 0.5)
-            timeLbl.textColor = color
-            starLbl.textColor = color
-            forkLbl.textColor = color
-            langLbl.textColor = color
-            repoDescLbl.textColor = color
+            textColor = NSColor.white
+            repoNameColor = NSColor.white
+            backgroundColor = NSColor.hex("4899fb")
         } else {
-            if let name = objRepos?.name {
-                let pstyle = NSMutableParagraphStyle()
-                pstyle.alignment = .left
-                let dic = [NSAttributedStringKey.foregroundColor : titleColor, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
-                repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
-            }
-            timeLbl.textColor = subTitleColor
-            starLbl.textColor = subTitleColor
-            forkLbl.textColor = subTitleColor
-            langLbl.textColor = subTitleColor
-            repoDescLbl.textColor = subTitleColor
+            
+        }
+        
+        timeLbl.textColor = textColor
+        starLbl.textColor = textColor
+        forkLbl.textColor = textColor
+        langLbl.textColor = textColor
+        repoDescLbl.textColor = textColor
+        self.backgroundColor = backgroundColor
+        tagContentView.backgroundColor = backgroundColor
+        
+        if let name = objRepos?.name {
+            let pstyle = NSMutableParagraphStyle()
+            pstyle.alignment = .left
+            let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
+            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
         }
     }
     

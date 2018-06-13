@@ -13,9 +13,10 @@ import Cocoa
     @objc optional func textField(_ textField:NSTextField,didSelectItem item: String)
 }
 
-class AutoCompleteTableRowView: NSTableRowView{
+class AutoCompleteTableRowView: NSTableRowView {
     override func drawSelection(in dirtyRect: NSRect) {
         if self.selectionHighlightStyle != .none{
+            self.backgroundColor = NSColor.red
             let selectionRect = NSInsetRect(self.bounds, 0.5, 0.5)
             NSColor.selectedMenuItemColor.setStroke()
             NSColor.selectedMenuItemColor.setFill()
@@ -67,7 +68,7 @@ class AutoCompleteTextField: NSTextField {
     
     override func awakeFromNib() {
         
-        column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "MyView"))
+        column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "text"))
         column1?.isEditable = false
         column1?.width = popOverWidth - 2 * popOverPadding
         
@@ -222,21 +223,9 @@ extension AutoCompleteTextField:NSTableViewDelegate{
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-
-//        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: AutoCompleteTextFieldCellIdentifiers.TagTipCell), owner: nil) as? BFTagsTipCellView {
-//
-//            if let tip = self.matches?[row] {
-//                let attrs = [kCTForegroundColorAttributeName:NSColor.black,kCTFontAttributeName:NSFont.systemFont(ofSize: 13)]
-//                let mutableAttriStr = NSMutableAttributedString(string: tip, attributes: attrs as [NSAttributedStringKey : Any])
-//                cell.tipAttributeString = mutableAttriStr
-//            }
-//            return cell
-//        } else {
-        var cellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "MyView"), owner: nil) as? NSTableCellView
-    
+        var cellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "MyView"), owner: self) as? NSTableCellView
         if cellView == nil{
             cellView = NSTableCellView(frame: NSZeroRect)
-            cellView?.backgroundColor = NSColor.clear
             let textField = NSTextField(frame: NSZeroRect)
             textField.isBezeled = false
             textField.drawsBackground = false
@@ -246,13 +235,12 @@ extension AutoCompleteTextField:NSTableViewDelegate{
             cellView!.textField = textField
             cellView!.identifier = NSUserInterfaceItemIdentifier(rawValue: "MyView")
         }
-        let attrs = [kCTForegroundColorAttributeName:NSColor.black,kCTFontAttributeName:NSFont.systemFont(ofSize: 13)]
+        let attrs = [NSAttributedStringKey.foregroundColor: NSColor.black, NSAttributedStringKey.font: NSFont.systemFont(ofSize: 13), NSAttributedStringKey.backgroundColor: NSColor.clear]
         let mutableAttriStr = NSMutableAttributedString(string: self.matches![row], attributes: attrs as [NSAttributedStringKey : Any])
         cellView!.textField!.attributedStringValue = mutableAttriStr
         
         return cellView
-        }
-//    }
+    }
     
 }
 

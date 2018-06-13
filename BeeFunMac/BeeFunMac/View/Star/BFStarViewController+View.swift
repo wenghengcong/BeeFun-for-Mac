@@ -113,7 +113,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         
         //重新布局Tags内部布局布局
         layoutWorkingTagsButton()
-        inputRepoTagField.popOverWidth = inputRepoTagField.width-20
+        inputRepoTagField.popOverWidth = inputRepoTagField.width-10
         
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
