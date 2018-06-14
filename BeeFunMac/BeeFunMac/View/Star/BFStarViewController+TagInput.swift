@@ -73,7 +73,7 @@ extension BFStarViewController: NSTextFieldDelegate {
             inputRepoTagField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
             inputRepoTagField.tag = inputNewTagFieldTag
             inputRepoTagField.usesSingleLineMode = true
-            inputRepoTagField.delegate = self
+//            inputRepoTagField.delegate = self
             inputRepoTagField.responDelegate = self
             inputRepoTagField.tableViewDelegate = self
             workingTagsView.addSubview(inputRepoTagField)
@@ -283,7 +283,8 @@ extension BFStarViewController: NSTextFieldDelegate {
                 if textfield == searchField {
                     searchStarReposNow(allRefresh: true, scrollToTop: true)
                 } else if textfield == inputRepoTagField {
-                    addTagToRepo()
+                    //TODO: 在AutoCompleteTextField中动作被截获，所以注释掉
+//                    addTagToRepo()
                 }
             } 
             result = true

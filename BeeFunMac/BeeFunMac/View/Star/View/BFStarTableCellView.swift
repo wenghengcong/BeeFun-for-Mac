@@ -24,10 +24,11 @@ import Cocoa
     @IBOutlet weak var timeLbl: NSTextField!
     
     private var bottomLine: NSView = NSView()
+    private var selectedMask: NSView = NSView()
 
     /// Color
     @IBInspectable var titleColor: NSColor = NSColor.labelTitleTextColor
-    @IBInspectable var subTitleColor: NSColor = NSColor.labelSubtitleTextColor
+    @IBInspectable var subTitleColor: NSColor = NSColor.hex("5b5b5b", alpha: 0.8)
     var selectedBackgroundColor = NSColor.hex("4899fb")
     var selected: Bool = false
     
@@ -40,6 +41,7 @@ import Cocoa
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         self.origin = CGPoint(x: 0, y: 0)
+        //是xib中的height+2
         self.size = CGSize(width: 300, height: 111)
     }
     
@@ -68,6 +70,16 @@ import Cocoa
             make.height.equalTo(1)
         }
         
+        selectedMask.backgroundColor = NSColor(hex: "#0999FF", alpha: 0.1)
+        self.addSubview(selectedMask)
+        selectedMask.snp.remakeConstraints { (make) in
+            make.bottom.equalTo(0)
+            make.leading.equalTo(0)
+            make.trailing.equalTo(0)
+            make.height.equalTo(111)
+        }
+        selectedMask.isHidden = true
+        
         repoNameLbl.font = NSFont.bfSystemFont(ofSize: 12.0)
         repoDescLbl.font = NSFont.bfSystemFont(ofSize: 10.0)
         repoDescLbl.maximumNumberOfLines = 2
@@ -83,28 +95,21 @@ import Cocoa
     
     func didSelectedCell(selected: Bool) {
         self.selected = selected
+        selectedMask.isHidden = !selected
         refreshSelectionStyle()
     }
     
     func refreshSelectionStyle() {
-        var repoNameColor = titleColor
-        var textColor: NSColor = subTitleColor
-        var backgroundColor = NSColor.white
-        if selected {
-            textColor = NSColor.white
-            repoNameColor = NSColor.white
-            backgroundColor = selectedBackgroundColor
-        } else {
-            
-        }
+        let repoNameColor = titleColor
+        let textColor: NSColor = subTitleColor
         
         timeLbl.textColor = textColor
         starLbl.textColor = textColor
         forkLbl.textColor = textColor
         langLbl.textColor = textColor
         repoDescLbl.textColor = textColor
-        tagContentView.backgroundColor = backgroundColor
-        self.backgroundColor = backgroundColor
+//        tagContentView.backgroundColor = backgroundColor
+//        self.backgroundColor = backgroundColor
 
         if let name = objRepos?.name {
             let pstyle = NSMutableParagraphStyle()

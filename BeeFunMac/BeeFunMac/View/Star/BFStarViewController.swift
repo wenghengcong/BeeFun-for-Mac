@@ -99,6 +99,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
 
     let inputNewTagFieldTag = 2222
     @IBOutlet weak var inputRepoTagField: AutoCompleteTextField!       /// 输入新tag
+    var hasTagsMatched: Bool = false
     
     //布局
     var addTagContainLeftMargin: CGFloat = 41 //addTagContainView距离toolsView的左边距，就是tag图标的地方

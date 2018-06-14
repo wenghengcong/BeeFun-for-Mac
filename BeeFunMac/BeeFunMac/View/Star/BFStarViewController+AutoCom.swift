@@ -17,6 +17,7 @@ extension BFStarViewController: AutoCompleteTableViewDelegate{
             if let tagName = tag.name {
                 if let _ = tagName.range(of: textField.stringValue, options: NSString.CompareOptions.anchored)
                 {
+                    hasTagsMatched = true
                     matches.append(tagName)
                 }
             }
@@ -24,11 +25,8 @@ extension BFStarViewController: AutoCompleteTableViewDelegate{
 
         if(matches.isEmpty)
         {
-            for tag in allTags {
-                if let tagName = tag.name {
-                    matches.append(tagName)
-                }
-            }
+            hasTagsMatched = false
+            matches.append(textField.stringValue)
         }
         
         return matches

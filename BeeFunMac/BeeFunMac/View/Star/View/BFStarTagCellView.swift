@@ -75,7 +75,7 @@ class BFStarTagCellView: LCBaseTableCellView {
             make.bottom.equalTo(0)
         }
         
-        selectedMask.backgroundColor = NSColor(hex: "#0099FF", alpha: 0.2)
+        selectedMask.backgroundColor = NSColor(hex: "#0999FF", alpha: 0.1)
         self.addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.height.equalTo(42)
@@ -96,7 +96,7 @@ class BFStarTagCellView: LCBaseTableCellView {
     func didSelectedCell(selected: Bool) {
         selectedMask.isHidden = !selected
         if selected {
-            let color = NSColor.hex("7b7b7b", alpha: 0.5)
+            let color = NSColor.hex("5b5b5b", alpha: 0.8)
             nameL.textColor = color
             numL.textColor = color
         } else {
