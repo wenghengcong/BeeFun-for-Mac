@@ -8,9 +8,6 @@
 
 import Cocoa
 
-//appid
-public let AppleAppID = "1094338006"
-
 class JSApp: NSObject {
 
     /// 应用APPID

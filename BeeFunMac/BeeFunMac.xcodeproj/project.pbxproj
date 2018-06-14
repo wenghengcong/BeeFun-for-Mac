@@ -33,7 +33,6 @@
 		5E1C13681FD6F36300726A0C /* SQLStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135C1FD6F36300726A0C /* SQLStars.swift */; };
 		5E1C13691FD6F36300726A0C /* SQLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135D1FD6F36300726A0C /* SQLTags.swift */; };
 		5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135E1FD6F36300726A0C /* CloudTableName.swift */; };
-		5E1C136C1FD78AB100726A0C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1C136B1FD78AB100726A0C /* CloudKit.framework */; };
 		5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */; };
 		5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E267639201B0972006A3020 /* NSObject+Swizzle.swift */; };
 		5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */; };
@@ -198,7 +197,6 @@
 		5E1C135C1FD6F36300726A0C /* SQLStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLStars.swift; sourceTree = "<group>"; };
 		5E1C135D1FD6F36300726A0C /* SQLTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTags.swift; sourceTree = "<group>"; };
 		5E1C135E1FD6F36300726A0C /* CloudTableName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTableName.swift; sourceTree = "<group>"; };
-		5E1C136B1FD78AB100726A0C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Search.swift"; sourceTree = "<group>"; };
 		5E267639201B0972006A3020 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWKNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -348,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E098DCC20182C4400AD50BA /* MASPreferences.framework in Frameworks */,
-				5E1C136C1FD78AB100726A0C /* CloudKit.framework in Frameworks */,
 				9C160C48E67F7D29462F7C6C /* Pods_BeeFun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +439,6 @@
 			isa = PBXGroup;
 			children = (
 				5E098DCD20182C4400AD50BA /* MASPreferences.framework */,
-				5E1C136B1FD78AB100726A0C /* CloudKit.framework */,
 				6393F5C2089AFD6AB1F713A8 /* Pods_BeeFunMac.framework */,
 				D572D7F257BFDE1CD24E6E07 /* Pods_BeeFun.framework */,
 			);
@@ -918,7 +914,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
