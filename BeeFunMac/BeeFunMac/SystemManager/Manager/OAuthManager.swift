@@ -26,7 +26,7 @@ class OAuthManager: NSObject {
     // MARK: - Github Oauth and save Token
     func beginOauth(){
         //全局通知：将要登录
-        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.WillLogout, object:nil)
+        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.WillLogin, object:nil)
 
         let oauthswift = OAuth2Swift(
             consumerKey:    GithubAppClientId,
@@ -121,10 +121,11 @@ class OAuthManager: NSObject {
     
     func openMainWindow() {
         //https://stackoverflow.com/questions/5547741/how-to-open-a-new-window-on-button-click-in-cocoa-mac-application
+        if let lastWindow = AppDelegate.sharedInstance.mainController {
+            lastWindow.close()
+        }
         let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
         let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
-        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
-        loginWindow?.close()
         AppDelegate.sharedInstance.mainController = mainWindow
         AppDelegate.sharedInstance.mainController?.showWindow(self)
         AppDelegate.sharedInstance.mainController?.window?.center()
@@ -132,10 +133,11 @@ class OAuthManager: NSObject {
     
     func openLoginWindow() {
         //https://stackoverflow.com/questions/5547741/how-to-open-a-new-window-on-button-click-in-cocoa-mac-application
+        if let lastWindow = AppDelegate.sharedInstance.mainController {
+            lastWindow.close()
+        }
         let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
         let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
-        mainWindow?.close()
         AppDelegate.sharedInstance.mainController = loginWindow
         AppDelegate.sharedInstance.mainController?.showWindow(self)
         AppDelegate.sharedInstance.mainController?.window?.center()
