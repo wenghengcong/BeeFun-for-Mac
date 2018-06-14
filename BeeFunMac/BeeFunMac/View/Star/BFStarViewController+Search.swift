@@ -62,6 +62,10 @@ extension BFStarViewController: NSSearchFieldDelegate {
     }
     
     func hanldeStaredRepoResponse(repos: [ObjRepos], allRefresh: Bool, scrollToTop:Bool) {
+        //在能获取到所有star repo数据后，重新拉取language接口
+        if languageArr.count == 1 || languageAndNum.count == 1 {
+            getLanguageDataNetwork()
+        }
         
         var reponseData: [ObjRepos] = repos
         //1. 选中无tag标记
