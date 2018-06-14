@@ -23,10 +23,9 @@ extension BFStarViewController {
         ordertType = .time
         orderFilterView.selectOrder(type: ordertType)
         
-        clickAllStarButton()
-        
         self.selectedRepoRow = 0
         webViewHomeAction(sender: nil)
+        clickAllStarButton()
     }
     
     func reloadRepoTableViewData() {

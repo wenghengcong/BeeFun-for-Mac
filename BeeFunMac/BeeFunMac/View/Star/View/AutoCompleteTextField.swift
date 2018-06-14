@@ -235,6 +235,7 @@ extension AutoCompleteTextField:NSTableViewDelegate{
             cellView!.textField = textField
             cellView!.identifier = NSUserInterfaceItemIdentifier(rawValue: "MyView")
         }
+        //TODO: 注意： 文本背景色可以通过attributedStringValue来修改
         let attrs = [NSAttributedStringKey.foregroundColor: NSColor.black, NSAttributedStringKey.font: NSFont.systemFont(ofSize: 13), NSAttributedStringKey.backgroundColor: NSColor.clear]
         let mutableAttriStr = NSMutableAttributedString(string: self.matches![row], attributes: attrs as [NSAttributedStringKey : Any])
         cellView!.textField!.attributedStringValue = mutableAttriStr

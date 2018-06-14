@@ -8,6 +8,7 @@
 
 import Cocoa
 
+/// 用来做输入tag时的提示
 class BFTagsTipCellView: LCBaseTableCellView {
 
     @IBOutlet weak var tipsLabel: NSTextField!

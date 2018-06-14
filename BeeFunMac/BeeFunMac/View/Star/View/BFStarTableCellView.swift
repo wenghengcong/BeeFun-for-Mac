@@ -24,11 +24,13 @@ import Cocoa
     @IBOutlet weak var timeLbl: NSTextField!
     
     private var bottomLine: NSView = NSView()
-    private var selectedMask: NSView = NSView()
-    
+
+    /// Color
     @IBInspectable var titleColor: NSColor = NSColor.labelTitleTextColor
     @IBInspectable var subTitleColor: NSColor = NSColor.labelSubtitleTextColor
-
+    var selectedBackgroundColor = NSColor.hex("4899fb")
+    var selected: Bool = false
+    
     var objRepos: ObjRepos? {
         didSet {
             fillDataToUI()
@@ -47,11 +49,15 @@ import Cocoa
     }
     
     fileprivate func customStarCellView() {
+
+        var backgroundColor = NSColor.white
+        if selected {
+            backgroundColor = selectedBackgroundColor
+        }
+        self.backgroundColor = backgroundColor
+        tagContentView.backgroundColor = backgroundColor
         
         self.UnstarBtn.isHidden = true
-//        avatarImg.layer?.cornerRadius = avatarImg.width/2
-//        avatarImg.layer?.masksToBounds = true
-        self.backgroundColor = .clear
         bottomLine.backgroundColor = NSColor.lineBackgroundColor
         self.addSubview(bottomLine)
         
@@ -61,17 +67,6 @@ import Cocoa
             make.trailing.equalTo(0)
             make.height.equalTo(1)
         }
-        
-//        selectedMask.backgroundColor = NSColor(hex: "#8999FF", alpha: 0.1)
-        selectedMask.backgroundColor = NSColor(hex: "#4899fb", alpha: 0.8)
-        self.addSubview(selectedMask)
-        selectedMask.snp.remakeConstraints { (make) in
-            make.bottom.equalTo(0)
-            make.leading.equalTo(0)
-            make.trailing.equalTo(0)
-            make.height.equalTo(111)
-        }
-        selectedMask.isHidden = true
         
         repoNameLbl.font = NSFont.bfSystemFont(ofSize: 12.0)
         repoDescLbl.font = NSFont.bfSystemFont(ofSize: 10.0)
@@ -87,14 +82,18 @@ import Cocoa
     }
     
     func didSelectedCell(selected: Bool) {
-//        selectedMask.isHidden = !selected
+        self.selected = selected
+        refreshSelectionStyle()
+    }
+    
+    func refreshSelectionStyle() {
         var repoNameColor = titleColor
         var textColor: NSColor = subTitleColor
         var backgroundColor = NSColor.white
         if selected {
             textColor = NSColor.white
             repoNameColor = NSColor.white
-            backgroundColor = NSColor.hex("4899fb")
+            backgroundColor = selectedBackgroundColor
         } else {
             
         }
@@ -104,9 +103,9 @@ import Cocoa
         forkLbl.textColor = textColor
         langLbl.textColor = textColor
         repoDescLbl.textColor = textColor
-        self.backgroundColor = backgroundColor
         tagContentView.backgroundColor = backgroundColor
-        
+        self.backgroundColor = backgroundColor
+
         if let name = objRepos?.name {
             let pstyle = NSMutableParagraphStyle()
             pstyle.alignment = .left
@@ -116,18 +115,6 @@ import Cocoa
     }
     
     fileprivate func fillDataToUI() {
-        if let name = objRepos?.name {
-            let pstyle = NSMutableParagraphStyle()
-            pstyle.alignment = .left
-            let dic = [NSAttributedStringKey.foregroundColor : titleColor, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
-            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
-        }
-        
-        timeLbl.textColor = subTitleColor
-        starLbl.textColor = subTitleColor
-        forkLbl.textColor = subTitleColor
-        langLbl.textColor = subTitleColor
-        repoDescLbl.textColor = subTitleColor
         
         if let avatarUrl = objRepos?.owner?.avatar_url {
             if let url = URL(string: avatarUrl) {
@@ -183,6 +170,7 @@ import Cocoa
 //                tagB.radius = 10.0
 //                tagB.borderWidth = 1.0
                 tagB.tag = index
+//                tagB.backgroundColor = NSColor.red
                 allBtns.append(tagB)
                 self.tagContentView.addSubview(tagB)
             }
@@ -206,5 +194,7 @@ import Cocoa
                 subview.removeFromSuperview()
             }
         }
+        
+        refreshSelectionStyle()
     }
 }
