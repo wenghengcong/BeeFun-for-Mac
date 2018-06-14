@@ -55,9 +55,12 @@ public enum BeeFunAPI {
     //1. 每次启动时 2.
     case updateBeeFunDBFromGithub()
     
+    // User
+    case addUser(user: ObjUser)
+    
     //从BeeFun获取到github starrd 的页数，每页100
     case repoPage(owner: String)
-    case repos(tag: String, language: String,  page:Int, perpage:Int, sort:String, direction:String)
+    case repos(tag: String,language: String, page: Int, perpage: Int, sort: String, direction: String)
     case delRepo(repoid: Int)
     case addRepo(repo: ObjRepos)
     
@@ -80,6 +83,12 @@ extension BeeFunAPI: TargetType {
         let owner = UserManager.shared.login ?? ""
         var header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner]
         switch self {
+        case .addUser(_):
+            header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner, "Content-Type": "application/json"]
+            return header
+        case .addTag(_):
+            header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner, "Content-Type": "application/json"]
+            return header
         default:
             header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner]
             return header
@@ -89,18 +98,13 @@ extension BeeFunAPI: TargetType {
     public var parameterEncoding: ParameterEncoding {
         return Alamofire.ParameterEncoding.self as! ParameterEncoding
     }
+    
     public var baseURL: URL {
         switch self {
         default:
-                    //远程部署环境
-            //            return URL(string: "http://106.14.174.202:8081/beefun")!     //远程测试环境
-//            return URL(string: "http://106.14.174.202:8082/beefun")!     //远程正式环境
-                    //本地部署环境
-            //            return URL(string: "http://localhost:8081/beefun")!          //本地测试环境
-            //            return URL(string: "http://localhost:8082/beefun")!            //本地正式环境
-                    //本地运行环境
-            //            return URL(string: "http://localhost:8081/beefun")!          //本地测试环境
-                        return URL(string: "http://localhost:8082")!            //本地正式环境
+            //            return URL(string: "http://106.14.174.202:8082/beefuntest")!                //远程测试环境
+            //            return URL(string: "http://106.14.174.202:8082/beefun")!                    //远程环境
+            return URL(string: "http://localhost:8082")!                                  //本地测试环境
         }
     }
     
@@ -111,14 +115,17 @@ extension BeeFunAPI: TargetType {
         case .updateBeeFunDBFromGithub():
             return "/updatedb"
             
+        case .addUser(_):
+            return "/user"
+            
         case .repoPage(let owner):
             return "/reponum/\(owner)"
-        case .repos(let tag,_, _, _, _, _):
+        case .repos(let tag, _, _, _, _, _):
             return "/repos/\(tag)"
         case .delRepo(let repoid):
             return "/repo/\(repoid)"
             
-            // tag操作
+        // tag操作
         case .getAllTags(_, _, _, _, _):
             return "/tags"
         case .getTag(let name):
@@ -140,6 +147,8 @@ extension BeeFunAPI: TargetType {
     public var method: Moya.Method {
         
         switch self {
+        case .addUser(_):
+            return .post
         case .addRepo(_):
             return .post
         case .addTag(_):
@@ -159,6 +168,8 @@ extension BeeFunAPI: TargetType {
     
     public var parameters: [String: Any]? {
         switch self {
+        case .addUser(let user):
+            return user.toJSON()
         case .addRepo(let repo):
             return repo.toJSON()
         case .getAllTags(let page, let perpage, let sort, let direction, let containAll):
@@ -174,10 +185,7 @@ extension BeeFunAPI: TargetType {
                 "to": to
             ]
         case .addTag(let tagModel):
-            return [
-                "name": tagModel.name!,
-                "owner": tagModel.owner ?? ""
-            ]
+            return tagModel.toJSON()
             
         case .addTagToRepo(let star_tags, _):
             return [
@@ -220,10 +228,8 @@ extension BeeFunAPI: TargetType {
     //Any target you want to hit must provide some non-nil NSData that represents a sample response. This can be used later for tests or for providing offline support for developers. This should depend on self.
     public var sampleData: Data {
         switch self {
-            
         default :
             return "default".data(using: String.Encoding.utf8)!
         }
-        
     }
 }

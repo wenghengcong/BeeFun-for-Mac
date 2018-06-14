@@ -49,6 +49,7 @@ class OAuthManager: NSObject {
             }
         )
     }
+
     
     func getURLHandler(external: Bool) -> OAuthSwiftURLHandlerType {
         if external {
@@ -89,11 +90,7 @@ class OAuthManager: NSObject {
                 do {
                     if let gitUser: ObjUser = Mapper<ObjUser>().map(JSONObject: try response.mapJSON()) {
                         ObjUser.saveUserInfo(gitUser)
-                        //全局通知：已经登录
-                        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DidLogin, object:nil)
-                        AnswerManager.logLogin(method: "Github", success: true, attributes: [:])
-                        self.openMainWindow()
-                        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetUserInfo, object:nil)
+                        self.didLogin()
                     } else {
                     }
                 } catch {
@@ -103,6 +100,16 @@ class OAuthManager: NSObject {
             }
         }
     }
+    
+    private func didLogin() {
+        //全局通知：已经登录
+        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DidLogin, object:nil)
+        AnswerManager.logLogin(method: "Github", success: true, attributes: [:])
+        self.openMainWindow()
+        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetUserInfo, object:nil)
+        ObjUser.updateUserForBeeFun()
+    }
+    
     // MARK: - Open What Window
     func openWindow() {
         if UserManager.shared.isLogin {
@@ -115,7 +122,10 @@ class OAuthManager: NSObject {
     func openMainWindow() {
         //https://stackoverflow.com/questions/5547741/how-to-open-a-new-window-on-button-click-in-cocoa-mac-application
         let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        AppDelegate.sharedInstance.mainController = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
+        let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
+        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
+        loginWindow?.close()
+        AppDelegate.sharedInstance.mainController = mainWindow
         AppDelegate.sharedInstance.mainController?.showWindow(self)
         AppDelegate.sharedInstance.mainController?.window?.center()
     }
@@ -123,7 +133,10 @@ class OAuthManager: NSObject {
     func openLoginWindow() {
         //https://stackoverflow.com/questions/5547741/how-to-open-a-new-window-on-button-click-in-cocoa-mac-application
         let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        AppDelegate.sharedInstance.mainController = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
+        let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
+        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
+        mainWindow?.close()
+        AppDelegate.sharedInstance.mainController = loginWindow
         AppDelegate.sharedInstance.mainController?.showWindow(self)
         AppDelegate.sharedInstance.mainController?.window?.center()
     }

@@ -24,11 +24,12 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var starReposData: [ObjRepos] = []
     var allTags: [ObjTag] = []
 
-    var searchKey: String?                        //搜索关键字
-    var languageArr: [String] = []                //所有语言项
-    var filterTags: [ObjTag] = []               //当前选择的tags
-    var ordertType: StarOrderType = .time         //当前排序项目
-    var inputTagsTipArr: [String] = []              //当前输入tag的提示列表
+    var searchKey: String?                         //搜索关键字
+    var languageArr: [String] = []                 //所有语言项
+    var languageAndNum: [String] = []              //所有语言项目及该语言对应的数目
+    var filterTags: [ObjTag] = []                  //当前选择的tags
+    var ordertType: StarOrderType = .time          //当前排序项目
+    var inputTagsTipArr: [String] = []             //当前输入tag的提示列表
     
     //网络请求参数
     var getRepoTagPara = ""

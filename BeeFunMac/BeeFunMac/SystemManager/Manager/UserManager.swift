@@ -85,6 +85,7 @@ class UserManager: NSObject {
         set(newtoken) {
             let token = AppToken.shared
             token.access_token = newtoken
+            user?.token = newtoken
         }
     }
     

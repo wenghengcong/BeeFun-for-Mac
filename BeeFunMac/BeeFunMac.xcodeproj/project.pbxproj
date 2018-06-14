@@ -65,7 +65,7 @@
 		5E7F6F6B1FDD845B0050B50F /* NSFont+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */; };
 		5E7F6F6D1FDD85B90050B50F /* JSDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F6C1FDD85B80050B50F /* JSDevice.swift */; };
 		5E7F6F6F1FDD86D10050B50F /* NSView+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F6E1FDD86D10050B50F /* NSView+Draw.swift */; };
-		5E7F6F711FDD8C2F0050B50F /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F701FDD8C2F0050B50F /* TimeHelper.swift */; };
+		5E7F6F711FDD8C2F0050B50F /* BFTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */; };
 		5E8A2AEE1FD13EC200B246BD /* AnswerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AED1FD13EC200B246BD /* AnswerManager.swift */; };
 		5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */; };
 		5E8A2AF41FD1568D00B246BD /* BFNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */; };
@@ -233,7 +233,7 @@
 		5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+Project.swift"; sourceTree = "<group>"; };
 		5E7F6F6C1FDD85B80050B50F /* JSDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSDevice.swift; sourceTree = "<group>"; };
 		5E7F6F6E1FDD86D10050B50F /* NSView+Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Draw.swift"; sourceTree = "<group>"; };
-		5E7F6F701FDD8C2F0050B50F /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
+		5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimeHelper.swift; sourceTree = "<group>"; };
 		5E8A2AED1FD13EC200B246BD /* AnswerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerManager.swift; sourceTree = "<group>"; };
 		5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGithubWebsite.swift; sourceTree = "<group>"; };
 		5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFNotificationName.swift; sourceTree = "<group>"; };
@@ -592,7 +592,7 @@
 				5E9868121FD104CA007EE86F /* UserManager.swift */,
 				5EE9900E1FD54BBE008711F4 /* BFPathManager.swift */,
 				5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */,
-				5E7F6F701FDD8C2F0050B50F /* TimeHelper.swift */,
+				5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */,
 				5E098DC32017F3C900AD50BA /* OAuthManager.swift */,
 				5EC1B19F2018765600186A67 /* OAuthGithubWebController.swift */,
 				5EC1B1A52018D62100186A67 /* BFJumpWebStie.swift */,
@@ -600,6 +600,7 @@
 				5E09F603201A153300CC3866 /* BFMonitor.swift */,
 				5E09F605201A156B00CC3866 /* BFMonitor+Handle.swift */,
 				5E065FAA1FF236B400721926 /* BFStarSyncManager.swift */,
+				5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -619,6 +620,7 @@
 		5E928C4E1FCE52EC0066CAE4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5EA3BF3B20AA751A00D3CC79 /* BeeFunAPI.swift */,
 				5E9868141FD105EA007EE86F /* NetworkHelper.swift */,
 				5E9867FC1FD0FE73007EE86F /* CPHttpStatusCode.swift */,
 				5E9868061FD0FE74007EE86F /* GithubAPI.swift */,
@@ -697,9 +699,7 @@
 		5E9867B71FD05189007EE86F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */,
 				5EA3BF4620AAA4E500D3CC79 /* BFStatusCode.swift */,
-				5EA3BF3B20AA751A00D3CC79 /* BeeFunAPI.swift */,
 				5E9867B81FD05189007EE86F /* AppToken.swift */,
 				5E9867B91FD05189007EE86F /* ObjErropReponse.swift */,
 				5E9867BA1FD05189007EE86F /* ObjError.swift */,
@@ -1142,7 +1142,7 @@
 				5E9867F51FD052AE007EE86F /* JSApp.swift in Sources */,
 				5E928C3E1FCDB8CB0066CAE4 /* BFBaseViewController.swift in Sources */,
 				5E9868111FD0FE75007EE86F /* GithubAPI.swift in Sources */,
-				5E7F6F711FDD8C2F0050B50F /* TimeHelper.swift in Sources */,
+				5E7F6F711FDD8C2F0050B50F /* BFTimeHelper.swift in Sources */,
 				5E042CFE20B1125700767E56 /* BFTagsTipCellView.swift in Sources */,
 				5EC1B1A02018765600186A67 /* OAuthGithubWebController.swift in Sources */,
 				5E2B26761FDC34AC00600866 /* LCBaseTableCellView.swift in Sources */,

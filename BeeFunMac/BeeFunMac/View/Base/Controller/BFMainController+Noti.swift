@@ -20,5 +20,6 @@ extension BFMainController {
     @objc func mainViewLogout() {
         let profileImage:NSImage = NSImage.init(named: NSImage.Name(rawValue: "iconbar_p_normal"))!
         profileButton.kf.setImage(with: profileImage as? Resource)
+        
     }
 }

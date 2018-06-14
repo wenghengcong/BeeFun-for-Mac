@@ -12,12 +12,22 @@ import ObjectMapper
 class BeeFunDBManager: NSObject {
     
     static let shared = BeeFunDBManager()
+    var lastTimeStampKey = "lastUpdateFromGithub"
     
     func updateBeeFunDBFromGithub() {
-        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.syncStarRepoBegin, object: nil)
+        if !UserManager.shared.isLogin {
+            return
+        }
+        
+        let nowDate = Date().timeStamp
+        let lastUpdate = UserDefaults.standard.integer(forKey: lastTimeStampKey)
+        if nowDate - lastUpdate > 3 * 24 * 60 * 60 {
+            updateRequest()
+        }
+    }
+    
+    func updateRequest() {
         BeeFunProvider.sharedProvider.request(BeeFunAPI.updateBeeFunDBFromGithub()) { (result) in
-            
-            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.syncStarRepoDone, object: nil)
             switch result {
             case let .success(response):
                 do {
@@ -25,6 +35,7 @@ class BeeFunDBManager: NSObject {
                         if let code = tagResponse.codeEnum {
                             if code == BFStatusCode.bfOk {
                                 //添加成功
+                                UserDefaults.standard.set(Date().timeStamp, forKey: self.lastTimeStampKey)
                             }
                         }
                     }

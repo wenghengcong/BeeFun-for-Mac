@@ -145,7 +145,7 @@ extension BFStarViewController {
     
     func reloadLanguage() {
         self.languagePop.removeAllItems()
-        self.languagePop.addItems(withTitles: self.languageArr)
+        self.languagePop.addItems(withTitles: self.languageAndNum)
     }
     
     
@@ -153,8 +153,12 @@ extension BFStarViewController {
     @objc func handleSelectedLanguage(popBtn: NSPopUpButton) {
         if let selTitle = popBtn.selectedItem?.title {
             print(selTitle)
-            getRepoLanguageVar = selTitle
-            searchStarReposNow(allRefresh: true, scrollToTop: true)
+            let index = popBtn.indexOfItem(withTitle: selTitle)
+            if index < languageArr.count && index >= 0 {
+                getRepoLanguageVar = languageArr[index]
+                searchStarReposNow(allRefresh: true, scrollToTop: true)
+            }
+
         }
     }
 }

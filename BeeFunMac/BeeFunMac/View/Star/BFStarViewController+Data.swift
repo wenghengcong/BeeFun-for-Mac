@@ -50,10 +50,12 @@ extension BFStarViewController {
     
     func handleGetLanguageList(data: [ObjLanguage]) {
         languageArr.removeAll()
+        languageAndNum.removeAll()
         for lan in data {
             if let lanName = lan.language, let num = lan.num {
                 let tips = lanName + "     [\(num)]"
-                languageArr.append(tips)
+                languageArr.append(lanName)
+                languageAndNum.append(tips)
             }
         }
         reloadLanguage()
