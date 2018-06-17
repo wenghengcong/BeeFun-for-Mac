@@ -285,6 +285,8 @@ extension BFStarViewController: NSTextFieldDelegate {
                 } else if textfield == inputRepoTagField {
                     //TODO: 在AutoCompleteTextField中动作被截获，所以注释掉
 //                    addTagToRepo()
+                } else if textfield == inputNewTagField {
+                    clickSaveTagButton()
                 }
             } 
             result = true

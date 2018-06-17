@@ -33,6 +33,8 @@ extension BFStarViewController {
         
         //TODO: Tag Sort按钮暂时隐藏
         tagSortBtn.isHidden = true
+        
+        self.inputNewTagField.delegate = self
     }
     
     //刷新按钮
