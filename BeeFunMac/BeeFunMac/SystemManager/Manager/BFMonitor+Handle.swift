@@ -20,32 +20,4 @@ extension BFMonitor {
         stop()
     }
     
-    /// 数据同步完成之后，压缩并上传
-    @objc func syncStarRepoDone(noti: NSNotification) {
-//        BFiCloudManager.shared.syncLocalDBToiCloud()
-    }
-    
-    /// 自动同步iCloud与本地数据库
-    @objc func autoSyncZipData() {
-//        BFiCloudManager.shared.startiCloudQuery()
-    }
-    
-    /// 用户改变了数据库就同步数据
-    @objc func databaseChanged() {
-//        BFiCloudManager.shared.syncLocalDBToiCloud()
-    }
-    
-    /// 改变了同步时间，修改定时器
-    @objc func changeSyncTime() {
-        killTimer()
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(SyncPreferenceManager.shared.syncTimeInterval), target: self, selector: #selector(self.autoSyncZipData), userInfo: nil, repeats: true)
-    }
-    
-    // MARK: - Utilies
-    func killTimer() {
-        if(timer != nil){
-            timer!.invalidate()
-            timer = nil
-        }
-    }
 }

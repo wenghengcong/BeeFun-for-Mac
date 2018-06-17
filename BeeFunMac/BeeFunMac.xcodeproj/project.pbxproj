@@ -10,7 +10,6 @@
 		5E042CFC20AFBB3A00767E56 /* BeeFunDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */; };
 		5E042CFE20B1125700767E56 /* BFTagsTipCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */; };
 		5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */; };
-		5E065FAB1FF236B400721926 /* BFStarSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAA1FF236B400721926 /* BFStarSyncManager.swift */; };
 		5E065FAD1FF3353000721926 /* ObjStarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAC1FF3353000721926 /* ObjStarRepos.swift */; };
 		5E098DC42017F3C900AD50BA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DC32017F3C900AD50BA /* OAuthManager.swift */; };
 		5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */; };
@@ -173,7 +172,6 @@
 		5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeFunDBManager.swift; sourceTree = "<group>"; };
 		5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTagsTipCellView.swift; sourceTree = "<group>"; };
 		5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFTagsTipCellView.xib; sourceTree = "<group>"; };
-		5E065FAA1FF236B400721926 /* BFStarSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarSyncManager.swift; sourceTree = "<group>"; };
 		5E065FAC1FF3353000721926 /* ObjStarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjStarRepos.swift; sourceTree = "<group>"; };
 		5E098DC32017F3C900AD50BA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		5E098DC920182A7F00AD50BA /* BeeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeeFun-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -595,7 +593,6 @@
 				5E09F6012019A5DF00CC3866 /* BFZipManager.swift */,
 				5E09F603201A153300CC3866 /* BFMonitor.swift */,
 				5E09F605201A156B00CC3866 /* BFMonitor+Handle.swift */,
-				5E065FAA1FF236B400721926 /* BFStarSyncManager.swift */,
 				5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */,
 			);
 			path = Manager;
@@ -1195,7 +1192,6 @@
 				5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */,
 				5E9867EE1FD05189007EE86F /* ObjUser.swift in Sources */,
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
-				5E065FAB1FF236B400721926 /* BFStarSyncManager.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
 				5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */,

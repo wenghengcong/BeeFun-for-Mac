@@ -27,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UserManager.shared.userSignIn()
         
         //TODO: 上线打开，现在注释
-//        BeeFunDBManager.shared.updateBeeFunDBFromGithub()
+        BeeFunDBManager.shared.updateServerDB()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

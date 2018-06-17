@@ -53,8 +53,8 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="AEU-Le-5Zo"/>
                             </constraints>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star Sync" id="IBG-zC-PIM">
-                                <font key="font" metaFont="systemBold" size="15"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star" id="IBG-zC-PIM">
+                                <font key="font" metaFont="systemBold" size="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -440,7 +440,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -591,7 +591,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>

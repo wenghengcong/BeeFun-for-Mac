@@ -64,7 +64,7 @@ class SyncPreferenceController:NSViewController {
         }
         set{
             SyncPreferenceManager.shared.syncTimeInterval = stringConvertTime(timeString: newValue)
-            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.syncTimeChanged, object: nil)
+//            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.syncTimeChanged, object: nil)
         }
     }
     

@@ -22,8 +22,9 @@ class BFMenuManager: NSObject {
     
     lazy var preferencesWindowController:MASPreferencesWindowController = {
         let generalController = GeneralPreferenceController()
-        let syncController = SyncPreferenceController()
-        let controllers = [generalController, syncController]
+//        let syncController = SyncPreferenceController()
+//        let controllers = [generalController, syncController]
+        let controllers = [generalController]
         return MASPreferencesWindowController(viewControllers:controllers,title: nil)
     }()
     

@@ -11,7 +11,6 @@ import Cocoa
 class BFMonitor: NSObject {
     
     static let shared = BFMonitor()
-    var timer: Timer?
     
     func start() {
         NotificationCenter.default.addObserver(self, selector: #selector(userLogin(noti:)), name: NSNotification.Name.BeeFun.DidLogin, object: nil)
@@ -20,18 +19,10 @@ class BFMonitor: NSObject {
         if !UserManager.shared.isLogin {
             return
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoDone(noti:)), name: NSNotification.Name.BeeFun.syncStarRepoDone, object: nil)
-        //修改了同步时间
-        NotificationCenter.default.addObserver(self, selector: #selector(changeSyncTime), name: NSNotification.Name.BeeFun.syncTimeChanged, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(databaseChanged), name: NSNotification.Name.BeeFun.databaseChanged, object: nil)
-
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(SyncPreferenceManager.shared.syncTimeInterval), target: self, selector: #selector(self.autoSyncZipData), userInfo: nil, repeats: true)
     }
     
     func stop() {
         NotificationCenter.default.removeObserver(self)
-        killTimer()
     }
     
     func monitorRequest(_ url: String) {

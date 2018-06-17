@@ -119,14 +119,6 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        //TODO:确认此处获取所有star的用处
-        if let all = SQLStars.findAllStar(tmp: false) {
-            if all.isEmpty {
-                BFStarSyncManager.shared.manualSync(postNotification: true)
-            }
-        } else {
-            BFStarSyncManager.shared.manualSync(postNotification: true)
-        }
     }
     
     deinit {

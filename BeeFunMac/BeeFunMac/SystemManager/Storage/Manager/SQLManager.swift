@@ -34,10 +34,6 @@ struct SQLManager {
         SQLTags.crateStarTagsTable()
     }
     
-    static func beginDownloadDataToDB() {
-        BFStarSyncManager.shared.manualSync(postNotification: true)
-    }
-    
     static func githubDB(tmp: Bool) -> Connection {
         let sqlBridge = JSSQLiteSwiftBridge()
         sqlBridge.dbName = githubDatabaseName
@@ -59,7 +55,6 @@ struct SQLManager {
                 //有本地数据库，则重新下载最新数据
                 SQLStars.crateStarReposTable()
                 SQLTags.crateStarTagsTable()
-                SQLManager.beginDownloadDataToDB()
             }
         }
         completion()

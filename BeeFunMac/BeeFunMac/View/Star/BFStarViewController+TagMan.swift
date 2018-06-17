@@ -15,6 +15,7 @@ extension BFStarViewController {
     //tag区域的各种按钮状态管理
     func starButtonsReady() {
         
+//        self.refreshButton.isHidden = true
         self.refreshButton.target = self
         self.refreshButton.action = #selector(refreshDataFromNetwork)
         
@@ -38,7 +39,7 @@ extension BFStarViewController {
     @objc func refreshDataFromNetwork() {
         //启动从Github拉取数据，更新服务端数据库
         if !updateBeeFunDBLoading {
-            BeeFunDBManager.shared.updateBeeFunDBFromGithub()
+            BeeFunDBManager.shared.updateServerDB()
         }
     }
     

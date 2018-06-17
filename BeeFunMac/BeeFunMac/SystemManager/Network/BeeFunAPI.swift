@@ -53,7 +53,7 @@ public enum BeeFunAPI {
     
     //更新数据库
     //1. 每次启动时 2.
-    case updateBeeFunDBFromGithub()
+    case updateServerDB(update: Bool)
     
     // User
     case addUser(user: ObjUser)
@@ -72,7 +72,6 @@ public enum BeeFunAPI {
     case addTagToRepo(star_tags: String, repoId: Int)
     case updateTag(name: String, to: String)
     case deleteTag(name: String)
-    
     //language
     case getLanguages(page:Int, perpage:Int, sort:String, direction:String)
 }
@@ -111,35 +110,36 @@ extension BeeFunAPI: TargetType {
     public var path: String {
         switch self {
         case .addRepo(_):
-            return "/repo/client"
-        case .updateBeeFunDBFromGithub():
-            return "/updatedb"
+            return "/v1/repo/client"
+            
+        case .updateServerDB(_):
+            return "/v1/db/update"
             
         case .addUser(_):
-            return "/user"
+            return "/v1/user"
             
         case .repoPage(let owner):
-            return "/reponum/\(owner)"
+            return "/v1/reponum/\(owner)"
         case .repos(let tag, _, _, _, _, _):
-            return "/repos/\(tag)"
+            return "/v1/repos/\(tag)"
         case .delRepo(let repoid):
             return "/repo/\(repoid)"
             
         // tag操作
         case .getAllTags(_, _, _, _, _):
-            return "/tags"
+            return "/v1/tags"
         case .getTag(let name):
-            return "/tag/\(name)"
+            return "/v1/tag/\(name)"
         case .addTag(_):
-            return "/tag"
+            return "/v1/tag"
         case .addTagToRepo(_, let repoId):
-            return "/repo/tag/\(repoId)"
+            return "/v1/repo/tag/\(repoId)"
         case .updateTag(let name, _):
-            return "/tag/\(name)"
+            return "/v1/tag/\(name)"
         case .deleteTag(let name):
-            return "/tag/\(name)"
+            return "/v1/tag/\(name)"
         case .getLanguages(_, _, _, _):
-            return "/lans"
+            return "/v1/lans"
         }
         
     }
@@ -168,6 +168,8 @@ extension BeeFunAPI: TargetType {
     
     public var parameters: [String: Any]? {
         switch self {
+        case .updateServerDB(let update):
+            return ["update": update as AnyObject]
         case .addUser(let user):
             return user.toJSON()
         case .addRepo(let repo):
@@ -232,4 +234,4 @@ extension BeeFunAPI: TargetType {
             return "default".data(using: String.Encoding.utf8)!
         }
     }
-}
+} 
