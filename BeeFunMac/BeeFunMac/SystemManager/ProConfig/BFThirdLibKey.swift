@@ -7,10 +7,9 @@
 //
 
 // MARK: - Apple
-//TODO: appid
-public let AppleAppID = "1094338006"
-public let SocialAppStore = "https://itunes.apple.com/cn/app/beefun-for-ios/id1393808664?mt=8"
-public let AppBundleIdentifier = "com.luci.beefun.ios"
+public let AppleAppID = "1400043300"
+public let SocialAppStore = "https://itunes.apple.com/us/app/beefun-for-mac/id1400043300?l=zh&ls=1&mt=8"
+public let AppBundleIdentifier = "com.luci.beefun.mac"
 public let APNsAuthKeyID = "QW2AYPNFMK"
 
 // MARK: - BeeFun
@@ -26,8 +25,7 @@ public let GithubAppScope = "user,repo,notifications,gist,admin:repo_hook,admin:
 
 // MARK: - 新浪
 // MARK: 短链接服务
-//TODO: 上线前注意修改短链服务
-public let ShortSocialAppStore = "http://t.cn/RinAeZq"
+public let ShortSocialAppStore = "http://t.cn/RB8gspy"
 public let ShortSocailGithub = "http://t.cn/Rqvjd6W"
 public let ShortOfficeWebsite = "http://t.cn/R0QpGhp"
 
