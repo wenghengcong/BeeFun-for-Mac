@@ -80,16 +80,16 @@ extension BeeFunAPI: TargetType {
     public var headers: [String: String]? {
         let token = AppToken.shared.access_token ?? ""
         let owner = UserManager.shared.login ?? ""
-        var header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner]
+        var header = ["User-Agent": "BeeFunMac", "Authorization": token, "timeoutInterval": "45.0", "owner": owner]
         switch self {
         case .addUser(_):
-            header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner, "Content-Type": "application/json"]
+            header = ["User-Agent": "BeeFunMac", "Authorization": token, "timeoutInterval": "45.0", "owner": owner, "Content-Type": "application/json"]
             return header
         case .addTag(_):
-            header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner, "Content-Type": "application/json"]
+            header = ["User-Agent": "BeeFunMac", "Authorization": token, "timeoutInterval": "45.0", "owner": owner, "Content-Type": "application/json"]
             return header
         default:
-            header = ["User-Agent": "BeeFuniOS", "Authorization": token, "timeoutInterval": "15.0", "owner": owner]
+            header = ["User-Agent": "BeeFunMac", "Authorization": token, "timeoutInterval": "45.0", "owner": owner]
             return header
         }
     }
@@ -195,6 +195,7 @@ extension BeeFunAPI: TargetType {
             ]
         case .repos(_,let language, let page, let perpage, let sort, let direction):
             return [
+                "source" : 0,
                 "language": language as AnyObject,
                 "page": page as AnyObject,
                 "perpage": perpage as AnyObject,

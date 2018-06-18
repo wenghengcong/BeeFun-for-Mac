@@ -32,7 +32,13 @@ class BeeFunDBManager: NSObject {
     ///
     /// - Parameter update: 是否更新所有已经在server db存在repo的信息
     private func updateRequest(update: Bool) {
+        
+        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStartGithubStar, object:nil)
+
         BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(update: update)) { (result) in
+            //有响应即停止同步
+            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncEndGithubStar, object:nil)
+            
             switch result {
             case let .success(response):
                 do {
@@ -41,6 +47,7 @@ class BeeFunDBManager: NSObject {
                             if update {
                                 //添加成功
                                 UserDefaults.standard.set(Date().timeStamp, forKey: self.lastTimeStampKey)
+                                UserDefaults.standard.synchronize()
                             }
                         }
                     }

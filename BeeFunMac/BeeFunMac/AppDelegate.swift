@@ -26,7 +26,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        BFiCloudManager.shared.startiCloudQuery()
         UserManager.shared.userSignIn()
         
-        //TODO: 上线打开，现在注释
         BeeFunDBManager.shared.updateServerDB()
     }
 

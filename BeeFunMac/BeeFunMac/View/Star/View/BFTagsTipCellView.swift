@@ -15,7 +15,6 @@ class BFTagsTipCellView: LCBaseTableCellView {
     private var bottomLine: NSView = NSView()
     private var selectedMask: NSView = NSView()
     
-    //TODO:
     var titleColor: NSColor = NSColor.black
     var subTitleColor: NSColor = NSColor.labelSubtitleTextColor
     

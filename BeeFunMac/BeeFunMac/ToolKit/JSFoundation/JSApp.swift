@@ -113,7 +113,6 @@ class JSApp: NSObject {
             appId = AppleAppID
         }
         let appstroreUrl = ("itms-apps://itunes.apple.com/app/id\(appId)")
-        //TODO:
 //        UIApplication.shared.openURL(  URL(string: appstroreUrl)! )
     }
 

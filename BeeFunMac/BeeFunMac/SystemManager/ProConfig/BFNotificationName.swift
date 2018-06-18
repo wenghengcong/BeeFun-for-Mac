@@ -23,7 +23,10 @@ extension Notification.Name {
         public static let AddTag = Notification.Name(rawValue:"com.luci.beefun.mac.addtag")
         public static let UpdateTag = Notification.Name(rawValue:"com.luci.beefun.mac.updatetag")
         public static let DelTag = Notification.Name(rawValue:"com.luci.beefun.mac.deltag")
-        
+        //同步GitHub数据到服务器端
+        public static let SyncStartGithubStar = Notification.Name(rawValue:"com.luci.beefun.mac.SyncStartGithubStar")
+        public static let SyncEndGithubStar = Notification.Name(rawValue:"com.luci.beefun.mac.SyncEndGithubStar")
+
         public static let RepoUpdateTag = Notification.Name(rawValue:"com.luci.beefun.mac.repoupdatetag")
         
     }
