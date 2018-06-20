@@ -14,40 +14,34 @@ class BeeFunDBManager: NSObject {
     static let shared = BeeFunDBManager()
     var lastTimeStampKey = "lastUpdateFromGithub"
     
-    func updateServerDB() {
+    func updateServerDB(first: Bool) {
         if !UserManager.shared.isLogin {
             return
         }
-        
+        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
         let nowDate = Date().timeStamp
         let lastUpdate = UserDefaults.standard.integer(forKey: lastTimeStampKey)
-        if nowDate - lastUpdate > 1 * 24 * 60 * 60 {
-            updateRequest(update: true)
+        if (nowDate - lastUpdate > 1 * 24 * 60 * 60) || first {
+            updateRequest(first: first, update: true)
         } else {
-            updateRequest(update: false)
+            updateRequest(first: first, update: false)
         }
     }
     
     /// 更新请求
     ///
     /// - Parameter update: 是否更新所有已经在server db存在repo的信息
-    private func updateRequest(update: Bool) {
-        
-        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStartGithubStar, object:nil)
-
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(update: update)) { (result) in
-            //有响应即停止同步
-            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncEndGithubStar, object:nil)
-            
+    func updateRequest(first: Bool, update: Bool) {
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(first: first, update: update)) { (result) in
             switch result {
             case let .success(response):
                 do {
                     if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
+                            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
                             if update {
                                 //添加成功
                                 UserDefaults.standard.set(Date().timeStamp, forKey: self.lastTimeStampKey)
-                                UserDefaults.standard.synchronize()
                             }
                         }
                     }

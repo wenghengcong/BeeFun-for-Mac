@@ -53,8 +53,8 @@ public enum BeeFunAPI {
     
     //更新数据库
     //1. 每次启动时 2.
-    case updateServerDB(update: Bool)
-    
+    case updateServerDB(first: Bool, update: Bool)
+
     // User
     case addUser(user: ObjUser)
     
@@ -101,9 +101,9 @@ extension BeeFunAPI: TargetType {
     public var baseURL: URL {
         switch self {
         default:
-            //            return URL(string: "http://106.14.174.202:8082/beefuntest")!                //远程测试环境
-            //            return URL(string: "http://106.14.174.202:8082/beefun")!                    //远程环境
-            return URL(string: "http://localhost:8082")!                                  //本地测试环境
+            //            return URL(string: "https://www.beefun.top:8082/beefuntest")!                //远程测试环境
+            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
+//            return URL(string: "http://localhost:8082")!                                  //本地测试环境
         }
     }
     
@@ -112,7 +112,7 @@ extension BeeFunAPI: TargetType {
         case .addRepo(_):
             return "/v1/repo/client"
             
-        case .updateServerDB(_):
+        case .updateServerDB(_, _):
             return "/v1/db/update"
             
         case .addUser(_):
@@ -168,8 +168,11 @@ extension BeeFunAPI: TargetType {
     
     public var parameters: [String: Any]? {
         switch self {
-        case .updateServerDB(let update):
-            return ["update": update as AnyObject]
+        case .updateServerDB(let first, let update):
+            return [
+                "first": first as AnyObject,
+                "update": update as AnyObject
+            ]
         case .addUser(let user):
             return user.toJSON()
         case .addRepo(let repo):

@@ -106,6 +106,7 @@ class OAuthManager: NSObject {
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DidLogin, object:nil)
         AnswerManager.logLogin(method: "Github", success: true, attributes: [:])
         self.openMainWindow()
+        BeeFunDBManager.shared.updateServerDB(first: true)
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetUserInfo, object:nil)
         ObjUser.updateUserForBeeFun()
     }

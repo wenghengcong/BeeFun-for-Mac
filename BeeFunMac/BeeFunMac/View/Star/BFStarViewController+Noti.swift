@@ -16,8 +16,8 @@ extension BFStarViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(repoUpdateTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(delTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.DelTag, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoBegin(noti:)), name: NSNotification.Name.BeeFun.SyncStartGithubStar, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoDone(noti:)), name: NSNotification.Name.BeeFun.SyncEndGithubStar, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoBegin(noti:)), name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoDone(noti:)), name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
         
         let repoScrollView = starTable.enclosingScrollView
 //        let repoScrollContentView = repoScrollView?.contentView
