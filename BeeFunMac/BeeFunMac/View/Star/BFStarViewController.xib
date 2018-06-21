@@ -53,7 +53,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="AEU-Le-5Zo"/>
                             </constraints>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star" id="IBG-zC-PIM">
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star Sync" id="IBG-zC-PIM">
                                 <font key="font" metaFont="systemBold" size="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -409,6 +409,13 @@
                         <constraint firstAttribute="height" constant="1" id="jET-m8-NA0"/>
                     </constraints>
                 </box>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-DS-RWt">
+                    <rect key="frame" x="278" y="24" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="IbC-O9-DKB"/>
+                        <constraint firstAttribute="height" constant="16" id="ZlU-kN-qos"/>
+                    </constraints>
+                </progressIndicator>
             </subviews>
             <constraints>
                 <constraint firstItem="809-ra-yrl" firstAttribute="top" secondItem="hEo-Cc-YIc" secondAttribute="top" constant="1" id="0X1-QT-W5d"/>
@@ -418,15 +425,18 @@
                 <constraint firstItem="809-ra-yrl" firstAttribute="leading" secondItem="VGx-GR-Kkv" secondAttribute="trailing" id="HMq-CR-F4o"/>
                 <constraint firstItem="F1b-fQ-eyc" firstAttribute="top" secondItem="hEo-Cc-YIc" secondAttribute="top" constant="1" id="Iqv-DY-ADg"/>
                 <constraint firstItem="VGx-GR-Kkv" firstAttribute="top" secondItem="hEo-Cc-YIc" secondAttribute="top" constant="1" id="Rb8-qe-oil"/>
+                <constraint firstItem="3ba-DS-RWt" firstAttribute="top" secondItem="hEo-Cc-YIc" secondAttribute="top" constant="6" id="Ry8-Ae-z77"/>
                 <constraint firstItem="F1b-fQ-eyc" firstAttribute="leading" secondItem="hEo-Cc-YIc" secondAttribute="leading" id="WGM-uk-Kx9"/>
                 <constraint firstItem="7Fr-Ww-1QL" firstAttribute="top" secondItem="hEo-Cc-YIc" secondAttribute="top" constant="43" id="bWd-VP-xx4"/>
                 <constraint firstItem="809-ra-yrl" firstAttribute="height" secondItem="F1b-fQ-eyc" secondAttribute="height" id="cUy-xS-Acs"/>
                 <constraint firstItem="809-ra-yrl" firstAttribute="width" secondItem="F1b-fQ-eyc" secondAttribute="width" id="h24-D5-z3j"/>
                 <constraint firstItem="VGx-GR-Kkv" firstAttribute="height" secondItem="F1b-fQ-eyc" secondAttribute="height" id="jKK-wt-qd9"/>
+                <constraint firstItem="3ba-DS-RWt" firstAttribute="leading" secondItem="VGx-GR-Kkv" secondAttribute="trailing" constant="78" id="qT1-yQ-jrf"/>
                 <constraint firstAttribute="trailing" secondItem="7Fr-Ww-1QL" secondAttribute="trailing" id="xdK-s0-UOt"/>
             </constraints>
             <connections>
                 <outlet property="a_zOrder" destination="809-ra-yrl" id="obC-Yi-jGH"/>
+                <outlet property="progressIndicatorView" destination="3ba-DS-RWt" id="t8S-Kv-4zn"/>
                 <outlet property="starOrder" destination="VGx-GR-Kkv" id="Jfg-Sq-3o0"/>
                 <outlet property="timeOrder" destination="F1b-fQ-eyc" id="Vbq-3r-TZT"/>
             </connections>

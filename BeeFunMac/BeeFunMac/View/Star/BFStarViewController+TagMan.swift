@@ -41,7 +41,7 @@ extension BFStarViewController {
     @objc func refreshDataFromNetwork() {
         //启动从Github拉取数据，更新服务端数据库
         if !updateBeeFunDBLoading {
-            BeeFunDBManager.shared.updateServerDB(first: false)
+            BeeFunDBManager.shared.updateServerDB(showTips: true, first: false)
         }
     }
     

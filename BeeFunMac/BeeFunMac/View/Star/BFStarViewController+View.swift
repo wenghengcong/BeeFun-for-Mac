@@ -37,6 +37,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         tableViewBackground.backgroundColor = NSColor.white
         orderFilterView.backgroundColor = NSColor.white
         orderFilterView.delegate = self
+        orderFilterView.setupIndicator()
         searchFilterView.backgroundColor = NSColor.white
 
         self.leftContentView.addSubview(tableViewBackground)

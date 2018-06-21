@@ -24,6 +24,8 @@ class BFStarOrderFilterView: BFView {
     @IBOutlet weak var starOrder: BFImageButton!
     @IBOutlet weak var a_zOrder: BFImageButton!
     
+    @IBOutlet weak var progressIndicatorView: NSProgressIndicator!
+    
     open weak var delegate: StarOrderProtocol?
     
     var orderButtons: [BFImageButton] = []
@@ -49,8 +51,21 @@ class BFStarOrderFilterView: BFView {
         timeOrder.tag = StarOrderType.time.rawValue
         starOrder.tag = StarOrderType.star.rawValue
         a_zOrder.tag = StarOrderType.a_z.rawValue
+        
     }
     
+    func setupIndicator() {
+        progressIndicatorView.isIndeterminate = true
+        progressIndicatorView.isDisplayedWhenStopped = false
+    }
+
+    func showIndicator() {
+        progressIndicatorView.startAnimation(nil)
+    }
+    
+    func hideIndicator() {
+        progressIndicatorView.stopAnimation(nil)
+    }
     
     /// 选中Order type类型
     func selectOrder(type: StarOrderType) {

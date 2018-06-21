@@ -155,9 +155,11 @@ extension BFStarViewController {
         if getRepoTagPara.isBlank || getRepoLanguageVar.isBlank {
             return
         }
-        
+ 
+        orderFilterView.showIndicator()
         BeeFunProvider.sharedProvider.request(BeeFunAPI.repos(tag: getRepoTagPara, language: getRepoLanguageVar, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
             var message = kNoDataFoundTip
+            self.orderFilterView.hideIndicator()
             self.getReposNextPageLoading = false
             switch result {
             case let .success(response):
