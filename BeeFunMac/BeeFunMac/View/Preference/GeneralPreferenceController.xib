@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,19 +19,19 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="itN-6q-eKI">
-                    <rect key="frame" x="35" y="259" width="70" height="19"/>
+                    <rect key="frame" x="35" y="259" width="123" height="19"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="19" id="Je6-YQ-YUv"/>
-                        <constraint firstAttribute="width" constant="66" id="t2b-RF-2mA"/>
+                        <constraint firstAttribute="width" constant="119" id="t2b-RF-2mA"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Shorcut:" id="Bzp-gB-fLW">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BeeFun Hotkey" id="Bzp-gB-fLW">
                         <font key="font" metaFont="system" size="15"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="caL-eQ-2XX" customClass="MASShortcutView">
-                    <rect key="frame" x="102" y="257" width="158" height="19"/>
+                    <rect key="frame" x="164" y="257" width="158" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="158" id="nff-WL-hO9"/>
                         <constraint firstAttribute="height" constant="19" id="oJe-CS-OPp"/>
@@ -40,7 +40,7 @@
             </subviews>
             <constraints>
                 <constraint firstItem="itN-6q-eKI" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="37" id="62R-8u-ZLt"/>
-                <constraint firstItem="caL-eQ-2XX" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="102" id="F7w-ha-KpO"/>
+                <constraint firstItem="caL-eQ-2XX" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="164" id="F7w-ha-KpO"/>
                 <constraint firstItem="itN-6q-eKI" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="42" id="OQ1-iu-4eL"/>
                 <constraint firstItem="caL-eQ-2XX" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="44" id="e4L-eB-oqG"/>
             </constraints>
