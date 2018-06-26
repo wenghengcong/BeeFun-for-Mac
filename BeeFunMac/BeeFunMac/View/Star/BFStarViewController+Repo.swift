@@ -52,8 +52,11 @@ extension BFStarViewController {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
             if let html = objrepo.html_url {
-                self.repoLoadURL(html)
+//                self.repoLoadURL(html)
             }
+            //TODO:
+            self.repoLoadURL("https://github.com/wenghengcong/BeeFun/blob/master/README.md")
+
             //working tags
             refreshWorkingTagsFromRepo(repo: objrepo)
             reLayoutWorkingLayout()

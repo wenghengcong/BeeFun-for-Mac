@@ -49,6 +49,7 @@
 		5E2D29FE1FD97FAF0043A665 /* BFStarViewController+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */; };
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
+		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E48334C1FD2491400CEB336 /* BFHomeController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334B1FD2491400CEB336 /* BFHomeController+WebView.swift */; };
 		5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334D1FD2494700CEB336 /* BFHomeController+Noti.swift */; };
 		5E4833501FD249CF00CEB336 /* BFHomeController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */; };
@@ -215,6 +216,7 @@
 		5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Data.swift"; sourceTree = "<group>"; };
 		5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagMan.swift"; sourceTree = "<group>"; };
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
+		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E48334B1FD2491400CEB336 /* BFHomeController+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+WebView.swift"; sourceTree = "<group>"; };
 		5E48334D1FD2494700CEB336 /* BFHomeController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Noti.swift"; sourceTree = "<group>"; };
 		5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Util.swift"; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 				5E98679D1FD05044007EE86F /* BFThirdLibKey.swift */,
 				5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */,
 				5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */,
+				5E44C63A20E28CA000CDEAEE /* BFConfig.swift */,
 			);
 			path = ProConfig;
 			sourceTree = "<group>";
@@ -1112,6 +1115,7 @@
 				5EE9E78D1FCEB7A20012AE1C /* IconBarView.swift in Sources */,
 				5E9867E61FD05189007EE86F /* ObjBase.swift in Sources */,
 				5EA4350A1FDB7E8900034578 /* BFImageButton.swift in Sources */,
+				5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */,
 				5E9867E31FD05189007EE86F /* ObjError.swift in Sources */,
 				5E9867F51FD052AE007EE86F /* JSApp.swift in Sources */,
 				5E928C3E1FCDB8CB0066CAE4 /* BFBaseViewController.swift in Sources */,

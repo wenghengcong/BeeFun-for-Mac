@@ -43,6 +43,7 @@ class BFMainController: BFBaseViewController {
     /// 自定义左边icon 按钮
     func customIconBar() {
         iconBar.backgroundColor = NSColor.iconBarBackgroundColor
+        
         homeButton.highlight(false)
         //home button
         homeButton.tag = IconBarButton.home.rawValue
@@ -53,14 +54,23 @@ class BFMainController: BFBaseViewController {
         
         //TODO: 设置按钮隐藏
         settingButton.isHidden = true
-        
-        currentIcon = homeButton
+        if BFConfig.shared.appStoreChannel {
+            homeButton.isHidden = true
+            currentIcon = starButton
+        } else {
+            homeButton.isHidden = false
+            currentIcon = homeButton
+        }
     }
     
     
     /// 加载github home
     func loadHomeView() {
-        clickIconBarButton(homeButton)
+        if BFConfig.shared.appStoreChannel {
+            clickIconBarButton(starButton)
+        } else {
+            clickIconBarButton(homeButton)
+        }
         _ = starController.view
     }
     
