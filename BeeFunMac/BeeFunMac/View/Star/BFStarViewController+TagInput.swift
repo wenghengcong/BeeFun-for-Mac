@@ -111,7 +111,7 @@ extension BFStarViewController: NSTextFieldDelegate {
                 
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
-            make.leading.equalTo(0)
+            make.leading.equalTo(10)
             make.top.equalTo(self.rightContentView).offset(toolsH)
             make.trailing.equalTo(0)
         }

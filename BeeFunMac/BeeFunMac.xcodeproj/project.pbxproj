@@ -50,6 +50,8 @@
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
+		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
+		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
 		5E48334C1FD2491400CEB336 /* BFHomeController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334B1FD2491400CEB336 /* BFHomeController+WebView.swift */; };
 		5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334D1FD2494700CEB336 /* BFHomeController+Noti.swift */; };
 		5E4833501FD249CF00CEB336 /* BFHomeController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */; };
@@ -233,6 +235,8 @@
 		5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagMan.swift"; sourceTree = "<group>"; };
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
+		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
+		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
 		5E48334B1FD2491400CEB336 /* BFHomeController+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+WebView.swift"; sourceTree = "<group>"; };
 		5E48334D1FD2494700CEB336 /* BFHomeController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Noti.swift"; sourceTree = "<group>"; };
 		5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Util.swift"; sourceTree = "<group>"; };
@@ -854,6 +858,8 @@
 		5EBF53EF1FCFE68F00D7A2A5 /* Star */ = {
 			isa = PBXGroup;
 			children = (
+				5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */,
+				5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */,
 				5EA4350B1FDB80A500034578 /* View */,
 				5EBF53F91FCFF83000D7A2A5 /* BFStarViewController.swift */,
 				5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */,
@@ -1025,10 +1031,12 @@
 				5EA435081FDADF4400034578 /* Star.xcassets in Resources */,
 				5EAB030A2003B66500323A86 /* BFStarTagCellView.xib in Resources */,
 				5E09F60C201A1FB500CC3866 /* Preference.xcassets in Resources */,
+				5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */,
 				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
 				5E4833521FD252BA00CEB336 /* Home.xcassets in Resources */,
 				5EBF53F81FCFF82000D7A2A5 /* BFHomeController.xib in Resources */,
+				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 			);

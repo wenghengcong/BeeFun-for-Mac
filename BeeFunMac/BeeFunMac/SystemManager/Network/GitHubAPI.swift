@@ -156,7 +156,7 @@ extension GitHubAPI: TargetType {
         case .unstarRepo( _, _):
             return header
         case .readme(_, _):
-            header = ["User-Agent": "BeeFunMac","Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0", "Accept": "application/vnd.github.VERSION.raw"]
+            header = ["User-Agent": "BeeFunMac","Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0", "Accept": "application/vnd.github.VERSION.html"]
             return header
         default:
             header = ["User-Agent": "BeeFunMac", "Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0"]

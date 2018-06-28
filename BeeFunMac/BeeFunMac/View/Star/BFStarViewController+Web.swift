@@ -47,28 +47,37 @@ extension BFStarViewController {
     // MARK: - Webview
     func starPageConfigWebView() {
         
+        let source: String = "var meta = document.createElement('meta');" +
+            "meta.name = 'viewport';" +
+            "meta.content = 'width=device-\(self.rightContentView.width), initial-scale=1.0, maximum-scale=1.0, user-scalable=no';" +
+            "var head = document.getElementsByTagName('head')[0];" +
+        "head.appendChild(meta);";
+        let script: WKUserScript = WKUserScript(source: source, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        
         self.webIndicator.isDisplayedWhenStopped = false
         
         let wkUController = WKUserContentController()
+        wkUController.addUserScript(script)
+
         let wkWebConfig = WKWebViewConfiguration()
         wkWebConfig.userContentController = wkUController
         
         let toolsViewH: CGFloat = 65
-        let rect = CGRect(x: 0, y: 0, width: self.rightContentView.width, height: self.rightContentView.height-toolsViewH)
-//        self.repoWebView = WKWebView(frame: rect, configuration: wkWebConfig)
-        do {
-            self.repoWebView = try DownView(frame: rect, markdownString: "", openLinksInBrowser: false, templateBundle: nil, didLoadSuccessfully: {
-                
-            })
-        } catch {
-            
-        }
+        let rect = CGRect(x: 10, y: 0, width: self.rightContentView.width-10, height: self.rightContentView.height-toolsViewH)
+        self.repoWebView = WKWebView(frame: rect, configuration: wkWebConfig)
+//        do {
+//            self.repoWebView = try DownView(frame: rect, markdownString: "", openLinksInBrowser: false, templateBundle: nil, didLoadSuccessfully: {
+//
+//            })
+//        } catch {
+//
+//        }
 
         self.rightContentView.addSubview(self.repoWebView!)
         
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
-            make.leading.equalTo(0)
+            make.leading.equalTo(10)
             make.top.equalTo(self.rightContentView).offset(toolsViewH)
             make.trailing.equalTo(0)
         }

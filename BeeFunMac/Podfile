@@ -11,6 +11,7 @@ target 'BeeFun' do
 
 #Uti
 #pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+#    pod 'GHMarkdownParser'
     pod 'Down'
     pod 'Zip'
     pod 'Fabric'

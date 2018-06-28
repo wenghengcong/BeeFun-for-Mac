@@ -81,7 +81,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var searchFieldCell: NSSearchFieldCell!
     
     //web展示区域
-    var repoWebView: DownView?
+    var repoWebView: WKWebView?
     /// 整个工具栏，webview以上的全部
     @IBOutlet var toolsView: BFView!
     //webview的四个工具按钮

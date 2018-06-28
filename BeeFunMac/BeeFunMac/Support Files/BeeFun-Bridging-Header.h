@@ -10,6 +10,7 @@
 #define BeeFun_Bridging_Header_h
 
 #import <MASPreferences/MASPreferences.h>
+
 #import <MASShortcut/Shortcut.h>
 #import "MBProgressHUD.h"
 

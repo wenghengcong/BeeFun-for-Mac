@@ -66,12 +66,12 @@ extension BFStarViewController {
                 switch result {
                 case let .success(response):
                     do {
-                        let markDownString = try response.mapString()
-                        let down = Down(markdownString: markDownString)
-                        
+                        let htmlString = try response.mapString()
                         let statusCode = response.statusCode
-                        if statusCode == BFStatusCode.ok.rawValue, let htmlString = try? down.toHTML() {
-                            try self.repoWebView?.update(markdownString: markDownString)
+                        var templateHtml = self.getTemplateHTML()
+                        let resultHtml = templateHtml.replacing("{{body}}", with: htmlString)
+                        if statusCode == BFStatusCode.ok.rawValue {
+                            self.repoWebView?.loadHTMLString(resultHtml, baseURL: nil)
                         }
                     } catch {
                         
@@ -82,6 +82,19 @@ extension BFStarViewController {
                 }
             }
         }
+    }
+    
+    private func getTemplateHTML() -> String {
+        var html = ""
+        if let htmlPathURL = Bundle.main.url(forResource: "readmeTemplate", withExtension: "html"){
+            do {
+                html = try String(contentsOf: htmlPathURL, encoding: .utf8)
+            } catch  {
+                print("Unable to get the file.")
+            }
+        }
+        
+        return html
     }
     
 }
