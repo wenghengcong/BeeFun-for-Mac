@@ -43,7 +43,7 @@ open class OAuth1Swift: OAuthSwift {
             let requestTokenUrl = parameters["requestTokenUrl"], let authorizeUrl = parameters["authorizeUrl"], let accessTokenUrl = parameters["accessTokenUrl"] else {
             return nil
         }
-        self.init(consumerKey:consumerKey, consumerSecret: consumerSecret,
+        self.init(consumerKey: consumerKey, consumerSecret: consumerSecret,
           requestTokenUrl: requestTokenUrl,
           authorizeUrl: authorizeUrl,
           accessTokenUrl: accessTokenUrl)
@@ -79,7 +79,7 @@ open class OAuth1Swift: OAuthSwift {
                     responseParameters["oauth_token"] = token
                 }
 
-                if let token = responseParameters["oauth_token"] {
+                if let token = responseParameters["oauth_token"], !token.isEmpty {
                     this.client.credential.oauthToken = token.safeStringByRemovingPercentEncoding
                     if let oauth_verifier = responseParameters["oauth_verifier"] {
                         this.client.credential.oauthVerifier = oauth_verifier.safeStringByRemovingPercentEncoding

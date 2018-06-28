@@ -10,6 +10,8 @@ target 'BeeFun' do
 #    pod 'Sparkle'
 
 #Uti
+#pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+    pod 'Down'
     pod 'Zip'
     pod 'Fabric'
 #    pod 'HotKey'
@@ -23,21 +25,22 @@ target 'BeeFun' do
     pod 'SwiftyBeaver'
     pod 'SwiftDate'
 #	pod 'Bugly'
-    pod 'SwiftyStoreKit'
+
+#    pod 'SwiftyStoreKit'
 #    pod 'AVOSCloud'
 #   pod 'SwiftLint'
     pod 'SQLite.swift'
-    
+#    pod 'ITSwitch'
 #    pod 'p2.OAuth2'
     pod 'OAuthSwift'
 #    pod 'CallbackURLKit'
 #    pod 'DJProgressHUD_OSX'
     #加密
-    pod 'CryptoSwift'
-    pod 'ProgressKit'
+#    pod 'CryptoSwift'
+#    pod 'ProgressKit'
 #    pod 'AudioKit'
 #    pod 'SwifterSwift'
-    pod 'KeychainAccess'
+#    pod 'KeychainAccess'
     pod 'FlatButton', :git => 'https://github.com/OskarGroth/FlatButton.git'
 #    pod 'SwiftOCR'
 #    pod 'FlagKit'
@@ -47,7 +50,7 @@ target 'BeeFun' do
     pod 'MASShortcut'
 #    pod 'ShortcutRecorder'
     pod 'ReachabilitySwift'
-    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
+#    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
 #    pod 'Reveal-SDK', :configurations => ['Debug']
     #    pod 'GodEye', '~> 1.0.0', :configurations => ['Debug']  
 end

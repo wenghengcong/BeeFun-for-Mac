@@ -8,7 +8,10 @@ Swift based OAuth library for iOS and macOS.
 
 ## Support OAuth1.0, OAuth2.0
 
-Twitter, Flickr, Github, Instagram, Foursquare. Fitbit, Withings, Linkedin, Dropbox, Dribbble, Salesforce, BitBucket, GoogleDrive, Smugmug, Intuit, Zaim, Tumblr, Slack, Uber, Gitter, Facebook, Spotify, Typetalk, SoundCloud, etc
+Twitter, Flickr, Github, Instagram, Foursquare, Fitbit, Withings, Linkedin, Dropbox, Dribbble, Salesforce, BitBucket, GoogleDrive, Smugmug, Intuit, Zaim, Tumblr, Slack, Uber, Gitter, Facebook, Spotify, Typetalk, SoundCloud, etc
+
+## Sponsored by Auth0 <span><img src="https://user-images.githubusercontent.com/1801923/31792116-d4fca9ec-b512-11e7-92eb-56e8d3df8e70.png" height="28" align="top"></span>
+If you want to easily add authentication to Swift apps, feel free to check out Auth0's Swift SDK and free plan at [auth0.com/overview](https://auth0.com/overview?utm_source=GHsponsor&utm_medium=GHsponsor&utm_campaign=oauthswift&utm_content=auth)
 
 ## Installation
 
@@ -34,7 +37,7 @@ github "OAuthSwift/OAuthSwift" ~> 1.2.0
 * Podfile
 
 ```
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 pod 'OAuthSwift', '~> 1.2.0'
@@ -122,6 +125,7 @@ oauthswift.client.get("https://api.example.com/foo/bar",
 
 ### Authorize with OAuth2.0
 ```swift
+// create an instance and retain it
 oauthswift = OAuth2Swift(
     consumerKey:    "********",
     consumerSecret: "********",
@@ -200,7 +204,7 @@ See more examples in the demo application: [ViewController.swift](/Demo/Common/V
 * [Github](https://developer.github.com/v3/oauth/)  
 * [Instagram](http://instagram.com/developer/authentication)  
 * [Foursquare](https://developer.foursquare.com/overview/auth)  
-* [Fitbit](https://wiki.fitbit.com/display/API/OAuth+Authentication+in+the+Fitbit+API)  
+* [Fitbit](https://dev.fitbit.com/build/reference/web-api/oauth2/)  
 * [Withings](http://oauth.withings.com/api)  
 * [Linkedin](https://developer.linkedin.com/docs/oauth2)  
 * [Dropbox](https://www.dropbox.com/developers/core/docs)  
@@ -222,7 +226,7 @@ See more examples in the demo application: [ViewController.swift](/Demo/Common/V
 * [Goodreads](https://www.goodreads.com/api/documentation#oauth)
 * [Typetalk](http://developer.nulab-inc.com/docs/typetalk/auth)
 * [SoundCloud](https://developers.soundcloud.com/docs/api/guide#authentication)
-* [Digu](https://digu.io/developer/oauth)
+* [Doper](https://doper.io/developer/oauth)
 * [NounProject](http://api.thenounproject.com/getting_started.html#authentication)
 
 ## Images
@@ -251,7 +255,6 @@ To achieve great asynchronous code you can use one of these integration framewor
 
 OAuthSwift is available under the MIT license. See the LICENSE file for more info.
 
-[![Join the chat at https://gitter.im/OAuthSwift/OAuthSwift](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/OAuthSwift/OAuthSwift?utm_campaign=pr-badge&utm_content=badge&utm_medium=badge&utm_source=badge)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat
             )](http://mit-license.org) [![Platform](https://img.shields.io/badge/platform-iOS_OSX_TVOS-lightgrey.svg?style=flat
              )](https://developer.apple.com/resources/) [![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat
