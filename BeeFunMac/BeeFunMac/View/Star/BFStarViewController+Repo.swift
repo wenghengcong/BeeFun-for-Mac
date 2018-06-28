@@ -8,6 +8,7 @@
 
 import Cocoa
 import ObjectMapper
+import Down
 
 // MARK: - Star repo Table
 extension BFStarViewController {
@@ -65,10 +66,12 @@ extension BFStarViewController {
                 switch result {
                 case let .success(response):
                     do {
-                        let htmlString = try response.mapString()
+                        let markDownString = try response.mapString()
+                        let down = Down(markdownString: markDownString)
+                        
                         let statusCode = response.statusCode
-                        if statusCode == BFStatusCode.ok.rawValue {
-                            self.repoWebView?.loadHTMLString(htmlString, baseURL: nil)
+                        if statusCode == BFStatusCode.ok.rawValue, let htmlString = try? down.toHTML() {
+                            try self.repoWebView?.update(markdownString: markDownString)
                         }
                     } catch {
                         

@@ -8,7 +8,7 @@
 
 import Cocoa
 import WebKit
-
+import Down
 
 // MARK: - Tools View
 extension BFStarViewController {
@@ -55,7 +55,15 @@ extension BFStarViewController {
         
         let toolsViewH: CGFloat = 65
         let rect = CGRect(x: 0, y: 0, width: self.rightContentView.width, height: self.rightContentView.height-toolsViewH)
-        self.repoWebView = WKWebView(frame: rect, configuration: wkWebConfig)
+//        self.repoWebView = WKWebView(frame: rect, configuration: wkWebConfig)
+        do {
+            self.repoWebView = try DownView(frame: rect, markdownString: "", openLinksInBrowser: false, templateBundle: nil, didLoadSuccessfully: {
+                
+            })
+        } catch {
+            
+        }
+
         self.rightContentView.addSubview(self.repoWebView!)
         
         self.repoWebView!.snp.remakeConstraints { (make) in
