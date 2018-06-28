@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ObjectMapper
 
 // MARK: - Star repo Table
 extension BFStarViewController {
@@ -51,16 +52,33 @@ extension BFStarViewController {
         }
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
-            if let html = objrepo.html_url {
-//                self.repoLoadURL(html)
-            }
-            //TODO:
-            self.repoLoadURL("https://github.com/wenghengcong/BeeFun/blob/master/README.md")
-
+            loadRepoReadMePage(objRepo: objrepo)
             //working tags
             refreshWorkingTagsFromRepo(repo: objrepo)
             reLayoutWorkingLayout()
         }
     }
 
+    func loadRepoReadMePage(objRepo: ObjRepos) {
+        if let owner = objRepo.owner?.login, let repo = objRepo.name {
+            Provider.sharedProvider.request(GitHubAPI.readme(owner: owner, repo: repo)) { (result) in
+                switch result {
+                case let .success(response):
+                    do {
+                        let htmlString = try response.mapString()
+                        let statusCode = response.statusCode
+                        if statusCode == BFStatusCode.ok.rawValue {
+                            self.repoWebView?.loadHTMLString(htmlString, baseURL: nil)
+                        }
+                    } catch {
+                        
+                    }
+                    
+                case .failure:
+                    break
+                }
+            }
+        }
+    }
+    
 }

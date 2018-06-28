@@ -1,12 +1,12 @@
 //
-//  GithubAPI.swift
-//  BeeFunMac
+//  GitV3API.swift
+//  BeeFun
 //
-//  Created by WengHengcong on 2017/12/1.
-//  Copyright © 2017年 LuCi. All rights reserved.
+//  Created by wenghengcong on 16/1/10.
+//  Copyright © 2016年 JungleSong. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 import Foundation
 import Moya
 import Alamofire
@@ -16,11 +16,13 @@ typealias SuccessClosure = (_ result: AnyObject) -> Void
 //typealias SuccessClosure = (result: Mappable) -> Void
 typealias FailClosure = (_ errorMsg: String?) -> Void
 
+// MARK: - Provider setup
 class GitHupPorvider<Target>: MoyaProvider<Target> where Target: TargetType {
-    
+
     override init(endpointClosure: @escaping (Target) -> Endpoint, requestClosure: @escaping (Endpoint, @escaping MoyaProvider<GitHubAPI>.RequestResultClosure) -> Void, stubClosure: @escaping (Target) -> StubBehavior, callbackQueue: DispatchQueue?, manager: Manager, plugins: [PluginType], trackInflights: Bool) {
         super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, callbackQueue: callbackQueue, manager: manager, plugins: plugins, trackInflights: trackInflights)
     }
+
 }
 
 struct Provider {
@@ -54,37 +56,11 @@ struct Provider {
         }
         
     }
-    /*
-     static func requestDataWithTarget<T: Mappable>(target: GitHubAPI, type: T.Type , successClosure: SuccessClosure, failClosure: FailClosure) {
-     let _ = sharedProvider.request(target).subscribe { (event) -> Void in
-     switch event {
-     case .Next(let response):
-     let info = Mapper<CommonInfo>().map(JSON(data: response.data,options: .AllowFragments).object)
-     guard info?.code == RequestCode.success.rawValue else {
-     failClosure(errorMsg: info?.msg)
-     return
-     }
-     guard let data = info?.data else {
-     failClosure(errorMsg: "数据为空")
-     return
-     }
-     successClosure(result: data)
-     case .Error(let error):
-     print("网络请求失败...\(error)")
-     default:
-     break
-     }
-     }
-     }
-     */
-    
 }
 
 struct APIKeyName {
-    
     static let sortKey = "sort"
     static let dirctionKey = "direction"
-    
 }
 
 public enum GitHubAPI {
@@ -97,18 +73,18 @@ public enum GitHubAPI {
     case deleteUrl(url:String)
     case traceUrl(url:String)
     case connectUrl(url:String)
-    
+
     //user
     case myInfo
     case userInfo(username:String)
     case updateUserInfo(name:String, email:String, blog:String, company:String, location:String, hireable:Bool, bio:String)
     case allUsers(page:Int, perpage:Int)
-    
+
     //user email
     case userEmails
     case addEmail
     case delEmail
-    
+
     //user followers
     case userFollowers(page:Int, perpage:Int, username:String)
     case myFollowers
@@ -118,14 +94,14 @@ public enum GitHubAPI {
     case checkFollowing(username:String, target_user:String)
     case follow(username:String)
     case unfollow(username:String)
-    
+
     //repository
     case myRepos(page:Int, perpage:Int, type:String, sort:String, direction:String)
     case userRepos( username:String, page:Int, perpage:Int, type:String, sort:String, direction:String)
     case orgRepos(type:String, organization:String)
     case pubRepos(page:Int, perpage:Int)
     case userSomeRepo(owner:String, repo:String)
-    
+
     //starring
     case reposStargazers(owner:String, repo:String)
     case userStarredRepos(username:String, sort:String, direction:String)
@@ -134,14 +110,14 @@ public enum GitHubAPI {
     case checkStarred(owner:String, repo:String)
     case starRepo(owner:String, repo:String)
     case unstarRepo(owner:String, repo:String)
-    
+
     //notification
-    //    case MyNotifications(page:Int,perpage:Int,all:Bool ,participating:Bool,since:String,before:String)
+//    case MyNotifications(page:Int,perpage:Int,all:Bool ,participating:Bool,since:String,before:String)
     case myNotifications(page:Int, perpage:Int, all:String, participating:String)
     case repoNotifications(owner:String, repo:String, all:String, participating:String)
     case markNotificationsAsRead(last_read_at:String)
     case markRepoNotificationsAsRead(owner:String, repo:String, last_read_at:String)
-    
+
     //watching
     case repoWatchers(page:Int, perpage:Int, owner:String, repo:String)
     case userWatchedRepos(page:Int, perpage:Int, username:String)
@@ -149,52 +125,56 @@ public enum GitHubAPI {
     case checkWatched(owner:String, repo:String)
     case watchingRepo(owner:String, repo:String, subscribed:String, ignored:String)
     case unWatchingRepo(owner:String, repo:String)
-    
+
     //forks
     case userReposForks(page:Int, perpage:Int, sort:String, owner:String, repo:String)
     case createFork(owner:String, repo:String)
-    
+
     //gist
-    
+
+    //readme
+    case readme(owner: String, repo: String)
 }
 
 extension GitHubAPI: TargetType {
-    
+
     public var headers: [String : String]? {
         var header = ["User-Agent": "BeeFunMac","Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0", "Accept": "application/vnd.github.v3.star+json"]
         switch self {
-            case .reposStargazers( _, _):
-                return header
-            case .myStarredRepos:
-                return header
-            case .allMyStarredRepos:
-                return header
-            case .userStarredRepos(_ , _, _):
-                return header
-            case .checkStarred( _, _):
-                return header
-            case .starRepo( _, _):
-                return header
-            case .unstarRepo( _, _):
-                return header
-            default:
-                header = ["User-Agent": "BeeFunMac","Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0"]
-                return header
+        case .reposStargazers( _, _):
+            return header
+        case .myStarredRepos:
+            return header
+        case .allMyStarredRepos:
+            return header
+        case .userStarredRepos(_ , _, _):
+            return header
+        case .checkStarred( _, _):
+            return header
+        case .starRepo( _, _):
+            return header
+        case .unstarRepo( _, _):
+            return header
+        case .readme(_, _):
+            header = ["User-Agent": "BeeFunMac","Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0", "Accept": "application/vnd.github.VERSION.html"]
+            return header
+        default:
+            header = ["User-Agent": "BeeFunMac", "Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0"]
+            return header
         }
     }
-    
     
     public var parameterEncoding: ParameterEncoding {
         return Alamofire.ParameterEncoding.self as! ParameterEncoding
     }
-    
+
     public var baseURL: URL {
         switch self {
         default:
             return URL(string: "https://api.github.com")!
         }
     }
-    
+
     public var path: String {
         switch self {
         //url
@@ -214,8 +194,8 @@ extension GitHubAPI: TargetType {
             return url
         case .connectUrl(let url):
             return url
-            
-        //user
+
+          //user
         case .myInfo:
             return "/user"
         case .userInfo(let username):
@@ -231,7 +211,7 @@ extension GitHubAPI: TargetType {
             return "/user/emails"
         case .delEmail:
             return "/user/emails"
-            
+
         //user followers
         case .userFollowers(_, _, let username):
             return "/users/\(username)/followers"
@@ -249,19 +229,19 @@ extension GitHubAPI: TargetType {
             return "/user/following/\(username)"
         case .unfollow(let username):
             return "/user/following/\(username)"
-            
+
         case .myRepos:
             return "/user/repos"
         case .userRepos(let username, _, _, _, _, _):
             return "/users/\(username)/repos"
-            
+
         case .orgRepos(_, let organization):
             return "/orgs/\(organization)/repos"
         case .pubRepos:
             return "/repositories"
         case .userSomeRepo(let owner, let repo):
             return "/repos/\(owner)/\(repo)"
-            
+
         //starring
         case .reposStargazers(let owner, let repo):
             return "/repos/\(owner)/\(repo)/stargazers"
@@ -277,8 +257,8 @@ extension GitHubAPI: TargetType {
             return "/user/starred/\(owner)/\(repo)"
         case .unstarRepo(let owner, let repo):
             return "/user/starred/\(owner)/\(repo)"
-            
-        //notification
+
+               //notification
         case .myNotifications:
             return "/notifications"
         case .repoNotifications(let owner, let repo, _, _):
@@ -287,7 +267,7 @@ extension GitHubAPI: TargetType {
             return "/notifications"
         case .markRepoNotificationsAsRead(let owner, let repo, _):
             return "/repos/\(owner)/\(repo)/notifications"
-            
+
         //watching
         case .repoWatchers(_, _, let owner, let repo):
             return "/repos/\(owner)/\(repo)/subscribers"
@@ -306,13 +286,16 @@ extension GitHubAPI: TargetType {
             return "/repos/\(owner)/\(repo)/forks"
         case .createFork(let owner, let repo):
             return "/repos/\(owner)/\(repo)/forks"
+        //readme
+        case .readme(let owner, let repo):
+            return "/repos/\(owner)/\(repo)/readme"
         }
     }
-    
+
     public var method: Moya.Method {
-        
+
         switch self {
-            
+
         //url
         case .gerUrl:
             return .get
@@ -330,10 +313,10 @@ extension GitHubAPI: TargetType {
             return .trace
         case .connectUrl:
             return .connect
-            
+
         case .updateUserInfo:
             return .patch
-        //user email
+            //user email
         case .addEmail:
             return .post
         case .delEmail:
@@ -343,7 +326,7 @@ extension GitHubAPI: TargetType {
             return .put
         case .unfollow(_):
             return .delete
-            
+
         //starring
         case .starRepo(_, _):
             return .put
@@ -353,25 +336,23 @@ extension GitHubAPI: TargetType {
             return .put
         case .markNotificationsAsRead:
             return .put
-            
+
         //watching
         case .watchingRepo:
             return .put
         case .unWatchingRepo:
             return .delete
-            
+
         case .createFork:
             return .post
         default:
             return .get
-            
+
         }
     }
-    
-    public var parameters: [String : Any]? {
-        
+
+    public var parameters: [String: Any]? {
         switch self {
-            
         //follower
         case .userFollowers(let page, let perpage, _):
             return [
@@ -383,17 +364,17 @@ extension GitHubAPI: TargetType {
                 "page": page as AnyObject,
                 "per_page": perpage as AnyObject
             ]
-            
+
         case .updateUserInfo(let name, let email, let blog, let company, let location, let hireable, let bio):
             return [
-                "name": name as AnyObject,
-                "email": email as AnyObject,
-                "blog": blog as AnyObject,
-                "company": company as AnyObject,
-                "location": location as AnyObject,
-                "hireable": hireable as AnyObject,
-                "bio": bio as AnyObject
-            ]
+                    "name": name as AnyObject,
+                    "email": email as AnyObject,
+                    "blog": blog as AnyObject,
+                    "company": company as AnyObject,
+                    "location": location as AnyObject,
+                    "hireable": hireable as AnyObject,
+                    "bio": bio as AnyObject
+                ]
         case .allUsers(let page, let perpage):
             return [
                 "page": page as AnyObject,
@@ -424,7 +405,7 @@ extension GitHubAPI: TargetType {
                 "page": page as AnyObject,
                 "per_page": perpage as AnyObject
             ]
-            
+
         //starring
         case .userStarredRepos(_, let sort, let direction):
             return [
@@ -464,7 +445,7 @@ extension GitHubAPI: TargetType {
             return [
                 "last_read_at": last_read_at as AnyObject
             ]
-            
+
         //watching
         case .repoWatchers(let page, let perpage, _, _):
             return [
@@ -481,29 +462,29 @@ extension GitHubAPI: TargetType {
                 "page": page as AnyObject,
                 "per_page": perpage as AnyObject
             ]
-            
-            //        case WatchingRepo(_,_,let subscribed,let ignored):
-            //            return [
-            //                "subscribed":subscribed,
-            //                "ignored":ignored
-            //            ]
-            
-            
-        //forks
+
+//        case WatchingRepo(_,_,let subscribed,let ignored):
+//            return [
+//                "subscribed":subscribed,
+//                "ignored":ignored
+//            ]
+
+       
+            //forks
         case .userReposForks(let page, let perpage, let sort, _, _):
             return [
                 "page": page as AnyObject,
                 "per_page": perpage as AnyObject,
                 "sort": sort as AnyObject
             ]
-            
+
         default:
             return nil
-            
+
         }
-        
+
     }
-    
+
     public var task: Task {
         let encoding: ParameterEncoding
         switch self.method {
@@ -517,7 +498,7 @@ extension GitHubAPI: TargetType {
         }
         return .requestPlain
     }
-    
+
     //Any target you want to hit must provide some non-nil NSData that represents a sample response. This can be used later for tests or for providing offline support for developers. This should depend on self.
     public var sampleData: Data {
         switch self {
@@ -525,13 +506,13 @@ extension GitHubAPI: TargetType {
             return "get user info.".data(using: String.Encoding.utf8)!
         case .myRepos:
             return "get user repos.".data(using: String.Encoding.utf8)!
-            
+
         default :
             return "default".data(using: String.Encoding.utf8)!
         }
-        
+
     }
-    
+
 }
 
 // MARK: - Provider support
@@ -545,4 +526,3 @@ public func url(_ route: TargetType) -> String {
     print("api:\(route.baseURL.appendingPathComponent(route.path).absoluteString)")
     return route.baseURL.appendingPathComponent(route.path).absoluteString
 }
-

@@ -37,9 +37,7 @@ extension BFStarViewController {
     @objc func webViewHomeAction(sender: NSButton?) {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
-            if let html = objrepo.html_url {
-                self.repoLoadURL(html)
-            }
+            loadRepoReadMePage(objRepo: objrepo)
         }
     }
 }
