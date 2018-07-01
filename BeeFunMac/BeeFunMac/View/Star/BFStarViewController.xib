@@ -49,12 +49,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="200" height="680"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S70-hW-VRO">
-                            <rect key="frame" x="12" y="645" width="139" height="24"/>
+                            <rect key="frame" x="12" y="650" width="139" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="AEU-Le-5Zo"/>
                             </constraints>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star Sync" id="IBG-zC-PIM">
-                                <font key="font" metaFont="systemBold" size="17"/>
+                                <font key="font" size="17" name="HelveticaNeue-LightItalic"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -135,12 +135,12 @@
                             </constraints>
                         </box>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="959-bl-xb0">
-                            <rect key="frame" x="12" y="521" width="126" height="26"/>
+                            <rect key="frame" x="12" y="526" width="126" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26" id="b2Z-bO-Zyy"/>
                             </constraints>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tag" id="Y6F-3n-jri">
-                                <font key="font" metaFont="systemBold" size="15"/>
+                                <font key="font" size="17" name="HelveticaNeue-LightItalic"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
@@ -245,7 +245,7 @@
                         <constraint firstAttribute="trailing" secondItem="nSN-U9-Xew" secondAttribute="trailing" id="96U-vk-fkj"/>
                         <constraint firstItem="5ot-qA-3Bl" firstAttribute="leading" secondItem="S70-hW-VRO" secondAttribute="trailing" constant="13" id="9iI-YV-YOu"/>
                         <constraint firstItem="wAt-li-MiT" firstAttribute="top" secondItem="VIS-6M-OXc" secondAttribute="bottom" constant="6" id="ADo-76-TPe"/>
-                        <constraint firstItem="TcX-2a-Qhf" firstAttribute="top" secondItem="959-bl-xb0" secondAttribute="bottom" constant="5" id="AJI-qf-h6R"/>
+                        <constraint firstItem="TcX-2a-Qhf" firstAttribute="top" secondItem="959-bl-xb0" secondAttribute="bottom" constant="10" id="AJI-qf-h6R"/>
                         <constraint firstItem="hc7-pI-nJc" firstAttribute="leading" secondItem="TcX-2a-Qhf" secondAttribute="trailing" id="ClG-ap-TmF"/>
                         <constraint firstAttribute="width" constant="200" id="Esh-b8-rIH"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="leading" secondItem="9Mt-Ga-aJD" secondAttribute="trailing" constant="5" id="Giw-iL-QL8"/>
@@ -255,17 +255,17 @@
                         <constraint firstAttribute="trailing" secondItem="lDV-3l-8PR" secondAttribute="trailing" id="LCa-MZ-Bcw"/>
                         <constraint firstItem="TcX-2a-Qhf" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" id="NBK-c6-jKI"/>
                         <constraint firstItem="DPD-vj-bfB" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" constant="13" id="OYb-1q-gB8"/>
-                        <constraint firstItem="959-bl-xb0" firstAttribute="top" secondItem="oRC-gn-Or9" secondAttribute="bottom" constant="9" id="OwT-Xh-qrd"/>
+                        <constraint firstItem="959-bl-xb0" firstAttribute="top" secondItem="oRC-gn-Or9" secondAttribute="bottom" constant="4" id="OwT-Xh-qrd"/>
                         <constraint firstItem="oRC-gn-Or9" firstAttribute="leading" secondItem="DPD-vj-bfB" secondAttribute="trailing" constant="3" id="S3S-ii-72N"/>
                         <constraint firstItem="VIS-6M-OXc" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" constant="11" id="W3T-iO-O4H"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="top" secondItem="SDH-EO-UBM" secondAttribute="top" id="YWT-xY-yRd"/>
                         <constraint firstItem="S70-hW-VRO" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" constant="14" id="aRk-z2-yar"/>
                         <constraint firstItem="oRC-gn-Or9" firstAttribute="top" secondItem="5Pn-dh-2Y5" secondAttribute="bottom" constant="2" id="bOu-Kk-9CR"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="leading" secondItem="oRC-gn-Or9" secondAttribute="trailing" constant="2" id="d01-9J-lyn"/>
-                        <constraint firstItem="i7a-z8-s4f" firstAttribute="top" secondItem="S70-hW-VRO" secondAttribute="bottom" constant="6" id="dpx-3a-yHz"/>
+                        <constraint firstItem="i7a-z8-s4f" firstAttribute="top" secondItem="S70-hW-VRO" secondAttribute="bottom" constant="11" id="dpx-3a-yHz"/>
                         <constraint firstItem="wAt-li-MiT" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" id="eU9-Sb-4Y7"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="leading" secondItem="5ot-qA-3Bl" secondAttribute="trailing" constant="12" id="ek4-fI-4Jv"/>
-                        <constraint firstItem="S70-hW-VRO" firstAttribute="top" secondItem="SDH-EO-UBM" secondAttribute="top" constant="11" id="gVD-il-kni"/>
+                        <constraint firstItem="S70-hW-VRO" firstAttribute="top" secondItem="SDH-EO-UBM" secondAttribute="top" constant="6" id="gVD-il-kni"/>
                         <constraint firstItem="5Pn-dh-2Y5" firstAttribute="top" secondItem="i7a-z8-s4f" secondAttribute="bottom" id="hps-EH-EUz"/>
                         <constraint firstAttribute="trailing" secondItem="i7a-z8-s4f" secondAttribute="trailing" id="iF7-d5-mTS"/>
                         <constraint firstItem="9Mt-Ga-aJD" firstAttribute="top" secondItem="oRC-gn-Or9" secondAttribute="bottom" constant="9" id="kE5-4a-DT1"/>
