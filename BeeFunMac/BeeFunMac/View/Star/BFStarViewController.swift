@@ -49,6 +49,9 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     /// 选中
     var selectedRepoRow: Int = 0
     var selectedTagRow: Int = 0
+    /// repoModel原来的tag列表
+    var oriSelRepoStatTags: [String]?
+    
     var selectedTipRow: Int = 0
     
     var selectedTag: ObjTag? 

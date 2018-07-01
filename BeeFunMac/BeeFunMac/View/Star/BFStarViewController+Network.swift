@@ -103,7 +103,7 @@ extension BFStarViewController {
                             //TODO: 弹框提醒
                             //                                JSMBHUDBridge.showSuccess("Success".localized)
                             NotificationCenter.default.post(name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil, userInfo: ["from": form, "to": to])
-                            self.refreshAfterRightMenuAction(delete: false)
+                            self.refreshAfterRightMenuAction(delete: false)                            
                         }
                     }
                 } catch {
@@ -198,26 +198,45 @@ extension BFStarViewController {
             return
         }
         let repoModel = starReposData[selectedRepoRow]
+
+        //交集
+        //如果原来repo tag列表为空，那么强制赋空
+        if oriSelRepoStatTags == nil {
+            oriSelRepoStatTags = []
+        }
+        var workingTagsString: [String]? = []
+        for tagObj in workingTags {
+            if let name = tagObj.name {
+                workingTagsString?.append(name)
+            }
+        }
+        var change = true
+        if oriSelRepoStatTags == workingTagsString {
+            change = false
+        }
+        var delTags = oriSelRepoStatTags!.difference(workingTagsString!)
+        var addTags = workingTagsString?.difference(oriSelRepoStatTags!)
         
         let star_tagsStr = convertObjListToString(tags: self.workingTags)
         
         if let repoid = repoModel.id {
-            BeeFunProvider.sharedProvider.request(BeeFunAPI.addTagToRepo(star_tags: star_tagsStr, repoId: repoid)) { (result) in
+            BeeFunProvider.sharedProvider.request(BeeFunAPI.addTagToRepo(change: change, star_tags: star_tagsStr, delete_tags: delTags, repoId: repoid)) { (result) in
                 switch result {
                 case let .success(response):
                     do {
                         if let allTag: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
                             if let code = allTag.codeEnum, code == BFStatusCode.bfOk {
                                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil, userInfo: ["star_tags": self.workingTags])
-                                //在通知中处理如下: addTagSuccessful(noti: NSNotification)
-                                NotificationCenter.default.post(name: NSNotification.Name.BeeFun.AddTag, object: nil, userInfo: nil)
+                                if addTags != nil && addTags!.count > 0 {
+                                    //在通知中处理如下: addTagSuccessful(noti: NSNotification)
+                                    NotificationCenter.default.post(name: NSNotification.Name.BeeFun.AddTag, object: nil, userInfo: nil)
+                                }
                             } else {
-                                //TODO:tips
-                                //                                JSMBHUDBridge.showError("Update Failure".localized)
+                                //TODO: tips
+//                                JSMBHUDBridge.showError("Update Failure".localized)
                             }
                         }
                     } catch {
-                        
                     }
                 case .failure: break
                 }

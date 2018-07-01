@@ -62,6 +62,7 @@ extension BFStarViewController {
             if !starReposData.isBeyond(index: selectedRepoRow) {
                 let selectedRepo = starReposData[selectedRepoRow]
                 selectedRepo.star_tags = convertObjListToStringList(tags: updateTagsList)
+                oriSelRepoStatTags = selectedRepo.star_tags
             }
         }
     

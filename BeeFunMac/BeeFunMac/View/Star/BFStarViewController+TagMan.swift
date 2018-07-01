@@ -175,24 +175,61 @@ extension BFStarViewController {
     /// 右键删除按钮后，刷新相关视图
     /// - Parameter delete: 是否是删除(另外一个操作是重命名tag)
     func refreshAfterRightMenuAction(delete: Bool) {
-        getFirstPageTags()
         
         if delete {
+            getFirstPageTags()
             //删除tag后，默认选中"all" tag
             clickAllStarButton()
         } else {
-            //重命名tag操作后
-            //...
-            searchStarReposNow(allRefresh: true, scrollToTop: true)
+            //更新tag后的刷新
+            updateTagRefreshTagsAndRepos()
         }
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
+            oriSelRepoStatTags = objrepo.star_tags
             //working tags
              refreshWorkingTagsFromRepo(repo: objrepo)
             reLayoutWorkingLayout()
         }
     }
-    
+    //TODO: 还没有完成，需要刷新
+    func updateTagRefreshTagsAndRepos() {
+        getTagsPage = 1
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.getAllTags(page: 0  , perpage: 0, sort: tagSortPara, direction: tagDirectionPara, containAll: "false")) { (result) in
+            self.getTagsNextPageLoading = false
+            switch result {
+            case let .success(response):
+                do {
+                    if let allTag: GetAllTagResponse = Mapper<GetAllTagResponse>().map(JSONObject: try response.mapJSON()) {
+                        if let code = allTag.codeEnum, code == BFStatusCode.bfOk {
+                            if let data = allTag.data {
+                                self.allTags = data
+                                self.tagTable.reloadData()
+                                //重命名tag操作后
+                                self.tagTableViewDidSelectRow(self.selectedTagRow)
+                                self.searchStarReposNow(allRefresh: true, scrollToTop: true)
+                                if !self.starReposData.isBeyond(index: self.selectedRepoRow) {
+                                    let objrepo = self.starReposData[self.selectedRepoRow]
+                                    self.oriSelRepoStatTags = objrepo.star_tags
+                                    //working tags
+                                    self.refreshWorkingTagsFromRepo(repo: objrepo)
+                                    self.reLayoutWorkingLayout()
+                                }
+                            }
+                        } else {
+                            self.resetGetTagsPageAfterNetworkError()
+                        }
+                    } else {
+                        self.resetGetTagsPageAfterNetworkError()
+                    }
+                } catch {
+                    self.resetGetTagsPageAfterNetworkError()
+                }
+            case .failure:
+                self.resetGetTagsPageAfterNetworkError()
+            }
+        }
+    }
 }
 
 // MARK: - Tag Table 点击

@@ -69,7 +69,7 @@ public enum BeeFunAPI {
     case getAllTags(page:Int, perpage:Int, sort:String, direction:String, containAll: String)
     case getTag(name: String)
     case addTag(tagModel: ObjTag)
-    case addTagToRepo(star_tags: String, repoId: Int)
+    case addTagToRepo(change:Bool, star_tags: String, delete_tags:[String], repoId: Int)
     case updateTag(name: String, to: String)
     case deleteTag(name: String)
     //language
@@ -132,7 +132,7 @@ extension BeeFunAPI: TargetType {
             return "/v1/tag/\(name)"
         case .addTag(_):
             return "/v1/tag"
-        case .addTagToRepo(_, let repoId):
+        case .addTagToRepo(_, _, _, let repoId):
             return "/v1/repo/tag/\(repoId)"
         case .updateTag(let name, _):
             return "/v1/tag/\(name)"
@@ -157,7 +157,7 @@ extension BeeFunAPI: TargetType {
             return .put
         case .deleteTag(_):
             return .delete
-        case .addTagToRepo(_, _):
+        case .addTagToRepo(_, _,_, _):
             return .post
         case .delRepo(_):
             return .delete
@@ -192,9 +192,11 @@ extension BeeFunAPI: TargetType {
         case .addTag(let tagModel):
             return tagModel.toJSON()
             
-        case .addTagToRepo(let star_tags, _):
+        case .addTagToRepo(let change, let star_tags, let delete_tags, _):
             return [
-                "star_tags": star_tags
+                "change": change,
+                "star_tags": star_tags,
+                "del_tags": delete_tags
             ]
         case .repos(_,let language, let page, let perpage, let sort, let direction):
             return [
