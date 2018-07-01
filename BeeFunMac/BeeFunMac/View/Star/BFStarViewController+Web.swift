@@ -35,7 +35,11 @@ extension BFStarViewController {
     
     @objc func webViewRefreshAction(sender: NSButton) {
         if let webview = self.repoWebView {
-            webview.reload()
+            if webview.backForwardList.currentItem != nil {
+                webview.reload()
+            } else {
+                webViewReadMeAction(sender: nil)
+            }
         } else {
             webViewReadMeAction(sender: nil)
         }

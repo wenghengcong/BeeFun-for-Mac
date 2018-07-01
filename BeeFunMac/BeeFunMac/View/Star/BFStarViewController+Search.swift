@@ -88,15 +88,27 @@ extension BFStarViewController: NSSearchFieldDelegate {
 
         //2. 筛选search key
         var filterBySearchKey: [ObjRepos] = []
-        searchKey = searchKey?.lowercased() //全部转换为小写来对比
-        if let key = searchKey {
+        if let key = searchKey?.lowercased() {
             for repo in reponseData {
-                if let fullname = repo.full_name?.lowercased(), let desc = repo.cdescription,
-                   let star_tags = repo.star_tags {
-                    let star_tags_str = convertStarTagStringListToString(tags: star_tags)
-                    if fullname.lowercased().contains(key) || desc.lowercased().contains(key) ||
-                        star_tags_str.lowercased().contains(key) {
+                if let fullname = repo.full_name?.lowercased() {
+                    if fullname.lowercased().contains(key) {
                         filterBySearchKey.append(repo)
+                        continue
+                    }
+                }
+                
+                if let desc = repo.cdescription {
+                    if desc.lowercased().contains(key) {
+                        filterBySearchKey.append(repo)
+                        continue
+                    }
+                }
+                
+                if let star_tags = repo.star_tags {
+                    let star_tags_str = convertStarTagStringListToString(tags: star_tags)
+                    if star_tags_str.lowercased().contains(key) {
+                        filterBySearchKey.append(repo)
+                        continue
                     }
                 }
             }

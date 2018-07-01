@@ -241,7 +241,7 @@ extension BFStarViewController: NSTextFieldDelegate {
             if textfield == searchField {
                 print("controlTextDidChange search \(self.searchField.stringValue)")
                 //TODO: 评估下是否需要每次在输入文字时拿到最新的数据
-                searchStarReposNow(allRefresh: true, scrollToTop: true)
+//                searchStarReposNow(allRefresh: true, scrollToTop: true)
             } else if textfield == inputRepoTagField {
                 print("controlTextDidChange input new tag \(self.inputRepoTagField.stringValue)")
                 //TODO:
