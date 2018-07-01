@@ -24,7 +24,7 @@ extension BFStarViewController {
         orderFilterView.selectOrder(type: ordertType)
         
         self.selectedRepoRow = 0
-        webViewHomeAction(sender: nil)
+        webViewReadMeAction(sender: nil)
         clickAllStarButton()
     }
     

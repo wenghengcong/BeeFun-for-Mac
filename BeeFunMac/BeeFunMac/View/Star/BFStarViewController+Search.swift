@@ -144,7 +144,7 @@ extension BFStarViewController: NSSearchFieldDelegate {
                     repoTableViewDidSelectRow(0)
                 }
             }
-            webViewHomeAction(sender: nil)
+            webViewReadMeAction(sender: nil)
         }
         
     }

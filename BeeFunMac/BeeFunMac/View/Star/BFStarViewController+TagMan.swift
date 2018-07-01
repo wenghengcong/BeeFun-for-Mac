@@ -287,7 +287,7 @@ extension BFStarViewController {
         searchStarReposNow(allRefresh: true, scrollToTop: true)
         
         //加载webview
-        webViewHomeAction(sender: nil)
+        webViewReadMeAction(sender: nil)
     }
     
     /// 取消选中当前行

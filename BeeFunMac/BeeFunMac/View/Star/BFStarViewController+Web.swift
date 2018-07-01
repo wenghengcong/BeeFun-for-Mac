@@ -12,10 +12,13 @@ import Down
 
 // MARK: - Tools View
 extension BFStarViewController {
+    
     @objc func webViewBackAction(sender: NSButton) {
         if let webview = self.repoWebView {
             if webview.canGoBack {
                 webview.goBack()
+            } else {
+                webViewReadMeAction(sender: nil)
             }
         }
     }
@@ -24,6 +27,8 @@ extension BFStarViewController {
         if let webview = self.repoWebView {
             if webview.canGoForward {
                 webview.goForward()
+            } else {
+                webViewReadMeAction(sender: nil)
             }
         }
     }
@@ -31,10 +36,12 @@ extension BFStarViewController {
     @objc func webViewRefreshAction(sender: NSButton) {
         if let webview = self.repoWebView {
             webview.reload()
+        } else {
+            webViewReadMeAction(sender: nil)
         }
     }
     
-    @objc func webViewHomeAction(sender: NSButton?) {
+    @objc func webViewReadMeAction(sender: NSButton?) {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
             oriSelRepoStatTags = objrepo.star_tags
@@ -103,7 +110,7 @@ extension BFStarViewController {
         self.webViewRefreshBtn.action = #selector(webViewRefreshAction(sender:))
         
         self.webViewHomeBtn.target = self
-        self.webViewHomeBtn.action = #selector(webViewHomeAction(sender:))
+        self.webViewHomeBtn.action = #selector(webViewReadMeAction(sender:))
     }
     
     func scaleContentPage() {

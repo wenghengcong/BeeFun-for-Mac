@@ -566,12 +566,12 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OGr-ma-vIN">
-                    <rect key="frame" x="116" y="34" width="25" height="25"/>
+                    <rect key="frame" x="132" y="37" width="57" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="KD6-gA-AOk"/>
-                        <constraint firstAttribute="width" constant="25" id="fgg-GJ-FV3"/>
+                        <constraint firstAttribute="height" constant="19" id="KD6-gA-AOk"/>
+                        <constraint firstAttribute="width" constant="57" id="fgg-GJ-FV3"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_home" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="wCX-dF-Tzr">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_repo_readme" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="wCX-dF-Tzr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -583,8 +583,8 @@
                 <constraint firstItem="ym6-BX-i2u" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="Gby-jV-VWV"/>
                 <constraint firstItem="tCe-cf-P17" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" id="Gnc-sk-xGm"/>
                 <constraint firstItem="2s2-fs-pol" firstAttribute="leading" secondItem="hK0-OW-JwJ" secondAttribute="trailing" constant="15" id="IjA-yo-JGb"/>
-                <constraint firstItem="OGr-ma-vIN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="6" id="S3O-Ez-V5b"/>
-                <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" constant="17" id="UFQ-oF-XJP"/>
+                <constraint firstItem="OGr-ma-vIN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="S3O-Ez-V5b"/>
+                <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" constant="33" id="UFQ-oF-XJP"/>
                 <constraint firstAttribute="trailing" secondItem="tCe-cf-P17" secondAttribute="trailing" id="d9m-ku-Fm1"/>
                 <constraint firstItem="sr5-0f-tAN" firstAttribute="leading" secondItem="2s2-fs-pol" secondAttribute="trailing" constant="16" id="dp4-Wn-Thg"/>
                 <constraint firstItem="hK0-OW-JwJ" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="5" id="jxc-4A-vuO"/>
@@ -651,10 +651,10 @@
         <image name="star_order_time" width="20" height="20"/>
         <image name="star_order_time_sel" width="40" height="40"/>
         <image name="star_refresh" width="200" height="200"/>
+        <image name="star_repo_readme" width="184" height="62"/>
         <image name="star_untagged" width="40" height="40"/>
         <image name="star_web_arrow_left" width="60" height="60"/>
         <image name="star_web_arrow_right" width="60" height="60"/>
-        <image name="star_web_home" width="60" height="60"/>
         <image name="star_web_refresh" width="60" height="60"/>
     </resources>
 </document>

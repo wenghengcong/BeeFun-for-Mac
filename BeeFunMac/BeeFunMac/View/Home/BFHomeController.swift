@@ -29,7 +29,7 @@ class BFHomeController: NSViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     deinit {
-        self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
+//        self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
     }
 }
 
