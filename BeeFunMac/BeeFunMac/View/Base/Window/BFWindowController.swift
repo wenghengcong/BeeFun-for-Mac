@@ -16,6 +16,8 @@ class BFWindowController: NSWindowController {
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
         showControlsAndHiddleTitle()
         moveableWindow()
+        let appDelegate = NSApp.delegate as! AppDelegate
+        appDelegate.mainController = self
     }
     
     /// 显示右上角三个按钮，但是隐藏title bar

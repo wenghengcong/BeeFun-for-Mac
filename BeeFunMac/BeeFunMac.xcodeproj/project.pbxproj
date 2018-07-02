@@ -74,6 +74,7 @@
 		5E5E822920E4E2CE00E810E2 /* SESearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E821C20E4E2CE00E810E2 /* SESearchUserModel.swift */; };
 		5E5E822A20E4E2CE00E810E2 /* SESearchBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E821D20E4E2CE00E810E2 /* SESearchBaseModel.swift */; };
 		5E5E822B20E4E2CE00E810E2 /* SESearchCommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */; };
+		5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */; };
 		5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */; };
 		5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */; };
 		5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */; };
@@ -259,6 +260,7 @@
 		5E5E821C20E4E2CE00E810E2 /* SESearchUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SESearchUserModel.swift; sourceTree = "<group>"; };
 		5E5E821D20E4E2CE00E810E2 /* SESearchBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SESearchBaseModel.swift; sourceTree = "<group>"; };
 		5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SESearchCommitModel.swift; sourceTree = "<group>"; };
+		5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDockMenuManager.swift; sourceTree = "<group>"; };
 		5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
 		5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+AutoCom.swift"; sourceTree = "<group>"; };
 		5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteTextField.xib; sourceTree = "<group>"; };
@@ -668,6 +670,7 @@
 				5E09F603201A153300CC3866 /* BFMonitor.swift */,
 				5E09F605201A156B00CC3866 /* BFMonitor+Handle.swift */,
 				5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */,
+				5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1145,6 +1148,7 @@
 				5E042CFC20AFBB3A00767E56 /* BeeFunDBManager.swift in Sources */,
 				5E9867EC1FD05189007EE86F /* ObjPermissions.swift in Sources */,
 				5E5E822220E4E2CE00E810E2 /* SEResponseWikis.swift in Sources */,
+				5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */,
 				5EBF53FB1FCFF83000D7A2A5 /* BFStarViewController.swift in Sources */,
 				5E2B26731FDC346B00600866 /* NSView+Extension.swift in Sources */,
 				5E9867E11FD05189007EE86F /* AppToken.swift in Sources */,

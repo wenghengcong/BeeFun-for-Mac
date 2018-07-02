@@ -14,6 +14,7 @@ enum MenuItemTitle: String {
     case about = "About BeeFun"
     case help = "Help"
     case signOut = "Sign Out"
+    case openMain = "Open…"
 }
 
 class BFMenuManager: NSObject {
@@ -40,6 +41,8 @@ class BFMenuManager: NSObject {
                 openHelp(item)
             case .signOut:
                 openSignOut(item)
+            case .openMain:
+                openBeeFunMainWindow()
             default:
                 break
             }
@@ -65,4 +68,7 @@ class BFMenuManager: NSObject {
         UserManager.shared.userSignOut()
     }
     
+    func openBeeFunMainWindow() {
+        AppDelegate.sharedInstance.mainController?.window?.makeKeyAndOrderFront(self)
+    }
 }

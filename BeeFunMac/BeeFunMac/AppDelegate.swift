@@ -31,7 +31,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
+    //Dock Menu
+    func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
+//        return BFDockMenuManager.shared.dockMenu()
+        let menu = NSMenu()
+        let menuItem = NSMenuItem(title: "BeeFun", action: #selector(openBeeFunMainWindow), keyEquivalent: "O")
+        menu.addItem(menuItem)
+        return menu
+    }
+    
     func application(_ application: NSApplication, open urls: [URL]) {
         //login
         print(urls)
@@ -39,7 +48,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     /// 点击dock 重新打开显示窗口
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        mainController?.showWindow(self)
+        //方法一：
+//        mainController?.window?.makeKeyAndOrderFront(self)
+        //方法二：
+        if !flag{
+            for window in sender.windows {
+                window.makeKeyAndOrderFront(self)
+            }
+        }
         return true
     }
     
@@ -71,5 +87,11 @@ extension AppDelegate {
             // Google provider is the only one wuth your.bundle.id url schema.
             OAuthSwift.handle(url: url)
         }
+    }
+}
+
+extension AppDelegate {
+   @objc func openBeeFunMainWindow() {
+        mainController?.window?.makeKeyAndOrderFront(self)
     }
 }
