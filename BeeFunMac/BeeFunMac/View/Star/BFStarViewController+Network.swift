@@ -102,8 +102,7 @@ extension BFStarViewController {
                             //更新成功
                             //TODO: 弹框提醒
                             //                                JSMBHUDBridge.showSuccess("Success".localized)
-                            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil, userInfo: ["from": form, "to": to])
-                            self.refreshAfterRightMenuAction(delete: false)                            
+                            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.UpdateTag, object: nil, userInfo: ["from": form, "to": to])
                         }
                     }
                 } catch {

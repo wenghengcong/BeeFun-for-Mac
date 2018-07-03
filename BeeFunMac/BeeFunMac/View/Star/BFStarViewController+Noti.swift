@@ -13,9 +13,11 @@ extension BFStarViewController {
     // MARK: - lefe cycle
     internal func addNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(addTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.AddTag, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(repoUpdateTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.UpdateTag, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(delTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.DelTag, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(repoUpdateTagSuccessful(noti:)), name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil)
+
         NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoBegin(noti:)), name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(syncStarRepoDone(noti:)), name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
         
@@ -37,6 +39,7 @@ extension BFStarViewController {
     }
     
     @objc func syncStarRepoBegin(noti: NSNotification) {
+        getFirstPageTags()
         refreshStartRotate()
     }
     
@@ -72,15 +75,18 @@ extension BFStarViewController {
         }
     }
     
+    @objc func updateTagSuccessful(noti: NSNotification) {
+        refreshAfterRightMenuAction(delete: false, noti: noti)
+    }
+    
     @objc func delTagSuccessful(noti: NSNotification) {
         //在删除tag后刷新相关页面
-        refreshAfterRightMenuAction(delete: true)
+        refreshAfterRightMenuAction(delete: true, noti: noti)
     }
     
     // MARK: - Scroll notification
     @objc func repoClipViewBoundDidChange(_ notification: Notification) {
 //        let changedContentView = notification.object
-        
     }
     
     @objc func repoScrollViewDidScroll(_ notification: Notification) {

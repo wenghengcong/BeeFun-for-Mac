@@ -20,7 +20,7 @@ extension BFHomeController {
             }
         }
     }
-    // TODO: - 开始检测登录操作
+
     func alertUserNeedLogin() -> Bool {
         if !UserManager.shared.isLogin {
             let alert = NSAlert()

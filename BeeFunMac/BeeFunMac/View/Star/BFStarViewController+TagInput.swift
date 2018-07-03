@@ -244,8 +244,7 @@ extension BFStarViewController: NSTextFieldDelegate {
 //                searchStarReposNow(allRefresh: true, scrollToTop: true)
             } else if textfield == inputRepoTagField {
                 print("controlTextDidChange input new tag \(self.inputRepoTagField.stringValue)")
-                //TODO:
-                inputTagsTipArr = ["Good", "Fine", "hahaha"]
+//                inputTagsTipArr = ["Good", "Fine", "hahaha"]
 //                tagTipsTableShow()
             }
         }
@@ -283,7 +282,7 @@ extension BFStarViewController: NSTextFieldDelegate {
                 if textfield == searchField {
                     searchStarReposNow(allRefresh: true, scrollToTop: true)
                 } else if textfield == inputRepoTagField {
-                    //TODO: 在AutoCompleteTextField中动作被截获，所以注释掉
+                    //FIXME: 在AutoCompleteTextField中动作被截获，所以注释掉
 //                    addTagToRepo()
                 } else if textfield == inputNewTagField {
                     clickSaveTagButton()
