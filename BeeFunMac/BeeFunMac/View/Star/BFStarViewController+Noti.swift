@@ -57,7 +57,7 @@ extension BFStarViewController {
     
     // 对repo更新tag成功后的通知， 刷新当前repo列表
     @objc func repoUpdateTagSuccessful(noti: NSNotification) {
-        
+        getFirstPageTags()
         if let userinfo = noti.userInfo, let updateTagsList: [ObjTag] = userinfo["star_tags"] as? [ObjTag] {
             if !starReposData.isBeyond(index: selectedRepoRow) {
                 let selectedRepo = starReposData[selectedRepoRow]
@@ -74,7 +74,7 @@ extension BFStarViewController {
     
     @objc func delTagSuccessful(noti: NSNotification) {
         //在删除tag后刷新相关页面
-        self.refreshAfterRightMenuAction(delete: true)
+        refreshAfterRightMenuAction(delete: true)
     }
     
     // MARK: - Scroll notification

@@ -97,7 +97,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: GetAllTagResponse = Mapper<GetAllTagResponse>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
                             //更新成功
                             //TODO: 弹框提醒
@@ -123,7 +123,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: GetAllTagResponse = Mapper<GetAllTagResponse>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
                             //TODO: 提示成功
                             //                            JSMBHUDBridge.showSuccess("Success".localized)
