@@ -8,7 +8,7 @@
 
 // MARK: - Apple
 public let AppleAppID = "1400043300"
-public let SocialAppStore = "https://itunes.apple.com/us/app/beefun-for-mac/id1400043300?l=zh&ls=1&mt=8"
+public let SocialAppStore = "https://appstore.com/mac/beefun"
 public let AppBundleIdentifier = "com.luci.beefun.mac"
 public let APNsAuthKeyID = "QW2AYPNFMK"
 
@@ -24,8 +24,8 @@ public let GithubAppRedirectUrl = "beefunmac://www.beefun.top"
 public let GithubAppScope = "user,repo,notifications,gist,admin:repo_hook,admin:org_hook,admin:org"
 
 // MARK: - 新浪
-// MARK: 短链接服务
-public let ShortSocialAppStore = "http://t.cn/RB8gspy"
+// MARK: 短链接服务  http://dwz.wailian.work/
+public let ShortSocialAppStore = "http://t.cn/RdxKmxq"
 public let ShortSocailGithub = "http://t.cn/Rqvjd6W"
 public let ShortOfficeWebsite = "http://t.cn/R0QpGhp"
 
