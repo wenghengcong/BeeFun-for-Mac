@@ -70,6 +70,7 @@ extension BFStarViewController {
                         let htmlString = try response.mapString()
                         let statusCode = response.statusCode
                         let templateHtml = self.getTemplateHTML()
+                        //https://github.com/sindresorhus/github-markdown-css
                         let htmlPathURL = Bundle.main.url(forResource: "readmeTemplate", withExtension: "html")
                         let resultHtml = templateHtml.replacing("{{body}}", with: htmlString)
                         if statusCode == BFStatusCode.ok.rawValue {

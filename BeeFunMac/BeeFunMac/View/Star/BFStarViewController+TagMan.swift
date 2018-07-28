@@ -48,21 +48,13 @@ extension BFStarViewController {
     //刷新按钮开始转动
     func refreshStartRotate() {
         updateBeeFunDBLoading = true
-        let rotationAnimation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotationAnimation.fillMode = kCAFillModeForwards
-        rotationAnimation.fromValue = 0
-        rotationAnimation.toValue = NSNumber(value: -Double.pi * 2)
-        rotationAnimation.duration = 1.0
-        rotationAnimation.repeatCount = .infinity;
-        self.refreshButton.layer?.position = CGPoint(x: self.refreshButton.frame.midX, y: self.refreshButton.frame.midY)
-        self.refreshButton.layer?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        self.refreshButton?.layer?.add(rotationAnimation, forKey: "rotationAnimation")
+        self.refreshButton.rotate()
     }
     
     //刷新按钮停止转动
     func refreshStopRotate() {
         updateBeeFunDBLoading = false
-        self.refreshButton?.layer?.removeAnimation(forKey: "rotationAnimation")
+        self.refreshButton.stopRotating()
     }
     
     //点击All Star

@@ -78,6 +78,7 @@
 		5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */; };
 		5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */; };
 		5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */; };
+		5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F7210C597C007596E9 /* UIView+Animation.swift */; };
 		5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */; };
 		5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */; };
 		5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F681FDD7F460050B50F /* LCButton.swift */; };
@@ -264,6 +265,7 @@
 		5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
 		5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+AutoCom.swift"; sourceTree = "<group>"; };
 		5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteTextField.xib; sourceTree = "<group>"; };
+		5E75D6F7210C597C007596E9 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Network.swift"; sourceTree = "<group>"; };
 		5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+View.swift"; sourceTree = "<group>"; };
 		5E7F6F681FDD7F460050B50F /* LCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCButton.swift; sourceTree = "<group>"; };
@@ -572,6 +574,7 @@
 				5E2B266F1FDC346A00600866 /* NSColor+Extension.swift */,
 				5E2B26701FDC346A00600866 /* NSView+Extension.swift */,
 				5E2B26711FDC346A00600866 /* WKWebView+Extension.swift */,
+				5E75D6F7210C597C007596E9 /* UIView+Animation.swift */,
 			);
 			path = LCAppKit;
 			sourceTree = "<group>";
@@ -1275,6 +1278,7 @@
 				5EAB03082003B65400323A86 /* BFStarTagCellView.swift in Sources */,
 				5E4833501FD249CF00CEB336 /* BFHomeController+Util.swift in Sources */,
 				5E9867CD1FD05189007EE86F /* ObjAsset.swift in Sources */,
+				5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */,
 				5EAD75E31FDED71300D8C128 /* NSString+Size.swift in Sources */,
 				5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */,
 				5EA4350D1FDB80C600034578 /* BFStarOrderFilterView.swift in Sources */,
