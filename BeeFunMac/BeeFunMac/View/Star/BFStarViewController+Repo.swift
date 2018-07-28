@@ -69,10 +69,14 @@ extension BFStarViewController {
                     do {
                         let htmlString = try response.mapString()
                         let statusCode = response.statusCode
-                        var templateHtml = self.getTemplateHTML()
+                        let templateHtml = self.getTemplateHTML()
+                        let htmlPathURL = Bundle.main.url(forResource: "readmeTemplate", withExtension: "html")
                         let resultHtml = templateHtml.replacing("{{body}}", with: htmlString)
                         if statusCode == BFStatusCode.ok.rawValue {
-                            self.repoWebView?.loadHTMLString(resultHtml, baseURL: nil)
+//                            let basePath = Bundle.main.bundlePath
+                            if let baseUrlPath = htmlPathURL?.deletingLastPathComponent() {
+                                self.repoWebView?.loadHTMLString(resultHtml, baseURL: baseUrlPath)
+                            }
                         }
                     } catch {
                         

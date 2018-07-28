@@ -121,7 +121,7 @@ extension BFStarViewController {
         let bestWidth: CGFloat = 1030
         let windowWidth = self.rightContentView.width
         let scale = windowWidth/bestWidth
-        self.repoWebView?.setMagnification(scale, centeredAt: self.rightContentView.center)
+//        self.repoWebView?.setMagnification(scale, centeredAt: self.rightContentView.center)
     }
     
     /// webview加载url
