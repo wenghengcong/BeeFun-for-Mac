@@ -178,6 +178,11 @@ extension BFThemeManager {
         return image
     }
     
+    func starSyncNormalImage() -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "sync", selected: false)
+        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        return image
+    }
     
     /// 保存Tag的icon
     func saveTagNormalImage() -> NSImage? {

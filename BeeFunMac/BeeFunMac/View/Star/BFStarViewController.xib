@@ -69,23 +69,18 @@
                                     <rect key="frame" x="0.0" y="140" width="200" height="35"/>
                                     <subviews>
                                         <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ot-qA-3Bl">
-                                            <rect key="frame" x="167" y="9" width="20" height="20"/>
+                                            <rect key="frame" x="167" y="6" width="23" height="23"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="eDq-GP-Sqs"/>
-                                                <constraint firstAttribute="width" constant="20" id="rwV-wi-7Ry"/>
+                                                <constraint firstAttribute="height" constant="23" id="eDq-GP-Sqs"/>
+                                                <constraint firstAttribute="width" constant="23" id="rwV-wi-7Ry"/>
                                             </constraints>
                                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_refresh" imagePosition="overlaps" alignment="center" alternateImage="star_refresh" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="Wdp-hH-MV1">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S70-hW-VRO">
-                                            <rect key="frame" x="7" y="8" width="152" height="25"/>
+                                            <rect key="frame" x="7" y="8" width="147" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="Tyu-Mm-bDY"/>
                                             </constraints>
@@ -113,10 +108,10 @@
                                         <constraint firstAttribute="trailing" secondItem="i7a-z8-s4f" secondAttribute="trailing" id="d7R-Of-UYs"/>
                                         <constraint firstAttribute="bottom" secondItem="i7a-z8-s4f" secondAttribute="bottom" id="fYE-As-KQw"/>
                                         <constraint firstItem="S70-hW-VRO" firstAttribute="top" secondItem="eJH-9W-MHz" secondAttribute="top" constant="2" id="lq1-hO-GaF"/>
-                                        <constraint firstAttribute="trailing" secondItem="5ot-qA-3Bl" secondAttribute="trailing" constant="13" id="pAk-j2-bma"/>
+                                        <constraint firstAttribute="trailing" secondItem="5ot-qA-3Bl" secondAttribute="trailing" constant="10" id="pAk-j2-bma"/>
                                         <constraint firstItem="i7a-z8-s4f" firstAttribute="leading" secondItem="eJH-9W-MHz" secondAttribute="leading" id="qcf-IX-NZD"/>
                                         <constraint firstItem="5ot-qA-3Bl" firstAttribute="top" secondItem="eJH-9W-MHz" secondAttribute="top" constant="6" id="sCY-Lj-2nY"/>
-                                        <constraint firstItem="5ot-qA-3Bl" firstAttribute="leading" secondItem="S70-hW-VRO" secondAttribute="trailing" constant="8" id="wiV-cr-N0Q"/>
+                                        <constraint firstItem="5ot-qA-3Bl" firstAttribute="leading" secondItem="S70-hW-VRO" secondAttribute="trailing" constant="13" id="wiV-cr-N0Q"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">

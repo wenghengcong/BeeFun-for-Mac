@@ -22,7 +22,6 @@ extension BFStarViewController {
         tagActionStackView.backgroundColor = bgColor
         allTagsBackView.backgroundColor = bgColor
         unTaggedBackView.backgroundColor = bgColor
-  
 
         //显示文本的视图背景色
         tagSortBackView.backgroundColor = thManager.tagShowBackgroundColor()
@@ -30,6 +29,7 @@ extension BFStarViewController {
         tagTextLabel.backgroundColor = thManager.tagShowBackgroundColor()
         tagTextLabel.textColor = thManager.tagShowTitleColor()
         
+        refreshButton.image = thManager.starSyncNormalImage()
         starSyncLabel.backgroundColor = thManager.tagShowBackgroundColor()
         starSyncLabel.textColor = thManager.tagShowTitleColor()
         starSyncBackView.backgroundColor = thManager.tagShowBackgroundColor()
