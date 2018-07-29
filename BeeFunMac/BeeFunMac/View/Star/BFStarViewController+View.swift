@@ -35,11 +35,8 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         
         starPageCustomTagTableView()
 
-        tableViewBackground.backgroundColor = NSColor.white
-        orderFilterView.backgroundColor = NSColor.white
-//        orderFilterView.delegate = self
+        orderFilterView.delegate = self
         orderFilterView.setupIndicator()
-        searchFilterView.backgroundColor = NSColor.white
 
         self.leftContentView.addSubview(tableViewBackground)
         self.leftContentView.addSubview(orderFilterView)
@@ -98,7 +95,6 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         
         let allTasgH = lineH * CGFloat(currentTagsOfLines)
         let toolsH: CGFloat = 65 + allTasgH - lineH
-        toolsView.backgroundColor = NSColor.white
         toolsView.snp.remakeConstraints { (make) in
             make.top.equalTo(self.rightContentView).offset(0)
             make.leading.equalTo(0)
@@ -119,7 +115,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
-            make.leading.equalTo(10)
+            make.leading.equalTo(0)
             make.top.equalTo(self.rightContentView).offset(toolsH)
             make.trailing.equalTo(0)
         }

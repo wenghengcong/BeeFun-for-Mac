@@ -71,6 +71,8 @@ extension BFStarViewController {
         
         saveNewTagBtn.state = .off
         unSelectedTagAndReload()
+        
+        inputNewTagField.window?.resignFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: true)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
         allStarsImageView.image = BFThemeManager.shared.allStarSelectedImage()
@@ -85,15 +87,18 @@ extension BFStarViewController {
         untaggedStarBtn.state = .on
         saveNewTagBtn.state = .off
         
+        inputNewTagField.window?.resignFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: true)
         allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
         untaggedStarsImageView.image = BFThemeManager.shared.unTaggedSelectedImage()
+        
         unSelectedTagAndReload()
     }
     
     //不选中tag table中的tag后的状态改变
     func unSelectedTagAndReload() {
+        
         filterTags = []
         self.selectedTagRow = -1
         deSelectedTagTableRow()
@@ -258,6 +263,7 @@ extension BFStarViewController {
         untaggedStarBtn.state = .off
         saveNewTagBtn.state = .off
 
+        inputNewTagField.window?.resignFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
         allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()

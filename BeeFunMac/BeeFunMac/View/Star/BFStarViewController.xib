@@ -24,12 +24,15 @@
                 <outlet property="saveNewTagBtn" destination="hc7-pI-nJc" id="bYI-PC-M9w"/>
                 <outlet property="searchField" destination="7TR-0e-oyy" id="4Cz-Mr-HUH"/>
                 <outlet property="searchFieldCell" destination="RTb-8W-uIi" id="MUC-n6-rNv"/>
+                <outlet property="searchFilterRightLine" destination="f76-mQ-wLQ" id="ihJ-iz-vRY"/>
                 <outlet property="searchFilterView" destination="x63-al-1vC" id="EcC-cu-5vT"/>
+                <outlet property="splitView" destination="EZa-Wk-bc4" id="xZQ-u7-MTb"/>
                 <outlet property="starSyncBackView" destination="eJH-9W-MHz" id="iiF-Dd-V3U"/>
                 <outlet property="starSyncLabel" destination="S70-hW-VRO" id="cgV-HW-Gdm"/>
                 <outlet property="starTable" destination="gFc-Ii-BNl" id="Zfe-eV-mxT"/>
                 <outlet property="tableViewBackground" destination="lWf-CO-BDw" id="kbd-hg-DaU"/>
                 <outlet property="tagActionStackView" destination="mTI-23-jv8" id="J9M-Q6-voC"/>
+                <outlet property="tagManagerRightLine" destination="Yhk-1J-WI3" id="xdG-yT-Z2Z"/>
                 <outlet property="tagRightMenu" destination="Yl1-MD-J7r" id="lIk-Wx-XFZ"/>
                 <outlet property="tagSortBackView" destination="g3E-aS-Bm8" id="Z3W-Yh-OhJ"/>
                 <outlet property="tagSortButton" destination="oaY-st-0O5" id="j5W-7i-Wgn"/>
@@ -75,17 +78,27 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S70-hW-VRO">
-                                            <rect key="frame" x="5" y="8" width="156" height="25"/>
+                                            <rect key="frame" x="7" y="8" width="152" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="Tyu-Mm-bDY"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star Sync" id="IBG-zC-PIM">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star Sync" drawsBackground="YES" id="IBG-zC-PIM">
                                                 <font key="font" size="17" name="HelveticaNeue-LightItalic"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </textFieldCell>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="i7a-z8-s4f">
                                             <rect key="frame" x="0.0" y="-2" width="200" height="5"/>
@@ -105,6 +118,11 @@
                                         <constraint firstItem="5ot-qA-3Bl" firstAttribute="top" secondItem="eJH-9W-MHz" secondAttribute="top" constant="6" id="sCY-Lj-2nY"/>
                                         <constraint firstItem="5ot-qA-3Bl" firstAttribute="leading" secondItem="S70-hW-VRO" secondAttribute="trailing" constant="8" id="wiV-cr-N0Q"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                            <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="WHm-sE-6rg" userLabel="All">
                                     <rect key="frame" x="0.0" y="105" width="200" height="35"/>
@@ -125,7 +143,7 @@
                                             </buttonCell>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
@@ -155,7 +173,7 @@
                                             </buttonCell>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
@@ -165,7 +183,7 @@
                                                 <constraint firstAttribute="width" constant="20" id="M3C-DF-lFj"/>
                                                 <constraint firstAttribute="height" constant="20" id="fLf-h4-pid"/>
                                             </constraints>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_untagged" id="8Y2-n9-mdr"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_day_untagged" id="8Y2-n9-mdr"/>
                                         </imageView>
                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="lDV-3l-8PR">
                                             <rect key="frame" x="0.0" y="-2" width="200" height="5"/>
@@ -197,15 +215,15 @@
                                             </constraints>
                                         </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="959-bl-xb0">
-                                            <rect key="frame" x="5" y="8" width="92" height="25"/>
+                                            <rect key="frame" x="7" y="8" width="88" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="88" id="LyL-qP-bvq"/>
                                                 <constraint firstAttribute="height" constant="25" id="QcE-Wq-dY6"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tag" id="Y6F-3n-jri">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tag" drawsBackground="YES" id="Y6F-3n-jri">
                                                 <font key="font" size="17" name="HelveticaNeue-LightItalic"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" red="0.071925170720000001" green="0.58708757160000002" blue="0.85727447270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </textFieldCell>
                                         </textField>
                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaY-st-0O5">
@@ -417,6 +435,11 @@
                         <real value="250"/>
                         <real value="250"/>
                     </holdingPriorities>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </splitView>
             </subviews>
             <constraints>
@@ -468,18 +491,32 @@
                         <constraint firstAttribute="height" constant="1" id="CiC-qj-tpu"/>
                     </constraints>
                 </box>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="f76-mQ-wLQ">
+                    <rect key="frame" x="300" y="0.0" width="5" height="97"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="KQX-5n-Lmx"/>
+                    </constraints>
+                </box>
             </subviews>
             <constraints>
                 <constraint firstItem="EiE-UV-AIF" firstAttribute="top" secondItem="7TR-0e-oyy" secondAttribute="bottom" constant="14" id="Qq5-ls-L8O"/>
                 <constraint firstItem="vh5-wN-pn4" firstAttribute="leading" secondItem="x63-al-1vC" secondAttribute="leading" id="Ueo-Cx-rgm"/>
+                <constraint firstAttribute="trailing" secondItem="f76-mQ-wLQ" secondAttribute="trailing" constant="-3" id="al2-sZ-AvC"/>
                 <constraint firstItem="7TR-0e-oyy" firstAttribute="leading" secondItem="x63-al-1vC" secondAttribute="leading" constant="22" id="byE-pY-bcq"/>
                 <constraint firstAttribute="height" constant="97" id="hgM-8U-txz"/>
                 <constraint firstAttribute="trailing" secondItem="7TR-0e-oyy" secondAttribute="trailing" constant="22" id="l59-HQ-bAM"/>
                 <constraint firstAttribute="bottom" secondItem="vh5-wN-pn4" secondAttribute="bottom" id="lG5-yQ-UB7"/>
+                <constraint firstAttribute="bottom" secondItem="f76-mQ-wLQ" secondAttribute="bottom" id="ohh-Zn-YiD"/>
                 <constraint firstItem="7TR-0e-oyy" firstAttribute="top" secondItem="x63-al-1vC" secondAttribute="top" constant="20" id="rM7-OR-et2"/>
+                <constraint firstItem="f76-mQ-wLQ" firstAttribute="top" secondItem="x63-al-1vC" secondAttribute="top" id="s5h-Uy-cqy"/>
                 <constraint firstAttribute="trailing" secondItem="vh5-wN-pn4" secondAttribute="trailing" id="wCC-tN-eup"/>
                 <constraint firstItem="EiE-UV-AIF" firstAttribute="leading" secondItem="x63-al-1vC" secondAttribute="leading" constant="22" id="xN8-YP-f0U"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                    <color key="value" red="0.20392156862745098" green="0.50196078431372548" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-494" y="-139.5"/>
         </customView>
         <customView id="hEo-Cc-YIc" userLabel="排序" customClass="BFStarOrderFilterView" customModule="BeeFun" customModuleProvider="target">
@@ -567,7 +604,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -718,7 +755,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>
@@ -761,6 +798,7 @@
     <resources>
         <image name="star_add_tag" width="200" height="200"/>
         <image name="star_day_all_sel" width="786" height="821"/>
+        <image name="star_day_untagged" width="714" height="716"/>
         <image name="star_order_az" width="20" height="20"/>
         <image name="star_order_az_sel" width="20" height="20"/>
         <image name="star_order_star" width="40" height="40"/>
@@ -769,7 +807,6 @@
         <image name="star_order_time_sel" width="40" height="40"/>
         <image name="star_refresh" width="200" height="200"/>
         <image name="star_repo_readme" width="184" height="62"/>
-        <image name="star_untagged" width="40" height="40"/>
         <image name="star_web_arrow_left" width="60" height="60"/>
         <image name="star_web_arrow_right" width="60" height="60"/>
         <image name="star_web_refresh" width="60" height="60"/>

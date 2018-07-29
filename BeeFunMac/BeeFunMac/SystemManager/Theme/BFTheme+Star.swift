@@ -95,11 +95,34 @@ extension BFThemeManager {
         }
     }
     
+    /// 区域内分割线的颜色
+    func sepLineBackgroundColor() -> NSColor {
+        switch themeType {
+        case .day:
+            return NSColor.thDayLightGray
+        case .blue:
+            return NSColor.thDayBlue
+        case .night:
+            return NSColor.thNightBlack
+        }
+    }
+    
     /// Tag管理区域，显示用的 底部背景的颜色
     func tagShowBackgroundColor() -> NSColor {
         switch themeType {
         case .day:
-            return NSColor.thDayWhite
+            return NSColor.white
+        case .blue:
+            return NSColor.clear
+        case .night:
+            return NSColor.thNightBlack
+        }
+    }
+    /// Tag管理区域，显示用的 文本标题的颜色
+    func tagShowTitleColor() -> NSColor {
+        switch themeType {
+        case .day:
+            return NSColor.thDayBlack
         case .blue:
             return NSColor.clear
         case .night:

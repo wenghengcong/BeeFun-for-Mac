@@ -14,7 +14,6 @@ extension BFStarViewController: NSTextFieldDelegate {
     
     func starPageCustomToolsView() {
     
-        self.toolsView.backgroundColor = NSColor.white
         self.toolsView.layer?.masksToBounds = false
         
         self.rightContentView.addSubview(self.toolsView, positioned: .above, relativeTo: nil)
@@ -29,7 +28,6 @@ extension BFStarViewController: NSTextFieldDelegate {
         //TEST:
 //        workingTags = ["UI", "Swift", "iOS Developerment", "Objectivie-C", "Future", "ME", "Tools", "Quick", "Books", "awesome", "Guide", "View" ,"UI", "Swift", "iOS Developerment", "Objectivie-C", "Future", "ME", "Tools", "Quick", "Books", "awesome", "Guide", "View"]
         
-        addTagContainView.backgroundColor = NSColor.white
         addTagContainView.borderWidth = 1.0
         addTagContainView.borderColor = NSColor.lineGrayColor
         addTagContainView.layer?.masksToBounds = false
@@ -37,7 +35,6 @@ extension BFStarViewController: NSTextFieldDelegate {
         addTagContainView.radius = 2.0
         toolsView.addSubview(addTagContainView)
         
-        workingTagsView.backgroundColor = NSColor.green
         addTagContainView.addSubview(workingTagsView)
         //首次加载toolsView区域
         layoutTagsContainView()
@@ -93,7 +90,6 @@ extension BFStarViewController: NSTextFieldDelegate {
     func reLayoutRightContentViewAfterWorkingTagsChange() {
         let allTasgH = lineH * CGFloat(currentTagsOfLines)
         let toolsH: CGFloat = 65 + allTasgH - lineH
-        toolsView.backgroundColor = NSColor.white
         toolsView.snp.remakeConstraints { (make) in
             make.top.equalTo(self.rightContentView).offset(0)
             make.leading.equalTo(0)
@@ -110,7 +106,7 @@ extension BFStarViewController: NSTextFieldDelegate {
                 
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
-            make.leading.equalTo(10)
+            make.leading.equalTo(0)
             make.top.equalTo(self.rightContentView).offset(toolsH)
             make.trailing.equalTo(0)
         }

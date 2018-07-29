@@ -65,12 +65,15 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var tagSortPara = "name"
     var tagDirectionPara = "desc"
     
+    @IBOutlet weak var splitView: NSSplitView!
     @IBOutlet weak var tagActionStackView: NSStackView!
     @IBOutlet weak var starSyncBackView: NSView!
     @IBOutlet weak var allTagsBackView: NSView!
     @IBOutlet weak var unTaggedBackView: NSView!
     @IBOutlet weak var tagSortBackView: NSView!
     @IBOutlet weak var newTagBackView: NSView!
+    //tag管理区域右边的线
+    @IBOutlet weak var tagManagerRightLine: NSView!
     
     @IBOutlet weak var refreshButton: BFImageButton!
     @IBOutlet weak var starSyncLabel: NSTextField!
@@ -94,6 +97,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet var orderFilterView: BFStarOrderFilterView!
     @IBOutlet var tableViewBackground: BFView!
     @IBOutlet var starTable: NSTableView!
+    @IBOutlet weak var searchFilterRightLine: NSBox!
     @IBOutlet weak var languagePop: NSPopUpButton!      //语言复选框
     @IBOutlet weak var searchField: NSSearchField!      //搜索输入框
     @IBOutlet weak var searchFieldCell: NSSearchFieldCell!

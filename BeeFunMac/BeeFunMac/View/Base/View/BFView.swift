@@ -14,7 +14,7 @@ class BFView: NSView {
         super.draw(dirtyRect)
 
         // Drawing code here.
-        self.backgroundColor = NSColor.white
+//        self.backgroundColor = NSColor.white
     }
     
 }
