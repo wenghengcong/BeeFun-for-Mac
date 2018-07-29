@@ -7,6 +7,10 @@
 //
 
 import Cocoa
+enum IconArea: String {
+    case iconBar = "icon_bar"
+    case star = "star"
+}
 
 extension BFThemeManager {
     
@@ -59,25 +63,25 @@ extension BFThemeManager {
     }
     
     func starIconBarNormalImage() -> NSImage? {
-        let imgName: String = "icon_bar_"+themeType.rawValue+"_star"
+        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "star", selected: false)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
     func starIconBarSelectedImage() -> NSImage? {
-        let imgName: String = "icon_bar_"+themeType.rawValue+"_star_sel"
+        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "star", selected: true)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
     func gitHomeIconBarNormalImage() -> NSImage? {
-        let imgName: String = "icon_bar_"+themeType.rawValue+"_git"
+        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "git", selected: false)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
     func gitHomeIconBarSelectedImage() -> NSImage? {
-        let imgName: String = "icon_bar_"+themeType.rawValue+"_git_sel"
+        let imgName = combineImageName(prefix: IconArea.iconBar, iconName: "git", selected: true)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }

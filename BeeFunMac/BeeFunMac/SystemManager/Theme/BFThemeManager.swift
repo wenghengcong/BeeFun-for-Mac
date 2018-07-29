@@ -16,6 +16,26 @@ enum BFTheme: String {
 class BFThemeManager: NSObject {
     
     static let shared = BFThemeManager()
-    var themeType: BFTheme = .blue
+    var themeType: BFTheme = .day
+    
+    func combineImageName(prefix: IconArea?, iconName: String, selected: Bool) -> String {
+        var imgName = ""
+        if prefix != nil {
+            let prefixStr = prefix!.rawValue
+            if selected {
+                imgName = prefixStr + "_" + themeType.rawValue + "_" + iconName+"_sel"
+            } else {
+                imgName = prefixStr + "_" + themeType.rawValue + "_" + iconName
+            }
+        } else {
+            if selected {
+                imgName =  "_" + themeType.rawValue + "_" + iconName + "_sel"
+            } else {
+                imgName =  "_" + themeType.rawValue + "_" + iconName
+            }
+        }
+        
+        return imgName
+    }
     
 }

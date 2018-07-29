@@ -25,6 +25,6 @@ extension NSColor {
     
     /// 灰色Icon的颜色值
     class var thDayGray: NSColor {
-        return NSColor.hex("8080", alpha: 1.0);
+        return NSColor.hex("808080", alpha: 1.0);
     }
 }

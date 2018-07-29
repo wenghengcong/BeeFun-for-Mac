@@ -29,11 +29,15 @@ extension NSColor {
         return NSColor.hex("2e7dfb", alpha: 1.0);
     }
     
-    /// 灰色Icon的颜色值
-    class var thBlueGray: NSColor {
+    /// Icon Bar灰色Icon的颜色值
+    class var thBlueIconBarGray: NSColor {
         return NSColor.hex("dbdbdb", alpha: 1.0);
     }
     
+    /// 其他区域灰色Icon的颜色值
+    class var thBlueGray: NSColor {
+        return NSColor.hex("808080", alpha: 1.0);
+    }
     
     /// icon bar 黑色背景颜色值
     //  选中icon bar 底部背景的颜色

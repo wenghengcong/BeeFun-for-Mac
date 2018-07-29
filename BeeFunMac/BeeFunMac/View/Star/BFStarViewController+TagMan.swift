@@ -25,16 +25,20 @@ extension BFStarViewController {
         self.untaggedStarBtn.target = self
         self.untaggedStarBtn.action = #selector(clickUntaggedStarButton)
         
-        self.tagSortBtn.target = self
-        self.tagSortBtn.action = #selector(clickSortTagButton)
+        self.tagSortButton.target = self
+        self.tagSortButton.action = #selector(clickSortTagButton)
         
         self.saveNewTagBtn.target = self
         self.saveNewTagBtn.action = #selector(clickSaveTagButton)
         
         //TODO: Tag Sort按钮暂时隐藏
-        tagSortBtn.isHidden = true
+        tagSortButton.isHidden = true
         
-        self.inputNewTagField.delegate = self
+        inputNewTagField.delegate = self
+        inputNewTagField.wantsLayer = true
+        inputNewTagField.layer?.borderColor = NSColor(red:204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0).cgColor
+        inputNewTagField.layer?.borderWidth = 1.0
+        inputNewTagField.layer?.cornerRadius = 3.0
     }
     
     //刷新按钮

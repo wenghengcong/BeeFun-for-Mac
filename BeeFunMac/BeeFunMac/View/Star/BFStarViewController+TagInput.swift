@@ -71,7 +71,6 @@ extension BFStarViewController: NSTextFieldDelegate {
             tagStyle.alignment = .left
             let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.placeholderTextColor, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0), NSAttributedStringKey.paragraphStyle : tagStyle] as [NSAttributedStringKey : Any]
             inputRepoTagField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
-            inputRepoTagField.tag = inputNewTagFieldTag
             inputRepoTagField.usesSingleLineMode = true
 //            inputRepoTagField.delegate = self
             inputRepoTagField.responDelegate = self

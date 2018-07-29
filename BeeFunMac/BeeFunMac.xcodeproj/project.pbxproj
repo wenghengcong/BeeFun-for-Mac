@@ -86,6 +86,8 @@
 		5E75D702210D5E27007596E9 /* NSColor+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D701210D5E27007596E9 /* NSColor+Day.swift */; };
 		5E75D704210D5F25007596E9 /* NSColor+Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D703210D5F25007596E9 /* NSColor+Night.swift */; };
 		5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */; };
+		5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */; };
+		5E75D70B210DB7AE007596E9 /* BFTheme+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D70A210DB7AE007596E9 /* BFTheme+Star.swift */; };
 		5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */; };
 		5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */; };
 		5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F681FDD7F460050B50F /* LCButton.swift */; };
@@ -279,6 +281,8 @@
 		5E75D701210D5E27007596E9 /* NSColor+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Day.swift"; sourceTree = "<group>"; };
 		5E75D703210D5F25007596E9 /* NSColor+Night.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Night.swift"; sourceTree = "<group>"; };
 		5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Blue.swift"; sourceTree = "<group>"; };
+		5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Theme.swift"; sourceTree = "<group>"; };
+		5E75D70A210DB7AE007596E9 /* BFTheme+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+Star.swift"; sourceTree = "<group>"; };
 		5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Network.swift"; sourceTree = "<group>"; };
 		5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+View.swift"; sourceTree = "<group>"; };
 		5E7F6F681FDD7F460050B50F /* LCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCButton.swift; sourceTree = "<group>"; };
@@ -634,6 +638,7 @@
 				5E75D6FD210CBE8D007596E9 /* Theme.xcassets */,
 				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
 				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,
+				5E75D70A210DB7AE007596E9 /* BFTheme+Star.swift */,
 				5E75D701210D5E27007596E9 /* NSColor+Day.swift */,
 				5E75D703210D5F25007596E9 /* NSColor+Night.swift */,
 				5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */,
@@ -894,6 +899,7 @@
 				5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */,
 				5EA4350B1FDB80A500034578 /* View */,
 				5EBF53F91FCFF83000D7A2A5 /* BFStarViewController.swift */,
+				5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */,
 				5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */,
 				5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */,
 				5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */,
@@ -1291,6 +1297,7 @@
 				5E9867D61FD05189007EE86F /* ObjLinks.swift in Sources */,
 				5E9867D31FD05189007EE86F /* ObjEvent.swift in Sources */,
 				5EE9900D1FD26354008711F4 /* BFCommonString.swift in Sources */,
+				5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */,
 				5E2B26741FDC346B00600866 /* WKWebView+Extension.swift in Sources */,
 				5E09F6022019A5DF00CC3866 /* BFZipManager.swift in Sources */,
 				5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */,
@@ -1299,6 +1306,7 @@
 				5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */,
 				5E9867EE1FD05189007EE86F /* ObjUser.swift in Sources */,
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
+				5E75D70B210DB7AE007596E9 /* BFTheme+Star.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
 				5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */,
