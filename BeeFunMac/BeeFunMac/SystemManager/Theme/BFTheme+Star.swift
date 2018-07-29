@@ -13,7 +13,43 @@ import Cocoa
 extension BFThemeManager {
 
     
-    /// 选中icon bar 底部背景的颜色
+    /// All stars
+    func allStarsAttributeTitle(selected: Bool) -> NSAttributedString {
+       let attributeTitle =  NSAttributedString(string: "All Stars", attributes: [NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected)])
+        return attributeTitle
+    }
+    
+    /// untagged stars
+    func untaggedStarsAttributeTitle(selected: Bool) -> NSAttributedString {
+        let attributeTitle =  NSAttributedString(string: "Untagged Stars", attributes: [NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected)])
+        return attributeTitle
+    }
+    
+    /// Tag管理区域，显示用的 底部背景的颜色
+    func starShowTitleColor(selected: Bool) -> NSColor {
+        switch themeType {
+        case .day:
+            if selected {
+                return NSColor.thDayBlue
+            } else {
+                return NSColor.thDayBlack
+            }
+        case .blue:
+            if selected {
+                return NSColor.white
+            } else {
+                return NSColor.clear
+            }
+        case .night:
+            if selected {
+                return NSColor.white
+            } else {
+                return NSColor.white
+            }
+        }
+    }
+    
+    /// Tag管理区域，显示用的 底部背景的颜色
     func tagShowBackgroundColor() -> NSColor {
         switch themeType {
         case .day:
@@ -25,7 +61,7 @@ extension BFThemeManager {
         }
     }
     
-    /// 选中icon bar 底部背景的颜色
+    /// Tag管理区域，按钮区域-底部背景的颜色
     func tagActionBackgroundColor() -> NSColor {
         switch themeType {
         case .day:
@@ -50,13 +86,13 @@ extension BFThemeManager {
     }
     
     func unTaggedNormalImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "all", selected: false)
+        let imageName = combineImageName(prefix: IconArea.star, iconName: "untagged", selected: false)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }
     
     func unTaggedSelectedImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "all", selected: true)
+        let imageName = combineImageName(prefix: IconArea.star, iconName: "untagged", selected: true)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }

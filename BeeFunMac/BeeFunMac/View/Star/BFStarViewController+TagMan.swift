@@ -71,6 +71,8 @@ extension BFStarViewController {
         
         saveNewTagBtn.state = .off
         unSelectedTagAndReload()
+        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: true)
+        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
         allStarsImageView.image = BFThemeManager.shared.allStarSelectedImage()
         untaggedStarsImageView.image = BFThemeManager.shared.unTaggedNormalImage()
     }
@@ -82,6 +84,9 @@ extension BFStarViewController {
         allStarsBtn.state = .off
         untaggedStarBtn.state = .on
         saveNewTagBtn.state = .off
+        
+        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
+        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: true)
         allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
         untaggedStarsImageView.image = BFThemeManager.shared.unTaggedSelectedImage()
         unSelectedTagAndReload()
@@ -253,6 +258,8 @@ extension BFStarViewController {
         untaggedStarBtn.state = .off
         saveNewTagBtn.state = .off
 
+        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
+        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
         allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
         untaggedStarsImageView.image = BFThemeManager.shared.unTaggedNormalImage()
         
