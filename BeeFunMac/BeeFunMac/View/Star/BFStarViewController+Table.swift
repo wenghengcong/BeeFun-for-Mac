@@ -23,7 +23,7 @@ extension BFStarViewController {
         if tableView == starTable {
             return 109
         } else if tableView == tagTable {
-            return 40
+            return 38
         }
         return 0
     }

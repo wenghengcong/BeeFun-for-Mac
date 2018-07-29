@@ -10,6 +10,7 @@
 import Cocoa
 
 class BFStarTagCellView: LCBaseTableCellView {
+    
     @IBOutlet weak var tagImageV: NSImageView!
     @IBOutlet weak var nameL: NSTextField!
     @IBOutlet weak var numL: NSTextField!
@@ -22,8 +23,8 @@ class BFStarTagCellView: LCBaseTableCellView {
         self.wantsLayer = true
         self.layer?.backgroundColor = NSColor.white.cgColor
         self.origin = CGPoint(x: 0, y: 0)
-        //height改变为return row height代理方法中加2=40+2
-        self.size = CGSize(width: 200, height: 42)
+        //height改变为return row height代理方法中加40=38+2，xib中本身高度只有38
+        self.size = CGSize(width: 200, height: 40)
     }
     /* 以下代码尝试高亮颜色
      * 引用：https://stackoverflow.com/questions/9463871/change-selection-color-on-view-based-nstableview

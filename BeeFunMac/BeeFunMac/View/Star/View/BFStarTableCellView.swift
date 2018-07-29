@@ -41,7 +41,7 @@ import Cocoa
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         self.origin = CGPoint(x: 0, y: 0)
-        //是xib中的height+2
+        //是return row height中，或者xib中的height+2，return row height = xib height
         self.size = CGSize(width: 300, height: 111)
     }
     
