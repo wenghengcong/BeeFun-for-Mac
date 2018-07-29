@@ -96,11 +96,13 @@ class BFStarTagCellView: LCBaseTableCellView {
     
     func didSelectedCell(selected: Bool) {
         selectedMask.isHidden = !selected
+        let color = BFThemeManager.shared.tagCellTitleColor(selected: selected)
         if selected {
-            let color = NSColor.hex("5b5b5b", alpha: 0.8)
+            tagImageV.image = BFThemeManager.shared.tagCellSelectedImage()
             nameL.textColor = color
             numL.textColor = color
         } else {
+            tagImageV.image = BFThemeManager.shared.tagCellNormalImage()
             nameL.textColor = NSColor.black
             numL.textColor = NSColor.black
         }
