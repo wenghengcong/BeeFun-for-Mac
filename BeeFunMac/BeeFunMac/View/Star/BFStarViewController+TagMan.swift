@@ -68,8 +68,11 @@ extension BFStarViewController {
         clickUntaggedStar = false
         allStarsBtn.state = .on
         untaggedStarBtn.state = .off
+        
         saveNewTagBtn.state = .off
         unSelectedTagAndReload()
+        allStarsImageView.image = BFThemeManager.shared.allStarSelectedImage()
+        untaggedStarsImageView.image = BFThemeManager.shared.unTaggedNormalImage()
     }
     //点击Untagged Star
     @objc func clickUntaggedStarButton() {
@@ -79,6 +82,8 @@ extension BFStarViewController {
         allStarsBtn.state = .off
         untaggedStarBtn.state = .on
         saveNewTagBtn.state = .off
+        allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
+        untaggedStarsImageView.image = BFThemeManager.shared.unTaggedSelectedImage()
         unSelectedTagAndReload()
     }
     
@@ -248,6 +253,9 @@ extension BFStarViewController {
         untaggedStarBtn.state = .off
         saveNewTagBtn.state = .off
 
+        allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
+        untaggedStarsImageView.image = BFThemeManager.shared.unTaggedNormalImage()
+        
         clickAllStar = false
         clickUntaggedStar = false
         

@@ -11,10 +11,13 @@
         <customObject id="-2" userLabel="File's Owner" customClass="BFStarViewController" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="allStarsBtn" destination="5Pn-dh-2Y5" id="F0V-In-s1S"/>
+                <outlet property="allStarsImageView" destination="VIS-6M-OXc" id="Zj3-U7-4aR"/>
+                <outlet property="allTagsBackView" destination="WHm-sE-6rg" id="TPE-8c-GoT"/>
                 <outlet property="inputNewTagField" destination="TcX-2a-Qhf" id="Izt-4n-qjh"/>
                 <outlet property="inputRepoTagField" destination="gv9-cF-78c" id="Hdy-Nn-evA"/>
                 <outlet property="languagePop" destination="EiE-UV-AIF" id="NPp-R7-EHx"/>
                 <outlet property="leftContentView" destination="Osx-17-aof" id="Haj-zc-XKF"/>
+                <outlet property="newTagBackView" destination="4jO-N3-phY" id="XKD-MJ-C0x"/>
                 <outlet property="orderFilterView" destination="hEo-Cc-YIc" id="l2R-v7-sP1"/>
                 <outlet property="refreshButton" destination="5ot-qA-3Bl" id="39C-3f-YuK"/>
                 <outlet property="rightContentView" destination="N76-f6-ccH" id="06L-5Z-6P3"/>
@@ -22,17 +25,23 @@
                 <outlet property="searchField" destination="7TR-0e-oyy" id="4Cz-Mr-HUH"/>
                 <outlet property="searchFieldCell" destination="RTb-8W-uIi" id="MUC-n6-rNv"/>
                 <outlet property="searchFilterView" destination="x63-al-1vC" id="EcC-cu-5vT"/>
+                <outlet property="starSyncBackView" destination="eJH-9W-MHz" id="iiF-Dd-V3U"/>
                 <outlet property="starSyncLabel" destination="S70-hW-VRO" id="cgV-HW-Gdm"/>
                 <outlet property="starTable" destination="gFc-Ii-BNl" id="Zfe-eV-mxT"/>
                 <outlet property="tableViewBackground" destination="lWf-CO-BDw" id="kbd-hg-DaU"/>
+                <outlet property="tagActionStackView" destination="mTI-23-jv8" id="J9M-Q6-voC"/>
                 <outlet property="tagRightMenu" destination="Yl1-MD-J7r" id="lIk-Wx-XFZ"/>
+                <outlet property="tagSortBackView" destination="g3E-aS-Bm8" id="Z3W-Yh-OhJ"/>
                 <outlet property="tagSortButton" destination="oaY-st-0O5" id="j5W-7i-Wgn"/>
                 <outlet property="tagTable" destination="pkn-Ot-syq" id="a7i-Z5-gAy"/>
+                <outlet property="tagTextLabel" destination="959-bl-xb0" id="KsA-8b-Qbz"/>
                 <outlet property="tagTipsContainView" destination="YUS-ot-KsA" id="Ukd-q0-cEY"/>
                 <outlet property="tagTipsTable" destination="hYT-Xu-Uuz" id="d8F-G5-HKt"/>
                 <outlet property="toolsView" destination="wPW-CZ-c1R" id="P7p-Nt-p3Q"/>
                 <outlet property="toolsViewSepLine" destination="tCe-cf-P17" id="s3m-yw-kcf"/>
+                <outlet property="unTaggedBackView" destination="F0C-y8-O6z" id="5x0-ZC-njH"/>
                 <outlet property="untaggedStarBtn" destination="oRC-gn-Or9" id="Nk3-f6-7Cm"/>
+                <outlet property="untaggedStarsImageView" destination="DPD-vj-bfB" id="rW2-Jh-FZq"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
                 <outlet property="webIndicator" destination="ym6-BX-i2u" id="lS0-4J-AOK"/>
                 <outlet property="webViewBackBtn" destination="hK0-OW-JwJ" id="ma5-6u-smR"/>
@@ -50,18 +59,6 @@
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="SDH-EO-UBM" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="680"/>
                     <subviews>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="nru-fj-oYh" userLabel="LeftSepLine">
-                            <rect key="frame" x="0.0" y="505" width="1" height="175"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="1" id="8V3-Dw-XDu"/>
-                                <constraint firstAttribute="height" constant="175" id="MSt-ht-Jy3"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                    <color key="value" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </customView>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTI-23-jv8">
                             <rect key="frame" x="0.0" y="505" width="200" height="175"/>
                             <subviews>
@@ -118,7 +115,7 @@
                                                 <constraint firstAttribute="height" constant="20" id="9V7-4J-MWn"/>
                                                 <constraint firstAttribute="width" constant="20" id="NsI-s2-jbL"/>
                                             </constraints>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tag_blue_all_star_sel" id="hJX-nO-vEU"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_day_all_sel" id="hJX-nO-vEU"/>
                                         </imageView>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-dh-2Y5">
                                             <rect key="frame" x="40" y="0.0" width="160" height="35"/>
@@ -151,7 +148,7 @@
                                     <rect key="frame" x="0.0" y="70" width="200" height="35"/>
                                     <subviews>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oRC-gn-Or9">
-                                            <rect key="frame" x="40" y="0.0" width="160" height="35"/>
+                                            <rect key="frame" x="41" y="0.0" width="159" height="35"/>
                                             <buttonCell key="cell" type="square" title="Untagged Stars" bezelStyle="shadowlessSquare" alignment="left" imageScaling="proportionallyDown" inset="2" id="6oI-JA-dBD">
                                                 <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemLight" size="16"/>
@@ -163,7 +160,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DPD-vj-bfB">
-                                            <rect key="frame" x="11" y="8" width="20" height="20"/>
+                                            <rect key="frame" x="12" y="8" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="M3C-DF-lFj"/>
                                                 <constraint firstAttribute="height" constant="20" id="fLf-h4-pid"/>
@@ -187,7 +184,7 @@
                                         <constraint firstAttribute="height" constant="35" id="d6g-7f-4qj"/>
                                         <constraint firstAttribute="trailing" secondItem="oRC-gn-Or9" secondAttribute="trailing" id="sDY-C8-ZE4"/>
                                         <constraint firstItem="oRC-gn-Or9" firstAttribute="top" secondItem="F0C-y8-O6z" secondAttribute="top" id="v1y-wY-iKb"/>
-                                        <constraint firstItem="DPD-vj-bfB" firstAttribute="leading" secondItem="F0C-y8-O6z" secondAttribute="leading" constant="11" id="wgq-aK-PXv"/>
+                                        <constraint firstItem="DPD-vj-bfB" firstAttribute="leading" secondItem="F0C-y8-O6z" secondAttribute="leading" constant="12" id="wgq-aK-PXv"/>
                                     </constraints>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="g3E-aS-Bm8" userLabel="TagSort">
@@ -319,6 +316,18 @@
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
                         </stackView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="nru-fj-oYh" userLabel="LeftSepLine">
+                            <rect key="frame" x="0.0" y="505" width="1" height="175"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="8V3-Dw-XDu"/>
+                                <constraint firstAttribute="height" constant="175" id="MSt-ht-Jy3"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                    <color key="value" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Yhk-1J-WI3" userLabel="RightSepLine">
                             <rect key="frame" x="199" y="505" width="1" height="175"/>
                             <constraints>
@@ -558,7 +567,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -709,7 +718,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>
@@ -751,6 +760,7 @@
     </objects>
     <resources>
         <image name="star_add_tag" width="200" height="200"/>
+        <image name="star_day_all_sel" width="786" height="821"/>
         <image name="star_order_az" width="20" height="20"/>
         <image name="star_order_az_sel" width="20" height="20"/>
         <image name="star_order_star" width="40" height="40"/>

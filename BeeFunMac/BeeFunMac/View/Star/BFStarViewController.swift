@@ -20,10 +20,6 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
         static let TagCell = "TagCellIdentifier"
         static let TagTipCell = "BFTagsTipCellView"
     }
-    //用于加载不同的主题
-    @IBOutlet weak var starSyncLabel: NSTextField!
-    
-    
     
     // MARK: - Data
     var starReposData: [ObjRepos] = []
@@ -69,12 +65,27 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var tagSortPara = "name"
     var tagDirectionPara = "desc"
     
+    @IBOutlet weak var tagActionStackView: NSStackView!
+    @IBOutlet weak var starSyncBackView: NSView!
+    @IBOutlet weak var allTagsBackView: NSView!
+    @IBOutlet weak var unTaggedBackView: NSView!
+    @IBOutlet weak var tagSortBackView: NSView!
+    @IBOutlet weak var newTagBackView: NSView!
+    
     @IBOutlet weak var refreshButton: BFImageButton!
+    @IBOutlet weak var starSyncLabel: NSTextField!
+    
     @IBOutlet weak var allStarsBtn: NSButton!
+    @IBOutlet weak var allStarsImageView: NSImageView!
     @IBOutlet weak var untaggedStarBtn: NSButton!
+    @IBOutlet weak var untaggedStarsImageView: NSImageView!
+    
     @IBOutlet weak var tagSortButton: NSPopUpButton!
+    @IBOutlet weak var tagTextLabel: NSTextField!
+    
     @IBOutlet weak var inputNewTagField: BFTextField!
     @IBOutlet weak var saveNewTagBtn: NSButton!
+    
     @IBOutlet weak var tagTable: NSTableView!
     @IBOutlet var tagRightMenu: NSMenu!        //tag右键menu
 

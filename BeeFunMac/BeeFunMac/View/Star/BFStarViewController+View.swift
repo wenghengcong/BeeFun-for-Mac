@@ -21,6 +21,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         //右边webview区域
         starPageCustomRightView()
         self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
+        loadTheme()
     }
     
     // MARK: - 管理Tag视图部分
@@ -36,7 +37,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
 
         tableViewBackground.backgroundColor = NSColor.white
         orderFilterView.backgroundColor = NSColor.white
-        orderFilterView.delegate = self
+//        orderFilterView.delegate = self
         orderFilterView.setupIndicator()
         searchFilterView.backgroundColor = NSColor.white
 
