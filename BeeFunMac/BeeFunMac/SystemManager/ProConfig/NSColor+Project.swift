@@ -1,53 +1,17 @@
-
 //
 //  NSColor+Project.swift
-//  BeeFunMac
+//  BeeFun
 //
-//  Created by WengHengcong on 2017/11/29.
-//  Copyright © 2017年 LuCi. All rights reserved.
+//  Created by WengHengcong on 2018/7/28.
+//  Copyright © 2018年 LuCi. All rights reserved.
 //
 
 import Cocoa
 
 extension NSColor {
-    
-    // MARK: navigation bar
-    class var iconBarBackgroundColor: NSColor {
-        //white
-        //红色：CD2626（暗色调）->FF0033（亮色）
-        //黑色：262626
-        //黑灰色：737373
-        return NSColor.hex("f7f7f7", alpha: 1.0)
-    }
-    
-    //icon 红色：cd2626，灰色8a8a8a
-    
-    // MARK: navigation bar
-    class var navigationBarTitleTextColor: NSColor {
-        //white
-        return NSColor.hex("ffffff", alpha: 1.0)
-    }
-    
-    class var navigationBarBackgroundColor: NSColor {
+    class var cpBlueLinkColor: NSColor {
         //red
-        return NSColor.hex("e31100", alpha: 1.0)
-    }
-    
-    // MARK: tab bar
-    class var tabBarTitleTextColor: NSColor {
-        //red
-        return NSColor.hex("d81e06", alpha: 1.0)
-    }
-    
-    class var tabBarBackgroundColor: NSColor {
-        //light gray
-        return NSColor.white
-    }
-    
-    // MARK: label
-    class var labelSubtitleTextColor: NSColor {
-        //black
-        return NSColor.hex("7b7b7b", alpha: 1.0)
+        return NSColor.hex("007aff", alpha: 1.0)
     }
     
     class var labelTitleTextColor: NSColor {
@@ -55,93 +19,22 @@ extension NSColor {
         return NSColor.hex("000000", alpha: 1.0)
     }
     
-    // MARK: text field
-    class var textFieldTextColor: NSColor {
-        //black
-        return NSColor.hex("000000", alpha: 1.0)
-    }
-    
-    class var textFieldPlaceholderTextColor: NSColor {
-        //light gray
-        return NSColor.hex("c7c6cd", alpha: 1.0)
-    }
-    
-    // MARK: text view
-    class var textViewTextColor: NSColor {
-        return NSColor.hex("000000", alpha: 1.0)
-    }
-    
-    class var textViewPlaceholderTextColor: NSColor {
-        return NSColor.hex("c7c6cd", alpha: 1.0)
-    }
-    
-    // MARK: button
-    class var buttonWihteTitleTextColor: NSColor {
-        return NSColor.hex("ffffff", alpha: 1.0)
-    }
-    
-    class var buttonBlackTitleTextColor: NSColor {
-        return NSColor.hex("000000", alpha: 1.0)
-    }
-    
-    class var buttonRedTitleTextColor: NSColor {
-        return NSColor.hex("e31100", alpha: 1.0)
-    }
-    
-    class var buttonRedBackgroundColor: NSColor {
-        return NSColor.hex("e31100", alpha: 1.0)
-    }
-    
-    //below 3 color group
-    class var buttonWhiteBackgroundColor: NSColor {
-        return NSColor.hex("ffffff", alpha: 1.0)
-    }
-    
-    class var buttonHighlightBackgroundColor: NSColor {
-        return NSColor.hex("e31100", alpha: 1.0)
-    }
-    
-    class var buttonSelectedBackgroundColor: NSColor {
-        return NSColor.hex("e31100", alpha: 1.0)
-    }
-    
-    // MARK: view
-    class var viewBackgroundColor: NSColor {
-        return NSColor.hex("f8f8f8", alpha: 1.0)
-    }
-    
-    //badege
-    class var badgeBackgroundColor: NSColor {
-        return NSColor.hex("e31100", alpha: 1.0)
-    }
-    
-    //line
-    class var lineBackgroundColor: NSColor {
+    class var lineGrayColor: NSColor {
         return NSColor.hex("ceced2", alpha: 1.0)
     }
     
-    // MARK: color name
-    class var cpBlackColor: NSColor {
+    class var subtitleTextColor: NSColor {
         //black
-        return NSColor.hex("000000", alpha: 1.0)
+        return NSColor.hex("7b7b7b", alpha: 1.0)
+    }
+
+    
+    class var placeholderTextColor: NSColor {
+        return NSColor.hex("c7c6cd", alpha: 1.0)
     }
     
-    class var cpRedColor: NSColor {
+    class var bfRedColor: NSColor {
         //red
-        return NSColor.hex("ff0033", alpha: 1.0)
-    }
-    
-    class var cpBlueColor: NSColor {
-        //red
-        return NSColor.hex("5677fc", alpha: 1.0)
-    }
-    
-    class var cpBlueLinkColor: NSColor {
-        //red
-        return NSColor.hex("007aff", alpha: 1.0)
-    }
-    
-    class var cpMaskColor: NSColor {
-        return NSColor.hex("000000", alpha: 0.1)
+        return NSColor.hex("fa3e3e", alpha: 1.0)
     }
 }

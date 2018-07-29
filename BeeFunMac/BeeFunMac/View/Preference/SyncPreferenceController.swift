@@ -41,7 +41,7 @@ class SyncPreferenceController:NSViewController {
         let syncDic = [NSAttributedStringKey.foregroundColor: NSColor.black, NSAttributedStringKey.paragraphStyle: paraStyle]
         self.syncNowButton.attributedTitle = NSAttributedString(string: "Sync Now", attributes: syncDic)
         
-        let restoreDic = [NSAttributedStringKey.foregroundColor: NSColor.cpRedColor, NSAttributedStringKey.paragraphStyle: paraStyle]
+        let restoreDic = [NSAttributedStringKey.foregroundColor: NSColor.bfRedColor, NSAttributedStringKey.paragraphStyle: paraStyle]
         self.restoreDataButton.attributedTitle = NSAttributedString(string: "Restore", attributes: restoreDic)
     
     }

@@ -164,9 +164,9 @@ extension NSView {
     var borderColor: NSColor {
         get {
             if let color = self.layer?.borderColor {
-                return NSColor(cgColor: color) ?? NSColor.lineBackgroundColor
+                return NSColor(cgColor: color) ?? NSColor.lineGrayColor
             }
-            return NSColor.lineBackgroundColor
+            return NSColor.lineGrayColor
         }
         set {
             self.wantsLayer = true

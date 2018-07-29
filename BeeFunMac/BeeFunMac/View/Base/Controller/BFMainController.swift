@@ -20,7 +20,11 @@ class BFMainController: BFBaseViewController {
     @IBOutlet weak var iconBar: NSView!
     @IBOutlet weak var profileButton: NSButton!
     @IBOutlet weak var homeButton: NSButton!
+    @IBOutlet weak var homeBackView: NSView!
+    @IBOutlet weak var homeLeftLine: NSView!
     @IBOutlet weak var starButton: NSButton!
+    @IBOutlet weak var starBackView: NSView!
+    @IBOutlet weak var starLeftLine: NSView!
     @IBOutlet weak var settingButton: NSButton!
     @IBOutlet weak var pageBox: NSBox!
     
@@ -40,13 +44,25 @@ class BFMainController: BFBaseViewController {
         loadProfileInfo()
     }
     
+    func loadTheme() {
+        iconBar.backgroundColor = BFThemeManager.shared.iconBarBackgroundColor()
+        
+        homeButton.alternateImage = BFThemeManager.shared.gitHomeIconBarSelectedImage()
+        homeButton.image = BFThemeManager.shared.gitHomeIconBarNormalImage()
+        homeLeftLine.backgroundColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        
+        starButton.alternateImage = BFThemeManager.shared.starIconBarSelectedImage()
+        starButton.image = BFThemeManager.shared.starIconBarNormalImage()
+        starLeftLine.backgroundColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+    }
+    
     /// 自定义左边icon 按钮
     func customIconBar() {
-        iconBar.backgroundColor = NSColor.iconBarBackgroundColor
         
         homeButton.highlight(false)
         //home button
         homeButton.tag = IconBarButton.home.rawValue
+        
         iconButtons.append(homeButton)
         //star button
         starButton.tag = IconBarButton.star.rawValue
@@ -54,13 +70,17 @@ class BFMainController: BFBaseViewController {
         
         //TODO: 设置按钮隐藏
         settingButton.isHidden = true
-        if BFConfig.shared.appStoreChannel {
-            homeButton.isHidden = true
-            currentIcon = starButton
-        } else {
-            homeButton.isHidden = false
-            currentIcon = homeButton
-        }
+        
+//        if BFConfig.shared.appStoreChannel {
+//            homeButton.isHidden = true
+//            homeBackView.isHidden = true
+//            currentIcon = starButton
+//        } else {
+//            homeButton.isHidden = false
+//            homeBackView.isHidden = false
+//            currentIcon = homeButton
+//        }
+        loadTheme()
     }
     
     
@@ -90,8 +110,12 @@ class BFMainController: BFBaseViewController {
         switch iconTag! {
         case .home:
             self.pageBox.contentView = homeController.view
+            homeLeftLine.isHidden = false
+            starLeftLine.isHidden = true
         case .star:
             self.pageBox.contentView = starController.view
+            homeLeftLine.isHidden = true
+            starLeftLine.isHidden = false
             break
         case .settings:
             return
@@ -104,8 +128,10 @@ class BFMainController: BFBaseViewController {
             if iconBtn != button {
                 //选中的不是当前的按钮
                 iconBtn.state = .off
+                iconBtn.superview?.backgroundColor = BFThemeManager.shared.iconSelectedBackgroundColor()
             } else {
                 iconBtn.state = .on
+                iconBtn.superview?.backgroundColor = BFThemeManager.shared.iconNormalBackgroundColor()
             }
         }
         

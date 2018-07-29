@@ -16,7 +16,7 @@ class BFTagsTipCellView: LCBaseTableCellView {
     private var selectedMask: NSView = NSView()
     
     var titleColor: NSColor = NSColor.black
-    var subTitleColor: NSColor = NSColor.labelSubtitleTextColor
+    var subTitleColor: NSColor = NSColor.subtitleTextColor
     
     var tip: String? {
         didSet {
@@ -52,7 +52,7 @@ class BFTagsTipCellView: LCBaseTableCellView {
     
     fileprivate func customTipsCellView() {
         self.backgroundColor = .clear
-        bottomLine.backgroundColor = NSColor.lineBackgroundColor
+        bottomLine.backgroundColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in

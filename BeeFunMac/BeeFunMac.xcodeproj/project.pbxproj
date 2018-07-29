@@ -79,6 +79,13 @@
 		5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */; };
 		5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */; };
 		5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F7210C597C007596E9 /* UIView+Animation.swift */; };
+		5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */; };
+		5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */; };
+		5E75D6FE210CBE8D007596E9 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E75D6FD210CBE8D007596E9 /* Theme.xcassets */; };
+		5E75D700210D569B007596E9 /* BFTheme+IconBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */; };
+		5E75D702210D5E27007596E9 /* NSColor+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D701210D5E27007596E9 /* NSColor+Day.swift */; };
+		5E75D704210D5F25007596E9 /* NSColor+Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D703210D5F25007596E9 /* NSColor+Night.swift */; };
+		5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */; };
 		5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */; };
 		5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */; };
 		5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F681FDD7F460050B50F /* LCButton.swift */; };
@@ -97,7 +104,6 @@
 		5E9131A120AEA8DA0056EF9F /* BFStarViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */; };
 		5E928C3E1FCDB8CB0066CAE4 /* BFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E928C3D1FCDB8CB0066CAE4 /* BFBaseViewController.swift */; };
 		5E928C401FCDB8E30066CAE4 /* BFMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E928C3F1FCDB8E30066CAE4 /* BFMainController.swift */; };
-		5E928C511FCE52FD0066CAE4 /* NSColor+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E928C501FCE52FD0066CAE4 /* NSColor+Project.swift */; };
 		5E98679E1FD05044007EE86F /* BFThirdLibKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98679D1FD05044007EE86F /* BFThirdLibKey.swift */; };
 		5E9867CC1FD05189007EE86F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9867A01FD05189007EE86F /* DataModel.swift */; };
 		5E9867CD1FD05189007EE86F /* ObjAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9867A21FD05189007EE86F /* ObjAsset.swift */; };
@@ -266,6 +272,13 @@
 		5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+AutoCom.swift"; sourceTree = "<group>"; };
 		5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteTextField.xib; sourceTree = "<group>"; };
 		5E75D6F7210C597C007596E9 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Project.swift"; sourceTree = "<group>"; };
+		5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFThemeManager.swift; sourceTree = "<group>"; };
+		5E75D6FD210CBE8D007596E9 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+IconBar.swift"; sourceTree = "<group>"; };
+		5E75D701210D5E27007596E9 /* NSColor+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Day.swift"; sourceTree = "<group>"; };
+		5E75D703210D5F25007596E9 /* NSColor+Night.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Night.swift"; sourceTree = "<group>"; };
+		5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Blue.swift"; sourceTree = "<group>"; };
 		5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Network.swift"; sourceTree = "<group>"; };
 		5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+View.swift"; sourceTree = "<group>"; };
 		5E7F6F681FDD7F460050B50F /* LCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCButton.swift; sourceTree = "<group>"; };
@@ -284,7 +297,6 @@
 		5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Utils.swift"; sourceTree = "<group>"; };
 		5E928C3D1FCDB8CB0066CAE4 /* BFBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFBaseViewController.swift; sourceTree = "<group>"; };
 		5E928C3F1FCDB8E30066CAE4 /* BFMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMainController.swift; sourceTree = "<group>"; };
-		5E928C501FCE52FD0066CAE4 /* NSColor+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Project.swift"; sourceTree = "<group>"; };
 		5E98679D1FD05044007EE86F /* BFThirdLibKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFThirdLibKey.swift; sourceTree = "<group>"; };
 		5E9867A01FD05189007EE86F /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5E9867A21FD05189007EE86F /* ObjAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjAsset.swift; sourceTree = "<group>"; };
@@ -529,6 +541,7 @@
 		5E2816941FCCFDE7007A5159 /* SystemManager */ = {
 			isa = PBXGroup;
 			children = (
+				5E75D707210D60DE007596E9 /* Theme */,
 				5E928C4C1FCE52EC0066CAE4 /* Manager */,
 				5E928C4E1FCE52EC0066CAE4 /* Network */,
 				5E928C4F1FCE52EC0066CAE4 /* ProConfig */,
@@ -613,6 +626,19 @@
 				5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */,
 			);
 			path = SearchModel;
+			sourceTree = "<group>";
+		};
+		5E75D707210D60DE007596E9 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5E75D6FD210CBE8D007596E9 /* Theme.xcassets */,
+				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
+				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,
+				5E75D701210D5E27007596E9 /* NSColor+Day.swift */,
+				5E75D703210D5F25007596E9 /* NSColor+Night.swift */,
+				5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		5E928C411FCE4C680066CAE4 /* JSCrash */ = {
@@ -712,11 +738,11 @@
 				5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */,
 				5EC1B1A72018D6DC00186A67 /* BFWebsiteURL.swift */,
 				5EE9900C1FD26354008711F4 /* BFCommonString.swift */,
-				5E928C501FCE52FD0066CAE4 /* NSColor+Project.swift */,
 				5E98679D1FD05044007EE86F /* BFThirdLibKey.swift */,
 				5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */,
 				5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */,
 				5E44C63A20E28CA000CDEAEE /* BFConfig.swift */,
+				5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */,
 			);
 			path = ProConfig;
 			sourceTree = "<group>";
@@ -1035,6 +1061,7 @@
 				5E09F60A201A1D8200CC3866 /* SyncPreferenceController.xib in Resources */,
 				5EBF53FC1FCFF83000D7A2A5 /* BFStarViewController.xib in Resources */,
 				5EA435081FDADF4400034578 /* Star.xcassets in Resources */,
+				5E75D6FE210CBE8D007596E9 /* Theme.xcassets in Resources */,
 				5EAB030A2003B66500323A86 /* BFStarTagCellView.xib in Resources */,
 				5E09F60C201A1FB500CC3866 /* Preference.xcassets in Resources */,
 				5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */,
@@ -1168,6 +1195,7 @@
 				5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */,
 				5E5E821F20E4E2CE00E810E2 /* SEResponseCommits.swift in Sources */,
 				5E9867D91FD05189007EE86F /* ObjPage.swift in Sources */,
+				5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */,
 				5EA3BF3C20AA751A00D3CC79 /* BeeFunAPI.swift in Sources */,
 				5E9867EB1FD05189007EE86F /* ObjEmail.swift in Sources */,
 				5E98680A1FD0FE75007EE86F /* Response+ObjectMapper.swift in Sources */,
@@ -1179,6 +1207,7 @@
 				5E9867CF1FD05189007EE86F /* ObjComment.swift in Sources */,
 				5E9867ED1FD05189007EE86F /* ObjPlan.swift in Sources */,
 				5E2B266D1FDC33CC00600866 /* BFStarTableCellView.swift in Sources */,
+				5E75D704210D5F25007596E9 /* NSColor+Night.swift in Sources */,
 				5E1C13661FD6F36300726A0C /* SQLManager.swift in Sources */,
 				5E1C13641FD6F36300726A0C /* SQLHelper.swift in Sources */,
 				5EA435061FDAD27200034578 /* BFView.swift in Sources */,
@@ -1216,19 +1245,21 @@
 				5E2D29FE1FD97FAF0043A665 /* BFStarViewController+Data.swift in Sources */,
 				5E9867CE1FD05189007EE86F /* ObjBranch.swift in Sources */,
 				5E8A2AF61FD1573C00B246BD /* BFMainController+Noti.swift in Sources */,
+				5E75D702210D5E27007596E9 /* NSColor+Day.swift in Sources */,
 				5E5E822520E4E2CE00E810E2 /* SESearchIssueModel.swift in Sources */,
 				5E5E822B20E4E2CE00E810E2 /* SESearchCommitModel.swift in Sources */,
-				5E928C511FCE52FD0066CAE4 /* NSColor+Project.swift in Sources */,
 				5E9868071FD0FE75007EE86F /* CPHttpStatusCode.swift in Sources */,
 				5E8A2AF41FD1568D00B246BD /* BFNotificationName.swift in Sources */,
 				5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */,
 				5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */,
+				5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */,
 				5E91319F20AE722B0056EF9F /* GetAllLangResponse.swift in Sources */,
 				5E5E822920E4E2CE00E810E2 /* SESearchUserModel.swift in Sources */,
 				5E98679E1FD05044007EE86F /* BFThirdLibKey.swift in Sources */,
 				5E9867D21FD05189007EE86F /* ObjDeploymentPayload.swift in Sources */,
 				5EE9E78B1FCEB1F40012AE1C /* BFWebView.swift in Sources */,
 				5E5E822A20E4E2CE00E810E2 /* SESearchBaseModel.swift in Sources */,
+				5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */,
 				5E09F608201A1D6400CC3866 /* SyncPreferenceController.swift in Sources */,
 				5E9867D01FD05189007EE86F /* ObjCommit.swift in Sources */,
 				5E5E822120E4E2CE00E810E2 /* SEResponseRepos.swift in Sources */,
@@ -1243,6 +1274,7 @@
 				5E9867E81FD05189007EE86F /* ObjRepos.swift in Sources */,
 				5E9867D81FD05189007EE86F /* ObjNotification.swift in Sources */,
 				5E7F6F6F1FDD86D10050B50F /* NSView+Draw.swift in Sources */,
+				5E75D700210D569B007596E9 /* BFTheme+IconBar.swift in Sources */,
 				5E9867F61FD052AE007EE86F /* JSLanguage.swift in Sources */,
 				5E9131A120AEA8DA0056EF9F /* BFStarViewController+Utils.swift in Sources */,
 				5EC1B1A62018D62100186A67 /* BFJumpWebStie.swift in Sources */,

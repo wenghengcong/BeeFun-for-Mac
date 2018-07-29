@@ -235,6 +235,18 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="nru-fj-oYh">
+                            <rect key="frame" x="0.0" y="484" width="1" height="196"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="8V3-Dw-XDu"/>
+                                <constraint firstAttribute="height" constant="196" id="MSt-ht-Jy3"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                    <color key="value" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </customView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="hc7-pI-nJc" firstAttribute="top" secondItem="9Mt-Ga-aJD" secondAttribute="bottom" constant="10" id="0SK-c9-HYV"/>
@@ -263,6 +275,7 @@
                         <constraint firstItem="oRC-gn-Or9" firstAttribute="top" secondItem="5Pn-dh-2Y5" secondAttribute="bottom" constant="2" id="bOu-Kk-9CR"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="leading" secondItem="oRC-gn-Or9" secondAttribute="trailing" constant="2" id="d01-9J-lyn"/>
                         <constraint firstItem="i7a-z8-s4f" firstAttribute="top" secondItem="S70-hW-VRO" secondAttribute="bottom" constant="11" id="dpx-3a-yHz"/>
+                        <constraint firstItem="nru-fj-oYh" firstAttribute="top" secondItem="SDH-EO-UBM" secondAttribute="top" id="dr9-mK-gs9"/>
                         <constraint firstItem="wAt-li-MiT" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" id="eU9-Sb-4Y7"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="leading" secondItem="5ot-qA-3Bl" secondAttribute="trailing" constant="12" id="ek4-fI-4Jv"/>
                         <constraint firstItem="S70-hW-VRO" firstAttribute="top" secondItem="SDH-EO-UBM" secondAttribute="top" constant="6" id="gVD-il-kni"/>
@@ -271,6 +284,7 @@
                         <constraint firstItem="9Mt-Ga-aJD" firstAttribute="top" secondItem="oRC-gn-Or9" secondAttribute="bottom" constant="9" id="kE5-4a-DT1"/>
                         <constraint firstAttribute="bottom" secondItem="nSN-U9-Xew" secondAttribute="bottom" id="l0H-t9-Ee9"/>
                         <constraint firstItem="959-bl-xb0" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" constant="14" id="m58-0n-9Y3"/>
+                        <constraint firstItem="nru-fj-oYh" firstAttribute="leading" secondItem="SDH-EO-UBM" secondAttribute="leading" id="oeC-iJ-6TL"/>
                         <constraint firstItem="nXx-2h-ZfI" firstAttribute="leading" secondItem="5Pn-dh-2Y5" secondAttribute="trailing" constant="2" id="rau-BC-5Gi"/>
                         <constraint firstItem="9Mt-Ga-aJD" firstAttribute="leading" secondItem="959-bl-xb0" secondAttribute="trailing" constant="15" id="saP-pZ-tqE"/>
                         <constraint firstAttribute="trailing" secondItem="hc7-pI-nJc" secondAttribute="trailing" id="svh-No-2wQ"/>
@@ -643,7 +657,7 @@
     </objects>
     <resources>
         <image name="star_add_tag" width="200" height="200"/>
-        <image name="star_all" width="200" height="200"/>
+        <image name="star_all" width="256" height="256"/>
         <image name="star_order_az" width="20" height="20"/>
         <image name="star_order_az_sel" width="20" height="20"/>
         <image name="star_order_star" width="40" height="40"/>

@@ -65,7 +65,7 @@ class BFStarTagCellView: LCBaseTableCellView {
     
     fileprivate func customTagCellView() {
         self.backgroundColor = .clear
-        bottomLine.backgroundColor = NSColor.lineBackgroundColor
+        bottomLine.backgroundColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in
@@ -89,8 +89,8 @@ class BFStarTagCellView: LCBaseTableCellView {
         numL.isHidden = true
         numL.font = NSFont.bfSystemFont(ofSize: 10.0)
         
-        nameL.textColor = NSColor.labelTitleTextColor
-        numL.textColor = NSColor.labelTitleTextColor
+        nameL.textColor = NSColor.black
+        numL.textColor = NSColor.black
     }
     
     func didSelectedCell(selected: Bool) {
@@ -100,8 +100,8 @@ class BFStarTagCellView: LCBaseTableCellView {
             nameL.textColor = color
             numL.textColor = color
         } else {
-            nameL.textColor = NSColor.labelTitleTextColor
-            numL.textColor = NSColor.labelTitleTextColor
+            nameL.textColor = NSColor.black
+            numL.textColor = NSColor.black
         }
     }
     

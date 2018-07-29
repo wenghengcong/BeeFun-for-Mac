@@ -31,7 +31,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         
         addTagContainView.backgroundColor = NSColor.white
         addTagContainView.borderWidth = 1.0
-        addTagContainView.borderColor = NSColor.lineBackgroundColor
+        addTagContainView.borderColor = NSColor.lineGrayColor
         addTagContainView.layer?.masksToBounds = false
         
         addTagContainView.radius = 2.0
@@ -69,7 +69,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         if !workingTagsView.subviews.contains(inputRepoTagField) {
             let tagStyle = NSMutableParagraphStyle()
             tagStyle.alignment = .left
-            let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.textViewPlaceholderTextColor, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0), NSAttributedStringKey.paragraphStyle : tagStyle] as [NSAttributedStringKey : Any]
+            let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.placeholderTextColor, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0), NSAttributedStringKey.paragraphStyle : tagStyle] as [NSAttributedStringKey : Any]
             inputRepoTagField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
             inputRepoTagField.tag = inputNewTagFieldTag
             inputRepoTagField.usesSingleLineMode = true

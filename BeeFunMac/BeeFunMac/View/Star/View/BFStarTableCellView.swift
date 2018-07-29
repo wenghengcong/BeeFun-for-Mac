@@ -27,7 +27,7 @@ import Cocoa
     private var selectedMask: NSView = NSView()
 
     /// Color
-    @IBInspectable var titleColor: NSColor = NSColor.labelTitleTextColor
+    @IBInspectable var titleColor: NSColor = NSColor.black
     @IBInspectable var subTitleColor: NSColor = NSColor.hex("5b5b5b", alpha: 0.8)
     var selectedBackgroundColor = NSColor.hex("4899fb")
     var selected: Bool = false
@@ -60,7 +60,7 @@ import Cocoa
         tagContentView.backgroundColor = backgroundColor
         
         self.UnstarBtn.isHidden = true
-        bottomLine.backgroundColor = NSColor.lineBackgroundColor
+        bottomLine.backgroundColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in

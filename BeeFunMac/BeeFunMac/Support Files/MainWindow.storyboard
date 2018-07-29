@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,7 +126,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="65" height="700"/>
                                 <subviews>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="tg5-Q9-feW" userLabel="Person">
-                                        <rect key="frame" x="10" y="597" width="45" height="45"/>
+                                        <rect key="frame" x="10" y="601" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5zP-aE-nan"/>
                                         </constraints>
@@ -136,29 +136,6 @@
                                         </buttonCell>
                                         <connections>
                                             <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="wSf-Ng-aSM"/>
-                                        </connections>
-                                    </button>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="cIU-PW-5rx" userLabel="Home">
-                                        <rect key="frame" x="15" y="515" width="35" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="07u-lu-i2g"/>
-                                        </constraints>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_h_normal" imagePosition="overlaps" alignment="center" alternateImage="iconbar_h_sel" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="pgG-1l-1DX">
-                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="PGV-hO-jLN"/>
-                                        </connections>
-                                    </button>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Txg-V2-xi2" userLabel="Star">
-                                        <rect key="frame" x="15" y="452" width="35" height="35"/>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_s_normal" imagePosition="only" alignment="center" alternateImage="iconbar_s_sel" imageScaling="proportionallyUpOrDown" inset="2" id="Vll-W1-b8o">
-                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="tL6-EO-v9m"/>
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="1l4-1b-ELb" userLabel="Setting">
@@ -174,22 +151,67 @@
                                             <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="hKq-6a-WPG"/>
                                         </connections>
                                     </button>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="YVL-AG-QWp">
+                                        <rect key="frame" x="0.0" y="513" width="65" height="45"/>
+                                        <subviews>
+                                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIU-PW-5rx" userLabel="Home">
+                                                <rect key="frame" x="17" y="8" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_h_sel" imagePosition="overlaps" alignment="center" alternateImage="iconbar_h_normal" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="pgG-1l-1DX">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="PGV-hO-jLN"/>
+                                                </connections>
+                                            </button>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-5b-WV4">
+                                                <rect key="frame" x="0.0" y="0.0" width="2" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="4Bs-gQ-Wfc"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="91d-dZ-1AP">
+                                        <rect key="frame" x="0.0" y="468" width="65" height="45"/>
+                                        <subviews>
+                                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Txg-V2-xi2" userLabel="Star">
+                                                <rect key="frame" x="17" y="7" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_s_sel" imagePosition="overlaps" alignment="center" alternateImage="iconbar_s_normal" imageScaling="proportionallyUpOrDown" inset="2" id="Vll-W1-b8o">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="clickIconBarButton:" target="p5Z-LR-xIZ" id="tL6-EO-v9m"/>
+                                                </connections>
+                                            </button>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lcl-BJ-ISF">
+                                                <rect key="frame" x="0.0" y="0.0" width="2" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="aSK-Dj-9AN"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1l4-1b-ELb" secondAttribute="trailing" constant="20" id="5Db-2v-xkF"/>
-                                    <constraint firstAttribute="trailing" secondItem="cIU-PW-5rx" secondAttribute="trailing" constant="15" id="Asb-s8-Yfw"/>
-                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="top" secondItem="cIU-PW-5rx" secondAttribute="bottom" constant="28" id="Cbq-kE-DAf"/>
                                     <constraint firstAttribute="trailing" secondItem="tg5-Q9-feW" secondAttribute="trailing" constant="10" id="DhO-kp-Hj4"/>
-                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="leading" secondItem="cIU-PW-5rx" secondAttribute="leading" id="NOU-5s-l5G"/>
+                                    <constraint firstItem="91d-dZ-1AP" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" id="KpR-hz-s43"/>
+                                    <constraint firstItem="YVL-AG-QWp" firstAttribute="top" secondItem="tg5-Q9-feW" secondAttribute="bottom" constant="43" id="XEa-eN-bdu"/>
+                                    <constraint firstItem="YVL-AG-QWp" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" id="YkK-ke-CdP"/>
+                                    <constraint firstAttribute="trailing" secondItem="91d-dZ-1AP" secondAttribute="trailing" id="Zgk-MN-GZG"/>
                                     <constraint firstItem="1l4-1b-ELb" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" constant="20" id="bnB-bL-4vr"/>
                                     <constraint firstItem="tg5-Q9-feW" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" constant="10" id="dXm-Uv-Oik"/>
-                                    <constraint firstItem="cIU-PW-5rx" firstAttribute="top" secondItem="tg5-Q9-feW" secondAttribute="bottom" constant="47" id="dlR-Tu-V4c"/>
                                     <constraint firstAttribute="bottom" secondItem="1l4-1b-ELb" secondAttribute="bottom" constant="27" id="fGp-QX-NuC"/>
-                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="height" secondItem="cIU-PW-5rx" secondAttribute="height" id="l8V-EK-tKc"/>
+                                    <constraint firstAttribute="trailing" secondItem="YVL-AG-QWp" secondAttribute="trailing" id="oDo-hZ-5AY"/>
                                     <constraint firstAttribute="width" constant="65" id="oQ4-9s-Vm3"/>
-                                    <constraint firstItem="Txg-V2-xi2" firstAttribute="width" secondItem="cIU-PW-5rx" secondAttribute="width" id="pE4-ht-qZ5"/>
-                                    <constraint firstItem="cIU-PW-5rx" firstAttribute="leading" secondItem="ahE-yA-1ez" secondAttribute="leading" constant="15" id="tDm-uV-1iy"/>
-                                    <constraint firstItem="tg5-Q9-feW" firstAttribute="top" secondItem="ahE-yA-1ez" secondAttribute="top" constant="58" id="xbC-9M-2f3"/>
+                                    <constraint firstItem="91d-dZ-1AP" firstAttribute="top" secondItem="YVL-AG-QWp" secondAttribute="top" constant="45" id="sx8-VP-ixd"/>
+                                    <constraint firstItem="tg5-Q9-feW" firstAttribute="top" secondItem="ahE-yA-1ez" secondAttribute="top" constant="54" id="xbC-9M-2f3"/>
                                 </constraints>
                             </customView>
                             <box borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="QlK-hB-EHS">
@@ -211,12 +233,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="homeBackView" destination="YVL-AG-QWp" id="maZ-QI-Cum"/>
                         <outlet property="homeButton" destination="cIU-PW-5rx" id="Ilw-eK-5AX"/>
+                        <outlet property="homeLeftLine" destination="Vfe-5b-WV4" id="Mvo-Dl-oZf"/>
                         <outlet property="iconBar" destination="ahE-yA-1ez" id="Ca2-oH-Cos"/>
                         <outlet property="pageBox" destination="QlK-hB-EHS" id="l0B-j1-HV6"/>
                         <outlet property="profileButton" destination="tg5-Q9-feW" id="4Vy-85-DQe"/>
                         <outlet property="settingButton" destination="1l4-1b-ELb" id="s0K-an-Bfw"/>
+                        <outlet property="starBackView" destination="91d-dZ-1AP" id="u68-H3-Ya1"/>
                         <outlet property="starButton" destination="Txg-V2-xi2" id="6tb-Kc-5jo"/>
+                        <outlet property="starLeftLine" destination="Lcl-BJ-ISF" id="2qK-8t-SLE"/>
                     </connections>
                 </viewController>
                 <customObject id="3xq-OT-Ud3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
