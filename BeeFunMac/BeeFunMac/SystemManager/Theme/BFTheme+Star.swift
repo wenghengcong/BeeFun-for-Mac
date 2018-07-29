@@ -142,71 +142,52 @@ extension BFThemeManager {
         }
     }
     
-    func tagCellNormalImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "tagcell", selected: false)
+    func starAllStarImage(selected: Bool) -> NSImage? {
+        let imageName = combineImageName(prefix: IconArea.star, iconName: "all", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }
     
-    func tagCellSelectedImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "tagcell", selected: true)
+    func starUntaggedImage(selected: Bool) -> NSImage? {
+        let imageName = combineImageName(prefix: IconArea.star, iconName: "untagged", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }
     
-    func allStarNormalImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "all", selected: false)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+    func starSyncImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "sync", selected: selected)
+        let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
-    func allStarSelectedImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "all", selected: true)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+    func starTimeImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "time", selected: false)
+        let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
-    func unTaggedNormalImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "untagged", selected: false)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+    func starNumImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "num", selected: false)
+        let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
-    func unTaggedSelectedImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "untagged", selected: true)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
-        return image
-    }
-    
-    func starSyncNormalImage() -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "sync", selected: false)
+    func starA_ZImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "a_z", selected: false)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
     /// 保存Tag的icon
-    func saveTagNormalImage() -> NSImage? {
+    func starSaveTagImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.star, iconName: "save", selected: false)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }
-    
-    func saveTagSelectedImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "save", selected: true)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
-        return image
-    }
-    
     
     /// Tag前面的icon
-    func tagNormalImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "save", selected: false)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
-        return image
-    }
-    
-    func tagSelectedImage() -> NSImage? {
-        let imageName = combineImageName(prefix: IconArea.star, iconName: "save", selected: true)
+    func tagCellImage(selected: Bool) -> NSImage? {
+        let imageName = combineImageName(prefix: IconArea.star, iconName: "tagcell", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }

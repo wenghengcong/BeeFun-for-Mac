@@ -47,12 +47,12 @@ class BFMainController: BFBaseViewController {
     func loadTheme() {
         iconBar.backgroundColor = BFThemeManager.shared.iconBarBackgroundColor()
         
-        homeButton.alternateImage = BFThemeManager.shared.gitHomeIconBarSelectedImage()
-        homeButton.image = BFThemeManager.shared.gitHomeIconBarNormalImage()
+        homeButton.alternateImage = BFThemeManager.shared.iconbarGitImage(selected: true)
+        homeButton.image = BFThemeManager.shared.iconbarGitImage(selected: false)
         homeLeftLine.backgroundColor = BFThemeManager.shared.iconSelectedLeftLineColor()
         
-        starButton.alternateImage = BFThemeManager.shared.starIconBarSelectedImage()
-        starButton.image = BFThemeManager.shared.starIconBarNormalImage()
+        starButton.alternateImage = BFThemeManager.shared.iconbarStarImage(selected: true)
+        starButton.image = BFThemeManager.shared.iconbarStarImage(selected: false)
         starLeftLine.backgroundColor = BFThemeManager.shared.iconSelectedLeftLineColor()
     }
     

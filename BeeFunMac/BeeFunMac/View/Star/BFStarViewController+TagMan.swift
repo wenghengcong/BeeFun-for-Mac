@@ -75,8 +75,8 @@ extension BFStarViewController {
         inputNewTagField.window?.resignFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: true)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
-        allStarsImageView.image = BFThemeManager.shared.allStarSelectedImage()
-        untaggedStarsImageView.image = BFThemeManager.shared.unTaggedNormalImage()
+        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: true)
+        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: false)
     }
     //点击Untagged Star
     @objc func clickUntaggedStarButton() {
@@ -90,8 +90,8 @@ extension BFStarViewController {
         inputNewTagField.window?.resignFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: true)
-        allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
-        untaggedStarsImageView.image = BFThemeManager.shared.unTaggedSelectedImage()
+        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
+        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: true)
         
         unSelectedTagAndReload()
     }
@@ -266,8 +266,8 @@ extension BFStarViewController {
         inputNewTagField.window?.resignFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
-        allStarsImageView.image = BFThemeManager.shared.allStarNormalImage()
-        untaggedStarsImageView.image = BFThemeManager.shared.unTaggedNormalImage()
+        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
+        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: false)
         
         clickAllStar = false
         clickUntaggedStar = false

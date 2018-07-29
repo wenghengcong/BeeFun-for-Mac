@@ -62,27 +62,16 @@ extension BFThemeManager {
         }
     }
     
-    func starIconBarNormalImage() -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "star", selected: false)
+    func iconbarStarImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "star", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
-    func starIconBarSelectedImage() -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "star", selected: true)
+    func iconbarGitImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "git", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
-    
-    func gitHomeIconBarNormalImage() -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "git", selected: false)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
-        return image
-    }
-    
-    func gitHomeIconBarSelectedImage() -> NSImage? {
-        let imgName = combineImageName(prefix: IconArea.iconBar, iconName: "git", selected: true)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
-        return image
-    }
+
 }

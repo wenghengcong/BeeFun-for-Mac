@@ -29,14 +29,14 @@ extension BFStarViewController {
         tagTextLabel.backgroundColor = thManager.tagShowBackgroundColor()
         tagTextLabel.textColor = thManager.tagShowTitleColor()
         
-        refreshButton.image = thManager.starSyncNormalImage()
+        refreshButton.image = thManager.starSyncImage(selected: true)
         starSyncLabel.backgroundColor = thManager.tagShowBackgroundColor()
         starSyncLabel.textColor = thManager.tagShowTitleColor()
         starSyncBackView.backgroundColor = thManager.tagShowBackgroundColor()
                 
         //保存新Tag按钮
-        saveNewTagBtn.image = thManager.saveTagNormalImage()
-        saveNewTagBtn.alternateImage = thManager.saveTagSelectedImage()
+        saveNewTagBtn.image = thManager.starSaveTagImage(selected: false)
+        saveNewTagBtn.alternateImage = thManager.starSaveTagImage(selected: true)
         
         //
         
