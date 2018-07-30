@@ -61,13 +61,20 @@ extension BFThemeManager {
     
     /// All stars
     func allStarsAttributeTitle(selected: Bool) -> NSAttributedString {
-       let attributeTitle =  NSAttributedString(string: "All Stars", attributes: [NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected)])
+       let attributeTitle =  NSAttributedString(string: "All Stars", attributes:
+        [
+            NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected),
+            NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 15.0)
+        ])
         return attributeTitle
     }
     
     /// untagged stars
     func untaggedStarsAttributeTitle(selected: Bool) -> NSAttributedString {
-        let attributeTitle =  NSAttributedString(string: "Untagged Stars", attributes: [NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected)])
+        let attributeTitle =  NSAttributedString(string: "Untagged Stars", attributes: [
+            NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected),
+            NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 15.0)
+            ])
         return attributeTitle
     }
     
