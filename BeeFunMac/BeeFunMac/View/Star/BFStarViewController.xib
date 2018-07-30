@@ -725,7 +725,7 @@
                         <constraint firstAttribute="height" constant="19" id="KD6-gA-AOk"/>
                         <constraint firstAttribute="width" constant="57" id="fgg-GJ-FV3"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_repo_readme" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="wCX-dF-Tzr">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_readme" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="wCX-dF-Tzr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -805,11 +805,11 @@
         <image name="star_day_order_time_sel" width="40" height="40"/>
         <image name="star_day_repo_arrow_left" width="80" height="80"/>
         <image name="star_day_repo_arrow_right" width="80" height="80"/>
+        <image name="star_day_repo_readme" width="184" height="62"/>
         <image name="star_day_repo_refresh" width="120" height="120"/>
         <image name="star_day_repo_tag" width="120" height="120"/>
         <image name="star_day_untagged" width="714" height="716"/>
         <image name="star_refresh" width="200" height="200"/>
-        <image name="star_repo_readme" width="184" height="62"/>
         <image name="tag_blue_all_star_sel" width="60" height="60"/>
     </resources>
 </document>
