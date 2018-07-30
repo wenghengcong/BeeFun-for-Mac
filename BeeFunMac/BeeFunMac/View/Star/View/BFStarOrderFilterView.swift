@@ -44,6 +44,7 @@ class BFStarOrderFilterView: BFView {
     override func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
+        loadTheme()
     }
     
     private func commonInit() {
@@ -52,6 +53,17 @@ class BFStarOrderFilterView: BFView {
         starOrder.tag = StarOrderType.star.rawValue
         a_zOrder.tag = StarOrderType.a_z.rawValue
         
+    }
+    
+    func loadTheme() {
+        timeOrder.image = BFThemeManager.shared.starTimeImage(selected: false)
+        timeOrder.alternateImage = BFThemeManager.shared.starTimeImage(selected: true)
+        
+        starOrder.image = BFThemeManager.shared.starNumImage(selected: false)
+        starOrder.alternateImage = BFThemeManager.shared.starNumImage(selected: true)
+        
+        a_zOrder.image = BFThemeManager.shared.starA_ZImage(selected: false)
+        a_zOrder.alternateImage = BFThemeManager.shared.starA_ZImage(selected: true)
     }
     
     func setupIndicator() {

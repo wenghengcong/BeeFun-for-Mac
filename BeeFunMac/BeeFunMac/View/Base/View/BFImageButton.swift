@@ -14,7 +14,7 @@ class BFImageButton: NSButton {
         super.draw(dirtyRect)
 
         // Drawing code here.
-        self.imageScaling = .scaleNone
+//        self.imageScaling = .scaleNone
 //        self.highlight(false)
         self.isBordered = false
     }

@@ -142,16 +142,21 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-li-MiT">
+                                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-li-MiT">
                                             <rect key="frame" x="0.0" y="-2" width="200" height="5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="TkF-Zi-ZTE"/>
+                                            </constraints>
                                         </box>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="VIS-6M-OXc" firstAttribute="leading" secondItem="WHm-sE-6rg" secondAttribute="leading" constant="12" id="4fN-W8-5QF"/>
+                                        <constraint firstAttribute="trailing" secondItem="wAt-li-MiT" secondAttribute="trailing" id="9fl-xW-2Ao"/>
                                         <constraint firstItem="5Pn-dh-2Y5" firstAttribute="leading" secondItem="VIS-6M-OXc" secondAttribute="trailing" constant="8" id="Dv4-Qa-ONz"/>
                                         <constraint firstAttribute="height" constant="35" id="Dxk-u3-GaM"/>
                                         <constraint firstItem="VIS-6M-OXc" firstAttribute="top" secondItem="WHm-sE-6rg" secondAttribute="top" constant="7" id="OXQ-VO-sMW"/>
+                                        <constraint firstAttribute="bottom" secondItem="wAt-li-MiT" secondAttribute="bottom" id="OgJ-jV-TLD"/>
+                                        <constraint firstItem="wAt-li-MiT" firstAttribute="leading" secondItem="WHm-sE-6rg" secondAttribute="leading" id="SwR-CR-lIR"/>
                                         <constraint firstItem="5Pn-dh-2Y5" firstAttribute="top" secondItem="WHm-sE-6rg" secondAttribute="top" id="VtQ-pI-SbF"/>
                                         <constraint firstAttribute="bottom" secondItem="5Pn-dh-2Y5" secondAttribute="bottom" id="d8v-nc-N0D"/>
                                         <constraint firstAttribute="trailing" secondItem="5Pn-dh-2Y5" secondAttribute="trailing" id="oIF-SV-gGH"/>
@@ -524,7 +529,7 @@
                         <constraint firstAttribute="height" constant="45" id="BNj-Sx-x8d"/>
                         <constraint firstAttribute="width" constant="100" id="QSh-tC-eqv"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_order_time" imagePosition="only" alignment="center" alternateImage="star_order_time_sel" inset="2" id="KPo-tr-i1T">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_order_time" imagePosition="only" alignment="center" alternateImage="star_day_order_time_sel" inset="2" id="KPo-tr-i1T">
                         <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -599,7 +604,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -793,13 +798,13 @@
     <resources>
         <image name="star_add_tag" width="200" height="200"/>
         <image name="star_day_all_sel" width="786" height="821"/>
+        <image name="star_day_order_time" width="40" height="40"/>
+        <image name="star_day_order_time_sel" width="40" height="40"/>
         <image name="star_day_untagged" width="714" height="716"/>
         <image name="star_order_az" width="20" height="20"/>
         <image name="star_order_az_sel" width="20" height="20"/>
         <image name="star_order_star" width="40" height="40"/>
         <image name="star_order_star_sel" width="41" height="40"/>
-        <image name="star_order_time" width="20" height="20"/>
-        <image name="star_order_time_sel" width="40" height="40"/>
         <image name="star_refresh" width="200" height="200"/>
         <image name="star_repo_readme" width="184" height="62"/>
         <image name="star_web_arrow_left" width="60" height="60"/>
