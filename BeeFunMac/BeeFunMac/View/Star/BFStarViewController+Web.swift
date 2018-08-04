@@ -117,11 +117,24 @@ extension BFStarViewController {
         self.webViewHomeBtn.action = #selector(webViewReadMeAction(sender:))
     }
     
+    /// TODO: 假如是网页的话，支持缩放
     func scaleContentPage() {
-        let bestWidth: CGFloat = 1030
-        let windowWidth = self.rightContentView.width
-        let scale = windowWidth/bestWidth
-//        self.repoWebView?.setMagnification(scale, centeredAt: self.rightContentView.center)
+        repoWebView?.evaluateJavaScript("document.title", completionHandler: { (result, error) in
+            if error != nil {
+                print(error ?? "document.title parase error")
+            }
+            if let title: String = result as? String {
+                print("webview title: \(title)")
+                if title != "BeeFun_Github_README" {
+                    let bestWidth: CGFloat = 1030
+                    let windowWidth = self.rightContentView.width
+                    let scale = windowWidth/bestWidth
+                    self.repoWebView?.setMagnification(scale, centeredAt: self.rightContentView.center)
+                } else {
+                    self.repoWebView?.setMagnification(1.0, centeredAt: self.rightContentView.center)
+                }
+            }
+        })
     }
     
     /// webview加载url
