@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -13,13 +12,13 @@
                 <outlet property="allStarsBtn" destination="5Pn-dh-2Y5" id="F0V-In-s1S"/>
                 <outlet property="allStarsImageView" destination="VIS-6M-OXc" id="Zj3-U7-4aR"/>
                 <outlet property="allTagsBackView" destination="WHm-sE-6rg" id="TPE-8c-GoT"/>
-                <outlet property="inputNewTagField" destination="TcX-2a-Qhf" id="Izt-4n-qjh"/>
-                <outlet property="inputRepoTagField" destination="gv9-cF-78c" id="Hdy-Nn-evA"/>
                 <outlet property="languagePop" destination="EiE-UV-AIF" id="NPp-R7-EHx"/>
                 <outlet property="leftContentView" destination="Osx-17-aof" id="Haj-zc-XKF"/>
                 <outlet property="newTagBackView" destination="4jO-N3-phY" id="XKD-MJ-C0x"/>
+                <outlet property="newTagTextField" destination="TcX-2a-Qhf" id="Izt-4n-qjh"/>
                 <outlet property="orderFilterView" destination="hEo-Cc-YIc" id="l2R-v7-sP1"/>
                 <outlet property="refreshButton" destination="5ot-qA-3Bl" id="39C-3f-YuK"/>
+                <outlet property="repoTagsTextField" destination="gv9-cF-78c" id="Hdy-Nn-evA"/>
                 <outlet property="rightContentView" destination="N76-f6-ccH" id="06L-5Z-6P3"/>
                 <outlet property="saveNewTagBtn" destination="hc7-pI-nJc" id="bYI-PC-M9w"/>
                 <outlet property="searchField" destination="7TR-0e-oyy" id="4Cz-Mr-HUH"/>
@@ -362,7 +361,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="200" height="505"/>
                             <clipView key="contentView" id="gSC-6H-eYP">
                                 <rect key="frame" x="1" y="1" width="198" height="503"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="pkn-Ot-syq">
                                         <rect key="frame" x="0.0" y="0.0" width="198" height="503"/>
@@ -604,7 +603,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -755,7 +754,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>

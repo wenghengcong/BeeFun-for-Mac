@@ -34,11 +34,11 @@ extension BFStarViewController {
         //TODO: Tag Sort按钮暂时隐藏
         tagSortButton.isHidden = true
         
-        inputNewTagField.delegate = self
-        inputNewTagField.wantsLayer = true
-        inputNewTagField.layer?.borderColor = NSColor(red:204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0).cgColor
-        inputNewTagField.layer?.borderWidth = 1.0
-        inputNewTagField.layer?.cornerRadius = 3.0
+        newTagTextField.delegate = self
+        newTagTextField.wantsLayer = true
+        newTagTextField.layer?.borderColor = NSColor(red:204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0).cgColor
+        newTagTextField.layer?.borderWidth = 1.0
+        newTagTextField.layer?.cornerRadius = 3.0
     }
     
     //刷新按钮
@@ -72,7 +72,7 @@ extension BFStarViewController {
         saveNewTagBtn.state = .off
         unSelectedTagAndReload()
         
-        inputNewTagField.window?.resignFirstResponder()
+        resignAllTextFieldFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: true)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
         allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: true)
@@ -87,7 +87,7 @@ extension BFStarViewController {
         untaggedStarBtn.state = .on
         saveNewTagBtn.state = .off
         
-        inputNewTagField.window?.resignFirstResponder()
+        resignAllTextFieldFirstResponder()
         allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
         untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: true)
         allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
@@ -116,17 +116,17 @@ extension BFStarViewController {
         saveNewTagBtn.state = .off
         saveNewTagToDB()
         getFirstPageTags()
-        self.view.window?.makeFirstResponder(inputNewTagField)
+        self.view.window?.makeFirstResponder(newTagTextField)
     }
     //保存tag到数据库
     func saveNewTagToDB(){
-        if inputNewTagField.stringValue.isBlank {
+        if newTagTextField.stringValue.isBlank {
             //TODO:tips
 //            JSMBHUDBridge.showInfo("Tag name is blank.".localized)
             return
         }
         let newTag = ObjTag()
-        newTag.name = inputNewTagField.stringValue.trimmed
+        newTag.name = newTagTextField.stringValue.trimmed
         newTag.owner = UserManager.shared.login
         addTagNetwork(tag: newTag)    
     }
@@ -258,19 +258,7 @@ extension BFStarViewController {
     
     /// 选中行
     @objc func didSelectedTagTableView() {
-        
-        allStarsBtn.state = .off
-        untaggedStarBtn.state = .off
-        saveNewTagBtn.state = .off
-
-        inputNewTagField.window?.resignFirstResponder()
-        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
-        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
-        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
-        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: false)
-        
-        clickAllStar = false
-        clickUntaggedStar = false
+        resignAllTextFieldFirstResponder()
         
         let row = tagTable.clickedRow
         let unselected = -1
@@ -289,6 +277,18 @@ extension BFStarViewController {
     
     /// 选中某一个tag
     private func tagTableViewDidSelectRow(_ row : Int){
+        allStarsBtn.state = .off
+        untaggedStarBtn.state = .off
+        saveNewTagBtn.state = .off
+        
+        clickAllStar = false
+        clickUntaggedStar = false
+        
+        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
+        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
+        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
+        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: false)
+        
         // row did select
         print("did selected \(row)")
         selectedTagRow = row

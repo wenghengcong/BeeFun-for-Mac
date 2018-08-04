@@ -10,6 +10,7 @@ import Cocoa
 
 // MARK: - AutoCompleteTableViewDelegate
 extension BFStarViewController: AutoCompleteTableViewDelegate{
+    
     func textField(_ textField: NSTextField, completions words: [String], forPartialWordRange charRange: NSRange, indexOfSelectedItem index: Int) -> [String] {
         var matches = [String]()
         
@@ -34,7 +35,7 @@ extension BFStarViewController: AutoCompleteTableViewDelegate{
     
     func textField(_ textField: NSTextField, didSelectItem item: String) {
         addTagToRepo()
-        inputRepoTagField.stringValue = ""
+        repoTagsTextField.stringValue = ""
     }
 }
 

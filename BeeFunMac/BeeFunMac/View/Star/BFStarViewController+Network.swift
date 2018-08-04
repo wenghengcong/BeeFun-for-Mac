@@ -72,7 +72,7 @@ extension BFStarViewController {
                                 //                                JSMBHUDBridge.showSuccess("Success".localized)
                                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.AddTag, object: nil, userInfo: ["tag": tag.name!])
                                 //成功后重新将 inputNewTagField 置空
-                                self.inputNewTagField.stringValue = ""
+                                self.newTagTextField.stringValue = ""
                             } else if code == BFStatusCode.addTagWhenExist {
                                 //TODO: tips
                                 //                                JSMBHUDBridge.showError("Already exists!".localized, view: self.view)

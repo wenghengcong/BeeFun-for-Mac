@@ -10,10 +10,11 @@ import Cocoa
 
 @objc protocol AutoCompleteTableViewDelegate:NSObjectProtocol{
     func textField(_ textField:NSTextField,completions words:[String],forPartialWordRange charRange:NSRange,indexOfSelectedItem index:Int) ->[String]
-    @objc optional func textField(_ textField:NSTextField,didSelectItem item: String)
+    @objc optional func textField(_ textField:NSTextField, didSelectItem item: String)
 }
 
 class AutoCompleteTableRowView: NSTableRowView {
+    
     override func drawSelection(in dirtyRect: NSRect) {
         if self.selectionHighlightStyle != .none{
             self.backgroundColor = NSColor.red
@@ -57,7 +58,7 @@ class AutoCompleteTextField: NSTextField {
         }
     }
     
-    weak var tableViewDelegate:AutoCompleteTableViewDelegate?
+    weak var tableViewDelegate: AutoCompleteTableViewDelegate?
     let popOverPadding:CGFloat = 0.0
     let maxResults = 10
     

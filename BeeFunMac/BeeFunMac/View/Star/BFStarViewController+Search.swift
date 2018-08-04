@@ -33,8 +33,7 @@ extension BFStarViewController: NSSearchFieldDelegate {
             searchKey = searchField.stringValue
         }
         
-        searchField.window?.resignFirstResponder()
-        inputNewTagField.window?.resignFirstResponder()
+        resignAllTextFieldFirstResponder()
         
         if ordertType == .time {
             getRepoSortPara = "starred_at"

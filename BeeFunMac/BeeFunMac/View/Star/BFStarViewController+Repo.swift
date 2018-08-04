@@ -28,6 +28,8 @@ extension BFStarViewController {
     
     /// 选中行
     @objc func didSelectedRepoTableView() {
+        
+        resignAllTextFieldFirstResponder()
         let row = starTable.clickedRow
         let unselected = -1
         
