@@ -10,6 +10,20 @@ import Cocoa
 
 extension BFStarViewController: AutoCompleteTextFieldDelegate {
     
+    // MARK: - Become first responder
+    func becomeNewTagTextFieldFirstResponder() {
+        _ = newTagTextField.becomeFirstResponder()
+    }
+    
+    func becomeRepoTagsTextFieldFirstResponder() {
+        _ = repoTagsTextField.becomeFirstResponder()
+    }
+    
+    func becomeSearchTextFieldFirstResponder() {
+        searchField.becomeFirstResponder()
+    }
+    
+    // MARK: - Resign
     func resignAllTextFieldFirstResponder() {
         resignNewTagTextFieldFirstResponder()
         resignRepoTagTextFieldFirstResponder()

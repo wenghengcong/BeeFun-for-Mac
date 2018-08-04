@@ -246,6 +246,7 @@
 		5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagMan.swift"; sourceTree = "<group>"; };
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
 		5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TextField.swift"; sourceTree = "<group>"; };
+		5E365EAA2115DDEC00C45B93 /* Theme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Theme.md; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
@@ -637,6 +638,7 @@
 		5E75D707210D60DE007596E9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				5E365EAA2115DDEC00C45B93 /* Theme.md */,
 				5E75D6FD210CBE8D007596E9 /* Theme.xcassets */,
 				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
 				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,

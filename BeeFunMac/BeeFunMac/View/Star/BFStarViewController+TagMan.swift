@@ -116,7 +116,6 @@ extension BFStarViewController {
         saveNewTagBtn.state = .off
         saveNewTagToDB()
         getFirstPageTags()
-        self.view.window?.makeFirstResponder(newTagTextField)
     }
     //保存tag到数据库
     func saveNewTagToDB(){
