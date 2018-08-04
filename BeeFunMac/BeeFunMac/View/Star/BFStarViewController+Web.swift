@@ -50,6 +50,8 @@ extension BFStarViewController {
             let objrepo = starReposData[selectedRepoRow]
             oriSelRepoStatTags = objrepo.star_tags
             loadRepoReadMePage(objRepo: objrepo)
+        } else {
+            repoWebView?.load("about:blank")
         }
     }
 }

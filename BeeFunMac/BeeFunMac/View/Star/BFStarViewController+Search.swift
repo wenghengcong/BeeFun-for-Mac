@@ -147,16 +147,15 @@ extension BFStarViewController: NSSearchFieldDelegate {
                 }
             }
         }
-        
-        if scrollToTop {
+        //当前刷新是数据为空，就不
+        if starReposData.count == 0 {
+            selectedRepoRow = 0
+            repoTableViewDidSelectRow(0)
+        } else {
             if scrollToTop {
                 starTable.scroll(NSPoint.zero)
-                if starReposData.count > 0 {
-                    repoTableViewDidSelectRow(0)
-                }
+                repoTableViewDidSelectRow(0)
             }
-            webViewReadMeAction(sender: nil)
         }
-        
     }
 }
