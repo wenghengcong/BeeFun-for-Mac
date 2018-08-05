@@ -60,7 +60,7 @@ public enum BeeFunAPI {
     
     //从BeeFun获取到github starrd 的页数，每页100
     case repoPage(owner: String)
-    case repos(tag: String,language: String, page: Int, perpage: Int, sort: String, direction: String)
+    case getRepos(tag: String,language: String, search: String, page: Int, perpage: Int, sort: String, direction: String)
     case delRepo(repoid: Int)
     case addRepo(repo: ObjRepos)
     
@@ -101,8 +101,8 @@ extension BeeFunAPI: TargetType {
     public var baseURL: URL {
         switch self {
         default:
-//            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
-            return URL(string: "http://localhost:8082")!                                  //本地测试环境
+            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
+//            return URL(string: "http://localhost:8082")!                                  //本地测试环境
         }
     }
     
@@ -119,7 +119,7 @@ extension BeeFunAPI: TargetType {
             
         case .repoPage(let owner):
             return "/v1/reponum/\(owner)"
-        case .repos(let tag, _, _, _, _, _):
+        case .getRepos(let tag, _, _, _, _, _, _):
             return "/v1/repos/\(tag)"
         case .delRepo(let repoid):
             return "/repo/\(repoid)"
@@ -197,10 +197,11 @@ extension BeeFunAPI: TargetType {
                 "star_tags": star_tags,
                 "del_tags": delete_tags
             ]
-        case .repos(_,let language, let page, let perpage, let sort, let direction):
+        case .getRepos(_,let language, let search, let page, let perpage, let sort, let direction):
             return [
                 "source" : 0,
                 "language": language as AnyObject,
+                "search": search as AnyObject,
                 "page": page as AnyObject,
                 "perpage": perpage as AnyObject,
                 "sort": sort as AnyObject,

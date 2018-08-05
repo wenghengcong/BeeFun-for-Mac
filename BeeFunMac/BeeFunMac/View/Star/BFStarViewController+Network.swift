@@ -154,9 +154,12 @@ extension BFStarViewController {
         if getRepoTagPara.isBlank || getRepoLanguageVar.isBlank {
             return
         }
- 
+        if searchKey == nil {
+            searchKey = ""
+        }
+        
         orderFilterView.showIndicator()
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.repos(tag: getRepoTagPara, language: getRepoLanguageVar, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.getRepos(tag: getRepoTagPara, language: getRepoLanguageVar, search: searchKey!, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
             var message = kNoDataFoundTip
             self.orderFilterView.hideIndicator()
             self.getReposNextPageLoading = false
