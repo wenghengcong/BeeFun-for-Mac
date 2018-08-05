@@ -58,3 +58,34 @@ extension BFStarViewController: AutoCompleteTextFieldDelegate {
         
     }
 }
+
+// MARK: - AutoCompleteTableViewDelegate
+extension BFStarViewController: AutoCompleteTableViewDelegate{
+    
+    func textField(_ textField: NSTextField, completions words: [String], forPartialWordRange charRange: NSRange, indexOfSelectedItem index: Int) -> [String] {
+        var matches = [String]()
+        
+        for tag in allTags {
+            if let tagName = tag.name {
+                if let _ = tagName.lowercased().range(of: textField.stringValue.lowercased(), options: NSString.CompareOptions.anchored)
+                {
+                    hasTagsMatched = true
+                    matches.append(tagName)
+                }
+            }
+        }
+        
+        if(matches.isEmpty)
+        {
+            hasTagsMatched = false
+            matches.append(textField.stringValue)
+        }
+        
+        return matches
+    }
+    
+    func textField(_ textField: NSTextField, didSelectItem item: String) {
+        addTagToRepo()
+        repoTagsTextField.stringValue = ""
+    }
+}

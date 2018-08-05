@@ -77,7 +77,6 @@
 		5E5E822B20E4E2CE00E810E2 /* SESearchCommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */; };
 		5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */; };
 		5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */; };
-		5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */; };
 		5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */; };
 		5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F7210C597C007596E9 /* UIView+Animation.swift */; };
 		5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */; };
@@ -274,7 +273,6 @@
 		5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SESearchCommitModel.swift; sourceTree = "<group>"; };
 		5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDockMenuManager.swift; sourceTree = "<group>"; };
 		5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
-		5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+AutoCom.swift"; sourceTree = "<group>"; };
 		5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteTextField.xib; sourceTree = "<group>"; };
 		5E75D6F7210C597C007596E9 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Project.swift"; sourceTree = "<group>"; };
@@ -915,7 +913,6 @@
 				5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */,
 				5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */,
 				5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */,
-				5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */,
 				5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */,
 				5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */,
 				5EA435071FDADF4400034578 /* Star.xcassets */,
@@ -1314,7 +1311,6 @@
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
 				5E75D70B210DB7AE007596E9 /* BFTheme+Star.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
-				5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,
