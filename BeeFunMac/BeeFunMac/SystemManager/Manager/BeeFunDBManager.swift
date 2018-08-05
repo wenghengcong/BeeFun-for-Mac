@@ -18,9 +18,7 @@ class BeeFunDBManager: NSObject {
         if !UserManager.shared.isLogin {
             return
         }
-        if showTips {
-            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
-        }
+
         let nowDate = Date().timeStamp
         let lastUpdate = UserDefaults.standard.integer(forKey: lastTimeStampKey)
         if (nowDate - lastUpdate > 1 * 24 * 60 * 60) || first {
@@ -33,17 +31,17 @@ class BeeFunDBManager: NSObject {
     /// 更新请求
     ///
     /// - Parameter update: 是否更新所有已经在server db存在repo的信息
-    func updateRequest(showTips: Bool, first: Bool, update: Bool) {
-        
+    private func updateRequest(showTips: Bool, first: Bool, update: Bool) {
+        if showTips {
+            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
+        }
         BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(first: first, update: update)) { (result) in
+            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
             switch result {
             case let .success(response):
                 do {
                     if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
-                            if showTips {
-                                NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
-                            }
                             if update {
                                 //添加成功
                                 UserDefaults.standard.set(Date().timeStamp, forKey: self.lastTimeStampKey)
