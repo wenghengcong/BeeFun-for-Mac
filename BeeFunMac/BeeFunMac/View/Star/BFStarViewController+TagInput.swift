@@ -305,8 +305,6 @@ extension BFStarViewController: NSTextFieldDelegate {
         }
         
         updateRepoTagNetwork()
-        repoTagsTextField.stringValue = ""
-        self.view.window?.makeFirstResponder(repoTagsTextField)
     }
         
     // MARK: - Remove Tag From Repo

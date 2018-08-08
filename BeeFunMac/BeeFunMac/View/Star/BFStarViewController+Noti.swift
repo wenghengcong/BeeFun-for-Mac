@@ -34,6 +34,37 @@ extension BFStarViewController {
         let tagScrollView = tagTable.enclosingScrollView
         // a register for those notifications on the content view.
         NotificationCenter.default.addObserver(self, selector: #selector(tagScrollViewDidScroll(_:)), name: NSScrollView.didEndLiveScrollNotification, object: tagScrollView)
+        
+        
+        //
+        NotificationCenter.default.addObserver(self, selector: #selector(windowWillCloseAction(noti:)), name: NSWindow.willCloseNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(windowWillCloseAction(noti:)), name: NSWindow.willMiniaturizeNotification, object: nil)
+    }
+    
+    @objc func windowWillCloseAction(noti: NSNotification) {
+        NSApplication.shared.activate(ignoringOtherApps: true)
+
+        self.repoTagsTextField.autoCompletePopover?.performClose(nil)
+//        self.repoTagsTextField.contentViewController?.dismiss(nil)
+//        if NSApp.windows.count >= 2 {
+////            if let popWindow = self.repoTagsTextField.contentViewController?.view.window {
+////                popWindow.close()
+////            }
+//            NSApp.windows.last?.close()
+//        }
+    }
+    
+    @objc func windowWillMiniaturizeAction(noti: NSNotification) {
+        NSApplication.shared.activate(ignoringOtherApps: true)
+
+        self.repoTagsTextField.autoCompletePopover?.performClose(nil)
+//        self.repoTagsTextField.contentViewController?.dismiss(nil)
+//        if NSApp.windows.count >= 2 {
+////            if let popWindow = self.repoTagsTextField.contentViewController?.view.window {
+////                popWindow.close()
+////            }
+//            NSApp.windows.last?.close()
+//        }
     }
     
     internal func removeNotification() {
