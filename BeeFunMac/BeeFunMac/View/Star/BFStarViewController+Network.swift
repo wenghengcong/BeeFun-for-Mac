@@ -72,7 +72,7 @@ extension BFStarViewController {
                                 //                                JSMBHUDBridge.showSuccess("Success".localized)
                                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.AddTag, object: nil, userInfo: ["tag": tag.name!])
                                 //成功后重新将 inputNewTagField 置空
-                                self.inputNewTagField.stringValue = ""
+                                self.newTagTextField.stringValue = ""
                             } else if code == BFStatusCode.addTagWhenExist {
                                 //TODO: tips
                                 //                                JSMBHUDBridge.showError("Already exists!".localized, view: self.view)
@@ -154,9 +154,12 @@ extension BFStarViewController {
         if getRepoTagPara.isBlank || getRepoLanguageVar.isBlank {
             return
         }
- 
+        if searchKey == nil {
+            searchKey = ""
+        }
+        
         orderFilterView.showIndicator()
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.repos(tag: getRepoTagPara, language: getRepoLanguageVar, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.getRepos(tag: getRepoTagPara, language: getRepoLanguageVar, search: searchKey!, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
             var message = kNoDataFoundTip
             self.orderFilterView.hideIndicator()
             self.getReposNextPageLoading = false

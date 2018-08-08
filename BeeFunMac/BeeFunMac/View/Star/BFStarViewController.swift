@@ -86,7 +86,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var tagSortButton: NSPopUpButton!
     @IBOutlet weak var tagTextLabel: NSTextField!
     
-    @IBOutlet weak var inputNewTagField: BFTextField!
+    @IBOutlet weak var newTagTextField: BFTextField!
     @IBOutlet weak var saveNewTagBtn: NSButton!
     
     @IBOutlet weak var tagTable: NSTableView!
@@ -122,7 +122,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var workingTagsButtongs: [NSButton] = []
 
     let inputNewTagFieldTag = 2222
-    @IBOutlet weak var inputRepoTagField: AutoCompleteTextField!       /// 输入新tag
+    @IBOutlet weak var repoTagsTextField: AutoCompleteTextField!       /// 输入新tag
     var hasTagsMatched: Bool = false
     
     //布局

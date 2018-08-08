@@ -28,6 +28,8 @@ extension BFStarViewController {
     
     /// 选中行
     @objc func didSelectedRepoTableView() {
+        
+        resignAllTextFieldFirstResponder()
         let row = starTable.clickedRow
         let unselected = -1
         
@@ -54,15 +56,20 @@ extension BFStarViewController {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
             oriSelRepoStatTags = objrepo.star_tags
+            //加载readme
             loadRepoReadMePage(objRepo: objrepo)
             //working tags
             refreshWorkingTagsFromRepo(repo: objrepo)
             reLayoutWorkingLayout()
+        } else {
+            refreshWorkingTagsFromRepo(repo: nil)
+            webViewReadMeAction(sender: nil)
+            reLayoutWorkingLayout()
         }
     }
 
-    func loadRepoReadMePage(objRepo: ObjRepos) {
-        if let owner = objRepo.owner?.login, let repo = objRepo.name {
+    func loadRepoReadMePage(objRepo: ObjRepos?) {
+        if let owner = objRepo?.owner?.login, let repo = objRepo?.name {
             Provider.sharedProvider.request(GitHubAPI.readme(owner: owner, repo: repo)) { (result) in
                 switch result {
                 case let .success(response):

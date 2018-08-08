@@ -71,15 +71,15 @@ class BFMainController: BFBaseViewController {
         //TODO: 设置按钮隐藏
         settingButton.isHidden = true
         
-//        if BFConfig.shared.appStoreChannel {
-//            homeButton.isHidden = true
-//            homeBackView.isHidden = true
-//            currentIcon = starButton
-//        } else {
-//            homeButton.isHidden = false
-//            homeBackView.isHidden = false
-//            currentIcon = homeButton
-//        }
+        if BFConfig.shared.appStoreChannel {
+            homeButton.isHidden = true
+            homeBackView.isHidden = true
+            currentIcon = starButton
+        } else {
+            homeButton.isHidden = false
+            homeBackView.isHidden = false
+            currentIcon = homeButton
+        }
         loadTheme()
     }
     

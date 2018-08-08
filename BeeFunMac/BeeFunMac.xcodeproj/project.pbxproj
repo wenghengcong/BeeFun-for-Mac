@@ -49,6 +49,7 @@
 		5E2D29FE1FD97FAF0043A665 /* BFStarViewController+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */; };
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
+		5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */; };
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
@@ -76,7 +77,6 @@
 		5E5E822B20E4E2CE00E810E2 /* SESearchCommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */; };
 		5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */; };
 		5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */; };
-		5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */; };
 		5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */; };
 		5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F7210C597C007596E9 /* UIView+Animation.swift */; };
 		5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */; };
@@ -244,6 +244,8 @@
 		5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Data.swift"; sourceTree = "<group>"; };
 		5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagMan.swift"; sourceTree = "<group>"; };
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
+		5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TextField.swift"; sourceTree = "<group>"; };
+		5E365EAA2115DDEC00C45B93 /* Theme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Theme.md; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
@@ -271,7 +273,6 @@
 		5E5E821E20E4E2CE00E810E2 /* SESearchCommitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SESearchCommitModel.swift; sourceTree = "<group>"; };
 		5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDockMenuManager.swift; sourceTree = "<group>"; };
 		5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
-		5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+AutoCom.swift"; sourceTree = "<group>"; };
 		5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteTextField.xib; sourceTree = "<group>"; };
 		5E75D6F7210C597C007596E9 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Project.swift"; sourceTree = "<group>"; };
@@ -635,6 +636,7 @@
 		5E75D707210D60DE007596E9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				5E365EAA2115DDEC00C45B93 /* Theme.md */,
 				5E75D6FD210CBE8D007596E9 /* Theme.xcassets */,
 				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
 				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,
@@ -911,7 +913,7 @@
 				5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */,
 				5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */,
 				5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */,
-				5E60060920D0C7FA008FB100 /* BFStarViewController+AutoCom.swift */,
+				5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */,
 				5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */,
 				5EA435071FDADF4400034578 /* Star.xcassets */,
 			);
@@ -1177,6 +1179,7 @@
 				5E9867EF1FD05189007EE86F /* ObjUserSum.swift in Sources */,
 				5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */,
 				5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */,
+				5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */,
 				5E9867E01FD05189007EE86F /* ObjMilestone.swift in Sources */,
 				5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */,
 				5EAC2F1E2022D82D000442FE /* SQLStar+Delete.swift in Sources */,
@@ -1308,7 +1311,6 @@
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
 				5E75D70B210DB7AE007596E9 /* BFTheme+Star.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
-				5E60060A20D0C7FA008FB100 /* BFStarViewController+AutoCom.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,

@@ -29,7 +29,6 @@ extension BFStarViewController {
     }
     
     func reloadRepoTableViewData() {
-        
         CATransaction.begin()
         CATransaction.setDisableActions(true)
 //        starTable.animations = nil
@@ -63,8 +62,8 @@ extension BFStarViewController {
     }
     
     // MARK: - Tag
-    func refreshWorkingTagsFromRepo(repo: ObjRepos) {
-        if let tags = repo.star_tags {
+    func refreshWorkingTagsFromRepo(repo: ObjRepos?) {
+        if let tags = repo?.star_tags {
             workingTags.removeAll()
             for tag in tags {
                 let obj = ObjTag()

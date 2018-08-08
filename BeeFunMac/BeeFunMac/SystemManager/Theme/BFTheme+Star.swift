@@ -61,13 +61,20 @@ extension BFThemeManager {
     
     /// All stars
     func allStarsAttributeTitle(selected: Bool) -> NSAttributedString {
-       let attributeTitle =  NSAttributedString(string: "All Stars", attributes: [NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected)])
+       let attributeTitle =  NSAttributedString(string: "All Stars", attributes:
+        [
+            NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected),
+            NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 15.0)
+        ])
         return attributeTitle
     }
     
     /// untagged stars
     func untaggedStarsAttributeTitle(selected: Bool) -> NSAttributedString {
-        let attributeTitle =  NSAttributedString(string: "Untagged Stars", attributes: [NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected)])
+        let attributeTitle =  NSAttributedString(string: "Untagged Stars", attributes: [
+            NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected),
+            NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 15.0)
+            ])
         return attributeTitle
     }
     
@@ -161,19 +168,19 @@ extension BFThemeManager {
     }
     
     func starTimeImage(selected: Bool) -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "time", selected: false)
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "order_time", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
     func starNumImage(selected: Bool) -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "num", selected: false)
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "order_num", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
     
     func starA_ZImage(selected: Bool) -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "a_z", selected: false)
+        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "order_a_z", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }

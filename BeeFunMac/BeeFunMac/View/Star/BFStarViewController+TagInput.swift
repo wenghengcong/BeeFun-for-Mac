@@ -63,16 +63,15 @@ extension BFStarViewController: NSTextFieldDelegate {
     }
     
     func addInputRepoTagField() {
-        if !workingTagsView.subviews.contains(inputRepoTagField) {
+        if !workingTagsView.subviews.contains(repoTagsTextField) {
             let tagStyle = NSMutableParagraphStyle()
             tagStyle.alignment = .left
             let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.placeholderTextColor, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0), NSAttributedStringKey.paragraphStyle : tagStyle] as [NSAttributedStringKey : Any]
-            inputRepoTagField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
-            inputRepoTagField.usesSingleLineMode = true
+            repoTagsTextField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
+            repoTagsTextField.usesSingleLineMode = true
 //            inputRepoTagField.delegate = self
-            inputRepoTagField.responDelegate = self
-            inputRepoTagField.tableViewDelegate = self
-            workingTagsView.addSubview(inputRepoTagField)
+            repoTagsTextField.tableViewDelegate = self
+            workingTagsView.addSubview(repoTagsTextField)
         }
     }
     
@@ -180,7 +179,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         if workingTagsButtongs.count == 0 {
             fieldY = lastBtnY
         }
-        inputRepoTagField.frame = CGRect(x: fieldX, y: fieldY, width: width-5, height: fieldH)
+        repoTagsTextField.frame = CGRect(x: fieldX, y: fieldY, width: width-5, height: fieldH)
     }
     
     //left距离左边边距，right距离右边边距
@@ -225,8 +224,8 @@ extension BFStarViewController: NSTextFieldDelegate {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchField {
                 print("controlTextDidBeginEditing search \(self.searchField.stringValue)")
-            } else if textfield == inputRepoTagField {
-                print("controlTextDidBeginEditing input new tag \(self.inputRepoTagField.stringValue)")
+            } else if textfield == repoTagsTextField {
+                print("controlTextDidBeginEditing input new tag \(self.repoTagsTextField.stringValue)")
             }
         }
     }
@@ -237,8 +236,8 @@ extension BFStarViewController: NSTextFieldDelegate {
                 print("controlTextDidChange search \(self.searchField.stringValue)")
                 //TODO: 评估下是否需要每次在输入文字时拿到最新的数据
 //                searchStarReposNow(allRefresh: true, scrollToTop: true)
-            } else if textfield == inputRepoTagField {
-                print("controlTextDidChange input new tag \(self.inputRepoTagField.stringValue)")
+            } else if textfield == repoTagsTextField {
+                print("controlTextDidChange input new tag \(self.repoTagsTextField.stringValue)")
 //                inputTagsTipArr = ["Good", "Fine", "hahaha"]
 //                tagTipsTableShow()
             }
@@ -251,8 +250,8 @@ extension BFStarViewController: NSTextFieldDelegate {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchField {
                 print("controlTextDidEndEditing search \(self.searchField.stringValue)")
-            } else if textfield == inputRepoTagField {
-                print("controlTextDidEndEditing input new tag \(self.inputRepoTagField.stringValue)")
+            } else if textfield == repoTagsTextField {
+                print("controlTextDidEndEditing input new tag \(self.repoTagsTextField.stringValue)")
             }
         }
     }
@@ -276,10 +275,10 @@ extension BFStarViewController: NSTextFieldDelegate {
                 print("Enter detected.")
                 if textfield == searchField {
                     searchStarReposNow(allRefresh: true, scrollToTop: true)
-                } else if textfield == inputRepoTagField {
+                } else if textfield == repoTagsTextField {
                     //FIXME: 在AutoCompleteTextField中动作被截获，所以注释掉
 //                    addTagToRepo()
-                } else if textfield == inputNewTagField {
+                } else if textfield == newTagTextField {
                     clickSaveTagButton()
                 }
             } 
@@ -295,18 +294,16 @@ extension BFStarViewController: NSTextFieldDelegate {
     // MARK: - Add tag to repo
     func addTagToRepo() {
         
-        if inputRepoTagField.stringValue.isBlank {
+        if repoTagsTextField.stringValue.isBlank {
             //TODO: 弹框
             return
         }
         //增加tag到workingTags数组
-        if inputRepoTagField.stringValue.trimmed.length > 0 {
-            addTagToWorkingArea(tag: inputRepoTagField.stringValue.trimmed)
+        if repoTagsTextField.stringValue.trimmed.length > 0 {
+            addTagToWorkingArea(tag: repoTagsTextField.stringValue.trimmed)
         }
         
         updateRepoTagNetwork()
-        inputRepoTagField.stringValue = ""
-        self.view.window?.makeFirstResponder(inputRepoTagField)
     }
         
     // MARK: - Remove Tag From Repo
@@ -352,22 +349,6 @@ extension BFStarViewController: NSTextFieldDelegate {
         updateRepoTagNetwork()
     }
     
-}
-
-// MARK: - Responder Delegate
-extension BFStarViewController: AutoCompleteTextFieldDelegate {
-    func didBecomeFirstResponder(textField: AutoCompleteTextField) {
-        print("become first responder")
-        if textField == inputRepoTagField {
-            
-        }
-    }
-    
-    //进入输入框，先调用resign，后才是become
-    func didResignFirstResponder(textField: AutoCompleteTextField) {
-        print("resign first responder")
-
-    }
 }
 
 extension BFStarViewController {

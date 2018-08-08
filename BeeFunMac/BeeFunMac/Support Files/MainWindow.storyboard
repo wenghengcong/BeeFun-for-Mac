@@ -157,7 +157,7 @@
                                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIU-PW-5rx" userLabel="Home">
                                                 <rect key="frame" x="17" y="8" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_h_sel" imagePosition="overlaps" alignment="center" alternateImage="iconbar_h_normal" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="pgG-1l-1DX">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="pgG-1l-1DX">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -180,7 +180,7 @@
                                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Txg-V2-xi2" userLabel="Star">
                                                 <rect key="frame" x="17" y="7" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_s_sel" imagePosition="overlaps" alignment="center" alternateImage="iconbar_s_normal" imageScaling="proportionallyUpOrDown" inset="2" id="Vll-W1-b8o">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Vll-W1-b8o">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -251,11 +251,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconbar_h_normal" width="262" height="256"/>
-        <image name="iconbar_h_sel" width="262" height="256"/>
         <image name="iconbar_p_normal" width="160" height="160"/>
-        <image name="iconbar_s_normal" width="256" height="256"/>
-        <image name="iconbar_s_sel" width="256" height="256"/>
         <image name="iconbar_setting" width="100" height="100"/>
         <image name="logo_1024" width="1024" height="1024"/>
     </resources>

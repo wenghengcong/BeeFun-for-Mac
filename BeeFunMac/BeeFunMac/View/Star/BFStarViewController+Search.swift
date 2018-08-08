@@ -33,8 +33,7 @@ extension BFStarViewController: NSSearchFieldDelegate {
             searchKey = searchField.stringValue
         }
         
-        searchField.window?.resignFirstResponder()
-        inputNewTagField.window?.resignFirstResponder()
+        resignAllTextFieldFirstResponder()
         
         if ordertType == .time {
             getRepoSortPara = "starred_at"
@@ -86,38 +85,7 @@ extension BFStarViewController: NSSearchFieldDelegate {
             //选中全部，则不对reponseData操作
         }
 
-        //2. 筛选search key
-        var filterBySearchKey: [ObjRepos] = []
-        if let key = searchKey?.lowercased() {
-            for repo in reponseData {
-                if let fullname = repo.full_name?.lowercased() {
-                    if fullname.lowercased().contains(key) {
-                        filterBySearchKey.append(repo)
-                        continue
-                    }
-                }
-                
-                if let desc = repo.cdescription {
-                    if desc.lowercased().contains(key) {
-                        filterBySearchKey.append(repo)
-                        continue
-                    }
-                }
-                
-                if let star_tags = repo.star_tags {
-                    let star_tags_str = convertStarTagStringListToString(tags: star_tags)
-                    if star_tags_str.lowercased().contains(key) {
-                        filterBySearchKey.append(repo)
-                        continue
-                    }
-                }
-            }
-            reponseData = filterBySearchKey
-        } else {
-            //无搜索关键字，则不对reponseData操作
-        }
-        
-        //3. 刷新
+        //2. 刷新
         let refreshBeforeCount = starReposData.count
         if getReposPage == 1 {
             starReposData = reponseData
@@ -148,16 +116,15 @@ extension BFStarViewController: NSSearchFieldDelegate {
                 }
             }
         }
-        
-        if scrollToTop {
+        //当前刷新是数据为空，就不
+        if starReposData.count == 0 {
+            selectedRepoRow = 0
+            repoTableViewDidSelectRow(0)
+        } else {
             if scrollToTop {
                 starTable.scroll(NSPoint.zero)
-                if starReposData.count > 0 {
-                    repoTableViewDidSelectRow(0)
-                }
+                repoTableViewDidSelectRow(0)
             }
-            webViewReadMeAction(sender: nil)
         }
-        
     }
 }
