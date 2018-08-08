@@ -97,6 +97,7 @@ class AutoCompleteTextField: NSTextField {
         // see issue #1, popover throws when contentView's height=0, CoreGraphics bug?
         let contentView:NSView = NSView(frame: NSRect.init(x: 0, y: 0, width: popOverWidth, height: 1))
         contentView.addSubview(tableSrollView)
+        contentView.identifier = NSUserInterfaceItemIdentifier.init("tagsTipPop")
         
         let contentViewController = NSViewController()
         contentViewController.view = contentView

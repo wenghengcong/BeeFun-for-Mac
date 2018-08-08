@@ -53,7 +53,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //方法二：
         if !flag{
             for window in sender.windows {
-                window.makeKeyAndOrderFront(self)
+                if let view = window.contentView, view.identifier?.rawValue=="tagsTipPop" {
+                    print("tagsPop")
+                } else {
+                    window.makeKeyAndOrderFront(self)
+                }
             }
         }
         return true
