@@ -65,7 +65,8 @@ extension BFStarViewController: AutoCompleteTableViewDelegate{
         if(matches.isEmpty)
         {
             hasTagsMatched = false
-//            matches.append(textField.stringValue)
+            //TODO: 未匹配时，是否显示下面提示条，不显示注释下面这行。
+            matches.append(textField.stringValue)
         }
         
         return matches
@@ -73,6 +74,6 @@ extension BFStarViewController: AutoCompleteTableViewDelegate{
     
     func textField(_ textField: NSTextField, didSelectItem item: String) {
         addTagToRepo()
-        repoTagsTextField.stringValue = ""
+        resignRepoTagTextFieldFirstResponder()
     }
 }

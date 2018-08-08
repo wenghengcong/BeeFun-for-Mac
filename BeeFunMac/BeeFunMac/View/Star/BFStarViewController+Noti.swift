@@ -43,35 +43,11 @@ extension BFStarViewController {
     }
     
     @objc func windowWillCloseAction(noti: NSNotification) {
-        NSApplication.shared.activate(ignoringOtherApps: true)
-//        self.repoTagsTextField.matches = nil
-        self.repoTagsTextField.autoCompletePopover?.performClose(nil)
-//        self.repoTagsTextField.complete(nil)
-        self.repoTagsTextField.autoCompletePopover?.contentViewController?.view.window?.close()
-//        self.repoTagsTextField.contentViewController?.dismiss(nil)
-//        if NSApp.windows.count >= 2 {
-////            if let popWindow = self.repoTagsTextField.contentViewController?.view.window {
-////                popWindow.close()
-////            }
-//            NSApp.windows.last?.close()
-//        }
+
     }
     
     @objc func windowWillMiniaturizeAction(noti: NSNotification) {
-        NSApplication.shared.activate(ignoringOtherApps: true)
 
-//        self.repoTagsTextField.autoCompletePopover?.performClose(nil)
-        self.repoTagsTextField.matches = nil
-        self.repoTagsTextField.complete(nil)
-        self.repoTagsTextField.autoCompletePopover?.contentViewController?.view.window?.close()
-
-//        self.repoTagsTextField.contentViewController?.dismiss(nil)
-//        if NSApp.windows.count >= 2 {
-////            if let popWindow = self.repoTagsTextField.contentViewController?.view.window {
-////                popWindow.close()
-////            }
-//            NSApp.windows.last?.close()
-//        }
     }
     
     internal func removeNotification() {
