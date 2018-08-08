@@ -53,7 +53,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         for (index, tag) in workingTags.enumerated() {
             let tagB = NSButton(title: tag.name!, target: self, action: #selector(clickWorkingTagsButton(sender:)))
             tagB.tag = index
-            tagB.font = NSFont.bfSystemFont(ofSize: 11.0)
+            tagB.font = NSFont.bfSystemFont(ofSize: 12.0)
 //            tagB.bezelStyle = .regularSquare
             tagB.setButtonType(.pushOnPushOff)
             tagB.tag = index

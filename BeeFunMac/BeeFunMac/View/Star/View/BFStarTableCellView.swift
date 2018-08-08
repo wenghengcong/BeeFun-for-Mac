@@ -159,7 +159,7 @@ import Cocoa
         
         let tagStyle = NSMutableParagraphStyle()
         tagStyle.alignment = .left
-        let tagAttrbute = [NSAttributedStringKey.foregroundColor : titleColor, NSAttributedStringKey.paragraphStyle : tagStyle, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 8.0)] as [NSAttributedStringKey : Any]
+        let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : tagStyle, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
 
         if let allTags = objRepos?.star_tags {
 //            allTags = ["A", "Test", "HAHA"]
@@ -180,10 +180,10 @@ import Cocoa
                 self.tagContentView.addSubview(tagB)
             }
             
-            let btnY: CGFloat = 0
+            let btnY: CGFloat = -1
             var btnX: CGFloat = 0
-            let btnOutsideMagrin: CGFloat = 1.5
-            let lineH: CGFloat = 20.0
+            let btnOutsideMagrin: CGFloat = 2.5
+            let lineH: CGFloat = 22.0
             
             for (_, btn) in allBtns.enumerated() {
                 btn.sizeToFit()
