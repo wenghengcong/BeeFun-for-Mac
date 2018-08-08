@@ -149,38 +149,23 @@ extension BFThemeManager {
         }
     }
     
+    /// all star icon
     func starAllStarImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.star, iconName: "all", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }
     
+    /// untagged star icon
     func starUntaggedImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.star, iconName: "untagged", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imageName))
         return image
     }
     
+    /// 同步按钮图片
     func starSyncImage(selected: Bool) -> NSImage? {
         let imgName: String = combineImageName(prefix: IconArea.star, iconName: "sync", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
-        return image
-    }
-    
-    func starTimeImage(selected: Bool) -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "order_time", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
-        return image
-    }
-    
-    func starNumImage(selected: Bool) -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "order_num", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
-        return image
-    }
-    
-    func starA_ZImage(selected: Bool) -> NSImage? {
-        let imgName: String = combineImageName(prefix: IconArea.star, iconName: "order_a_z", selected: selected)
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }

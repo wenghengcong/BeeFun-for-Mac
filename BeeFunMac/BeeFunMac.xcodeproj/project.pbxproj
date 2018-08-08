@@ -87,7 +87,7 @@
 		5E75D704210D5F25007596E9 /* NSColor+Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D703210D5F25007596E9 /* NSColor+Night.swift */; };
 		5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */; };
 		5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */; };
-		5E75D70B210DB7AE007596E9 /* BFTheme+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D70A210DB7AE007596E9 /* BFTheme+Star.swift */; };
+		5E75D70B210DB7AE007596E9 /* BFTheme+StarTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */; };
 		5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */; };
 		5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */; };
 		5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F681FDD7F460050B50F /* LCButton.swift */; };
@@ -95,6 +95,8 @@
 		5E7F6F6D1FDD85B90050B50F /* JSDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F6C1FDD85B80050B50F /* JSDevice.swift */; };
 		5E7F6F6F1FDD86D10050B50F /* NSView+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F6E1FDD86D10050B50F /* NSView+Draw.swift */; };
 		5E7F6F711FDD8C2F0050B50F /* BFTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */; };
+		5E80F746211B284500756B30 /* BFTheme+StarWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80F745211B284500756B30 /* BFTheme+StarWeb.swift */; };
+		5E80F748211B287A00756B30 /* BFTheme+StarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80F747211B287A00756B30 /* BFTheme+StarRepos.swift */; };
 		5E8A2AEE1FD13EC200B246BD /* AnswerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AED1FD13EC200B246BD /* AnswerManager.swift */; };
 		5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */; };
 		5E8A2AF41FD1568D00B246BD /* BFNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */; };
@@ -283,7 +285,7 @@
 		5E75D703210D5F25007596E9 /* NSColor+Night.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Night.swift"; sourceTree = "<group>"; };
 		5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Blue.swift"; sourceTree = "<group>"; };
 		5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Theme.swift"; sourceTree = "<group>"; };
-		5E75D70A210DB7AE007596E9 /* BFTheme+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+Star.swift"; sourceTree = "<group>"; };
+		5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+StarTag.swift"; sourceTree = "<group>"; };
 		5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Network.swift"; sourceTree = "<group>"; };
 		5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+View.swift"; sourceTree = "<group>"; };
 		5E7F6F681FDD7F460050B50F /* LCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCButton.swift; sourceTree = "<group>"; };
@@ -291,6 +293,8 @@
 		5E7F6F6C1FDD85B80050B50F /* JSDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSDevice.swift; sourceTree = "<group>"; };
 		5E7F6F6E1FDD86D10050B50F /* NSView+Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Draw.swift"; sourceTree = "<group>"; };
 		5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimeHelper.swift; sourceTree = "<group>"; };
+		5E80F745211B284500756B30 /* BFTheme+StarWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+StarWeb.swift"; sourceTree = "<group>"; };
+		5E80F747211B287A00756B30 /* BFTheme+StarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+StarRepos.swift"; sourceTree = "<group>"; };
 		5E8A2AED1FD13EC200B246BD /* AnswerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerManager.swift; sourceTree = "<group>"; };
 		5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGithubWebsite.swift; sourceTree = "<group>"; };
 		5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFNotificationName.swift; sourceTree = "<group>"; };
@@ -640,7 +644,9 @@
 				5E75D6FD210CBE8D007596E9 /* Theme.xcassets */,
 				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
 				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,
-				5E75D70A210DB7AE007596E9 /* BFTheme+Star.swift */,
+				5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */,
+				5E80F745211B284500756B30 /* BFTheme+StarWeb.swift */,
+				5E80F747211B287A00756B30 /* BFTheme+StarRepos.swift */,
 				5E75D701210D5E27007596E9 /* NSColor+Day.swift */,
 				5E75D703210D5F25007596E9 /* NSColor+Night.swift */,
 				5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */,
@@ -1186,6 +1192,7 @@
 				5E9867DD1FD05189007EE86F /* ObjSubject.swift in Sources */,
 				5E042CFC20AFBB3A00767E56 /* BeeFunDBManager.swift in Sources */,
 				5E9867EC1FD05189007EE86F /* ObjPermissions.swift in Sources */,
+				5E80F748211B287A00756B30 /* BFTheme+StarRepos.swift in Sources */,
 				5E5E822220E4E2CE00E810E2 /* SEResponseWikis.swift in Sources */,
 				5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */,
 				5EBF53FB1FCFF83000D7A2A5 /* BFStarViewController.swift in Sources */,
@@ -1274,6 +1281,7 @@
 				5E5E822120E4E2CE00E810E2 /* SEResponseRepos.swift in Sources */,
 				5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */,
 				5E91319D20AE70B40056EF9F /* ObjLanguage.swift in Sources */,
+				5E80F746211B284500756B30 /* BFTheme+StarWeb.swift in Sources */,
 				5E9868091FD0FE75007EE86F /* JSConnectivity.swift in Sources */,
 				5E9867D71FD05189007EE86F /* ObjMember.swift in Sources */,
 				5E9867DF1FD05189007EE86F /* ObjLabel.swift in Sources */,
@@ -1309,7 +1317,7 @@
 				5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */,
 				5E9867EE1FD05189007EE86F /* ObjUser.swift in Sources */,
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
-				5E75D70B210DB7AE007596E9 /* BFTheme+Star.swift in Sources */,
+				5E75D70B210DB7AE007596E9 /* BFTheme+StarTag.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFHomeController+Noti.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,

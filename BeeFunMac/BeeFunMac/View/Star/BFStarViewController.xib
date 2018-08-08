@@ -589,7 +589,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -715,19 +715,58 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
+                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rZb-wb-PH9">
+                    <rect key="frame" x="450" y="35" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="rSk-RX-b6w"/>
+                        <constraint firstAttribute="height" constant="23" id="xW8-7l-BIQ"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_home" imagePosition="overlaps" alignment="center" alternateImage="star_day_repo_home" imageScaling="proportionallyDown" inset="2" id="u9c-zw-MZj">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-mf-Rmz">
+                    <rect key="frame" x="523" y="35" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="Iad-OC-EVE"/>
+                        <constraint firstAttribute="height" constant="23" id="ey9-ax-rF1"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_home" imagePosition="overlaps" alignment="center" alternateImage="star_day_repo_home" imageScaling="proportionallyDown" inset="2" id="klU-7z-2me">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FSx-qo-OmR">
+                    <rect key="frame" x="596" y="35" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="LU3-mV-yZZ"/>
+                        <constraint firstAttribute="height" constant="23" id="RxE-UE-IJJ"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_home" imagePosition="overlaps" alignment="center" alternateImage="star_day_repo_home" imageScaling="proportionallyDown" inset="2" id="Zwu-FY-ZIn">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tCe-cf-P17" secondAttribute="bottom" id="2K9-Rn-ABR"/>
                 <constraint firstItem="zYc-Kw-Acw" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="36" id="Eeg-IV-Msf"/>
                 <constraint firstItem="ym6-BX-i2u" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="Gby-jV-VWV"/>
                 <constraint firstItem="tCe-cf-P17" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" id="Gnc-sk-xGm"/>
+                <constraint firstItem="FSx-qo-OmR" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="IiG-vF-RvJ"/>
                 <constraint firstItem="2s2-fs-pol" firstAttribute="leading" secondItem="hK0-OW-JwJ" secondAttribute="trailing" constant="15" id="IjA-yo-JGb"/>
+                <constraint firstItem="ym6-BX-i2u" firstAttribute="leading" secondItem="FSx-qo-OmR" secondAttribute="trailing" constant="35" id="RBi-gh-lwY"/>
                 <constraint firstItem="OGr-ma-vIN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="S3O-Ez-V5b"/>
                 <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" constant="33" id="UFQ-oF-XJP"/>
+                <constraint firstItem="9ea-mf-Rmz" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="YvN-Bj-xwm"/>
+                <constraint firstItem="rZb-wb-PH9" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="cIN-wN-pYM"/>
                 <constraint firstAttribute="trailing" secondItem="tCe-cf-P17" secondAttribute="trailing" id="d9m-ku-Fm1"/>
                 <constraint firstItem="sr5-0f-tAN" firstAttribute="leading" secondItem="2s2-fs-pol" secondAttribute="trailing" constant="16" id="dp4-Wn-Thg"/>
+                <constraint firstItem="FSx-qo-OmR" firstAttribute="leading" secondItem="9ea-mf-Rmz" secondAttribute="trailing" constant="50" id="fLX-Av-kg8"/>
                 <constraint firstItem="hK0-OW-JwJ" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="5" id="jxc-4A-vuO"/>
                 <constraint firstItem="sr5-0f-tAN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="ltD-WM-sH8"/>
+                <constraint firstItem="9ea-mf-Rmz" firstAttribute="leading" secondItem="rZb-wb-PH9" secondAttribute="trailing" constant="50" id="r8i-1W-cqg"/>
                 <constraint firstItem="zYc-Kw-Acw" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="9" id="rjc-fz-kGG"/>
                 <constraint firstAttribute="trailing" secondItem="ym6-BX-i2u" secondAttribute="trailing" constant="10" id="tIQ-AO-skS"/>
                 <constraint firstItem="2s2-fs-pol" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="8" id="wS8-jS-3aR"/>
@@ -790,6 +829,7 @@
         <image name="star_day_order_time_sel" width="40" height="40"/>
         <image name="star_day_repo_arrow_left" width="80" height="80"/>
         <image name="star_day_repo_arrow_right" width="80" height="80"/>
+        <image name="star_day_repo_home" width="40" height="40"/>
         <image name="star_day_repo_readme" width="184" height="62"/>
         <image name="star_day_repo_refresh" width="120" height="120"/>
         <image name="star_day_repo_tag" width="120" height="120"/>
