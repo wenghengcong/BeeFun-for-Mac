@@ -95,9 +95,8 @@ class BFMainController: BFBaseViewController {
     }
     
     func addWindoeNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(mainViewLogin), name: NSNotification.Name.BeeFun.DidLogout, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(mainViewLogin), name: NSNotification.Name.BeeFun.DidLogin, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(mainViewLogout), name: NSNotification.Name.BeeFun.DidLogout, object: nil)
-
     }
     
     @IBAction func clickIconBarButton(_ sender: Any) {
