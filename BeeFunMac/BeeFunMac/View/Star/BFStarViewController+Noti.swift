@@ -39,12 +39,15 @@ extension BFStarViewController {
         //
         NotificationCenter.default.addObserver(self, selector: #selector(windowWillCloseAction(noti:)), name: NSWindow.willCloseNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(windowWillCloseAction(noti:)), name: NSWindow.willMiniaturizeNotification, object: nil)
+
     }
     
     @objc func windowWillCloseAction(noti: NSNotification) {
         NSApplication.shared.activate(ignoringOtherApps: true)
-
+//        self.repoTagsTextField.matches = nil
         self.repoTagsTextField.autoCompletePopover?.performClose(nil)
+//        self.repoTagsTextField.complete(nil)
+        self.repoTagsTextField.autoCompletePopover?.contentViewController?.view.window?.close()
 //        self.repoTagsTextField.contentViewController?.dismiss(nil)
 //        if NSApp.windows.count >= 2 {
 ////            if let popWindow = self.repoTagsTextField.contentViewController?.view.window {
@@ -57,7 +60,11 @@ extension BFStarViewController {
     @objc func windowWillMiniaturizeAction(noti: NSNotification) {
         NSApplication.shared.activate(ignoringOtherApps: true)
 
-        self.repoTagsTextField.autoCompletePopover?.performClose(nil)
+//        self.repoTagsTextField.autoCompletePopover?.performClose(nil)
+        self.repoTagsTextField.matches = nil
+        self.repoTagsTextField.complete(nil)
+        self.repoTagsTextField.autoCompletePopover?.contentViewController?.view.window?.close()
+
 //        self.repoTagsTextField.contentViewController?.dismiss(nil)
 //        if NSApp.windows.count >= 2 {
 ////            if let popWindow = self.repoTagsTextField.contentViewController?.view.window {

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-extension BFStarViewController: AutoCompleteTextFieldDelegate {
+extension BFStarViewController {
     
     // MARK: - Become first responder
     func becomeNewTagTextFieldFirstResponder() {
@@ -44,19 +44,6 @@ extension BFStarViewController: AutoCompleteTextFieldDelegate {
         searchField.resignFirstResponder()
     }
     
-    // MARK: - Responder Delegate
-    func didBecomeFirstResponder(textField: AutoCompleteTextField) {
-        print("become first responder")
-        if textField == repoTagsTextField {
-            
-        }
-    }
-    
-    //进入输入框，先调用resign，后才是become
-    func didResignFirstResponder(textField: AutoCompleteTextField) {
-        print("resign first responder")
-        
-    }
 }
 
 // MARK: - AutoCompleteTableViewDelegate
@@ -78,7 +65,7 @@ extension BFStarViewController: AutoCompleteTableViewDelegate{
         if(matches.isEmpty)
         {
             hasTagsMatched = false
-            matches.append(textField.stringValue)
+//            matches.append(textField.stringValue)
         }
         
         return matches

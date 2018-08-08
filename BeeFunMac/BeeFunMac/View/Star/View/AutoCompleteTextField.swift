@@ -167,6 +167,7 @@ class AutoCompleteTextField: NSTextField {
     }
     
     override func complete(_ sender: Any?) {
+        
         let lengthOfWord = self.stringValue.characters.count
         let subStringRange = NSMakeRange(0, lengthOfWord)
         

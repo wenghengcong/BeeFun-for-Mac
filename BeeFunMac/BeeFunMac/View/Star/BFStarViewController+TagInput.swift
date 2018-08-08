@@ -70,7 +70,6 @@ extension BFStarViewController: NSTextFieldDelegate {
             repoTagsTextField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
             repoTagsTextField.usesSingleLineMode = true
 //            inputRepoTagField.delegate = self
-            repoTagsTextField.responDelegate = self
             repoTagsTextField.tableViewDelegate = self
             workingTagsView.addSubview(repoTagsTextField)
         }
