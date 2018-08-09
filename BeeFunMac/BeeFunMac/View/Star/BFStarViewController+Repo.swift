@@ -53,61 +53,6 @@ extension BFStarViewController {
                 rowCell.didSelectedCell(selected: (index == row))
             }
         }
-        if !starReposData.isBeyond(index: selectedRepoRow) {
-            let objrepo = starReposData[selectedRepoRow]
-            oriSelRepoStatTags = objrepo.star_tags
-            //加载readme
-            loadRepoReadMePage(objRepo: objrepo)
-            //working tags
-            refreshWorkingTagsFromRepo(repo: objrepo)
-            reLayoutWorkingLayout()
-        } else {
-            refreshWorkingTagsFromRepo(repo: nil)
-            webViewReadMeAction(sender: nil)
-            reLayoutWorkingLayout()
-        }
+        refreshRepoInfoAndReadMe()
     }
-
-    func loadRepoReadMePage(objRepo: ObjRepos?) {
-        if let owner = objRepo?.owner?.login, let repo = objRepo?.name {
-            Provider.sharedProvider.request(GitHubAPI.readme(owner: owner, repo: repo)) { (result) in
-                switch result {
-                case let .success(response):
-                    do {
-                        let htmlString = try response.mapString()
-                        let statusCode = response.statusCode
-                        let templateHtml = self.getTemplateHTML()
-                        //https://github.com/sindresorhus/github-markdown-css
-                        let htmlPathURL = Bundle.main.url(forResource: "readmeTemplate", withExtension: "html")
-                        let resultHtml = templateHtml.replacing("{{body}}", with: htmlString)
-                        if statusCode == BFStatusCode.ok.rawValue {
-//                            let basePath = Bundle.main.bundlePath
-                            if let baseUrlPath = htmlPathURL?.deletingLastPathComponent() {
-                                self.repoWebView?.loadHTMLString(resultHtml, baseURL: baseUrlPath)
-                            }
-                        }
-                    } catch {
-                        
-                    }
-                    
-                case .failure:
-                    break
-                }
-            }
-        }
-    }
-    
-    private func getTemplateHTML() -> String {
-        var html = ""
-        if let htmlPathURL = Bundle.main.url(forResource: "readmeTemplate", withExtension: "html"){
-            do {
-                html = try String(contentsOf: htmlPathURL, encoding: .utf8)
-            } catch  {
-                print("Unable to get the file.")
-            }
-        }
-        
-        return html
-    }
-    
 }

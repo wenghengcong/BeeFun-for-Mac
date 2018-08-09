@@ -25,7 +25,29 @@ class BFTimeHelper: NSObject {
             
             var internet = createAt.string()
             if prefix != nil {
-                internet = prefix!.localized + " :" + internet
+                internet = prefix!.localized + ":" + internet
+            }
+            return internet
+            
+        }
+        return nil
+    }
+    
+    /// 返回互联网时间
+    ///
+    /// - Parameters:
+    ///   - rare: 原来的字符串
+    ///   - prefix: 时间前缀
+    /// - Returns: 返回互联网时间
+    func shortDateTime(rare: String?, prefix: String?) -> String? {
+        
+        if let rareStr: String = rare {
+            let date = rareStr.date(format: DateFormat.iso8601(options: .withTimeZone))
+            let createdAt = date?.string(format: DateFormat.custom("dd-MM-yyyy"))
+            
+            var internet = createdAt!
+            if prefix != nil {
+                internet = prefix!.localized + ":" + internet
             }
             return internet
             

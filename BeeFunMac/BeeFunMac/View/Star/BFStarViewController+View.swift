@@ -20,6 +20,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         starPageCustomLeftView()
         //右边webview区域
         starPageCustomRightView()
+        starPageCustomRepoInfoArea()
         self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
         loadTheme()
     }

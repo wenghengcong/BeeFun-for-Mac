@@ -97,6 +97,7 @@
 		5E7F6F711FDD8C2F0050B50F /* BFTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */; };
 		5E80F746211B284500756B30 /* BFTheme+StarWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80F745211B284500756B30 /* BFTheme+StarWeb.swift */; };
 		5E80F748211B287A00756B30 /* BFTheme+StarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80F747211B287A00756B30 /* BFTheme+StarRepos.swift */; };
+		5E80F74A211C89AD00756B30 /* BFStarViewController+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80F749211C89AD00756B30 /* BFStarViewController+Tools.swift */; };
 		5E8A2AEE1FD13EC200B246BD /* AnswerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AED1FD13EC200B246BD /* AnswerManager.swift */; };
 		5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */; };
 		5E8A2AF41FD1568D00B246BD /* BFNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */; };
@@ -295,6 +296,7 @@
 		5E7F6F701FDD8C2F0050B50F /* BFTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTimeHelper.swift; sourceTree = "<group>"; };
 		5E80F745211B284500756B30 /* BFTheme+StarWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+StarWeb.swift"; sourceTree = "<group>"; };
 		5E80F747211B287A00756B30 /* BFTheme+StarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+StarRepos.swift"; sourceTree = "<group>"; };
+		5E80F749211C89AD00756B30 /* BFStarViewController+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Tools.swift"; sourceTree = "<group>"; };
 		5E8A2AED1FD13EC200B246BD /* AnswerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerManager.swift; sourceTree = "<group>"; };
 		5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGithubWebsite.swift; sourceTree = "<group>"; };
 		5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFNotificationName.swift; sourceTree = "<group>"; };
@@ -914,6 +916,7 @@
 				5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */,
 				5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */,
 				5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */,
+				5E80F749211C89AD00756B30 /* BFStarViewController+Tools.swift */,
 				5E9ECE241FE0325300C02B3F /* BFStarViewController+Web.swift */,
 				5EAB030B20041CCB00323A86 /* BFStarViewController+Table.swift */,
 				5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */,
@@ -1190,6 +1193,7 @@
 				5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */,
 				5EAC2F1E2022D82D000442FE /* SQLStar+Delete.swift in Sources */,
 				5E9867DD1FD05189007EE86F /* ObjSubject.swift in Sources */,
+				5E80F74A211C89AD00756B30 /* BFStarViewController+Tools.swift in Sources */,
 				5E042CFC20AFBB3A00767E56 /* BeeFunDBManager.swift in Sources */,
 				5E9867EC1FD05189007EE86F /* ObjPermissions.swift in Sources */,
 				5E80F748211B287A00756B30 /* BFTheme+StarRepos.swift in Sources */,

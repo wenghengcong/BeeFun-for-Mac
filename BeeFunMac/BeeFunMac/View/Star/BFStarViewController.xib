@@ -758,14 +758,14 @@
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-CR-UGb">
                     <rect key="frame" x="38" y="75" width="100" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="bevel" title="wenghengcong/" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="6Ix-7c-nMm">
+                    <buttonCell key="cell" type="bevel" title="-------------/" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="6Ix-7c-nMm">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kwa-tJ-jH2">
                     <rect key="frame" x="24" y="58" width="768" height="14"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Created at 2 month ago, Latest commit f2adfd3  a day ago" id="Myu-8o-yZq">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="---------------------------" id="Myu-8o-yZq">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -776,7 +776,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="jXK-qS-fmz"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Beefun mac" id="Qrg-Yb-N07">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="---------------------------" id="Qrg-Yb-N07">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -792,7 +792,7 @@
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-IX-Xt3">
                     <rect key="frame" x="139" y="75" width="100" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="bevel" title="BeeFunMac" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="hO8-fN-clH">
+                    <buttonCell key="cell" type="bevel" title="---------------" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="hO8-fN-clH">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
