@@ -19,7 +19,14 @@
                 <outlet property="newTagTextField" destination="TcX-2a-Qhf" id="Izt-4n-qjh"/>
                 <outlet property="orderFilterView" destination="hEo-Cc-YIc" id="l2R-v7-sP1"/>
                 <outlet property="refreshButton" destination="5ot-qA-3Bl" id="39C-3f-YuK"/>
+                <outlet property="repoDescLbl" destination="5As-XG-dge" id="MPh-ly-xHG"/>
+                <outlet property="repoDwnBtn" destination="FSx-qo-OmR" id="hmJ-Jp-lyt"/>
+                <outlet property="repoInfoLbl" destination="kwa-tJ-jH2" id="Js8-kf-r2e"/>
+                <outlet property="repoNameBtn" destination="SiK-IX-Xt3" id="foq-z3-OCj"/>
+                <outlet property="repoOwnerBtn" destination="Lgu-CR-UGb" id="Bd3-ac-pVC"/>
+                <outlet property="repoStarBtn" destination="9ea-mf-Rmz" id="nm2-VB-PIE"/>
                 <outlet property="repoTagsTextField" destination="gv9-cF-78c" id="Hdy-Nn-evA"/>
+                <outlet property="repoUrlBtn" destination="cAf-Qy-wIc" id="bAy-au-YMs"/>
                 <outlet property="rightContentView" destination="N76-f6-ccH" id="06L-5Z-6P3"/>
                 <outlet property="saveNewTagBtn" destination="hc7-pI-nJc" id="bYI-PC-M9w"/>
                 <outlet property="searchField" destination="7TR-0e-oyy" id="4Cz-Mr-HUH"/>
@@ -638,32 +645,32 @@
             <point key="canvasLocation" x="-30" y="-344"/>
         </menu>
         <customView id="wPW-CZ-c1R" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="680" height="65"/>
+            <rect key="frame" x="0.0" y="0.0" width="800" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ym6-BX-i2u">
-                    <rect key="frame" x="654" y="40" width="16" height="16"/>
+                    <rect key="frame" x="774" y="85" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="16" id="0uk-aT-xPG"/>
                         <constraint firstAttribute="height" constant="16" id="Tgx-mJ-BOp"/>
                     </constraints>
                 </progressIndicator>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYc-Kw-Acw">
-                    <rect key="frame" x="9" y="4" width="25" height="25"/>
+                    <rect key="frame" x="9" y="5" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="Szd-Wc-UqV"/>
                         <constraint firstAttribute="width" constant="25" id="X6P-AY-Tvi"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_day_repo_tag" id="VeY-w8-myu"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_day_web_tag" id="VeY-w8-myu"/>
                 </imageView>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-cf-P17">
-                    <rect key="frame" x="0.0" y="-2" width="680" height="5"/>
+                    <rect key="frame" x="0.0" y="-2" width="800" height="5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Plb-Iz-HHd"/>
                     </constraints>
                 </box>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-cF-78c" customClass="AutoCompleteTextField" customModule="BeeFun" customModuleProvider="target">
-                    <rect key="frame" x="403" y="9" width="96" height="22"/>
+                    <rect key="frame" x="403" y="6" width="96" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="1Wt-58-ypH" customClass="BFTextFieldCell" customModule="BeeFun" customModuleProvider="target">
                         <font key="font" metaFont="system"/>
@@ -672,114 +679,178 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hK0-OW-JwJ">
-                    <rect key="frame" x="5" y="37" width="20" height="20"/>
+                    <rect key="frame" x="373" y="82" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="HOM-tU-fAj"/>
                         <constraint firstAttribute="width" constant="20" id="WLu-EM-O9n"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_arrow_left" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="JF5-1O-GJ8">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_arrow_left" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="JF5-1O-GJ8">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-fs-pol">
-                    <rect key="frame" x="40" y="37" width="20" height="20"/>
+                    <rect key="frame" x="408" y="82" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="93K-Xs-fEA"/>
                         <constraint firstAttribute="height" constant="20" id="pcl-ef-aLA"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_arrow_right" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="egJ-Wu-FaS">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_arrow_right" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="egJ-Wu-FaS">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-0f-tAN">
-                    <rect key="frame" x="76" y="35" width="23" height="23"/>
+                    <rect key="frame" x="444" y="80" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="2VF-bw-whw"/>
                         <constraint firstAttribute="width" constant="23" id="PVd-FW-dPq"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_refresh" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="x69-jM-HRI">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_refresh" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="x69-jM-HRI">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OGr-ma-vIN">
-                    <rect key="frame" x="132" y="37" width="57" height="19"/>
+                    <rect key="frame" x="500" y="82" width="57" height="19"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="19" id="KD6-gA-AOk"/>
                         <constraint firstAttribute="width" constant="57" id="fgg-GJ-FV3"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_readme" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="wCX-dF-Tzr">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_readme" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="wCX-dF-Tzr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rZb-wb-PH9">
-                    <rect key="frame" x="450" y="35" width="23" height="23"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cAf-Qy-wIc">
+                    <rect key="frame" x="9" y="76" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="23" id="rSk-RX-b6w"/>
-                        <constraint firstAttribute="height" constant="23" id="xW8-7l-BIQ"/>
+                        <constraint firstAttribute="width" constant="25" id="5SK-qz-MAD"/>
+                        <constraint firstAttribute="height" constant="25" id="hPf-16-aDG"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_home" imagePosition="overlaps" alignment="center" alternateImage="star_day_repo_home" imageScaling="proportionallyDown" inset="2" id="u9c-zw-MZj">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_repopage" imagePosition="overlaps" alignment="center" alternateImage="star_day_web_repopage" imageScaling="proportionallyDown" inset="2" id="wqq-ax-kEc">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-mf-Rmz">
-                    <rect key="frame" x="523" y="35" width="23" height="23"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-mf-Rmz">
+                    <rect key="frame" x="641" y="80" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="23" id="Iad-OC-EVE"/>
                         <constraint firstAttribute="height" constant="23" id="ey9-ax-rF1"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_home" imagePosition="overlaps" alignment="center" alternateImage="star_day_repo_home" imageScaling="proportionallyDown" inset="2" id="klU-7z-2me">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_star_sel" imagePosition="overlaps" alignment="center" alternateImage="star_day_web_star" imageScaling="proportionallyDown" inset="2" id="klU-7z-2me">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FSx-qo-OmR">
-                    <rect key="frame" x="596" y="35" width="23" height="23"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FSx-qo-OmR">
+                    <rect key="frame" x="714" y="80" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="23" id="LU3-mV-yZZ"/>
                         <constraint firstAttribute="height" constant="23" id="RxE-UE-IJJ"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_repo_home" imagePosition="overlaps" alignment="center" alternateImage="star_day_repo_home" imageScaling="proportionallyDown" inset="2" id="Zwu-FY-ZIn">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_day_web_download" imagePosition="overlaps" alignment="center" alternateImage="star_day_web_download" imageScaling="proportionallyDown" inset="2" id="Zwu-FY-ZIn">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-CR-UGb">
+                    <rect key="frame" x="38" y="75" width="100" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" title="wenghengcong/" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="6Ix-7c-nMm">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kwa-tJ-jH2">
+                    <rect key="frame" x="24" y="58" width="768" height="14"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Created at 2 month ago, Latest commit f2adfd3  a day ago" id="Myu-8o-yZq">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5As-XG-dge">
+                    <rect key="frame" x="24" y="36" width="768" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="jXK-qS-fmz"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Beefun mac" id="Qrg-Yb-N07">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Iv7-qX-PfO">
+                    <rect key="frame" x="337" y="79" width="5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="P3C-TQ-DRm"/>
+                        <constraint firstAttribute="width" constant="1" id="cE3-Fb-z0g"/>
+                    </constraints>
+                </box>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-IX-Xt3">
+                    <rect key="frame" x="139" y="75" width="100" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" title="BeeFunMac" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="hO8-fN-clH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="jqm-A8-M2p">
+                    <rect key="frame" x="584" y="74" width="5" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="7F6-qv-iDT"/>
+                        <constraint firstAttribute="width" constant="1" id="eXx-yR-yiN"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" red="0.22352941176470589" green="0.49803921568627452" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </box>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tCe-cf-P17" secondAttribute="bottom" id="2K9-Rn-ABR"/>
-                <constraint firstItem="zYc-Kw-Acw" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="36" id="Eeg-IV-Msf"/>
+                <constraint firstAttribute="trailing" secondItem="kwa-tJ-jH2" secondAttribute="trailing" constant="10" id="8CL-1U-jRu"/>
+                <constraint firstItem="hK0-OW-JwJ" firstAttribute="leading" secondItem="Iv7-qX-PfO" secondAttribute="trailing" constant="33" id="8ej-e0-7mA"/>
+                <constraint firstItem="sr5-0f-tAN" firstAttribute="leading" secondItem="2s2-fs-pol" secondAttribute="trailing" constant="16" id="8gh-9g-HSi"/>
+                <constraint firstItem="zYc-Kw-Acw" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="80" id="Eeg-IV-Msf"/>
+                <constraint firstItem="cAf-Qy-wIc" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="FS2-4O-vIa"/>
                 <constraint firstItem="ym6-BX-i2u" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="Gby-jV-VWV"/>
                 <constraint firstItem="tCe-cf-P17" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" id="Gnc-sk-xGm"/>
                 <constraint firstItem="FSx-qo-OmR" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="IiG-vF-RvJ"/>
-                <constraint firstItem="2s2-fs-pol" firstAttribute="leading" secondItem="hK0-OW-JwJ" secondAttribute="trailing" constant="15" id="IjA-yo-JGb"/>
-                <constraint firstItem="ym6-BX-i2u" firstAttribute="leading" secondItem="FSx-qo-OmR" secondAttribute="trailing" constant="35" id="RBi-gh-lwY"/>
+                <constraint firstItem="2s2-fs-pol" firstAttribute="leading" secondItem="hK0-OW-JwJ" secondAttribute="trailing" constant="15" id="JFl-2E-SCl"/>
+                <constraint firstItem="9ea-mf-Rmz" firstAttribute="leading" secondItem="jqm-A8-M2p" secondAttribute="trailing" constant="54" id="Onk-6g-mM1"/>
+                <constraint firstItem="ym6-BX-i2u" firstAttribute="leading" secondItem="FSx-qo-OmR" secondAttribute="trailing" constant="37" id="RBi-gh-lwY"/>
                 <constraint firstItem="OGr-ma-vIN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="S3O-Ez-V5b"/>
-                <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" constant="33" id="UFQ-oF-XJP"/>
+                <constraint firstItem="cAf-Qy-wIc" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="9" id="Sbv-eK-7kn"/>
                 <constraint firstItem="9ea-mf-Rmz" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="YvN-Bj-xwm"/>
-                <constraint firstItem="rZb-wb-PH9" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="cIN-wN-pYM"/>
+                <constraint firstItem="Iv7-qX-PfO" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="1" id="ZMf-Su-6cs"/>
                 <constraint firstAttribute="trailing" secondItem="tCe-cf-P17" secondAttribute="trailing" id="d9m-ku-Fm1"/>
-                <constraint firstItem="sr5-0f-tAN" firstAttribute="leading" secondItem="2s2-fs-pol" secondAttribute="trailing" constant="16" id="dp4-Wn-Thg"/>
                 <constraint firstItem="FSx-qo-OmR" firstAttribute="leading" secondItem="9ea-mf-Rmz" secondAttribute="trailing" constant="50" id="fLX-Av-kg8"/>
-                <constraint firstItem="hK0-OW-JwJ" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="5" id="jxc-4A-vuO"/>
+                <constraint firstAttribute="trailing" secondItem="5As-XG-dge" secondAttribute="trailing" constant="10" id="h2g-2P-K2t"/>
+                <constraint firstItem="5As-XG-dge" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="26" id="i0G-Rx-i5c"/>
+                <constraint firstItem="kwa-tJ-jH2" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="26" id="ljE-1O-ZqT"/>
                 <constraint firstItem="sr5-0f-tAN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="ltD-WM-sH8"/>
-                <constraint firstItem="9ea-mf-Rmz" firstAttribute="leading" secondItem="rZb-wb-PH9" secondAttribute="trailing" constant="50" id="r8i-1W-cqg"/>
+                <constraint firstItem="5As-XG-dge" firstAttribute="top" secondItem="kwa-tJ-jH2" secondAttribute="bottom" constant="5" id="m3n-AW-eEh"/>
+                <constraint firstItem="kwa-tJ-jH2" firstAttribute="top" secondItem="cAf-Qy-wIc" secondAttribute="top" constant="29" id="noj-EI-mJ0"/>
+                <constraint firstItem="jqm-A8-M2p" firstAttribute="leading" secondItem="OGr-ma-vIN" secondAttribute="trailing" constant="29" id="oHY-0F-szG"/>
+                <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" constant="33" id="p4T-ym-8VI"/>
                 <constraint firstItem="zYc-Kw-Acw" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="9" id="rjc-fz-kGG"/>
+                <constraint firstItem="jqm-A8-M2p" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="-1" id="t13-EJ-1fg"/>
                 <constraint firstAttribute="trailing" secondItem="ym6-BX-i2u" secondAttribute="trailing" constant="10" id="tIQ-AO-skS"/>
                 <constraint firstItem="2s2-fs-pol" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="8" id="wS8-jS-3aR"/>
                 <constraint firstItem="hK0-OW-JwJ" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="8" id="zJS-7r-nrO"/>
             </constraints>
-            <point key="canvasLocation" x="-475" y="-483.5"/>
+            <point key="canvasLocation" x="-376" y="-483"/>
         </customView>
         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="YUS-ot-KsA">
             <rect key="frame" x="0.0" y="0.0" width="634" height="167"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>
@@ -817,6 +888,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="632" height="23"/>
                 <autoresizingMask key="autoresizingMask"/>
             </tableHeaderView>
+            <point key="canvasLocation" x="85" y="-217"/>
         </scrollView>
     </objects>
     <resources>
@@ -827,13 +899,16 @@
         <image name="star_day_order_num_sel" width="21" height="20"/>
         <image name="star_day_order_time" width="21" height="19.5"/>
         <image name="star_day_order_time_sel" width="40" height="40"/>
-        <image name="star_day_repo_arrow_left" width="80" height="80"/>
-        <image name="star_day_repo_arrow_right" width="80" height="80"/>
-        <image name="star_day_repo_home" width="40" height="40"/>
-        <image name="star_day_repo_readme" width="184" height="62"/>
-        <image name="star_day_repo_refresh" width="120" height="120"/>
-        <image name="star_day_repo_tag" width="120" height="120"/>
         <image name="star_day_untagged" width="714" height="716"/>
+        <image name="star_day_web_arrow_left" width="80" height="80"/>
+        <image name="star_day_web_arrow_right" width="80" height="80"/>
+        <image name="star_day_web_download" width="100" height="100"/>
+        <image name="star_day_web_readme" width="184" height="62"/>
+        <image name="star_day_web_refresh" width="120" height="120"/>
+        <image name="star_day_web_repopage" width="100" height="100"/>
+        <image name="star_day_web_star" width="100" height="100"/>
+        <image name="star_day_web_star_sel" width="100" height="100"/>
+        <image name="star_day_web_tag" width="120" height="120"/>
         <image name="tag_blue_all_star_sel" width="60" height="60"/>
     </resources>
 </document>

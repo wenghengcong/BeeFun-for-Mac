@@ -79,8 +79,7 @@ extension BFStarViewController {
         let wkWebConfig = WKWebViewConfiguration()
         wkWebConfig.userContentController = wkUController
         
-        let toolsViewH: CGFloat = 65
-        let rect = CGRect(x: 10, y: 0, width: self.rightContentView.width-10, height: self.rightContentView.height-toolsViewH)
+        let rect = CGRect(x: 10, y: 0, width: self.rightContentView.width-10, height: self.rightContentView.height-toolsViewHeight)
         self.repoWebView = WKWebView(frame: rect, configuration: wkWebConfig)
 //        do {
 //            self.repoWebView = try DownView(frame: rect, markdownString: "", openLinksInBrowser: false, templateBundle: nil, didLoadSuccessfully: {
@@ -95,7 +94,7 @@ extension BFStarViewController {
         self.repoWebView!.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
             make.leading.equalTo(10)
-            make.top.equalTo(self.rightContentView).offset(toolsViewH)
+            make.top.equalTo(self.rightContentView).offset(toolsViewHeight)
             make.trailing.equalTo(0)
         }
         

@@ -102,10 +102,18 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var searchField: NSSearchField!      //搜索输入框
     @IBOutlet weak var searchFieldCell: NSSearchFieldCell!
     
-    //web展示区域
+    //web展示区域，包含tools工具栏
     var repoWebView: WKWebView?
     /// 整个工具栏，webview以上的全部
     @IBOutlet var toolsView: BFView!
+    @IBOutlet weak var repoUrlBtn: NSButton!
+    @IBOutlet weak var repoOwnerBtn: NSButton!
+    @IBOutlet weak var repoNameBtn: NSButton!
+    @IBOutlet weak var repoStarBtn: NSButton!
+    @IBOutlet weak var repoDwnBtn: NSButton!
+    @IBOutlet weak var repoInfoLbl: NSTextField!
+    @IBOutlet weak var repoDescLbl: NSTextField!
+    
     //webview的四个工具按钮
     @IBOutlet weak var webViewBackBtn: NSButton!
     @IBOutlet weak var webViewForwardBtn: NSButton!
@@ -129,6 +137,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var addTagContainLeftMargin: CGFloat = 41 //addTagContainView距离toolsView的左边距，就是tag图标的地方
     let lineH: CGFloat = 23         //tag每行的高度
     var currentTagsOfLines: CGFloat = 1     //总共有几行，注意inputRepoTagField要单独加1行
+    var toolsViewHeight: CGFloat = 110
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

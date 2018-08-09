@@ -88,7 +88,7 @@ extension BFStarViewController: NSTextFieldDelegate {
     /// Tag更改后，重新绘制右边视图布局
     func reLayoutRightContentViewAfterWorkingTagsChange() {
         let allTasgH = lineH * CGFloat(currentTagsOfLines)
-        let toolsH: CGFloat = 65 + allTasgH - lineH
+        let toolsH: CGFloat = toolsViewHeight + allTasgH - lineH
         toolsView.snp.remakeConstraints { (make) in
             make.top.equalTo(self.rightContentView).offset(0)
             make.leading.equalTo(0)
