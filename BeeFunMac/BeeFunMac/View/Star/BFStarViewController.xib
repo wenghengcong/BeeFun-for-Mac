@@ -755,9 +755,12 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-CR-UGb">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-CR-UGb">
                     <rect key="frame" x="38" y="75" width="100" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Pxj-X1-fYE"/>
+                        <constraint firstAttribute="height" constant="32" id="UzN-ug-Yh4"/>
+                    </constraints>
                     <buttonCell key="cell" type="bevel" title="-------------/" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="6Ix-7c-nMm">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -789,9 +792,11 @@
                         <constraint firstAttribute="width" constant="1" id="cE3-Fb-z0g"/>
                     </constraints>
                 </box>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-IX-Xt3">
-                    <rect key="frame" x="139" y="75" width="100" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-IX-Xt3">
+                    <rect key="frame" x="132" y="75" width="95" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="d9f-Ik-NoU"/>
+                    </constraints>
                     <buttonCell key="cell" type="bevel" title="---------------" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="hO8-fN-clH">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -813,7 +818,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tCe-cf-P17" secondAttribute="bottom" id="2K9-Rn-ABR"/>
                 <constraint firstAttribute="trailing" secondItem="kwa-tJ-jH2" secondAttribute="trailing" constant="10" id="8CL-1U-jRu"/>
-                <constraint firstItem="hK0-OW-JwJ" firstAttribute="leading" secondItem="Iv7-qX-PfO" secondAttribute="trailing" constant="33" id="8ej-e0-7mA"/>
+                <constraint firstItem="hK0-OW-JwJ" firstAttribute="leading" secondItem="Iv7-qX-PfO" secondAttribute="trailing" priority="888" constant="33" id="8ej-e0-7mA"/>
                 <constraint firstItem="sr5-0f-tAN" firstAttribute="leading" secondItem="2s2-fs-pol" secondAttribute="trailing" constant="16" id="8gh-9g-HSi"/>
                 <constraint firstItem="zYc-Kw-Acw" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="80" id="Eeg-IV-Msf"/>
                 <constraint firstItem="cAf-Qy-wIc" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="FS2-4O-vIa"/>
@@ -821,14 +826,16 @@
                 <constraint firstItem="tCe-cf-P17" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" id="Gnc-sk-xGm"/>
                 <constraint firstItem="FSx-qo-OmR" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="IiG-vF-RvJ"/>
                 <constraint firstItem="2s2-fs-pol" firstAttribute="leading" secondItem="hK0-OW-JwJ" secondAttribute="trailing" constant="15" id="JFl-2E-SCl"/>
-                <constraint firstItem="9ea-mf-Rmz" firstAttribute="leading" secondItem="jqm-A8-M2p" secondAttribute="trailing" constant="54" id="Onk-6g-mM1"/>
+                <constraint firstItem="9ea-mf-Rmz" firstAttribute="leading" relation="lessThanOrEqual" secondItem="jqm-A8-M2p" secondAttribute="trailing" priority="888" constant="54" id="Onk-6g-mM1"/>
                 <constraint firstItem="ym6-BX-i2u" firstAttribute="leading" secondItem="FSx-qo-OmR" secondAttribute="trailing" constant="37" id="RBi-gh-lwY"/>
                 <constraint firstItem="OGr-ma-vIN" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="9" id="S3O-Ez-V5b"/>
                 <constraint firstItem="cAf-Qy-wIc" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="9" id="Sbv-eK-7kn"/>
+                <constraint firstItem="SiK-IX-Xt3" firstAttribute="leading" secondItem="Lgu-CR-UGb" secondAttribute="trailing" constant="-6" id="WnB-X4-cUC"/>
+                <constraint firstItem="Lgu-CR-UGb" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="3" id="Xu3-P6-OJl"/>
                 <constraint firstItem="9ea-mf-Rmz" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="7" id="YvN-Bj-xwm"/>
                 <constraint firstItem="Iv7-qX-PfO" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="1" id="ZMf-Su-6cs"/>
                 <constraint firstAttribute="trailing" secondItem="tCe-cf-P17" secondAttribute="trailing" id="d9m-ku-Fm1"/>
-                <constraint firstItem="FSx-qo-OmR" firstAttribute="leading" secondItem="9ea-mf-Rmz" secondAttribute="trailing" constant="50" id="fLX-Av-kg8"/>
+                <constraint firstItem="FSx-qo-OmR" firstAttribute="leading" secondItem="9ea-mf-Rmz" secondAttribute="trailing" priority="888" constant="50" id="fLX-Av-kg8"/>
                 <constraint firstAttribute="trailing" secondItem="5As-XG-dge" secondAttribute="trailing" constant="10" id="h2g-2P-K2t"/>
                 <constraint firstItem="5As-XG-dge" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="26" id="i0G-Rx-i5c"/>
                 <constraint firstItem="kwa-tJ-jH2" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="26" id="ljE-1O-ZqT"/>
@@ -836,8 +843,11 @@
                 <constraint firstItem="5As-XG-dge" firstAttribute="top" secondItem="kwa-tJ-jH2" secondAttribute="bottom" constant="5" id="m3n-AW-eEh"/>
                 <constraint firstItem="kwa-tJ-jH2" firstAttribute="top" secondItem="cAf-Qy-wIc" secondAttribute="top" constant="29" id="noj-EI-mJ0"/>
                 <constraint firstItem="jqm-A8-M2p" firstAttribute="leading" secondItem="OGr-ma-vIN" secondAttribute="trailing" constant="29" id="oHY-0F-szG"/>
-                <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" constant="33" id="p4T-ym-8VI"/>
+                <constraint firstItem="OGr-ma-vIN" firstAttribute="leading" secondItem="sr5-0f-tAN" secondAttribute="trailing" priority="888" constant="33" id="p4T-ym-8VI"/>
+                <constraint firstItem="SiK-IX-Xt3" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="3" id="pFW-wd-3Bf"/>
+                <constraint firstItem="Iv7-qX-PfO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="SiK-IX-Xt3" secondAttribute="trailing" constant="112" id="rDI-wm-R9F"/>
                 <constraint firstItem="zYc-Kw-Acw" firstAttribute="leading" secondItem="wPW-CZ-c1R" secondAttribute="leading" constant="9" id="rjc-fz-kGG"/>
+                <constraint firstItem="Lgu-CR-UGb" firstAttribute="leading" secondItem="cAf-Qy-wIc" secondAttribute="trailing" constant="4" id="sv1-rA-Ewl"/>
                 <constraint firstItem="jqm-A8-M2p" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="-1" id="t13-EJ-1fg"/>
                 <constraint firstAttribute="trailing" secondItem="ym6-BX-i2u" secondAttribute="trailing" constant="10" id="tIQ-AO-skS"/>
                 <constraint firstItem="2s2-fs-pol" firstAttribute="top" secondItem="wPW-CZ-c1R" secondAttribute="top" constant="8" id="wS8-jS-3aR"/>
@@ -888,7 +898,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="632" height="23"/>
                 <autoresizingMask key="autoresizingMask"/>
             </tableHeaderView>
-            <point key="canvasLocation" x="85" y="-217"/>
+            <point key="canvasLocation" x="4" y="-291.5"/>
         </scrollView>
     </objects>
     <resources>

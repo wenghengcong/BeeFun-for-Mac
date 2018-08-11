@@ -48,7 +48,10 @@ extension BFStarViewController {
     }
     
     @objc func clickRepoOwnerAction() {
-        
+        if !starReposData.isBeyond(index: selectedRepoRow) {
+            let objrepo = starReposData[selectedRepoRow]
+            openDefaultWebBrowser(url: objrepo.owner?.html_url)
+        }
     }
 
     @objc func clickRepoStarAction() {
@@ -82,16 +85,22 @@ extension BFStarViewController {
     
     /// 加载当前Star 状态
     func loadRepoStarState(objRepo: ObjRepos?) {
+      
+        
+    }
+    
+    /// 加载当前repo的信息
+    func loadRepoInfomation(objRepo: ObjRepos?) {
         
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .left
         let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
         
         if let owner = objRepo?.owner?.login {
-            self.repoOwnerBtn.attributedTitle = NSAttributedString(string: owner+"/", attributes: dic)
+            self.repoOwnerBtn.attributedTitle = NSAttributedString(string: owner, attributes: dic)
         }
         if let repoName = objRepo?.name {
-            self.repoNameBtn.attributedTitle = NSAttributedString(string: repoName, attributes: dic)
+            self.repoNameBtn.attributedTitle = NSAttributedString(string: "/  " + repoName, attributes: dic)
         }
         
         if let repoDesc = objRepo?.cdescription {
@@ -102,16 +111,28 @@ extension BFStarViewController {
         if let createdAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.created_at, prefix: "Created at") , let updateAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.updated_at, prefix: "Updated at") {
             self.repoInfoLbl.stringValue = createdAt + "    " + updateAt
             self.repoInfoLbl.preferredMaxLayoutWidth = (self.repoWebView?.width)! - 45
-         }
+        }
         
         //objRepo?.clone_url
         //objRepo?.git_url
-        
+        layoutRepoInfomation(objRepo: objRepo)
     }
     
-    /// 加载当前repo的信息
-    func loadRepoInfomation(objRepo: ObjRepos?) {
+    func layoutRepoInfomation(objRepo: ObjRepos?) {
+//        self.repoOwnerBtn.backgroundColor = NSColor.green
+//        self.repoNameBtn.backgroundColor = NSColor.red
         
+        self.repoOwnerBtn.sizeToFit()
+        let ownerWidth = self.repoOwnerBtn.width + 10
+        self.repoOwnerBtn!.snp.updateConstraints { (make) in
+            make.width.equalTo(ownerWidth)
+        }
+        
+        self.repoNameBtn.sizeToFit()
+        let nameWidth = self.repoNameBtn.width + 15
+        self.repoNameBtn!.snp.updateConstraints { (make) in
+            make.width.equalTo(nameWidth)
+        }
     }
     
     /// readme 页面加载
