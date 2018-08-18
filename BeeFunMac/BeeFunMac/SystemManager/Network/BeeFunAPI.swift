@@ -122,7 +122,7 @@ extension BeeFunAPI: TargetType {
         case .getRepos(let tag, _, _, _, _, _, _):
             return "/v1/repos/\(tag)"
         case .delRepo(let repoid):
-            return "/repo/\(repoid)"
+            return "/v1/repo/\(repoid)"
             
         // tag操作
         case .getAllTags(_, _, _, _, _):

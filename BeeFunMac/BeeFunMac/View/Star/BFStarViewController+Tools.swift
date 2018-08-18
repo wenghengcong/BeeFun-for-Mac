@@ -24,6 +24,7 @@ extension BFStarViewController {
         self.repoNameBtn.action = #selector(clickRepoUrlAction)
         
         self.repoStarBtn.target = self
+        self.repoStarBtn.allowsMixedState = false
         self.repoStarBtn.action = #selector(clickRepoStarAction)
         
         self.repoDwnBtn.target = self
@@ -36,6 +37,14 @@ extension BFStarViewController {
         self.repoNameBtn.attributedTitle = NSAttributedString(string: "-----------", attributes: dic)
         self.repoInfoLbl.textColor = NSColor.thDayGray
         self.repoDescLbl.textColor = NSColor.thDayBlack
+    }
+    
+    func updateRepoStarButtonState() {
+        if self.selectedRepoStarred {
+            self.repoStarBtn.state = .on
+        } else {
+            self.repoStarBtn.state = .off
+        }
     }
     
     
@@ -55,7 +64,16 @@ extension BFStarViewController {
     }
 
     @objc func clickRepoStarAction() {
-        
+        if !starReposData.isBeyond(index: selectedRepoRow) {
+            let objrepo = starReposData[selectedRepoRow]
+            if self.repoStarBtn.state == .on {
+                //Star请求
+                self.toolsStarRequest()
+            } else {
+                //Unstar请求
+                self.toolsUnstarRequest()
+            }
+        }
     }
     
     @objc func clickRepoDownloadAction() {
@@ -67,7 +85,7 @@ extension BFStarViewController {
             let objrepo = starReposData[selectedRepoRow]
             oriSelRepoStatTags = objrepo.star_tags
             //star状态
-            loadRepoStarState(objRepo: objrepo)
+            toolsLoadRepoStarState(objRepo: objrepo)
             //repo信息
             loadRepoInfomation(objRepo: objrepo)
             //加载readme
@@ -80,13 +98,6 @@ extension BFStarViewController {
             webViewReadMeAction(sender: nil)
             reLayoutWorkingLayout()
         }
-    }
-    
-    
-    /// 加载当前Star 状态
-    func loadRepoStarState(objRepo: ObjRepos?) {
-      
-        
     }
     
     /// 加载当前repo的信息
@@ -134,7 +145,7 @@ extension BFStarViewController {
             make.width.equalTo(nameWidth)
         }
     }
-    
+
     /// readme 页面加载
     func loadRepoReadMePage(objRepo: ObjRepos?) {
         if let owner = objRepo?.owner?.login, let repo = objRepo?.name {

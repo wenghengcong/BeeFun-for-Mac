@@ -29,6 +29,12 @@ extension Notification.Name {
 
         public static let RepoUpdateTag = Notification.Name(rawValue:"com.luci.beefun.mac.repoupdatetag")
         
+        /// Star Action
+        public static let didStarRepo = Notification.Name(rawValue: "com.luci.beefun.mac.didStarRepo")
+        
+        /// UnStar Action
+        public static let didUnStarRepo = Notification.Name(rawValue: "com.luci.beefun.mac.ddiUnStarRepo")
+        
     }
     
 }

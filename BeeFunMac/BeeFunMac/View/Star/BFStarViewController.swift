@@ -49,6 +49,9 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     /// 选中
     var selectedRepoRow: Int = 0
     var selectedTagRow: Int = 0
+    /// 当前选中的Repo是否Star
+    var selectedRepoStarred: Bool = false
+    
     /// repoModel原来的tag列表
     var oriSelRepoStatTags: [String]?
     

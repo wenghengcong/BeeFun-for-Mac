@@ -50,6 +50,7 @@
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
 		5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */; };
+		5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */; };
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
@@ -249,6 +250,7 @@
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
 		5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TextField.swift"; sourceTree = "<group>"; };
 		5E365EAA2115DDEC00C45B93 /* Theme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Theme.md; sourceTree = "<group>"; };
+		5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+RepoStar.swift"; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
@@ -917,6 +919,7 @@
 				5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */,
 				5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */,
 				5E80F749211C89AD00756B30 /* BFStarViewController+Tools.swift */,
+				5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */,
 				5E9ECE241FE0325300C02B3F /* BFStarViewController+Web.swift */,
 				5EAB030B20041CCB00323A86 /* BFStarViewController+Table.swift */,
 				5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */,
@@ -1298,6 +1301,7 @@
 				5E75D700210D569B007596E9 /* BFTheme+IconBar.swift in Sources */,
 				5E9867F61FD052AE007EE86F /* JSLanguage.swift in Sources */,
 				5E9131A120AEA8DA0056EF9F /* BFStarViewController+Utils.swift in Sources */,
+				5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */,
 				5EC1B1A62018D62100186A67 /* BFJumpWebStie.swift in Sources */,
 				5E9867D11FD05189007EE86F /* ObjDeployment.swift in Sources */,
 				5E9ECE251FE0325300C02B3F /* BFStarViewController+Web.swift in Sources */,
