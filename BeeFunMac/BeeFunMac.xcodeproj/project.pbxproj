@@ -51,6 +51,8 @@
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
 		5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */; };
 		5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */; };
+		5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */; };
+		5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */; };
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
@@ -251,6 +253,8 @@
 		5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TextField.swift"; sourceTree = "<group>"; };
 		5E365EAA2115DDEC00C45B93 /* Theme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Theme.md; sourceTree = "<group>"; };
 		5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+RepoStar.swift"; sourceTree = "<group>"; };
+		5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarDownloadController.swift; sourceTree = "<group>"; };
+		5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarDownloadController.xib; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
@@ -900,6 +904,8 @@
 				5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */,
 				5E60060720D0C68B008FB100 /* AutoCompleteTextField.swift */,
 				5E60060B20D12A55008FB100 /* AutoCompleteTextField.xib */,
+				5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */,
+				5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1092,6 +1098,7 @@
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
+				5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1260,6 +1267,7 @@
 				5E042CFE20B1125700767E56 /* BFTagsTipCellView.swift in Sources */,
 				5EC1B1A02018765600186A67 /* OAuthGithubWebController.swift in Sources */,
 				5E2B26761FDC34AC00600866 /* LCBaseTableCellView.swift in Sources */,
+				5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */,
 				5E8A2AEE1FD13EC200B246BD /* AnswerManager.swift in Sources */,
 				5E9867F91FD05399007EE86F /* String+Extension.swift in Sources */,
 				5EA3BF4420AAA41C00D3CC79 /* BeeFunResponseModel.swift in Sources */,
