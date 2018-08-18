@@ -9,7 +9,9 @@
 import Cocoa
 enum IconArea: String {
     case iconBar = "icon_bar"
-    case star = "star"
+    case starTag = "star_tag"
+    case starOrder = "star_order"
+    case starTool = "star_tool"
 }
 
 extension BFThemeManager {

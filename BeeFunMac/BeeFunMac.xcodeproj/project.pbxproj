@@ -53,6 +53,8 @@
 		5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */; };
 		5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */; };
 		5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */; };
+		5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5E2127B10400066967 /* DayTheme.xcassets */; };
+		5E424D612127B11500066967 /* NightTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D602127B11500066967 /* NightTheme.xcassets */; };
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
@@ -84,7 +86,7 @@
 		5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F7210C597C007596E9 /* UIView+Animation.swift */; };
 		5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */; };
 		5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */; };
-		5E75D6FE210CBE8D007596E9 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E75D6FD210CBE8D007596E9 /* Theme.xcassets */; };
+		5E75D6FE210CBE8D007596E9 /* BlueTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E75D6FD210CBE8D007596E9 /* BlueTheme.xcassets */; };
 		5E75D700210D569B007596E9 /* BFTheme+IconBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */; };
 		5E75D702210D5E27007596E9 /* NSColor+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D701210D5E27007596E9 /* NSColor+Day.swift */; };
 		5E75D704210D5F25007596E9 /* NSColor+Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D703210D5F25007596E9 /* NSColor+Night.swift */; };
@@ -255,6 +257,8 @@
 		5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+RepoStar.swift"; sourceTree = "<group>"; };
 		5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarDownloadController.swift; sourceTree = "<group>"; };
 		5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarDownloadController.xib; sourceTree = "<group>"; };
+		5E424D5E2127B10400066967 /* DayTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DayTheme.xcassets; sourceTree = "<group>"; };
+		5E424D602127B11500066967 /* NightTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NightTheme.xcassets; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
@@ -286,7 +290,7 @@
 		5E75D6F7210C597C007596E9 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Project.swift"; sourceTree = "<group>"; };
 		5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFThemeManager.swift; sourceTree = "<group>"; };
-		5E75D6FD210CBE8D007596E9 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		5E75D6FD210CBE8D007596E9 /* BlueTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BlueTheme.xcassets; sourceTree = "<group>"; };
 		5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+IconBar.swift"; sourceTree = "<group>"; };
 		5E75D701210D5E27007596E9 /* NSColor+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Day.swift"; sourceTree = "<group>"; };
 		5E75D703210D5F25007596E9 /* NSColor+Night.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Night.swift"; sourceTree = "<group>"; };
@@ -649,7 +653,9 @@
 			isa = PBXGroup;
 			children = (
 				5E365EAA2115DDEC00C45B93 /* Theme.md */,
-				5E75D6FD210CBE8D007596E9 /* Theme.xcassets */,
+				5E75D6FD210CBE8D007596E9 /* BlueTheme.xcassets */,
+				5E424D5E2127B10400066967 /* DayTheme.xcassets */,
+				5E424D602127B11500066967 /* NightTheme.xcassets */,
 				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
 				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,
 				5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */,
@@ -1087,15 +1093,17 @@
 				5E09F60A201A1D8200CC3866 /* SyncPreferenceController.xib in Resources */,
 				5EBF53FC1FCFF83000D7A2A5 /* BFStarViewController.xib in Resources */,
 				5EA435081FDADF4400034578 /* Star.xcassets in Resources */,
-				5E75D6FE210CBE8D007596E9 /* Theme.xcassets in Resources */,
+				5E75D6FE210CBE8D007596E9 /* BlueTheme.xcassets in Resources */,
 				5EAB030A2003B66500323A86 /* BFStarTagCellView.xib in Resources */,
 				5E09F60C201A1FB500CC3866 /* Preference.xcassets in Resources */,
 				5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */,
+				5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */,
 				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
 				5E4833521FD252BA00CEB336 /* Home.xcassets in Resources */,
 				5EBF53F81FCFF82000D7A2A5 /* BFHomeController.xib in Resources */,
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
+				5E424D612127B11500066967 /* NightTheme.xcassets in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 				5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */,
