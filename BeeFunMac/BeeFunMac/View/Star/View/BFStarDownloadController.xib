@@ -10,6 +10,20 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BFStarDownloadController" customModule="BeeFun" customModuleProvider="target">
             <connections>
+                <outlet property="downloadZipBackView" destination="G3S-Q3-mlz" id="1xe-H2-tbp"/>
+                <outlet property="downloadZipBtn" destination="02E-kH-DwF" id="Wnp-4q-ajG"/>
+                <outlet property="httpsBackView" destination="ufb-Nf-TfH" id="6ds-vY-kaK"/>
+                <outlet property="httpsContentLabel" destination="jLc-Wx-pxX" id="owI-uV-Ece"/>
+                <outlet property="httpsImageBtn" destination="BDw-IE-3qA" id="Hrb-BK-ER2"/>
+                <outlet property="httpsTitleLabel" destination="Vr8-wH-rGn" id="BNC-7a-bOu"/>
+                <outlet property="openBackView" destination="8AM-gl-GMt" id="T0H-Yd-2d3"/>
+                <outlet property="openDesktopBtn" destination="RkM-S9-zfJ" id="jOV-4e-5h3"/>
+                <outlet property="openXcodeBtn" destination="LyM-ON-5fe" id="z5F-RJ-swb"/>
+                <outlet property="sshBackView" destination="Tem-fr-Bfl" id="d0s-Yd-ngy"/>
+                <outlet property="sshContentLabel" destination="Qsx-Fr-lLv" id="rhA-EP-KE8"/>
+                <outlet property="sshImageBtn" destination="8WK-LD-mFL" id="zmE-Y0-e7E"/>
+                <outlet property="sshTitleLabel" destination="bpV-aG-bfc" id="Xi3-mY-j4P"/>
+                <outlet property="urlStackView" destination="aqv-Vr-tfQ" id="enu-xs-4rX"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -108,7 +122,7 @@
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone with SSH" id="TyY-NL-AMc">
                                         <font key="font" metaFont="system" size="12"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                             </subviews>
@@ -156,7 +170,7 @@
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone with HTTPS" id="e4T-US-AHH">
                                         <font key="font" metaFont="system" size="12"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                             </subviews>
