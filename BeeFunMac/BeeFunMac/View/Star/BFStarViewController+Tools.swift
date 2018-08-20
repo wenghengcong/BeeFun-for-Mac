@@ -77,7 +77,11 @@ extension BFStarViewController {
     }
     
     @objc func clickRepoDownloadAction() {
-        
+        if downloadPopover.isShown {
+            downloadPopover.close()
+        } else {
+            downloadPopover.show(relativeTo: NSZeroRect, of: self.repoDwnBtn, preferredEdge: .maxY)
+        }
     }
     
     func refreshRepoInfoAndReadMe() {

@@ -126,6 +126,14 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var toolsViewSepLine: NSBox!
     @IBOutlet weak var webIndicator: NSProgressIndicator!
 
+    lazy var downloadPopover: NSPopover = {
+        let popover = NSPopover()
+        popover.behavior = .semitransient
+        popover.contentViewController = BFStarDownloadController()
+        popover.delegate = self
+        return popover
+    }()
+    
     // MARK: - repo tag管理区域
     var workingTags: [ObjTag] = []      /// 已添加tags
     var addTagContainView = BFView()   //添加tag的区域，包含inputRepoTagField + workingTagsView

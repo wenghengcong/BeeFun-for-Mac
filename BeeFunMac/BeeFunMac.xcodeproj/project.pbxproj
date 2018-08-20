@@ -55,6 +55,7 @@
 		5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */; };
 		5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5E2127B10400066967 /* DayTheme.xcassets */; };
 		5E424D612127B11500066967 /* NightTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D602127B11500066967 /* NightTheme.xcassets */; };
+		5E424D63212B10E700066967 /* BFStarViewController+Down.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D62212B10E700066967 /* BFStarViewController+Down.swift */; };
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
@@ -259,6 +260,7 @@
 		5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarDownloadController.xib; sourceTree = "<group>"; };
 		5E424D5E2127B10400066967 /* DayTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DayTheme.xcassets; sourceTree = "<group>"; };
 		5E424D602127B11500066967 /* NightTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NightTheme.xcassets; sourceTree = "<group>"; };
+		5E424D62212B10E700066967 /* BFStarViewController+Down.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Down.swift"; sourceTree = "<group>"; };
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
@@ -931,6 +933,7 @@
 				5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */,
 				5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */,
 				5E80F749211C89AD00756B30 /* BFStarViewController+Tools.swift */,
+				5E424D62212B10E700066967 /* BFStarViewController+Down.swift */,
 				5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */,
 				5E9ECE241FE0325300C02B3F /* BFStarViewController+Web.swift */,
 				5EAB030B20041CCB00323A86 /* BFStarViewController+Table.swift */,
@@ -1208,6 +1211,7 @@
 				5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */,
 				5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */,
 				5E9867E01FD05189007EE86F /* ObjMilestone.swift in Sources */,
+				5E424D63212B10E700066967 /* BFStarViewController+Down.swift in Sources */,
 				5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */,
 				5EAC2F1E2022D82D000442FE /* SQLStar+Delete.swift in Sources */,
 				5E9867DD1FD05189007EE86F /* ObjSubject.swift in Sources */,
