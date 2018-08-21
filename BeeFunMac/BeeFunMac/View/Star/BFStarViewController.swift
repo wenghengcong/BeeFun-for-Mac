@@ -129,7 +129,9 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     lazy var downloadPopover: NSPopover = {
         let popover = NSPopover()
         popover.behavior = .semitransient
-        popover.contentViewController = BFStarDownloadController()
+        let contentController = BFStarDownloadController()
+        contentController.delegate = self
+        popover.contentViewController = contentController
         popover.delegate = self
         return popover
     }()

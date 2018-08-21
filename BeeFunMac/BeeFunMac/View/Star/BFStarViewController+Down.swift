@@ -28,3 +28,33 @@ extension BFStarViewController: NSPopoverDelegate {
         }
     }
 }
+
+extension BFStarViewController: BFStarDownloadControllerProtocol {
+    
+    func didCopyUrlToClipboard() {
+        downloadPopover.close()
+        //TODO: 提示符无效
+//        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+//        hud?.mode = MBProgressHUDModeText
+//        hud?.labelText = "Copied"
+//        hud?.removeFromSuperViewOnHide = true
+//        hud?.hide(true, afterDelay: 3.0)
+    }
+    
+    func didClickDownloadZIP() {
+        downloadPopover.close()
+
+    }
+    
+    func didClickOpenInDesktop() {
+        downloadPopover.close()
+
+    }
+    
+    func didClickOpenInXcode() {
+        downloadPopover.close()
+
+    }
+}
+
+

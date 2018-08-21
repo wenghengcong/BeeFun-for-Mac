@@ -8,6 +8,13 @@
 
 import Cocoa
 
+protocol BFStarDownloadControllerProtocol: class {
+    func didCopyUrlToClipboard()
+    func didClickOpenInDesktop()
+    func didClickOpenInXcode()
+    func didClickDownloadZIP()
+}
+
 class BFStarDownloadController: NSViewController {
 
     @IBOutlet weak var urlStackView: NSStackView!
@@ -29,6 +36,8 @@ class BFStarDownloadController: NSViewController {
     @IBOutlet weak var downloadZipBackView: NSView!
     @IBOutlet weak var downloadZipBtn: NSButton!
     
+    open weak var delegate: BFStarDownloadControllerProtocol?
+
     var repository: ObjRepos? {
         didSet {
             setterRepositoryData()
@@ -58,16 +67,83 @@ class BFStarDownloadController: NSViewController {
         sshContentLabel.borderColor = NSColor.thDayLightGray
         sshImageBtn.backgroundColor = NSColor.thDayWhite
         
+        sshTitleLabel.target = self
+        sshTitleLabel.action = #selector(clickSSHURL)
+        sshContentLabel.target = self
+        sshContentLabel.action = #selector(clickSSHURL)
+        sshImageBtn.target = self
+        sshImageBtn.action = #selector(clickSSHURL)
+        
         httpsTitleLabel.backgroundColor = NSColor.thDayWhite
         httpsContentLabel.backgroundColor = NSColor.thDayWhite
         httpsContentLabel.borderWidth = 1.0
         httpsContentLabel.borderColor = NSColor.thDayLightGray
         httpsImageBtn.backgroundColor = NSColor.thDayWhite
         
+        httpsTitleLabel.target = self
+        httpsTitleLabel.action = #selector(clickHTTPSURL)
+        httpsContentLabel.target = self
+        httpsContentLabel.action = #selector(clickHTTPSURL)
+        httpsImageBtn.target = self
+        httpsImageBtn.action = #selector(clickHTTPSURL)
+        
         openXcodeBtn.backgroundColor = NSColor.thDayWhite
         openDesktopBtn.backgroundColor = NSColor.thDayWhite
         downloadZipBtn.backgroundColor = NSColor.thDayWhite
         
+        openXcodeBtn.target = self
+        openXcodeBtn.action = #selector(clickOpenInXcode)
+        
+        openDesktopBtn.target = self
+        openDesktopBtn.action = #selector(clickOpenInDeskTop)
+        
+        downloadZipBtn.target = self
+        downloadZipBtn.action = #selector(clickDownloadZIP)
+    }
+    
+    @objc func clickSSHURL() {
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.clearContents()
+        if let sshUrl =  repository?.ssh_url {
+            pasteboard.setString(sshUrl, forType: .string)
+        }
+        self.delegate?.didCopyUrlToClipboard()
+    }
+    
+    @objc func clickHTTPSURL() {
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.clearContents()
+        if let cloneUrl =  repository?.clone_url {
+            pasteboard.setString(cloneUrl, forType: .string)
+        }
+        self.delegate?.didCopyUrlToClipboard()
+    }
+    
+    @objc func clickOpenInDeskTop() {
+        if let url = repository?.html_url {
+            let openUrl = "x-github-client://openRepo/" + url
+            if let deskURL = URL(string: openUrl) {
+                NSWorkspace.shared.open(deskURL)
+            }
+        }
+        self.delegate?.didClickOpenInDesktop()
+    }
+    
+    @objc func clickOpenInXcode() {
+        if let url = repository?.html_url {
+            let openUrl = "xcode://clone?repo=" + url
+            if let deskURL = URL(string: openUrl) {
+                NSWorkspace.shared.open(deskURL)
+            }
+        }
+        self.delegate?.didClickOpenInXcode()
+    }
+    
+    @objc func clickDownloadZIP() {
+        
+        self.delegate?.didClickDownloadZIP()
     }
     
     func setterRepositoryData() {
