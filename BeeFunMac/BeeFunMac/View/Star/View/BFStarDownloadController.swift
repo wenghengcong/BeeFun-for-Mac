@@ -29,6 +29,12 @@ class BFStarDownloadController: NSViewController {
     @IBOutlet weak var downloadZipBackView: NSView!
     @IBOutlet weak var downloadZipBtn: NSButton!
     
+    var repository: ObjRepos? {
+        didSet {
+            setterRepositoryData()
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +57,34 @@ class BFStarDownloadController: NSViewController {
         httpsContentLabel.backgroundColor = NSColor.thDayWhite
         httpsImageBtn.backgroundColor = NSColor.thDayWhite
         
-        openXcodeBtn.backgroundColor = NSColor.clear
-        openDesktopBtn.backgroundColor = NSColor.clear
-        downloadZipBtn.backgroundColor = NSColor.clear
+        openXcodeBtn.backgroundColor = NSColor.thDayWhite
+        openDesktopBtn.backgroundColor = NSColor.thDayWhite
+        downloadZipBtn.backgroundColor = NSColor.thDayWhite
         
+        
+    }
+    
+    func setterRepositoryData() {
+        if let objrepo = repository {
+            
+            let pstyle = NSMutableParagraphStyle()
+            pstyle.alignment = .left
+            let titleDic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.backgroundColor: NSColor.thDayWhite, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
+            
+            let urlConentDic = [NSAttributedStringKey.foregroundColor : NSColor.thDayWhite, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.backgroundColor: NSColor.thDayBlue, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
+            
+            let contentDic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.backgroundColor: NSColor.thDayWhite, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 13.0)] as [NSAttributedStringKey : Any]
+            
+            sshTitleLabel.attributedStringValue = NSAttributedString(string: "Clone with SSH", attributes: titleDic)
+            sshContentLabel.attributedTitle = NSAttributedString(string: objrepo.ssh_url!, attributes: urlConentDic)
+            
+            httpsTitleLabel.attributedStringValue = NSAttributedString(string: "Clone with HTTPS", attributes: titleDic)
+            httpsContentLabel.attributedTitle = NSAttributedString(string: objrepo.clone_url!, attributes: urlConentDic)
+            
+            openXcodeBtn.attributedTitle = NSAttributedString(string: "  Open in Xcode", attributes: contentDic)
+            openDesktopBtn.attributedTitle = NSAttributedString(string: "  Open in Desktop", attributes: contentDic)
+            downloadZipBtn.attributedTitle = NSAttributedString(string: "  Download ZIP", attributes: contentDic)
+        }
     }
     
 }

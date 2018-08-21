@@ -80,7 +80,13 @@ extension BFStarViewController {
         if downloadPopover.isShown {
             downloadPopover.close()
         } else {
-            downloadPopover.show(relativeTo: NSZeroRect, of: self.repoDwnBtn, preferredEdge: .maxY)
+            if !starReposData.isBeyond(index: selectedRepoRow) {
+                let objrepo = starReposData[selectedRepoRow]
+                downloadPopover.show(relativeTo: NSZeroRect, of: self.repoDwnBtn, preferredEdge: .maxY)
+                if let popContent: BFStarDownloadController = downloadPopover.contentViewController as? BFStarDownloadController {
+                    popContent.repository = objrepo
+                }
+            }
         }
     }
     

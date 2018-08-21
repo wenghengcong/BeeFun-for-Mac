@@ -41,46 +41,46 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="mU1-R0-4WF"/>
                             </constraints>
-                            <buttonCell key="cell" type="square" title="  Open in Xcode" bezelStyle="shadowlessSquare" image="star_download_day_xcode" imagePosition="leading" alignment="left" borderStyle="border" inset="2" id="wnt-Kb-Jhz">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <buttonCell key="cell" type="square" title="  Open in Xcode" bezelStyle="shadowlessSquare" image="star_download_day_xcode" imagePosition="leading" alignment="left" inset="2" id="wnt-Kb-Jhz">
+                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RkM-S9-zfJ">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                            <rect key="frame" x="8" y="0.0" width="192" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="kWJ-jA-1aO"/>
                             </constraints>
-                            <buttonCell key="cell" type="square" title="  Open in Desktop" bezelStyle="shadowlessSquare" image="star_download_day_git" imagePosition="leading" alignment="left" borderStyle="border" inset="2" id="gdH-sA-dG8">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <buttonCell key="cell" type="square" title="  Open in Desktop" bezelStyle="shadowlessSquare" image="star_download_day_git" imagePosition="leading" alignment="left" inset="2" id="gdH-sA-dG8">
+                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="RkM-S9-zfJ" firstAttribute="leading" secondItem="8AM-gl-GMt" secondAttribute="leading" id="1Mk-mi-P33"/>
+                        <constraint firstItem="RkM-S9-zfJ" firstAttribute="leading" secondItem="8AM-gl-GMt" secondAttribute="leading" constant="8" id="1Mk-mi-P33"/>
                         <constraint firstAttribute="bottom" secondItem="LyM-ON-5fe" secondAttribute="bottom" id="1la-wP-tva"/>
                         <constraint firstItem="LyM-ON-5fe" firstAttribute="width" secondItem="8AM-gl-GMt" secondAttribute="width" multiplier="0.5" id="A8K-9K-Keb"/>
                         <constraint firstAttribute="height" constant="50" id="HRB-If-zM7"/>
                         <constraint firstAttribute="bottom" secondItem="RkM-S9-zfJ" secondAttribute="bottom" id="Ovl-Cr-U22"/>
                         <constraint firstAttribute="trailing" secondItem="LyM-ON-5fe" secondAttribute="trailing" id="YP9-ds-rJn"/>
-                        <constraint firstItem="RkM-S9-zfJ" firstAttribute="width" secondItem="8AM-gl-GMt" secondAttribute="width" multiplier="0.5" id="ajP-Dx-fNa"/>
+                        <constraint firstItem="RkM-S9-zfJ" firstAttribute="width" secondItem="8AM-gl-GMt" secondAttribute="width" multiplier="0.5" constant="-8" id="ajP-Dx-fNa"/>
                     </constraints>
                 </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="G3S-Q3-mlz">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="02E-kH-DwF">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
-                            <buttonCell key="cell" type="square" title="  Download ZIP" bezelStyle="shadowlessSquare" image="star_download_day_zip" imagePosition="leading" alignment="left" borderStyle="border" inset="2" id="yo4-2N-H0P">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <rect key="frame" x="8" y="0.0" width="392" height="50"/>
+                            <buttonCell key="cell" type="square" title="  Download ZIP" bezelStyle="shadowlessSquare" image="star_download_day_zip" imagePosition="leading" alignment="left" state="on" inset="2" id="yo4-2N-H0P">
+                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="1W4-j8-4Lt"/>
-                        <constraint firstItem="02E-kH-DwF" firstAttribute="leading" secondItem="G3S-Q3-mlz" secondAttribute="leading" id="Ltl-ry-2Um"/>
+                        <constraint firstItem="02E-kH-DwF" firstAttribute="leading" secondItem="G3S-Q3-mlz" secondAttribute="leading" constant="8" id="Ltl-ry-2Um"/>
                         <constraint firstAttribute="trailing" secondItem="02E-kH-DwF" secondAttribute="trailing" id="hoP-5r-4O6"/>
                         <constraint firstAttribute="bottom" secondItem="02E-kH-DwF" secondAttribute="bottom" id="iQZ-Bf-3mE"/>
                         <constraint firstItem="02E-kH-DwF" firstAttribute="top" secondItem="G3S-Q3-mlz" secondAttribute="top" id="xFb-x7-VnJ"/>
@@ -108,8 +108,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="X95-LD-QIe"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="square" title="git@github.com:AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" borderStyle="border" inset="2" id="mca-cS-UED">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <buttonCell key="cell" type="square" title="git@github.com:AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" inset="2" id="mca-cS-UED">
+                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                 </button>
@@ -157,8 +157,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="mWu-H0-fjU"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="square" title="https://github.com/AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" borderStyle="border" inset="2" id="ubE-OB-fbU">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <buttonCell key="cell" type="square" title="https://github.com/AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" inset="2" id="ubE-OB-fbU">
+                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                 </button>
