@@ -41,9 +41,37 @@ extension BFStarViewController: BFStarDownloadControllerProtocol {
 //        hud?.hide(true, afterDelay: 3.0)
     }
     
-    func didClickDownloadZIP() {
+    func didClickDownloadZIP(url: String) {
         downloadPopover.close()
-
+        //下载地址：
+        // https://github.com/Meniny/Ghost/archive/master.zip
+        // https://github.com/youusername/magnetX/archive/master.zip
+        let dialog = NSOpenPanel();
+        dialog.title                   = "Choose a .txt file"
+        dialog.message                 = "Choose path to save zip"
+        dialog.showsResizeIndicator    = true
+        dialog.showsHiddenFiles        = false
+        dialog.canChooseDirectories    = true
+        dialog.canCreateDirectories    = true
+        dialog.canChooseFiles          = false
+        dialog.allowsMultipleSelection = false
+        dialog.treatsFilePackagesAsDirectories = true
+        dialog.showsTagField           = true
+        dialog.prompt = "Save"
+//        dialog.allowedFileTypes        = ["txt"];
+        dialog.beginSheetModal(for: self.view.window!) { (response) in
+            if (response == NSApplication.ModalResponse.OK) {
+                let result = dialog.url // Pathname of the file
+                
+                if (result != nil) {
+                    let path = result!.path
+                    print("save path: \(path)")
+                }
+            } else {
+                // User clicked on "Cancel"
+                return
+            }
+        }
     }
     
     func didClickOpenInDesktop() {
