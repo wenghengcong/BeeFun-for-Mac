@@ -53,7 +53,7 @@ extension BFStarViewController {
                         if statusCode == BFStatusCode.noContent.rawValue {
                             self.selectedRepoStarred = true
                             self.updateRepoStarButtonState()
-                            self.showHudAutoHide(message: "Star successful", delay: 0.9)
+                            self.showHudAutoHide(message: "Star successful", delay: 1.2)
                             //插入
                             self.toolsAddRepoWhenStarRepo(objRepo: objrepo)
                         } else {
@@ -88,7 +88,7 @@ extension BFStarViewController {
                             self.updateRepoStarButtonState()
                             //TODO: 提示unstar成功
                             if let repoid = objrepo.id {
-                                self.showHudAutoHide(message: "Unstar successful", delay: 0.9)
+                                self.showHudAutoHide(message: "Unstar successful", delay: 1.2)
                                 self.toolsDeleteRepoWhenUnStarRepo(repoId: repoid)
                             }
                         } else {

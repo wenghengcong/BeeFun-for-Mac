@@ -14,6 +14,9 @@ extension BFStarViewController {
         messageHud = MBProgressHUD.init(view: self.view)
         messageHud.mode = MBProgressHUDModeText
         messageHud.delegate = self
+        messageHud.color = NSColor.hex("16191c", alpha: 0.6)    //背景色
+        messageHud.labelFont = NSFont.bfBoldSystemFont(ofSize: 18.0)
+        messageHud.labelColor = NSColor.white
         messageHud.removeFromSuperViewOnHide = true
     }
     
