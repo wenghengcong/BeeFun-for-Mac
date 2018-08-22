@@ -64,6 +64,7 @@
 		5E4833501FD249CF00CEB336 /* BFHomeController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */; };
 		5E4833521FD252BA00CEB336 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4833511FD252BA00CEB336 /* Home.xcassets */; };
 		5E4833541FD2578600CEB336 /* BFHomeController+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4833531FD2578600CEB336 /* BFHomeController+Button.swift */; };
+		5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */; };
 		5E5E820620E4E19E00E810E2 /* IssueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820320E4E19D00E810E2 /* IssueAPI.swift */; };
 		5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820420E4E19D00E810E2 /* EventAPI.swift */; };
 		5E5E820820E4E19E00E810E2 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820520E4E19E00E810E2 /* SearchAPI.swift */; };
@@ -269,6 +270,7 @@
 		5E48334F1FD249CF00CEB336 /* BFHomeController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Util.swift"; sourceTree = "<group>"; };
 		5E4833511FD252BA00CEB336 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
 		5E4833531FD2578600CEB336 /* BFHomeController+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFHomeController+Button.swift"; sourceTree = "<group>"; };
+		5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Hud.swift"; sourceTree = "<group>"; };
 		5E5E820320E4E19D00E810E2 /* IssueAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAPI.swift; sourceTree = "<group>"; };
 		5E5E820420E4E19D00E810E2 /* EventAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
 		5E5E820520E4E19E00E810E2 /* SearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
@@ -935,6 +937,7 @@
 				5EBF53F91FCFF83000D7A2A5 /* BFStarViewController.swift */,
 				5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */,
 				5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */,
+				5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */,
 				5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */,
 				5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */,
 				5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */,
@@ -1309,6 +1312,7 @@
 				5E98679E1FD05044007EE86F /* BFThirdLibKey.swift in Sources */,
 				5E9867D21FD05189007EE86F /* ObjDeploymentPayload.swift in Sources */,
 				5EE9E78B1FCEB1F40012AE1C /* BFWebView.swift in Sources */,
+				5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */,
 				5E5E822A20E4E2CE00E810E2 /* SESearchBaseModel.swift in Sources */,
 				5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */,
 				5E09F608201A1D6400CC3866 /* SyncPreferenceController.swift in Sources */,

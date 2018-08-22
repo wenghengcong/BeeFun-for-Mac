@@ -12,7 +12,7 @@ protocol BFStarDownloadControllerProtocol: class {
     func didCopyUrlToClipboard()
     func didClickOpenInDesktop()
     func didClickOpenInXcode()
-    func didClickDownloadZIP(url: String)
+    func didClickDownloadZIP(name: String, zipUrl: String)
 }
 
 class BFStarDownloadController: NSViewController {
@@ -144,9 +144,9 @@ class BFStarDownloadController: NSViewController {
     @objc func clickDownloadZIP() {
 //        NSWorkspace.shared.launchApplication("Finder")
 //        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: "/Users")
-        if let url = repository?.html_url, let branch = repository?.default_branch {
+        if let url = repository?.html_url, let branch = repository?.default_branch, let name = repository?.name {
             let zipUrl = url + "/archive/" + branch + ".zip"
-            self.delegate?.didClickDownloadZIP(url: zipUrl)
+            self.delegate?.didClickDownloadZIP(name: name, zipUrl: zipUrl)
         }
     }
     

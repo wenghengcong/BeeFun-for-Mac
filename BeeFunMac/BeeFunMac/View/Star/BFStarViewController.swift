@@ -126,6 +126,8 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var toolsViewSepLine: NSBox!
     @IBOutlet weak var webIndicator: NSProgressIndicator!
 
+    lazy var messageHud = MBProgressHUD()
+    
     lazy var downloadPopover: NSPopover = {
         let popover = NSPopover()
         popover.behavior = .semitransient

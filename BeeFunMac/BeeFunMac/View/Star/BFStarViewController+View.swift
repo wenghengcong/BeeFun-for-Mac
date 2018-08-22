@@ -23,6 +23,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         starPageCustomRepoInfoArea()
         self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
         loadTheme()
+        configMessageHud()
     }
     
     // MARK: - 管理Tag视图部分
