@@ -130,8 +130,8 @@ import Cocoa
         if let desc = objRepos?.cdescription {
             repoDescLbl.stringValue = desc
         }
-        if let push_at = objRepos?.pushed_at {
-            timeLbl.stringValue = BFTimeHelper.shared.readableTime(rare: push_at, prefix: nil)!
+        if let starred_at = objRepos?.starred_at {
+            timeLbl.stringValue = BFTimeHelper.shared.readableTime(rare: starred_at, prefix: nil)!
         } else if let showcaseUpdate = objRepos?.trending_showcase_update_text {
             timeLbl.stringValue = showcaseUpdate
         }

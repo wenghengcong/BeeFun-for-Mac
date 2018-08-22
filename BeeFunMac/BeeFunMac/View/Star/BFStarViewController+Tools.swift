@@ -129,8 +129,8 @@ extension BFStarViewController {
             self.repoDescLbl.preferredMaxLayoutWidth = (self.repoWebView?.width)! - 45
         }
         
-        if let createdAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.created_at, prefix: "Created at") , let updateAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.updated_at, prefix: "Updated at") {
-            self.repoInfoLbl.stringValue = createdAt + "    " + updateAt
+        if let createdAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.created_at, prefix: "Created at") , let pushedAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.pushed_at, prefix: "Latest commit pushed at") {
+            self.repoInfoLbl.stringValue = createdAt + "    ||    " + pushedAt
             self.repoInfoLbl.preferredMaxLayoutWidth = (self.repoWebView?.width)! - 45
         }
         
