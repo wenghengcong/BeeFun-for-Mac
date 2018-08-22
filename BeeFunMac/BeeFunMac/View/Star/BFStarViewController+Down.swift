@@ -32,10 +32,15 @@ extension BFStarViewController: NSPopoverDelegate {
 
 extension BFStarViewController: BFStarDownloadControllerProtocol {
     
+    func canNotOpenUrl(cause: String) {
+        self.showHudAutoHide(message: cause, delay: 3.0)
+    }
+    
     func didCopyUrlToClipboard() {
         downloadPopover.close()
         self.showHudAutoHide(message: "Copied to clipboard", delay: 0.9)
     }
+    
     func didClickDownloadZIP(name: String, zipUrl: String) {
         
         downloadPopover.close()

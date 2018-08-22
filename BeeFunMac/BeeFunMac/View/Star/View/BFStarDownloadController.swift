@@ -9,6 +9,11 @@
 import Cocoa
 
 protocol BFStarDownloadControllerProtocol: class {
+    
+    /// 无法打开URL
+    ///
+    /// - Parameter cause: 原因
+    func canNotOpenUrl(cause: String)
     func didCopyUrlToClipboard()
     func didClickOpenInDesktop()
     func didClickOpenInXcode()
@@ -125,7 +130,10 @@ class BFStarDownloadController: NSViewController {
         if let url = repository?.html_url {
             let openUrl = "x-github-client://openRepo/" + url
             if let deskURL = URL(string: openUrl) {
-                NSWorkspace.shared.open(deskURL)
+                let canOpen = NSWorkspace.shared.open(deskURL)
+                if !canOpen {
+                    self.delegate?.canNotOpenUrl(cause: "First install github desktop")
+                }
             }
         }
         self.delegate?.didClickOpenInDesktop()
@@ -135,7 +143,10 @@ class BFStarDownloadController: NSViewController {
         if let url = repository?.html_url {
             let openUrl = "xcode://clone?repo=" + url
             if let deskURL = URL(string: openUrl) {
-                NSWorkspace.shared.open(deskURL)
+                let canOpen = NSWorkspace.shared.open(deskURL)
+                if !canOpen {
+                    self.delegate?.canNotOpenUrl(cause: "First install Xcode")
+                }
             }
         }
         self.delegate?.didClickOpenInXcode()
