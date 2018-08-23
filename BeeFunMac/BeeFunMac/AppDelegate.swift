@@ -55,6 +55,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             for window in sender.windows {
                 if let view = window.contentView, view.identifier?.rawValue=="tagsTipPop" {
                     print("tagsPop")
+                } else if let view = window.contentViewController, view.identifier?.rawValue=="downloadPopover" {
+                    print("download popover")
                 } else {
                     window.makeKeyAndOrderFront(self)
                 }
