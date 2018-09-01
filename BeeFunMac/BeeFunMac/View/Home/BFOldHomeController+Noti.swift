@@ -8,7 +8,7 @@
 
 import Cocoa
 
-extension BFHomeController {
+extension BFOldHomeController {
 
     func addHomeNoti() {
         NotificationCenter.default.addObserver(self, selector: #selector(windowDidResize(_:)), name: NSWindow.didResizeNotification, object: self.webView.window)

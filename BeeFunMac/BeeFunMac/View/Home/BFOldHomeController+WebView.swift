@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-extension BFHomeController {
+extension BFOldHomeController {
     
     func configWebview() {
         self.webView.uiDelegate = self
@@ -97,7 +97,7 @@ extension BFHomeController {
     }
 }
 
-extension BFHomeController {
+extension BFOldHomeController {
     
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         

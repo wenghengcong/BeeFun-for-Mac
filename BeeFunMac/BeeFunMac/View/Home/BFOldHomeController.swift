@@ -11,7 +11,7 @@ import WebKit
 import Alamofire
 import ObjectMapper
 
-class BFHomeController: NSViewController, WKUIDelegate, WKNavigationDelegate {
+class BFOldHomeController: NSViewController, WKUIDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var backButton: NSButton!

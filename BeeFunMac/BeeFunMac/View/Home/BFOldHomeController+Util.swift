@@ -8,7 +8,7 @@
 
 import Cocoa
 
-extension BFHomeController {
+extension BFOldHomeController {
     
     /// webview加载url
     func homeViewLoadURL(_ url: String?) {

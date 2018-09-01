@@ -8,7 +8,7 @@
 
 import Cocoa
 
-extension BFHomeController {
+extension BFOldHomeController {
     
     /// 回退
     @IBAction func goBack(_ sender: Any) {

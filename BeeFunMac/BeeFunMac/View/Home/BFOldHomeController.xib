@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="BFHomeController" customModule="BeeFunMac" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="BFOldHomeController" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="WTU-mJ-X4E" id="4Ss-qj-UX2"/>
                 <outlet property="forwardButton" destination="fnQ-av-b8x" id="pkc-df-cdh"/>
@@ -37,7 +37,7 @@
                         <constraint firstAttribute="height" constant="30" id="Qx8-32-S7O"/>
                         <constraint firstAttribute="width" constant="30" id="ovV-9H-Pt3"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_arrow_left" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6ge-9Z-Y42">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_back" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6ge-9Z-Y42">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -51,7 +51,7 @@
                         <constraint firstAttribute="width" constant="30" id="6cp-wY-fSW"/>
                         <constraint firstAttribute="height" constant="30" id="zu5-nM-gaf"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_arrow_right" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="16p-lX-TaC">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_forward" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="16p-lX-TaC">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -65,7 +65,7 @@
                         <constraint firstAttribute="width" constant="35" id="kNv-EJ-xC8"/>
                         <constraint firstAttribute="height" constant="35" id="xR5-2j-JrH"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_refresh" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="fHo-nm-1cs">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_refresh" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="fHo-nm-1cs">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -79,7 +79,7 @@
                         <constraint firstAttribute="width" constant="35" id="Au3-wD-fwn"/>
                         <constraint firstAttribute="height" constant="35" id="jmH-J9-QX9"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_web_home" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="jAB-IF-4Ff">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_home" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="jAB-IF-4Ff">
                         <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -110,9 +110,9 @@
         </customView>
     </objects>
     <resources>
-        <image name="star_web_arrow_left" width="60" height="60"/>
-        <image name="star_web_arrow_right" width="60" height="60"/>
-        <image name="star_web_home" width="60" height="60"/>
-        <image name="star_web_refresh" width="60" height="60"/>
+        <image name="old_home_back" width="200" height="200"/>
+        <image name="old_home_forward" width="200" height="200"/>
+        <image name="old_home_home" width="200" height="200"/>
+        <image name="old_home_refresh" width="200" height="200"/>
     </resources>
 </document>

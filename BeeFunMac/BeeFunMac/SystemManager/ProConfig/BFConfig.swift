@@ -11,6 +11,6 @@ import Cocoa
 class BFConfig: NSObject {
     static let shared = BFConfig()
     //TODO: 修改发布渠道
-    var appStoreChannel = true
+    var appStoreChannel = false
     
 }
