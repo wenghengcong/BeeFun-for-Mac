@@ -10,6 +10,10 @@
 		5E042CFC20AFBB3A00767E56 /* BeeFunDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */; };
 		5E042CFE20B1125700767E56 /* BFTagsTipCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */; };
 		5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */; };
+		5E048A74213A10640098CBF6 /* BFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A72213A10640098CBF6 /* BFHomeViewController.swift */; };
+		5E048A75213A10640098CBF6 /* BFHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A73213A10640098CBF6 /* BFHomeViewController.xib */; };
+		5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A77213A11770098CBF6 /* BFToolsViewController.swift */; };
+		5E048A7A213A11770098CBF6 /* BFToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A78213A11770098CBF6 /* BFToolsViewController.xib */; };
 		5E065FAD1FF3353000721926 /* ObjStarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAC1FF3353000721926 /* ObjStarRepos.swift */; };
 		5E098DC42017F3C900AD50BA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DC32017F3C900AD50BA /* OAuthManager.swift */; };
 		5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */; };
@@ -211,6 +215,10 @@
 		5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeFunDBManager.swift; sourceTree = "<group>"; };
 		5E042CFD20B1125700767E56 /* BFTagsTipCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTagsTipCellView.swift; sourceTree = "<group>"; };
 		5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFTagsTipCellView.xib; sourceTree = "<group>"; };
+		5E048A72213A10640098CBF6 /* BFHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFHomeViewController.swift; sourceTree = "<group>"; };
+		5E048A73213A10640098CBF6 /* BFHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFHomeViewController.xib; sourceTree = "<group>"; };
+		5E048A77213A11770098CBF6 /* BFToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFToolsViewController.swift; sourceTree = "<group>"; };
+		5E048A78213A11770098CBF6 /* BFToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFToolsViewController.xib; sourceTree = "<group>"; };
 		5E065FAC1FF3353000721926 /* ObjStarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjStarRepos.swift; sourceTree = "<group>"; };
 		5E098DC32017F3C900AD50BA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		5E098DC920182A7F00AD50BA /* BeeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeeFun-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -433,9 +441,20 @@
 		5E048A71213A0E8F0098CBF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5E048A72213A10640098CBF6 /* BFHomeViewController.swift */,
+				5E048A73213A10640098CBF6 /* BFHomeViewController.xib */,
 			);
 			name = Home;
 			path = Trending;
+			sourceTree = "<group>";
+		};
+		5E048A76213A11630098CBF6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5E048A77213A11770098CBF6 /* BFToolsViewController.swift */,
+				5E048A78213A11770098CBF6 /* BFToolsViewController.xib */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		5E1C134C1FD6F29A00726A0C /* LCUI */ = {
@@ -533,6 +552,7 @@
 		5E28168F1FCCFDE7007A5159 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E048A76213A11630098CBF6 /* Tools */,
 				5E048A71213A0E8F0098CBF6 /* Home */,
 				5E2816D51FCCFEB8007A5159 /* Base */,
 				5EBF53F21FCFE68F00D7A2A5 /* Home */,
@@ -1110,6 +1130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E048A7A213A11770098CBF6 /* BFToolsViewController.xib in Resources */,
 				5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */,
 				5E28168E1FCCF23C007A5159 /* MainWindow.storyboard in Resources */,
 				5E0B832B1FDCCFDE00EDC29E /* BFStarTableCellView.xib in Resources */,
@@ -1126,6 +1147,7 @@
 				5E4833521FD252BA00CEB336 /* OldHome.xcassets in Resources */,
 				5EBF53F81FCFF82000D7A2A5 /* BFOldHomeController.xib in Resources */,
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
+				5E048A75213A10640098CBF6 /* BFHomeViewController.xib in Resources */,
 				5E424D612127B11500066967 /* NightTheme.xcassets in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
@@ -1254,6 +1276,7 @@
 				5E7F6F6B1FDD845B0050B50F /* NSFont+Project.swift in Sources */,
 				5E5E822320E4E2CE00E810E2 /* SEResponseIssues.swift in Sources */,
 				5E9867DE1FD05189007EE86F /* ObjIssue.swift in Sources */,
+				5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */,
 				5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */,
 				5E5E821F20E4E2CE00E810E2 /* SEResponseCommits.swift in Sources */,
 				5E9867D91FD05189007EE86F /* ObjPage.swift in Sources */,
@@ -1358,6 +1381,7 @@
 				5E9867D31FD05189007EE86F /* ObjEvent.swift in Sources */,
 				5EE9900D1FD26354008711F4 /* BFCommonString.swift in Sources */,
 				5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */,
+				5E048A74213A10640098CBF6 /* BFHomeViewController.swift in Sources */,
 				5E2B26741FDC346B00600866 /* WKWebView+Extension.swift in Sources */,
 				5E09F6022019A5DF00CC3866 /* BFZipManager.swift in Sources */,
 				5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */,

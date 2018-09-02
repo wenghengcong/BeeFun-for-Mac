@@ -94,13 +94,8 @@
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Star Sync" drawsBackground="YES" id="IBG-zC-PIM">
                                                 <font key="font" size="17" name="HelveticaNeue-LightItalic"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                    <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="i7a-z8-s4f">
                                             <rect key="frame" x="0.0" y="-2" width="200" height="5"/>
@@ -220,7 +215,7 @@
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tag" drawsBackground="YES" id="Y6F-3n-jri">
                                                 <font key="font" size="17" name="HelveticaNeue-LightItalic"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="backgroundColor" red="0.071925170720000001" green="0.58708757160000002" blue="0.85727447270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaY-st-0O5">
@@ -596,7 +591,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -868,7 +863,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>
