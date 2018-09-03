@@ -22,7 +22,7 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3U-uw-wbF" userLabel="repoNameLbl">
-                    <rect key="frame" x="46" y="104" width="172" height="19"/>
+                    <rect key="frame" x="46" y="89" width="172" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" title="---------" bezelStyle="shadowlessSquare" imagePosition="left" inset="2" id="M85-H9-8qr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

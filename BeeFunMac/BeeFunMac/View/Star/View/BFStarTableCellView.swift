@@ -151,8 +151,8 @@ import Cocoa
 
         if let allTags = objRepos?.star_tags {
             tagContentView.isHidden = false
-            repoNameLbl.frame = CGRect(x: 46, y: 104, width: 172, height: 19)
-            tagContentView.frame = CGRect(x: 46, y: 82, width: 246, height: 23)
+            repoNameLbl.frame = CGRect(x: 46, y: 102, width: 172, height: 20.0)
+            tagContentView.frame = CGRect(x: 46, y: 80, width: 246, height: 23)
             
 //            allTags = ["A", "Test", "HAHA"]
             for subview in self.tagContentView.subviews {
@@ -189,7 +189,7 @@ import Cocoa
             }
         } else {
             
-            repoNameLbl.frame = CGRect(x: 46, y: 85, width: 172, height: 40)
+            repoNameLbl.centerY = avatarImg.centerY + 3
             tagContentView.isHidden = true
             
             for subview in tagContentView.subviews {
@@ -201,7 +201,6 @@ import Cocoa
         if let name = objRepos?.name {
             
             let repoNameColor = titleColor
-            repoNameLbl.isHidden = false
             
             let pstyle = NSMutableParagraphStyle()
             pstyle.alignment = .left
@@ -210,11 +209,19 @@ import Cocoa
             if (objRepos?.star_tags) != nil {
                 
             } else {
-                font = NSFont.bfSystemFont(ofSize: 17.0)
+                font = NSFont.bfSystemFont(ofSize: 16.0)
             }
             
             let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]
             repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
+            
+            repoNameLbl.sizeToFit()
+            if repoNameLbl.width > 172 {
+                font = NSFont.bfSystemFont(ofSize: 14.0)
+                let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]
+                repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
+            }
+            repoNameLbl.isHidden = false
         }
         
         if let desc = objRepos?.cdescription {
