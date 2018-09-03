@@ -17,7 +17,6 @@ import Cocoa
     @IBOutlet weak var starImg: NSImageView!
     @IBOutlet weak var langImg: NSImageView!
     @IBOutlet weak var forkImg: NSImageView!
-    @IBOutlet weak var UnstarBtn: NSButton!
     @IBOutlet weak var langLbl: NSTextField!
     @IBOutlet weak var starLbl: NSTextField!
     @IBOutlet weak var forkLbl: NSTextField!
@@ -28,8 +27,8 @@ import Cocoa
 
     /// Color
     @IBInspectable var titleColor: NSColor = NSColor.black
-    @IBInspectable var subTitleColor: NSColor = NSColor.hex("5b5b5b", alpha: 0.8)
-    var selectedBackgroundColor = NSColor.hex("4899fb")
+    @IBInspectable var subTitleColor: NSColor = NSColor.hex("#385173")
+
     var selected: Bool = false
     
     var objRepos: ObjRepos? {
@@ -42,7 +41,7 @@ import Cocoa
         super.draw(dirtyRect)
         self.origin = CGPoint(x: 0, y: 0)
         //是return row height中，或者xib中的height+2，return row height = xib height
-        self.size = CGSize(width: 300, height: 111)
+        self.size = CGSize(width: 300, height: 124)
     }
     
     override func awakeFromNib() {
@@ -52,14 +51,9 @@ import Cocoa
     
     fileprivate func customStarCellView() {
 
-        var backgroundColor = NSColor.white
-        if selected {
-            backgroundColor = selectedBackgroundColor
-        }
         self.backgroundColor = backgroundColor
         tagContentView.backgroundColor = backgroundColor
         
-        self.UnstarBtn.isHidden = true
         bottomLine.backgroundColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
@@ -70,19 +64,23 @@ import Cocoa
             make.height.equalTo(1)
         }
         
-        selectedMask.backgroundColor = NSColor(hex: "#0999FF", alpha: 0.1)
+        selectedMask.backgroundColor = NSColor(hex: "#2e7dfb", alpha: 0.1)
         self.addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
             make.leading.equalTo(0)
             make.trailing.equalTo(0)
-            make.height.equalTo(111)
+            make.height.equalTo(124)
         }
         selectedMask.isHidden = true
         
-        repoNameLbl.font = NSFont.bfSystemFont(ofSize: 12.0)
-        repoDescLbl.font = NSFont.bfSystemFont(ofSize: 10.0)
-        repoDescLbl.maximumNumberOfLines = 2
+        repoNameLbl.isHidden = true
+        tagContentView.isHidden = true
+        repoDescLbl.isHidden = true
+        
+//        repoNameLbl.font = NSFont.bfBoldSystemFont(ofSize: 11.0)
+        repoDescLbl.font = NSFont.bfSystemFont(ofSize: 11.0)
+        repoDescLbl.maximumNumberOfLines = 0
         repoDescLbl.usesSingleLineMode = false
         repoDescLbl.cell?.wraps = true
         repoDescLbl.cell?.isScrollable = false
@@ -100,7 +98,7 @@ import Cocoa
     }
     
     func refreshSelectionStyle() {
-        let repoNameColor = titleColor
+        
         let textColor: NSColor = subTitleColor
         
         timeLbl.textColor = textColor
@@ -110,13 +108,6 @@ import Cocoa
         repoDescLbl.textColor = textColor
 //        tagContentView.backgroundColor = backgroundColor
 //        self.backgroundColor = backgroundColor
-
-        if let name = objRepos?.name {
-            let pstyle = NSMutableParagraphStyle()
-            pstyle.alignment = .left
-            let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
-            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
-        }
     }
     
     fileprivate func fillDataToUI() {
@@ -126,10 +117,7 @@ import Cocoa
                 avatarImg.kf.setImage(with: url)
             }
         }
-        
-        if let desc = objRepos?.cdescription {
-            repoDescLbl.stringValue = desc
-        }
+    
         if let starred_at = objRepos?.starred_at {
             timeLbl.stringValue = BFTimeHelper.shared.readableTime(rare: starred_at, prefix: nil)!
         } else if let showcaseUpdate = objRepos?.trending_showcase_update_text {
@@ -162,6 +150,10 @@ import Cocoa
         let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : tagStyle, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
 
         if let allTags = objRepos?.star_tags {
+            tagContentView.isHidden = false
+            repoNameLbl.frame = CGRect(x: 46, y: 104, width: 172, height: 19)
+            tagContentView.frame = CGRect(x: 46, y: 82, width: 246, height: 23)
+            
 //            allTags = ["A", "Test", "HAHA"]
             for subview in self.tagContentView.subviews {
                 subview.removeFromSuperview()
@@ -177,13 +169,14 @@ import Cocoa
                 tagB.tag = index
 //                tagB.backgroundColor = NSColor.red
                 allBtns.append(tagB)
+                tagB.font = NSFont.bfSystemFont(ofSize: 10.0)
                 self.tagContentView.addSubview(tagB)
             }
             
             let btnY: CGFloat = -1
             var btnX: CGFloat = 0
-            let btnOutsideMagrin: CGFloat = 2.5
-            let lineH: CGFloat = 22.0
+            let btnOutsideMagrin: CGFloat = 2.0
+            let lineH: CGFloat = 20.0
             
             for (_, btn) in allBtns.enumerated() {
                 btn.sizeToFit()
@@ -195,11 +188,40 @@ import Cocoa
                 }
             }
         } else {
-            for subview in self.tagContentView.subviews {
+            
+            repoNameLbl.frame = CGRect(x: 46, y: 85, width: 172, height: 40)
+            tagContentView.isHidden = true
+            
+            for subview in tagContentView.subviews {
                 subview.removeFromSuperview()
             }
         }
         
+        
+        if let name = objRepos?.name {
+            
+            let repoNameColor = titleColor
+            repoNameLbl.isHidden = false
+            
+            let pstyle = NSMutableParagraphStyle()
+            pstyle.alignment = .left
+            
+            var font = NSFont.bfSystemFont(ofSize: 11.0)
+            if (objRepos?.star_tags) != nil {
+                
+            } else {
+                font = NSFont.bfSystemFont(ofSize: 17.0)
+            }
+            
+            let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]
+            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
+        }
+        
+        if let desc = objRepos?.cdescription {
+            repoDescLbl.isHidden = false
+            repoDescLbl.stringValue = desc
+        }
+    
         refreshSelectionStyle()
     }
 }

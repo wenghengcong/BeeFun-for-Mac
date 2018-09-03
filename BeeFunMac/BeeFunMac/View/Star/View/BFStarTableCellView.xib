@@ -10,11 +10,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <tableCellView identifier="StarCellIdentifier" id="On5-FD-2xr" customClass="BFStarTableCellView" customModule="BeeFun" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="109"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17z-aR-GvS" userLabel="avatarImg">
-                    <rect key="frame" x="5" y="68" width="33" height="34"/>
+                    <rect key="frame" x="5" y="79" width="33" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" title="image" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="cKW-Jl-By5">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -22,88 +22,84 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3U-uw-wbF" userLabel="repoNameLbl">
-                    <rect key="frame" x="46" y="87" width="172" height="19"/>
+                    <rect key="frame" x="46" y="104" width="172" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="roundRect" title="title" bezelStyle="roundedRect" alignment="left" inset="2" id="M85-H9-8qr">
-                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                    <buttonCell key="cell" type="square" title="---------" bezelStyle="shadowlessSquare" imagePosition="left" inset="2" id="M85-H9-8qr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-eW-QLV" userLabel="tagBack" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
-                    <rect key="frame" x="46" y="66" width="240" height="23"/>
+                    <rect key="frame" x="46" y="82" width="246" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNJ-ab-Jr6" userLabel="repoDescLbl">
-                    <rect key="frame" x="5" y="29" width="226" height="36"/>
+                    <rect key="frame" x="5" y="28" width="289" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="left" title="Multiline Label" id="GIN-Mx-atr">
-                        <font key="font" metaFont="system" size="10"/>
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="left" title="---------------------------" id="GIN-Mx-atr">
+                        <font key="font" metaFont="system" size="11"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jM-1H-zqV" userLabel="starImg">
-                    <rect key="frame" x="5" y="7" width="15" height="15"/>
+                    <rect key="frame" x="5" y="6" width="15" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_order_cell_star" id="5wZ-NU-UCs"/>
                 </imageView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsu-b9-J2s">
-                    <rect key="frame" x="236" y="32" width="47" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="roundTextured" title="Unstar" bezelStyle="texturedRounded" alignment="center" borderStyle="border" inset="2" id="WpW-OR-fmb">
-                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
-                    </buttonCell>
-                </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-T8-CXi" userLabel="starLbl">
-                    <rect key="frame" x="22" y="7" width="50" height="17"/>
+                    <rect key="frame" x="22" y="6" width="50" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0" id="NUR-Si-zyP">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="---" id="NUR-Si-zyP">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54I-pY-ZDD" userLabel="timeLbl">
-                    <rect key="frame" x="212" y="88" width="73" height="17"/>
+                    <rect key="frame" x="212" y="99" width="82" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="time" id="l43-PC-brL">
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="---------" id="l43-PC-brL">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4a-WX-UnO" userLabel="forkImg">
-                    <rect key="frame" x="77" y="7" width="15" height="15"/>
+                    <rect key="frame" x="77" y="6" width="15" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_order_cell_fork" id="gud-lh-S9r"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-Ob-x5U" userLabel="forkLbl">
-                    <rect key="frame" x="93" y="4" width="63" height="20"/>
+                    <rect key="frame" x="93" y="3" width="63" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0" id="JUr-h2-dXJ">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="---" id="JUr-h2-dXJ">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggI-qE-17k" userLabel="langImg">
-                    <rect key="frame" x="195" y="6" width="15" height="15"/>
+                    <rect key="frame" x="195" y="5" width="15" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_order_time_sel" id="da2-dd-sP5"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4n-35-ob2" userLabel="langLbl">
-                    <rect key="frame" x="218" y="7" width="70" height="17"/>
+                    <rect key="frame" x="218" y="6" width="70" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0" id="GaF-jU-cpn">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="------" id="GaF-jU-cpn">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="subTitleColor">
+                    <color key="value" red="0.2196078431372549" green="0.31764705882352939" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="UnstarBtn" destination="Hsu-b9-J2s" id="lh1-PY-Ayb"/>
                 <outlet property="avatarImg" destination="17z-aR-GvS" id="32s-u5-cPe"/>
                 <outlet property="forkImg" destination="h4a-WX-UnO" id="V2x-wG-gBR"/>
                 <outlet property="forkLbl" destination="6ud-Ob-x5U" id="uW3-ig-hlJ"/>
@@ -116,7 +112,7 @@
                 <outlet property="tagContentView" destination="QSO-eW-QLV" id="dwC-kN-m74"/>
                 <outlet property="timeLbl" destination="54I-pY-ZDD" id="VJP-5I-i3O"/>
             </connections>
-            <point key="canvasLocation" x="241" y="12.5"/>
+            <point key="canvasLocation" x="241" y="12"/>
         </tableCellView>
     </objects>
     <resources>

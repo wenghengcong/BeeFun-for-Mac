@@ -21,7 +21,7 @@ extension BFStarViewController {
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
         if tableView == starTable {
-            return 109
+            return 122
         } else if tableView == tagTable {
             return 38
         }
