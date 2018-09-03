@@ -32,7 +32,7 @@ extension BFStarViewController {
         
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .left
-        let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
+        let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: NSFont.bfBoldSystemFont(ofSize: 14.0)] as [NSAttributedStringKey : Any]
         self.repoOwnerBtn.attributedTitle = NSAttributedString(string: "--------/", attributes: dic)
         self.repoNameBtn.attributedTitle = NSAttributedString(string: "-----------", attributes: dic)
         self.repoInfoLbl.textColor = NSColor.thDayGray
@@ -115,7 +115,7 @@ extension BFStarViewController {
         
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .left
-        let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
+        let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: NSFont.bfBoldSystemFont(ofSize: 14.0)] as [NSAttributedStringKey : Any]
         
         if let owner = objRepo?.owner?.login {
             self.repoOwnerBtn.attributedTitle = NSAttributedString(string: owner, attributes: dic)
