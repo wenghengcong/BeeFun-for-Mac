@@ -67,7 +67,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
             make.top.equalTo(0)
         }
         
-        let orderH: CGFloat = 46
+        let orderH: CGFloat = 46-2
         let searchH: CGFloat = 97
         
         searchFilterView.snp.remakeConstraints { (make) in
