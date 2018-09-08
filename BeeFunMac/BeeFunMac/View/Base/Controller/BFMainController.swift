@@ -28,7 +28,7 @@ class BFMainController: BFBaseViewController {
     @IBOutlet weak var settingButton: NSButton!
     @IBOutlet weak var pageBox: NSBox!
     
-    var homeController = BFOldHomeController()
+    var homeController = BFHomeViewController()
     var starController = BFStarViewController()
     
     var currentIndex: Int = 0

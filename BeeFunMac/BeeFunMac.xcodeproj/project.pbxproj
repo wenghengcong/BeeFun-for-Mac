@@ -14,6 +14,14 @@
 		5E048A75213A10640098CBF6 /* BFHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A73213A10640098CBF6 /* BFHomeViewController.xib */; };
 		5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A77213A11770098CBF6 /* BFToolsViewController.swift */; };
 		5E048A7A213A11770098CBF6 /* BFToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A78213A11770098CBF6 /* BFToolsViewController.xib */; };
+		5E048A7F21436C2B0098CBF6 /* BFExploreReposViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */; };
+		5E048A8021436C2B0098CBF6 /* BFExploreReposViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */; };
+		5E048A8321436C3D0098CBF6 /* BFExploreUsersViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A8121436C3D0098CBF6 /* BFExploreUsersViewItem.swift */; };
+		5E048A8421436C3D0098CBF6 /* BFExploreUsersViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A8221436C3D0098CBF6 /* BFExploreUsersViewItem.xib */; };
+		5E048A8721436C550098CBF6 /* BFProductHuntViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A8521436C550098CBF6 /* BFProductHuntViewItem.swift */; };
+		5E048A8821436C550098CBF6 /* BFProductHuntViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A8621436C550098CBF6 /* BFProductHuntViewItem.xib */; };
+		5E048A8B21436C6B0098CBF6 /* BFHackerNewsViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A8921436C6B0098CBF6 /* BFHackerNewsViewItem.swift */; };
+		5E048A8C21436C6B0098CBF6 /* BFHackerNewsViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A8A21436C6B0098CBF6 /* BFHackerNewsViewItem.xib */; };
 		5E065FAD1FF3353000721926 /* ObjStarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAC1FF3353000721926 /* ObjStarRepos.swift */; };
 		5E098DC42017F3C900AD50BA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DC32017F3C900AD50BA /* OAuthManager.swift */; };
 		5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */; };
@@ -219,6 +227,14 @@
 		5E048A73213A10640098CBF6 /* BFHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFHomeViewController.xib; sourceTree = "<group>"; };
 		5E048A77213A11770098CBF6 /* BFToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFToolsViewController.swift; sourceTree = "<group>"; };
 		5E048A78213A11770098CBF6 /* BFToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFToolsViewController.xib; sourceTree = "<group>"; };
+		5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreReposViewItem.swift; sourceTree = "<group>"; };
+		5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExploreReposViewItem.xib; sourceTree = "<group>"; };
+		5E048A8121436C3D0098CBF6 /* BFExploreUsersViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreUsersViewItem.swift; sourceTree = "<group>"; };
+		5E048A8221436C3D0098CBF6 /* BFExploreUsersViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExploreUsersViewItem.xib; sourceTree = "<group>"; };
+		5E048A8521436C550098CBF6 /* BFProductHuntViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFProductHuntViewItem.swift; sourceTree = "<group>"; };
+		5E048A8621436C550098CBF6 /* BFProductHuntViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFProductHuntViewItem.xib; sourceTree = "<group>"; };
+		5E048A8921436C6B0098CBF6 /* BFHackerNewsViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFHackerNewsViewItem.swift; sourceTree = "<group>"; };
+		5E048A8A21436C6B0098CBF6 /* BFHackerNewsViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFHackerNewsViewItem.xib; sourceTree = "<group>"; };
 		5E065FAC1FF3353000721926 /* ObjStarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjStarRepos.swift; sourceTree = "<group>"; };
 		5E098DC32017F3C900AD50BA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		5E098DC920182A7F00AD50BA /* BeeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeeFun-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -441,6 +457,7 @@
 		5E048A71213A0E8F0098CBF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5E048A7C21436BEB0098CBF6 /* Collection View Item */,
 				5E048A72213A10640098CBF6 /* BFHomeViewController.swift */,
 				5E048A73213A10640098CBF6 /* BFHomeViewController.xib */,
 			);
@@ -455,6 +472,21 @@
 				5E048A78213A11770098CBF6 /* BFToolsViewController.xib */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		5E048A7C21436BEB0098CBF6 /* Collection View Item */ = {
+			isa = PBXGroup;
+			children = (
+				5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */,
+				5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */,
+				5E048A8121436C3D0098CBF6 /* BFExploreUsersViewItem.swift */,
+				5E048A8221436C3D0098CBF6 /* BFExploreUsersViewItem.xib */,
+				5E048A8521436C550098CBF6 /* BFProductHuntViewItem.swift */,
+				5E048A8621436C550098CBF6 /* BFProductHuntViewItem.xib */,
+				5E048A8921436C6B0098CBF6 /* BFHackerNewsViewItem.swift */,
+				5E048A8A21436C6B0098CBF6 /* BFHackerNewsViewItem.xib */,
+			);
+			path = "Collection View Item";
 			sourceTree = "<group>";
 		};
 		5E1C134C1FD6F29A00726A0C /* LCUI */ = {
@@ -1133,10 +1165,14 @@
 				5E048A7A213A11770098CBF6 /* BFToolsViewController.xib in Resources */,
 				5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */,
 				5E28168E1FCCF23C007A5159 /* MainWindow.storyboard in Resources */,
+				5E048A8021436C2B0098CBF6 /* BFExploreReposViewItem.xib in Resources */,
 				5E0B832B1FDCCFDE00EDC29E /* BFStarTableCellView.xib in Resources */,
+				5E048A8821436C550098CBF6 /* BFProductHuntViewItem.xib in Resources */,
 				5E09F60A201A1D8200CC3866 /* SyncPreferenceController.xib in Resources */,
+				5E048A8421436C3D0098CBF6 /* BFExploreUsersViewItem.xib in Resources */,
 				5EBF53FC1FCFF83000D7A2A5 /* BFStarViewController.xib in Resources */,
 				5EA435081FDADF4400034578 /* Star.xcassets in Resources */,
+				5E048A8C21436C6B0098CBF6 /* BFHackerNewsViewItem.xib in Resources */,
 				5E75D6FE210CBE8D007596E9 /* BlueTheme.xcassets in Resources */,
 				5EAB030A2003B66500323A86 /* BFStarTagCellView.xib in Resources */,
 				5E09F60C201A1FB500CC3866 /* Preference.xcassets in Resources */,
@@ -1267,6 +1303,7 @@
 				5E2B26731FDC346B00600866 /* NSView+Extension.swift in Sources */,
 				5E9867E11FD05189007EE86F /* AppToken.swift in Sources */,
 				5E9868131FD104CA007EE86F /* UserManager.swift in Sources */,
+				5E048A8721436C550098CBF6 /* BFProductHuntViewItem.swift in Sources */,
 				5E9867E21FD05189007EE86F /* ObjErropReponse.swift in Sources */,
 				5ED37E391FF51EA100C14B72 /* BFStarViewController+Noti.swift in Sources */,
 				5EFB14D420185C9C00304AD3 /* BFMenuManager.swift in Sources */,
@@ -1277,6 +1314,7 @@
 				5E5E822320E4E2CE00E810E2 /* SEResponseIssues.swift in Sources */,
 				5E9867DE1FD05189007EE86F /* ObjIssue.swift in Sources */,
 				5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */,
+				5E048A8321436C3D0098CBF6 /* BFExploreUsersViewItem.swift in Sources */,
 				5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */,
 				5E5E821F20E4E2CE00E810E2 /* SEResponseCommits.swift in Sources */,
 				5E9867D91FD05189007EE86F /* ObjPage.swift in Sources */,
@@ -1342,6 +1380,7 @@
 				5E91319F20AE722B0056EF9F /* GetAllLangResponse.swift in Sources */,
 				5E5E822920E4E2CE00E810E2 /* SESearchUserModel.swift in Sources */,
 				5E98679E1FD05044007EE86F /* BFThirdLibKey.swift in Sources */,
+				5E048A8B21436C6B0098CBF6 /* BFHackerNewsViewItem.swift in Sources */,
 				5E9867D21FD05189007EE86F /* ObjDeploymentPayload.swift in Sources */,
 				5EE9E78B1FCEB1F40012AE1C /* BFWebView.swift in Sources */,
 				5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */,
@@ -1396,6 +1435,7 @@
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,
 				5EE9E78F1FCEC86D0012AE1C /* BFMainView.swift in Sources */,
+				5E048A7F21436C2B0098CBF6 /* BFExploreReposViewItem.swift in Sources */,
 				5E1C135F1FD6F36300726A0C /* ObjList.swift in Sources */,
 				5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */,
 				5EAB03082003B65400323A86 /* BFStarTagCellView.swift in Sources */,
