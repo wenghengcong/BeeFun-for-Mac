@@ -8,13 +8,14 @@
 
 import Cocoa
 
+@IBDesignable
 class BFView: NSView {
 
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
-//        self.backgroundColor = NSColor.white
+    @IBInspectable
+    var bfBackgroundColor: NSColor? {
+        didSet {
+            self.backgroundColor = bfBackgroundColor
+        }
     }
     
 }

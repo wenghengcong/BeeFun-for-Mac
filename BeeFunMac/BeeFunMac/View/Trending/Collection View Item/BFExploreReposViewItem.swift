@@ -10,9 +10,12 @@ import Cocoa
 
 class BFExploreReposViewItem: NSCollectionViewItem {
 
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
     
 }
