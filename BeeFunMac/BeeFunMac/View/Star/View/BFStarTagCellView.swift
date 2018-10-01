@@ -65,8 +65,8 @@ class BFStarTagCellView: LCBaseTableCellView {
     }
     
     fileprivate func customTagCellView() {
-        self.backgroundColor = .clear
-        bottomLine.backgroundColor = NSColor.lineGrayColor
+        self.backgColor = .clear
+        bottomLine.backgColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in
@@ -76,7 +76,7 @@ class BFStarTagCellView: LCBaseTableCellView {
             make.bottom.equalTo(0)
         }
         
-        selectedMask.backgroundColor = NSColor(hex: "#0999FF", alpha: 0.1)
+        selectedMask.backgColor = NSColor(hex: "#0999FF", alpha: 0.1)
         self.addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.height.equalTo(42)

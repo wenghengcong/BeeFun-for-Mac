@@ -51,8 +51,8 @@ class BFTagsTipCellView: LCBaseTableCellView {
     }
     
     fileprivate func customTipsCellView() {
-        self.backgroundColor = .clear
-        bottomLine.backgroundColor = NSColor.lineGrayColor
+        self.backgColor = .clear
+        bottomLine.backgColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in
@@ -62,7 +62,7 @@ class BFTagsTipCellView: LCBaseTableCellView {
             make.height.equalTo(1)
         }
         
-        selectedMask.backgroundColor = NSColor(hex: "#0099FF", alpha: 0.2)
+        selectedMask.backgColor = NSColor(hex: "#0099FF", alpha: 0.2)
         self.addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)

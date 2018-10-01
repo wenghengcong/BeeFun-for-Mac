@@ -315,7 +315,7 @@ extension BFStarViewController: NSTextFieldDelegate {
             delButton.bezelStyle = .texturedSquare
             delButton.setButtonType(.momentaryLight)
             delButton.alphaValue = 0.8
-            delButton.backgroundColor = NSColor.clear
+            delButton.backgColor = NSColor.clear
             delButton.image = delImage
             delButton.alternateImage = delImage
             delButton.tag = sender.tag

@@ -45,15 +45,15 @@ class BFMainController: BFBaseViewController {
     }
     
     func loadTheme() {
-        iconBar.backgroundColor = BFThemeManager.shared.iconBarBackgroundColor()
+        iconBar.backgColor = BFThemeManager.shared.iconBarBackgroundColor()
         
         homeButton.alternateImage = BFThemeManager.shared.iconbarGitImage(selected: true)
         homeButton.image = BFThemeManager.shared.iconbarGitImage(selected: false)
-        homeLeftLine.backgroundColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        homeLeftLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
         
         starButton.alternateImage = BFThemeManager.shared.iconbarStarImage(selected: true)
         starButton.image = BFThemeManager.shared.iconbarStarImage(selected: false)
-        starLeftLine.backgroundColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        starLeftLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
     }
     
     /// 自定义左边icon 按钮
@@ -127,10 +127,10 @@ class BFMainController: BFBaseViewController {
             if iconBtn != button {
                 //选中的不是当前的按钮
                 iconBtn.state = .off
-                iconBtn.superview?.backgroundColor = BFThemeManager.shared.iconSelectedBackgroundColor()
+                iconBtn.superview?.backgColor = BFThemeManager.shared.iconSelectedBackgroundColor()
             } else {
                 iconBtn.state = .on
-                iconBtn.superview?.backgroundColor = BFThemeManager.shared.iconNormalBackgroundColor()
+                iconBtn.superview?.backgColor = BFThemeManager.shared.iconNormalBackgroundColor()
             }
         }
         

@@ -30,7 +30,7 @@ class BFLoginController: BFBaseViewController {
     }
     
     func configView() {
-        self.signInBtn.backgroundColor = NSColor.clear
+        self.signInBtn.backgColor = NSColor.clear
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .center
         let dic = [NSAttributedStringKey.foregroundColor : NSColor.cpBlueLinkColor, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]

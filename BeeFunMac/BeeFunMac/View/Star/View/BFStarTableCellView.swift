@@ -51,10 +51,10 @@ import Cocoa
     
     fileprivate func customStarCellView() {
 
-        self.backgroundColor = backgroundColor
-        tagContentView.backgroundColor = backgroundColor
+        self.backgColor = backgColor
+        tagContentView.backgColor = backgColor
         
-        bottomLine.backgroundColor = NSColor.lineGrayColor
+        bottomLine.backgColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in
@@ -64,7 +64,7 @@ import Cocoa
             make.height.equalTo(1)
         }
         
-        selectedMask.backgroundColor = NSColor(hex: "#2e7dfb", alpha: 0.1)
+        selectedMask.backgColor = NSColor(hex: "#2e7dfb", alpha: 0.1)
         self.addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)

@@ -11,7 +11,7 @@ import Cocoa
 extension NSView {
     
     /// backgroundColor add by JS
-    var backgroundColor: NSColor? {
+    var backgColor: NSColor? {
         get {
             if let colorRef = self.layer?.backgroundColor {
                 return NSColor(cgColor: colorRef)

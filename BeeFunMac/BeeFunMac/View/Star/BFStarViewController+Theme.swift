@@ -14,25 +14,25 @@ extension BFStarViewController {
         let thManager = BFThemeManager.shared
         
         //分割线的颜色
-        tagManagerRightLine.backgroundColor = thManager.sepLineBackgroundColor()
-        searchFilterRightLine.backgroundColor = thManager.sepLineBackgroundColor()
+        tagManagerRightLine.backgColor = thManager.sepLineBackgroundColor()
+        searchFilterRightLine.backgColor = thManager.sepLineBackgroundColor()
         
         //显示点击按钮背景视图
         let bgColor = thManager.tagActionBackgroundColor()
-        tagActionStackView.backgroundColor = bgColor
-        allTagsBackView.backgroundColor = bgColor
-        unTaggedBackView.backgroundColor = bgColor
+        tagActionStackView.backgColor = bgColor
+        allTagsBackView.backgColor = bgColor
+        unTaggedBackView.backgColor = bgColor
 
         //显示文本的视图背景色
-        tagSortBackView.backgroundColor = thManager.tagShowBackgroundColor()
-        tagSortButton.backgroundColor = thManager.tagShowBackgroundColor()
+        tagSortBackView.backgColor = thManager.tagShowBackgroundColor()
+        tagSortButton.backgColor = thManager.tagShowBackgroundColor()
         tagTextLabel.backgroundColor = thManager.tagShowBackgroundColor()
         tagTextLabel.textColor = thManager.tagShowTitleColor()
         
         refreshButton.image = thManager.starSyncImage(selected: false)
         starSyncLabel.backgroundColor = thManager.tagShowBackgroundColor()
         starSyncLabel.textColor = thManager.tagShowTitleColor()
-        starSyncBackView.backgroundColor = thManager.tagShowBackgroundColor()
+        starSyncBackView.backgColor = thManager.tagShowBackgroundColor()
                 
         //保存新Tag按钮
         saveNewTagBtn.image = thManager.starSaveTagImage(selected: false)
@@ -40,19 +40,19 @@ extension BFStarViewController {
         
         //
         
-        tableViewBackground.backgroundColor = NSColor.white
+        tableViewBackground.backgColor = NSColor.white
         
 //        tagTable.borderColor = thManager.sepLineBackgroundColor()
 //        tagTable.borderWidth = 0.5
 //        starTable.borderColor = thManager.sepLineBackgroundColor()
 //        starTable.borderWidth = 0.5
         
-        addTagContainView.backgroundColor = NSColor.white
+        addTagContainView.backgColor = NSColor.white
         workingTagsView.backgroundColor = NSColor.green
 
-        orderFilterView.backgroundColor = NSColor.white
-        searchFilterView.backgroundColor = thManager.tagShowBackgroundColor()
-        toolsView.backgroundColor = thManager.tagShowBackgroundColor()
+        orderFilterView.backgColor = NSColor.white
+        searchFilterView.backgColor = thManager.tagShowBackgroundColor()
+        toolsView.backgColor = thManager.tagShowBackgroundColor()
 
     }
 }

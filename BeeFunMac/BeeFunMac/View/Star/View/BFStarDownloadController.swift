@@ -58,19 +58,19 @@ class BFStarDownloadController: NSViewController {
     
     func customView() {
         
-        view.backgroundColor = NSColor.thDayWhite
+        view.backgColor = NSColor.thDayWhite
         
-        urlStackView.backgroundColor = NSColor.thDayWhite
-        sshBackView.backgroundColor = NSColor.thDayWhite
-        httpsBackView.backgroundColor = NSColor.thDayWhite
-        openBackView.backgroundColor = NSColor.thDayWhite
-        downloadZipBackView.backgroundColor = NSColor.thDayWhite
+        urlStackView.backgColor = NSColor.thDayWhite
+        sshBackView.backgColor = NSColor.thDayWhite
+        httpsBackView.backgColor = NSColor.thDayWhite
+        openBackView.backgColor = NSColor.thDayWhite
+        downloadZipBackView.backgColor = NSColor.thDayWhite
 
         sshTitleLabel.backgroundColor = NSColor.thDayWhite
-        sshContentLabel.backgroundColor = NSColor.thDayWhite
+        sshContentLabel.backgColor = NSColor.thDayWhite
         sshContentLabel.borderWidth = 1.0
         sshContentLabel.borderColor = NSColor.thDayLightGray
-        sshImageBtn.backgroundColor = NSColor.thDayWhite
+        sshImageBtn.backgColor = NSColor.thDayWhite
         
         sshTitleLabel.target = self
         sshTitleLabel.action = #selector(clickSSHURL)
@@ -80,10 +80,10 @@ class BFStarDownloadController: NSViewController {
         sshImageBtn.action = #selector(clickSSHURL)
         
         httpsTitleLabel.backgroundColor = NSColor.thDayWhite
-        httpsContentLabel.backgroundColor = NSColor.thDayWhite
+        httpsContentLabel.backgColor = NSColor.thDayWhite
         httpsContentLabel.borderWidth = 1.0
         httpsContentLabel.borderColor = NSColor.thDayLightGray
-        httpsImageBtn.backgroundColor = NSColor.thDayWhite
+        httpsImageBtn.backgColor = NSColor.thDayWhite
         
         httpsTitleLabel.target = self
         httpsTitleLabel.action = #selector(clickHTTPSURL)
@@ -92,9 +92,9 @@ class BFStarDownloadController: NSViewController {
         httpsImageBtn.target = self
         httpsImageBtn.action = #selector(clickHTTPSURL)
         
-        openXcodeBtn.backgroundColor = NSColor.thDayWhite
-        openDesktopBtn.backgroundColor = NSColor.thDayWhite
-        downloadZipBtn.backgroundColor = NSColor.thDayWhite
+        openXcodeBtn.backgColor = NSColor.thDayWhite
+        openDesktopBtn.backgColor = NSColor.thDayWhite
+        downloadZipBtn.backgColor = NSColor.thDayWhite
         
         openXcodeBtn.target = self
         openXcodeBtn.action = #selector(clickOpenInXcode)

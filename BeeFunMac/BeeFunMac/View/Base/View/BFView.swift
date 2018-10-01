@@ -14,7 +14,7 @@ class BFView: NSView {
     @IBInspectable
     var bfBackgroundColor: NSColor? {
         didSet {
-            self.backgroundColor = bfBackgroundColor
+            self.backgColor = bfBackgroundColor
         }
     }
     
