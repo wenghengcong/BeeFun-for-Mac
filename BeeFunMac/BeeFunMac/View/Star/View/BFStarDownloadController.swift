@@ -71,7 +71,8 @@ class BFStarDownloadController: NSViewController {
         sshContentLabel.borderWidth = 1.0
         sshContentLabel.borderColor = NSColor.thDayLightGray
         sshImageBtn.backgColor = NSColor.thDayWhite
-        
+//        sshImageBtn.appearance = NSAppearance(named: .vibrantLight) 
+
         sshTitleLabel.target = self
         sshTitleLabel.action = #selector(clickSSHURL)
         sshContentLabel.target = self

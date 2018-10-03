@@ -17,7 +17,7 @@ class AutoCompleteTableRowView: NSTableRowView {
     
     override func drawSelection(in dirtyRect: NSRect) {
         if self.selectionHighlightStyle != .none{
-            self.backgroundColor = NSColor.red
+            self.backgroundColor = NSColor.clear
             let selectionRect = NSInsetRect(self.bounds, 0.5, 0.5)
             NSColor.selectedMenuItemColor.setStroke()
             NSColor.selectedMenuItemColor.setFill()

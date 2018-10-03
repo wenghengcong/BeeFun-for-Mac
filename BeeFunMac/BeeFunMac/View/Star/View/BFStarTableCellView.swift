@@ -51,8 +51,8 @@ import Cocoa
     
     fileprivate func customStarCellView() {
 
-        self.backgColor = backgColor
-        tagContentView.backgColor = backgColor
+        self.backgColor = NSColor.white
+        tagContentView.backgColor = NSColor.white
         
         bottomLine.backgColor = NSColor.lineGrayColor
         self.addSubview(bottomLine)
@@ -150,9 +150,10 @@ import Cocoa
         let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : tagStyle, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
 
         if let allTags = objRepos?.star_tags {
+            repoNameLbl.isHidden = false
             tagContentView.isHidden = false
-            repoNameLbl.frame = CGRect(x: 46, y: 102, width: 172, height: 20.0)
-            tagContentView.frame = CGRect(x: 46, y: 80, width: 246, height: 23)
+//            repoNameLbl.frame = CGRect(x: 46, y: 102, width: 172, height: 20.0)
+//            tagContentView.frame = CGRect(x: 46, y: 80, width: 246, height: 23)
             
 //            allTags = ["A", "Test", "HAHA"]
             for subview in self.tagContentView.subviews {

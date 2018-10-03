@@ -48,7 +48,7 @@ extension BFStarViewController {
 //        starTable.borderWidth = 0.5
         
         addTagContainView.backgColor = NSColor.white
-        workingTagsView.backgroundColor = NSColor.green
+        workingTagsView.backgroundColor = NSColor.white
 
         orderFilterView.backgColor = NSColor.white
         searchFilterView.backgColor = thManager.tagShowBackgroundColor()

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BFStarDownloadController" customModule="BeeFun" customModuleProvider="target">
@@ -21,7 +20,7 @@
                 <outlet property="openXcodeBtn" destination="LyM-ON-5fe" id="z5F-RJ-swb"/>
                 <outlet property="sshBackView" destination="Tem-fr-Bfl" id="d0s-Yd-ngy"/>
                 <outlet property="sshContentLabel" destination="Qsx-Fr-lLv" id="rhA-EP-KE8"/>
-                <outlet property="sshImageBtn" destination="8WK-LD-mFL" id="zmE-Y0-e7E"/>
+                <outlet property="sshImageBtn" destination="Eku-cj-RVc" id="iRs-Ll-BNs"/>
                 <outlet property="sshTitleLabel" destination="bpV-aG-bfc" id="Xi3-mY-j4P"/>
                 <outlet property="urlStackView" destination="aqv-Vr-tfQ" id="enu-xs-4rX"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -33,6 +32,129 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqv-Vr-tfQ">
+                    <rect key="frame" x="0.0" y="100" width="400" height="120"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tem-fr-Bfl">
+                            <rect key="frame" x="0.0" y="60" width="400" height="60"/>
+                            <subviews>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-Fr-lLv">
+                                    <rect key="frame" x="38" y="6" width="351" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="Uqp-bM-d6a"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" title="git@github.com:AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" inset="2" id="mca-cS-UED">
+                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                </button>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bpV-aG-bfc">
+                                    <rect key="frame" x="10" y="38" width="338" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="1P1-bs-5Ve"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="Awk-O6-okq"/>
+                                    </constraints>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone with SSH" id="TyY-NL-AMc">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="Eku-cj-RVc">
+                                    <rect key="frame" x="9" y="7" width="27" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="27" id="7Cn-v1-j0l"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="27" id="DvK-zR-NUb"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="Ort-3a-3uS"/>
+                                        <constraint firstAttribute="height" constant="23" id="VAk-DD-VZ4"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_download_day_copy" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="uu4-YN-fqs">
+                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <color key="contentTintColor" name="th_blue_white"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Eku-cj-RVc" firstAttribute="top" secondItem="bpV-aG-bfc" secondAttribute="bottom" constant="8" id="2Pl-o2-17m"/>
+                                <constraint firstAttribute="trailing" secondItem="bpV-aG-bfc" secondAttribute="trailing" constant="54" id="3Ps-TU-UQf"/>
+                                <constraint firstItem="bpV-aG-bfc" firstAttribute="top" secondItem="Tem-fr-Bfl" secondAttribute="top" constant="5" id="Jwg-jN-gQw"/>
+                                <constraint firstItem="bpV-aG-bfc" firstAttribute="leading" secondItem="Tem-fr-Bfl" secondAttribute="leading" constant="12" id="Kbd-f1-x7I"/>
+                                <constraint firstAttribute="height" constant="60" id="Lmg-1m-NOz"/>
+                                <constraint firstItem="Eku-cj-RVc" firstAttribute="leading" secondItem="Tem-fr-Bfl" secondAttribute="leading" constant="9" id="URk-9U-U0m"/>
+                                <constraint firstItem="Qsx-Fr-lLv" firstAttribute="leading" secondItem="Eku-cj-RVc" secondAttribute="trailing" constant="2" id="WmX-VH-gHj"/>
+                                <constraint firstAttribute="trailing" secondItem="Qsx-Fr-lLv" secondAttribute="trailing" constant="11" id="vV2-eh-1d7"/>
+                                <constraint firstItem="Qsx-Fr-lLv" firstAttribute="top" secondItem="bpV-aG-bfc" secondAttribute="bottom" constant="7" id="vsU-oT-8Zj"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="ufb-Nf-TfH">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                            <subviews>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jLc-Wx-pxX">
+                                    <rect key="frame" x="38" y="6" width="351" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="aDz-I9-7vw"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" title="https://github.com/AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" inset="2" id="ubE-OB-fbU">
+                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                </button>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vr8-wH-rGn">
+                                    <rect key="frame" x="10" y="38" width="338" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="foQ-iQ-fTZ"/>
+                                    </constraints>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone with HTTPS" id="e4T-US-AHH">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="BDw-IE-3qA">
+                                    <rect key="frame" x="9" y="7" width="27" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="27" id="2cl-Ki-Udg"/>
+                                        <constraint firstAttribute="height" constant="23" id="3YS-xM-b0f"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_download_day_copy" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="93N-E4-zSm">
+                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <color key="contentTintColor" name="th_blue_white"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="BDw-IE-3qA" firstAttribute="top" secondItem="Vr8-wH-rGn" secondAttribute="bottom" constant="8" id="57U-e6-njU"/>
+                                <constraint firstItem="BDw-IE-3qA" firstAttribute="leading" secondItem="ufb-Nf-TfH" secondAttribute="leading" constant="9" id="8tr-jJ-451"/>
+                                <constraint firstAttribute="height" constant="60" id="GSe-Mg-4xk"/>
+                                <constraint firstItem="jLc-Wx-pxX" firstAttribute="leading" secondItem="BDw-IE-3qA" secondAttribute="trailing" constant="2" id="IGU-D2-wBL"/>
+                                <constraint firstAttribute="trailing" secondItem="jLc-Wx-pxX" secondAttribute="trailing" constant="11" id="c3O-2Y-Gkp"/>
+                                <constraint firstItem="Vr8-wH-rGn" firstAttribute="leading" secondItem="ufb-Nf-TfH" secondAttribute="leading" constant="12" id="cOx-Si-n6f"/>
+                                <constraint firstAttribute="trailing" secondItem="Vr8-wH-rGn" secondAttribute="trailing" constant="54" id="ckg-Vk-Wf6"/>
+                                <constraint firstItem="Vr8-wH-rGn" firstAttribute="top" secondItem="ufb-Nf-TfH" secondAttribute="top" constant="5" id="eoG-CI-fnV"/>
+                                <constraint firstItem="jLc-Wx-pxX" firstAttribute="top" secondItem="Vr8-wH-rGn" secondAttribute="bottom" constant="7" id="zhD-ZU-i5k"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ufb-Nf-TfH" firstAttribute="top" secondItem="Tem-fr-Bfl" secondAttribute="bottom" id="4pH-UG-5fR"/>
+                        <constraint firstAttribute="trailing" secondItem="Tem-fr-Bfl" secondAttribute="trailing" id="7iG-T7-Hk2"/>
+                        <constraint firstItem="Tem-fr-Bfl" firstAttribute="leading" secondItem="aqv-Vr-tfQ" secondAttribute="leading" id="L1s-yD-inm"/>
+                        <constraint firstAttribute="bottom" secondItem="ufb-Nf-TfH" secondAttribute="bottom" id="NPS-Kg-Ssn"/>
+                        <constraint firstAttribute="trailing" secondItem="ufb-Nf-TfH" secondAttribute="trailing" id="TEY-JA-Yy5"/>
+                        <constraint firstAttribute="height" constant="120" id="q7D-Qg-sga"/>
+                        <constraint firstItem="ufb-Nf-TfH" firstAttribute="leading" secondItem="aqv-Vr-tfQ" secondAttribute="leading" id="wxY-iD-bT5"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="8AM-gl-GMt">
                     <rect key="frame" x="0.0" y="50" width="400" height="50"/>
                     <subviews>
@@ -113,125 +235,6 @@
                         <constraint firstItem="02E-kH-DwF" firstAttribute="top" secondItem="G3S-Q3-mlz" secondAttribute="top" id="xFb-x7-VnJ"/>
                     </constraints>
                 </customView>
-                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqv-Vr-tfQ">
-                    <rect key="frame" x="0.0" y="100" width="400" height="120"/>
-                    <subviews>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tem-fr-Bfl" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="60" width="400" height="60"/>
-                            <subviews>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-Fr-lLv">
-                                    <rect key="frame" x="38" y="6" width="351" height="25"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="Uqp-bM-d6a"/>
-                                    </constraints>
-                                    <buttonCell key="cell" type="square" title="git@github.com:AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" inset="2" id="mca-cS-UED">
-                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bpV-aG-bfc">
-                                    <rect key="frame" x="10" y="38" width="338" height="17"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="17" id="1P1-bs-5Ve"/>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="Awk-O6-okq"/>
-                                    </constraints>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone with SSH" id="TyY-NL-AMc">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <button translatesAutoresizingMaskIntoConstraints="NO" id="8WK-LD-mFL">
-                                    <rect key="frame" x="9" y="7" width="27" height="23"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="23" id="K8t-fZ-a4i"/>
-                                        <constraint firstAttribute="width" constant="27" id="fzm-dA-b5l"/>
-                                    </constraints>
-                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_download_day_copy" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="vwa-Jl-J5m">
-                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="bpV-aG-bfc" secondAttribute="trailing" constant="54" id="3Ps-TU-UQf"/>
-                                <constraint firstItem="8WK-LD-mFL" firstAttribute="leading" secondItem="Tem-fr-Bfl" secondAttribute="leading" constant="9" id="Ak8-L1-5ro"/>
-                                <constraint firstItem="bpV-aG-bfc" firstAttribute="top" secondItem="Tem-fr-Bfl" secondAttribute="top" constant="5" id="Jwg-jN-gQw"/>
-                                <constraint firstItem="bpV-aG-bfc" firstAttribute="leading" secondItem="Tem-fr-Bfl" secondAttribute="leading" constant="12" id="Kbd-f1-x7I"/>
-                                <constraint firstAttribute="height" constant="60" id="Lmg-1m-NOz"/>
-                                <constraint firstAttribute="trailing" secondItem="Qsx-Fr-lLv" secondAttribute="trailing" constant="11" id="vV2-eh-1d7"/>
-                                <constraint firstItem="Qsx-Fr-lLv" firstAttribute="top" secondItem="bpV-aG-bfc" secondAttribute="bottom" constant="7" id="vsU-oT-8Zj"/>
-                                <constraint firstItem="Qsx-Fr-lLv" firstAttribute="leading" secondItem="8WK-LD-mFL" secondAttribute="trailing" constant="2" id="wqL-Bf-WBu"/>
-                                <constraint firstItem="8WK-LD-mFL" firstAttribute="top" secondItem="bpV-aG-bfc" secondAttribute="bottom" constant="8" id="xaP-IE-c6t"/>
-                            </constraints>
-                        </customView>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="ufb-Nf-TfH">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
-                            <subviews>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jLc-Wx-pxX">
-                                    <rect key="frame" x="38" y="6" width="351" height="25"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="aDz-I9-7vw"/>
-                                    </constraints>
-                                    <buttonCell key="cell" type="square" title="https://github.com/AFNetworking/AFNetworking.git" bezelStyle="shadowlessSquare" alignment="left" inset="2" id="ubE-OB-fbU">
-                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vr8-wH-rGn">
-                                    <rect key="frame" x="10" y="38" width="338" height="17"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="17" id="foQ-iQ-fTZ"/>
-                                    </constraints>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clone with HTTPS" id="e4T-US-AHH">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <button translatesAutoresizingMaskIntoConstraints="NO" id="BDw-IE-3qA">
-                                    <rect key="frame" x="9" y="7" width="27" height="23"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="27" id="2cl-Ki-Udg"/>
-                                        <constraint firstAttribute="height" constant="23" id="3YS-xM-b0f"/>
-                                    </constraints>
-                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star_download_day_copy" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="93N-E4-zSm">
-                                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="BDw-IE-3qA" firstAttribute="top" secondItem="Vr8-wH-rGn" secondAttribute="bottom" constant="8" id="57U-e6-njU"/>
-                                <constraint firstItem="BDw-IE-3qA" firstAttribute="leading" secondItem="ufb-Nf-TfH" secondAttribute="leading" constant="9" id="8tr-jJ-451"/>
-                                <constraint firstAttribute="height" constant="60" id="GSe-Mg-4xk"/>
-                                <constraint firstItem="jLc-Wx-pxX" firstAttribute="leading" secondItem="BDw-IE-3qA" secondAttribute="trailing" constant="2" id="IGU-D2-wBL"/>
-                                <constraint firstAttribute="trailing" secondItem="jLc-Wx-pxX" secondAttribute="trailing" constant="11" id="c3O-2Y-Gkp"/>
-                                <constraint firstItem="Vr8-wH-rGn" firstAttribute="leading" secondItem="ufb-Nf-TfH" secondAttribute="leading" constant="12" id="cOx-Si-n6f"/>
-                                <constraint firstAttribute="trailing" secondItem="Vr8-wH-rGn" secondAttribute="trailing" constant="54" id="ckg-Vk-Wf6"/>
-                                <constraint firstItem="Vr8-wH-rGn" firstAttribute="top" secondItem="ufb-Nf-TfH" secondAttribute="top" constant="5" id="eoG-CI-fnV"/>
-                                <constraint firstItem="jLc-Wx-pxX" firstAttribute="top" secondItem="Vr8-wH-rGn" secondAttribute="bottom" constant="7" id="zhD-ZU-i5k"/>
-                            </constraints>
-                        </customView>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="ufb-Nf-TfH" firstAttribute="top" secondItem="Tem-fr-Bfl" secondAttribute="bottom" id="4pH-UG-5fR"/>
-                        <constraint firstAttribute="trailing" secondItem="Tem-fr-Bfl" secondAttribute="trailing" id="7iG-T7-Hk2"/>
-                        <constraint firstItem="Tem-fr-Bfl" firstAttribute="leading" secondItem="aqv-Vr-tfQ" secondAttribute="leading" id="L1s-yD-inm"/>
-                        <constraint firstAttribute="bottom" secondItem="ufb-Nf-TfH" secondAttribute="bottom" id="NPS-Kg-Ssn"/>
-                        <constraint firstAttribute="trailing" secondItem="ufb-Nf-TfH" secondAttribute="trailing" id="TEY-JA-Yy5"/>
-                        <constraint firstAttribute="height" constant="120" id="q7D-Qg-sga"/>
-                        <constraint firstItem="ufb-Nf-TfH" firstAttribute="leading" secondItem="aqv-Vr-tfQ" secondAttribute="leading" id="wxY-iD-bT5"/>
-                    </constraints>
-                    <visibilityPriorities>
-                        <integer value="1000"/>
-                        <integer value="1000"/>
-                    </visibilityPriorities>
-                    <customSpacing>
-                        <real value="3.4028234663852886e+38"/>
-                        <real value="3.4028234663852886e+38"/>
-                    </customSpacing>
-                </stackView>
             </subviews>
             <constraints>
                 <constraint firstItem="G3S-Q3-mlz" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="3jT-2S-y1F"/>
@@ -248,9 +251,12 @@
         </customView>
     </objects>
     <resources>
-        <image name="star_download_day_copy" width="200" height="200"/>
+        <image name="star_download_day_copy" width="160" height="160"/>
         <image name="star_download_day_git" width="30" height="30"/>
         <image name="star_download_day_xcode" width="30" height="30"/>
         <image name="star_download_day_zip" width="30" height="30"/>
+        <namedColor name="th_blue_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -66,7 +66,13 @@ extension BFStarViewController: NSTextFieldDelegate {
         if !workingTagsView.subviews.contains(repoTagsTextField) {
             let tagStyle = NSMutableParagraphStyle()
             tagStyle.alignment = .left
-            let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.placeholderTextColor, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0), NSAttributedStringKey.paragraphStyle : tagStyle] as [NSAttributedStringKey : Any]
+            let tagAttrbute = [
+                NSAttributedStringKey.foregroundColor : NSColor.placeholderTextColor,
+                NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0),
+                NSAttributedStringKey.paragraphStyle : tagStyle,
+                NSAttributedStringKey.backgroundColor : NSColor.clear,
+                ] as [NSAttributedStringKey : Any]
+            repoTagsTextField.backgColor = .clear
             repoTagsTextField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
             repoTagsTextField.usesSingleLineMode = true
 //            inputRepoTagField.delegate = self
