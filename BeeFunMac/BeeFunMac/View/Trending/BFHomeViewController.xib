@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BFHomeViewController" customModule="BeeFun" customModuleProvider="target">
             <connections>
+                <outlet property="detailCollectionView" destination="99o-y4-ATc" id="1nO-pE-ahi"/>
+                <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>
+                <outlet property="searchButton" destination="pRO-C6-N13" id="Ba4-uu-koy"/>
+                <outlet property="searchTextField" destination="PT4-5j-FgO" id="FlQ-KX-DvW"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -17,81 +21,93 @@
             <rect key="frame" x="0.0" y="0.0" width="1285" height="680"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bR-SZ-P6a">
-                    <rect key="frame" x="20" y="20" width="330" height="523"/>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tur-nm-TOd" userLabel="DetailView">
+                    <rect key="frame" x="355" y="30" width="807" height="529"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="uwo-sH-nw0">
-                        <rect key="frame" x="1" y="1" width="328" height="521"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView ambiguous="YES" id="kgo-UQ-N4u">
-                                <rect key="frame" x="0.0" y="0.0" width="328" height="158"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="4uK-Nx-QWT">
-                                    <size key="itemSize" width="50" height="50"/>
-                                </collectionViewFlowLayout>
-                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="bvb-BF-Km4">
-                        <rect key="frame" x="1" y="608" width="324" height="16"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="VNB-SW-nha">
-                        <rect key="frame" x="234" y="1" width="15" height="143"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </scroller>
-                </scrollView>
-                <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Q0-4b-R6I">
-                    <rect key="frame" x="351" y="49" width="681" height="500"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <font key="font" metaFont="system"/>
-                    <tabViewItems>
-                        <tabViewItem label="Repositories" identifier="" id="GDX-g2-0ta">
-                            <view key="view" ambiguous="YES" id="xv0-RW-Q7r">
-                                <rect key="frame" x="10" y="33" width="661" height="454"/>
+                    <subviews>
+                        <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGT-YX-KPD">
+                            <rect key="frame" x="27" y="47" width="735" height="448"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="4kg-GA-jWe">
+                                <rect key="frame" x="1" y="1" width="733" height="446"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-cy-r9m">
-                                        <rect key="frame" x="64" y="17" width="450" height="400"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="usn-U1-FmR">
-                                            <rect key="frame" x="1" y="1" width="448" height="398"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <collectionView ambiguous="YES" id="cWs-kb-YnF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="448" height="158"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="gGr-Gh-0qD">
-                                                        <size key="itemSize" width="50" height="50"/>
-                                                    </collectionViewFlowLayout>
-                                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </collectionView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.94386297460000002" green="0.13809797169999999" blue="0.083814583720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="uQk-rw-vNn">
-                                            <rect key="frame" x="1" y="183" width="448" height="16"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="yQx-PK-NDx">
-                                            <rect key="frame" x="234" y="1" width="15" height="143"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                    </scrollView>
+                                    <collectionView ambiguous="YES" id="99o-y4-ATc">
+                                        <rect key="frame" x="0.0" y="0.0" width="733" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="dUp-Y1-b66">
+                                            <size key="itemSize" width="50" height="50"/>
+                                        </collectionViewFlowLayout>
+                                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </collectionView>
                                 </subviews>
-                            </view>
-                        </tabViewItem>
-                        <tabViewItem label="Developser" identifier="" id="5D9-r0-ylq">
-                            <view key="view" id="4hK-Rt-RRQ">
-                                <rect key="frame" x="10" y="33" width="661" height="336"/>
+                            </clipView>
+                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="plW-0h-rMQ">
+                                <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WOL-6Y-m3U">
+                                <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNa-BZ-PVW" userLabel="NavitionView">
+                    <rect key="frame" x="26" y="35" width="312" height="524"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4f-Ko-MKH">
+                            <rect key="frame" x="6" y="86" width="301" height="400"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="Uk9-gZ-7W9">
+                                <rect key="frame" x="1" y="1" width="299" height="398"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </view>
-                        </tabViewItem>
-                    </tabViewItems>
-                </tabView>
+                                <subviews>
+                                    <collectionView ambiguous="YES" id="3jR-vT-3Pd">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="B4F-Fo-z0k">
+                                            <size key="itemSize" width="50" height="50"/>
+                                        </collectionViewFlowLayout>
+                                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </collectionView>
+                                </subviews>
+                            </clipView>
+                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="gQg-sU-ZSf">
+                                <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="6LL-uf-0Dq">
+                                <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5E-EA-Bau">
+                    <rect key="frame" x="20" y="567" width="1245" height="101"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PT4-5j-FgO">
+                            <rect key="frame" x="20" y="40" width="348" height="31"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="YlY-Db-bZc">
+                                <font key="font" usesAppearanceFont="YES"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRO-C6-N13">
+                            <rect key="frame" x="410" y="38" width="83" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JUf-uY-LuZ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                </customView>
             </subviews>
             <point key="canvasLocation" x="138.5" y="169"/>
         </customView>

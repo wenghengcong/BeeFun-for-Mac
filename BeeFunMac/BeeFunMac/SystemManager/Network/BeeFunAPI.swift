@@ -51,29 +51,34 @@ struct BeeFunProvider {
 
 public enum BeeFunAPI {
     
-    //更新数据库
+// MARK: - Database
     //1. 每次启动时 2.
     case updateServerDB(first: Bool, update: Bool)
-
-    // User
+    
+// MARK: - User
     case addUser(user: ObjUser)
     
+// MARK: - Repos
     //从BeeFun获取到github starrd 的页数，每页100
     case repoPage(owner: String)
     case getRepos(tag: String,language: String, search: String, page: Int, perpage: Int, sort: String, direction: String)
     case delRepo(repoid: Int)
     case addRepo(repo: ObjRepos)
     
-    //tag
-    // MARK: - page或perpage传0，就返回所有数据
+// MARK: - tag
+    //page或perpage传0，就返回所有数据
     case getAllTags(page:Int, perpage:Int, sort:String, direction:String, containAll: String)
     case getTag(name: String)
     case addTag(tagModel: ObjTag)
     case addTagToRepo(change:Bool, star_tags: String, delete_tags:[String], repoId: Int)
     case updateTag(name: String, to: String)
     case deleteTag(name: String)
-    //language
+    
+// MARK: - language
     case getLanguages(page:Int, perpage:Int, sort:String, direction:String)
+    
+// MARK: - Tringding
+    case getGithubTrending(model: RequsetGithubTrendingModel)
 }
 extension BeeFunAPI: TargetType {
     
@@ -139,6 +144,9 @@ extension BeeFunAPI: TargetType {
             return "/v1/tag/\(name)"
         case .getLanguages(_, _, _, _):
             return "/v1/lans"
+            
+        case .getGithubTrending(_):
+            return "/v1/explore/trending"
         }
         
     }
@@ -214,6 +222,8 @@ extension BeeFunAPI: TargetType {
                 "sort": sort as AnyObject,
                 "direction": direction as AnyObject
             ]
+        case .getGithubTrending(let model):
+            return model.toJSON()
         default:
             return nil
         }

@@ -8,11 +8,25 @@
 
 import Cocoa
 
-class BFHomeViewController: NSViewController {
+class BFHomeViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
 
+    @IBOutlet weak var searchTextField: NSTextField!
+    @IBOutlet weak var searchButton: NSButton!
+    
+    @IBOutlet weak var navigationCollectionView: NSCollectionView!
+    @IBOutlet weak var detailCollectionView: NSCollectionView!
+    
+    var requesRepostModel: RequsetGithubTrendingModel?
+    var requesDeveloperModel: RequsetGithubTrendingModel?
+    var githubTrendingRepos: [GithubTrengingModel]?
+    var githubTrendingDevelopser: [GithubTrengingModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        setupData()
+        setupView()
     }
+    
     
 }

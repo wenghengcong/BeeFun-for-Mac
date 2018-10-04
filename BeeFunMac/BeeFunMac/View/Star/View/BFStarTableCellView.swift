@@ -149,8 +149,8 @@ import Cocoa
         tagStyle.alignment = .left
         let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : tagStyle, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
 
+        repoNameLbl.isHidden = false
         if let allTags = objRepos?.star_tags {
-            repoNameLbl.isHidden = false
             tagContentView.isHidden = false
 //            repoNameLbl.frame = CGRect(x: 46, y: 102, width: 172, height: 20.0)
 //            tagContentView.frame = CGRect(x: 46, y: 80, width: 246, height: 23)
