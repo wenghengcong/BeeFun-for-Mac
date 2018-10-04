@@ -40,7 +40,7 @@ class BeeFunDBManager: NSObject {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
                             if update {
                                 //添加成功

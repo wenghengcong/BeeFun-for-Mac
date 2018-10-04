@@ -206,7 +206,7 @@ extension BFStarViewController {
                 switch result {
                 case let .success(response):
                     do {
-                        if let allTag: GetAllTagResponse = Mapper<GetAllTagResponse>().map(JSONObject: try response.mapJSON()) {
+                        if let allTag = Mapper<BeeFunResponseModel<ObjTag>>().map(JSONObject: try response.mapJSON()) {
                             if let code = allTag.codeEnum, code == BFStatusCode.bfOk {
                                 if let data = allTag.data {
                                     self.allTags = data

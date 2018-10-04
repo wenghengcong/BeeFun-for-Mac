@@ -9,23 +9,23 @@
 import AppKit
 import ObjectMapper
 
-class BeeFunResponseModel: NSObject, Mappable {
+class BeeFunResponseModel<T: Mappable>: NSObject, Mappable {
     
     var code: Int?
     var codeEnum: BFStatusCode?
     var msg: String?
-//    var data: [T]?
+    var data: [T]?
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        //        super.mapping(map)
+//                super.mapping(map)
         code <- map["code"]
         if code != nil {
             codeEnum = BFStatusCode(rawValue: code!)
         }
         msg <- map["msg"]
-//        data <- map["data"]
+        data <- map["data"]
     }
 }

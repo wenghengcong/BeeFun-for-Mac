@@ -385,7 +385,7 @@ public class ObjUser: NSObject, NSCoding, Mappable {
                 switch result {
                 case let .success(response):
                     do {
-                        if let userResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                        if let userResponse = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                             if let code = userResponse.codeEnum, code == BFStatusCode.bfOk {
                                 
                             }

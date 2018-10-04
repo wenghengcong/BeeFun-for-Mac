@@ -112,7 +112,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum {
                             if code == BFStatusCode.bfOk {
                                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.didUnStarRepo, object: nil)
@@ -136,7 +136,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum {
                             if code == BFStatusCode.bfOk {
                                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.didStarRepo, object: nil)

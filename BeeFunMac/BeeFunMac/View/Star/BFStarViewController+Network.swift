@@ -30,7 +30,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let allTag: GetAllTagResponse = Mapper<GetAllTagResponse>().map(JSONObject: try response.mapJSON()) {
+                    if let allTag = Mapper<BeeFunResponseModel<ObjTag>>().map(JSONObject: try response.mapJSON()) {
                         if let code = allTag.codeEnum, code == BFStatusCode.bfOk {
                             if let data = allTag.data {
                                 self.allTags = data
@@ -64,7 +64,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: GetAllTagResponse = Mapper<GetAllTagResponse>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse = Mapper<BeeFunResponseModel<ObjTag>>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum {
                             if code == BFStatusCode.bfOk {
                                 //添加成功
@@ -97,7 +97,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
                             //更新成功
                             //TODO: 弹框提醒
@@ -122,7 +122,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                    if let tagResponse = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                         if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
                             //TODO: 提示成功
                             //                            JSMBHUDBridge.showSuccess("Success".localized)
@@ -166,7 +166,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let allRepos: GetReposResponse = Mapper<GetReposResponse>().map(JSONObject: try response.mapJSON()) {
+                    if let allRepos = Mapper<BeeFunResponseModel<ObjRepos>>().map(JSONObject: try response.mapJSON()) {
                         if let code = allRepos.codeEnum, code == BFStatusCode.bfOk {
                             if let data = allRepos.data {
                                 DispatchQueue.main.async {
@@ -226,7 +226,7 @@ extension BFStarViewController {
                 switch result {
                 case let .success(response):
                     do {
-                        if let allTag: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
+                        if let allTag = Mapper<BeeFunResponseModel<ObjBase>>().map(JSONObject: try response.mapJSON()) {
                             if let code = allTag.codeEnum, code == BFStatusCode.bfOk {
                                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.RepoUpdateTag, object: nil, userInfo: ["star_tags": self.workingTags])
                                 if addTags != nil && addTags!.count > 0 {
@@ -253,7 +253,7 @@ extension BFStarViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let allLan: GetAllLangResponse = Mapper<GetAllLangResponse>().map(JSONObject: try response.mapJSON()) {
+                    if let allLan = Mapper<BeeFunResponseModel<ObjLanguage>>().map(JSONObject: try response.mapJSON()) {
                         if let code = allLan.codeEnum, code == BFStatusCode.bfOk {
                             if let data = allLan.data {
                                 self.handleGetLanguageList(data: data)

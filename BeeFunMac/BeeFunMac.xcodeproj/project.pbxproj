@@ -132,7 +132,6 @@
 		5E8D8E891FD7E39400C1F6CF /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8D8E881FD7E39400C1F6CF /* Array+Extension.swift */; };
 		5E8D8E8B1FD7E41700C1F6CF /* JSSQLiteSwiftBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8D8E8A1FD7E41700C1F6CF /* JSSQLiteSwiftBridge.swift */; };
 		5E91319D20AE70B40056EF9F /* ObjLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E91319C20AE70B40056EF9F /* ObjLanguage.swift */; };
-		5E91319F20AE722B0056EF9F /* GetAllLangResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E91319E20AE722B0056EF9F /* GetAllLangResponse.swift */; };
 		5E9131A120AEA8DA0056EF9F /* BFStarViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */; };
 		5E928C3E1FCDB8CB0066CAE4 /* BFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E928C3D1FCDB8CB0066CAE4 /* BFBaseViewController.swift */; };
 		5E928C401FCDB8E30066CAE4 /* BFMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E928C3F1FCDB8E30066CAE4 /* BFMainController.swift */; };
@@ -184,8 +183,6 @@
 		5E9868151FD105EA007EE86F /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9868141FD105EA007EE86F /* NetworkHelper.swift */; };
 		5E9ECE251FE0325300C02B3F /* BFStarViewController+Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9ECE241FE0325300C02B3F /* BFStarViewController+Web.swift */; };
 		5EA3BF3C20AA751A00D3CC79 /* BeeFunAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3BF3B20AA751A00D3CC79 /* BeeFunAPI.swift */; };
-		5EA3BF4220AAA41C00D3CC79 /* GetReposResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3BF3E20AAA41B00D3CC79 /* GetReposResponse.swift */; };
-		5EA3BF4320AAA41C00D3CC79 /* GetAllTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3BF3F20AAA41B00D3CC79 /* GetAllTagResponse.swift */; };
 		5EA3BF4420AAA41C00D3CC79 /* BeeFunResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3BF4020AAA41B00D3CC79 /* BeeFunResponseModel.swift */; };
 		5EA3BF4520AAA41C00D3CC79 /* ObjTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3BF4120AAA41B00D3CC79 /* ObjTag.swift */; };
 		5EA3BF4720AAA4E500D3CC79 /* BFStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3BF4620AAA4E500D3CC79 /* BFStatusCode.swift */; };
@@ -358,7 +355,6 @@
 		5E8D8E881FD7E39400C1F6CF /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		5E8D8E8A1FD7E41700C1F6CF /* JSSQLiteSwiftBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSSQLiteSwiftBridge.swift; sourceTree = "<group>"; };
 		5E91319C20AE70B40056EF9F /* ObjLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjLanguage.swift; sourceTree = "<group>"; };
-		5E91319E20AE722B0056EF9F /* GetAllLangResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllLangResponse.swift; sourceTree = "<group>"; };
 		5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Utils.swift"; sourceTree = "<group>"; };
 		5E928C3D1FCDB8CB0066CAE4 /* BFBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFBaseViewController.swift; sourceTree = "<group>"; };
 		5E928C3F1FCDB8E30066CAE4 /* BFMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMainController.swift; sourceTree = "<group>"; };
@@ -410,8 +406,6 @@
 		5E9868141FD105EA007EE86F /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		5E9ECE241FE0325300C02B3F /* BFStarViewController+Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Web.swift"; sourceTree = "<group>"; };
 		5EA3BF3B20AA751A00D3CC79 /* BeeFunAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeeFunAPI.swift; path = BeeFunMac/SystemManager/Network/BeeFunAPI.swift; sourceTree = SOURCE_ROOT; };
-		5EA3BF3E20AAA41B00D3CC79 /* GetReposResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetReposResponse.swift; sourceTree = "<group>"; };
-		5EA3BF3F20AAA41B00D3CC79 /* GetAllTagResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllTagResponse.swift; sourceTree = "<group>"; };
 		5EA3BF4020AAA41B00D3CC79 /* BeeFunResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeFunResponseModel.swift; sourceTree = "<group>"; };
 		5EA3BF4120AAA41B00D3CC79 /* ObjTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjTag.swift; sourceTree = "<group>"; };
 		5EA3BF4620AAA4E500D3CC79 /* BFStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFStatusCode.swift; sourceTree = "<group>"; };
@@ -993,12 +987,9 @@
 		5EA3BF3D20AAA41B00D3CC79 /* BeeFunModel */ = {
 			isa = PBXGroup;
 			children = (
-				5EA3BF3E20AAA41B00D3CC79 /* GetReposResponse.swift */,
-				5EA3BF3F20AAA41B00D3CC79 /* GetAllTagResponse.swift */,
 				5EA3BF4020AAA41B00D3CC79 /* BeeFunResponseModel.swift */,
 				5EA3BF4120AAA41B00D3CC79 /* ObjTag.swift */,
 				5E91319C20AE70B40056EF9F /* ObjLanguage.swift */,
-				5E91319E20AE722B0056EF9F /* GetAllLangResponse.swift */,
 			);
 			path = BeeFunModel;
 			sourceTree = "<group>";
@@ -1370,7 +1361,6 @@
 				5E1C13661FD6F36300726A0C /* SQLManager.swift in Sources */,
 				5E1C13641FD6F36300726A0C /* SQLHelper.swift in Sources */,
 				5EA435061FDAD27200034578 /* BFView.swift in Sources */,
-				5EA3BF4220AAA41C00D3CC79 /* GetReposResponse.swift in Sources */,
 				5E9867E51FD05189007EE86F /* ObjResponser.swift in Sources */,
 				5E1C13621FD6F36300726A0C /* CloudObjectId.swift in Sources */,
 				5E9867EA1FD05189007EE86F /* ObjShowcase.swift in Sources */,
@@ -1413,7 +1403,6 @@
 				5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */,
 				5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */,
 				5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */,
-				5E91319F20AE722B0056EF9F /* GetAllLangResponse.swift in Sources */,
 				5E5E822920E4E2CE00E810E2 /* SESearchUserModel.swift in Sources */,
 				5E98679E1FD05044007EE86F /* BFThirdLibKey.swift in Sources */,
 				5E048A8B21436C6B0098CBF6 /* BFHackerNewsViewItem.swift in Sources */,
@@ -1434,7 +1423,6 @@
 				5E9867DF1FD05189007EE86F /* ObjLabel.swift in Sources */,
 				5EAC2F1C2022D79E000442FE /* SQLStar+Update.swift in Sources */,
 				5E1C13691FD6F36300726A0C /* SQLTags.swift in Sources */,
-				5EA3BF4320AAA41C00D3CC79 /* GetAllTagResponse.swift in Sources */,
 				5E9867E81FD05189007EE86F /* ObjRepos.swift in Sources */,
 				5E9867D81FD05189007EE86F /* ObjNotification.swift in Sources */,
 				5E7F6F6F1FDD86D10050B50F /* NSView+Draw.swift in Sources */,
