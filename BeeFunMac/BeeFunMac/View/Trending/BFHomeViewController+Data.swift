@@ -7,10 +7,20 @@
 //
 
 import Cocoa
+import ObjectMapper
 
 extension BFHomeViewController {
     
     func setupData() {
+        
+        setRequestModel()
+        
+        getGithubTrendingDeveloper()
+        getGithubTrendingReopsitories()
+    }
+    
+    func setRequestModel() {
+        
         requesRepostModel = RequsetGithubTrendingModel()
         requesRepostModel?.type = 1
         requesRepostModel?.source = 1
@@ -28,26 +38,22 @@ extension BFHomeViewController {
         requesDeveloperModel?.perpage = 100
         requesDeveloperModel?.sort = "pos"
         requesDeveloperModel?.direction = "desc"
-        
-        getGithubTrendingDeveloper()
-        getGithubTrendingReopsitories()
     }
     
     func getGithubTrendingDeveloper() {
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesDeveloperModel!)) { (result) in
             switch result {
             case let .success(response):
-//                do {
-//                    if let tagResponse: BeeFunResponseModel = Mapper<BeeFunResponseModel>().map(JSONObject: try response.mapJSON()) {
-//                        if let code = tagResponse.codeEnum, code == BFStatusCode.bfOk {
-//                            if update {
-//                                //添加成功
-//                                UserDefaults.standard.set(Date().timeStamp, forKey: self.lastTimeStampKey)
-//                            }
-//                        }
-//                    }
-//                } catch {
-//                }
+                do {
+                    if let reposResponse = Mapper<BeeFunResponseModel<GithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
+                        if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
+                            if let data = reposResponse.data {
+                                self.githubTrendingDevelopser.insert(data, at: 0)
+                            }
+                        }
+                    }
+                } catch {
+                }
                 break
             case .failure:
                 break
@@ -57,6 +63,25 @@ extension BFHomeViewController {
     
     func getGithubTrendingReopsitories() {
 
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesRepostModel!)) { (result) in
+            switch result {
+            case let .success(response):
+                do {
+                    if let reposResponse = Mapper<BeeFunResponseModel<GithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
+                        if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
+                            if let data = reposResponse.data {
+                                self.githubTrendingRepos.insert(data, at: 0)
+                            }
+                        }
+                    }
+                } catch {
+                }
+                break
+            case .failure:
+                break
+            }
+        }
+        
     }
     
 }

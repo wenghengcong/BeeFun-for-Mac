@@ -8,6 +8,12 @@
 
 import Cocoa
 
+enum NavigationProductType {
+    case githubTrendingRepos
+    case githubTrendingDevelopers
+    case prodhuctHunt
+}
+
 class BFHomeViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
 
     @IBOutlet weak var searchTextField: NSTextField!
@@ -16,10 +22,12 @@ class BFHomeViewController: NSViewController, NSCollectionViewDelegate, NSCollec
     @IBOutlet weak var navigationCollectionView: NSCollectionView!
     @IBOutlet weak var detailCollectionView: NSCollectionView!
     
+    var navigationType: NavigationProductType = .githubTrendingRepos
     var requesRepostModel: RequsetGithubTrendingModel?
     var requesDeveloperModel: RequsetGithubTrendingModel?
-    var githubTrendingRepos: [GithubTrengingModel]?
-    var githubTrendingDevelopser: [GithubTrengingModel]?
+    //均是二维数组
+    var githubTrendingRepos: [[GithubTrengingModel]] = []
+    var githubTrendingDevelopser: [[GithubTrengingModel]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
