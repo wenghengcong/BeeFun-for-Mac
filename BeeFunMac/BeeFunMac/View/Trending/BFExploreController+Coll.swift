@@ -1,5 +1,5 @@
 //
-//  BFHomeViewController+Coll.swift
+//  BFExploreController+Coll.swift
 //  BeeFun
 //
 //  Created by WengHengcong on 2018/10/3.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-extension BFHomeViewController {
+extension BFExploreController {
 
     func setupCollectionView() {
         

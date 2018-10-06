@@ -1,5 +1,5 @@
 //
-//  BFHomeViewController.swift
+//  BFExploreController.swift
 //  BeeFun
 //
 //  Created by WengHengcong on 2018/9/1.
@@ -14,7 +14,7 @@ enum NavigationProductType {
     case prodhuctHunt
 }
 
-class BFHomeViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
+class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
 
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var searchButton: NSButton!

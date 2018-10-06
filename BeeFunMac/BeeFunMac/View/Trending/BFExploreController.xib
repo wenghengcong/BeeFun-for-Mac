@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="BFHomeViewController" customModule="BeeFun" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="BFExploreController" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="detailCollectionView" destination="99o-y4-ATc" id="1nO-pE-ahi"/>
                 <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>

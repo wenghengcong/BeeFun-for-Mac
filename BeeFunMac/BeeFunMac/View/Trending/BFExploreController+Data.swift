@@ -1,5 +1,5 @@
 //
-//  BFHomeViewController+Data.swift
+//  BFExploreController+Data.swift
 //  BeeFun
 //
 //  Created by WengHengcong on 2018/10/3.
@@ -9,7 +9,7 @@
 import Cocoa
 import ObjectMapper
 
-extension BFHomeViewController {
+extension BFExploreController {
     
     func setupData() {
         
