@@ -14,6 +14,7 @@ Icon Bar灰色Icon的颜色值: dbdbdb
 浅灰色:bfbfbf
 蓝色Icon：2e7dfb
 黑色标题: 262626
+副标题浅黑: 385173
 
 ## 夜间主题
 白色：ffffff

@@ -37,4 +37,9 @@ extension NSColor {
     class var thDayBlack: NSColor {
         return NSColor.hex("262626", alpha: 1.0);
     }
+    
+    /// 黑色副标题文本的颜色值
+    class var thDayLightBlack: NSColor {
+        return NSColor.hex("385173", alpha: 1.0);
+    }
 }

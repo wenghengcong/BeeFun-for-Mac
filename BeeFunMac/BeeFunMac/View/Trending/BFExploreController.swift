@@ -27,8 +27,8 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     var requesDeveloperModel: RequsetGithubTrendingModel?
     
     //Navigation data
-    var navigationdTitles = ["Github", "Product Hunt"]
-    var navigationdData = [["Trending Repostiories", "Trending Developers"], ["Today"]]
+    var navigationdTitles: [String] = []
+    var navigationdData: [String: [BFExploreNavigationModel]] = [:]
     
     //Detail data: 均是二维数组
     var githubTrendingRepos: [[GithubTrengingModel]] = []

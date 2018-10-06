@@ -13,10 +13,35 @@ extension BFExploreController {
     
     func setupData() {
         
+        setupNavigationData()
         setRequestModel()
         
         getGithubTrendingDeveloper()
         getGithubTrendingReopsitories()
+    }
+    
+    
+    func setupNavigationData() {
+        
+        navigationdTitles = ["Github"]
+        
+        let github_trending_repo = [
+            "logo":"exp_nav_github_treng",
+            "title": "Trending Repositories",
+            "desc": "See what the GitHub community is most excited about today."
+        ]
+        
+        let github_trending_developers = [
+            "logo":"exp_nav_github_treng",
+            "title": "Trending Developers",
+            "desc": "These are the organizations and developers building the hot tools today."
+        ]
+        if let trend_repo = BFExploreNavigationModel(JSON: github_trending_repo),
+            let trend_deve = BFExploreNavigationModel(JSON: github_trending_developers) {
+            navigationdData = [
+                navigationdTitles[0]: [trend_repo, trend_deve]
+            ]
+        }
     }
     
     func setRequestModel() {

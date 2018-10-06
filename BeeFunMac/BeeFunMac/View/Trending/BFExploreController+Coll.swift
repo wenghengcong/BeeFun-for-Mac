@@ -22,7 +22,9 @@ extension BFExploreController {
         
         
         let layout = navigationCollectionView.collectionViewLayout as! NSCollectionViewFlowLayout
-//        layout.itemSize = NSSize(width: 40, height: 30)
+        layout.itemSize = NSSize(width: 240, height: 80)
+        layout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+
         
         navigationCollectionView.reloadData()
     }
@@ -43,7 +45,11 @@ extension BFExploreController {
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == navigationCollectionView {
-            return navigationdData[section].count
+            let sectionTitle = navigationdTitles[section]
+            if let sectionData = navigationdData[sectionTitle] {
+                return sectionData.count
+            }
+            return 0
         } else if collectionView == detailCollectionView {
             if navigationType == .githubTrendingRepos {
                 return githubTrendingRepos[section].count
@@ -57,8 +63,15 @@ extension BFExploreController {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         if collectionView == navigationCollectionView {
-            let item =  navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"), for: indexPath)
-            return item
+          
+            if let item =  navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"), for: indexPath) as? BFExpolreNavigationViewItem {
+                let sectionTitle = navigationdTitles[indexPath.section]
+                if let sectionData = navigationdData[sectionTitle] {
+                    let model = sectionData[indexPath.item]
+                    item.exploreNavModel = model
+                }
+                return item
+            }
         }
         
         return NSCollectionViewItem()

@@ -27,7 +27,7 @@ import Cocoa
 
     /// Color
     @IBInspectable var titleColor: NSColor = NSColor.black
-    @IBInspectable var subTitleColor: NSColor = NSColor.hex("#385173")
+    @IBInspectable var subTitleColor: NSColor = NSColor.thDayLightBlack
 
     var selected: Bool = false
     

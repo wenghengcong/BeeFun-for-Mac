@@ -20,6 +20,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        //关闭输出
+        setenv("CFNETWORK_DIAGNOSTICS", "0", 1);
+        
         // oauth: listen to scheme url
         NSAppleEventManager.shared().setEventHandler(self, andSelector:#selector(AppDelegate.handleGetURL(event:withReplyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
         BFMonitor.shared.start()
