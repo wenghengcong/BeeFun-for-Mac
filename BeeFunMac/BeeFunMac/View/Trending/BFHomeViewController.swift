@@ -25,7 +25,12 @@ class BFHomeViewController: NSViewController, NSCollectionViewDelegate, NSCollec
     var navigationType: NavigationProductType = .githubTrendingRepos
     var requesRepostModel: RequsetGithubTrendingModel?
     var requesDeveloperModel: RequsetGithubTrendingModel?
-    //均是二维数组
+    
+    //Navigation data
+    var navigationdTitles = ["Github", "Product Hunt"]
+    var navigationdData = [["Trending Repostiories", "Trending Developers"], ["Today"]]
+    
+    //Detail data: 均是二维数组
     var githubTrendingRepos: [[GithubTrengingModel]] = []
     var githubTrendingDevelopser: [[GithubTrengingModel]] = []
     
