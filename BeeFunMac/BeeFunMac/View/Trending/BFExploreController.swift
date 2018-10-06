@@ -14,7 +14,7 @@ enum NavigationProductType {
     case prodhuctHunt
 }
 
-class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
+class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete {
 
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var searchButton: NSButton!
@@ -31,8 +31,8 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     var navigationdData: [String: [BFExploreNavigationModel]] = [:]
     
     //Detail data: 均是二维数组
-    var githubTrendingRepos: [[BFGithubTrengingModel]] = []
-    var githubTrendingDevelopser: [[BFGithubTrengingModel]] = []
+    var githubTrendingReposData: [[BFGithubTrengingModel]] = []
+    var githubTrendingDevelopserData: [[BFGithubTrengingModel]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

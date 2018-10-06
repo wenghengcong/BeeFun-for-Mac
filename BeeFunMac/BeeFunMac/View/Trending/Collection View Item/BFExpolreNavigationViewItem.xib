@@ -32,7 +32,7 @@
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tky-Su-e8X">
                     <rect key="frame" x="0.0" y="15" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exp_nav_github_treng" id="39a-Ci-JZH"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exp_nav_github_trend" id="39a-Ci-JZH"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-0g-cpm">
                     <rect key="frame" x="45" y="47" width="188" height="28"/>
@@ -56,6 +56,6 @@
         </collectionViewItem>
     </objects>
     <resources>
-        <image name="exp_nav_github_treng" width="50" height="50"/>
+        <image name="exp_nav_github_trend" width="50" height="50"/>
     </resources>
 </document>

@@ -25,8 +25,11 @@ extension BFExploreController {
         layout.itemSize = NSSize(width: 240, height: 80)
         layout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
 
+//        let detaiLlayout = detailCollectionView.collectionViewLayout as! NSCollectionViewFlowLayout
+//        detaiLlayout.itemSize = NSSize(width: 350, height: 190)
+//        detaiLlayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+
         
-        navigationCollectionView.reloadData()
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
@@ -34,9 +37,9 @@ extension BFExploreController {
             return navigationdTitles.count
         } else if collectionView == detailCollectionView {
             if navigationType == .githubTrendingRepos {
-                return githubTrendingRepos.count
+                return githubTrendingReposData.count
             } else if navigationType == .githubTrendingDevelopers {
-                return githubTrendingDevelopser.count
+                return githubTrendingDevelopserData.count
             }
         }
         
@@ -52,9 +55,9 @@ extension BFExploreController {
             return 0
         } else if collectionView == detailCollectionView {
             if navigationType == .githubTrendingRepos {
-                return githubTrendingRepos[section].count
+                return githubTrendingReposData[section].count
             } else if navigationType == .githubTrendingDevelopers {
-                return githubTrendingDevelopser[section].count
+                return githubTrendingDevelopserData[section].count
             }
         }
         return 0
@@ -72,6 +75,24 @@ extension BFExploreController {
                 }
                 return item
             }
+        } else if collectionView == detailCollectionView {
+            switch navigationType {
+            case .githubTrendingDevelopers:
+                if let item =  detailCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreDevelopersViewItem, for: indexPath) as? BFExploreDevelopersViewItem {
+                    let sectionIndexData = githubTrendingDevelopserData[indexPath.section][indexPath.item]
+                    //                    item.repoModel = sectionIndexData
+                }
+            case .githubTrendingRepos:
+               
+                if let item =  detailCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreReposViewItem, for: indexPath) as? BFExploreReposViewItem {
+                    let sectionIndexData = githubTrendingReposData[indexPath.section][indexPath.item]
+                    item.repoModel = sectionIndexData
+                    return item
+                }
+              
+            default:
+                break
+            }
         }
         
         return NSCollectionViewItem()
@@ -85,7 +106,7 @@ extension BFExploreController {
         
         if collectionView == navigationCollectionView {
             (item as! BFExpolreNavigationViewItem).setHighlight(selected: true)
-
+            clickNavigationArea()
         }
       
     }
@@ -97,6 +118,30 @@ extension BFExploreController {
         if collectionView == navigationCollectionView {
             (item as! BFExpolreNavigationViewItem).setHighlight(selected: false)
             
+        }
+    }
+    
+    // MARK: - Navigation area action
+    func clickNavigationArea() {
+        
+        switch navigationType {
+        case .githubTrendingDevelopers:
+            getGithubTrendingDeveloper(refresh: false)
+        case .githubTrendingRepos:
+            getGithubTrendingReopsitories(refresh: false)
+        default:
+            getGithubTrendingReopsitories(refresh: false)
+        }
+    }
+    
+    func doubleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem) {
+        switch navigationType {
+        case .githubTrendingDevelopers:
+            getGithubTrendingDeveloper(refresh: true)
+        case .githubTrendingRepos:
+            getGithubTrendingReopsitories(refresh: true)
+        default:
+            getGithubTrendingReopsitories(refresh: true)
         }
     }
 }

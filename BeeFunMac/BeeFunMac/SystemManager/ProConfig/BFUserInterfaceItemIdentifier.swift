@@ -13,6 +13,10 @@ extension NSUserInterfaceItemIdentifier {
     public struct BeeFun {
         public static let BFExpolreNavigationViewItem = NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem")
         
+        public static let BFExploreReposViewItem = NSUserInterfaceItemIdentifier(rawValue: "BFExploreReposViewItem")
+        
+        public static let BFExploreDevelopersViewItem = NSUserInterfaceItemIdentifier(rawValue: "BFExploreDevelopersViewItem")
+        
         public static let StarCellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "StarCellIdentifier")
         public static let TagCellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "TagCellIdentifier")
         public static let BFTagsTipCellView = NSUserInterfaceItemIdentifier(rawValue: "BFTagsTipCellView")

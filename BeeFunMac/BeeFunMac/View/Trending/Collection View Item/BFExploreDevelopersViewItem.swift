@@ -1,5 +1,5 @@
 //
-//  BFExploreUsersViewItem.swift
+//  BFExploreDevelopersViewItem.swift
 //  BeeFun
 //
 //  Created by WengHengcong on 2018/9/8.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class BFExploreUsersViewItem: NSCollectionViewItem {
+class BFExploreDevelopersViewItem: NSCollectionViewItem {
 
     override func viewDidLoad() {
         super.viewDidLoad()

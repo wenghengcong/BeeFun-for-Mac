@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,40 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="1285" height="680"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tur-nm-TOd" userLabel="DetailView">
-                    <rect key="frame" x="355" y="30" width="807" height="529"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <subviews>
-                        <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGT-YX-KPD">
-                            <rect key="frame" x="27" y="47" width="735" height="448"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="4kg-GA-jWe">
-                                <rect key="frame" x="1" y="1" width="733" height="446"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <collectionView ambiguous="YES" id="99o-y4-ATc">
-                                        <rect key="frame" x="0.0" y="0.0" width="733" height="158"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="dUp-Y1-b66">
-                                            <size key="itemSize" width="50" height="50"/>
-                                        </collectionViewFlowLayout>
-                                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </collectionView>
-                                </subviews>
-                            </clipView>
-                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="plW-0h-rMQ">
-                                <rect key="frame" x="1" y="144" width="233" height="15"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </scroller>
-                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WOL-6Y-m3U">
-                                <rect key="frame" x="234" y="1" width="15" height="143"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </scroller>
-                        </scrollView>
-                    </subviews>
-                </customView>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNa-BZ-PVW" userLabel="NavitionView">
-                    <rect key="frame" x="26" y="35" width="312" height="524"/>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNa-BZ-PVW" userLabel="NavitionView" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
+                    <rect key="frame" x="20" y="35" width="312" height="524"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4f-Ko-MKH">
@@ -88,6 +57,11 @@
                             </scroller>
                         </scrollView>
                     </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bfBackgroundColor">
+                            <color key="value" name="th_blue_white"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </customView>
                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5E-EA-Bau">
                     <rect key="frame" x="20" y="567" width="1245" height="101"/>
@@ -112,8 +86,50 @@
                         </button>
                     </subviews>
                 </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tur-nm-TOd" userLabel="DetailView" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
+                    <rect key="frame" x="340" y="30" width="930" height="529"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGT-YX-KPD">
+                            <rect key="frame" x="12" y="47" width="906" height="448"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="4kg-GA-jWe">
+                                <rect key="frame" x="1" y="1" width="904" height="446"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <collectionView ambiguous="YES" id="99o-y4-ATc">
+                                        <rect key="frame" x="0.0" y="0.0" width="904" height="446"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="dUp-Y1-b66">
+                                            <size key="itemSize" width="300" height="150"/>
+                                        </collectionViewFlowLayout>
+                                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </collectionView>
+                                </subviews>
+                            </clipView>
+                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="plW-0h-rMQ">
+                                <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WOL-6Y-m3U">
+                                <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                    </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bfBackgroundColor">
+                            <color key="value" name="th_blue_white"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customView>
             </subviews>
             <point key="canvasLocation" x="138.5" y="169"/>
         </customView>
     </objects>
+    <resources>
+        <namedColor name="th_blue_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
