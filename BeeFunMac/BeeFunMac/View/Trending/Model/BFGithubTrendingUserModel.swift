@@ -14,7 +14,7 @@ import Cocoa
      "login":"SatanWoo"
  }
  */
-class GithubTrendingUserModel: NSObject {
+class BFGithubTrendingUserModel: NSObject {
     
     var url: String?
     var avatar: String?

@@ -37,7 +37,7 @@ import ObjectMapper
      "built_by_users": "[{\"url\":\"https://github.com/SatanWoo\",\"avatar\":\"https://avatars3.githubusercontent.com/u/1303079?s\\u003d40\\u0026v\\u003d4\",\"login\":\"SatanWoo\"},{\"url\":\"https://github.com/ValiantCat\",\"avatar\":\"https://avatars0.githubusercontent.com/u/6142855?s\\u003d40\\u0026v\\u003d4\",\"login\":\"ValiantCat\"}]"
  }
  */
-class GithubTrengingModel: NSObject, Mappable {
+class BFGithubTrengingModel: NSObject, Mappable {
 
     var today: String?
     var time_period: String?
@@ -63,7 +63,7 @@ class GithubTrengingModel: NSObject, Mappable {
     var created_at: String?
     var updated_at: String?
     var repo_desc: String?
-    var built_by_users: [GithubTrendingUserModel]?
+    var built_by_users: [BFGithubTrendingUserModel]?
 
     required init?(map: Map) {
         

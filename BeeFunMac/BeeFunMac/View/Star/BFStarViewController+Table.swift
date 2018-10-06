@@ -31,7 +31,7 @@ extension BFStarViewController {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         //        print("tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int)")
         if tableView == starTable {
-            if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.StarCell), owner: nil) as? BFStarTableCellView {
+            if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.StarCellIdentifier, owner: nil) as? BFStarTableCellView {
                 if !starReposData.isBeyond(index: row) {
                     cell.objRepos = starReposData[row]
                 }
@@ -39,7 +39,7 @@ extension BFStarViewController {
                 return cell
             }
         } else if tableView == tagTable {
-            if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.TagCell), owner: nil) as? BFStarTagCellView {
+            if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.TagCellIdentifier, owner: nil) as? BFStarTagCellView {
                 let tag = allTags[row]
                 cell.didSelectedCell(selected: row == selectedTagRow)
                 cell.starTag = tag

@@ -248,7 +248,7 @@ extension BFStarViewController {
     func starPageCustomTagTableView() {
         tagTable.delegate = self
         tagTable.dataSource = self
-        tagTable.register(NSNib.init(nibNamed: NSNib.Name(rawValue: "BFStarTagCellView"), bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.TagCell))
+        tagTable.register(NSNib.init(nibNamed: NSNib.Name(rawValue: "BFStarTagCellView"), bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier.BeeFun.TagCellIdentifier)
         tagTable.selectionHighlightStyle = .none
         tagTable.allowsMultipleSelection = false
         tagTable.target = self

@@ -78,7 +78,7 @@ public enum BeeFunAPI {
     case getLanguages(page:Int, perpage:Int, sort:String, direction:String)
     
 // MARK: - Tringding
-    case getGithubTrending(model: RequsetGithubTrendingModel)
+    case getGithubTrending(model: BFGithubTrendingRequsetModel)
 }
 extension BeeFunAPI: TargetType {
     

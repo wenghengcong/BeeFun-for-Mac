@@ -23,16 +23,16 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var detailCollectionView: NSCollectionView!
     
     var navigationType: NavigationProductType = .githubTrendingRepos
-    var requesRepostModel: RequsetGithubTrendingModel?
-    var requesDeveloperModel: RequsetGithubTrendingModel?
+    var requesRepostModel: BFGithubTrendingRequsetModel?
+    var requesDeveloperModel: BFGithubTrendingRequsetModel?
     
     //Navigation data
     var navigationdTitles: [String] = []
     var navigationdData: [String: [BFExploreNavigationModel]] = [:]
     
     //Detail data: 均是二维数组
-    var githubTrendingRepos: [[GithubTrengingModel]] = []
-    var githubTrendingDevelopser: [[GithubTrengingModel]] = []
+    var githubTrendingRepos: [[BFGithubTrengingModel]] = []
+    var githubTrendingDevelopser: [[BFGithubTrengingModel]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

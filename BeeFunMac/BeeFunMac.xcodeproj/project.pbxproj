@@ -62,10 +62,10 @@
 		5E2C9D3E21645A26001910F9 /* BFExploreController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */; };
 		5E2C9D4021645A34001910F9 /* BFExploreController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */; };
 		5E2C9D4221646859001910F9 /* BFExploreController+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4121646859001910F9 /* BFExploreController+Data.swift */; };
-		5E2C9D45216469DA001910F9 /* GithubTrengingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D44216469DA001910F9 /* GithubTrengingModel.swift */; };
-		5E2C9D4921659B58001910F9 /* RequsetGithubTrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4821659B58001910F9 /* RequsetGithubTrendingModel.swift */; };
-		5E2C9D4B2165ACE1001910F9 /* GithubTrendingUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4A2165ACE1001910F9 /* GithubTrendingUserModel.swift */; };
-		5E2C9D4D2165B316001910F9 /* GIhubTrendingTimeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4C2165B316001910F9 /* GIhubTrendingTimeEnum.swift */; };
+		5E2C9D45216469DA001910F9 /* BFGithubTrengingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D44216469DA001910F9 /* BFGithubTrengingModel.swift */; };
+		5E2C9D4921659B58001910F9 /* BFGithubTrendingRequsetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4821659B58001910F9 /* BFGithubTrendingRequsetModel.swift */; };
+		5E2C9D4B2165ACE1001910F9 /* BFGithubTrendingUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4A2165ACE1001910F9 /* BFGithubTrendingUserModel.swift */; };
+		5E2C9D4D2165B316001910F9 /* BFGihubTrendingTimeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D4C2165B316001910F9 /* BFGihubTrendingTimeEnum.swift */; };
 		5E2D29FE1FD97FAF0043A665 /* BFStarViewController+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */; };
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
@@ -214,6 +214,8 @@
 		5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */; };
 		5ECBD90D2168910600F3C03E /* BFTheme+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD90C2168910600F3C03E /* BFTheme+Explore.swift */; };
 		5ECBD90F2168976100F3C03E /* BFExploreNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD90E2168976100F3C03E /* BFExploreNavigationModel.swift */; };
+		5ECBD9112168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */; };
+		5ECBD9132168B27200F3C03E /* BFNibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD9122168B27200F3C03E /* BFNibName.swift */; };
 		5ECC746B1FD8D8AD00E46B8F /* BFiCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */; };
 		5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E361FF4E36900C14B72 /* SQLConnection.swift */; };
 		5ED37E391FF51EA100C14B72 /* BFStarViewController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */; };
@@ -288,10 +290,10 @@
 		5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+View.swift"; sourceTree = "<group>"; };
 		5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+Search.swift"; sourceTree = "<group>"; };
 		5E2C9D4121646859001910F9 /* BFExploreController+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+Data.swift"; sourceTree = "<group>"; };
-		5E2C9D44216469DA001910F9 /* GithubTrengingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTrengingModel.swift; sourceTree = "<group>"; };
-		5E2C9D4821659B58001910F9 /* RequsetGithubTrendingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequsetGithubTrendingModel.swift; sourceTree = "<group>"; };
-		5E2C9D4A2165ACE1001910F9 /* GithubTrendingUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTrendingUserModel.swift; sourceTree = "<group>"; };
-		5E2C9D4C2165B316001910F9 /* GIhubTrendingTimeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIhubTrendingTimeEnum.swift; sourceTree = "<group>"; };
+		5E2C9D44216469DA001910F9 /* BFGithubTrengingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGithubTrengingModel.swift; sourceTree = "<group>"; };
+		5E2C9D4821659B58001910F9 /* BFGithubTrendingRequsetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGithubTrendingRequsetModel.swift; sourceTree = "<group>"; };
+		5E2C9D4A2165ACE1001910F9 /* BFGithubTrendingUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGithubTrendingUserModel.swift; sourceTree = "<group>"; };
+		5E2C9D4C2165B316001910F9 /* BFGihubTrendingTimeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFGihubTrendingTimeEnum.swift; sourceTree = "<group>"; };
 		5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Data.swift"; sourceTree = "<group>"; };
 		5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagMan.swift"; sourceTree = "<group>"; };
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
@@ -442,6 +444,8 @@
 		5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExpolreNavigationViewItem.xib; sourceTree = "<group>"; };
 		5ECBD90C2168910600F3C03E /* BFTheme+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+Explore.swift"; sourceTree = "<group>"; };
 		5ECBD90E2168976100F3C03E /* BFExploreNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreNavigationModel.swift; sourceTree = "<group>"; };
+		5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFUserInterfaceItemIdentifier.swift; sourceTree = "<group>"; };
+		5ECBD9122168B27200F3C03E /* BFNibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFNibName.swift; sourceTree = "<group>"; };
 		5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFiCloudManager.swift; sourceTree = "<group>"; };
 		5ED37E361FF4E36900C14B72 /* SQLConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLConnection.swift; sourceTree = "<group>"; };
 		5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Noti.swift"; sourceTree = "<group>"; };
@@ -706,10 +710,10 @@
 		5E2C9D43216469C0001910F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E2C9D44216469DA001910F9 /* GithubTrengingModel.swift */,
-				5E2C9D4A2165ACE1001910F9 /* GithubTrendingUserModel.swift */,
-				5E2C9D4821659B58001910F9 /* RequsetGithubTrendingModel.swift */,
-				5E2C9D4C2165B316001910F9 /* GIhubTrendingTimeEnum.swift */,
+				5E2C9D44216469DA001910F9 /* BFGithubTrengingModel.swift */,
+				5E2C9D4A2165ACE1001910F9 /* BFGithubTrendingUserModel.swift */,
+				5E2C9D4821659B58001910F9 /* BFGithubTrendingRequsetModel.swift */,
+				5E2C9D4C2165B316001910F9 /* BFGihubTrendingTimeEnum.swift */,
 				5ECBD90E2168976100F3C03E /* BFExploreNavigationModel.swift */,
 			);
 			path = Model;
@@ -881,6 +885,8 @@
 				5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */,
 				5E44C63A20E28CA000CDEAEE /* BFConfig.swift */,
 				5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */,
+				5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */,
+				5ECBD9122168B27200F3C03E /* BFNibName.swift */,
 			);
 			path = ProConfig;
 			sourceTree = "<group>";
@@ -1350,11 +1356,11 @@
 				5EC3CC622016A11300701C23 /* BFLoginController.swift in Sources */,
 				5E2C9D3E21645A26001910F9 /* BFExploreController+View.swift in Sources */,
 				5E7F6F6B1FDD845B0050B50F /* NSFont+Project.swift in Sources */,
-				5E2C9D45216469DA001910F9 /* GithubTrengingModel.swift in Sources */,
+				5E2C9D45216469DA001910F9 /* BFGithubTrengingModel.swift in Sources */,
 				5E5E822320E4E2CE00E810E2 /* SEResponseIssues.swift in Sources */,
 				5E9867DE1FD05189007EE86F /* ObjIssue.swift in Sources */,
 				5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */,
-				5E2C9D4921659B58001910F9 /* RequsetGithubTrendingModel.swift in Sources */,
+				5E2C9D4921659B58001910F9 /* BFGithubTrendingRequsetModel.swift in Sources */,
 				5E048A8321436C3D0098CBF6 /* BFExploreUsersViewItem.swift in Sources */,
 				5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */,
 				5E5E821F20E4E2CE00E810E2 /* SEResponseCommits.swift in Sources */,
@@ -1368,6 +1374,7 @@
 				5E9867D51FD05189007EE86F /* ObjHref.swift in Sources */,
 				5E098DC42017F3C900AD50BA /* OAuthManager.swift in Sources */,
 				5ECC746B1FD8D8AD00E46B8F /* BFiCloudManager.swift in Sources */,
+				5ECBD9132168B27200F3C03E /* BFNibName.swift in Sources */,
 				5E9867CF1FD05189007EE86F /* ObjComment.swift in Sources */,
 				5E9867ED1FD05189007EE86F /* ObjPlan.swift in Sources */,
 				5E2B266D1FDC33CC00600866 /* BFStarTableCellView.swift in Sources */,
@@ -1432,6 +1439,7 @@
 				5E5E822120E4E2CE00E810E2 /* SEResponseRepos.swift in Sources */,
 				5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */,
 				5E91319D20AE70B40056EF9F /* ObjLanguage.swift in Sources */,
+				5ECBD9112168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift in Sources */,
 				5E80F746211B284500756B30 /* BFTheme+StarWeb.swift in Sources */,
 				5E9868091FD0FE75007EE86F /* JSConnectivity.swift in Sources */,
 				5E9867D71FD05189007EE86F /* ObjMember.swift in Sources */,
@@ -1449,7 +1457,7 @@
 				5E9867D11FD05189007EE86F /* ObjDeployment.swift in Sources */,
 				5E9ECE251FE0325300C02B3F /* BFStarViewController+Web.swift in Sources */,
 				5E9867DB1FD05189007EE86F /* ObjRelease.swift in Sources */,
-				5E2C9D4D2165B316001910F9 /* GIhubTrendingTimeEnum.swift in Sources */,
+				5E2C9D4D2165B316001910F9 /* BFGihubTrendingTimeEnum.swift in Sources */,
 				5EBF53F71FCFF82000D7A2A5 /* BFOldHomeController.swift in Sources */,
 				5EA3BF4720AAA4E500D3CC79 /* BFStatusCode.swift in Sources */,
 				5E2C9D4221646859001910F9 /* BFExploreController+Data.swift in Sources */,
@@ -1482,7 +1490,7 @@
 				5E1C135F1FD6F36300726A0C /* ObjList.swift in Sources */,
 				5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */,
 				5EAB03082003B65400323A86 /* BFStarTagCellView.swift in Sources */,
-				5E2C9D4B2165ACE1001910F9 /* GithubTrendingUserModel.swift in Sources */,
+				5E2C9D4B2165ACE1001910F9 /* BFGithubTrendingUserModel.swift in Sources */,
 				5E4833501FD249CF00CEB336 /* BFOldHomeController+Util.swift in Sources */,
 				5E9867CD1FD05189007EE86F /* ObjAsset.swift in Sources */,
 				5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */,

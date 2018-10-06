@@ -64,13 +64,17 @@
                                 <rect key="frame" x="1" y="1" width="299" height="398"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <collectionView ambiguous="YES" id="3jR-vT-3Pd">
+                                    <collectionView ambiguous="YES" selectable="YES" id="3jR-vT-3Pd">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="158"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="B4F-Fo-z0k">
                                             <size key="itemSize" width="50" height="50"/>
                                         </collectionViewFlowLayout>
                                         <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="-2" id="eKc-tB-JLR"/>
+                                            <outlet property="delegate" destination="-2" id="ZHW-aC-v5g"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                             </clipView>

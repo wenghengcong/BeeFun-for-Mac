@@ -9,7 +9,7 @@
 import Cocoa
 
 // daily/weekly/monthly
-enum GIhubTrendingTimeEnum: String {
+enum BFGihubTrendingTimeEnum: String {
     case daily = "daily"
     case weekly = "weekly"
     case monthly = "monthly"

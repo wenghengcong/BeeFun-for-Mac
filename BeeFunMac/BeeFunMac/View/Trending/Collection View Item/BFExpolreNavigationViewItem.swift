@@ -10,9 +10,14 @@ import Cocoa
 
 class BFExpolreNavigationViewItem: NSCollectionViewItem {
 
+    
     @IBOutlet weak var logoImageView: NSImageView!
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var descLabel: NSTextField!
+    
+    let viewOriBorderWidth: CGFloat = 1.0
+    let viewSelBorderWidth: CGFloat = 5.0
+
     
     var exploreNavModel: BFExploreNavigationModel? {
         didSet {
@@ -36,8 +41,13 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
         descLabel.textColor = BFThemeManager.shared.explre_nav_subTitle_color()
         
         view.borderColor = NSColor.thDayBlue
-        view.borderWidth = 1.0
+        view.borderWidth = viewOriBorderWidth
         
         view.radius = 6.0
+    }
+    
+    func setHighlight(selected: Bool) {
+        view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
+        view.backgColor = selected ? NSColor.hex("#2e7dfb", alpha: 0.1)  : NSColor.clear
     }
 }

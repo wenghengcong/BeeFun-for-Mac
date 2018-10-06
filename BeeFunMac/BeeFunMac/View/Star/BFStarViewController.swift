@@ -14,13 +14,6 @@ import ObjectMapper
 import Down
 
 class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
-
-    enum CellIdentifiers {
-        static let StarCell = "StarCellIdentifier"
-        static let TagCell = "TagCellIdentifier"
-        static let TagTipCell = "BFTagsTipCellView"
-    }
-    
     // MARK: - Data
     var starReposData: [ObjRepos] = []
     var allTags: [ObjTag] = []

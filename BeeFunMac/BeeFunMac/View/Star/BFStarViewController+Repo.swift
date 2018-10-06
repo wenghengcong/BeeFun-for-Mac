@@ -16,7 +16,7 @@ extension BFStarViewController {
     func starPageCustomRepoTableView() {
         starTable.delegate = self
         starTable.dataSource = self
-        starTable.register(NSNib.init(nibNamed: NSNib.Name(rawValue: "BFStarTableCellView"), bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.StarCell))
+        starTable.register(NSNib.init(nibNamed: NSNib.BeeFun.BFStarTableCellView, bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier.BeeFun.StarCellIdentifier)
         starTable.selectionHighlightStyle = .none
         starTable.allowsMultipleSelection = false
         starTable.target = self

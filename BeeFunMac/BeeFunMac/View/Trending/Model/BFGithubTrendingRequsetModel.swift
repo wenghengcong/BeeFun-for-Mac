@@ -9,7 +9,7 @@
 import Cocoa
 import ObjectMapper
 
-public class RequsetGithubTrendingModel: NSObject, Mappable {
+public class BFGithubTrendingRequsetModel: NSObject, Mappable {
 
     
     /// 从1.数据库，2.GitHub解析 获取数据
@@ -19,7 +19,7 @@ public class RequsetGithubTrendingModel: NSObject, Mappable {
     var type: Int?
     
     /// 时间，获取Trending的时间:monthly/daily/monthly
-    var time: GIhubTrendingTimeEnum?
+    var time: BFGihubTrendingTimeEnum?
     
     /// 指的是要获取什么语言，可选参数，无须区分也可传all
     var language: String?

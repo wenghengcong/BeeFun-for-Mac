@@ -46,19 +46,19 @@ extension BFExploreController {
     
     func setRequestModel() {
         
-        requesRepostModel = RequsetGithubTrendingModel()
+        requesRepostModel = BFGithubTrendingRequsetModel()
         requesRepostModel?.type = 1
         requesRepostModel?.source = 1
-        requesRepostModel?.time = GIhubTrendingTimeEnum.daily
+        requesRepostModel?.time = BFGihubTrendingTimeEnum.daily
         requesRepostModel?.page = 1
         requesRepostModel?.perpage = 100
         requesRepostModel?.sort = "up_star_num"
         requesRepostModel?.direction = "desc"
         
-        requesDeveloperModel = RequsetGithubTrendingModel()
+        requesDeveloperModel = BFGithubTrendingRequsetModel()
         requesDeveloperModel?.type = 1
         requesDeveloperModel?.source = 1
-        requesDeveloperModel?.time = GIhubTrendingTimeEnum.daily
+        requesDeveloperModel?.time = BFGihubTrendingTimeEnum.daily
         requesDeveloperModel?.page = 1
         requesDeveloperModel?.perpage = 100
         requesDeveloperModel?.sort = "pos"
@@ -70,7 +70,7 @@ extension BFExploreController {
             switch result {
             case let .success(response):
                 do {
-                    if let reposResponse = Mapper<BeeFunResponseModel<GithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
+                    if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
                                 self.githubTrendingDevelopser.insert(data, at: 0)
@@ -92,7 +92,7 @@ extension BFExploreController {
             switch result {
             case let .success(response):
                 do {
-                    if let reposResponse = Mapper<BeeFunResponseModel<GithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
+                    if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
                                 self.githubTrendingRepos.insert(data, at: 0)

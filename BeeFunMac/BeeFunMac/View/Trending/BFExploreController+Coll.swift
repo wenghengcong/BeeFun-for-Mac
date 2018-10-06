@@ -64,7 +64,7 @@ extension BFExploreController {
         
         if collectionView == navigationCollectionView {
           
-            if let item =  navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"), for: indexPath) as? BFExpolreNavigationViewItem {
+            if let item =  navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExpolreNavigationViewItem, for: indexPath) as? BFExpolreNavigationViewItem {
                 let sectionTitle = navigationdTitles[indexPath.section]
                 if let sectionData = navigationdData[sectionTitle] {
                     let model = sectionData[indexPath.item]
@@ -75,5 +75,28 @@ extension BFExploreController {
         }
         
         return NSCollectionViewItem()
+    }
+    
+    
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        
+        guard let indexPath = indexPaths.first else {return}
+        guard let item = collectionView.item(at: indexPath) else {return}
+        
+        if collectionView == navigationCollectionView {
+            (item as! BFExpolreNavigationViewItem).setHighlight(selected: true)
+
+        }
+      
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
+        guard let indexPath = indexPaths.first else {return}
+        guard let item = collectionView.item(at: indexPath) else {return}
+        
+        if collectionView == navigationCollectionView {
+            (item as! BFExpolreNavigationViewItem).setHighlight(selected: false)
+            
+        }
     }
 }
