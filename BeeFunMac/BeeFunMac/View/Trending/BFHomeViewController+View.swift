@@ -13,7 +13,6 @@ extension BFHomeViewController {
     
     func setupView() {
         setupCollectionView()
-        navigationCollectionView.reloadData()
     }
     
 }

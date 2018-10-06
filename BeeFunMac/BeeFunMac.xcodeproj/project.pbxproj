@@ -210,6 +210,8 @@
 		5EC3CC622016A11300701C23 /* BFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3CC612016A11300701C23 /* BFLoginController.swift */; };
 		5EC3CC642016AAAE00701C23 /* BFLoginWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3CC632016AAAE00701C23 /* BFLoginWindowController.swift */; };
 		5EC584991FE75B81008A44C9 /* BFStarViewController+TagInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */; };
+		5ECBD90A21686CA300F3C03E /* BFExpolreNavigationViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */; };
+		5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */; };
 		5ECC746B1FD8D8AD00E46B8F /* BFiCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */; };
 		5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E361FF4E36900C14B72 /* SQLConnection.swift */; };
 		5ED37E391FF51EA100C14B72 /* BFStarViewController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */; };
@@ -434,6 +436,8 @@
 		5EC3CC612016A11300701C23 /* BFLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLoginController.swift; sourceTree = "<group>"; };
 		5EC3CC632016AAAE00701C23 /* BFLoginWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLoginWindowController.swift; sourceTree = "<group>"; };
 		5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagInput.swift"; sourceTree = "<group>"; };
+		5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExpolreNavigationViewItem.swift; sourceTree = "<group>"; };
+		5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExpolreNavigationViewItem.xib; sourceTree = "<group>"; };
 		5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFiCloudManager.swift; sourceTree = "<group>"; };
 		5ED37E361FF4E36900C14B72 /* SQLConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLConnection.swift; sourceTree = "<group>"; };
 		5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Noti.swift"; sourceTree = "<group>"; };
@@ -500,6 +504,8 @@
 				5E048A8621436C550098CBF6 /* BFProductHuntViewItem.xib */,
 				5E048A8921436C6B0098CBF6 /* BFHackerNewsViewItem.swift */,
 				5E048A8A21436C6B0098CBF6 /* BFHackerNewsViewItem.xib */,
+				5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */,
+				5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */,
 			);
 			path = "Collection View Item";
 			sourceTree = "<group>";
@@ -1208,6 +1214,7 @@
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E048A75213A10640098CBF6 /* BFHomeViewController.xib in Resources */,
 				5E424D612127B11500066967 /* NightTheme.xcassets in Resources */,
+				5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 				5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */,
@@ -1399,6 +1406,7 @@
 				5E5E822520E4E2CE00E810E2 /* SESearchIssueModel.swift in Sources */,
 				5E5E822B20E4E2CE00E810E2 /* SESearchCommitModel.swift in Sources */,
 				5E9868071FD0FE75007EE86F /* CPHttpStatusCode.swift in Sources */,
+				5ECBD90A21686CA300F3C03E /* BFExpolreNavigationViewItem.swift in Sources */,
 				5E8A2AF41FD1568D00B246BD /* BFNotificationName.swift in Sources */,
 				5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */,
 				5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */,

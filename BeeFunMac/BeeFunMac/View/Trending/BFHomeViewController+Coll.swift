@@ -15,14 +15,16 @@ extension BFHomeViewController {
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
         
-        navigationCollectionView.register(NSNib(nibNamed: NSNib.Name(rawValue: "BFExpolreNavigationViewItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"))
+//        navigationCollectionView.register(NSNib(nibNamed: NSNib.Name(rawValue: "BFExpolreNavigationViewItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"))
         
         detailCollectionView.dataSource = self
         detailCollectionView.delegate = self
         
         
         let layout = navigationCollectionView.collectionViewLayout as! NSCollectionViewFlowLayout
-        layout.itemSize = NSSize(width: 40, height: 30)
+//        layout.itemSize = NSSize(width: 40, height: 30)
+        
+        navigationCollectionView.reloadData()
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
@@ -54,12 +56,10 @@ extension BFHomeViewController {
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
-//        if collectionView == navigationCollectionView {
-//            let item = navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"), for: indexPath)
-////            guard item is BFExpolreNavigationViewItem
-////                else {return item}
-//
-//        }
+        if collectionView == navigationCollectionView {
+            let item =  navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"), for: indexPath)
+            return item
+        }
         
         return NSCollectionViewItem()
     }
