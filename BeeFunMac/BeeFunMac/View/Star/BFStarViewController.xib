@@ -43,8 +43,6 @@
                 <outlet property="tagSortButton" destination="oaY-st-0O5" id="j5W-7i-Wgn"/>
                 <outlet property="tagTable" destination="pkn-Ot-syq" id="a7i-Z5-gAy"/>
                 <outlet property="tagTextLabel" destination="959-bl-xb0" id="KsA-8b-Qbz"/>
-                <outlet property="tagTipsContainView" destination="YUS-ot-KsA" id="Ukd-q0-cEY"/>
-                <outlet property="tagTipsTable" destination="hYT-Xu-Uuz" id="d8F-G5-HKt"/>
                 <outlet property="toolsView" destination="wPW-CZ-c1R" id="P7p-Nt-p3Q"/>
                 <outlet property="toolsViewSepLine" destination="tCe-cf-P17" id="s3m-yw-kcf"/>
                 <outlet property="unTaggedBackView" destination="F0C-y8-O6z" id="5x0-ZC-njH"/>
@@ -173,7 +171,7 @@
                                                 <constraint firstAttribute="width" constant="20" id="M3C-DF-lFj"/>
                                                 <constraint firstAttribute="height" constant="20" id="fLf-h4-pid"/>
                                             </constraints>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_day_untagged" id="8Y2-n9-mdr"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_tag_day_untagged" id="8Y2-n9-mdr"/>
                                         </imageView>
                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="lDV-3l-8PR">
                                             <rect key="frame" x="0.0" y="-2" width="200" height="5"/>
@@ -226,7 +224,7 @@
                                                     <items>
                                                         <menuItem title="A-Z" id="V6A-Qz-mGA"/>
                                                         <menuItem title="1-999" id="4nF-q4-4Mt"/>
-                                                        <menuItem title="00:10" state="on" image="tag_blue_all_star_sel" id="Klh-J1-oPk"/>
+                                                        <menuItem title="00:10" state="on" id="Klh-J1-oPk"/>
                                                     </items>
                                                 </menu>
                                             </popUpButtonCell>
@@ -420,11 +418,6 @@
                         <real value="250"/>
                         <real value="250"/>
                     </holdingPriorities>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
-                            <real key="value" value="0.5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </splitView>
             </subviews>
             <constraints>
@@ -589,7 +582,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -903,7 +896,6 @@
         </scrollView>
     </objects>
     <resources>
-        <image name="star_day_untagged" width="714" height="716"/>
         <image name="star_order_day_a_z" width="40" height="40"/>
         <image name="star_order_day_a_z_sel" width="40" height="40"/>
         <image name="star_order_day_num" width="40" height="40"/>
@@ -911,6 +903,7 @@
         <image name="star_order_day_time" width="21" height="19.5"/>
         <image name="star_order_day_time_sel" width="40" height="40"/>
         <image name="star_tag_day_all_sel" width="786" height="821"/>
+        <image name="star_tag_day_untagged" width="714" height="716"/>
         <image name="star_tool_day_web_arrow_left" width="80" height="80"/>
         <image name="star_tool_day_web_arrow_right" width="80" height="80"/>
         <image name="star_tool_day_web_download" width="100" height="100"/>
@@ -920,6 +913,5 @@
         <image name="star_tool_day_web_star" width="100" height="100"/>
         <image name="star_tool_day_web_star_sel" width="100" height="100"/>
         <image name="star_tool_day_web_tag" width="120" height="120"/>
-        <image name="tag_blue_all_star_sel" width="60" height="60"/>
     </resources>
 </document>
