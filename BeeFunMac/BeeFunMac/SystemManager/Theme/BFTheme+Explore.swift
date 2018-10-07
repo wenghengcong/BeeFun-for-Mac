@@ -31,4 +31,26 @@ extension BFThemeManager {
             return NSColor.white
         }
     }
+    
+    func explre_detail_title_color() -> NSColor {
+        switch themeType {
+        case .day:
+            return NSColor.thDayBlack
+        case .blue:
+            return NSColor.clear
+        case .night:
+            return NSColor.white
+        }
+    }
+    
+    func explre_detail_subTitle_color() -> NSColor {
+        switch themeType {
+        case .day:
+            return NSColor.thDayLightBlack
+        case .blue:
+            return NSColor.clear
+        case .night:
+            return NSColor.white
+        }
+    }
 }

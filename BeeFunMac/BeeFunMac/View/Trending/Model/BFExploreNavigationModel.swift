@@ -10,6 +10,7 @@ import Cocoa
 import ObjectMapper
 
 class BFExploreNavigationModel: NSObject, Mappable {
+    var navType: String?
     var logo: String?
     var title: String?
     var desc: String?
@@ -19,6 +20,7 @@ class BFExploreNavigationModel: NSObject, Mappable {
     }
     
     func mapping(map: Map) {
+        navType <- map["navType"]
         logo <- map["logo"]
         title <- map["title"]
         desc <- map["desc"]

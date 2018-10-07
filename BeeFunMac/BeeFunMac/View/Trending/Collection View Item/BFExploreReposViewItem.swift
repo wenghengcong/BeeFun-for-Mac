@@ -7,6 +7,11 @@
 //
 
 import Cocoa
+import Kingfisher
+
+protocol BFExploreReposViewItemDelete: class {
+    func clickRepostoriesBuiltUserHome(navigationItem: BFExploreReposViewItem, userHome: String)
+}
 
 class BFExploreReposViewItem: NSCollectionViewItem {
 
@@ -18,7 +23,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
     
     @IBOutlet weak var starButton: NSButton!
     
-    @IBOutlet weak var builtUsersBox: NSBox!
+    @IBOutlet weak var builtUsersBox: NSView!
     
     @IBOutlet weak var upLabel: NSTextField!
     @IBOutlet weak var upImageView: NSImageView!
@@ -42,6 +47,11 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         
         view.borderColor = NSColor.thDayBlue
         view.borderWidth = viewOriBorderWidth
+        
+        repoColorLabel.isBordered = false
+        repoColorLabel.radius = repoColorLabel.size.width/2.0
+        repoColorLabel.stringValue = ""
+        
     }
     
     func fillDataToUI() {
@@ -88,7 +98,35 @@ class BFExploreReposViewItem: NSCollectionViewItem {
             forkImageView.isHidden = true
             forkLabel.stringValue = "0"
         }
+        
+        let userXMargin: CGFloat = 3.0
+        let userYMargin: CGFloat = 1.0
+        let w: CGFloat = 17
+        let boxW = builtUsersBox.size.width
+        if let builtUsers = repoModel?.built_by_users {
+            for (index, user) in builtUsers.enumerated() {
+                if let userAvatar = user.avatar, let userAvatarUrl = URL(string: userAvatar) {
+                    let userButton = NSButton()
+                    userButton.kf.setImage(with: userAvatarUrl)
+                    userButton.tag = index
+                    userButton.imagePosition = .imageOnly
+                    userButton.isBordered = false
+                    var x = CGFloat(index) * (w + userXMargin)
+                    var y: CGFloat = 0
+                    if x > boxW {
+                        x = userXMargin
+                        y = y + userYMargin + w
+                    }
+                    userButton.frame = CGRect(x: x, y: y, width: w, height: w)
+                    builtUsersBox.addSubview(userButton)
+                }
+            }
+        }
     }
     
+    
+    @objc func clickBuiltByUser(sender: NSButton) {
+        
+    }
     
 }

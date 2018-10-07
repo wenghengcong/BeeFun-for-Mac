@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ObjectMapper
 /*
  {
      "url":"https://github.com/SatanWoo",
@@ -14,9 +15,25 @@ import Cocoa
      "login":"SatanWoo"
  }
  */
-class BFGithubTrendingUserModel: NSObject {
+class BFGithubTrendingUserModel: NSObject, Mappable {
     
+    /// 主页
     var url: String?
+    
+    /// 头像
     var avatar: String?
+    
+    /// login 名
     var login: String?
+    
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        url <- map["url"]
+        avatar <- map["avatar"]
+        login <- map["login"]
+    }
 }

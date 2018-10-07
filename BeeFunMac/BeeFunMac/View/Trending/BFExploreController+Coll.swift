@@ -24,13 +24,30 @@ extension BFExploreController {
         let layout = navigationCollectionView.collectionViewLayout as! NSCollectionViewFlowLayout
         layout.itemSize = NSSize(width: 240, height: 80)
         layout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
-
-//        let detaiLlayout = detailCollectionView.collectionViewLayout as! NSCollectionViewFlowLayout
-//        detaiLlayout.itemSize = NSSize(width: 350, height: 190)
-//        detaiLlayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
-
-        
     }
+    
+    // MARK: - layout
+    func changeFlowLayout() {
+        var layout: NSCollectionViewFlowLayout?
+        switch navigationType {
+        case .githubTrendingDevelopers:
+            layout = BFExploreDeveloperFlowLayout()
+        case .githubTrendingRepos:
+            layout = BFExploreRepositiesFlowLayout()
+        default:
+            layout = BFExploreRepositiesFlowLayout()
+        }
+        // 假如直接调用detailCollectionView.collectionViewLayout = layout会crash
+        // 必须先调用下面两句
+        detailCollectionView.reloadData()
+        detailCollectionView.collectionViewLayout?.invalidateLayout()
+        detailCollectionView.collectionViewLayout = layout
+        //设置滚动区域大小
+        detailCollectionView.size = layout?.collectionViewContentSize ?? CGSize.zero
+    }
+    
+    
+    // MARK: - Collection view datasource
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
         if collectionView == navigationCollectionView {
@@ -48,16 +65,24 @@ extension BFExploreController {
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == navigationCollectionView {
-            let sectionTitle = navigationdTitles[section]
-            if let sectionData = navigationdData[sectionTitle] {
-                return sectionData.count
+            if section < navigationdTitles.count {
+                let sectionTitle = navigationdTitles[section]
+                if let sectionData = navigationdData[sectionTitle] {
+                    return sectionData.count
+                }
             }
             return 0
         } else if collectionView == detailCollectionView {
             if navigationType == .githubTrendingRepos {
-                return githubTrendingReposData[section].count
+                if section < githubTrendingReposData.count {
+                    return githubTrendingReposData[section].count
+                }
+                return 0
             } else if navigationType == .githubTrendingDevelopers {
-                return githubTrendingDevelopserData[section].count
+                if section < githubTrendingDevelopserData.count {
+                    return githubTrendingDevelopserData[section].count
+                }
+                return 0
             }
         }
         return 0
@@ -68,11 +93,13 @@ extension BFExploreController {
         if collectionView == navigationCollectionView {
           
             if let item =  navigationCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExpolreNavigationViewItem, for: indexPath) as? BFExpolreNavigationViewItem {
+                
                 let sectionTitle = navigationdTitles[indexPath.section]
                 if let sectionData = navigationdData[sectionTitle] {
                     let model = sectionData[indexPath.item]
                     item.exploreNavModel = model
                 }
+                item.itemDelegate = self
                 return item
             }
         } else if collectionView == detailCollectionView {
@@ -80,12 +107,14 @@ extension BFExploreController {
             case .githubTrendingDevelopers:
                 if let item =  detailCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreDevelopersViewItem, for: indexPath) as? BFExploreDevelopersViewItem {
                     let sectionIndexData = githubTrendingDevelopserData[indexPath.section][indexPath.item]
-                    //                    item.repoModel = sectionIndexData
+                    item.userModel = sectionIndexData
+                    return item
                 }
             case .githubTrendingRepos:
                
                 if let item =  detailCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreReposViewItem, for: indexPath) as? BFExploreReposViewItem {
                     let sectionIndexData = githubTrendingReposData[indexPath.section][indexPath.item]
+                    
                     item.repoModel = sectionIndexData
                     return item
                 }
@@ -98,15 +127,20 @@ extension BFExploreController {
         return NSCollectionViewItem()
     }
     
-    
+    // MARK: - Collection view delegate
+
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         
         guard let indexPath = indexPaths.first else {return}
         guard let item = collectionView.item(at: indexPath) else {return}
         
         if collectionView == navigationCollectionView {
-            (item as! BFExpolreNavigationViewItem).setHighlight(selected: true)
-            clickNavigationArea()
+            let navItem = item as! BFExpolreNavigationViewItem
+            navItem.setHighlight(selected: true)
+            clickNavigationArea(navigationItem: navItem)
+            changeFlowLayout()
+        } else if collectionView == detailCollectionView {
+            
         }
       
     }
@@ -116,14 +150,19 @@ extension BFExploreController {
         guard let item = collectionView.item(at: indexPath) else {return}
         
         if collectionView == navigationCollectionView {
-            (item as! BFExpolreNavigationViewItem).setHighlight(selected: false)
+            let navItem = item as! BFExpolreNavigationViewItem
+            navItem.setHighlight(selected: false)
+        } else if collectionView == detailCollectionView {
             
         }
     }
     
     // MARK: - Navigation area action
-    func clickNavigationArea() {
+    // MARK: click
+    func clickNavigationArea(navigationItem: BFExpolreNavigationViewItem) {
         
+        navigationType = NavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
+
         switch navigationType {
         case .githubTrendingDevelopers:
             getGithubTrendingDeveloper(refresh: false)
@@ -134,7 +173,10 @@ extension BFExploreController {
         }
     }
     
+    // MARK: double click
     func doubleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem) {
+        navigationType = NavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
+
         switch navigationType {
         case .githubTrendingDevelopers:
             getGithubTrendingDeveloper(refresh: true)

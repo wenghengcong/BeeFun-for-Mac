@@ -65,6 +65,8 @@ class BFGithubTrengingModel: NSObject, Mappable {
     var repo_desc: String?
     var built_by_users: [BFGithubTrendingUserModel]?
 
+    private var built_by_users_string: String?
+
     required init?(map: Map) {
         
     }
@@ -95,6 +97,10 @@ class BFGithubTrengingModel: NSObject, Mappable {
         created_at <- map["created_at"]
         updated_at <- map["updated_at"]
         repo_desc <- map["repo_desc"]
-        built_by_users <- map["built_by_users"]
+        built_by_users_string <- map["built_by_users"]
+        
+        if let userJson = built_by_users_string, let users = Mapper<BFGithubTrendingUserModel>().mapArray(JSONString: userJson) {
+            built_by_users = users
+        }
     }
 }

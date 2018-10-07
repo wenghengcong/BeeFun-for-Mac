@@ -10,6 +10,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="BFExploreController" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="detailCollectionView" destination="99o-y4-ATc" id="1nO-pE-ahi"/>
+                <outlet property="detailLayout" destination="dUp-Y1-b66" id="otA-Tk-L81"/>
                 <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>
                 <outlet property="searchButton" destination="pRO-C6-N13" id="Ba4-uu-koy"/>
                 <outlet property="searchTextField" destination="PT4-5j-FgO" id="FlQ-KX-DvW"/>

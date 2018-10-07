@@ -8,10 +8,10 @@
 
 import Cocoa
 
-enum NavigationProductType {
-    case githubTrendingRepos
-    case githubTrendingDevelopers
-    case prodhuctHunt
+enum NavigationProductType: String {
+    case githubTrendingRepos = "1"
+    case githubTrendingDevelopers = "2"
+    case prodhuctHunt = "3"
 }
 
 class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete {
@@ -21,6 +21,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     
     @IBOutlet weak var navigationCollectionView: NSCollectionView!
     @IBOutlet weak var detailCollectionView: NSCollectionView!
+    @IBOutlet weak var detailLayout: NSCollectionViewFlowLayout!
     
     var navigationType: NavigationProductType = .githubTrendingRepos
     var requesRepostModel: BFGithubTrendingRequsetModel?

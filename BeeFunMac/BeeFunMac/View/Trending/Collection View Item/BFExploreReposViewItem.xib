@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BFExploreReposViewItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
-                <outlet property="builtUsersBox" destination="Zzx-eT-6EV" id="sYg-aA-OGg"/>
+                <outlet property="builtUsersBox" destination="UjS-f1-3UH" id="keU-hk-5k4"/>
                 <outlet property="forkImageView" destination="oHU-5Y-OvO" id="Xzi-lp-502"/>
                 <outlet property="forkLabel" destination="fsA-9A-uaC" id="7Yq-ym-PW5"/>
                 <outlet property="repoColorLabel" destination="1b9-if-q6I" id="g62-i6-fUN"/>
@@ -30,20 +30,20 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-dh-aHj">
-                    <rect key="frame" x="0.0" y="-10" width="300" height="160"/>
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gok-Dh-meG">
-                            <rect key="frame" x="8" y="59" width="218" height="60"/>
+                            <rect key="frame" x="8" y="56" width="218" height="54"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="feedbacks by BeeFun macOS/iOS app." id="yWN-CG-T04">
-                                <font key="font" metaFont="system" size="11"/>
+                                <font key="font" metaFont="smallSystem"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwC-CH-pF7">
-                            <rect key="frame" x="9" y="121" width="156" height="31"/>
+                            <rect key="frame" x="9" y="111" width="194" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="bevel" title="BeeFunFeedback" bezelStyle="regularSquare" alignment="left" imageScaling="proportionallyDown" inset="2" id="zIl-h5-Xko">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -51,11 +51,11 @@
                             </buttonCell>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-if-q6I" customClass="BFButton" customModule="BeeFun" customModuleProvider="target">
-                            <rect key="frame" x="191" y="126" width="21" height="21"/>
+                            <rect key="frame" x="214" y="120" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="bevel" title="c" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="JeP-67-DQG">
+                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JeP-67-DQG">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system" size="9"/>
+                                <font key="font" metaFont="miniSystem"/>
                             </buttonCell>
                             <color key="contentTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                             <userDefinedRuntimeAttributes>
@@ -65,7 +65,7 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1io-EO-SqK">
-                            <rect key="frame" x="218" y="121" width="70" height="31"/>
+                            <rect key="frame" x="224" y="112" width="63" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="bevel" title="Javascript" bezelStyle="regularSquare" alignment="left" imageScaling="proportionallyDown" inset="2" id="p49-HM-8LT">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -73,7 +73,7 @@
                             </buttonCell>
                         </button>
                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-32-N47">
-                            <rect key="frame" x="20" y="18" width="80" height="20"/>
+                            <rect key="frame" x="12" y="28" width="80" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-K7-20X">
@@ -85,7 +85,7 @@
                                     <rect key="frame" x="23" y="1" width="59" height="17"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="12790" id="vPD-jm-qDw">
-                                        <font key="font" metaFont="system" size="12"/>
+                                        <font key="font" metaFont="cellTitle"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -93,7 +93,7 @@
                             </subviews>
                         </customView>
                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iu4-dI-P6P">
-                            <rect key="frame" x="123" y="20" width="70" height="16"/>
+                            <rect key="frame" x="13" y="8" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEB-iB-LzX">
@@ -105,7 +105,7 @@
                                     <rect key="frame" x="19" y="0.0" width="46" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="438759" id="gnu-7u-ofG">
-                                        <font key="font" metaFont="system" size="11"/>
+                                        <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -113,7 +113,7 @@
                             </subviews>
                         </customView>
                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-fc-3dE">
-                            <rect key="frame" x="218" y="20" width="70" height="16"/>
+                            <rect key="frame" x="93" y="8" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHU-5Y-OvO">
@@ -125,7 +125,7 @@
                                     <rect key="frame" x="18" y="0.0" width="54" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="8902" id="wQL-rB-2Mj">
-                                        <font key="font" metaFont="system" size="11"/>
+                                        <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -133,23 +133,28 @@
                             </subviews>
                         </customView>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXt-4P-vDt">
-                            <rect key="frame" x="238" y="81" width="44" height="25"/>
+                            <rect key="frame" x="238" y="71" width="44" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="square" title="Star" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="csA-JC-eWh">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
-                        <box fixedFrame="YES" boxType="custom" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Zzx-eT-6EV">
-                            <rect key="frame" x="137" y="41" width="151" height="17"/>
+                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-f1-3UH">
+                            <rect key="frame" x="192" y="8" width="95" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <view key="contentView" ambiguous="YES" id="7ZK-c8-0FU">
-                                <rect key="frame" x="1" y="1" width="149" height="15"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </view>
-                            <color key="borderColor" red="1" green="0.22959857440000001" blue="0.31415281880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="fillColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </box>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13D-FQ-21w">
+                                    <rect key="frame" x="-2" y="24" width="99" height="13"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Built by" id="Mdj-3q-ErE">
+                                        <font key="font" metaFont="system" size="10"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </customView>
                     </subviews>
                 </customView>
             </subviews>
@@ -157,7 +162,7 @@
         </customView>
         <collectionViewItem identifier="BFExploreReposViewItem" id="1RG-mD-Yhn" customClass="BFExploreReposViewItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
-                <outlet property="builtUsersBox" destination="Zzx-eT-6EV" id="XOx-6s-lVx"/>
+                <outlet property="builtUsersBox" destination="UjS-f1-3UH" id="IVA-sF-FSB"/>
                 <outlet property="forkImageView" destination="oHU-5Y-OvO" id="tCx-fD-aln"/>
                 <outlet property="forkLabel" destination="fsA-9A-uaC" id="Ipd-0A-GVC"/>
                 <outlet property="repoColorLabel" destination="1b9-if-q6I" id="XzJ-c1-nas"/>

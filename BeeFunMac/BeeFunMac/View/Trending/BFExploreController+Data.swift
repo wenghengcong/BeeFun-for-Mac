@@ -22,12 +22,14 @@ extension BFExploreController {
         navigationdTitles = ["Github"]
         
         let github_trending_repo = [
+            "navType": "1",
             "logo":"exp_nav_github_trend",
             "title": "Trending Repositories",
             "desc": "See what the GitHub community is most excited about today."
         ]
         
         let github_trending_developers = [
+            "navType": "2",
             "logo":"exp_nav_github_trend",
             "title": "Trending Developers",
             "desc": "These are the organizations and developers building the hot tools today."
@@ -61,18 +63,19 @@ extension BFExploreController {
         requesRepostModel?.direction = "desc"
         
         requesDeveloperModel = BFGithubTrendingRequsetModel()
-        requesDeveloperModel?.type = 1
+        requesDeveloperModel?.type = 2
         requesDeveloperModel?.source = 1
         requesDeveloperModel?.time = BFGihubTrendingTimeEnum.daily
         requesDeveloperModel?.page = 1
         requesDeveloperModel?.perpage = 100
         requesDeveloperModel?.sort = "pos"
-        requesDeveloperModel?.direction = "desc"
+        requesDeveloperModel?.direction = "asc"
     }
     
     func getGithubTrendingDeveloper(refresh: Bool) {
         
         if !refresh && githubTrendingDevelopserData.count > 0  {
+            detailCollectionView.reloadData()
             return
         }
         
@@ -83,7 +86,11 @@ extension BFExploreController {
                     if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
-                                self.githubTrendingDevelopserData.insert(data, at: 0)
+                                if self.githubTrendingDevelopserData.count > 1 {
+                                    self.githubTrendingDevelopserData[0] = data
+                                } else {
+                                    self.githubTrendingDevelopserData.insert(data, at: 0)
+                                }
                                 self.detailCollectionView.reloadData()
                             }
                         }
@@ -100,6 +107,7 @@ extension BFExploreController {
     func getGithubTrendingReopsitories(refresh: Bool) {
 
         if !refresh && githubTrendingDevelopserData.count > 0  {
+            detailCollectionView.reloadData()
             return
         }
         
@@ -110,7 +118,11 @@ extension BFExploreController {
                     if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
-                                self.githubTrendingReposData.insert(data, at: 0)
+                                if self.githubTrendingReposData.count > 1 {
+                                    self.githubTrendingReposData[0] = data
+                                } else {
+                                    self.githubTrendingReposData.insert(data, at: 0)
+                                }
                                 self.detailCollectionView.reloadData()
                             }
                         }

@@ -217,6 +217,7 @@
 		5ECBD9112168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */; };
 		5ECBD9132168B27200F3C03E /* BFNibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD9122168B27200F3C03E /* BFNibName.swift */; };
 		5ECBD9152168CE5300F3C03E /* BFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD9142168CE5300F3C03E /* BFButton.swift */; };
+		5ECBD9172169B2BB00F3C03E /* Dictionary+Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD9162169B2BB00F3C03E /* Dictionary+Attribute.swift */; };
 		5ECC746B1FD8D8AD00E46B8F /* BFiCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */; };
 		5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E361FF4E36900C14B72 /* SQLConnection.swift */; };
 		5ED37E391FF51EA100C14B72 /* BFStarViewController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */; };
@@ -225,6 +226,8 @@
 		5EE9E78B1FCEB1F40012AE1C /* BFWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78A1FCEB1F40012AE1C /* BFWebView.swift */; };
 		5EE9E78D1FCEB7A20012AE1C /* IconBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78C1FCEB7A20012AE1C /* IconBarView.swift */; };
 		5EE9E78F1FCEC86D0012AE1C /* BFMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78E1FCEC86D0012AE1C /* BFMainView.swift */; };
+		5EEAC28E2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEAC28D2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift */; };
+		5EEAC2902169FF920060E253 /* BFExploreDeveloperFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEAC28F2169FF920060E253 /* BFExploreDeveloperFlowLayout.swift */; };
 		5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB14D1201833B400304AD3 /* GeneralPreferenceController.xib */; };
 		5EFB14D420185C9C00304AD3 /* BFMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */; };
 		9C160C48E67F7D29462F7C6C /* Pods_BeeFun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D572D7F257BFDE1CD24E6E07 /* Pods_BeeFun.framework */; };
@@ -448,6 +451,7 @@
 		5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFUserInterfaceItemIdentifier.swift; sourceTree = "<group>"; };
 		5ECBD9122168B27200F3C03E /* BFNibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFNibName.swift; sourceTree = "<group>"; };
 		5ECBD9142168CE5300F3C03E /* BFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFButton.swift; sourceTree = "<group>"; };
+		5ECBD9162169B2BB00F3C03E /* Dictionary+Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Attribute.swift"; sourceTree = "<group>"; };
 		5ECC746A1FD8D8AD00E46B8F /* BFiCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFiCloudManager.swift; sourceTree = "<group>"; };
 		5ED37E361FF4E36900C14B72 /* SQLConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLConnection.swift; sourceTree = "<group>"; };
 		5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Noti.swift"; sourceTree = "<group>"; };
@@ -456,6 +460,8 @@
 		5EE9E78A1FCEB1F40012AE1C /* BFWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWebView.swift; sourceTree = "<group>"; };
 		5EE9E78C1FCEB7A20012AE1C /* IconBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBarView.swift; sourceTree = "<group>"; };
 		5EE9E78E1FCEC86D0012AE1C /* BFMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMainView.swift; sourceTree = "<group>"; };
+		5EEAC28D2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreRepositiesFlowLayout.swift; sourceTree = "<group>"; };
+		5EEAC28F2169FF920060E253 /* BFExploreDeveloperFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreDeveloperFlowLayout.swift; sourceTree = "<group>"; };
 		5EFB14D1201833B400304AD3 /* GeneralPreferenceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferenceController.xib; sourceTree = "<group>"; };
 		5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMenuManager.swift; sourceTree = "<group>"; };
 		6393F5C2089AFD6AB1F713A8 /* Pods_BeeFunMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeFunMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -481,6 +487,7 @@
 		5E048A71213A0E8F0098CBF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5EEAC28C2169FF4F0060E253 /* Layout */,
 				5E2C9D43216469C0001910F9 /* Model */,
 				5E048A7C21436BEB0098CBF6 /* Collection View Item */,
 				5E048A73213A10640098CBF6 /* BFExploreController.xib */,
@@ -526,6 +533,7 @@
 				5E7F6F6C1FDD85B80050B50F /* JSDevice.swift */,
 				5E2B26751FDC34AC00600866 /* LCBaseTableCellView.swift */,
 				5E7F6F681FDD7F460050B50F /* LCButton.swift */,
+				5ECBD9162169B2BB00F3C03E /* Dictionary+Attribute.swift */,
 				5E7F6F6E1FDD86D10050B50F /* NSView+Draw.swift */,
 			);
 			path = LCUI;
@@ -1122,6 +1130,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5EEAC28C2169FF4F0060E253 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5EEAC28D2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift */,
+				5EEAC28F2169FF920060E253 /* BFExploreDeveloperFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		CD1B311EECDE6343F3E6383D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1403,6 +1420,7 @@
 				5EE9E78D1FCEB7A20012AE1C /* IconBarView.swift in Sources */,
 				5E9867E61FD05189007EE86F /* ObjBase.swift in Sources */,
 				5EA4350A1FDB7E8900034578 /* BFImageButton.swift in Sources */,
+				5ECBD9172169B2BB00F3C03E /* Dictionary+Attribute.swift in Sources */,
 				5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */,
 				5E9867E31FD05189007EE86F /* ObjError.swift in Sources */,
 				5E9867F51FD052AE007EE86F /* JSApp.swift in Sources */,
@@ -1433,6 +1451,7 @@
 				5E98679E1FD05044007EE86F /* BFThirdLibKey.swift in Sources */,
 				5E048A8B21436C6B0098CBF6 /* BFHackerNewsViewItem.swift in Sources */,
 				5E9867D21FD05189007EE86F /* ObjDeploymentPayload.swift in Sources */,
+				5EEAC28E2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift in Sources */,
 				5EE9E78B1FCEB1F40012AE1C /* BFWebView.swift in Sources */,
 				5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */,
 				5E2C9D4021645A34001910F9 /* BFExploreController+Search.swift in Sources */,
@@ -1460,6 +1479,7 @@
 				5EC1B1A62018D62100186A67 /* BFJumpWebStie.swift in Sources */,
 				5E9867D11FD05189007EE86F /* ObjDeployment.swift in Sources */,
 				5E9ECE251FE0325300C02B3F /* BFStarViewController+Web.swift in Sources */,
+				5EEAC2902169FF920060E253 /* BFExploreDeveloperFlowLayout.swift in Sources */,
 				5E9867DB1FD05189007EE86F /* ObjRelease.swift in Sources */,
 				5E2C9D4D2165B316001910F9 /* BFGihubTrendingTimeEnum.swift in Sources */,
 				5EBF53F71FCFF82000D7A2A5 /* BFOldHomeController.swift in Sources */,
