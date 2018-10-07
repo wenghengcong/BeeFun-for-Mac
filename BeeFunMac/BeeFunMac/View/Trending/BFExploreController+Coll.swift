@@ -12,6 +12,14 @@ extension BFExploreController {
 
     func setupCollectionView() {
         
+        view.backgColor = NSColor.white
+        
+        navigationSepLine.backgColor = NSColor.thDayBlue
+        detailSepLine.backgColor = NSColor.thDayBlue
+        
+        navigationContainView.backgColor = NSColor.white
+        detailContailView.backgColor = NSColor.white
+        
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
         
@@ -19,7 +27,6 @@ extension BFExploreController {
         
         detailCollectionView.dataSource = self
         detailCollectionView.delegate = self
-        
         
         let layout = navigationCollectionView.collectionViewLayout as! NSCollectionViewFlowLayout
         layout.itemSize = NSSize(width: 240, height: 80)
