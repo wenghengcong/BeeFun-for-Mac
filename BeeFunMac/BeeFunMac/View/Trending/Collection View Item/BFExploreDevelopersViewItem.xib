@@ -19,11 +19,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="120" height="155"/>
+            <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jak-oe-BGj">
-                    <rect key="frame" x="19" y="59" width="82" height="82"/>
+                    <rect key="frame" x="19" y="69" width="82" height="82"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="avatar_myself" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="R6E-gR-ACb">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -31,12 +31,12 @@
                     </buttonCell>
                 </button>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-xC-Y1O">
-                    <rect key="frame" x="11" y="10" width="15" height="15"/>
+                    <rect key="frame" x="11" y="13" width="15" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exp_detail_trend_repo" id="dsd-VR-twN"/>
                 </imageView>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDE-X9-Bff">
-                    <rect key="frame" x="88" y="126" width="23" height="23"/>
+                    <rect key="frame" x="88" y="136" width="23" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="hW2-Ml-8MA">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -44,7 +44,7 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hd6-Wc-70s">
-                    <rect key="frame" x="5" y="33" width="109" height="25"/>
+                    <rect key="frame" x="5" y="34" width="109" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="wenghengcong" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="wtL-Ug-Zz6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -52,11 +52,19 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-PX-FWW">
-                    <rect key="frame" x="28" y="5" width="83" height="25"/>
+                    <rect key="frame" x="28" y="8" width="83" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="BeeFun" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="e0U-vJ-m9h">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
+                    </buttonCell>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rwd-4G-sed">
+                    <rect key="frame" x="63" y="56" width="57" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_detail_trend_follow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tk0-4u-BCx">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
             </subviews>
@@ -75,6 +83,7 @@
     </objects>
     <resources>
         <image name="avatar_myself" width="105" height="105"/>
+        <image name="exp_detail_trend_follow" width="100" height="73"/>
         <image name="exp_detail_trend_repo" width="50" height="50"/>
     </resources>
 </document>
