@@ -192,6 +192,7 @@
 		5EA4350D1FDB80C600034578 /* BFStarOrderFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4350C1FDB80C600034578 /* BFStarOrderFilterView.swift */; };
 		5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */; };
 		5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B351FEB6025007AC06E /* BFTextField.swift */; };
+		5EAACF6B216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */; };
 		5EAB03082003B65400323A86 /* BFStarTagCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB03072003B65400323A86 /* BFStarTagCellView.swift */; };
 		5EAB030A2003B66500323A86 /* BFStarTagCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAB03092003B66500323A86 /* BFStarTagCellView.xib */; };
 		5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB030B20041CCB00323A86 /* BFStarViewController+Table.swift */; };
@@ -425,6 +426,7 @@
 		5EA4350C1FDB80C600034578 /* BFStarOrderFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarOrderFilterView.swift; sourceTree = "<group>"; };
 		5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextFieldCell.swift; sourceTree = "<group>"; };
 		5EA84B351FEB6025007AC06E /* BFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextField.swift; sourceTree = "<group>"; };
+		5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExpolreNavigationFlowLayout.swift; sourceTree = "<group>"; };
 		5EAB03072003B65400323A86 /* BFStarTagCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarTagCellView.swift; sourceTree = "<group>"; };
 		5EAB03092003B66500323A86 /* BFStarTagCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarTagCellView.xib; sourceTree = "<group>"; };
 		5EAB030B20041CCB00323A86 /* BFStarViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Table.swift"; sourceTree = "<group>"; };
@@ -1135,6 +1137,7 @@
 			children = (
 				5EEAC28D2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift */,
 				5EEAC28F2169FF920060E253 /* BFExploreDeveloperFlowLayout.swift */,
+				5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -1432,6 +1435,7 @@
 				5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */,
 				5E8A2AEE1FD13EC200B246BD /* AnswerManager.swift in Sources */,
 				5E9867F91FD05399007EE86F /* String+Extension.swift in Sources */,
+				5EAACF6B216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift in Sources */,
 				5EA3BF4420AAA41C00D3CC79 /* BeeFunResponseModel.swift in Sources */,
 				5E9867CC1FD05189007EE86F /* DataModel.swift in Sources */,
 				5E9868151FD105EA007EE86F /* NetworkHelper.swift in Sources */,

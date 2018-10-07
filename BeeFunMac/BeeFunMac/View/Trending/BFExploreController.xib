@@ -13,6 +13,7 @@
                 <outlet property="detailLayout" destination="dUp-Y1-b66" id="otA-Tk-L81"/>
                 <outlet property="detailScrollView" destination="gGT-YX-KPD" id="bjL-vh-SZX"/>
                 <outlet property="detailSepLine" destination="REM-wE-8OS" id="ND7-pZ-3Sr"/>
+                <outlet property="navAndDetailSepLine" destination="XlB-lg-gE8" id="Kwh-Ow-l4K"/>
                 <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>
                 <outlet property="navigationContainView" destination="11I-39-gsf" id="y79-Jw-enF"/>
                 <outlet property="navigationScrollView" destination="z4f-Ko-MKH" id="Vc2-0z-F8Y"/>
@@ -62,6 +63,7 @@
                                         </connections>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </clipView>
                             <constraints>
                                 <constraint firstAttribute="width" constant="280" id="0LN-ya-7qN"/>

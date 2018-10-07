@@ -17,6 +17,10 @@ extension NSColor {
         return NSColor.hex("ffffff", alpha: 1.0);
     }
     
+    /// 灰色背景色值
+    class var thDayGrayBackground: NSColor {
+        return NSColor.hex("f5f5f5", alpha: 1.0);
+    }
     
     /// 蓝色Icon的颜色值
     class var thDayBlue: NSColor {

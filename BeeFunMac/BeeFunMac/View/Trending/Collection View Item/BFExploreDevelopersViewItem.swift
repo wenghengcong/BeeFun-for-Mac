@@ -31,6 +31,8 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        view.backgColor = NSColor.white
+
         posButton.backgColor = NSColor.thDayBlue
         
         avatarImageView.imagePosition = .imageOnly
@@ -40,7 +42,7 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         posButton.radius = posButton.width/2.0
         
         view.radius = 5.0
-        view.borderColor = NSColor.thDayBlue
+        view.borderColor = NSColor.white
         view.borderWidth = viewOriBorderWidth
     }
     /*

@@ -31,6 +31,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     
     @IBOutlet weak var navigationSepLine: NSBox!
     @IBOutlet weak var detailSepLine: NSBox!
+    @IBOutlet weak var navAndDetailSepLine: NSBox!
     
     var navigationType: NavigationProductType = .githubTrendingRepos
     var requesRepostModel: BFGithubTrendingRequsetModel?

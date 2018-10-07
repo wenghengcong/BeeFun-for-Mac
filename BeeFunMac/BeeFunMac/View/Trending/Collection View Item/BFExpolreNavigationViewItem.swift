@@ -21,7 +21,7 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     open weak var itemDelegate: BFExpolreNavigationViewItemDelete?
     
     let viewOriBorderWidth: CGFloat = 1.0
-    let viewSelBorderWidth: CGFloat = 3.0
+    let viewSelBorderWidth: CGFloat = 2.0
     
     var exploreNavModel: BFExploreNavigationModel? {
         didSet {
@@ -36,11 +36,12 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        view.backgColor = NSColor.clear
+        view.backgColor = NSColor.white
+        
         titleLabel.textColor = BFThemeManager.shared.explre_nav_title_color()
         descLabel.textColor = BFThemeManager.shared.explre_nav_subTitle_color()
         view.radius = 6.0
-        view.borderColor = NSColor.thDayBlue
+//        view.borderColor = NSColor.white
     }
     
     override func viewDidAppear() {
@@ -48,8 +49,10 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     }
     
     func setHighlight(selected: Bool) {
-        view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
-        view.backgColor = selected ? NSColor.hex("#2e7dfb", alpha: 0.1)  : NSColor.clear
+//        view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
+        view.backgColor = selected ? NSColor.hex("#2e7dfb", alpha: 1.0)  : NSColor.white
+        titleLabel.textColor = selected ? NSColor.white : BFThemeManager.shared.explre_nav_title_color()
+        descLabel.textColor = selected ? NSColor.white : BFThemeManager.shared.explre_nav_subTitle_color()
     }
     
     override func mouseDown(with event: NSEvent) {

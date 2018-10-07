@@ -44,8 +44,8 @@ class BFExploreReposViewItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
-        view.borderColor = NSColor.thDayBlue
+        view.backgColor = NSColor.white
+        view.borderColor = NSColor.white
         view.borderWidth = viewOriBorderWidth
         
         view.radius = 5.0
@@ -88,7 +88,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                     make.width.equalTo(8.0)
                     make.height.equalTo(8.0)
                     make.centerY.equalTo(self.repoLanguageLabel.snp.centerY).offset(1)
-                    make.trailing.equalTo(self.repoLanguageLabel.snp.leading).offset(-5.0)
+                    make.trailing.equalTo(self.repoLanguageLabel.snp.leading).offset(-3.0)
                 }
             } else {
                 repoLanguageLabel.isHidden = true
