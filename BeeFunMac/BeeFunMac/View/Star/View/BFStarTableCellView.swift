@@ -216,7 +216,7 @@ import Cocoa
             let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]
             repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
             
-            repoNameLbl.sizeToFit()
+//            repoNameLbl.sizeToFit()
             if repoNameLbl.width > 172 {
                 font = NSFont.bfSystemFont(ofSize: 14.0)
                 let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]

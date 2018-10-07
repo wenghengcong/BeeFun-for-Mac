@@ -11,29 +11,50 @@ import Cocoa
 class AttributedDictionary {
     
    class func attributeDictionary(foreColor: NSColor, alignment: NSTextAlignment) -> [NSAttributedString.Key : Any] {
-        let style = NSMutableParagraphStyle()
-        style.alignment = alignment
-        let dic = [NSAttributedStringKey.foregroundColor:foreColor,
-                       NSAttributedStringKey.paragraphStyle: style]
-        return dic
+        return attributeDictionary(foreColor: foreColor, backColor: nil, alignment: alignment, lineBreak: nil, baselineOffset: nil, font: nil)
     }
     
     
     class func attributeDictionary(foreColor: NSColor, alignment: NSTextAlignment, font: NSFont) -> [NSAttributedString.Key : Any] {
-        let style = NSMutableParagraphStyle()
-        style.alignment = alignment
-        let dic = [NSAttributedStringKey.foregroundColor:foreColor,
-                   NSAttributedStringKey.paragraphStyle: style,
-                   NSAttributedStringKey.font: font]
-        return dic
+        return attributeDictionary(foreColor: foreColor, backColor: nil, alignment: alignment, lineBreak: nil, baselineOffset: nil, font: font)
     }
     
     class func attributeDictionary(foreColor: NSColor, backColor: NSColor, alignment: NSTextAlignment) -> [NSAttributedString.Key : Any] {
+        return attributeDictionary(foreColor: foreColor, backColor: backColor, alignment: alignment, lineBreak: nil, baselineOffset: nil, font: nil)
+    }
+    
+    class func attributeDictionary(foreColor: NSColor, backColor: NSColor, alignment: NSTextAlignment, font: NSFont) -> [NSAttributedString.Key : Any] {
+        return attributeDictionary(foreColor: foreColor, backColor: backColor, alignment: alignment, lineBreak: nil, baselineOffset: nil, font: font)
+    }
+    
+    class func attributeDictionary(foreColor: NSColor, backColor: NSColor?, alignment: NSTextAlignment?, lineBreak: NSLineBreakMode?, baselineOffset: NSNumber?, font: NSFont?) -> [NSAttributedString.Key : Any] {
+        
         let style = NSMutableParagraphStyle()
-        style.alignment = alignment
-        let dic = [NSAttributedStringKey.foregroundColor:foreColor,
-                   NSAttributedStringKey.backgroundColor:backColor,
-                   NSAttributedStringKey.paragraphStyle: style]
-        return dic
+        if alignment != nil {
+            style.alignment = alignment!
+        }
+        if lineBreak != nil {
+            style.lineBreakMode = lineBreak!
+        }
+        
+        var attributeDic: [NSAttributedString.Key : Any] = [:]
+        attributeDic[NSAttributedStringKey.foregroundColor] = foreColor
+
+        if alignment != nil || lineBreak != nil {
+            attributeDic[NSAttributedStringKey.paragraphStyle] = style
+        }
+        
+        if backColor != nil {
+            attributeDic[NSAttributedStringKey.backgroundColor] = backColor
+        }
+        
+        if baselineOffset != nil {
+            attributeDic[NSAttributedStringKey.baselineOffset] = baselineOffset!
+        }
+        
+        if font != nil {
+            attributeDic[NSAttributedStringKey.font] = font!
+        }
+        return attributeDic
     }
 }

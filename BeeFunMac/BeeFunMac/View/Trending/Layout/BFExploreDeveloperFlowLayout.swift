@@ -12,7 +12,7 @@ class BFExploreDeveloperFlowLayout: NSCollectionViewFlowLayout {
 
     override init() {
         super.init()
-        itemSize = NSMakeSize(120, 155)
+        itemSize = NSMakeSize(120, 160)
         minimumInteritemSpacing = 10.0
         minimumLineSpacing = 10.0
         sectionInset = NSEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)

@@ -39,6 +39,7 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         
         posButton.radius = posButton.width/2.0
         
+        view.radius = 5.0
         view.borderColor = NSColor.thDayBlue
         view.borderWidth = viewOriBorderWidth
     }
@@ -66,23 +67,23 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         }
         
         if let pos = userModel?.pos {
-            let posAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: NSColor.thDayBlue, alignment: .center)
+            let posAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: NSColor.thDayBlue, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: NSNumber(value: 3.0), font: NSFont.bfSystemFont(ofSize: 17.0))
+            
             posButton.attributedTitle = NSAttributedString(string: "\(pos)", attributes: posAtt)
         }
         
         if let login = userModel?.login {
-            let loginAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayBlue, alignment: NSTextAlignment.center)
+            let loginAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayBlue, backColor: NSColor.thDayWhite, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 16.0))
+
             loginButton.attributedTitle = NSAttributedString(string: login, attributes: loginAtt)
         }
         
 
         if let repoName = userModel?.repo_name {
-            let repoAtt = AttributedDictionary.attributeDictionary(foreColor: BFThemeManager.shared.explre_detail_subTitle_color(), alignment: NSTextAlignment.left)
-
+            
+            let repoAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayLightBlack, backColor: NSColor.thDayWhite, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
             repoButton.attributedTitle = NSAttributedString(string: repoName, attributes: repoAtt)
         }
-        
-        
         
     }
     
