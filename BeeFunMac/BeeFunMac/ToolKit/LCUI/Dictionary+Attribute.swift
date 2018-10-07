@@ -18,6 +18,16 @@ class AttributedDictionary {
         return dic
     }
     
+    
+    class func attributeDictionary(foreColor: NSColor, alignment: NSTextAlignment, font: NSFont) -> [NSAttributedString.Key : Any] {
+        let style = NSMutableParagraphStyle()
+        style.alignment = alignment
+        let dic = [NSAttributedStringKey.foregroundColor:foreColor,
+                   NSAttributedStringKey.paragraphStyle: style,
+                   NSAttributedStringKey.font: font]
+        return dic
+    }
+    
     class func attributeDictionary(foreColor: NSColor, backColor: NSColor, alignment: NSTextAlignment) -> [NSAttributedString.Key : Any] {
         let style = NSMutableParagraphStyle()
         style.alignment = alignment

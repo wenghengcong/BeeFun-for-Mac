@@ -48,7 +48,10 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         view.borderColor = NSColor.thDayBlue
         view.borderWidth = viewOriBorderWidth
         
+        view.radius = 5.0
+        
         repoColorLabel.isBordered = false
+        repoColorLabel.size = CGSize(width: 8.0, height: 8.0)
         repoColorLabel.radius = repoColorLabel.size.width/2.0
         repoColorLabel.stringValue = ""
         
@@ -62,12 +65,41 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         
         if let color = repoModel?.repo_language_color {
             repoColorLabel.title = ""
-            repoColorLabel.backgColor = NSColor.hex(color)
+            repoColorLabel.isHidden = false
+            
+            let lanColor = NSColor.hex(color)
+            repoColorLabel.backgColor = lanColor
+            
+            //language label
+            let dic = AttributedDictionary.attributeDictionary(foreColor: lanColor, alignment: .right, font: NSFont.bfSystemFont(ofSize: 10.0))
+            if let language = repoModel?.repo_language {
+                repoLanguageLabel.isHidden = false
+                repoLanguageLabel.attributedTitle = NSAttributedString(string: language, attributes: dic)
+                repoLanguageLabel.sizeToFit()
+                let width = repoLanguageLabel.width
+                repoLanguageLabel.snp.remakeConstraints { (make) in
+                    make.top.equalTo(119)
+                    make.trailing.equalTo(8.0)
+                    make.width.equalTo(width)
+                    make.height.equalTo(18.0)
+                }
+                
+                repoColorLabel.snp.remakeConstraints { (make) in
+                    make.width.equalTo(8.0)
+                    make.height.equalTo(8.0)
+                    make.centerY.equalTo(self.repoLanguageLabel.snp.centerY).offset(1)
+                    make.trailing.equalTo(self.repoLanguageLabel.snp.leading).offset(-5.0)
+                }
+            } else {
+                repoLanguageLabel.isHidden = true
+                repoLanguageLabel.title = ""
+            }
+        } else {
+            repoColorLabel.isHidden = true
+            repoLanguageLabel.isHidden = true
         }
         
-        if let language = repoModel?.repo_language {
-            repoLanguageLabel.stringValue = language
-        }
+   
         
         if let desc = repoModel?.repo_desc {
             repoDescLabel.stringValue = desc

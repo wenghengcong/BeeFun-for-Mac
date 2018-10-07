@@ -137,7 +137,7 @@
                             </scroller>
                         </scrollView>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3UM-ng-qTw">
-                            <rect key="frame" x="11" y="626" width="205" height="36"/>
+                            <rect key="frame" x="11" y="629" width="205" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="201" id="0OA-bq-7za"/>
                                 <constraint firstAttribute="height" constant="36" id="9Tw-Tk-twe"/>
@@ -149,10 +149,10 @@
                             </textFieldCell>
                         </textField>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="REM-wE-8OS">
-                            <rect key="frame" x="14" y="619" width="601" height="5"/>
+                            <rect key="frame" x="14" y="619" width="500" height="5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="a05-Ug-IT1"/>
-                                <constraint firstAttribute="width" constant="601" id="fd2-dL-75Y"/>
+                                <constraint firstAttribute="width" constant="500" id="fd2-dL-75Y"/>
                             </constraints>
                         </box>
                         <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niz-jn-GHc">
@@ -175,21 +175,30 @@
                         <constraint firstItem="REM-wE-8OS" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="14" id="1qC-N9-5CV"/>
                         <constraint firstAttribute="bottom" secondItem="gGT-YX-KPD" secondAttribute="bottom" constant="12" id="TAH-9v-ctn"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="13" id="eMy-Uf-8gc"/>
-                        <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="18" id="hze-kC-fGr"/>
-                        <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="13" id="jie-qI-5fh"/>
+                        <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
+                        <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="16" id="jie-qI-5fh"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
                         <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="13" id="nQK-UF-ZHY"/>
-                        <constraint firstItem="REM-wE-8OS" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="4" id="ulb-vn-RPS"/>
+                        <constraint firstItem="REM-wE-8OS" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="7" id="ulb-vn-RPS"/>
                     </constraints>
                 </customView>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="XlB-lg-gE8">
+                    <rect key="frame" x="289" y="0.0" width="5" height="680"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="LAt-Zf-0zX"/>
+                    </constraints>
+                </box>
             </subviews>
             <constraints>
                 <constraint firstItem="11I-39-gsf" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="0Nf-sO-RGW"/>
+                <constraint firstAttribute="bottom" secondItem="XlB-lg-gE8" secondAttribute="bottom" id="6aA-Ob-UXe"/>
                 <constraint firstItem="11I-39-gsf" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="9Nt-UQ-Elc"/>
+                <constraint firstItem="XlB-lg-gE8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="KHM-5g-swO"/>
                 <constraint firstItem="ZyW-9F-VRU" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="KT1-j9-Nby"/>
                 <constraint firstAttribute="bottom" secondItem="11I-39-gsf" secondAttribute="bottom" id="Xk9-Xm-WXM"/>
                 <constraint firstAttribute="trailing" secondItem="ZyW-9F-VRU" secondAttribute="trailing" constant="5" id="hAb-Dx-ii1"/>
                 <constraint firstAttribute="bottom" secondItem="ZyW-9F-VRU" secondAttribute="bottom" id="iXz-1y-Hx0"/>
+                <constraint firstItem="XlB-lg-gE8" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="trailing" constant="1" id="m8y-ii-c9o"/>
                 <constraint firstItem="ZyW-9F-VRU" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="trailing" constant="10" id="ozV-kL-Gax"/>
             </constraints>
             <point key="canvasLocation" x="138.5" y="169"/>
