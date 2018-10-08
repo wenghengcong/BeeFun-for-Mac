@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BFBrowserViewController" customModule="BeeFun" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="AWr-Zu-D2g" id="iry-if-za9"/>
+                <outlet property="forwardButton" destination="rW2-51-Y40" id="A1K-G0-DAC"/>
+                <outlet property="navigationContainView" destination="HJS-TL-9Gc" id="qKk-w7-cNP"/>
+                <outlet property="refreshButton" destination="1fG-xe-awO" id="RCh-ST-o0s"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webViewContainView" destination="0Qe-AT-Efe" id="Sdb-e9-SYO"/>
+                <outlet property="webprogressBar" destination="FW3-74-s4H" id="re3-Tf-gky"/>
+                <outlet property="websiteInputContainView" destination="9xf-nC-iDi" id="UNr-4y-NWw"/>
+                <outlet property="websiteInputTextField" destination="QVs-2z-xrn" id="3LH-nt-tYp"/>
+                <outlet property="websiteView" destination="Cdy-Th-ick" id="cJZ-GA-GCk"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -15,6 +26,140 @@
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="1285" height="680"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="0Qe-AT-Efe">
+                    <rect key="frame" x="0.0" y="0.0" width="1285" height="586"/>
+                    <subviews>
+                        <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdy-Th-ick">
+                            <rect key="frame" x="0.0" y="0.0" width="1285" height="581"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                        <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="FW3-74-s4H">
+                            <rect key="frame" x="0.0" y="580" width="1285" height="7"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="5" id="IdV-gs-XEv"/>
+                            </constraints>
+                        </progressIndicator>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Cdy-Th-ick" firstAttribute="leading" secondItem="0Qe-AT-Efe" secondAttribute="leading" id="0wj-aO-Irx"/>
+                        <constraint firstAttribute="bottom" secondItem="Cdy-Th-ick" secondAttribute="bottom" id="7fm-y8-IjT"/>
+                        <constraint firstAttribute="trailing" secondItem="Cdy-Th-ick" secondAttribute="trailing" id="7sN-HC-yWx"/>
+                        <constraint firstAttribute="trailing" secondItem="FW3-74-s4H" secondAttribute="trailing" id="FOd-tu-IOb"/>
+                        <constraint firstItem="Cdy-Th-ick" firstAttribute="top" secondItem="FW3-74-s4H" secondAttribute="bottom" id="FZf-fS-6BF"/>
+                        <constraint firstItem="FW3-74-s4H" firstAttribute="top" secondItem="0Qe-AT-Efe" secondAttribute="top" id="H9H-02-cmp"/>
+                        <constraint firstItem="FW3-74-s4H" firstAttribute="leading" secondItem="0Qe-AT-Efe" secondAttribute="leading" id="qHx-JU-ze1"/>
+                    </constraints>
+                </customView>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-cp-QOD">
+                    <rect key="frame" x="-2" y="0.0" width="5" height="680"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="bDI-e6-0xS"/>
+                    </constraints>
+                </box>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="HJS-TL-9Gc">
+                    <rect key="frame" x="1" y="586" width="1285" height="94"/>
+                    <subviews>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="AWr-Zu-D2g">
+                            <rect key="frame" x="26" y="32" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="Dax-Xw-DYV"/>
+                                <constraint firstAttribute="height" constant="30" id="z2Z-Sg-aGF"/>
+                            </constraints>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_back" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="RPx-9w-7bE">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="rW2-51-Y40">
+                            <rect key="frame" x="67" y="32" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="MZZ-FU-DSj"/>
+                                <constraint firstAttribute="height" constant="30" id="hE1-eu-Tk2"/>
+                            </constraints>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_forward" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="9c2-jG-J6E">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="1fG-xe-awO">
+                            <rect key="frame" x="119" y="32" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="fB9-hw-0W2"/>
+                                <constraint firstAttribute="width" constant="30" id="s37-cb-JdJ"/>
+                            </constraints>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="old_home_refresh" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tJX-GU-4LM">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="9xf-nC-iDi">
+                            <rect key="frame" x="178" y="17" width="1095" height="61"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="QVs-2z-xrn">
+                                    <rect key="frame" x="8" y="16" width="1053" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="kQh-cS-QHJ"/>
+                                    </constraints>
+                                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="https://" usesSingleLineMode="YES" bezelStyle="round" id="CNL-TO-TTy">
+                                        <font key="font" metaFont="system" size="18"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="QVs-2z-xrn" firstAttribute="centerY" secondItem="9xf-nC-iDi" secondAttribute="centerY" id="B8g-ep-D5p"/>
+                                <constraint firstAttribute="trailing" secondItem="QVs-2z-xrn" secondAttribute="trailing" constant="34" id="ao4-Du-AgQ"/>
+                                <constraint firstAttribute="height" constant="61" id="kxj-ld-WUb"/>
+                                <constraint firstItem="QVs-2z-xrn" firstAttribute="leading" secondItem="9xf-nC-iDi" secondAttribute="leading" constant="8" id="lKQ-ae-P9t"/>
+                            </constraints>
+                        </customView>
+                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="iBd-ap-Zas">
+                            <rect key="frame" x="0.0" y="0.0" width="1285" height="5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="XB6-Rt-PV8"/>
+                            </constraints>
+                        </box>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iBd-ap-Zas" firstAttribute="leading" secondItem="HJS-TL-9Gc" secondAttribute="leading" id="2oe-JB-4yI"/>
+                        <constraint firstItem="9xf-nC-iDi" firstAttribute="centerY" secondItem="HJS-TL-9Gc" secondAttribute="centerY" id="4A2-p4-IQh"/>
+                        <constraint firstItem="AWr-Zu-D2g" firstAttribute="leading" secondItem="HJS-TL-9Gc" secondAttribute="leading" constant="26" id="4xz-kW-YhR"/>
+                        <constraint firstItem="rW2-51-Y40" firstAttribute="leading" secondItem="AWr-Zu-D2g" secondAttribute="trailing" constant="11" id="578-b3-g2j"/>
+                        <constraint firstAttribute="height" constant="94" id="6JM-KP-pva"/>
+                        <constraint firstAttribute="bottom" secondItem="iBd-ap-Zas" secondAttribute="bottom" constant="2" id="9ka-cF-XPg"/>
+                        <constraint firstItem="1fG-xe-awO" firstAttribute="centerY" secondItem="AWr-Zu-D2g" secondAttribute="centerY" id="A1U-gf-LE5"/>
+                        <constraint firstItem="9xf-nC-iDi" firstAttribute="leading" secondItem="1fG-xe-awO" secondAttribute="trailing" constant="29" id="CkM-go-9h2"/>
+                        <constraint firstItem="1fG-xe-awO" firstAttribute="leading" secondItem="rW2-51-Y40" secondAttribute="trailing" constant="22" id="VrK-IW-3LZ"/>
+                        <constraint firstAttribute="trailing" secondItem="iBd-ap-Zas" secondAttribute="trailing" id="Vwp-UW-af9"/>
+                        <constraint firstItem="AWr-Zu-D2g" firstAttribute="centerY" secondItem="HJS-TL-9Gc" secondAttribute="centerY" id="jAO-57-WlX"/>
+                        <constraint firstItem="rW2-51-Y40" firstAttribute="centerY" secondItem="AWr-Zu-D2g" secondAttribute="centerY" id="nIv-EK-EXA"/>
+                        <constraint firstAttribute="trailing" secondItem="9xf-nC-iDi" secondAttribute="trailing" constant="12" id="sho-Om-cDF"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ARd-cp-QOD" secondAttribute="bottom" id="0iO-VR-kvA"/>
+                <constraint firstItem="HJS-TL-9Gc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ANK-0Z-O0k"/>
+                <constraint firstItem="0Qe-AT-Efe" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="AxM-dU-dxV"/>
+                <constraint firstAttribute="bottom" secondItem="0Qe-AT-Efe" secondAttribute="bottom" id="Axo-Sf-6r5"/>
+                <constraint firstItem="ARd-cp-QOD" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="E3k-va-o8v"/>
+                <constraint firstItem="0Qe-AT-Efe" firstAttribute="top" secondItem="HJS-TL-9Gc" secondAttribute="bottom" id="UN2-oV-AKk"/>
+                <constraint firstAttribute="trailing" secondItem="HJS-TL-9Gc" secondAttribute="trailing" constant="-1" id="a7g-sa-YIt"/>
+                <constraint firstAttribute="trailing" secondItem="0Qe-AT-Efe" secondAttribute="trailing" id="ng0-R3-RsW"/>
+                <constraint firstItem="HJS-TL-9Gc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="1" id="nrV-Dt-o4y"/>
+                <constraint firstItem="ARd-cp-QOD" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="xhM-OC-DaA"/>
+            </constraints>
+            <point key="canvasLocation" x="138.5" y="154"/>
         </customView>
     </objects>
+    <resources>
+        <image name="old_home_back" width="200" height="200"/>
+        <image name="old_home_forward" width="200" height="200"/>
+        <image name="old_home_refresh" width="200" height="200"/>
+    </resources>
 </document>
