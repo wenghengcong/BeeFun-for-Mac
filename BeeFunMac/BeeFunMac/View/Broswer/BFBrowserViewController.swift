@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class BFToolsViewController: NSViewController {
+class BFBrowserViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

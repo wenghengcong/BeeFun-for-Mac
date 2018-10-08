@@ -12,7 +12,8 @@ enum IconBarButton: Int {
     case person = 0
     case home = 1
     case star = 2
-    case settings = 3
+    case broswer = 3
+    case settings = 4
 }
 
 class BFMainController: BFBaseViewController {
@@ -26,10 +27,15 @@ class BFMainController: BFBaseViewController {
     @IBOutlet weak var starBackView: NSView!
     @IBOutlet weak var starLeftLine: NSView!
     @IBOutlet weak var settingButton: NSButton!
+    
+    @IBOutlet weak var browserButton: NSButton!
+    @IBOutlet weak var browserSepLine: NSView!
+    
     @IBOutlet weak var pageBox: NSBox!
     
     var homeController = BFExploreController()
     var starController = BFStarViewController()
+    var browserController = BFBrowserViewController()
     
     var currentIndex: Int = 0
     var currentIcon: NSButton?
@@ -54,6 +60,10 @@ class BFMainController: BFBaseViewController {
         starButton.alternateImage = BFThemeManager.shared.iconbarStarImage(selected: true)
         starButton.image = BFThemeManager.shared.iconbarStarImage(selected: false)
         starLeftLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        
+        browserButton.alternateImage = BFThemeManager.shared.iconbarBrowserImage(selected: true)
+        browserButton.image = BFThemeManager.shared.iconbarBrowserImage(selected: false)
+        browserSepLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
     }
     
     /// 自定义左边icon 按钮
@@ -62,11 +72,15 @@ class BFMainController: BFBaseViewController {
         homeButton.highlight(false)
         //home button
         homeButton.tag = IconBarButton.home.rawValue
-        
         iconButtons.append(homeButton)
+        
         //star button
         starButton.tag = IconBarButton.star.rawValue
         iconButtons.append(starButton)
+        
+        //browser button
+        browserButton.tag = IconBarButton.broswer.rawValue
+        iconButtons.append(browserButton)
         
         //TODO: 设置按钮隐藏
         settingButton.isHidden = true
@@ -111,11 +125,18 @@ class BFMainController: BFBaseViewController {
             self.pageBox.contentView = homeController.view
             homeLeftLine.isHidden = false
             starLeftLine.isHidden = true
+            browserSepLine.isHidden = true
         case .star:
             self.pageBox.contentView = starController.view
             homeLeftLine.isHidden = true
             starLeftLine.isHidden = false
+            browserSepLine.isHidden = true
             break
+        case .broswer:
+            self.pageBox.contentView = browserController.view
+            homeLeftLine.isHidden = true
+            starLeftLine.isHidden = true
+            browserSepLine.isHidden = false
         case .settings:
             return
         case .person:

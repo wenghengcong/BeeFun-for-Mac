@@ -75,5 +75,11 @@ extension BFThemeManager {
         let image = NSImage(named: NSImage.Name(rawValue: imgName))
         return image
     }
+    
+    func iconbarBrowserImage(selected: Bool) -> NSImage? {
+        let imgName: String = combineImageName(prefix: IconArea.iconBar, iconName: "browser", selected: selected)
+        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        return image
+    }
 
 }

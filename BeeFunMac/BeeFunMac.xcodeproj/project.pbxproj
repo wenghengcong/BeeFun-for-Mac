@@ -12,8 +12,8 @@
 		5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */; };
 		5E048A74213A10640098CBF6 /* BFExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A72213A10640098CBF6 /* BFExploreController.swift */; };
 		5E048A75213A10640098CBF6 /* BFExploreController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A73213A10640098CBF6 /* BFExploreController.xib */; };
-		5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A77213A11770098CBF6 /* BFToolsViewController.swift */; };
-		5E048A7A213A11770098CBF6 /* BFToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A78213A11770098CBF6 /* BFToolsViewController.xib */; };
+		5E048A79213A11770098CBF6 /* BFBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A77213A11770098CBF6 /* BFBrowserViewController.swift */; };
+		5E048A7A213A11770098CBF6 /* BFBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A78213A11770098CBF6 /* BFBrowserViewController.xib */; };
 		5E048A7F21436C2B0098CBF6 /* BFExploreReposViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */; };
 		5E048A8021436C2B0098CBF6 /* BFExploreReposViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */; };
 		5E048A8321436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E048A8121436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift */; };
@@ -241,8 +241,8 @@
 		5E042CFF20B1125E00767E56 /* BFTagsTipCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFTagsTipCellView.xib; sourceTree = "<group>"; };
 		5E048A72213A10640098CBF6 /* BFExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreController.swift; sourceTree = "<group>"; };
 		5E048A73213A10640098CBF6 /* BFExploreController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExploreController.xib; sourceTree = "<group>"; };
-		5E048A77213A11770098CBF6 /* BFToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFToolsViewController.swift; sourceTree = "<group>"; };
-		5E048A78213A11770098CBF6 /* BFToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFToolsViewController.xib; sourceTree = "<group>"; };
+		5E048A77213A11770098CBF6 /* BFBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFBrowserViewController.swift; sourceTree = "<group>"; };
+		5E048A78213A11770098CBF6 /* BFBrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFBrowserViewController.xib; sourceTree = "<group>"; };
 		5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreReposViewItem.swift; sourceTree = "<group>"; };
 		5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExploreReposViewItem.xib; sourceTree = "<group>"; };
 		5E048A8121436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreDevelopersViewItem.swift; sourceTree = "<group>"; };
@@ -503,13 +503,13 @@
 			path = Trending;
 			sourceTree = "<group>";
 		};
-		5E048A76213A11630098CBF6 /* Tools */ = {
+		5E048A76213A11630098CBF6 /* Broswer */ = {
 			isa = PBXGroup;
 			children = (
-				5E048A77213A11770098CBF6 /* BFToolsViewController.swift */,
-				5E048A78213A11770098CBF6 /* BFToolsViewController.xib */,
+				5E048A77213A11770098CBF6 /* BFBrowserViewController.swift */,
+				5E048A78213A11770098CBF6 /* BFBrowserViewController.xib */,
 			);
-			path = Tools;
+			path = Broswer;
 			sourceTree = "<group>";
 		};
 		5E048A7C21436BEB0098CBF6 /* Collection View Item */ = {
@@ -625,7 +625,7 @@
 		5E28168F1FCCFDE7007A5159 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5E048A76213A11630098CBF6 /* Tools */,
+				5E048A76213A11630098CBF6 /* Broswer */,
 				5E048A71213A0E8F0098CBF6 /* Home */,
 				5E2816D51FCCFEB8007A5159 /* Base */,
 				5EBF53F21FCFE68F00D7A2A5 /* Home */,
@@ -1226,7 +1226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E048A7A213A11770098CBF6 /* BFToolsViewController.xib in Resources */,
+				5E048A7A213A11770098CBF6 /* BFBrowserViewController.xib in Resources */,
 				5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */,
 				5E28168E1FCCF23C007A5159 /* MainWindow.storyboard in Resources */,
 				5E048A8021436C2B0098CBF6 /* BFExploreReposViewItem.xib in Resources */,
@@ -1382,7 +1382,7 @@
 				5E2C9D45216469DA001910F9 /* BFGithubTrengingModel.swift in Sources */,
 				5E5E822320E4E2CE00E810E2 /* SEResponseIssues.swift in Sources */,
 				5E9867DE1FD05189007EE86F /* ObjIssue.swift in Sources */,
-				5E048A79213A11770098CBF6 /* BFToolsViewController.swift in Sources */,
+				5E048A79213A11770098CBF6 /* BFBrowserViewController.swift in Sources */,
 				5E2C9D4921659B58001910F9 /* BFGithubTrendingRequsetModel.swift in Sources */,
 				5E048A8321436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift in Sources */,
 				5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */,

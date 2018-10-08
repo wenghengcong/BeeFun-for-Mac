@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,7 +10,7 @@
         <scene sceneID="jHx-w4-deJ">
             <objects>
                 <windowController storyboardIdentifier="loginwindow" id="ZWO-Qj-oqw" customClass="BFWindowController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Sign in" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="tAq-mx-EcB" customClass="BFWindow" customModule="BeeFun" customModuleProvider="target">
+                    <window key="window" title="Sign in" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="tAq-mx-EcB" customClass="BFWindow" customModule="BeeFun" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="196" y="291" width="260" height="320"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -97,7 +96,7 @@
         <scene sceneID="qSM-Km-URk">
             <objects>
                 <windowController storyboardIdentifier="mainwindow" id="hcR-NT-ZmM" customClass="BFWindowController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="BeeFun" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="PCu-4d-IiO" customClass="BFWindow" customModule="BeeFun" customModuleProvider="target">
+                    <window key="window" title="BeeFun" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="PCu-4d-IiO" customClass="BFWindow" customModule="BeeFun" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="400" y="204" width="1150" height="700"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -201,9 +200,9 @@
                                         <rect key="frame" x="0.0" y="423" width="65" height="45"/>
                                         <subviews>
                                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-6f-9WM" userLabel="Web">
-                                                <rect key="frame" x="17" y="7" width="30" height="30"/>
+                                                <rect key="frame" x="19" y="9" width="27" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon_bar_day_web_sel" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Cxx-cE-Dax">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon_bar_day_browser_sel" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Cxx-cE-Dax">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -259,6 +258,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="browserButton" destination="Xda-6f-9WM" id="uNI-bc-Opa"/>
+                        <outlet property="browserSepLine" destination="7FE-Pf-Q0E" id="5Me-Ba-T0u"/>
                         <outlet property="homeBackView" destination="YVL-AG-QWp" id="maZ-QI-Cum"/>
                         <outlet property="homeButton" destination="cIU-PW-5rx" id="Ilw-eK-5AX"/>
                         <outlet property="homeLeftLine" destination="Vfe-5b-WV4" id="Mvo-Dl-oZf"/>
@@ -277,9 +278,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_bar_day_browser_sel" width="120" height="120"/>
         <image name="icon_bar_day_git_sel" width="120" height="120"/>
         <image name="icon_bar_day_star_sel" width="120" height="120"/>
-        <image name="icon_bar_day_web_sel" width="40" height="40"/>
         <image name="iconbar_p_normal" width="160" height="160"/>
         <image name="iconbar_setting" width="100" height="100"/>
         <image name="logo_1024" width="1024" height="1024"/>
