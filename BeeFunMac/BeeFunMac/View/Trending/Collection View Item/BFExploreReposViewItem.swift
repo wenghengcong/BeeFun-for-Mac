@@ -49,6 +49,16 @@ class BFExploreReposViewItem: NSCollectionViewItem {
     }
     
     func setupExploreViewItem() {
+        
+        // 默认不显示
+        starButton.isHidden = true
+        //修改按钮颜色、按钮背景色，要注意isBordered 为false
+        starButton.isBordered = false
+//        starButton.borderWidth = 1.0
+//        starButton.borderColor = NSColor.red
+        starButton.radius = 3.0
+        starButton.backgColor = NSColor.thDayBlue
+
         view.backgColor = NSColor.white
         view.borderColor = NSColor.white
         view.borderWidth = viewOriBorderWidth
@@ -62,6 +72,9 @@ class BFExploreReposViewItem: NSCollectionViewItem {
     }
     
     func fillDataToUI() {
+        
+        //检查star状态
+        checkStarted()
         
         if let name = repoModel?.repo_name {
             repoNameLabel.title = name

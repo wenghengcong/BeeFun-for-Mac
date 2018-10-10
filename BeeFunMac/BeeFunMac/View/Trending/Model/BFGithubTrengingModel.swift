@@ -50,7 +50,7 @@ class BFGithubTrengingModel: NSObject, Mappable {
     var user_id: Int?
     var repo_name: String?
     var repo_url: String?
-
+    
     var repo_language_color: String?
     var repo_language: String?
     var star_num: Int?
@@ -63,8 +63,18 @@ class BFGithubTrengingModel: NSObject, Mappable {
     var created_at: String?
     var updated_at: String?
     var repo_desc: String?
+    
+    //以下字段为解析后的字段
+    
+    /// repo 所有者，从full_name解出
+    var repo_owner: String?
+    
+    /// repo的维护者
     var built_by_users: [BFGithubTrendingUserModel]?
-
+    
+    /// 是否被用户star
+    var starred: Bool?
+    
     private var built_by_users_string: String?
 
     required init?(map: Map) {
@@ -101,6 +111,12 @@ class BFGithubTrengingModel: NSObject, Mappable {
         
         if let userJson = built_by_users_string, let users = Mapper<BFGithubTrendingUserModel>().mapArray(JSONString: userJson) {
             built_by_users = users
+        }
+        
+        if let fullname = full_name {
+            if let owner = fullname.split("/").first {
+                repo_owner = owner.trimmed
+            }
         }
     }
 }

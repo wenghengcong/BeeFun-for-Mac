@@ -165,14 +165,14 @@
                             </subviews>
                         </customView>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vXt-4P-vDt">
-                            <rect key="frame" x="224" y="64" width="65" height="32"/>
+                            <rect key="frame" x="230" y="70" width="62" height="25"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="21" id="07z-Wc-rje"/>
-                                <constraint firstAttribute="width" constant="53" id="WnM-b2-BFq"/>
+                                <constraint firstAttribute="height" constant="25" id="07z-Wc-rje"/>
+                                <constraint firstAttribute="width" constant="62" id="WnM-b2-BFq"/>
                             </constraints>
-                            <buttonCell key="cell" type="push" title="Star" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="csA-JC-eWh">
+                            <buttonCell key="cell" type="square" title="Star" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="csA-JC-eWh">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
+                                <font key="font" metaFont="system" size="16"/>
                             </buttonCell>
                         </button>
                     </subviews>
@@ -182,7 +182,7 @@
                         <constraint firstAttribute="bottom" secondItem="UjS-f1-3UH" secondAttribute="bottom" constant="7" id="6th-qG-34M"/>
                         <constraint firstAttribute="trailing" secondItem="UjS-f1-3UH" secondAttribute="trailing" constant="13" id="AFI-fa-9SP"/>
                         <constraint firstAttribute="trailing" secondItem="1io-EO-SqK" secondAttribute="trailing" constant="8" id="CdG-Vv-5xd"/>
-                        <constraint firstAttribute="trailing" secondItem="vXt-4P-vDt" secondAttribute="trailing" constant="17" id="Faz-UH-ZZ5"/>
+                        <constraint firstAttribute="trailing" secondItem="vXt-4P-vDt" secondAttribute="trailing" constant="8" id="Faz-UH-ZZ5"/>
                         <constraint firstItem="1io-EO-SqK" firstAttribute="top" secondItem="dWA-dh-aHj" secondAttribute="top" constant="8" id="Mwu-EH-9eO"/>
                         <constraint firstItem="cwC-CH-pF7" firstAttribute="leading" secondItem="dWA-dh-aHj" secondAttribute="leading" constant="9" id="OkP-cO-aF6"/>
                         <constraint firstItem="cwC-CH-pF7" firstAttribute="top" secondItem="dWA-dh-aHj" secondAttribute="top" constant="6" id="S1V-Ka-y6a"/>
@@ -194,7 +194,7 @@
                         <constraint firstItem="gok-Dh-meG" firstAttribute="top" secondItem="cwC-CH-pF7" secondAttribute="bottom" constant="5" id="iGn-U4-rXt"/>
                         <constraint firstItem="gNQ-fc-3dE" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="28" id="kG0-uw-G5q"/>
                         <constraint firstItem="1b9-if-q6I" firstAttribute="leading" secondItem="cwC-CH-pF7" secondAttribute="trailing" constant="18" id="mKc-uh-bOB"/>
-                        <constraint firstItem="vXt-4P-vDt" firstAttribute="top" secondItem="1io-EO-SqK" secondAttribute="bottom" constant="27" id="smm-cp-zWL"/>
+                        <constraint firstItem="vXt-4P-vDt" firstAttribute="top" secondItem="1io-EO-SqK" secondAttribute="bottom" constant="24" id="smm-cp-zWL"/>
                         <constraint firstItem="1b9-if-q6I" firstAttribute="top" secondItem="dWA-dh-aHj" secondAttribute="top" constant="13" id="tWd-VA-aow"/>
                         <constraint firstItem="iu4-dI-P6P" firstAttribute="leading" secondItem="dWA-dh-aHj" secondAttribute="leading" constant="13" id="v1f-qJ-Hha"/>
                         <constraint firstItem="0Rb-32-N47" firstAttribute="leading" secondItem="dWA-dh-aHj" secondAttribute="leading" constant="12" id="w7g-Ir-913"/>
