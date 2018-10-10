@@ -21,7 +21,8 @@ extension BFExploreReposViewItem {
         addClickGesture(gestureView: forkImageView, action: #selector(clickFork))
         addClickGesture(gestureView: forkLabel, action: #selector(clickFork))
         
-        
+        starButton.target = self
+        starButton.action = #selector(clickStarRequest)
     }
     
     func addClickGesture(gestureView: NSControl, action: Selector?) {
@@ -47,9 +48,9 @@ extension BFExploreReposViewItem {
     
     @objc func clickStarRequest() {
         if starButton.title == "Star" {
-            unstarRequest()
-        } else if starButton.title == "Unstar" {
             starRequest()
+        } else if starButton.title == "Unstar" {
+            unstarRequest()
         }
     }
     
@@ -123,6 +124,7 @@ extension BFExploreReposViewItem {
                     //TODO: 取消star失败
                     break
                 }
+                self.refreshStarButtonState()
             }
         }
     }
@@ -149,6 +151,7 @@ extension BFExploreReposViewItem {
                     //TODO: star失败
                     break
                 }
+                self.refreshStarButtonState()
             }
         }
     }
