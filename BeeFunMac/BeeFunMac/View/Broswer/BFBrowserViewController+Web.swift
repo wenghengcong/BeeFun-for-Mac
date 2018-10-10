@@ -1,64 +1,59 @@
 //
-//  BFHomeController+WebView.swift
-//  BeeFunMac
+//  BFBrowserViewController+Web.swift
+//  BeeFun
 //
-//  Created by WengHengcong on 2017/12/2.
-//  Copyright © 2017年 LuCi. All rights reserved.
+//  Created by 翁恒丛 on 2018/10/10.
+//  Copyright © 2018年 LuCi. All rights reserved.
 //
 
 import Cocoa
 import WebKit
 
-extension BFOldHomeController {
+extension BFBrowserViewController {
     
-    func configWebview() {
+    func setupWebview() {
         
+        websiteView.uiDelegate = self
+        websiteView.navigationDelegate = self
+        websiteView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
-        self.webView.uiDelegate = self
-        self.webView.navigationDelegate = self
-        self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+        webprogressBar.minValue = 0.0
+        webprogressBar.maxValue = 1.0
+        webprogressBar.usesThreadedAnimation = true
+        webprogressBar.controlTint = NSControlTint.defaultControlTint
         
-        webProgress.minValue = 0.0
-        webProgress.maxValue = 1.0
-        webProgress.usesThreadedAnimation = true
-        webProgress.controlTint = NSControlTint.defaultControlTint
-        self.webProgress.snp.makeConstraints { (make) in
-            make.top.equalTo(self.webView.snp.top).offset(-1)
-            make.leading.equalTo(0)
-            make.trailing.equalTo(0)
-            make.height.equalTo(5)
-        }
-        scaleContentPage()
-        self.homeViewLoadURL(BFGithubWebsite.home)
+        scaleWebViewContentPage()
+        loadEmptyPage()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (keyPath == "estimatedProgress") {
-//            print("home page webview progress: \(webView.estimatedProgress)")
-            webProgress.doubleValue = webView.estimatedProgress
-            if webView.estimatedProgress == 1 {
-                webProgress.isHidden = true
+            //            print("home page webview progress: \(webView.estimatedProgress)")
+            webprogressBar.doubleValue = websiteView.estimatedProgress
+            if websiteView.estimatedProgress == 1 {
+                webprogressBar.isHidden = true
             } else {
-                webProgress.isHidden = false
+                webprogressBar.isHidden = false
             }
-            scaleContentPage()
+            scaleWebViewContentPage()
         }
     }
     
-    func scaleContentPage() {
-        let bestWidth: CGFloat = 1030
-        let windowWidth = self.webView.width
-        var scale = windowWidth/bestWidth
+    func scaleWebViewContentPage() {
+        
+        let windowWidth = websiteView.width
+        var scale = windowWidth/bestWebViewWidth
         if scale > 1 {
             scale = 1.0
         }
-        self.webView?.setMagnification(scale, centeredAt: self.webView.center)
+        websiteView?.setMagnification(scale, centeredAt: websiteView.center)
     }
     
     // 1. 在发送请求之前，决定是否跳转
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         decisionHandler(.allow)
     }
+    
     // 3. 在收到响应后，决定是否跳转
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         decisionHandler(.allow)
@@ -82,12 +77,12 @@ extension BFOldHomeController {
     }
     // 4. 当内容开始返回时调用
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        scaleContentPage()
+        scaleWebViewContentPage()
     }
     
     // 5. 当内容返回完成时调用
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        self.webProgress.stopAnimation(nil)
+        self.webprogressBar.stopAnimation(nil)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -99,7 +94,7 @@ extension BFOldHomeController {
     }
 }
 
-extension BFOldHomeController {
+extension BFBrowserViewController {
     
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         
@@ -122,4 +117,3 @@ extension BFOldHomeController {
         
     }
 }
-

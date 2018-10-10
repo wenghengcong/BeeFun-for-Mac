@@ -73,6 +73,9 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="goBack:" target="-2" id="Bil-Uo-ceH"/>
+                            </connections>
                         </button>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="rW2-51-Y40">
                             <rect key="frame" x="67" y="32" width="30" height="30"/>
@@ -84,6 +87,9 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="goForward:" target="-2" id="Sbi-FX-39E"/>
+                            </connections>
                         </button>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="1fG-xe-awO">
                             <rect key="frame" x="119" y="32" width="30" height="30"/>
@@ -95,6 +101,9 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="webRefresh:" target="-2" id="hH3-Rg-Hdc"/>
+                            </connections>
                         </button>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="9xf-nC-iDi">
                             <rect key="frame" x="178" y="17" width="1095" height="61"/>
@@ -105,7 +114,7 @@
                                         <constraint firstAttribute="height" constant="30" id="kQh-cS-QHJ"/>
                                     </constraints>
                                     <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="https://" usesSingleLineMode="YES" bezelStyle="round" id="CNL-TO-TTy">
-                                        <font key="font" metaFont="system" size="18"/>
+                                        <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>

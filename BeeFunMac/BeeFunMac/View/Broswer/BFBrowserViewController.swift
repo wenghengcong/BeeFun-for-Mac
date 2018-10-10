@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class BFBrowserViewController: NSViewController {
+class BFBrowserViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, NSTextFieldDelegate {
 
     @IBOutlet weak var navigationContainView: NSView!
     
@@ -26,15 +26,18 @@ class BFBrowserViewController: NSViewController {
     @IBOutlet weak var webprogressBar: NSProgressIndicator!
     @IBOutlet weak var websiteView: WKWebView!
     
+    /// 展示Github网站的最佳宽度
+    var bestWebViewWidth: CGFloat = 1030
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
         navigationContainView.backgColor = NSColor.white
         webViewContainView.backgColor = NSColor.white
         
-        webprogressBar.alphaValue = 0.0
-        webprogressBar.isHidden = true
+        setupWebview()
+        setupWebsiteInputTextField()
+        
+        addBrowserNoti()
     }
-    
 }

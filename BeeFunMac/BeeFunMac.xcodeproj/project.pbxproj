@@ -84,6 +84,11 @@
 		5E4833501FD249CF00CEB336 /* BFOldHomeController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334F1FD249CF00CEB336 /* BFOldHomeController+Util.swift */; };
 		5E4833521FD252BA00CEB336 /* OldHome.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4833511FD252BA00CEB336 /* OldHome.xcassets */; };
 		5E4833541FD2578600CEB336 /* BFOldHomeController+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4833531FD2578600CEB336 /* BFOldHomeController+Button.swift */; };
+		5E54DB7B216DB40C003136DC /* BFBrowserViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */; };
+		5E54DB7D216DB444003136DC /* BFBrowserViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */; };
+		5E54DB7F216DB47D003136DC /* BFBrowserViewControlle+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */; };
+		5E54DB81216DB488003136DC /* BFBrowserViewController+Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */; };
+		5E54DB83216DDBBD003136DC /* BFBrowserViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */; };
 		5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */; };
 		5E5E820620E4E19E00E810E2 /* IssueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820320E4E19D00E810E2 /* IssueAPI.swift */; };
 		5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820420E4E19D00E810E2 /* EventAPI.swift */; };
@@ -318,6 +323,11 @@
 		5E48334F1FD249CF00CEB336 /* BFOldHomeController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFOldHomeController+Util.swift"; sourceTree = "<group>"; };
 		5E4833511FD252BA00CEB336 /* OldHome.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OldHome.xcassets; sourceTree = "<group>"; };
 		5E4833531FD2578600CEB336 /* BFOldHomeController+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFOldHomeController+Button.swift"; sourceTree = "<group>"; };
+		5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Action.swift"; sourceTree = "<group>"; };
+		5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Utils.swift"; sourceTree = "<group>"; };
+		5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewControlle+Noti.swift"; sourceTree = "<group>"; };
+		5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Web.swift"; sourceTree = "<group>"; };
+		5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+View.swift"; sourceTree = "<group>"; };
 		5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Hud.swift"; sourceTree = "<group>"; };
 		5E5E820320E4E19D00E810E2 /* IssueAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAPI.swift; sourceTree = "<group>"; };
 		5E5E820420E4E19D00E810E2 /* EventAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
@@ -506,8 +516,13 @@
 		5E048A76213A11630098CBF6 /* Broswer */ = {
 			isa = PBXGroup;
 			children = (
-				5E048A77213A11770098CBF6 /* BFBrowserViewController.swift */,
 				5E048A78213A11770098CBF6 /* BFBrowserViewController.xib */,
+				5E048A77213A11770098CBF6 /* BFBrowserViewController.swift */,
+				5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */,
+				5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */,
+				5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */,
+				5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */,
+				5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */,
 			);
 			path = Broswer;
 			sourceTree = "<group>";
@@ -1366,6 +1381,7 @@
 				5E80F748211B287A00756B30 /* BFTheme+StarRepos.swift in Sources */,
 				5E5E822220E4E2CE00E810E2 /* SEResponseWikis.swift in Sources */,
 				5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */,
+				5E54DB7F216DB47D003136DC /* BFBrowserViewControlle+Noti.swift in Sources */,
 				5EBF53FB1FCFF83000D7A2A5 /* BFStarViewController.swift in Sources */,
 				5E2B26731FDC346B00600866 /* NSView+Extension.swift in Sources */,
 				5E9867E11FD05189007EE86F /* AppToken.swift in Sources */,
@@ -1408,8 +1424,10 @@
 				5EA435061FDAD27200034578 /* BFView.swift in Sources */,
 				5E9867E51FD05189007EE86F /* ObjResponser.swift in Sources */,
 				5E1C13621FD6F36300726A0C /* CloudObjectId.swift in Sources */,
+				5E54DB7B216DB40C003136DC /* BFBrowserViewController+Action.swift in Sources */,
 				5E9867EA1FD05189007EE86F /* ObjShowcase.swift in Sources */,
 				5E9867DC1FD05189007EE86F /* ObjSearchCode.swift in Sources */,
+				5E54DB81216DB488003136DC /* BFBrowserViewController+Web.swift in Sources */,
 				5EC3CC642016AAAE00701C23 /* BFLoginWindowController.swift in Sources */,
 				5E1C13651FD6F36300726A0C /* SQLLists.swift in Sources */,
 				5E5E820620E4E19E00E810E2 /* IssueAPI.swift in Sources */,
@@ -1435,6 +1453,7 @@
 				5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */,
 				5E8A2AEE1FD13EC200B246BD /* AnswerManager.swift in Sources */,
 				5E9867F91FD05399007EE86F /* String+Extension.swift in Sources */,
+				5E54DB83216DDBBD003136DC /* BFBrowserViewController+View.swift in Sources */,
 				5EAACF6B216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift in Sources */,
 				5EA3BF4420AAA41C00D3CC79 /* BeeFunResponseModel.swift in Sources */,
 				5E9867CC1FD05189007EE86F /* DataModel.swift in Sources */,
@@ -1512,6 +1531,7 @@
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
 				5E48334E1FD2494700CEB336 /* BFOldHomeController+Noti.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
+				5E54DB7D216DB444003136DC /* BFBrowserViewController+Utils.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,
 				5EE9E78F1FCEC86D0012AE1C /* BFMainView.swift in Sources */,
 				5E048A7F21436C2B0098CBF6 /* BFExploreReposViewItem.swift in Sources */,
