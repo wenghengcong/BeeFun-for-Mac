@@ -86,11 +86,12 @@ extension BFExploreController {
                     if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
-                                if self.githubTrendingDevelopserData.count > 1 {
-                                    self.githubTrendingDevelopserData[0] = data
-                                } else {
-                                    self.githubTrendingDevelopserData.insert(data, at: 0)
-                                }
+//                                if self.githubTrendingDevelopserData.count > 0 {
+//                                    self.githubTrendingDevelopserData[0] = data
+//                                } else {
+                                    self.githubTrendingDevelopserData.removeAll()
+                                    self.githubTrendingDevelopserData.append(data)
+//                                }
                                 self.detailCollectionView.reloadData()
                             }
                         }
@@ -110,7 +111,6 @@ extension BFExploreController {
             detailCollectionView.reloadData()
             return
         }
-        
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesRepostModel!)) { (result) in
             switch result {
             case let .success(response):
@@ -118,11 +118,12 @@ extension BFExploreController {
                     if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
-                                if self.githubTrendingReposData.count > 1 {
-                                    self.githubTrendingReposData[0] = data
-                                } else {
-                                    self.githubTrendingReposData.insert(data, at: 0)
-                                }
+//                                if self.githubTrendingReposData.count > 0 {
+//                                    self.githubTrendingReposData[0] = data
+//                                } else {
+                                    self.githubTrendingReposData.removeAll()
+                                    self.githubTrendingReposData.append(data)
+//                                }
                                 self.detailCollectionView.reloadData()
                             }
                         }
