@@ -10,6 +10,8 @@ import Cocoa
 
 class BFWindowController: NSWindowController {
 
+    var mainContentController: BFMainController?
+    
     override func windowDidLoad() {
         super.windowDidLoad()
 
@@ -18,20 +20,22 @@ class BFWindowController: NSWindowController {
         moveableWindow()
         let appDelegate = NSApp.delegate as! AppDelegate
         appDelegate.mainController = self
+        
+        mainContentController = contentViewController as? BFMainController
     }
     
     /// 显示右上角三个按钮，但是隐藏title bar
     private func showControlsAndHiddleTitle() {
         //https://stackoverflow.com/questions/25250762/xcode-swift-window-without-title-bar-but-with-close-minimize-and-resize-but
-        self.window?.titleVisibility = .hidden
-        self.window?.titlebarAppearsTransparent = true
-        self.window?.styleMask.insert(.fullSizeContentView)
+        window?.titleVisibility = .hidden
+        window?.titlebarAppearsTransparent = true
+        window?.styleMask.insert(.fullSizeContentView)
     }
     
     /// window可移动，有效
     private func moveableWindow() {
         //https://stackoverflow.com/questions/4563893/allow-click-and-dragging-a-view-to-drag-the-window-itself
-        self.window?.isMovableByWindowBackground = true
+        window?.isMovableByWindowBackground = true
     }
     
 }

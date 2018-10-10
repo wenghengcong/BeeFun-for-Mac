@@ -30,8 +30,10 @@ extension BFBrowserViewController {
         if (keyPath == "estimatedProgress") {
             //            print("home page webview progress: \(webView.estimatedProgress)")
             webprogressBar.doubleValue = websiteView.estimatedProgress
-            if websiteView.estimatedProgress == 1 {
-                webprogressBar.isHidden = true
+            if websiteView.estimatedProgress > 0.7 {
+                if !websiteView.isHidden {
+                    webprogressBar.isHidden = true
+                }
             } else {
                 webprogressBar.isHidden = false
             }

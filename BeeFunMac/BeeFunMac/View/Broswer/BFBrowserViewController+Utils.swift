@@ -17,8 +17,10 @@ extension BFBrowserViewController {
             if (!(url!.contains("https")) || !(url!.contains("http")) ) {
                 let httpUrl = "https://" + url!
                 _ = websiteView.load(httpUrl)
+                websiteInputTextField.stringValue = httpUrl
             } else {
                 _ = websiteView.load(url!)
+                websiteInputTextField.stringValue = url!
             }
         } else {
             loadEmptyPage()
@@ -28,6 +30,7 @@ extension BFBrowserViewController {
     func loadEmptyPage() {
         websiteView.load(URLRequest(url: URL(string:"about:blank")!))
         scaleWebViewContentPage()
+        websiteInputTextField.stringValue = ""
     }
     
     func alertUserNeedLogin() -> Bool {

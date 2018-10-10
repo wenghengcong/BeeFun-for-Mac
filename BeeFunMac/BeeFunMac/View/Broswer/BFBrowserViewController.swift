@@ -26,6 +26,14 @@ class BFBrowserViewController: NSViewController, WKUIDelegate, WKNavigationDeleg
     @IBOutlet weak var webprogressBar: NSProgressIndicator!
     @IBOutlet weak var websiteView: WKWebView!
     
+    /// 该页面的user content支持以下操作
+    // [action: jump, url: www.****]
+    var userContent: [String: Any]? {
+        didSet {
+            parseUserContentAndHandle()
+        }
+    }
+    
     /// 展示Github网站的最佳宽度
     var bestWebViewWidth: CGFloat = 1030
     

@@ -79,16 +79,13 @@
 		5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44C63A20E28CA000CDEAEE /* BFConfig.swift */; };
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
-		5E48334C1FD2491400CEB336 /* BFOldHomeController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334B1FD2491400CEB336 /* BFOldHomeController+WebView.swift */; };
-		5E48334E1FD2494700CEB336 /* BFOldHomeController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334D1FD2494700CEB336 /* BFOldHomeController+Noti.swift */; };
-		5E4833501FD249CF00CEB336 /* BFOldHomeController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48334F1FD249CF00CEB336 /* BFOldHomeController+Util.swift */; };
-		5E4833521FD252BA00CEB336 /* OldHome.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4833511FD252BA00CEB336 /* OldHome.xcassets */; };
-		5E4833541FD2578600CEB336 /* BFOldHomeController+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4833531FD2578600CEB336 /* BFOldHomeController+Button.swift */; };
+		5E4833521FD252BA00CEB336 /* Browser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4833511FD252BA00CEB336 /* Browser.xcassets */; };
 		5E54DB7B216DB40C003136DC /* BFBrowserViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */; };
 		5E54DB7D216DB444003136DC /* BFBrowserViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */; };
 		5E54DB7F216DB47D003136DC /* BFBrowserViewControlle+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */; };
 		5E54DB81216DB488003136DC /* BFBrowserViewController+Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */; };
 		5E54DB83216DDBBD003136DC /* BFBrowserViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */; };
+		5E54DB85216E074F003136DC /* BFExploreReposViewItem+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */; };
 		5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */; };
 		5E5E820620E4E19E00E810E2 /* IssueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820320E4E19D00E810E2 /* IssueAPI.swift */; };
 		5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820420E4E19D00E810E2 /* EventAPI.swift */; };
@@ -205,8 +202,6 @@
 		5EAC2F1C2022D79E000442FE /* SQLStar+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC2F1B2022D79E000442FE /* SQLStar+Update.swift */; };
 		5EAC2F1E2022D82D000442FE /* SQLStar+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC2F1D2022D82D000442FE /* SQLStar+Delete.swift */; };
 		5EAD75E31FDED71300D8C128 /* NSString+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD75E21FDED71300D8C128 /* NSString+Size.swift */; };
-		5EBF53F71FCFF82000D7A2A5 /* BFOldHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF53F51FCFF82000D7A2A5 /* BFOldHomeController.swift */; };
-		5EBF53F81FCFF82000D7A2A5 /* BFOldHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF53F61FCFF82000D7A2A5 /* BFOldHomeController.xib */; };
 		5EBF53FB1FCFF83000D7A2A5 /* BFStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF53F91FCFF83000D7A2A5 /* BFStarViewController.swift */; };
 		5EBF53FC1FCFF83000D7A2A5 /* BFStarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */; };
 		5EC1B1A02018765600186A67 /* OAuthGithubWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1B19F2018765600186A67 /* OAuthGithubWebController.swift */; };
@@ -318,16 +313,13 @@
 		5E44C63A20E28CA000CDEAEE /* BFConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
-		5E48334B1FD2491400CEB336 /* BFOldHomeController+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFOldHomeController+WebView.swift"; sourceTree = "<group>"; };
-		5E48334D1FD2494700CEB336 /* BFOldHomeController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFOldHomeController+Noti.swift"; sourceTree = "<group>"; };
-		5E48334F1FD249CF00CEB336 /* BFOldHomeController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFOldHomeController+Util.swift"; sourceTree = "<group>"; };
-		5E4833511FD252BA00CEB336 /* OldHome.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OldHome.xcassets; sourceTree = "<group>"; };
-		5E4833531FD2578600CEB336 /* BFOldHomeController+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFOldHomeController+Button.swift"; sourceTree = "<group>"; };
+		5E4833511FD252BA00CEB336 /* Browser.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Browser.xcassets; sourceTree = "<group>"; };
 		5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Action.swift"; sourceTree = "<group>"; };
 		5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Utils.swift"; sourceTree = "<group>"; };
 		5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewControlle+Noti.swift"; sourceTree = "<group>"; };
 		5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Web.swift"; sourceTree = "<group>"; };
 		5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+View.swift"; sourceTree = "<group>"; };
+		5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreReposViewItem+Action.swift"; sourceTree = "<group>"; };
 		5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Hud.swift"; sourceTree = "<group>"; };
 		5E5E820320E4E19D00E810E2 /* IssueAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAPI.swift; sourceTree = "<group>"; };
 		5E5E820420E4E19D00E810E2 /* EventAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
@@ -444,8 +436,6 @@
 		5EAC2F1B2022D79E000442FE /* SQLStar+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQLStar+Update.swift"; sourceTree = "<group>"; };
 		5EAC2F1D2022D82D000442FE /* SQLStar+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQLStar+Delete.swift"; sourceTree = "<group>"; };
 		5EAD75E21FDED71300D8C128 /* NSString+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Size.swift"; sourceTree = "<group>"; };
-		5EBF53F51FCFF82000D7A2A5 /* BFOldHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFOldHomeController.swift; sourceTree = "<group>"; };
-		5EBF53F61FCFF82000D7A2A5 /* BFOldHomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFOldHomeController.xib; sourceTree = "<group>"; };
 		5EBF53F91FCFF83000D7A2A5 /* BFStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarViewController.swift; sourceTree = "<group>"; };
 		5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarViewController.xib; sourceTree = "<group>"; };
 		5EC1B19F2018765600186A67 /* OAuthGithubWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthGithubWebController.swift; sourceTree = "<group>"; };
@@ -496,7 +486,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E048A71213A0E8F0098CBF6 /* Home */ = {
+		5E048A71213A0E8F0098CBF6 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
 				5EEAC28C2169FF4F0060E253 /* Layout */,
@@ -509,7 +499,7 @@
 				5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */,
 				5E2C9D3B21645A04001910F9 /* BFExploreController+Coll.swift */,
 			);
-			name = Home;
+			name = Explore;
 			path = Trending;
 			sourceTree = "<group>";
 		};
@@ -523,6 +513,7 @@
 				5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */,
 				5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */,
 				5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */,
+				5E4833511FD252BA00CEB336 /* Browser.xcassets */,
 			);
 			path = Broswer;
 			sourceTree = "<group>";
@@ -533,6 +524,7 @@
 				5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */,
 				5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */,
 				5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */,
+				5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */,
 				5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */,
 				5E048A8121436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift */,
 				5E048A8221436C3D0098CBF6 /* BFExploreDevelopersViewItem.xib */,
@@ -641,9 +633,8 @@
 			isa = PBXGroup;
 			children = (
 				5E048A76213A11630098CBF6 /* Broswer */,
-				5E048A71213A0E8F0098CBF6 /* Home */,
+				5E048A71213A0E8F0098CBF6 /* Explore */,
 				5E2816D51FCCFEB8007A5159 /* Base */,
-				5EBF53F21FCFE68F00D7A2A5 /* Home */,
 				5EBF53F01FCFE68F00D7A2A5 /* Preference */,
 				5EBF53F11FCFE68F00D7A2A5 /* Profile */,
 				5EBF53EF1FCFE68F00D7A2A5 /* Star */,
@@ -1108,20 +1099,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		5EBF53F21FCFE68F00D7A2A5 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5EBF53F51FCFF82000D7A2A5 /* BFOldHomeController.swift */,
-				5E48334B1FD2491400CEB336 /* BFOldHomeController+WebView.swift */,
-				5E48334D1FD2494700CEB336 /* BFOldHomeController+Noti.swift */,
-				5E4833531FD2578600CEB336 /* BFOldHomeController+Button.swift */,
-				5E48334F1FD249CF00CEB336 /* BFOldHomeController+Util.swift */,
-				5EBF53F61FCFF82000D7A2A5 /* BFOldHomeController.xib */,
-				5E4833511FD252BA00CEB336 /* OldHome.xcassets */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		5EC1B1A12018CBBF00186A67 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1259,8 +1236,7 @@
 				5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */,
 				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
-				5E4833521FD252BA00CEB336 /* OldHome.xcassets in Resources */,
-				5EBF53F81FCFF82000D7A2A5 /* BFOldHomeController.xib in Resources */,
+				5E4833521FD252BA00CEB336 /* Browser.xcassets in Resources */,
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E048A75213A10640098CBF6 /* BFExploreController.xib in Resources */,
 				5E424D612127B11500066967 /* NightTheme.xcassets in Resources */,
@@ -1396,6 +1372,7 @@
 				5E2C9D3E21645A26001910F9 /* BFExploreController+View.swift in Sources */,
 				5E7F6F6B1FDD845B0050B50F /* NSFont+Project.swift in Sources */,
 				5E2C9D45216469DA001910F9 /* BFGithubTrengingModel.swift in Sources */,
+				5E54DB85216E074F003136DC /* BFExploreReposViewItem+Action.swift in Sources */,
 				5E5E822320E4E2CE00E810E2 /* SEResponseIssues.swift in Sources */,
 				5E9867DE1FD05189007EE86F /* ObjIssue.swift in Sources */,
 				5E048A79213A11770098CBF6 /* BFBrowserViewController.swift in Sources */,
@@ -1505,11 +1482,9 @@
 				5EEAC2902169FF920060E253 /* BFExploreDeveloperFlowLayout.swift in Sources */,
 				5E9867DB1FD05189007EE86F /* ObjRelease.swift in Sources */,
 				5E2C9D4D2165B316001910F9 /* BFGihubTrendingTimeEnum.swift in Sources */,
-				5EBF53F71FCFF82000D7A2A5 /* BFOldHomeController.swift in Sources */,
 				5EA3BF4720AAA4E500D3CC79 /* BFStatusCode.swift in Sources */,
 				5E2C9D4221646859001910F9 /* BFExploreController+Data.swift in Sources */,
 				5ECBD90D2168910600F3C03E /* BFTheme+Explore.swift in Sources */,
-				5E4833541FD2578600CEB336 /* BFOldHomeController+Button.swift in Sources */,
 				5EA3BF4520AAA41C00D3CC79 /* ObjTag.swift in Sources */,
 				5E2B26721FDC346B00600866 /* NSColor+Extension.swift in Sources */,
 				5EC1B1A82018D6DC00186A67 /* BFWebsiteURL.swift in Sources */,
@@ -1529,7 +1504,6 @@
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
 				5E75D70B210DB7AE007596E9 /* BFTheme+StarTag.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
-				5E48334E1FD2494700CEB336 /* BFOldHomeController+Noti.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
 				5E54DB7D216DB444003136DC /* BFBrowserViewController+Utils.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,
@@ -1539,7 +1513,6 @@
 				5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */,
 				5EAB03082003B65400323A86 /* BFStarTagCellView.swift in Sources */,
 				5E2C9D4B2165ACE1001910F9 /* BFGithubTrendingUserModel.swift in Sources */,
-				5E4833501FD249CF00CEB336 /* BFOldHomeController+Util.swift in Sources */,
 				5E9867CD1FD05189007EE86F /* ObjAsset.swift in Sources */,
 				5E75D6F8210C597C007596E9 /* UIView+Animation.swift in Sources */,
 				5EAD75E31FDED71300D8C128 /* NSString+Size.swift in Sources */,
@@ -1548,7 +1521,6 @@
 				5E1C13681FD6F36300726A0C /* SQLStars.swift in Sources */,
 				5E8D8E8B1FD7E41700C1F6CF /* JSSQLiteSwiftBridge.swift in Sources */,
 				5E5E822420E4E2CE00E810E2 /* SEResponseCode.swift in Sources */,
-				5E48334C1FD2491400CEB336 /* BFOldHomeController+WebView.swift in Sources */,
 				5E5E822620E4E2CE00E810E2 /* SESearchCodeModel.swift in Sources */,
 				5E9867D41FD05189007EE86F /* ObjEventPayload.swift in Sources */,
 				5E2816DF1FCD0F98007A5159 /* BFWindow.swift in Sources */,

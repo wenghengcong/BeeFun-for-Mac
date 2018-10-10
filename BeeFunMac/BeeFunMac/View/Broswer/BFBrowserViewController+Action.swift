@@ -10,6 +10,22 @@ import Cocoa
 
 extension BFBrowserViewController {
     
+    
+    func parseUserContentAndHandle() {
+        if let userinfo = userContent {
+            if let action = userinfo["action"] as? String {
+                switch action {
+                case "jump":
+                    let url = userinfo["url"] as? String
+                    loadWebsite(url)
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+    
     /// 回退
     @IBAction func goBack(_ sender: Any) {
         if alertUserNeedLogin() {
