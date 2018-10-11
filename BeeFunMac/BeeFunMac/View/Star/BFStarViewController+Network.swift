@@ -169,8 +169,10 @@ extension BFStarViewController {
                     if let allRepos = Mapper<BeeFunResponseModel<ObjRepos>>().map(JSONObject: try response.mapJSON()) {
                         if let code = allRepos.codeEnum, code == BFStatusCode.bfOk {
                             if let data = allRepos.data {
-                                DispatchQueue.main.async {
-                                    self.hanldeStaredRepoResponse(repos: data, allRefresh: allRefresh, scrollToTop: scrollToTop)
+                                if data.count > 0 {
+                                    DispatchQueue.main.async {
+                                        self.hanldeStaredRepoResponse(repos: data, allRefresh: allRefresh, scrollToTop: scrollToTop)
+                                    }
                                 }
                             }
                         } else {
