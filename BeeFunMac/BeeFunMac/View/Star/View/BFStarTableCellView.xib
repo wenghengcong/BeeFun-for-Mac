@@ -21,7 +21,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3U-uw-wbF" userLabel="repoNameLbl">
+                <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3U-uw-wbF" userLabel="repoNameLbl">
                     <rect key="frame" x="46" y="98" width="183" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" title="---------" bezelStyle="shadowlessSquare" imagePosition="left" lineBreakMode="truncatingTail" inset="2" id="M85-H9-8qr">
