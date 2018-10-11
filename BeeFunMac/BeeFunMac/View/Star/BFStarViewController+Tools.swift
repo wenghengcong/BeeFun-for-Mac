@@ -65,7 +65,7 @@ extension BFStarViewController {
 
     @objc func clickRepoStarAction() {
         if !starReposData.isBeyond(index: selectedRepoRow) {
-            let objrepo = starReposData[selectedRepoRow]
+            let _ = starReposData[selectedRepoRow]
             if self.repoStarBtn.state == .on {
                 //Star请求
                 self.toolsStarRequest()

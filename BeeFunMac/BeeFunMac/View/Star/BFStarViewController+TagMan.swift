@@ -194,7 +194,7 @@ extension BFStarViewController {
     }
 
     func updateTagRefreshTagsAndRepos(noti: NSNotification) {
-        self
+        
         if let userinfo = noti.userInfo, let renameTag = userinfo["to"] as? String {
             getTagsPage = 1
             BeeFunProvider.sharedProvider.request(BeeFunAPI.getAllTags(page: 0  , perpage: 0, sort: tagSortPara, direction: tagDirectionPara, containAll: "false")) { (result) in

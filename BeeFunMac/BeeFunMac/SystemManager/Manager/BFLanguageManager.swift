@@ -20,13 +20,9 @@ class BFLanguageManager: NSObject {
             if !FileManager.default.fileExists(atPath: des) {
                 copyLanguagePlistToDocument()
             }
-            do {
-                if let array = NSArray(contentsOfFile: desUrl.path) as? [[String: String]] {
-                    print("array  is \(array)")
-                    return array
-                }
-            } catch {
-                print(error)
+            if let array = NSArray(contentsOfFile: desUrl.path) as? [[String: String]] {
+                print("array  is \(array)")
+                return array
             }
         }
         return nil
@@ -63,8 +59,8 @@ class BFLanguageManager: NSObject {
     func saveLangugePlistFile(languages: [[String: String]]?) {
         let desPath = resourcePath()?.appendingPathComponent("BFPopularLanguage.plist")
         if let lanArr = languages, let des = desPath {
-            let nsarray = lanArr as? NSArray
-            nsarray?.write(toFile: des, atomically: true)
+            let nsarray = lanArr as! NSArray
+            nsarray.write(toFile: des, atomically: true)
         }
     }
     

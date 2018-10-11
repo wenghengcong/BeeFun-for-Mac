@@ -196,7 +196,7 @@ extension BFStarViewController {
                 }
             case .failure:
                 message = kNetworkErrorTip
-                //                JSMBHUDBridge.showError(message, view: self)
+                print("error: \(message)")
                 self.resetGetReposPageAfterNetworkError()
             }
         }
@@ -229,8 +229,9 @@ extension BFStarViewController {
         if oriSelRepoStatTags == workingTagsString {
             change = false
         }
-        var delTags = oriSelRepoStatTags!.difference(workingTagsString!)
-        var addTags = workingTagsString?.difference(oriSelRepoStatTags!)
+        
+        let delTags = oriSelRepoStatTags!.difference(workingTagsString!)
+        let addTags = workingTagsString?.difference(oriSelRepoStatTags!)
         
         let star_tagsStr = convertObjListToString(tags: self.workingTags)
         

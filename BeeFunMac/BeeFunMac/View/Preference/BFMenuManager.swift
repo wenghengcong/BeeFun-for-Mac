@@ -43,8 +43,6 @@ class BFMenuManager: NSObject {
                 openSignOut(item)
             case .openMain:
                 openBeeFunMainWindow()
-            default:
-                break
             }
         }
     }

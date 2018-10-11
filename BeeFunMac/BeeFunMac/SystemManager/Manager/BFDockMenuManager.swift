@@ -35,8 +35,6 @@ extension BFDockMenuManager {
             switch menuTitle {
             case .BeeFun:
                 openBeeFunMainWindow()
-            default:
-                break
             }
         }
     }

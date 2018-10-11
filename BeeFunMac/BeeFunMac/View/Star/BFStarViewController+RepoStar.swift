@@ -27,6 +27,7 @@ extension BFStarViewController {
                     self.selectedRepoStarred = (response.statusCode == BFStatusCode.noContent.rawValue)
                     self.updateRepoStarButtonState()
                 case .failure:
+                    print("error: \(message)")
                     message = kNetworkErrorTip
                 }
             }
@@ -63,6 +64,7 @@ extension BFStarViewController {
                     case .failure:
                         message = kNetworkErrorTip
                     }
+                    print("error: \(message)")
                 }
             }
         }
@@ -98,6 +100,7 @@ extension BFStarViewController {
                     case .failure:
                         message = kNetworkErrorTip
                     }
+                    print("error: \(message)")
                 }
             }
         }
