@@ -59,7 +59,7 @@ class BFLanguageManager: NSObject {
     func saveLangugePlistFile(languages: [[String: String]]?) {
         let desPath = resourcePath()?.appendingPathComponent("BFPopularLanguage.plist")
         if let lanArr = languages, let des = desPath {
-            let nsarray = lanArr as! NSArray
+            let nsarray = lanArr as NSArray
             nsarray.write(toFile: des, atomically: true)
         }
     }
