@@ -86,6 +86,10 @@
 		5E54DB81216DB488003136DC /* BFBrowserViewController+Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */; };
 		5E54DB83216DDBBD003136DC /* BFBrowserViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */; };
 		5E54DB85216E074F003136DC /* BFExploreReposViewItem+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */; };
+		5E54DB87216EDDEB003136DC /* BFExploreDeveloperstem+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB86216EDDEB003136DC /* BFExploreDeveloperstem+Action.swift */; };
+		5E54DB89216EDE3E003136DC /* NSView+Click.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB88216EDE3E003136DC /* NSView+Click.swift */; };
+		5E54DB8C216EDF95003136DC /* BFBrowserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB8B216EDF95003136DC /* BFBrowserManager.swift */; };
+		5E54DB8E216EE56A003136DC /* NSImage+Construct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB8D216EE56A003136DC /* NSImage+Construct.swift */; };
 		5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */; };
 		5E5E820620E4E19E00E810E2 /* IssueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820320E4E19D00E810E2 /* IssueAPI.swift */; };
 		5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820420E4E19D00E810E2 /* EventAPI.swift */; };
@@ -320,6 +324,10 @@
 		5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Web.swift"; sourceTree = "<group>"; };
 		5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+View.swift"; sourceTree = "<group>"; };
 		5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreReposViewItem+Action.swift"; sourceTree = "<group>"; };
+		5E54DB86216EDDEB003136DC /* BFExploreDeveloperstem+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreDeveloperstem+Action.swift"; sourceTree = "<group>"; };
+		5E54DB88216EDE3E003136DC /* NSView+Click.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Click.swift"; sourceTree = "<group>"; };
+		5E54DB8B216EDF95003136DC /* BFBrowserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFBrowserManager.swift; sourceTree = "<group>"; };
+		5E54DB8D216EE56A003136DC /* NSImage+Construct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Construct.swift"; sourceTree = "<group>"; };
 		5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Hud.swift"; sourceTree = "<group>"; };
 		5E5E820320E4E19D00E810E2 /* IssueAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAPI.swift; sourceTree = "<group>"; };
 		5E5E820420E4E19D00E810E2 /* EventAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
@@ -506,6 +514,7 @@
 		5E048A76213A11630098CBF6 /* Broswer */ = {
 			isa = PBXGroup;
 			children = (
+				5E54DB8A216EDF83003136DC /* Utils */,
 				5E048A78213A11770098CBF6 /* BFBrowserViewController.xib */,
 				5E048A77213A11770098CBF6 /* BFBrowserViewController.swift */,
 				5E54DB82216DDBBD003136DC /* BFBrowserViewController+View.swift */,
@@ -523,11 +532,12 @@
 			children = (
 				5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */,
 				5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */,
+				5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */,
 				5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */,
 				5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */,
-				5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */,
-				5E048A8121436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift */,
 				5E048A8221436C3D0098CBF6 /* BFExploreDevelopersViewItem.xib */,
+				5E048A8121436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift */,
+				5E54DB86216EDDEB003136DC /* BFExploreDeveloperstem+Action.swift */,
 				5E048A8521436C550098CBF6 /* BFProductHuntViewItem.swift */,
 				5E048A8621436C550098CBF6 /* BFProductHuntViewItem.xib */,
 				5E048A8921436C6B0098CBF6 /* BFHackerNewsViewItem.swift */,
@@ -544,6 +554,8 @@
 				5E7F6F681FDD7F460050B50F /* LCButton.swift */,
 				5ECBD9162169B2BB00F3C03E /* Dictionary+Attribute.swift */,
 				5E7F6F6E1FDD86D10050B50F /* NSView+Draw.swift */,
+				5E54DB88216EDE3E003136DC /* NSView+Click.swift */,
+				5E54DB8D216EE56A003136DC /* NSImage+Construct.swift */,
 			);
 			path = LCUI;
 			sourceTree = "<group>";
@@ -742,6 +754,14 @@
 			children = (
 			);
 			path = Download;
+			sourceTree = "<group>";
+		};
+		5E54DB8A216EDF83003136DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5E54DB8B216EDF95003136DC /* BFBrowserManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		5E5E820B20E4E29F00E810E2 /* Search */ = {
@@ -1356,6 +1376,7 @@
 				5E9867EC1FD05189007EE86F /* ObjPermissions.swift in Sources */,
 				5E80F748211B287A00756B30 /* BFTheme+StarRepos.swift in Sources */,
 				5E5E822220E4E2CE00E810E2 /* SEResponseWikis.swift in Sources */,
+				5E54DB89216EDE3E003136DC /* NSView+Click.swift in Sources */,
 				5E5E822D20E9CAE600E810E2 /* BFDockMenuManager.swift in Sources */,
 				5E54DB7F216DB47D003136DC /* BFBrowserViewControlle+Noti.swift in Sources */,
 				5EBF53FB1FCFF83000D7A2A5 /* BFStarViewController.swift in Sources */,
@@ -1366,6 +1387,7 @@
 				5E9867E21FD05189007EE86F /* ObjErropReponse.swift in Sources */,
 				5ED37E391FF51EA100C14B72 /* BFStarViewController+Noti.swift in Sources */,
 				5EFB14D420185C9C00304AD3 /* BFMenuManager.swift in Sources */,
+				5E54DB87216EDDEB003136DC /* BFExploreDeveloperstem+Action.swift in Sources */,
 				5E09F604201A153300CC3866 /* BFMonitor.swift in Sources */,
 				5EAC2F1A2022D63D000442FE /* SQLStars+Find.swift in Sources */,
 				5EC3CC622016A11300701C23 /* BFLoginController.swift in Sources */,
@@ -1437,6 +1459,7 @@
 				5E9868151FD105EA007EE86F /* NetworkHelper.swift in Sources */,
 				5E2D29FE1FD97FAF0043A665 /* BFStarViewController+Data.swift in Sources */,
 				5E9867CE1FD05189007EE86F /* ObjBranch.swift in Sources */,
+				5E54DB8E216EE56A003136DC /* NSImage+Construct.swift in Sources */,
 				5E8A2AF61FD1573C00B246BD /* BFMainController+Noti.swift in Sources */,
 				5E75D702210D5E27007596E9 /* NSColor+Day.swift in Sources */,
 				5E5E822520E4E2CE00E810E2 /* SESearchIssueModel.swift in Sources */,
@@ -1457,6 +1480,7 @@
 				5E2C9D4021645A34001910F9 /* BFExploreController+Search.swift in Sources */,
 				5E5E822A20E4E2CE00E810E2 /* SESearchBaseModel.swift in Sources */,
 				5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */,
+				5E54DB8C216EDF95003136DC /* BFBrowserManager.swift in Sources */,
 				5E09F608201A1D6400CC3866 /* SyncPreferenceController.swift in Sources */,
 				5E9867D01FD05189007EE86F /* ObjCommit.swift in Sources */,
 				5E5E822120E4E2CE00E810E2 /* SEResponseRepos.swift in Sources */,

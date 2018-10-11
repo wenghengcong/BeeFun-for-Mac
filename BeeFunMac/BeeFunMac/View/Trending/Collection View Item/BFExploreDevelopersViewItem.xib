@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="BFExploreDevelopersViewItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="avatarImageView" destination="jak-oe-BGj" id="ZRy-kM-KBm"/>
+                <outlet property="followedButton" destination="Rwd-4G-sed" id="CaQ-9I-zxq"/>
                 <outlet property="loginButton" destination="hd6-Wc-70s" id="khS-93-vOn"/>
                 <outlet property="posButton" destination="lDE-X9-Bff" id="7D4-iW-xiN"/>
                 <outlet property="repoButton" destination="YUZ-PX-FWW" id="bT9-ra-Dme"/>
@@ -62,8 +63,8 @@
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rwd-4G-sed">
                     <rect key="frame" x="63" y="52" width="57" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_detail_trend_follow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tk0-4u-BCx">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_detail_trend_follow" imagePosition="overlaps" alignment="center" alternateImage="exp_detail_trend_unfollow" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="tk0-4u-BCx">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
@@ -73,6 +74,7 @@
         <collectionViewItem id="V5Q-72-9ZS" customClass="BFExploreDevelopersViewItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="avatarImageView" destination="jak-oe-BGj" id="huh-GK-TGp"/>
+                <outlet property="followedButton" destination="Rwd-4G-sed" id="u2G-HP-gCf"/>
                 <outlet property="loginButton" destination="hd6-Wc-70s" id="4hy-oh-kkf"/>
                 <outlet property="posButton" destination="lDE-X9-Bff" id="lTt-Vh-XDh"/>
                 <outlet property="repoButton" destination="YUZ-PX-FWW" id="47B-Yu-z0M"/>
@@ -83,7 +85,8 @@
     </objects>
     <resources>
         <image name="avatar_myself" width="105" height="105"/>
-        <image name="exp_detail_trend_follow" width="100" height="81"/>
+        <image name="exp_detail_trend_follow" width="100" height="85"/>
         <image name="exp_detail_trend_repo" width="100" height="100"/>
+        <image name="exp_detail_trend_unfollow" width="100" height="85"/>
     </resources>
 </document>

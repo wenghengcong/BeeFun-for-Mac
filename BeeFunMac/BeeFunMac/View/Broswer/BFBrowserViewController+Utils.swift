@@ -13,7 +13,7 @@ extension BFBrowserViewController {
     /// webview加载url
     func loadWebsite(_ url: String?) {
         
-        if url != nil {
+        if url != nil && url!.length > 0 {
             if (!(url!.contains("https")) || !(url!.contains("http")) ) {
                 let httpUrl = "https://" + url!
                 _ = websiteView.load(httpUrl)

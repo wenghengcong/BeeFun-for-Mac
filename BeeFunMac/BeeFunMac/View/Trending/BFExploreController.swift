@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Moya
 
 enum NavigationProductType: String {
     case githubTrendingRepos = "1"
@@ -14,7 +15,9 @@ enum NavigationProductType: String {
     case prodhuctHunt = "3"
 }
 
-class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete {
+class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete, BFExploreReposViewItemDelete {
+
+    var beefunDataUpdateCancable: Cancellable?
 
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var searchButton: NSButton!

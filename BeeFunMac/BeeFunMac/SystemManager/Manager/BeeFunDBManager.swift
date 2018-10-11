@@ -8,34 +8,36 @@
 
 import AppKit
 import ObjectMapper
+import Moya
 
 class BeeFunDBManager: NSObject {
     
     static let shared = BeeFunDBManager()
-    var lastTimeStampKey = "lastUpdateFromGithub"
     
-    func updateServerDB(showTips: Bool, first: Bool) {
+    var lastTimeStampKey = "lastUpdateFromGithub"
+
+    func updateServerDB(showTips: Bool, first: Bool) -> Cancellable? {
         if !UserManager.shared.isLogin {
-            return
+            return nil
         }
 
         let nowDate = Date().timeStamp
         let lastUpdate = UserDefaults.standard.integer(forKey: lastTimeStampKey)
         if (nowDate - lastUpdate > 1 * 24 * 60 * 60) || first {
-            updateRequest(showTips: showTips, first: first, update: true)
+           return updateRequest(showTips: showTips, first: first, update: true)
         } else {
-            updateRequest(showTips: showTips, first: first, update: false)
+           return updateRequest(showTips: showTips, first: first, update: false)
         }
     }
     
     /// 更新请求
     ///
     /// - Parameter update: 是否更新所有已经在server db存在repo的信息
-    private func updateRequest(showTips: Bool, first: Bool, update: Bool) {
+    private func updateRequest(showTips: Bool, first: Bool, update: Bool) -> Cancellable {
         if showTips {
             NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
         }
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(first: first, update: update)) { (result) in
+       return BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(first: first, update: update)) { (result) in
             NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
             switch result {
             case let .success(response):

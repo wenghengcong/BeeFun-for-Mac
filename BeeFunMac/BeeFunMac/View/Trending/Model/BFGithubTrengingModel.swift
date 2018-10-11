@@ -63,17 +63,18 @@ class BFGithubTrengingModel: NSObject, Mappable {
     var created_at: String?
     var updated_at: String?
     var repo_desc: String?
+    var repo_owner: String?
     
     //以下字段为解析后的字段
-    
-    /// repo 所有者，从full_name解出
-    var repo_owner: String?
     
     /// repo的维护者
     var built_by_users: [BFGithubTrendingUserModel]?
     
-    /// 是否被用户star
+    /// repo是否被用户star
     var starred: Bool?
+    
+    /// user是否被用户follow
+    var followed: Bool?
     
     private var built_by_users_string: String?
 
@@ -92,6 +93,7 @@ class BFGithubTrengingModel: NSObject, Mappable {
         login <- map["login"]
         user_id <- map["user_id"]
         repo_name <- map["repo_name"]
+        repo_owner <- map["repo_owner"]
         repo_url <- map["repo_url"]
         type <- map["type"]
         
@@ -111,12 +113,6 @@ class BFGithubTrengingModel: NSObject, Mappable {
         
         if let userJson = built_by_users_string, let users = Mapper<BFGithubTrendingUserModel>().mapArray(JSONString: userJson) {
             built_by_users = users
-        }
-        
-        if let fullname = full_name {
-            if let owner = fullname.split("/").first {
-                repo_owner = owner.trimmed
-            }
         }
     }
 }

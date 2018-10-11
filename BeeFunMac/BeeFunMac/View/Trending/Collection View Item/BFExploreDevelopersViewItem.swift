@@ -18,6 +18,7 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
     @IBOutlet weak var repoImageView: NSImageView!
     @IBOutlet weak var repoButton: NSButton!
     
+    @IBOutlet weak var followedButton: NSButton!
     
     private let viewOriBorderWidth: CGFloat = 1.0
     private let viewSelBorderWidth: CGFloat = 5.0
@@ -44,6 +45,12 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         view.radius = 5.0
         view.borderColor = NSColor.white
         view.borderWidth = viewOriBorderWidth
+        
+        followedButton.isHidden = true
+        followedButton.image = NSImage(named: NSImage.Name(rawValue: "exp_detail_trend_follow"))
+        followedButton.alternateImage = NSImage(named: NSImage.Name(rawValue: "exp_detail_trend_unfollow"))
+        
+        addAction()
     }
     /*
      
@@ -62,6 +69,9 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
      "repo_desc": "React Native module for CodePush",
     */
     private func fillDataToUI() {
+        
+        //检查是否关注该用户
+//        checkFollowed()
         
         if let avatar = userModel?.user_avatar, let userAvatarUrl = URL(string: avatar) {
             avatarImageView.kf.setImage(with: userAvatarUrl)
@@ -86,7 +96,6 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
             let repoAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayLightBlack, backColor: NSColor.thDayWhite, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
             repoButton.attributedTitle = NSAttributedString(string: repoName, attributes: repoAtt)
         }
-        
     }
     
 }

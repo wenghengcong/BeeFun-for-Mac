@@ -53,6 +53,7 @@ public enum BeeFunAPI {
     
 // MARK: - Database
     //1. 每次启动时 2.
+    //update 是否要更新全部repo信息
     case updateServerDB(first: Bool, update: Bool)
     
 // MARK: - User

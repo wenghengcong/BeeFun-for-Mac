@@ -10,7 +10,13 @@ import Cocoa
 import Kingfisher
 
 protocol BFExploreReposViewItemDelete: class {
-    func clickRepostoriesBuiltUserHome(navigationItem: BFExploreReposViewItem, userHome: String)
+    
+    /// 当Star状态变更时
+    ///
+    /// - Parameters:
+    ///   - repoViewItem: 视图对象
+    ///   - starState: star状态
+    func starReposStateChange(repoViewItem: BFExploreReposViewItem, starState: Bool)
 }
 
 class BFExploreReposViewItem: NSCollectionViewItem {
@@ -34,6 +40,8 @@ class BFExploreReposViewItem: NSCollectionViewItem {
     
     let viewOriBorderWidth: CGFloat = 1.0
     let viewSelBorderWidth: CGFloat = 5.0
+    
+    weak var delegate: BFExploreReposViewItemDelete?
     
     var repoModel: BFGithubTrengingModel? {
         didSet {

@@ -125,7 +125,7 @@ extension BFExploreController {
                
                 if let item =  detailCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreReposViewItem, for: indexPath) as? BFExploreReposViewItem {
                     let sectionIndexData = githubTrendingReposData[indexPath.section][indexPath.item]
-                    
+                    item.delegate = self
                     item.repoModel = sectionIndexData
                     return item
                 }
@@ -196,5 +196,15 @@ extension BFExploreController {
         default:
             getGithubTrendingReopsitories(refresh: true)
         }
+    }
+}
+
+extension BFExploreController {
+    
+    func starReposStateChange(repoViewItem: BFExploreReposViewItem, starState: Bool) {
+        if beefunDataUpdateCancable != nil && !beefunDataUpdateCancable!.isCancelled {
+            beefunDataUpdateCancable!.cancel()
+        }
+        beefunDataUpdateCancable =  BeeFunDBManager.shared.updateServerDB(showTips: false, first: false)
     }
 }
