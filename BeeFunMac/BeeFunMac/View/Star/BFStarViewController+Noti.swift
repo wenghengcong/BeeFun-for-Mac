@@ -69,7 +69,7 @@ extension BFStarViewController {
     @objc func syncStarRepoDone(noti: NSNotification) {
         //刷新按钮停止转动
         refreshStopRotate()
-        searchStarReposNow(allRefresh: true, scrollToTop: true)
+        searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
     }
     
     // MARK: - Tag操作

@@ -98,7 +98,7 @@ extension BFStarViewController {
         filterTags = []
         self.selectedTagRow = -1
         deSelectedTagTableRow()
-        searchStarReposNow(allRefresh: true, scrollToTop: true)
+        searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
         //TODO: 什么时候能刷新Tag列表
 //        getFirstPageTags()
     }
@@ -219,7 +219,7 @@ extension BFStarViewController {
                                     }
                                     self.selectedTagRow = currentIndex
                                     self.tagTableViewDidSelectRow(self.selectedTagRow)
-                                    self.searchStarReposNow(allRefresh: true, scrollToTop: true)
+                                    self.searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
                                 }
                             } else {
                                 self.resetGetTagsPageAfterNetworkError()
@@ -296,7 +296,7 @@ extension BFStarViewController {
         if selectedTag != nil {
             filterTags = [selectedTag!]
         }
-        searchStarReposNow(allRefresh: true, scrollToTop: true)
+        searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
         
         //加载webview
         webViewReadMeAction(sender: nil)

@@ -1084,6 +1084,7 @@
 				5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */,
 				5EA4350B1FDB80A500034578 /* View */,
 				5EBF53F91FCFF83000D7A2A5 /* BFStarViewController.swift */,
+				5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */,
 				5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */,
 				5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */,
 				5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */,
@@ -1101,7 +1102,6 @@
 				5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */,
 				5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */,
 				5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */,
-				5EBF53FA1FCFF83000D7A2A5 /* BFStarViewController.xib */,
 				5EA435071FDADF4400034578 /* Star.xcassets */,
 			);
 			path = Star;

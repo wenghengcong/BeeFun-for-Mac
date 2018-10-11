@@ -40,7 +40,7 @@ extension BFStarViewController {
     func resetAfterCancelSearchButton() {
         searchField.stringValue = ""
         clickAllStarButton()
-        searchStarReposNow(allRefresh: true, scrollToTop: true)
+        searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
     }
 
     func starPageReloadAllData() {

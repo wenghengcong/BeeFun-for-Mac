@@ -280,7 +280,8 @@ extension BFStarViewController: NSTextFieldDelegate {
             } else {
                 print("Enter detected.")
                 if textfield == searchField {
-                    searchStarReposNow(allRefresh: true, scrollToTop: true)
+                    
+                    searchStarReposNow(forceSearchKey: true, allRefresh: true, scrollToTop: true)
                 } else if textfield == repoTagsTextField {
                     //FIXME: 在AutoCompleteTextField中动作被截获，所以注释掉
 //                    addTagToRepo()

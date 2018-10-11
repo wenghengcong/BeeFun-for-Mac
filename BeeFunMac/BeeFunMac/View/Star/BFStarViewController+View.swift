@@ -156,9 +156,8 @@ extension BFStarViewController {
             let index = popBtn.indexOfItem(withTitle: selTitle)
             if index < languageArr.count && index >= 0 {
                 getRepoLanguageVar = languageArr[index]
-                searchStarReposNow(allRefresh: true, scrollToTop: true)
+                searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
             }
-
         }
     }
 }
@@ -169,6 +168,6 @@ extension BFStarViewController: StarOrderProtocol {
     /// 点击排序按钮：时间、star、name
     func didSelected(button: BFImageButton, order: StarOrderType) {
         ordertType = order
-        searchStarReposNow(allRefresh: true, scrollToTop: true)
+        searchStarReposNow(forceSearchKey: false, allRefresh: true, scrollToTop: true)
     }
 }

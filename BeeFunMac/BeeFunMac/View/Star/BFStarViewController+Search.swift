@@ -25,12 +25,18 @@ extension BFStarViewController: NSSearchFieldDelegate {
         resetAfterCancelSearchButton()
     }
     
-    func searchStarReposNow(allRefresh: Bool, scrollToTop:Bool) {
+    /// 搜索
+    ///
+    /// - Parameters:
+    ///   - forceSearchKey: 强制搜索 搜索关键字s
+    ///   - allRefresh: 是否刷新全部列表数据
+    ///   - scrollToTop: 是否滑动到顶部
+    func searchStarReposNow(forceSearchKey: Bool, allRefresh: Bool, scrollToTop:Bool) {
         
-        if searchField.stringValue.isEmpty {
-            searchKey = nil
-        } else {
+        if !searchField.stringValue.isEmpty && forceSearchKey {
             searchKey = searchField.stringValue
+        } else {
+            searchKey = nil
         }
         
         resignAllTextFieldFirstResponder()
