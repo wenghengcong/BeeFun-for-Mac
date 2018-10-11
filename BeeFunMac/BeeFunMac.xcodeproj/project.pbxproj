@@ -530,8 +530,8 @@
 		5E048A7C21436BEB0098CBF6 /* Collection View Item */ = {
 			isa = PBXGroup;
 			children = (
-				5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */,
 				5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */,
+				5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */,
 				5E048A7E21436C2B0098CBF6 /* BFExploreReposViewItem.xib */,
 				5E048A7D21436C2B0098CBF6 /* BFExploreReposViewItem.swift */,
 				5E54DB84216E074F003136DC /* BFExploreReposViewItem+Action.swift */,

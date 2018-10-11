@@ -104,7 +104,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                 let width = repoLanguageLabel.width
                 repoLanguageLabel.snp.remakeConstraints { (make) in
                     make.top.equalTo(8)
-                    make.trailing.equalTo(8.0)
+                    make.trailing.equalTo(-5.0)
                     make.width.equalTo(width)
                     make.height.equalTo(18.0)
                 }
@@ -114,6 +114,9 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                     make.trailing.equalTo(self.repoLanguageLabel.snp.leading).offset(-3.0)
                     make.width.equalTo(10.0)
                     make.height.equalTo(10.0)
+                }
+                repoNameLabel.snp.remakeConstraints { (make) in
+                    make.trailing.equalTo(repoColorLabel.snp.leading).offset(-10.0)
                 }
             } else {
                 repoLanguageLabel.isHidden = true
@@ -161,6 +164,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         let w: CGFloat = 17
         let boxW = builtUsersBox.size.width
         if let builtUsers = repoModel?.built_by_users {
+            builtUsersBox.isHidden = false
             for (index, user) in builtUsers.enumerated() {
                 if let userAvatar = user.avatar, let userAvatarUrl = URL(string: userAvatar) {
                     let userButton = NSButton()
@@ -180,6 +184,8 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                     builtUsersBox.addSubview(userButton)
                 }
             }
+        } else {
+            builtUsersBox.isHidden = true
         }
     }
     

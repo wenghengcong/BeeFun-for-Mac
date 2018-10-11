@@ -93,6 +93,7 @@ extension BFExploreController {
                                     self.githubTrendingDevelopserData.append(data)
 //                                }
                                 self.detailCollectionView.reloadData()
+                                self.detailCollectionView.scroll(NSPoint.zero)
                             }
                         }
                     }
@@ -125,6 +126,7 @@ extension BFExploreController {
                                     self.githubTrendingReposData.append(data)
 //                                }
                                 self.detailCollectionView.reloadData()
+                                self.detailCollectionView.scroll(NSPoint.zero)
                             }
                         }
                     }
