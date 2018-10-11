@@ -120,7 +120,8 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var webIndicator: NSProgressIndicator!
 
     var loadReadMeRequest: [Cancellable]? = []
-    
+    var loadAllReposRequest: [Cancellable]? = []
+
     lazy var messageHud = MBProgressHUD()
     
     lazy var downloadPopover: NSPopover = {

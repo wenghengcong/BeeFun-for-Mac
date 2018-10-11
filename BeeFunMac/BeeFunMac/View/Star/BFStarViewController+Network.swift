@@ -159,7 +159,16 @@ extension BFStarViewController {
         }
         
         orderFilterView.showIndicator()
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.getRepos(tag: getRepoTagPara, language: getRepoLanguageVar, search: searchKey!, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
+        
+        if let requestBefore = loadAllReposRequest {
+            for request in requestBefore {
+                print("cancel request before: \(request)")
+                request.cancel()
+            }
+            loadAllReposRequest?.removeAll()
+        }
+        
+       let repoRequest = BeeFunProvider.sharedProvider.request(BeeFunAPI.getRepos(tag: getRepoTagPara, language: getRepoLanguageVar, search: searchKey!, page: getReposPage, perpage: getReposPerPage, sort: getRepoSortPara, direction: getRepoDirectionPara)) { (result) in
             var message = kNoDataFoundTip
             self.orderFilterView.hideIndicator()
             self.getReposNextPageLoading = false
@@ -191,6 +200,8 @@ extension BFStarViewController {
                 self.resetGetReposPageAfterNetworkError()
             }
         }
+        
+        loadAllReposRequest?.append(repoRequest)
     }
     
     
