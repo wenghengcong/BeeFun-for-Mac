@@ -13,6 +13,7 @@
                 <outlet property="detailLayout" destination="dUp-Y1-b66" id="otA-Tk-L81"/>
                 <outlet property="detailScrollView" destination="gGT-YX-KPD" id="bjL-vh-SZX"/>
                 <outlet property="detailSepLine" destination="REM-wE-8OS" id="ND7-pZ-3Sr"/>
+                <outlet property="languagePopup" destination="niz-jn-GHc" id="bac-6W-jfx"/>
                 <outlet property="navAndDetailSepLine" destination="XlB-lg-gE8" id="Kwh-Ow-l4K"/>
                 <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>
                 <outlet property="navigationContainView" destination="11I-39-gsf" id="y79-Jw-enF"/>
@@ -20,6 +21,7 @@
                 <outlet property="navigationSepLine" destination="DT5-BJ-Wie" id="zNm-ka-MBe"/>
                 <outlet property="searchButton" destination="pRO-C6-N13" id="Ba4-uu-koy"/>
                 <outlet property="searchTextField" destination="PT4-5j-FgO" id="FlQ-KX-DvW"/>
+                <outlet property="timePopup" destination="lGQ-Np-VRU" id="Bgb-OQ-E6T"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -157,9 +159,12 @@
                                 <constraint firstAttribute="width" constant="500" id="fd2-dL-75Y"/>
                             </constraints>
                         </box>
-                        <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niz-jn-GHc">
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="niz-jn-GHc">
                             <rect key="frame" x="831" y="630" width="132" height="26"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="127" id="PIG-Fe-W6f"/>
+                                <constraint firstAttribute="height" constant="21" id="ag2-xE-Xuf"/>
+                            </constraints>
                             <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kbf-Sh-G7b" id="cCg-0c-Ia0">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
@@ -172,14 +177,36 @@
                                 </menu>
                             </popUpButtonCell>
                         </popUpButton>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
+                            <rect key="frame" x="710" y="630" width="98" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="a5T-Jp-EsY"/>
+                                <constraint firstAttribute="width" constant="93" id="ysq-9M-Ioh"/>
+                            </constraints>
+                            <popUpButtonCell key="cell" type="push" title="daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="T2G-eO-oBo" id="m7i-hQ-BqZ">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="bdw-TM-akE">
+                                    <items>
+                                        <menuItem title="daily" state="on" id="T2G-eO-oBo"/>
+                                        <menuItem title="weekly" id="WMO-TL-O1r"/>
+                                        <menuItem title="monthly" id="4kq-HY-uhr"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
                     </subviews>
                     <constraints>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="14" id="1qC-N9-5CV"/>
+                        <constraint firstItem="niz-jn-GHc" firstAttribute="leading" secondItem="lGQ-Np-VRU" secondAttribute="trailing" constant="28" id="4Zm-uz-Ibc"/>
+                        <constraint firstItem="niz-jn-GHc" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="NT8-7I-gai"/>
                         <constraint firstAttribute="bottom" secondItem="gGT-YX-KPD" secondAttribute="bottom" constant="12" id="TAH-9v-ctn"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="13" id="eMy-Uf-8gc"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
+                        <constraint firstAttribute="trailing" secondItem="niz-jn-GHc" secondAttribute="trailing" constant="20" id="ie2-m9-oa2"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="16" id="jie-qI-5fh"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
+                        <constraint firstItem="lGQ-Np-VRU" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="nBn-Qt-wXh"/>
                         <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="13" id="nQK-UF-ZHY"/>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="7" id="ulb-vn-RPS"/>
                     </constraints>

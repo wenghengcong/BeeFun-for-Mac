@@ -90,6 +90,9 @@
 		5E54DB89216EDE3E003136DC /* NSView+Click.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB88216EDE3E003136DC /* NSView+Click.swift */; };
 		5E54DB8C216EDF95003136DC /* BFBrowserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB8B216EDF95003136DC /* BFBrowserManager.swift */; };
 		5E54DB8E216EE56A003136DC /* NSImage+Construct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB8D216EE56A003136DC /* NSImage+Construct.swift */; };
+		5E54DB92216F2842003136DC /* BFLanguage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E54DB90216F2841003136DC /* BFLanguage.plist */; };
+		5E54DB93216F2842003136DC /* BFPopularLanguage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E54DB91216F2842003136DC /* BFPopularLanguage.plist */; };
+		5E54DB95216F34F5003136DC /* BFLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB94216F34F5003136DC /* BFLanguageManager.swift */; };
 		5E59FF27212D63D700AD3479 /* BFStarViewController+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */; };
 		5E5E820620E4E19E00E810E2 /* IssueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820320E4E19D00E810E2 /* IssueAPI.swift */; };
 		5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E820420E4E19D00E810E2 /* EventAPI.swift */; };
@@ -328,6 +331,9 @@
 		5E54DB88216EDE3E003136DC /* NSView+Click.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Click.swift"; sourceTree = "<group>"; };
 		5E54DB8B216EDF95003136DC /* BFBrowserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFBrowserManager.swift; sourceTree = "<group>"; };
 		5E54DB8D216EE56A003136DC /* NSImage+Construct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Construct.swift"; sourceTree = "<group>"; };
+		5E54DB90216F2841003136DC /* BFLanguage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BFLanguage.plist; sourceTree = "<group>"; };
+		5E54DB91216F2842003136DC /* BFPopularLanguage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BFPopularLanguage.plist; sourceTree = "<group>"; };
+		5E54DB94216F34F5003136DC /* BFLanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLanguageManager.swift; sourceTree = "<group>"; };
 		5E59FF26212D63D700AD3479 /* BFStarViewController+Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Hud.swift"; sourceTree = "<group>"; };
 		5E5E820320E4E19D00E810E2 /* IssueAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAPI.swift; sourceTree = "<group>"; };
 		5E5E820420E4E19D00E810E2 /* EventAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
@@ -657,6 +663,7 @@
 		5E2816901FCCFDE7007A5159 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E54DB8F216F2828003136DC /* language */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -755,6 +762,15 @@
 				5E54DB8B216EDF95003136DC /* BFBrowserManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5E54DB8F216F2828003136DC /* language */ = {
+			isa = PBXGroup;
+			children = (
+				5E54DB90216F2841003136DC /* BFLanguage.plist */,
+				5E54DB91216F2842003136DC /* BFPopularLanguage.plist */,
+			);
+			path = language;
 			sourceTree = "<group>";
 		};
 		5E5E820B20E4E29F00E810E2 /* Search */ = {
@@ -872,6 +888,7 @@
 				5E09F605201A156B00CC3866 /* BFMonitor+Handle.swift */,
 				5E042CFB20AFBB3900767E56 /* BeeFunDBManager.swift */,
 				5E5E822C20E9CAE600E810E2 /* BFDockMenuManager.swift */,
+				5E54DB94216F34F5003136DC /* BFLanguageManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1231,6 +1248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E048A7A213A11770098CBF6 /* BFBrowserViewController.xib in Resources */,
+				5E54DB92216F2842003136DC /* BFLanguage.plist in Resources */,
 				5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */,
 				5E28168E1FCCF23C007A5159 /* MainWindow.storyboard in Resources */,
 				5E048A8021436C2B0098CBF6 /* BFExploreReposViewItem.xib in Resources */,
@@ -1245,6 +1263,7 @@
 				5EAB030A2003B66500323A86 /* BFStarTagCellView.xib in Resources */,
 				5E09F60C201A1FB500CC3866 /* Preference.xcassets in Resources */,
 				5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */,
+				5E54DB93216F2842003136DC /* BFPopularLanguage.plist in Resources */,
 				5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */,
 				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
@@ -1534,6 +1553,7 @@
 				5EAD75E31FDED71300D8C128 /* NSString+Size.swift in Sources */,
 				5E7F6F691FDD7F460050B50F /* LCButton.swift in Sources */,
 				5EA4350D1FDB80C600034578 /* BFStarOrderFilterView.swift in Sources */,
+				5E54DB95216F34F5003136DC /* BFLanguageManager.swift in Sources */,
 				5E1C13681FD6F36300726A0C /* SQLStars.swift in Sources */,
 				5E8D8E8B1FD7E41700C1F6CF /* JSSQLiteSwiftBridge.swift in Sources */,
 				5E5E822420E4E2CE00E810E2 /* SEResponseCode.swift in Sources */,

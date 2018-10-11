@@ -172,7 +172,7 @@ extension BFExploreController {
     // MARK: click
     func clickNavigationArea(navigationItem: BFExpolreNavigationViewItem) {
         
-        navigationType = NavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
+        navigationType = BFExploreNavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
 
         switch navigationType {
         case .githubTrendingDevelopers:
@@ -186,7 +186,7 @@ extension BFExploreController {
     
     // MARK: double click
     func doubleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem) {
-        navigationType = NavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
+        navigationType = BFExploreNavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
 
         switch navigationType {
         case .githubTrendingDevelopers:

@@ -12,7 +12,11 @@ import ObjectMapper
 extension BFExploreController {
     
     func setupData() {
-        setRequestModel()
+        
+        requesRepostModel = BFGithubTrendingRequsetModel()
+        requesDeveloperModel = BFGithubTrendingRequsetModel()
+
+        setRequestModel(time: .daily, language: "all")
         setupNavigationData()
     }
     
@@ -51,25 +55,43 @@ extension BFExploreController {
 
     }
     
-    func setRequestModel() {
-        
-        requesRepostModel = BFGithubTrendingRequsetModel()
+    func setRequestModel(time: BFGihubTrendingTimeEnum, language: String) {
+        var source = 2
+        if language.lowercased() == "all" {
+            source = 1
+        }
         requesRepostModel?.type = 1
-        requesRepostModel?.source = 1
-        requesRepostModel?.time = BFGihubTrendingTimeEnum.daily
+        requesRepostModel?.source = source
+        requesRepostModel?.time = time
+        requesRepostModel?.language = language
         requesRepostModel?.page = 1
         requesRepostModel?.perpage = 100
         requesRepostModel?.sort = "up_star_num"
         requesRepostModel?.direction = "desc"
         
-        requesDeveloperModel = BFGithubTrendingRequsetModel()
         requesDeveloperModel?.type = 2
-        requesDeveloperModel?.source = 1
-        requesDeveloperModel?.time = BFGihubTrendingTimeEnum.daily
+        requesDeveloperModel?.source = source
+        requesDeveloperModel?.time = time
+        requesDeveloperModel?.language = language
         requesDeveloperModel?.page = 1
         requesDeveloperModel?.perpage = 100
         requesDeveloperModel?.sort = "pos"
         requesDeveloperModel?.direction = "asc"
+    }
+    
+    /// 重新加载数据
+    func reloadTimaAndLanguage() {
+        if let timeTitle = timePopup.selectedItem?.title, let lanTitle = languagePopup.selectedItem?.title {
+            let time: BFGihubTrendingTimeEnum = BFGihubTrendingTimeEnum(rawValue: timeTitle) ?? .daily
+            let language = lanTitle.lowercased().replacing(" ", with: "-")
+            setRequestModel(time: time, language: language)
+            
+            if navigationType == .githubTrendingDevelopers {
+                getGithubTrendingDeveloper(refresh: true)
+            } else if navigationType == .githubTrendingRepos {
+                getGithubTrendingReopsitories(refresh: true)
+            }
+        }
     }
     
     func getGithubTrendingDeveloper(refresh: Bool) {

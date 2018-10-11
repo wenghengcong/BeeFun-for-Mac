@@ -9,10 +9,16 @@
 import Cocoa
 import Moya
 
-enum NavigationProductType: String {
+enum BFExploreNavigationProductType: String {
     case githubTrendingRepos = "1"
     case githubTrendingDevelopers = "2"
     case prodhuctHunt = "3"
+}
+
+enum BFExploreTrendingTime: String {
+    case daily = "daily"
+    case weekly = "weekly"
+    case monthly = "monthly"
 }
 
 class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete, BFExploreReposViewItemDelete {
@@ -32,11 +38,16 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var detailCollectionView: NSCollectionView!
     @IBOutlet weak var detailLayout: NSCollectionViewFlowLayout!
     
+    /// 分割线
     @IBOutlet weak var navigationSepLine: NSBox!
     @IBOutlet weak var detailSepLine: NSBox!
     @IBOutlet weak var navAndDetailSepLine: NSBox!
     
-    var navigationType: NavigationProductType = .githubTrendingRepos
+    /// 复合选框
+    @IBOutlet weak var timePopup: NSPopUpButton!
+    @IBOutlet weak var languagePopup: NSPopUpButton!
+    
+    var navigationType: BFExploreNavigationProductType = .githubTrendingRepos
     var requesRepostModel: BFGithubTrendingRequsetModel?
     var requesDeveloperModel: BFGithubTrendingRequsetModel?
     
@@ -48,12 +59,15 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     var githubTrendingReposData: [[BFGithubTrengingModel]] = []
     var githubTrendingDevelopserData: [[BFGithubTrengingModel]] = []
     
+    /// 全部/流行 语言数据
+    var allLanguage: [String]? = []
+    var popularLanguage: [[String: String]]? = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         setupData()
         setupView()
     }
-    
     
 }
