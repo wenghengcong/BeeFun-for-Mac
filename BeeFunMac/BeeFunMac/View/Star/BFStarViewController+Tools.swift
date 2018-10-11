@@ -158,8 +158,17 @@ extension BFStarViewController {
 
     /// readme 页面加载
     func loadRepoReadMePage(objRepo: ObjRepos?) {
+        
+        if let requestBefore = loadReadMeRequest {
+            for request in requestBefore {
+                print("cancel request before: \(request)")
+                request.cancel()
+            }
+            loadReadMeRequest?.removeAll()
+        }
+        
         if let owner = objRepo?.owner?.login, let repo = objRepo?.name {
-            Provider.sharedProvider.request(GitHubAPI.readme(owner: owner, repo: repo)) { (result) in
+        let readmeRequest = Provider.sharedProvider.request(GitHubAPI.readme(owner: owner, repo: repo)) { (result) in
                 switch result {
                 case let .success(response):
                     do {
@@ -188,7 +197,11 @@ extension BFStarViewController {
                     break
                 }
             }
+            
+            loadReadMeRequest?.append(readmeRequest)
         }
+        
+        
     }
     
     private func getTemplateHTML() -> String {

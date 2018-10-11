@@ -12,6 +12,7 @@ import WebKit
 import FlatButton
 import ObjectMapper
 import Down
+import Moya
 
 class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     // MARK: - Data
@@ -118,6 +119,8 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var toolsViewSepLine: NSBox!
     @IBOutlet weak var webIndicator: NSProgressIndicator!
 
+    var loadReadMeRequest: [Cancellable]? = []
+    
     lazy var messageHud = MBProgressHUD()
     
     lazy var downloadPopover: NSPopover = {
