@@ -34,7 +34,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNJ-ab-Jr6" userLabel="repoDescLbl">
-                    <rect key="frame" x="5" y="28" width="289" height="48"/>
+                    <rect key="frame" x="5" y="27" width="289" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="left" title="---------------------------" id="GIN-Mx-atr">
                         <font key="font" metaFont="smallSystem"/>
@@ -48,7 +48,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_order_cell_star" id="5wZ-NU-UCs"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-T8-CXi" userLabel="starLbl">
-                    <rect key="frame" x="22" y="6" width="50" height="17"/>
+                    <rect key="frame" x="22" y="2" width="50" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="---" id="NUR-Si-zyP">
                         <font key="font" metaFont="system"/>
@@ -57,7 +57,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54I-pY-ZDD" userLabel="timeLbl">
-                    <rect key="frame" x="212" y="99" width="82" height="17"/>
+                    <rect key="frame" x="212" y="96" width="82" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="---------" id="l43-PC-brL">
                         <font key="font" metaFont="smallSystem"/>
@@ -71,7 +71,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_order_cell_fork" id="gud-lh-S9r"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-Ob-x5U" userLabel="forkLbl">
-                    <rect key="frame" x="93" y="3" width="63" height="20"/>
+                    <rect key="frame" x="93" y="-1" width="63" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="---" id="JUr-h2-dXJ">
                         <font key="font" metaFont="system"/>
@@ -85,10 +85,10 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_order_time_sel" id="da2-dd-sP5"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4n-35-ob2" userLabel="langLbl">
-                    <rect key="frame" x="218" y="6" width="70" height="17"/>
+                    <rect key="frame" x="218" y="2" width="70" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="------" id="GaF-jU-cpn">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="system" size="11"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

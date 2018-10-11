@@ -148,18 +148,18 @@ import Cocoa
         let tagStyle = NSMutableParagraphStyle()
         tagStyle.alignment = .left
         let tagAttrbute = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: nil
-            , alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 1.5), font: NSFont.bfSystemFont(ofSize: 12.0))
+            , alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 1.0), font: NSFont.bfSystemFont(ofSize: 11.0))
 
 //        let tagAttrbute = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : tagStyle, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
 
-        let repoNameY: CGFloat = 103
-        let repoTagY: CGFloat = 78
-        let moveY: CGFloat = 10.0
+        let repoNameY: CGFloat = 100
+        let repoTagY: CGFloat = 80
+        let moveY: CGFloat = 13.0
         
         if let allTags = objRepos?.star_tags {
             tagContentView.isHidden = false
             repoNameLbl.frame = CGRect(x: 46, y: repoNameY, width: 172, height: 20.0)
-            tagContentView.frame = CGRect(x: 46, y: repoTagY, width: 246, height: 23)
+            tagContentView.frame = CGRect(x: 46, y: repoTagY, width: 246, height: 21)
             
 //            allTags = ["A", "Test", "HAHA"]
             for subview in self.tagContentView.subviews {
@@ -172,25 +172,24 @@ import Cocoa
 //                tagB.bezelStyle = .texturedSquare
                 tagB.isBordered = false
                 tagB.backgColor = NSColor.thDayBlue
-                tagB.radius = 3.0
+                tagB.radius = 2.0
                 tagB.attributedTitle = NSAttributedString(string: tag, attributes: tagAttrbute)
 //                tagB.radius = 10.0
 //                tagB.borderWidth = 1.0
                 tagB.tag = index
 //                tagB.backgroundColor = NSColor.red
                 allBtns.append(tagB)
-                tagB.font = NSFont.bfSystemFont(ofSize: 9.0)
-                self.tagContentView.addSubview(tagB)
+                tagContentView.addSubview(tagB)
             }
             
             let btnY: CGFloat = 2
             var btnX: CGFloat = 0
             let btnOutsideMagrin: CGFloat = 3.0
-            let lineH: CGFloat = 18.0
+            let lineH: CGFloat = 15.0
             
             for (_, btn) in allBtns.enumerated() {
                 btn.sizeToFit()
-                let btnW = btn.width+3.0
+                let btnW = btn.width+2.0
                 btn.frame = CGRect(x: btnX, y: btnY, width: btnW, height: lineH)
                 btnX = btnX + btnW + btnOutsideMagrin
                 if btnX > 300 {
@@ -198,7 +197,7 @@ import Cocoa
                 }
             }
         } else {
-            repoNameLbl.frame = CGRect(x: 46, y: repoNameY-moveY, width: 172, height: 20.0)
+            repoNameLbl.frame = CGRect(x: 46, y: repoNameY-moveY, width: 172, height: 24.0)
             tagContentView.isHidden = true
             
             for subview in tagContentView.subviews {
@@ -221,14 +220,13 @@ import Cocoa
                 font = NSFont.bfSystemFont(ofSize: 16.0)
             }
             
-            let dic = AttributedDictionary.attributeDictionary(foreColor: repoNameColor, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: font)
-            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
+            let bigFontDic = AttributedDictionary.attributeDictionary(foreColor: repoNameColor, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: font)
+            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: bigFontDic)
             
             //            repoNameLbl.sizeToFit()
             if repoNameLbl.width > 172 {
-                font = NSFont.bfSystemFont(ofSize: 14.0)
-                let dic = [NSAttributedStringKey.foregroundColor : repoNameColor, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]
-                repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: dic)
+                let smallFontDic = AttributedDictionary.attributeDictionary(foreColor: repoNameColor, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 14.0))
+                repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: smallFontDic)
             }
             repoNameLbl.isHidden = false
         }

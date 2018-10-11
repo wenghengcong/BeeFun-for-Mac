@@ -20,24 +20,24 @@ extension NSFont {
     }
     
     class func bfSystemFont(ofSize: CGFloat) -> NSFont {
-            return NSFont(name: "PingFang-SC-Regular", size: ofSize)!
+        return NSFont.systemFont(ofSize: ofSize)
+//            return NSFont(name: "PingFang-SC-Regular", size: ofSize)!
     }
     
     class func bfBoldSystemFont(ofSize: CGFloat) -> NSFont {
-            return NSFont(name: "PingFang-SC-Medium", size: ofSize)!
-    
+        return NSFont.boldSystemFont(ofSize: ofSize)
+        return NSFont(name: "PingFang-SC-Medium", size: ofSize)!
     }
     
     // MARK: system font
     
     class func tinySizeSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.tinyFontSize.rawValue)!
+        return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.tinyFontSize.rawValue)!
         
     }
     
     class func smallSizeSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.smallFontSize.rawValue)!
-       
+        return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.smallFontSize.rawValue)!
     }
     
     class func middleSizeSystemFont() -> NSFont {
@@ -46,25 +46,21 @@ extension NSFont {
     }
     
     class func largeSizeSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.largeFontSize.rawValue)!
-   
+        return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.largeFontSize.rawValue)!
     }
     
     class func hugeSizeSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.hugeFontSize.rawValue)!
-     
+        return NSFont(name: "PingFang-SC-Regular", size: CPEFontSize.hugeFontSize.rawValue)!
     }
     
     // MARK: system bold font
     
     class func tinySizeBoldSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Medium", size: CPEFontSize.tinyFontSize.rawValue)!
-       
+        return NSFont(name: "PingFang-SC-Medium", size: CPEFontSize.tinyFontSize.rawValue)!
     }
     
     class func smallSizeBoldSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Medium", size: CPEFontSize.smallFontSize.rawValue)!
-        
+        return NSFont(name: "PingFang-SC-Medium", size: CPEFontSize.smallFontSize.rawValue)!
     }
     
     class func middleSizeBoldSystemFont() -> NSFont {
@@ -76,6 +72,6 @@ extension NSFont {
     }
     
     class func hugeSizeBoldSystemFont() -> NSFont {
-            return NSFont(name: "PingFang-SC-Medium", size: CPEFontSize.hugeFontSize.rawValue)!
+        return NSFont(name: "PingFang-SC-Medium", size: CPEFontSize.hugeFontSize.rawValue)!
     }
 }

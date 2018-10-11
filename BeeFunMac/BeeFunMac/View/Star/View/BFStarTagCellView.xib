@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +22,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_day_tagcell_sel" id="VOY-AU-aXO"/>
                 </imageView>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jZT-n7-qQ1">
-                    <rect key="frame" x="35" y="10" width="232" height="28"/>
+                    <rect key="frame" x="35" y="3" width="232" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="cVN-ZQ-8ch"/>
                     </constraints>
@@ -33,7 +33,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RRS-7m-YgS">
-                    <rect key="frame" x="277" y="5" width="37" height="30"/>
+                    <rect key="frame" x="277" y="0.0" width="37" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="7HX-Ds-jus"/>
                         <constraint firstAttribute="width" constant="33" id="Aac-Il-qLJ"/>
@@ -48,11 +48,11 @@
             <constraints>
                 <constraint firstItem="jZT-n7-qQ1" firstAttribute="leading" secondItem="Eft-XJ-6Ur" secondAttribute="trailing" constant="7" id="69W-Gu-37g"/>
                 <constraint firstAttribute="trailing" secondItem="RRS-7m-YgS" secondAttribute="trailing" constant="11" id="IFi-jX-hKH"/>
-                <constraint firstItem="jZT-n7-qQ1" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="ayZ-ps-RqP"/>
+                <constraint firstItem="jZT-n7-qQ1" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="7" id="ayZ-ps-RqP"/>
                 <constraint firstItem="Eft-XJ-6Ur" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="11" id="bM2-ia-W5W"/>
                 <constraint firstItem="RRS-7m-YgS" firstAttribute="leading" secondItem="jZT-n7-qQ1" secondAttribute="trailing" constant="14" id="fYl-JL-Jhb"/>
                 <constraint firstItem="Eft-XJ-6Ur" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="k6V-ME-XxI"/>
-                <constraint firstItem="RRS-7m-YgS" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="3" id="lBf-eQ-1W2"/>
+                <constraint firstItem="RRS-7m-YgS" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="lBf-eQ-1W2"/>
             </constraints>
             <connections>
                 <outlet property="nameL" destination="jZT-n7-qQ1" id="DD5-8f-ves"/>
