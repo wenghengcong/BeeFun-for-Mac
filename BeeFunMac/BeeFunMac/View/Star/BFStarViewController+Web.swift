@@ -51,11 +51,15 @@ extension BFStarViewController {
             oriSelRepoStatTags = objrepo.star_tags
             loadRepoReadMePage(objRepo: objrepo)
         } else {
-            //TODO: 1.制作一个空白网页，用来提示用户
-            //TODO: 2.repos 列表也要有空白提示
-            //TODO: 3. tags列表也要有空白提示
-            repoWebView?.load("about:blank")
+            loadReadEmptyPage()
         }
+    }
+    
+    func loadReadEmptyPage() {
+        //TODO: 1.制作一个空白网页，用来提示用户
+        //TODO: 2.repos 列表也要有空白提示
+        //TODO: 3. tags列表也要有空白提示
+        repoWebView?.load("about:blank")
     }
 }
 

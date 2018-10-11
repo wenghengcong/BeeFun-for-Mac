@@ -173,13 +173,18 @@ extension BFStarViewController {
                             //                            let basePath = Bundle.main.bundlePath
                             if let baseUrlPath = htmlPathURL?.deletingLastPathComponent() {
                                 self.repoWebView?.loadHTMLString(resultHtml, baseURL: baseUrlPath)
+                            } else{
+                                self.loadReadEmptyPage()
                             }
+                        } else {
+                            self.loadReadEmptyPage()
                         }
                     } catch {
-                        
+                        self.loadReadEmptyPage()
                     }
                     
                 case .failure:
+                    self.loadReadEmptyPage()
                     break
                 }
             }
