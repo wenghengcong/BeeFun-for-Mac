@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         BFMonitor.shared.start()
 //        BFiCloudManager.shared.startiCloudQuery()
         UserManager.shared.userSignIn()
-        _ = BeeFunDBManager.shared.updateServerDB(showTips: false ,first: false)
+        BeeFunDBManager.shared.updateServerDB(first: false)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

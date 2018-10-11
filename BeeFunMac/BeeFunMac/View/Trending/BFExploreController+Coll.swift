@@ -202,9 +202,6 @@ extension BFExploreController {
 extension BFExploreController {
     
     func starReposStateChange(repoViewItem: BFExploreReposViewItem, starState: Bool) {
-        if beefunDataUpdateCancable != nil && !beefunDataUpdateCancable!.isCancelled {
-            beefunDataUpdateCancable!.cancel()
-        }
-        beefunDataUpdateCancable =  BeeFunDBManager.shared.updateServerDB(showTips: false, first: false)
+        BeeFunDBManager.shared.updateServerDB(first: false)
     }
 }

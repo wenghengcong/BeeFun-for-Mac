@@ -12,7 +12,6 @@ import WebKit
 import FlatButton
 import ObjectMapper
 import Down
-import Moya
 
 class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     // MARK: - Data
@@ -27,7 +26,6 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     var inputTagsTipArr: [String] = []             //当前输入tag的提示列表
     
     //网络请求参数
-    var beefunDataUpdateCancable: Cancellable?
     var getRepoTagPara = ""
     var getRepoSortPara = "starred_at"
     var getRepoDirectionPara = "desc"

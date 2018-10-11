@@ -8,37 +8,45 @@
 
 import AppKit
 import ObjectMapper
-import Moya
 
 class BeeFunDBManager: NSObject {
     
     static let shared = BeeFunDBManager()
     
+    /// 是否正在更新数据库
+    var isUpdating: Bool = false
+    
     var lastTimeStampKey = "lastUpdateFromGithub"
 
-    func updateServerDB(showTips: Bool, first: Bool) -> Cancellable? {
-        if !UserManager.shared.isLogin {
-            return nil
+    func updateServerDB(first: Bool) {
+        if !UserManager.shared.isLogin || isUpdating {
+            return
         }
 
         let nowDate = Date().timeStamp
         let lastUpdate = UserDefaults.standard.integer(forKey: lastTimeStampKey)
         if (nowDate - lastUpdate > 1 * 24 * 60 * 60) || first {
-           return updateRequest(showTips: showTips, first: first, update: true)
+           return updateRequest(first: first, update: true)
         } else {
-           return updateRequest(showTips: showTips, first: first, update: false)
+           return updateRequest(first: first, update: false)
         }
     }
     
     /// 更新请求
     ///
     /// - Parameter update: 是否更新所有已经在server db存在repo的信息
-    private func updateRequest(showTips: Bool, first: Bool, update: Bool) -> Cancellable {
-        if showTips {
-            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
-        }
-       return BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(first: first, update: update)) { (result) in
+    private func updateRequest(first: Bool, update: Bool) {
+
+        //开始同步数据
+        NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoStart, object: nil)
+        isUpdating = true
+        
+        print("begin update beefun database")
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.updateServerDB(first: first, update: update)) { (result) in
+            
             NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SyncStarRepoEnd, object: nil)
+            self.isUpdating = false
+            
             switch result {
             case let .success(response):
                 do {

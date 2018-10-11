@@ -44,11 +44,7 @@ extension BFStarViewController {
     //刷新按钮
     @objc func refreshDataFromNetwork() {
         //启动从Github拉取数据，更新服务端数据库
-            //已经有值，且未取消
-        if beefunDataUpdateCancable != nil && !beefunDataUpdateCancable!.isCancelled {
-            beefunDataUpdateCancable!.cancel()
-        }
-       beefunDataUpdateCancable =  BeeFunDBManager.shared.updateServerDB(showTips: true, first: false)
+        BeeFunDBManager.shared.updateServerDB(first: false)
     }
     
     //刷新按钮开始转动

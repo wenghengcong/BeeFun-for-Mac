@@ -749,13 +749,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5E424D64212CD10A00066967 /* Download */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Download;
-			sourceTree = "<group>";
-		};
 		5E54DB8A216EDF83003136DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,7 +891,6 @@
 		5E928C4E1FCE52EC0066CAE4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5E424D64212CD10A00066967 /* Download */,
 				5E5E820920E4E1B100E810E2 /* GitHubAPI.swift */,
 				5E5E820420E4E19D00E810E2 /* EventAPI.swift */,
 				5E5E820320E4E19D00E810E2 /* IssueAPI.swift */,
