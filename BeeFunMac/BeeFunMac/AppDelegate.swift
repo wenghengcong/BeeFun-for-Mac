@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setenv("CFNETWORK_DIAGNOSTICS", "0", 1);
         
         // oauth: listen to scheme url
+        BFConfig.shared.getConfig()
         NSAppleEventManager.shared().setEventHandler(self, andSelector:#selector(AppDelegate.handleGetURL(event:withReplyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
         BFMonitor.shared.start()
 //        BFiCloudManager.shared.startiCloudQuery()

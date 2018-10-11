@@ -20,6 +20,15 @@ extension BFMainController {
     @objc func mainViewLogout() {
         let profileImage:NSImage = NSImage.init(named: NSImage.Name(rawValue: "iconbar_p_normal"))!
         profileButton.kf.setImage(with: profileImage as? Resource)
-        
+    }
+    
+    @objc func refreshViewWhenAppInReview() {
+        if BFConfig.shared.appStoreInReview {
+            browserButton.isHidden = true
+            browserButton.isHidden = true
+        } else {
+            homeButton.isHidden = false
+            homeBackView.isHidden = false
+        }
     }
 }

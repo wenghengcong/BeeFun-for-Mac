@@ -26,15 +26,15 @@ extension BFExploreReposViewItem {
     }
     
     @objc func clickRepoName() {
-        BFBrowserManager.shared.gotoPage(url: repoModel?.repo_url)
+        BFBrowserManager.shared.openUrl(url: repoModel?.repo_url)
     }
     
     @objc func clickStar() {
-        BFBrowserManager.shared.gotoPage(url: repoModel?.star_url)
+        BFBrowserManager.shared.openUrl(url: repoModel?.star_url)
     }
     
     @objc func clickFork() {
-        BFBrowserManager.shared.gotoPage(url: repoModel?.fork_url)
+        BFBrowserManager.shared.openUrl(url: repoModel?.fork_url)
     }
     
     @objc func clickStarRequest() {
@@ -48,7 +48,7 @@ extension BFExploreReposViewItem {
     @objc func clickBuiltByUser(sender: NSButton) {
         if let builtUsers = repoModel?.built_by_users {
             let user = builtUsers.item(at: sender.tag)
-            BFBrowserManager.shared.gotoPage(url: user?.url)
+            BFBrowserManager.shared.openUrl(url: user?.url)
         }
     }
 

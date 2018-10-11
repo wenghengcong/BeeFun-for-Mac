@@ -11,18 +11,7 @@ import Cocoa
 extension BFStarViewController {
     
     
-    /// 利用系统默认的浏览器打开网页
-    ///
-    /// - Parameter url: url地址
-    func openDefaultWebBrowser(url: String?) {
-        if url != nil {
-            if let jumpUrl = URL(string: url!) {
-                NSWorkspace.shared.open(jumpUrl)
-            }
-        } else {
-            print("error: default browser jumpurl is nil")
-        }
-    }
+
     
     
     // MARK: - Tags string

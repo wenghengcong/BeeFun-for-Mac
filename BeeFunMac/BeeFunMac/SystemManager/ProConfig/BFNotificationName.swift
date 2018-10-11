@@ -35,6 +35,8 @@ extension Notification.Name {
         /// UnStar Action
         public static let didUnStarRepo = Notification.Name(rawValue: "com.luci.beefun.mac.ddiUnStarRepo")
         
+        public static let AppInReview = Notification.Name(rawValue: "com.luci.beefun.mac.AppInReview")
+        
     }
     
 }

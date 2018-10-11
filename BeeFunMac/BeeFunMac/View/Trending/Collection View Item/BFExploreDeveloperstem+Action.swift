@@ -27,11 +27,11 @@ extension BFExploreDevelopersViewItem {
     }
     
     @objc func clickAvatarImage() {
-        BFBrowserManager.shared.gotoPage(url: userModel?.user_url)
+        BFBrowserManager.shared.openUrl(url: userModel?.user_url)
     }
     
     @objc func clickRepo() {
-        BFBrowserManager.shared.gotoPage(url: userModel?.repo_url)
+        BFBrowserManager.shared.openUrl(url: userModel?.repo_url)
     }
     
     @objc func clickFollowButton() {

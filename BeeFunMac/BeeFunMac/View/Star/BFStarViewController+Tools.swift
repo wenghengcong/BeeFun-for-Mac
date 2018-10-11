@@ -52,14 +52,14 @@ extension BFStarViewController {
     @objc func clickRepoUrlAction() {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
-            openDefaultWebBrowser(url: objrepo.html_url)
+            BFBrowserManager.shared.openUrl(url: objrepo.html_url)
         }
     }
     
     @objc func clickRepoOwnerAction() {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let objrepo = starReposData[selectedRepoRow]
-            openDefaultWebBrowser(url: objrepo.owner?.html_url)
+            BFBrowserManager.shared.openUrl(url: objrepo.owner?.html_url)
         }
     }
 

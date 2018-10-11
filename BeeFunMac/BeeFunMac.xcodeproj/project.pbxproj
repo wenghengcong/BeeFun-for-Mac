@@ -80,6 +80,7 @@
 		5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */; };
 		5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */; };
 		5E4833521FD252BA00CEB336 /* Browser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4833511FD252BA00CEB336 /* Browser.xcassets */; };
+		5E539C6E216F8FC0005257AF /* BFConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E539C6D216F8FC0005257AF /* BFConfigModel.swift */; };
 		5E54DB7B216DB40C003136DC /* BFBrowserViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */; };
 		5E54DB7D216DB444003136DC /* BFBrowserViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */; };
 		5E54DB7F216DB47D003136DC /* BFBrowserViewControlle+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */; };
@@ -321,6 +322,7 @@
 		5E44C63C20E53A5600CDEAEE /* readmeTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readmeTemplate.html; sourceTree = "<group>"; };
 		5E44C63E20E53A5C00CDEAEE /* githubReadMe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = githubReadMe.css; sourceTree = "<group>"; };
 		5E4833511FD252BA00CEB336 /* Browser.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Browser.xcassets; sourceTree = "<group>"; };
+		5E539C6D216F8FC0005257AF /* BFConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFConfigModel.swift; sourceTree = "<group>"; };
 		5E54DB7A216DB40C003136DC /* BFBrowserViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Action.swift"; sourceTree = "<group>"; };
 		5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewController+Utils.swift"; sourceTree = "<group>"; };
 		5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFBrowserViewControlle+Noti.swift"; sourceTree = "<group>"; };
@@ -756,6 +758,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5E539C6C216F8F91005257AF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5E44C63A20E28CA000CDEAEE /* BFConfig.swift */,
+				5E539C6D216F8FC0005257AF /* BFConfigModel.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		5E54DB8A216EDF83003136DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -930,7 +941,6 @@
 				5E98679D1FD05044007EE86F /* BFThirdLibKey.swift */,
 				5E8A2AF11FD1461C00B246BD /* BFGithubWebsite.swift */,
 				5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */,
-				5E44C63A20E28CA000CDEAEE /* BFConfig.swift */,
 				5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */,
 				5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */,
 				5ECBD9122168B27200F3C03E /* BFNibName.swift */,
@@ -1110,6 +1120,7 @@
 		5EBF53F01FCFE68F00D7A2A5 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
+				5E539C6C216F8F91005257AF /* Config */,
 				5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */,
 				5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */,
 				5EFB14D1201833B400304AD3 /* GeneralPreferenceController.xib */,
@@ -1535,6 +1546,7 @@
 				5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */,
 				5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */,
 				5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */,
+				5E539C6E216F8FC0005257AF /* BFConfigModel.swift in Sources */,
 				5E9867EE1FD05189007EE86F /* ObjUser.swift in Sources */,
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
 				5E75D70B210DB7AE007596E9 /* BFTheme+StarTag.swift in Sources */,

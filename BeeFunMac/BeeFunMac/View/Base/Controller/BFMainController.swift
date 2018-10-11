@@ -48,12 +48,11 @@ class BFMainController: BFBaseViewController {
         // Do view setup here.
         customIconBar()
         loadHomeView()
-        addWindoeNotification()
+        addNotification()
         loadProfileInfo()
     }
     
     // MARK: - View
-    
     private func loadTheme() {
         iconBar.backgColor = BFThemeManager.shared.iconBarBackgroundColor()
         
@@ -88,33 +87,23 @@ class BFMainController: BFBaseViewController {
         
         //TODO: 设置按钮隐藏
         settingButton.isHidden = true
-        
-        if BFConfig.shared.appStoreChannel {
-            homeButton.isHidden = true
-            homeBackView.isHidden = true
-            currentIcon = starButton
-        } else {
-            homeButton.isHidden = false
-            homeBackView.isHidden = false
-            currentIcon = homeButton
-        }
+        currentIcon = homeButton
+
+        refreshViewWhenAppInReview()
         loadTheme()
     }
     
-    private func addWindoeNotification() {
+    private func addNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(mainViewLogin), name: NSNotification.Name.BeeFun.DidLogin, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(mainViewLogout), name: NSNotification.Name.BeeFun.DidLogout, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshViewWhenAppInReview), name: NSNotification.Name.BeeFun.AppInReview, object: nil)
     }
     
     // MARK: - Action
     
     /// 加载github home
     private func loadHomeView() {
-        if BFConfig.shared.appStoreChannel {
-            clickIconBarButton(starButton)
-        } else {
-            clickIconBarButton(homeButton)
-        }
+        clickIconBarButton(homeButton)
         loadInitAllView()
     }
     
