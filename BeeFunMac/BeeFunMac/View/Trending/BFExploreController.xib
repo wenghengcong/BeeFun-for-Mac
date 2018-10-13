@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -58,23 +59,23 @@
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="B4F-Fo-z0k">
                                             <size key="itemSize" width="50" height="50"/>
                                         </collectionViewFlowLayout>
-                                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="primaryBackgroundColor" name="bfwhite"/>
                                         <connections>
                                             <outlet property="dataSource" destination="-2" id="eKc-tB-JLR"/>
                                             <outlet property="delegate" destination="-2" id="ZHW-aC-v5g"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="bfgrayBackground"/>
                             </clipView>
                             <constraints>
                                 <constraint firstAttribute="width" constant="280" id="0LN-ya-7qN"/>
                             </constraints>
-                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="gQg-sU-ZSf">
+                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="gQg-sU-ZSf">
                                 <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
-                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="6LL-uf-0Dq">
+                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="6LL-uf-0Dq">
                                 <rect key="frame" x="-100" y="-100" width="16" height="579"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
@@ -127,15 +128,16 @@
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="dUp-Y1-b66">
                                             <size key="itemSize" width="300" height="150"/>
                                         </collectionViewFlowLayout>
-                                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="primaryBackgroundColor" name="bfwhite"/>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" name="bfgrayBackground"/>
                             </clipView>
-                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="plW-0h-rMQ">
+                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="plW-0h-rMQ">
                                 <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
-                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WOL-6Y-m3U">
+                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WOL-6Y-m3U">
                                 <rect key="frame" x="-100" y="-100" width="16" height="598"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
@@ -160,7 +162,7 @@
                             </constraints>
                         </box>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="niz-jn-GHc">
-                            <rect key="frame" x="831" y="630" width="132" height="26"/>
+                            <rect key="frame" x="831" y="630" width="132" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="127" id="PIG-Fe-W6f"/>
                                 <constraint firstAttribute="height" constant="21" id="ag2-xE-Xuf"/>
@@ -178,7 +180,7 @@
                             </popUpButtonCell>
                         </popUpButton>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
-                            <rect key="frame" x="710" y="630" width="98" height="26"/>
+                            <rect key="frame" x="710" y="630" width="98" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="a5T-Jp-EsY"/>
                                 <constraint firstAttribute="width" constant="93" id="ysq-9M-Ioh"/>
@@ -257,4 +259,12 @@
             <point key="canvasLocation" x="207" y="-319"/>
         </customView>
     </objects>
+    <resources>
+        <namedColor name="bfgrayBackground">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bfwhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -10,21 +10,13 @@ import Cocoa
 
 extension BFExploreController {
 
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+  
+    }
+    
     func setupCollectionView() {
-        
-        view.backgColor = NSColor.thDayGrayBackground
-        
-        navigationSepLine.backgColor = NSColor.thDayBlue
-        detailSepLine.backgColor = NSColor.thDayBlue
-//        navAndDetailSepLine.backgColor = NSColor.thDayBlue
-        
-        navigationContainView.backgColor = NSColor.thDayGrayBackground
-        navigationScrollView.backgColor = NSColor.thDayGrayBackground
-        navigationCollectionView.backgColor = NSColor.thDayGrayBackground
-        
-        detailContailView.backgColor = NSColor.thDayGrayBackground
-        detailScrollView.backgColor = NSColor.thDayGrayBackground
-        detailCollectionView.backgColor = NSColor.thDayGrayBackground
+        setupAllViewColor()
         
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
@@ -35,6 +27,22 @@ extension BFExploreController {
         detailCollectionView.delegate = self
         
         navigationCollectionView.collectionViewLayout = BFExpolreNavigationFlowLayout()
+    }
+    
+    func setupAllViewColor()  {
+        view.backgColor = NSColor.bfGrayBackground
+        
+        navigationSepLine.backgColor = NSColor.bfBlue
+        detailSepLine.backgColor = NSColor.bfBlue
+        //        navAndDetailSepLine.backgColor = NSColor.thDayBlue
+        
+        navigationContainView.backgColor = NSColor.bfGrayBackground
+        navigationScrollView.backgColor = NSColor.bfGrayBackground
+        navigationCollectionView.backgColor = NSColor.bfGrayBackground
+        
+        detailContailView.backgColor = NSColor.bfGrayBackground
+        detailScrollView.backgColor = NSColor.bfGrayBackground
+        detailCollectionView.backgColor = NSColor.bfGrayBackground
     }
     
     // MARK: - layout

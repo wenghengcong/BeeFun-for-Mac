@@ -21,6 +21,7 @@ protocol BFExploreReposViewItemDelete: class {
 
 class BFExploreReposViewItem: NSCollectionViewItem {
 
+    @IBOutlet weak var containBackView: NSView!
     @IBOutlet weak var repoNameLabel: NSButton!
     @IBOutlet weak var repoColorLabel: BFButton!
     
@@ -63,12 +64,13 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         //修改按钮颜色、按钮背景色，要注意isBordered 为false
         starButton.isBordered = false
 //        starButton.borderWidth = 1.0
-//        starButton.borderColor = NSColor.red
+//        starButton.borderColor = .red
         starButton.radius = 3.0
-        starButton.backgColor = NSColor.thDayBlue
+        starButton.backgColor = NSColor.bfBlue
 
-        view.backgColor = NSColor.white
-        view.borderColor = NSColor.white
+        containBackView.backgColor = NSColor.bfWhite
+        view.backgColor = NSColor.bfWhite
+        view.borderColor = NSColor.bfWhite
         view.borderWidth = viewOriBorderWidth
         
         view.radius = 5.0

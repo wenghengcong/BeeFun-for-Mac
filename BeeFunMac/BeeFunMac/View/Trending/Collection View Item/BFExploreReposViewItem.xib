@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="BFExploreReposViewItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="builtUsersBox" destination="UjS-f1-3UH" id="keU-hk-5k4"/>
+                <outlet property="containBackView" destination="dWA-dh-aHj" id="9aD-KB-o4f"/>
                 <outlet property="forkImageView" destination="oHU-5Y-OvO" id="Xzi-lp-502"/>
                 <outlet property="forkLabel" destination="fsA-9A-uaC" id="7Yq-ym-PW5"/>
                 <outlet property="repoColorLabel" destination="1b9-if-q6I" id="g62-i6-fUN"/>
@@ -39,7 +41,7 @@
                             </constraints>
                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="feedbacks by BeeFun macOS/iOS app." id="yWN-CG-T04">
                                 <font key="font" metaFont="smallSystem"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="textColor" name="bflightBlack"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
@@ -52,6 +54,7 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system" size="17"/>
                             </buttonCell>
+                            <color key="contentTintColor" name="bfblack"/>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-if-q6I" customClass="BFButton" customModule="BeeFun" customModuleProvider="target">
                             <rect key="frame" x="214" y="122" width="12" height="12"/>
@@ -202,6 +205,7 @@
         <collectionViewItem identifier="BFExploreReposViewItem" id="1RG-mD-Yhn" customClass="BFExploreReposViewItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
                 <outlet property="builtUsersBox" destination="UjS-f1-3UH" id="IVA-sF-FSB"/>
+                <outlet property="containBackView" destination="dWA-dh-aHj" id="oeC-hQ-iZa"/>
                 <outlet property="forkImageView" destination="oHU-5Y-OvO" id="tCx-fD-aln"/>
                 <outlet property="forkLabel" destination="fsA-9A-uaC" id="Ipd-0A-GVC"/>
                 <outlet property="repoColorLabel" destination="1b9-if-q6I" id="XzJ-c1-nas"/>
@@ -213,7 +217,6 @@
                 <outlet property="starLabel" destination="cZ6-D1-rIZ" id="1CD-bW-NY0"/>
                 <outlet property="upImageView" destination="Ef8-K7-20X" id="gvc-BZ-UZl"/>
                 <outlet property="upLabel" destination="kZy-36-n4p" id="6Re-s0-cHo"/>
-                <outlet property="view" destination="Hz6-mo-xeY" id="1jD-c0-5I3"/>
             </connections>
         </collectionViewItem>
     </objects>
@@ -221,5 +224,11 @@
         <image name="exp_detail_trend_fork" width="50" height="50"/>
         <image name="exp_detail_trend_star" width="50" height="50"/>
         <image name="exp_detail_trend_up" width="100" height="100"/>
+        <namedColor name="bfblack">
+            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bflightBlack">
+            <color red="0.2196078431372549" green="0.31764705882352939" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
