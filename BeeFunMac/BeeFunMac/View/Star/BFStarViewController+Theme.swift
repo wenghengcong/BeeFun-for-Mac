@@ -10,29 +10,36 @@ import Cocoa
 
 extension BFStarViewController {
     
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        loadTheme()
+    }
+    
     func loadTheme() {
         let thManager = BFThemeManager.shared
         
+        //all / untagged star button
+        refreshAllAndUntaggedButton()
+        
         //分割线的颜色
-        tagManagerRightLine.backgColor = thManager.sepLineBackgroundColor()
-        searchFilterRightLine.backgColor = thManager.sepLineBackgroundColor()
+        tagManagerRightLine.backgColor = NSColor.xyLineGray
+        searchFilterRightLine.backgColor = NSColor.xyLineGray
         
         //显示点击按钮背景视图
-        let bgColor = thManager.tagActionBackgroundColor()
-        tagActionStackView.backgColor = bgColor
-        allTagsBackView.backgColor = bgColor
-        unTaggedBackView.backgColor = bgColor
+        tagActionStackView.backgColor = NSColor.xyWhiteDarkBlack
+        allTagsBackView.backgColor = NSColor.xyWhiteDarkBlack
+        unTaggedBackView.backgColor = NSColor.xyWhiteDarkBlack
 
         //显示文本的视图背景色
-        tagSortBackView.backgColor = thManager.tagShowBackgroundColor()
-        tagSortButton.backgColor = thManager.tagShowBackgroundColor()
-        tagTextLabel.backgroundColor = thManager.tagShowBackgroundColor()
-        tagTextLabel.textColor = thManager.tagShowTitleColor()
+        tagSortBackView.backgColor = NSColor.xyWhiteDarkBlack
+        tagSortButton.backgColor = NSColor.xyWhiteDarkBlack
+        tagTextLabel.backgroundColor = NSColor.xyWhiteDarkBlack
+        tagTextLabel.textColor = NSColor.xyBlackDarkWhite
         
         refreshButton.image = thManager.starSyncImage(selected: false)
-        starSyncLabel.backgroundColor = thManager.tagShowBackgroundColor()
-        starSyncLabel.textColor = thManager.tagShowTitleColor()
-        starSyncBackView.backgColor = thManager.tagShowBackgroundColor()
+        starSyncLabel.backgroundColor = NSColor.xyWhiteDarkBlack
+        starSyncLabel.textColor = NSColor.xyBlackDarkWhite
+        starSyncBackView.backgColor = NSColor.xyWhiteDarkBlack
                 
         //保存新Tag按钮
         saveNewTagBtn.image = thManager.starSaveTagImage(selected: false)
@@ -40,19 +47,39 @@ extension BFStarViewController {
         
         //
         
-        tableViewBackground.backgColor = NSColor.white
+        tableViewBackground.backgColor = NSColor.xyWhiteDarkBlack
         
 //        tagTable.borderColor = thManager.sepLineBackgroundColor()
 //        tagTable.borderWidth = 0.5
 //        starTable.borderColor = thManager.sepLineBackgroundColor()
 //        starTable.borderWidth = 0.5
         
-        addTagContainView.backgColor = NSColor.white
-        workingTagsView.backgroundColor = NSColor.white
+        addTagContainView.backgColor = NSColor.xyWhiteDarkBlack
+        addTagContainView.borderColor = NSColor.lineGrayColor
 
-        orderFilterView.backgColor = NSColor.white
-        searchFilterView.backgColor = thManager.tagShowBackgroundColor()
-        toolsView.backgColor = thManager.tagShowBackgroundColor()
+        workingTagsView.backgroundColor = NSColor.xyWhiteDarkBlack
 
+        orderFilterView.backgColor = NSColor.xyWhiteDarkBlack
+        searchFilterView.backgColor = NSColor.xyWhiteDarkBlack
+        toolsView.backgColor = NSColor.xyWhiteDarkBlack
+
+        //右边readme上面区域
+        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: NSColor.xyWhiteDarkBlack, alignment: .left, lineBreak: nil, baselineOffset: nil, font: NSFont.bfBoldSystemFont(ofSize: 14.0))
+        
+        repoOwnerBtn.attributedTitle = NSAttributedString(string: "--------/", attributes: diction)
+        repoNameBtn.attributedTitle = NSAttributedString(string: "-----------", attributes: diction)
+        repoInfoLbl.textColor = NSColor.xyGrayDarkWhite
+        repoDescLbl.textColor = NSColor.xyGrayDarkWhite
+        
+        
+        let attri = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyGrayDarkWhite, backColor: NSColor.iWhite, alignment: .left, lineBreak: nil, baselineOffset: NSNumber(value: 2.0), font: NSFont.bfSystemFont(ofSize: 10.0))
+        repoTagsTextField.backgColor = NSColor.xyWhiteDarkBlack
+        repoTagsTextField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: attri)
+        
+        if !starReposData.isBeyond(index: selectedRepoRow) {
+            let objrepo = starReposData[selectedRepoRow]
+            oriSelRepoStatTags = objrepo.star_tags
+            loadRepoInfomation(objRepo: objrepo)
+        }
     }
 }

@@ -14,36 +14,30 @@ extension BFStarViewController {
     /// 定制repo区域内各按钮动作
     func starPageCustomRepoInfoArea() {
         
-        self.repoUrlBtn.target = self
-        self.repoUrlBtn.action = #selector(clickRepoUrlAction)
+        repoUrlBtn.target = self
+        repoUrlBtn.action = #selector(clickRepoUrlAction)
         
-        self.repoOwnerBtn.target = self
-        self.repoOwnerBtn.action = #selector(clickRepoOwnerAction)
+        repoOwnerBtn.target = self
+        repoOwnerBtn.action = #selector(clickRepoOwnerAction)
         
-        self.repoNameBtn.target = self
-        self.repoNameBtn.action = #selector(clickRepoUrlAction)
+        repoNameBtn.target = self
+        repoNameBtn.action = #selector(clickRepoUrlAction)
         
-        self.repoStarBtn.target = self
-        self.repoStarBtn.allowsMixedState = false
-        self.repoStarBtn.action = #selector(clickRepoStarAction)
+        repoStarBtn.target = self
+        repoStarBtn.allowsMixedState = false
+        repoStarBtn.action = #selector(clickRepoStarAction)
         
-        self.repoDwnBtn.target = self
-        self.repoDwnBtn.action = #selector(clickRepoDownloadAction)
+        repoDwnBtn.target = self
+        repoDwnBtn.action = #selector(clickRepoDownloadAction)
         
-        let pstyle = NSMutableParagraphStyle()
-        pstyle.alignment = .left
-        let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: NSFont.bfBoldSystemFont(ofSize: 14.0)] as [NSAttributedStringKey : Any]
-        self.repoOwnerBtn.attributedTitle = NSAttributedString(string: "--------/", attributes: dic)
-        self.repoNameBtn.attributedTitle = NSAttributedString(string: "-----------", attributes: dic)
-        self.repoInfoLbl.textColor = NSColor.thDayGray
-        self.repoDescLbl.textColor = NSColor.thDayBlack
+
     }
     
     func updateRepoStarButtonState() {
-        if self.selectedRepoStarred {
-            self.repoStarBtn.state = .on
+        if selectedRepoStarred {
+            repoStarBtn.state = .on
         } else {
-            self.repoStarBtn.state = .off
+            repoStarBtn.state = .off
         }
     }
     
@@ -66,12 +60,12 @@ extension BFStarViewController {
     @objc func clickRepoStarAction() {
         if !starReposData.isBeyond(index: selectedRepoRow) {
             let _ = starReposData[selectedRepoRow]
-            if self.repoStarBtn.state == .on {
+            if repoStarBtn.state == .on {
                 //Star请求
-                self.toolsStarRequest()
+                toolsStarRequest()
             } else {
                 //Unstar请求
-                self.toolsUnstarRequest()
+                toolsUnstarRequest()
             }
         }
     }
@@ -82,7 +76,7 @@ extension BFStarViewController {
         } else {
             if !starReposData.isBeyond(index: selectedRepoRow) {
                 let objrepo = starReposData[selectedRepoRow]
-                downloadPopover.show(relativeTo: NSZeroRect, of: self.repoDwnBtn, preferredEdge: .maxY)
+                downloadPopover.show(relativeTo: NSZeroRect, of: repoDwnBtn, preferredEdge: .maxY)
                 if let popContent: BFStarDownloadController = downloadPopover.contentViewController as? BFStarDownloadController {
                     popContent.repository = objrepo
                 }
@@ -113,25 +107,23 @@ extension BFStarViewController {
     /// 加载当前repo的信息
     func loadRepoInfomation(objRepo: ObjRepos?) {
         
-        let pstyle = NSMutableParagraphStyle()
-        pstyle.alignment = .left
-        let dic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.font: NSFont.bfBoldSystemFont(ofSize: 14.0)] as [NSAttributedStringKey : Any]
+        let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: NSColor.xyWhiteDarkBlack, alignment: .left, lineBreak: nil, baselineOffset: nil, font: NSFont.bfBoldSystemFont(ofSize: 14.0))
         
         if let owner = objRepo?.owner?.login {
-            self.repoOwnerBtn.attributedTitle = NSAttributedString(string: owner, attributes: dic)
+            repoOwnerBtn.attributedTitle = NSAttributedString(string: owner, attributes: dic)
         }
         if let repoName = objRepo?.name {
-            self.repoNameBtn.attributedTitle = NSAttributedString(string: "/  " + repoName, attributes: dic)
+            repoNameBtn.attributedTitle = NSAttributedString(string: "/  " + repoName, attributes: dic)
         }
         
         if let repoDesc = objRepo?.cdescription {
-            self.repoDescLbl.stringValue = repoDesc
-            self.repoDescLbl.preferredMaxLayoutWidth = (self.repoWebView?.width)! - 45
+            repoDescLbl.stringValue = repoDesc
+            repoDescLbl.preferredMaxLayoutWidth = (repoWebView?.width)! - 45
         }
         
         if let createdAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.created_at, prefix: "Created at") , let pushedAt = BFTimeHelper.shared.shortDateTime(rare: objRepo?.pushed_at, prefix: "Latest commit pushed at") {
-            self.repoInfoLbl.stringValue = createdAt + "    ||    " + pushedAt
-            self.repoInfoLbl.preferredMaxLayoutWidth = (self.repoWebView?.width)! - 45
+            repoInfoLbl.stringValue = createdAt + "    ||    " + pushedAt
+            repoInfoLbl.preferredMaxLayoutWidth = (repoWebView?.width)! - 45
         }
         
         //objRepo?.clone_url
@@ -140,18 +132,16 @@ extension BFStarViewController {
     }
     
     func layoutRepoInfomation(objRepo: ObjRepos?) {
-//        self.repoOwnerBtn.backgroundColor = NSColor.green
-//        self.repoNameBtn.backgroundColor = NSColor.red
         
-        self.repoOwnerBtn.sizeToFit()
-        let ownerWidth = self.repoOwnerBtn.width + 10
-        self.repoOwnerBtn!.snp.updateConstraints { (make) in
+        repoOwnerBtn.sizeToFit()
+        let ownerWidth = repoOwnerBtn.width + 10
+        repoOwnerBtn!.snp.updateConstraints { (make) in
             make.width.equalTo(ownerWidth)
         }
         
-        self.repoNameBtn.sizeToFit()
-        let nameWidth = self.repoNameBtn.width + 15
-        self.repoNameBtn!.snp.updateConstraints { (make) in
+        repoNameBtn.sizeToFit()
+        let nameWidth = repoNameBtn.width + 15
+        repoNameBtn!.snp.updateConstraints { (make) in
             make.width.equalTo(nameWidth)
         }
     }

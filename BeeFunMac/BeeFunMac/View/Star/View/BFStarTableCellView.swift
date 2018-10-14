@@ -26,8 +26,8 @@ import Cocoa
     private var selectedMask: NSView = NSView()
 
     /// Color
-    @IBInspectable var titleColor: NSColor = NSColor.black
-    @IBInspectable var subTitleColor: NSColor = NSColor.thDayLightBlack
+    @IBInspectable var titleColor: NSColor = NSColor.xyBlackDarkWhite
+    @IBInspectable var subTitleColor: NSColor = NSColor.xyLightBlackDarkWhite
 
     var selected: Bool = false
     
@@ -51,11 +51,7 @@ import Cocoa
     
     fileprivate func customStarCellView() {
 
-        self.backgColor = NSColor.white
-        tagContentView.backgColor = NSColor.white
-        
-        bottomLine.backgColor = NSColor.lineGrayColor
-        self.addSubview(bottomLine)
+        addSubview(bottomLine)
         
         bottomLine.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
@@ -64,8 +60,7 @@ import Cocoa
             make.height.equalTo(1)
         }
         
-        selectedMask.backgColor = NSColor(hex: "#2e7dfb", alpha: 0.1)
-        self.addSubview(selectedMask)
+        addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.bottom.equalTo(0)
             make.leading.equalTo(0)
@@ -89,6 +84,16 @@ import Cocoa
         starLbl.font = NSFont.bfSystemFont(ofSize: 10.0)
         langLbl.font = NSFont.bfSystemFont(ofSize: 10.0)
         forkLbl.font = NSFont.bfSystemFont(ofSize: 10.0)
+    }
+    
+    override func layout() {
+        super.layout()
+        bottomLine.backgColor = NSColor.lineGrayColor
+
+        self.backgColor = NSColor.white
+        tagContentView.backgColor = NSColor.white
+        
+        selectedMask.backgColor = NSColor(hex: "#2e7dfb", alpha: 0.1)
     }
     
     func didSelectedCell(selected: Bool) {

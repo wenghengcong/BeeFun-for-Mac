@@ -17,6 +17,8 @@ class BFStarTagCellView: LCBaseTableCellView {
     
     private var bottomLine: NSView = NSView()
     private var selectedMask: NSView = NSView()
+    
+    var selected: Bool = false
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -65,10 +67,8 @@ class BFStarTagCellView: LCBaseTableCellView {
     }
     
     fileprivate func customTagCellView() {
-        self.backgColor = .clear
-        bottomLine.backgColor = NSColor.lineGrayColor
-        self.addSubview(bottomLine)
         
+        addSubview(bottomLine)
         bottomLine.snp.remakeConstraints { (make) in
             make.height.equalTo(1)
             make.leading.equalTo(0)
@@ -76,8 +76,7 @@ class BFStarTagCellView: LCBaseTableCellView {
             make.bottom.equalTo(0)
         }
         
-        selectedMask.backgColor = NSColor(hex: "#0999FF", alpha: 0.1)
-        self.addSubview(selectedMask)
+        addSubview(selectedMask)
         selectedMask.snp.remakeConstraints { (make) in
             make.height.equalTo(42)
             make.leading.equalTo(0)
@@ -89,9 +88,20 @@ class BFStarTagCellView: LCBaseTableCellView {
         nameL.font = NSFont.bfSystemFont(ofSize: 18.0)
         numL.isHidden = true
         numL.font = NSFont.bfSystemFont(ofSize: 10.0)
-        
-        nameL.textColor = NSColor.black
-        numL.textColor = NSColor.black
+        loadTheme()
+    }
+    
+    override func layout() {
+        super.layout()
+        loadTheme()
+    }
+    
+    func loadTheme() {
+        backgColor = .xyWhiteDarkBlack
+        bottomLine.backgColor = NSColor.xyLineGray
+        selectedMask.backgColor = NSColor(hex: "#0999FF", alpha: 0.1)
+        nameL.textColor = NSColor.xyBlackDarkWhite
+        numL.textColor = NSColor.xyBlackDarkWhite
     }
     
     func didSelectedCell(selected: Bool) {

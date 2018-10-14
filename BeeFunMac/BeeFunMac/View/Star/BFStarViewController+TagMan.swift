@@ -16,20 +16,20 @@ extension BFStarViewController {
     func starButtonsReady() {
         
 //        self.refreshButton.isHidden = true
-        self.refreshButton.target = self
-        self.refreshButton.action = #selector(refreshDataFromNetwork)
+        refreshButton.target = self
+        refreshButton.action = #selector(refreshDataFromNetwork)
         
-        self.allStarsBtn.target = self
-        self.allStarsBtn.action = #selector(clickAllStarButton)
+        allStarsBtn.target = self
+        allStarsBtn.action = #selector(clickAllStarButton)
         
-        self.untaggedStarBtn.target = self
-        self.untaggedStarBtn.action = #selector(clickUntaggedStarButton)
+        untaggedStarBtn.target = self
+        untaggedStarBtn.action = #selector(clickUntaggedStarButton)
         
-        self.tagSortButton.target = self
-        self.tagSortButton.action = #selector(clickSortTagButton)
+        tagSortButton.target = self
+        tagSortButton.action = #selector(clickSortTagButton)
         
-        self.saveNewTagBtn.target = self
-        self.saveNewTagBtn.action = #selector(clickSaveTagButton)
+        saveNewTagBtn.target = self
+        saveNewTagBtn.action = #selector(clickSaveTagButton)
         
         //TODO: Tag Sort按钮暂时隐藏
         tagSortButton.isHidden = true
@@ -67,13 +67,10 @@ extension BFStarViewController {
         
         saveNewTagBtn.state = .off
         unSelectedTagAndReload()
-        
+        refreshAllAndUntaggedButton()
         resignAllTextFieldFirstResponder()
-        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: true)
-        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
-        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: true)
-        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: false)
     }
+    
     //点击Untagged Star
     @objc func clickUntaggedStarButton() {
         //all 以及 tag table未选中
@@ -82,14 +79,36 @@ extension BFStarViewController {
         allStarsBtn.state = .off
         untaggedStarBtn.state = .on
         saveNewTagBtn.state = .off
-        
+
         resignAllTextFieldFirstResponder()
-        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
-        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: true)
-        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
-        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: true)
-        
+        refreshAllAndUntaggedButton()
         unSelectedTagAndReload()
+    }
+    
+    func refreshAllAndUntaggedButton() {
+        
+        var clickAll = false
+   
+        if untaggedStarBtn.state == .on {
+            clickAll = false
+        } else if allStarsBtn.state == .on {
+            clickAll = true
+        }
+
+        let allColor = clickAll ? NSColor.iBlue : NSColor.xyBlackDarkWhite
+  
+        let untaggedColor = clickAll ? NSColor.xyBlackDarkWhite : NSColor.iBlue
+        
+        let allAttributeTitle =  NSAttributedString(string: "All Stars", attributes:
+            AttributedDictionary.attributeDictionary(foreColor: allColor, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 15.0)) )
+        allStarsBtn.attributedTitle = allAttributeTitle
+        
+        let unTaggedAttributeTitle =  NSAttributedString(string: "Untagged Stars", attributes:  AttributedDictionary.attributeDictionary(foreColor: untaggedColor, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 15.0))
+        )
+        untaggedStarBtn.attributedTitle = unTaggedAttributeTitle
+        
+        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: clickAll)
+        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: !clickAll)
     }
     
     //不选中tag table中的tag后的状态改变

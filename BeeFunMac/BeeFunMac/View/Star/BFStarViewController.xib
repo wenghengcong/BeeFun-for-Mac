@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -127,6 +128,7 @@
                                                 <constraint firstAttribute="width" constant="20" id="NsI-s2-jbL"/>
                                             </constraints>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="star_tag_day_all_sel" id="hJX-nO-vEU"/>
+                                            <color key="contentTintColor" name="xyBlackDarkWhite"/>
                                         </imageView>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-dh-2Y5">
                                             <rect key="frame" x="40" y="0.0" width="160" height="35"/>
@@ -134,6 +136,7 @@
                                                 <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemLight" size="16"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" name="xyBlackDarkWhite"/>
                                         </button>
                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-li-MiT">
                                             <rect key="frame" x="0.0" y="-2" width="200" height="5"/>
@@ -164,6 +167,7 @@
                                                 <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="systemLight" size="16"/>
                                             </buttonCell>
+                                            <color key="contentTintColor" name="xyBlackDarkWhite"/>
                                         </button>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DPD-vj-bfB">
                                             <rect key="frame" x="12" y="8" width="20" height="20"/>
@@ -345,7 +349,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="200" height="505"/>
                             <clipView key="contentView" id="gSC-6H-eYP">
                                 <rect key="frame" x="1" y="1" width="198" height="503"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="pkn-Ot-syq">
                                         <rect key="frame" x="0.0" y="0.0" width="198" height="503"/>
@@ -374,11 +378,11 @@
                                     </tableView>
                                 </subviews>
                             </clipView>
-                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="hq6-fW-7fs">
+                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="hq6-fW-7fs">
                                 <rect key="frame" x="-100" y="-100" width="198" height="16"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
-                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fGV-YN-ARr">
+                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fGV-YN-ARr">
                                 <rect key="frame" x="-100" y="-100" width="15" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
@@ -446,7 +450,7 @@
                     </searchFieldCell>
                 </searchField>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EiE-UV-AIF">
-                    <rect key="frame" x="20" y="17" width="261" height="26"/>
+                    <rect key="frame" x="20" y="17" width="261" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="256" id="hDc-Vc-JlY"/>
                         <constraint firstAttribute="height" constant="21" id="xpk-jx-IYr"/>
@@ -493,6 +497,9 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                     <color key="value" red="0.20392156862745098" green="0.50196078431372548" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="bfBackgroundColor">
+                    <color key="value" name="xyWhiteDarkBlack"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-494" y="-139.5"/>
@@ -609,11 +616,11 @@
                         </subviews>
                     </clipView>
                     <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" horizontal="YES" id="3RE-uO-hNF">
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" arrowsPosition="none" horizontal="YES" id="3RE-uO-hNF">
                         <rect key="frame" x="0.0" y="-16" width="0.0" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" arrowsPosition="none" horizontal="NO" id="Sks-fp-Xrl">
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" arrowsPosition="none" horizontal="NO" id="Sks-fp-Xrl">
                         <rect key="frame" x="285" y="0.0" width="15" height="537"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -854,7 +861,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>
@@ -880,11 +887,11 @@
                     </tableView>
                 </subviews>
             </clipView>
-            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="P6e-cH-Z4W">
+            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="P6e-cH-Z4W">
                 <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
-            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PnN-eN-kHl">
+            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="PnN-eN-kHl">
                 <rect key="frame" x="224" y="17" width="15" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
@@ -913,5 +920,11 @@
         <image name="star_tool_day_web_star" width="100" height="100"/>
         <image name="star_tool_day_web_star_sel" width="100" height="100"/>
         <image name="star_tool_day_web_tag" width="120" height="120"/>
+        <namedColor name="xyBlackDarkWhite">
+            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="xyWhiteDarkBlack">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

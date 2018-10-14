@@ -64,10 +64,19 @@ extension NSColor {
         }
     }
     
-    /// 浅灰色背景: 深夜模式黑色
+    /// 浅灰色: 深夜模式黑色
     class var xyGrayDarkBlack: NSColor {
         if NSApplication.shared.isDarkMode {
             return NSColor.iBlack
+        } else {
+            return NSColor.iGray
+        }
+    }
+    
+    /// 浅灰色: 深夜模式白色
+    class var xyGrayDarkWhite: NSColor {
+        if NSApplication.shared.isDarkMode {
+            return NSColor.iWhite
         } else {
             return NSColor.iGray
         }
@@ -99,6 +108,15 @@ extension NSColor {
             return NSColor.iWhite
         } else {
             return NSColor.iClear
+        }
+    }
+    
+    /// 透明: 深页模式白色
+    class var xyLineGray: NSColor {
+        if NSApplication.shared.isDarkMode {
+            return NSColor.iWhite
+        } else {
+            return NSColor.iLineColor
         }
     }
 }

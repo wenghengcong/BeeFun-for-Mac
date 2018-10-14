@@ -64,4 +64,10 @@ extension NSColor {
         return NSColor.hex("f5f5f5", alpha: 1.0);
     }
     
+    /// 浅灰色线条
+    class var iLineColor: NSColor {
+        //        return NSColor(name: "iGrayBackground")
+        return NSColor.hex("E9E9E9", alpha: 1.0);
+    }
+    
 }

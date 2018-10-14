@@ -29,7 +29,6 @@ extension BFStarViewController: NSTextFieldDelegate {
 //        workingTags = ["UI", "Swift", "iOS Developerment", "Objectivie-C", "Future", "ME", "Tools", "Quick", "Books", "awesome", "Guide", "View" ,"UI", "Swift", "iOS Developerment", "Objectivie-C", "Future", "ME", "Tools", "Quick", "Books", "awesome", "Guide", "View"]
         
         addTagContainView.borderWidth = 1.0
-        addTagContainView.borderColor = NSColor.lineGrayColor
         addTagContainView.layer?.masksToBounds = false
         
         addTagContainView.radius = 2.0
@@ -64,16 +63,7 @@ extension BFStarViewController: NSTextFieldDelegate {
     
     func addInputRepoTagField() {
         if !workingTagsView.subviews.contains(repoTagsTextField) {
-            let tagStyle = NSMutableParagraphStyle()
-            tagStyle.alignment = .left
-            let tagAttrbute = [
-                NSAttributedStringKey.foregroundColor : NSColor.placeholderTextColor,
-                NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 11.0),
-                NSAttributedStringKey.paragraphStyle : tagStyle,
-                NSAttributedStringKey.backgroundColor : NSColor.clear,
-                ] as [NSAttributedStringKey : Any]
-            repoTagsTextField.backgColor = .clear
-            repoTagsTextField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: tagAttrbute)
+  
             repoTagsTextField.usesSingleLineMode = true
 //            inputRepoTagField.delegate = self
             repoTagsTextField.tableViewDelegate = self
@@ -322,7 +312,7 @@ extension BFStarViewController: NSTextFieldDelegate {
             delButton.bezelStyle = .texturedSquare
             delButton.setButtonType(.momentaryLight)
             delButton.alphaValue = 0.8
-            delButton.backgColor = NSColor.clear
+            delButton.backgColor = NSColor.xyWhiteDarkBlack
             delButton.image = delImage
             delButton.alternateImage = delImage
             delButton.tag = sender.tag
