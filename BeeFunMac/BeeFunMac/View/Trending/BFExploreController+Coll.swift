@@ -187,6 +187,9 @@ extension BFExploreController {
         }
     }
     
+    /// Collection view的点击事件如下实现
+    ///
+    /// - Parameter navigationItem: <#navigationItem description#>
     func singleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem) {
         let indexPath = navigationCollectionView.indexPath(for: navigationItem)
         navigationCollectionView.selectItems(at: [indexPath ?? IndexPath(item: 0, section: 0)] , scrollPosition: NSCollectionView.ScrollPosition.top)
