@@ -70,4 +70,17 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
         setupView()
     }
     
+    @IBAction func changeAppearance(_ sender: Any) {
+        if #available(OSX 10.14, *) {
+            let button = sender as! NSButton
+            button.state = (button.state  == .on) ? .off : .on
+            if button.state == .on {
+                NSApp.appearance = NSAppearance(named: .aqua)
+            } else {
+                NSApp.appearance = NSAppearance(named: .darkAqua)
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
 }

@@ -10,6 +10,10 @@ import Foundation
 extension Notification.Name {
     
     public struct BeeFun {
+        
+        public static let appAppearanceChanged =
+            NSNotification.Name("appAppearanceChanged")
+        
         public static let WillLogin = Notification.Name(rawValue:"com.luci.beefun.mac.willlogin")
         public static let DidLogin = Notification.Name(rawValue:"com.luci.beefun.mac.didlogin")
         

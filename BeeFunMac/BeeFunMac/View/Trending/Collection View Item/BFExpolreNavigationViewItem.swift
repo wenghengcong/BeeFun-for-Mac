@@ -36,11 +36,17 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        view.backgColor = NSColor.white
-        
-        titleLabel.textColor = NSColor.bfBlack
-        descLabel.textColor = NSColor.bfLightBlack
         view.radius = 6.0
+    }
+    
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        view.backgColor = NSColor.bfWhiteDarkBlack
+        view.borderWidth = viewOriBorderWidth
+        view.borderColor = NSColor.bfWhiteDarkWhite
+        titleLabel.textColor = NSColor.bfBlackDarkWhite
+        descLabel.textColor = NSColor.bfLightBlackDarkWhite
     }
     
     override func viewDidAppear() {
@@ -48,11 +54,13 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     }
     
     func setHighlight(selected: Bool) {
-//        view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
-        view.backgColor = selected ? NSColor.hex("#2e7dfb", alpha: 1.0)  : NSColor.white
-        titleLabel.textColor = selected ? NSColor.bfWhite :  NSColor.bfBlack
-        descLabel.textColor = selected ? NSColor.bfWhite : NSColor.bfLightBlack
+        view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
+        view.backgColor = selected ? NSColor.bfBlueDarkBlue : NSColor.bfWhiteDarkBlack
+        titleLabel.textColor = selected ? NSColor.bfWhiteDarkWhite :  NSColor.bfBlackDarkWhite
+        descLabel.textColor = selected ? NSColor.bfWhiteDarkWhite : NSColor.bfLightBlackDarkWhite
     }
+    
+    
     
     override func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)

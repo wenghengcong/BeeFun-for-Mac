@@ -13,6 +13,8 @@ import OAuthSwift
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var mainController:BFWindowController?
+    var observer: NSKeyValueObservation?
+    
     @IBOutlet weak var mainMenu: NSMenu!
     
     class var sharedInstance: AppDelegate {
@@ -22,6 +24,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         //关闭输出
         setenv("CFNETWORK_DIAGNOSTICS", "0", 1);
+        
+//        BFDarkModeManager.shared.setupDarkMode(aNotification)
+        
+        if #available(OSX 10.14, *) {
+            observer = NSApp.observe(\.effectiveAppearance) { (app, _) in
+                let nc = NotificationCenter.default
+                nc.post(name: NSNotification.Name.BeeFun.appAppearanceChanged, object: app)
+            }
+        } else {
+            // Fallback on earlier versions
+        }
         
         // oauth: listen to scheme url
         BFConfig.shared.getConfig()
@@ -34,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        observer?.invalidate()
     }
     
     //Dock Menu

@@ -16,4 +16,15 @@ class IconBarView: NSView {
 //            return true
 //        }
 //    }
+    
+
+    override func viewDidChangeEffectiveAppearance() {
+        // Update appearance related state here...
+        if NSAppearance.current.isDarkMode {
+            backgColor = NSColor.black
+        } else {
+            backgColor = NSColor.white
+        }
+    }
+    
 }

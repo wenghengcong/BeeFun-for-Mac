@@ -203,6 +203,7 @@
 		5EA4E1C321717F1D005D73F1 /* BFColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C221717F1D005D73F1 /* BFColor.xcassets */; };
 		5EA4E1C52171D477005D73F1 /* NSCoor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C42171D477005D73F1 /* NSCoor+Extension.swift */; };
 		5EA4E1C72171D633005D73F1 /* NSColor+DarkModeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C62171D633005D73F1 /* NSColor+DarkModeSupport.swift */; };
+		5EA4E1C92172C1DB005D73F1 /* BFDarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */; };
 		5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */; };
 		5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B351FEB6025007AC06E /* BFTextField.swift */; };
 		5EAACF6B216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */; };
@@ -447,6 +448,7 @@
 		5EA4E1C221717F1D005D73F1 /* BFColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BFColor.xcassets; sourceTree = "<group>"; };
 		5EA4E1C42171D477005D73F1 /* NSCoor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoor+Extension.swift"; sourceTree = "<group>"; };
 		5EA4E1C62171D633005D73F1 /* NSColor+DarkModeSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+DarkModeSupport.swift"; sourceTree = "<group>"; };
+		5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDarkModeManager.swift; sourceTree = "<group>"; };
 		5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextFieldCell.swift; sourceTree = "<group>"; };
 		5EA84B351FEB6025007AC06E /* BFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextField.swift; sourceTree = "<group>"; };
 		5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExpolreNavigationFlowLayout.swift; sourceTree = "<group>"; };
@@ -842,6 +844,7 @@
 				5E75D703210D5F25007596E9 /* NSColor+Night.swift */,
 				5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */,
 				5EA4E1C62171D633005D73F1 /* NSColor+DarkModeSupport.swift */,
+				5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1468,6 +1471,7 @@
 				5E5E820820E4E19E00E810E2 /* SearchAPI.swift in Sources */,
 				5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */,
 				5EC1B1A42018CBD200186A67 /* MBProgressHUD.m in Sources */,
+				5EA4E1C92172C1DB005D73F1 /* BFDarkModeManager.swift in Sources */,
 				5EE9E78D1FCEB7A20012AE1C /* IconBarView.swift in Sources */,
 				5E9867E61FD05189007EE86F /* ObjBase.swift in Sources */,
 				5EA4350A1FDB7E8900034578 /* BFImageButton.swift in Sources */,
@@ -1771,6 +1775,7 @@
 					"-lstdc++",
 					"-lz",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG_DARK_AQUA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luci.beefun.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1832,6 +1837,7 @@
 					"-lstdc++",
 					"-lz",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG_DARK_AQUA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luci.beefun.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

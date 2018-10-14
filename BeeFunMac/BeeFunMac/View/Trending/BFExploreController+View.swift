@@ -16,6 +16,26 @@ extension BFExploreController {
         setupSelectedTimeAndLanguagePopup()
     }
     
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        view.backgColor = NSColor.bfGrayDarkDark
+        
+        
+        
+        navigationSepLine.backgColor = NSColor.bfBlueDarkWhite
+        detailSepLine.backgColor = NSColor.bfBlueDarkWhite
+        //        navAndDetailSepLine.backgColor = NSColor.thDayBlue
+        
+        navigationContainView.backgColor = NSColor.bfGrayDarkDark
+        navigationScrollView.backgColor = NSColor.bfGrayDarkDark
+        navigationCollectionView.backgColor = NSColor.bfGrayDarkDark
+        
+        detailContailView.backgColor = NSColor.bfGrayDarkDark
+        detailScrollView.backgColor = NSColor.bfGrayDarkDark
+        detailCollectionView.backgColor = NSColor.bfGrayDarkDark
+    }
+    
     func setupSelectedTimeAndLanguagePopup() {
         languagePopup.target = self
         languagePopup.action = #selector(handleSelectedLanguage(popBtn:))

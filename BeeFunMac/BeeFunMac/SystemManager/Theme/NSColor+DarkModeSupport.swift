@@ -10,9 +10,37 @@ import Cocoa
 
 extension NSColor {
     
-    /// 蓝色
-    class var bfBlue: NSColor {
-        return NSColor(name: "bfblue")
+    
+    
+    
+    /// 蓝色: 深夜模式蓝色
+    class var bfBlueDarkBlue: NSColor {
+        return NSColor(name: "bfBlueDarkBlue")
+    }
+    
+    /// 白色: 深夜模式白色
+    class var bfWhiteDarkWhite: NSColor {
+        return NSColor(name: "bfWhiteDarkWhite")
+    }
+    
+    /// 白色: 深夜模式黑色
+    class var bfWhiteDarkBlack: NSColor {
+        return NSColor(name: "bfWhiteDarkBlack")
+    }
+    
+    /// 黑色: 深夜模式白色
+    class var bfBlackDarkWhite: NSColor {
+        return NSColor(name: "bfBlackDarkWhite")
+    }
+    
+    /// 黑色: 深夜模式白色
+    class var bfLightBlackDarkWhite: NSColor {
+        return NSColor(name: "bfLightBlackDarkWhite")
+    }
+    
+    /// 蓝色: 深夜模式白色
+    class var bfBlueDarkWhite: NSColor {
+        return NSColor(name: "bfBlueDarkWhite")
     }
     
     /// 白色
@@ -20,9 +48,14 @@ extension NSColor {
         return NSColor(name: "bfwhite")
     }
     
-    /// 黑色: 标题
-    class var bfBlack: NSColor {
+    /// 黑色: 标题-应用于浅色背景
+    class var bfblack: NSColor {
         return NSColor(name: "bfblack")
+    }
+    
+    /// 黑色: 标题-应用于深色背景
+    class var bfBlackDeepBack: NSColor {
+        return NSColor(name: "bfblackDeepBack")
     }
     
     /// 浅黑色: 副标题
@@ -39,9 +72,9 @@ extension NSColor {
     class var bfLightGray: NSColor {
         return NSColor(name: "bflightGray")
     }
-    /// 背景: 浅灰色
-    class var bfGrayBackground: NSColor {
-        return NSColor(name: "bfgrayBackground")
+    /// 浅灰色背景: 深夜模式黑色
+    class var bfGrayDarkDark: NSColor {
+        return NSColor(name: "bfGrayDarkDark")
     }
 
 }

@@ -9,15 +9,8 @@
 import Cocoa
 
 extension BFExploreController {
-
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-  
-    }
     
     func setupCollectionView() {
-        setupAllViewColor()
-        
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
         
@@ -28,22 +21,7 @@ extension BFExploreController {
         
         navigationCollectionView.collectionViewLayout = BFExpolreNavigationFlowLayout()
     }
-    
-    func setupAllViewColor()  {
-        view.backgColor = NSColor.bfGrayBackground
-        
-        navigationSepLine.backgColor = NSColor.bfBlue
-        detailSepLine.backgColor = NSColor.bfBlue
-        //        navAndDetailSepLine.backgColor = NSColor.thDayBlue
-        
-        navigationContainView.backgColor = NSColor.bfGrayBackground
-        navigationScrollView.backgColor = NSColor.bfGrayBackground
-        navigationCollectionView.backgColor = NSColor.bfGrayBackground
-        
-        detailContailView.backgColor = NSColor.bfGrayBackground
-        detailScrollView.backgColor = NSColor.bfGrayBackground
-        detailCollectionView.backgColor = NSColor.bfGrayBackground
-    }
+
     
     // MARK: - layout
     func changeFlowLayout() {
