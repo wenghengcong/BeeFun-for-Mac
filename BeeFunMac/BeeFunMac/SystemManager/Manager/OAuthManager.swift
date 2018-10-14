@@ -105,44 +105,13 @@ class OAuthManager: NSObject {
         //全局通知：已经登录
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DidLogin, object:nil)
         AnswerManager.logLogin(method: "Github", success: true, attributes: [:])
-        self.openMainWindow()
+        BFWindowManager.shared.openMainWindow()
         BeeFunDBManager.shared.updateServerDB(first: true)
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetUserInfo, object:nil)
         ObjUser.updateUserForBeeFun()
     }
     
-    // MARK: - Open What Window
-    func openWindow() {
-        if UserManager.shared.isLogin {
-            openMainWindow()
-        } else {
-            openLoginWindow()
-        }
-    }
     
-    func openMainWindow() {
-        //https://stackoverflow.com/questions/5547741/how-to-open-a-new-window-on-button-click-in-cocoa-mac-application
-        if let lastWindow = AppDelegate.sharedInstance.mainController {
-            lastWindow.close()
-        }
-        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
-        AppDelegate.sharedInstance.mainController = mainWindow
-        AppDelegate.sharedInstance.mainController?.showWindow(self)
-        AppDelegate.sharedInstance.mainController?.window?.center()
-    }
-    
-    func openLoginWindow() {
-        //https://stackoverflow.com/questions/5547741/how-to-open-a-new-window-on-button-click-in-cocoa-mac-application
-        if let lastWindow = AppDelegate.sharedInstance.mainController {
-            lastWindow.close()
-        }
-        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
-        AppDelegate.sharedInstance.mainController = loginWindow
-        AppDelegate.sharedInstance.mainController?.showWindow(self)
-        AppDelegate.sharedInstance.mainController?.window?.center()
-    }
 }
 
 // MARK: - OAuthWebViewControllerDelegate

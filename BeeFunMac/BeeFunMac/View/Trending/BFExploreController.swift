@@ -23,8 +23,6 @@ enum BFExploreTrendingTime: String {
 
 class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete, BFExploreReposViewItemDelete {
 
-    var beefunDataUpdateCancable: Cancellable?
-
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var searchButton: NSButton!
     
@@ -39,8 +37,6 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var detailCollectionView: NSCollectionView!
     @IBOutlet weak var detailLayout: NSCollectionViewFlowLayout!
     @IBOutlet weak var detailClipView: NSClipView!
-    
-    
     
     /// 分割线
     @IBOutlet weak var navigationSepLine: NSBox!
@@ -90,6 +86,8 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     }
     
     deinit {
+        
+        NotificationCenter.default.removeObserver(self)
         navigationCollectionView.delegate = nil
         navigationCollectionView.dataSource = nil
         detailCollectionView.delegate = nil

@@ -23,9 +23,7 @@ class BFLoginController: BFBaseViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
-        loginWindow?.close()
+        BFWindowManager.shared.closeLoginWindow()
         OAuthManager.shared.beginOauth()
     }
     

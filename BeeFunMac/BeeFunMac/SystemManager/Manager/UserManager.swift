@@ -137,7 +137,7 @@ class UserManager: NSObject {
     
     /// 用户登录
     func userSignIn() {
-        OAuthManager.shared.openWindow()
+        BFWindowManager.shared.openWindow()
     }
     
     /// 用户登出
@@ -145,10 +145,10 @@ class UserManager: NSObject {
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.WillLogout, object:nil)
         NetworkHelper.clearCache()
         NetworkHelper.clearCookies()
-//        UserManager.shared.deleteUser()
+        UserManager.shared.deleteUser()
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DidLogout, object:nil)
-        //以下崩溃
-        OAuthManager.shared.openWindow()
+        //以下崩溃,由于在BFBrowserViewController未移除KVO监听
+        BFWindowManager.shared.openWindow()
     }
     
 }

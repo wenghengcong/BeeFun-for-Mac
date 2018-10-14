@@ -52,4 +52,10 @@ class BFBrowserViewController: NSViewController, WKUIDelegate, WKNavigationDeleg
         webViewContainView.backgColor = NSColor.xyWhiteDarkBlack
         
     }
+    
+    deinit {
+        //一定要移除KVO的监听,否则会crash
+        self.websiteView?.removeObserver(self, forKeyPath: "estimatedProgress")
+        NotificationCenter.default.removeObserver(self)
+    }
 }
