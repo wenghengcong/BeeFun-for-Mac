@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <plugIn identifier="com.apple.WebKit2IBPlugin" version="14313.18"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,19 +29,19 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="0Qe-AT-Efe">
-                    <rect key="frame" x="0.0" y="0.0" width="1285" height="586"/>
+                    <rect key="frame" x="0.0" y="0.0" width="1285" height="587"/>
                     <subviews>
                         <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdy-Th-ick">
-                            <rect key="frame" x="0.0" y="0.0" width="1285" height="581"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1285" height="584"/>
                             <wkWebViewConfiguration key="configuration">
                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                 <wkPreferences key="preferences"/>
                             </wkWebViewConfiguration>
                         </wkWebView>
                         <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="FW3-74-s4H">
-                            <rect key="frame" x="0.0" y="580" width="1285" height="7"/>
+                            <rect key="frame" x="0.0" y="584" width="1285" height="4"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="5" id="IdV-gs-XEv"/>
+                                <constraint firstAttribute="height" constant="2" id="IdV-gs-XEv"/>
                             </constraints>
                         </progressIndicator>
                     </subviews>
@@ -49,7 +50,7 @@
                         <constraint firstAttribute="bottom" secondItem="Cdy-Th-ick" secondAttribute="bottom" id="7fm-y8-IjT"/>
                         <constraint firstAttribute="trailing" secondItem="Cdy-Th-ick" secondAttribute="trailing" id="7sN-HC-yWx"/>
                         <constraint firstAttribute="trailing" secondItem="FW3-74-s4H" secondAttribute="trailing" id="FOd-tu-IOb"/>
-                        <constraint firstItem="Cdy-Th-ick" firstAttribute="top" secondItem="FW3-74-s4H" secondAttribute="bottom" id="FZf-fS-6BF"/>
+                        <constraint firstItem="Cdy-Th-ick" firstAttribute="top" secondItem="FW3-74-s4H" secondAttribute="bottom" constant="1" id="FZf-fS-6BF"/>
                         <constraint firstItem="FW3-74-s4H" firstAttribute="top" secondItem="0Qe-AT-Efe" secondAttribute="top" id="H9H-02-cmp"/>
                         <constraint firstItem="FW3-74-s4H" firstAttribute="leading" secondItem="0Qe-AT-Efe" secondAttribute="leading" id="qHx-JU-ze1"/>
                     </constraints>
@@ -109,14 +110,14 @@
                             <rect key="frame" x="178" y="17" width="1095" height="61"/>
                             <subviews>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="QVs-2z-xrn">
-                                    <rect key="frame" x="8" y="16" width="1053" height="30"/>
+                                    <rect key="frame" x="8" y="15" width="1053" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="kQh-cS-QHJ"/>
                                     </constraints>
                                     <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="https://" usesSingleLineMode="YES" bezelStyle="round" id="CNL-TO-TTy">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" name="xyBlackDarkWhite"/>
+                                        <color key="backgroundColor" name="xyWhiteDarkBlack"/>
                                     </textFieldCell>
                                 </textField>
                             </subviews>
@@ -127,10 +128,10 @@
                                 <constraint firstItem="QVs-2z-xrn" firstAttribute="leading" secondItem="9xf-nC-iDi" secondAttribute="leading" constant="8" id="lKQ-ae-P9t"/>
                             </constraints>
                         </customView>
-                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="iBd-ap-Zas">
-                            <rect key="frame" x="0.0" y="0.0" width="1285" height="5"/>
+                        <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="iBd-ap-Zas">
+                            <rect key="frame" x="0.0" y="-2" width="1285" height="5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="1" id="XB6-Rt-PV8"/>
+                                <constraint firstAttribute="height" constant="1.5" id="XB6-Rt-PV8"/>
                             </constraints>
                         </box>
                     </subviews>
@@ -140,7 +141,7 @@
                         <constraint firstItem="AWr-Zu-D2g" firstAttribute="leading" secondItem="HJS-TL-9Gc" secondAttribute="leading" constant="26" id="4xz-kW-YhR"/>
                         <constraint firstItem="rW2-51-Y40" firstAttribute="leading" secondItem="AWr-Zu-D2g" secondAttribute="trailing" constant="11" id="578-b3-g2j"/>
                         <constraint firstAttribute="height" constant="94" id="6JM-KP-pva"/>
-                        <constraint firstAttribute="bottom" secondItem="iBd-ap-Zas" secondAttribute="bottom" constant="2" id="9ka-cF-XPg"/>
+                        <constraint firstAttribute="bottom" secondItem="iBd-ap-Zas" secondAttribute="bottom" id="9ka-cF-XPg"/>
                         <constraint firstItem="1fG-xe-awO" firstAttribute="centerY" secondItem="AWr-Zu-D2g" secondAttribute="centerY" id="A1U-gf-LE5"/>
                         <constraint firstItem="9xf-nC-iDi" firstAttribute="leading" secondItem="1fG-xe-awO" secondAttribute="trailing" constant="29" id="CkM-go-9h2"/>
                         <constraint firstItem="1fG-xe-awO" firstAttribute="leading" secondItem="rW2-51-Y40" secondAttribute="trailing" constant="22" id="VrK-IW-3LZ"/>
@@ -157,7 +158,7 @@
                 <constraint firstItem="0Qe-AT-Efe" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="AxM-dU-dxV"/>
                 <constraint firstAttribute="bottom" secondItem="0Qe-AT-Efe" secondAttribute="bottom" id="Axo-Sf-6r5"/>
                 <constraint firstItem="ARd-cp-QOD" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="E3k-va-o8v"/>
-                <constraint firstItem="0Qe-AT-Efe" firstAttribute="top" secondItem="HJS-TL-9Gc" secondAttribute="bottom" id="UN2-oV-AKk"/>
+                <constraint firstItem="0Qe-AT-Efe" firstAttribute="top" secondItem="HJS-TL-9Gc" secondAttribute="bottom" constant="-1" id="UN2-oV-AKk"/>
                 <constraint firstAttribute="trailing" secondItem="HJS-TL-9Gc" secondAttribute="trailing" constant="-1" id="a7g-sa-YIt"/>
                 <constraint firstAttribute="trailing" secondItem="0Qe-AT-Efe" secondAttribute="trailing" id="ng0-R3-RsW"/>
                 <constraint firstItem="HJS-TL-9Gc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="1" id="nrV-Dt-o4y"/>
@@ -170,5 +171,11 @@
         <image name="old_home_back" width="200" height="200"/>
         <image name="old_home_forward" width="200" height="200"/>
         <image name="old_home_refresh" width="200" height="200"/>
+        <namedColor name="xyBlackDarkWhite">
+            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="xyWhiteDarkBlack">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

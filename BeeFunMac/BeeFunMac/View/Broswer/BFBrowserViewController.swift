@@ -40,12 +40,16 @@ class BFBrowserViewController: NSViewController, WKUIDelegate, WKNavigationDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        navigationContainView.backgColor = NSColor.white
-        webViewContainView.backgColor = NSColor.white
-        
         setupWebview()
         setupWebsiteInputTextField()
         
         addBrowserNoti()
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        navigationContainView.backgColor = NSColor.xyWhiteDarkBlack
+        webViewContainView.backgColor = NSColor.xyWhiteDarkBlack
+        
     }
 }
