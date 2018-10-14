@@ -28,13 +28,15 @@ extension BFExploreController {
         detailSepLine.backgColor = NSColor.xyBlueDarkWhite
         //        navAndDetailSepLine.backgColor = NSColor.thDayBlue
         
-        navigationContainView.backgColor = NSColor.xyiGrayDarkBlackBackground
-        navigationScrollView.backgColor = NSColor.xyiGrayDarkBlackBackground
-        navigationCollectionView.backgColor = NSColor.xyiGrayDarkBlackBackground
+        navigationContainView.backgColor = NSColor.xyGrayDarkBlackBackground
+        navigationScrollView.backgColor = NSColor.xyGrayDarkBlackBackground
+        navigationCollectionView.backgColor = NSColor.xyGrayDarkBlackBackground
+        navigationClipView.backgColor = NSColor.xyGrayDarkBlackBackground
         
-        detailContailView.backgColor = NSColor.xyiGrayDarkBlackBackground
-        detailScrollView.backgColor = NSColor.xyiGrayDarkBlackBackground
-        detailCollectionView.backgColor = NSColor.xyiGrayDarkBlackBackground
+        detailContailView.backgColor = NSColor.xyGrayDarkBlackBackground
+        detailScrollView.backgColor = NSColor.xyGrayDarkBlackBackground
+        detailCollectionView.backgColor = NSColor.xyGrayDarkBlackBackground
+        detailClipView.backgColor = NSColor.xyGrayDarkBlackBackground
     }
     
     func setupSelectedTimeAndLanguagePopup() {

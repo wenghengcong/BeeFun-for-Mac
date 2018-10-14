@@ -206,6 +206,7 @@
 		5EA4E1C92172C1DB005D73F1 /* BFDarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */; };
 		5EA4E1CB2172ED3B005D73F1 /* NSColor+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1CA2172ED3B005D73F1 /* NSColor+Explore.swift */; };
 		5EA4E1CD2172F57A005D73F1 /* NSColor+Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1CC2172F57A005D73F1 /* NSColor+Single.swift */; };
+		5EA4E1CF21732E73005D73F1 /* NSButton+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1CE21732E73005D73F1 /* NSButton+Text.swift */; };
 		5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */; };
 		5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B351FEB6025007AC06E /* BFTextField.swift */; };
 		5EAACF6B216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */; };
@@ -453,6 +454,7 @@
 		5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDarkModeManager.swift; sourceTree = "<group>"; };
 		5EA4E1CA2172ED3B005D73F1 /* NSColor+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Explore.swift"; sourceTree = "<group>"; };
 		5EA4E1CC2172F57A005D73F1 /* NSColor+Single.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Single.swift"; sourceTree = "<group>"; };
+		5EA4E1CE21732E73005D73F1 /* NSButton+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton+Text.swift"; sourceTree = "<group>"; };
 		5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextFieldCell.swift; sourceTree = "<group>"; };
 		5EA84B351FEB6025007AC06E /* BFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextField.swift; sourceTree = "<group>"; };
 		5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExpolreNavigationFlowLayout.swift; sourceTree = "<group>"; };
@@ -575,6 +577,7 @@
 				5E54DB88216EDE3E003136DC /* NSView+Click.swift */,
 				5E54DB8D216EE56A003136DC /* NSImage+Construct.swift */,
 				5EA4E1C42171D477005D73F1 /* NSCoor+Extension.swift */,
+				5EA4E1CE21732E73005D73F1 /* NSButton+Text.swift */,
 			);
 			path = LCUI;
 			sourceTree = "<group>";
@@ -1483,6 +1486,7 @@
 				5EA4350A1FDB7E8900034578 /* BFImageButton.swift in Sources */,
 				5ECBD9172169B2BB00F3C03E /* Dictionary+Attribute.swift in Sources */,
 				5E44C63B20E28CA000CDEAEE /* BFConfig.swift in Sources */,
+				5EA4E1CF21732E73005D73F1 /* NSButton+Text.swift in Sources */,
 				5E9867E31FD05189007EE86F /* ObjError.swift in Sources */,
 				5E9867F51FD052AE007EE86F /* JSApp.swift in Sources */,
 				5E928C3E1FCDB8CB0066CAE4 /* BFBaseViewController.swift in Sources */,

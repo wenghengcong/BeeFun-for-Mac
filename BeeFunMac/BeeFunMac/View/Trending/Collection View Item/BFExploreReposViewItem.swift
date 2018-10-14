@@ -66,12 +66,6 @@ class BFExploreReposViewItem: NSCollectionViewItem {
 //        starButton.borderWidth = 1.0
 //        starButton.borderColor = .red
         starButton.radius = 3.0
-        starButton.backgColor = NSColor.xyBlueDarkWhite
-
-        containBackView.backgColor = NSColor.iWhite
-        view.backgColor = NSColor.iWhite
-        view.borderColor = NSColor.iWhite
-        view.borderWidth = viewOriBorderWidth
         
         view.radius = 5.0
         
@@ -81,14 +75,35 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         repoColorLabel.stringValue = ""
     }
     
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        starButton.backgColor = NSColor.xyBlueDarkWhite
+        
+        containBackView.backgColor = NSColor.xyWhiteDarkBlack
+        view.backgColor = NSColor.xyWhiteDarkBlack
+        
+        repoDescLabel.textColor = NSColor.xyBlackDarkWhite
+        
+        view.borderColor = NSColor.xyClearDarkWhite
+        if NSApplication.shared.isDarkMode {
+            view.borderWidth = viewOriBorderWidth
+        } else {
+            view.borderWidth = 0
+        }
+        
+        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 17.0))
+        if let name = repoModel?.repo_name {
+            repoNameLabel.attributedTitle = NSAttributedString(string: name, attributes: diction)
+        }
+        
+        refreshStarButtonState()
+    }
+    
+    
     func fillDataToUI() {
         
         //检查star状态
         checkStarted()
-        
-        if let name = repoModel?.repo_name {
-            repoNameLabel.title = name
-        }
         
         if let color = repoModel?.repo_language_color {
             repoColorLabel.title = ""
@@ -112,7 +127,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                 }
                 
                 repoColorLabel.snp.remakeConstraints { (make) in
-                    make.centerY.equalTo(self.repoLanguageLabel.snp.centerY).offset(1)
+                    make.centerY.equalTo(self.repoLanguageLabel.snp.centerY).offset(0)
                     make.trailing.equalTo(self.repoLanguageLabel.snp.leading).offset(-3.0)
                     make.width.equalTo(10.0)
                     make.height.equalTo(10.0)

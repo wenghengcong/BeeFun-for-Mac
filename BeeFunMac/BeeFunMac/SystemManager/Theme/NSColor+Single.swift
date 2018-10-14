@@ -9,6 +9,12 @@
 import Cocoa
 
 extension NSColor {
+   
+    // 透明
+    class var iClear: NSColor {
+        //        return NSColor(name: "iBlack")
+        return NSColor.clear;
+    }
     
     // 黑色
     class var iBlack: NSColor {

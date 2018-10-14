@@ -54,7 +54,7 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system" size="17"/>
                             </buttonCell>
-                            <color key="contentTintColor" name="bfblack"/>
+                            <color key="contentTintColor" name="iBlack"/>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-if-q6I" customClass="BFButton" customModule="BeeFun" customModuleProvider="target">
                             <rect key="frame" x="214" y="122" width="12" height="12"/>
@@ -79,7 +79,7 @@
                             </buttonCell>
                         </button>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-32-N47">
-                            <rect key="frame" x="12" y="27" width="80" height="20"/>
+                            <rect key="frame" x="12" y="28" width="80" height="20"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-K7-20X">
                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -102,7 +102,7 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="iu4-dI-P6P">
-                            <rect key="frame" x="13" y="7" width="70" height="16"/>
+                            <rect key="frame" x="13" y="8" width="70" height="16"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEB-iB-LzX">
                                     <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
@@ -110,7 +110,7 @@
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exp_detail_trend_star" id="VkX-M1-Riv"/>
                                 </imageView>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZ6-D1-rIZ">
-                                    <rect key="frame" x="19" y="0.0" width="46" height="15"/>
+                                    <rect key="frame" x="21" y="-1" width="46" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="438759" id="gnu-7u-ofG">
                                         <font key="font" metaFont="smallSystem"/>
@@ -125,7 +125,7 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-fc-3dE">
-                            <rect key="frame" x="93" y="7" width="70" height="16"/>
+                            <rect key="frame" x="93" y="8" width="70" height="16"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHU-5Y-OvO">
                                     <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
@@ -148,7 +148,7 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="UjS-f1-3UH">
-                            <rect key="frame" x="192" y="7" width="95" height="40"/>
+                            <rect key="frame" x="192" y="8" width="95" height="40"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13D-FQ-21w">
                                     <rect key="frame" x="-2" y="24" width="99" height="13"/>
@@ -175,18 +175,18 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="UjS-f1-3UH" firstAttribute="leading" secondItem="gNQ-fc-3dE" secondAttribute="trailing" constant="29" id="5CQ-bs-bBn"/>
-                        <constraint firstAttribute="bottom" secondItem="UjS-f1-3UH" secondAttribute="bottom" constant="7" id="6th-qG-34M"/>
+                        <constraint firstAttribute="bottom" secondItem="UjS-f1-3UH" secondAttribute="bottom" constant="8" id="6th-qG-34M"/>
                         <constraint firstAttribute="trailing" secondItem="UjS-f1-3UH" secondAttribute="trailing" constant="13" id="AFI-fa-9SP"/>
                         <constraint firstAttribute="trailing" secondItem="vXt-4P-vDt" secondAttribute="trailing" constant="8" id="Faz-UH-ZZ5"/>
                         <constraint firstItem="cwC-CH-pF7" firstAttribute="leading" secondItem="dWA-dh-aHj" secondAttribute="leading" constant="9" id="OkP-cO-aF6"/>
                         <constraint firstItem="cwC-CH-pF7" firstAttribute="top" secondItem="dWA-dh-aHj" secondAttribute="top" constant="6" id="S1V-Ka-y6a"/>
                         <constraint firstItem="vXt-4P-vDt" firstAttribute="leading" secondItem="gok-Dh-meG" secondAttribute="trailing" constant="18" id="T40-0f-3sB"/>
                         <constraint firstItem="iu4-dI-P6P" firstAttribute="top" secondItem="0Rb-32-N47" secondAttribute="bottom" constant="4" id="Y7G-M3-1mi"/>
-                        <constraint firstItem="UjS-f1-3UH" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="4" id="aAi-Qr-Yfl"/>
-                        <constraint firstItem="0Rb-32-N47" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="4" id="bOX-vA-oB0"/>
+                        <constraint firstItem="UjS-f1-3UH" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="3" id="aAi-Qr-Yfl"/>
+                        <constraint firstItem="0Rb-32-N47" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="3" id="bOX-vA-oB0"/>
                         <constraint firstItem="gNQ-fc-3dE" firstAttribute="leading" secondItem="iu4-dI-P6P" secondAttribute="trailing" constant="10" id="gyu-mV-iJJ"/>
                         <constraint firstItem="gok-Dh-meG" firstAttribute="top" secondItem="cwC-CH-pF7" secondAttribute="bottom" constant="5" id="iGn-U4-rXt"/>
-                        <constraint firstItem="gNQ-fc-3dE" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="28" id="kG0-uw-G5q"/>
+                        <constraint firstItem="gNQ-fc-3dE" firstAttribute="top" secondItem="gok-Dh-meG" secondAttribute="bottom" constant="27" id="kG0-uw-G5q"/>
                         <constraint firstItem="vXt-4P-vDt" firstAttribute="top" secondItem="dWA-dh-aHj" secondAttribute="top" constant="50" id="mwN-Sl-4VF"/>
                         <constraint firstItem="iu4-dI-P6P" firstAttribute="leading" secondItem="dWA-dh-aHj" secondAttribute="leading" constant="13" id="v1f-qJ-Hha"/>
                         <constraint firstItem="0Rb-32-N47" firstAttribute="leading" secondItem="dWA-dh-aHj" secondAttribute="leading" constant="12" id="w7g-Ir-913"/>
@@ -224,11 +224,11 @@
         <image name="exp_detail_trend_fork" width="50" height="50"/>
         <image name="exp_detail_trend_star" width="50" height="50"/>
         <image name="exp_detail_trend_up" width="100" height="100"/>
-        <namedColor name="bfblack">
-            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="bflightBlack">
             <color red="0.2196078431372549" green="0.31764705882352939" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="iBlack">
+            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

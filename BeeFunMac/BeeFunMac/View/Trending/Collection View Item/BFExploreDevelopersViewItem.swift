@@ -32,9 +32,7 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        view.backgColor = NSColor.white
-
-        posButton.backgColor = NSColor.thDayBlue
+      
         
         avatarImageView.imagePosition = .imageOnly
         avatarImageView.isBordered = false
@@ -43,14 +41,34 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         posButton.radius = posButton.width/2.0
         
         view.radius = 5.0
-        view.borderColor = NSColor.white
-        view.borderWidth = viewOriBorderWidth
+        
         
         followedButton.isHidden = true
         followedButton.image = NSImage(named: NSImage.Name(rawValue: "exp_detail_trend_follow"))
         followedButton.alternateImage = NSImage(named: NSImage.Name(rawValue: "exp_detail_trend_unfollow"))
         
         addAction()
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        
+        view.backgColor = NSColor.xyWhiteDarkBlack
+        posButton.backgColor = NSColor.thDayBlue
+        view.borderColor = NSColor.xyClearDarkWhite
+        view.borderWidth = viewOriBorderWidth
+        
+        if let pos = userModel?.pos {
+            let posAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: NSColor.thDayBlue, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 17.0))
+            
+            posButton.attributedTitle = NSAttributedString(string: "\(pos)", attributes: posAtt)
+        }
+        
+        if let repoName = userModel?.repo_name {
+            
+            let repoAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyLightBlackDarkWhite, backColor: NSColor.xyClearDarkBlack, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
+            repoButton.attributedTitle = NSAttributedString(string: repoName, attributes: repoAtt)
+        }
     }
     /*
      
@@ -78,23 +96,10 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
             
         }
         
-        if let pos = userModel?.pos {
-            let posAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: NSColor.thDayBlue, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: NSNumber(value: 3.0), font: NSFont.bfSystemFont(ofSize: 17.0))
-            
-            posButton.attributedTitle = NSAttributedString(string: "\(pos)", attributes: posAtt)
-        }
-        
         if let login = userModel?.login {
-            let loginAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayBlue, backColor: NSColor.thDayWhite, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 16.0))
+            let loginAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlueDarkBlue, backColor: NSColor.xyWhiteDarkBlack, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 16.0))
 
             loginButton.attributedTitle = NSAttributedString(string: login, attributes: loginAtt)
-        }
-        
-
-        if let repoName = userModel?.repo_name {
-            
-            let repoAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayLightBlack, backColor: NSColor.thDayWhite, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
-            repoButton.attributedTitle = NSAttributedString(string: repoName, attributes: repoAtt)
         }
     }
     

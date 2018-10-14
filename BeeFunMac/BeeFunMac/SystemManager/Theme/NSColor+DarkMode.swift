@@ -75,7 +75,7 @@ extension NSColor {
     
     
     /// 浅灰色背景
-    class var xyiGrayDarkBlackBackground: NSColor {
+    class var xyGrayDarkBlackBackground: NSColor {
         if NSApplication.shared.isDarkMode {
             return NSColor.iBlack
         } else {
@@ -83,5 +83,22 @@ extension NSColor {
         }
     }
     
-
+    /// 透明: 深页模式黑色
+    class var xyClearDarkBlack: NSColor {
+        if NSApplication.shared.isDarkMode {
+            return NSColor.iBlack
+        } else {
+            return NSColor.iClear
+        }
+    }
+    
+    
+    /// 透明: 深页模式白色
+    class var xyClearDarkWhite: NSColor {
+        if NSApplication.shared.isDarkMode {
+            return NSColor.iWhite
+        } else {
+            return NSColor.iClear
+        }
+    }
 }

@@ -32,12 +32,17 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var navigationContainView: BFView!
     @IBOutlet weak var navigationScrollView: NSScrollView!
     @IBOutlet weak var navigationCollectionView: NSCollectionView!
+    @IBOutlet weak var navigationClipView: NSClipView!
+    
     
     
     @IBOutlet weak var detailContailView: NSView!
     @IBOutlet weak var detailScrollView: NSScrollView!
     @IBOutlet weak var detailCollectionView: NSCollectionView!
     @IBOutlet weak var detailLayout: NSCollectionViewFlowLayout!
+    @IBOutlet weak var detailClipView: NSClipView!
+    
+    
     
     /// 分割线
     @IBOutlet weak var navigationSepLine: NSBox!
