@@ -88,4 +88,12 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
             // Fallback on earlier versions
         }
     }
+    
+    deinit {
+        navigationCollectionView.delegate = nil
+        navigationCollectionView.dataSource = nil
+        detailCollectionView.delegate = nil
+        detailCollectionView.dataSource = nil
+        
+    }
 }

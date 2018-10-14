@@ -170,5 +170,6 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     
     deinit {
         removeNotification()
+        splitView.delegate = nil
     }
 }

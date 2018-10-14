@@ -145,8 +145,9 @@ class UserManager: NSObject {
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.WillLogout, object:nil)
         NetworkHelper.clearCache()
         NetworkHelper.clearCookies()
-        UserManager.shared.deleteUser()
+//        UserManager.shared.deleteUser()
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DidLogout, object:nil)
+        //以下崩溃
         OAuthManager.shared.openWindow()
     }
     

@@ -359,7 +359,11 @@ public class ObjUser: NSObject, NSCoding, Mappable {
     
     class func loadUserInfo() -> ObjUser? {
         NSKeyedUnarchiver.setClass(ObjUser.self, forClassName: "ObjUser")
-        return NSKeyedUnarchiver.unarchiveObject(withFile: ObjUser.archiveURL.path) as? ObjUser
+        let fileM = FileManager.default
+        if fileM.fileExists(atPath: archiveURL.path) {
+            return NSKeyedUnarchiver.unarchiveObject(withFile: ObjUser.archiveURL.path) as? ObjUser
+        }
+        return nil
     }
     
     class func deleteUserInfo() {
@@ -367,9 +371,9 @@ public class ObjUser: NSObject, NSCoding, Mappable {
         let fileM = FileManager.default
         if fileM.fileExists(atPath: archiveURL.path) {
             do {
-                try fileM.removeItem(at: archiveURL)
+                try fileM.removeItem(atPath: archiveURL.path)
             } catch {
-                
+                print(error)
             }
         }
     }
