@@ -14,11 +14,13 @@ extension BFExploreController {
         
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
+        navigationCollectionView.isSelectable = true
         
 //        navigationCollectionView.register(NSNib(nibNamed: NSNib.Name(rawValue: "BFExpolreNavigationViewItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"))
         
         detailCollectionView.dataSource = self
         detailCollectionView.delegate = self
+        detailCollectionView.isSelectable = true
         
         navigationCollectionView.collectionViewLayout = BFExpolreNavigationFlowLayout()
     }
@@ -183,6 +185,18 @@ extension BFExploreController {
         default:
             getGithubTrendingReopsitories(refresh: true)
         }
+    }
+    
+    func singleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem) {
+        let indexPath = navigationCollectionView.indexPath(for: navigationItem)
+        navigationCollectionView.selectItems(at: [indexPath ?? IndexPath(item: 0, section: 0)] , scrollPosition: NSCollectionView.ScrollPosition.top)
+        
+        navigationItem.setHighlight(selected: true)
+        clickNavigationArea(navigationItem: navigationItem)
+        changeFlowLayout()
+
+//        let indexSet:Set<IndexPath> = [indexPath ?? IndexPath(item: 0, section: 0)]
+//        collectionView(navigationCollectionView, didSelectItemsAt: indexSet)
     }
 }
 

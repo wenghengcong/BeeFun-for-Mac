@@ -9,6 +9,7 @@
 import Cocoa
 
 protocol BFExpolreNavigationViewItemDelete: class {
+    func singleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem)
     func doubleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem)
 }
 
@@ -37,8 +38,8 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
         super.viewDidLoad()
         // Do view setup here.
         view.radius = 6.0
+
     }
-    
     
     override func viewDidLayout() {
         super.viewDidLayout()
@@ -63,10 +64,12 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     
     
     override func mouseDown(with event: NSEvent) {
-        super.mouseDown(with: event)
         if event.clickCount == 2 {
             print("double click collection view item")
             itemDelegate?.doubleClickNavigationItem(navigationItem: self)
+        } else {
+            super.mouseDown(with: event)
+            itemDelegate?.singleClickNavigationItem(navigationItem: self)
         }
     }
 }
