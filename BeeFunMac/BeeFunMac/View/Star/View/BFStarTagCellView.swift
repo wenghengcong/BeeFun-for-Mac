@@ -22,8 +22,6 @@ class BFStarTagCellView: LCBaseTableCellView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        self.wantsLayer = true
-        self.layer?.backgroundColor = NSColor.white.cgColor
         self.origin = CGPoint(x: 0, y: 0)
         //height改变为return row height代理方法中加40=38+2，xib中本身高度只有38
         self.size = CGSize(width: 200, height: 40)
@@ -88,15 +86,11 @@ class BFStarTagCellView: LCBaseTableCellView {
         nameL.font = NSFont.bfSystemFont(ofSize: 18.0)
         numL.isHidden = true
         numL.font = NSFont.bfSystemFont(ofSize: 10.0)
-        loadTheme()
+        needsLayout = true
     }
     
     override func layout() {
         super.layout()
-        loadTheme()
-    }
-    
-    func loadTheme() {
         backgColor = .xyWhiteDarkBlack
         bottomLine.backgColor = NSColor.xyLineGray
         selectedMask.backgColor = NSColor(hex: "#0999FF", alpha: 0.1)
@@ -106,15 +100,17 @@ class BFStarTagCellView: LCBaseTableCellView {
     
     func didSelectedCell(selected: Bool) {
         selectedMask.isHidden = !selected
-        let color = BFThemeManager.shared.tagCellTitleColor(selected: selected)
+        let selColor = NSColor.xyBlueDarkWhite
+        let unSelColor = NSColor.xyBlackDarkWhite
+        
         tagImageV.image = BFThemeManager.shared.tagCellImage(selected: selected)
 
         if selected {
-            nameL.textColor = color
-            numL.textColor = color
+            nameL.textColor = selColor
+            numL.textColor = selColor
         } else {
-            nameL.textColor = NSColor.black
-            numL.textColor = NSColor.black
+            nameL.textColor = unSelColor
+            numL.textColor = unSelColor
         }
     }
     

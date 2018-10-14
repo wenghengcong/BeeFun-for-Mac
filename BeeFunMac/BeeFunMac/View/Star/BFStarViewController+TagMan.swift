@@ -88,16 +88,19 @@ extension BFStarViewController {
     func refreshAllAndUntaggedButton() {
         
         var clickAll = false
-   
+        var clickUntagged = false
+        var clickSomeTag = false
+        
         if untaggedStarBtn.state == .on {
-            clickAll = false
+            clickUntagged = true
         } else if allStarsBtn.state == .on {
             clickAll = true
+        } else {
+            clickSomeTag = true
         }
 
-        let allColor = clickAll ? NSColor.iBlue : NSColor.xyBlackDarkWhite
-  
-        let untaggedColor = clickAll ? NSColor.xyBlackDarkWhite : NSColor.iBlue
+        let allColor = clickSomeTag ?  NSColor.xyBlackDarkWhite : (clickAll ? NSColor.iBlue : NSColor.xyBlackDarkWhite)
+        let untaggedColor = clickSomeTag ?  NSColor.xyBlackDarkWhite : (clickAll ? NSColor.xyBlackDarkWhite : NSColor.iBlue)
         
         let allAttributeTitle =  NSAttributedString(string: "All Stars", attributes:
             AttributedDictionary.attributeDictionary(foreColor: allColor, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 15.0)) )
@@ -108,7 +111,7 @@ extension BFStarViewController {
         untaggedStarBtn.attributedTitle = unTaggedAttributeTitle
         
         allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: clickAll)
-        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: !clickAll)
+        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: clickUntagged)
     }
     
     //不选中tag table中的tag后的状态改变
@@ -298,10 +301,7 @@ extension BFStarViewController {
         clickAllStar = false
         clickUntaggedStar = false
         
-        allStarsBtn.attributedTitle = BFThemeManager.shared.allStarsAttributeTitle(selected: false)
-        untaggedStarBtn.attributedTitle = BFThemeManager.shared.untaggedStarsAttributeTitle(selected: false)
-        allStarsImageView.image = BFThemeManager.shared.starAllStarImage(selected: false)
-        untaggedStarsImageView.image = BFThemeManager.shared.starUntaggedImage(selected: false)
+        refreshAllAndUntaggedButton()
         
         // row did select
         print("did selected \(row)")

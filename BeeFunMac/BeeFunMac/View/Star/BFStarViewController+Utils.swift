@@ -10,10 +10,6 @@ import Cocoa
 
 extension BFStarViewController {
     
-    
-
-    
-    
     // MARK: - Tags string
     /// 将tag对象列表转为一个字符串
     func convertObjListToString(tags: [ObjTag]?) -> String {

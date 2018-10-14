@@ -46,7 +46,7 @@ extension NSColor {
         }
     }
     
-    /// 黑色: 深夜模式白色
+    /// 浅黑色: 深夜模式白色
     class var xyLightBlackDarkWhite: NSColor {
         if NSApplication.shared.isDarkMode {
             return NSColor.iWhite
@@ -73,12 +73,21 @@ extension NSColor {
         }
     }
     
-    /// 浅灰色: 深夜模式白色
+    /// 灰色: 深夜模式白色
     class var xyGrayDarkWhite: NSColor {
         if NSApplication.shared.isDarkMode {
             return NSColor.iWhite
         } else {
             return NSColor.iGray
+        }
+    }
+    
+    /// 浅灰色: 深夜模式白色
+    class var xyLightGrayDarkWhite: NSColor {
+        if NSApplication.shared.isDarkMode {
+            return NSColor.iWhite
+        } else {
+            return NSColor.iLightGray
         }
     }
     

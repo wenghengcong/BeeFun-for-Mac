@@ -8,7 +8,7 @@
 
 import Cocoa
 
-@IBDesignable class BFStarTableCellView: LCBaseTableCellView {
+class BFStarTableCellView: LCBaseTableCellView {
 
     @IBOutlet weak var tagContentView: NSView!
     @IBOutlet weak var avatarImg: NSButton!
@@ -24,10 +24,6 @@ import Cocoa
     
     private var bottomLine: NSView = NSView()
     private var selectedMask: NSView = NSView()
-
-    /// Color
-    @IBInspectable var titleColor: NSColor = NSColor.xyBlackDarkWhite
-    @IBInspectable var subTitleColor: NSColor = NSColor.xyLightBlackDarkWhite
 
     var selected: Bool = false
     
@@ -88,31 +84,29 @@ import Cocoa
     
     override func layout() {
         super.layout()
-        bottomLine.backgColor = NSColor.lineGrayColor
-
-        self.backgColor = NSColor.white
-        tagContentView.backgColor = NSColor.white
         
-        selectedMask.backgColor = NSColor(hex: "#2e7dfb", alpha: 0.1)
+        bottomLine.backgColor = NSColor.lineGrayColor
+        backgColor = NSColor.xyWhiteDarkBlack
+        tagContentView.backgColor = NSColor.xyWhiteDarkBlack
+        
+        setRepoName()
+        timeLbl.textColor = NSColor.xyLightBlackDarkWhite
+        starLbl.textColor = NSColor.xyLightBlackDarkWhite
+        forkLbl.textColor = NSColor.xyLightBlackDarkWhite
+        langLbl.textColor = NSColor.xyLightBlackDarkWhite
+        repoDescLbl.textColor = NSColor.xyLightBlackDarkWhite
+        
+        if NSApplication.shared.isDarkMode {
+            selectedMask.backgColor = NSColor(hex: "#ffffff", alpha: 0.2)
+        } else {
+            selectedMask.backgColor = NSColor(hex: "#2e7dfb", alpha: 0.3)
+        }
     }
     
     func didSelectedCell(selected: Bool) {
         self.selected = selected
         selectedMask.isHidden = !selected
-        refreshSelectionStyle()
-    }
-    
-    func refreshSelectionStyle() {
-        
-        let textColor: NSColor = subTitleColor
-        
-        timeLbl.textColor = textColor
-        starLbl.textColor = textColor
-        forkLbl.textColor = textColor
-        langLbl.textColor = textColor
-        repoDescLbl.textColor = textColor
-//        tagContentView.backgroundColor = backgroundColor
-//        self.backgroundColor = backgroundColor
+        needsLayout = true
     }
     
     fileprivate func fillDataToUI() {
@@ -150,8 +144,6 @@ import Cocoa
             langLbl.stringValue = ""
         }
         
-        let tagStyle = NSMutableParagraphStyle()
-        tagStyle.alignment = .left
         let tagAttrbute = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: nil
             , alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 1.0), font: NSFont.bfSystemFont(ofSize: 11.0))
 
@@ -176,7 +168,7 @@ import Cocoa
 //                tagB.setButtonType(.momentaryLight)
 //                tagB.bezelStyle = .texturedSquare
                 tagB.isBordered = false
-                tagB.backgColor = NSColor.thDayBlue
+                tagB.backgColor = NSColor.iBlue
                 tagB.radius = 2.0
                 tagB.attributedTitle = NSAttributedString(string: tag, attributes: tagAttrbute)
 //                tagB.radius = 10.0
@@ -210,37 +202,34 @@ import Cocoa
             }
         }
         
-        
-        if let name = objRepos?.name {
-            
-            let repoNameColor = titleColor
-            
-            let pstyle = NSMutableParagraphStyle()
-            pstyle.alignment = .left
-            
-            var font = NSFont.bfSystemFont(ofSize: 14.0)
-            if (objRepos?.star_tags) != nil {
- 
-            } else {
-                font = NSFont.bfSystemFont(ofSize: 16.0)
-            }
-            
-            let bigFontDic = AttributedDictionary.attributeDictionary(foreColor: repoNameColor, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: font)
-            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: bigFontDic)
-            
-            //            repoNameLbl.sizeToFit()
-            if repoNameLbl.width > 172 {
-                let smallFontDic = AttributedDictionary.attributeDictionary(foreColor: repoNameColor, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 14.0))
-                repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: smallFontDic)
-            }
-            repoNameLbl.isHidden = false
-        }
-
+        setRepoName()
         if let desc = objRepos?.cdescription {
             repoDescLbl.isHidden = false
             repoDescLbl.stringValue = desc
         }
     
-        refreshSelectionStyle()
+        needsLayout = true
+    }
+    
+    func setRepoName() {
+        if let name = objRepos?.name {
+            
+            var font = NSFont.bfSystemFont(ofSize: 14.0)
+            if (objRepos?.star_tags) != nil {
+                
+            } else {
+                font = NSFont.bfSystemFont(ofSize: 16.0)
+            }
+            
+            let bigFontDic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: font)
+            repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: bigFontDic)
+            
+            //            repoNameLbl.sizeToFit()
+            if repoNameLbl.width > 172 {
+                let smallFontDic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 14.0))
+                repoNameLbl.attributedTitle = NSAttributedString(string: name, attributes: smallFontDic)
+            }
+            repoNameLbl.isHidden = false
+        }
     }
 }

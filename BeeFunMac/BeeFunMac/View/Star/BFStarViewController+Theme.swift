@@ -72,7 +72,7 @@ extension BFStarViewController {
         repoDescLbl.textColor = NSColor.xyGrayDarkWhite
         
         
-        let attri = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyGrayDarkWhite, backColor: NSColor.iWhite, alignment: .left, lineBreak: nil, baselineOffset: NSNumber(value: 2.0), font: NSFont.bfSystemFont(ofSize: 10.0))
+        let attri = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyGrayDarkWhite, backColor: nil, alignment: .left, lineBreak: nil, baselineOffset: NSNumber(value: 2.0), font: NSFont.bfSystemFont(ofSize: 10.0))
         repoTagsTextField.backgColor = NSColor.xyWhiteDarkBlack
         repoTagsTextField.placeholderAttributedString = NSAttributedString(string: "Add new tag", attributes: attri)
         

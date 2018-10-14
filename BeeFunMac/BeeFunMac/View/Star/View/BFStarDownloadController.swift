@@ -58,20 +58,7 @@ class BFStarDownloadController: NSViewController {
     
     func customView() {
         
-        view.backgColor = NSColor.thDayWhite
-        
-        urlStackView.backgColor = NSColor.thDayWhite
-        sshBackView.backgColor = NSColor.thDayWhite
-        httpsBackView.backgColor = NSColor.thDayWhite
-        openBackView.backgColor = NSColor.thDayWhite
-        downloadZipBackView.backgColor = NSColor.thDayWhite
-
-        sshTitleLabel.backgroundColor = NSColor.thDayWhite
-        sshContentLabel.backgColor = NSColor.thDayWhite
-        sshContentLabel.borderWidth = 1.0
-        sshContentLabel.borderColor = NSColor.thDayLightGray
-        sshImageBtn.backgColor = NSColor.thDayWhite
-        sshImageBtn.image?.isTemplate = true
+//        sshImageBtn.image?.isTemplate = true
         
         sshTitleLabel.target = self
         sshTitleLabel.action = #selector(clickSSHURL)
@@ -80,12 +67,6 @@ class BFStarDownloadController: NSViewController {
         sshImageBtn.target = self
         sshImageBtn.action = #selector(clickSSHURL)
         
-        httpsTitleLabel.backgroundColor = NSColor.thDayWhite
-        httpsContentLabel.backgColor = NSColor.thDayWhite
-        httpsContentLabel.borderWidth = 1.0
-        httpsContentLabel.borderColor = NSColor.thDayLightGray
-        httpsImageBtn.backgColor = NSColor.thDayWhite
-        
         httpsTitleLabel.target = self
         httpsTitleLabel.action = #selector(clickHTTPSURL)
         httpsContentLabel.target = self
@@ -93,10 +74,7 @@ class BFStarDownloadController: NSViewController {
         httpsImageBtn.target = self
         httpsImageBtn.action = #selector(clickHTTPSURL)
         
-        openXcodeBtn.backgColor = NSColor.thDayWhite
-        openDesktopBtn.backgColor = NSColor.thDayWhite
-        downloadZipBtn.backgColor = NSColor.thDayWhite
-        
+
         openXcodeBtn.target = self
         openXcodeBtn.action = #selector(clickOpenInXcode)
         
@@ -105,6 +83,37 @@ class BFStarDownloadController: NSViewController {
         
         downloadZipBtn.target = self
         downloadZipBtn.action = #selector(clickDownloadZIP)
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        
+        let whiteDarkBlack = NSColor.xyWhiteDarkBlack
+        view.backgColor = whiteDarkBlack
+        
+        urlStackView.backgColor = whiteDarkBlack
+        sshBackView.backgColor = whiteDarkBlack
+        httpsBackView.backgColor = whiteDarkBlack
+        openBackView.backgColor = whiteDarkBlack
+        downloadZipBackView.backgColor = whiteDarkBlack
+        
+        sshTitleLabel.backgroundColor = whiteDarkBlack
+        sshContentLabel.backgColor = whiteDarkBlack
+        sshContentLabel.borderWidth = 1.0
+        sshContentLabel.borderColor = NSColor.xyLightGrayDarkWhite
+        sshImageBtn.backgColor = whiteDarkBlack
+        
+        httpsTitleLabel.backgroundColor = whiteDarkBlack
+        httpsContentLabel.backgColor = whiteDarkBlack
+        httpsContentLabel.borderWidth = 1.0
+        httpsContentLabel.borderColor = NSColor.xyLightGrayDarkWhite
+        httpsImageBtn.backgColor = whiteDarkBlack
+        
+        openXcodeBtn.backgColor = whiteDarkBlack
+        openDesktopBtn.backgColor = whiteDarkBlack
+        downloadZipBtn.backgColor = whiteDarkBlack
+        
+        setterRepositoryData()
     }
     
     @objc func clickSSHURL() {
@@ -165,13 +174,11 @@ class BFStarDownloadController: NSViewController {
     func setterRepositoryData() {
         if let objrepo = repository {
             
-            let pstyle = NSMutableParagraphStyle()
-            pstyle.alignment = .left
-            let titleDic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.backgroundColor: NSColor.thDayWhite, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
+            let titleDic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: .left, lineBreak: nil, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
+
+             let urlConentDic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: .left, lineBreak: nil, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
             
-            let urlConentDic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.backgroundColor: NSColor.thDayWhite, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 12.0)] as [NSAttributedStringKey : Any]
-            
-            let contentDic = [NSAttributedStringKey.foregroundColor : NSColor.thDayBlack, NSAttributedStringKey.paragraphStyle : pstyle, NSAttributedStringKey.backgroundColor: NSColor.thDayWhite, NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 13.0)] as [NSAttributedStringKey : Any]
+            let contentDic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: .left, lineBreak: nil, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 13.0))
             
             sshTitleLabel.attributedStringValue = NSAttributedString(string: "Clone with SSH", attributes: titleDic)
             sshContentLabel.attributedTitle = NSAttributedString(string: " " + objrepo.ssh_url!, attributes: urlConentDic)

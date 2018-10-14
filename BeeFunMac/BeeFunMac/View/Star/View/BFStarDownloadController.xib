@@ -177,9 +177,9 @@
                             </buttonCell>
                         </button>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="3UM-PA-4Wh">
-                            <rect key="frame" x="0.0" y="49" width="400" height="4"/>
+                            <rect key="frame" x="0.0" y="46" width="400" height="5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="0.5" id="PQu-fS-VLm"/>
+                                <constraint firstAttribute="height" constant="1" id="PQu-fS-VLm"/>
                             </constraints>
                         </box>
                         <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-T8-uBE">
@@ -193,7 +193,7 @@
                         <constraint firstItem="RkM-S9-zfJ" firstAttribute="leading" secondItem="8AM-gl-GMt" secondAttribute="leading" constant="8" id="1Mk-mi-P33"/>
                         <constraint firstAttribute="bottom" secondItem="LyM-ON-5fe" secondAttribute="bottom" id="1la-wP-tva"/>
                         <constraint firstItem="LyM-ON-5fe" firstAttribute="width" secondItem="8AM-gl-GMt" secondAttribute="width" multiplier="0.5" id="A8K-9K-Keb"/>
-                        <constraint firstItem="3UM-PA-4Wh" firstAttribute="top" secondItem="8AM-gl-GMt" secondAttribute="top" constant="-1" id="FiY-aV-qmF"/>
+                        <constraint firstItem="3UM-PA-4Wh" firstAttribute="top" secondItem="8AM-gl-GMt" secondAttribute="top" constant="1" id="FiY-aV-qmF"/>
                         <constraint firstAttribute="height" constant="50" id="HRB-If-zM7"/>
                         <constraint firstAttribute="bottom" secondItem="0w6-T8-uBE" secondAttribute="bottom" id="OFx-Hs-Q9K"/>
                         <constraint firstAttribute="bottom" secondItem="RkM-S9-zfJ" secondAttribute="bottom" id="Ovl-Cr-U22"/>
@@ -216,9 +216,9 @@
                             </buttonCell>
                         </button>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Yz9-Da-q8b">
-                            <rect key="frame" x="0.0" y="49" width="400" height="4"/>
+                            <rect key="frame" x="0.0" y="46" width="400" height="5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="0.5" id="hvX-Dp-UaM"/>
+                                <constraint firstAttribute="height" constant="1" id="hvX-Dp-UaM"/>
                             </constraints>
                         </box>
                     </subviews>
@@ -229,7 +229,7 @@
                         <constraint firstAttribute="trailing" secondItem="02E-kH-DwF" secondAttribute="trailing" id="hoP-5r-4O6"/>
                         <constraint firstAttribute="bottom" secondItem="02E-kH-DwF" secondAttribute="bottom" id="iQZ-Bf-3mE"/>
                         <constraint firstItem="Yz9-Da-q8b" firstAttribute="leading" secondItem="G3S-Q3-mlz" secondAttribute="leading" id="pN2-v0-kF7"/>
-                        <constraint firstItem="Yz9-Da-q8b" firstAttribute="top" secondItem="G3S-Q3-mlz" secondAttribute="top" constant="-1" id="ua4-Fz-fRz"/>
+                        <constraint firstItem="Yz9-Da-q8b" firstAttribute="top" secondItem="G3S-Q3-mlz" secondAttribute="top" constant="1" id="ua4-Fz-fRz"/>
                         <constraint firstItem="02E-kH-DwF" firstAttribute="top" secondItem="G3S-Q3-mlz" secondAttribute="top" id="xFb-x7-VnJ"/>
                     </constraints>
                 </customView>

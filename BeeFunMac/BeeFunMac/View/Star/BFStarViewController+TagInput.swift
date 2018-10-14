@@ -49,13 +49,19 @@ extension BFStarViewController: NSTextFieldDelegate {
                 subview.removeFromSuperview()
             }
         }
+        
+        let tagAttrbute = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: nil
+            , alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 1.0), font: NSFont.bfSystemFont(ofSize: 11.0))
+        
         for (index, tag) in workingTags.enumerated() {
-            let tagB = NSButton(title: tag.name!, target: self, action: #selector(clickWorkingTagsButton(sender:)))
+            let tagB = NSButton()
             tagB.tag = index
-            tagB.font = NSFont.bfSystemFont(ofSize: 12.0)
-//            tagB.bezelStyle = .regularSquare
-            tagB.setButtonType(.pushOnPushOff)
-            tagB.tag = index
+            tagB.target = self
+            tagB.action = #selector(clickWorkingTagsButton(sender:))
+            tagB.isBordered = false
+            tagB.backgColor = NSColor.iBlue
+            tagB.radius = 2.0
+            tagB.attributedTitle = NSAttributedString(string: tag.name!, attributes: tagAttrbute)
             workingTagsButtongs.append(tagB)
             workingTagsView.addSubview(tagB)
         }
@@ -110,11 +116,13 @@ extension BFStarViewController: NSTextFieldDelegate {
     func layoutWorkingTagsButton() {
         //包含inputNewTagField的布局
         let width = tagsContainViewWidth()
-        let btnH: CGFloat = 25
-        let btnInsideXMargin:CGFloat = 0.0
-        let firstColumnX: CGFloat = 3.0
+        let btnH: CGFloat = 15
+        let btnInsideXMargin:CGFloat = 5.0
+        let firstColumnX: CGFloat = 6.0
         
         var lineTagsWidth = firstColumnX
+        
+        //计算行数目
         currentTagsOfLines = 1
         if workingTagsButtongs.count == 0 {
             currentTagsOfLines = 1
@@ -134,15 +142,16 @@ extension BFStarViewController: NSTextFieldDelegate {
             //为inputRepoTagField单独开一行
             currentTagsOfLines += 1
         }
-
+        //总的视图
         let allTasgH = lineH * CGFloat(currentTagsOfLines)
+        //workingTagsView 和 addTagContainView大小一致
         workingTagsView.frame = CGRect(x: 0, y: 0, width: width, height: allTasgH)
         
         let containX: CGFloat = addTagContainLeftMargin
         let containY: CGFloat = 5.0
         addTagContainView.frame = CGRect(x: containX, y: containY, width: width, height: allTasgH)
         
-        let firstRowY: CGFloat = 0
+        let firstRowY: CGFloat = 6
         for (index, button) in workingTagsButtongs.enumerated() {
             var lastF = CGRect.zero
             var nowX: CGFloat = firstColumnX
@@ -171,7 +180,7 @@ extension BFStarViewController: NSTextFieldDelegate {
         }
     
         let fieldX = firstColumnX
-        var fieldY = lastBtnY + lineH
+        var fieldY = lastBtnY + lineH - 5
         if workingTagsButtongs.count == 0 {
             fieldY = lastBtnY
         }
