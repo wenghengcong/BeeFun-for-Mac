@@ -120,12 +120,21 @@ extension NSColor {
         }
     }
     
-    /// 透明: 深页模式白色
+    /// 线灰色: 深页模式白色
     class var xyLineGray: NSColor {
         if NSApplication.shared.isDarkMode {
             return NSColor.iWhite
         } else {
             return NSColor.iLineColor
+        }
+    }
+    
+    /// 线灰色: 深夜模式
+    class var xyLineGrayDarkGray: NSColor {
+        if NSApplication.shared.isDarkMode {
+            return NSColor.iLineGrayInDark
+        } else {
+            return NSColor.iLineGrayInDay
         }
     }
 }

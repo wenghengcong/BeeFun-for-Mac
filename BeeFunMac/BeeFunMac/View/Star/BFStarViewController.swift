@@ -68,6 +68,9 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var unTaggedBackView: NSView!
     @IBOutlet weak var tagSortBackView: NSView!
     @IBOutlet weak var newTagBackView: NSView!
+    
+    //tag管理区域左边的线
+    @IBOutlet weak var tagManagerLeftLne: NSView!
     //tag管理区域右边的线
     @IBOutlet weak var tagManagerRightLine: NSView!
     

@@ -30,6 +30,7 @@ extension BFExploreController {
         
         navigationContainView.backgColor = NSColor.xyGrayDarkBlackBackground
         navigationScrollView.backgColor = NSColor.xyGrayDarkBlackBackground
+        
         navigationCollectionView.backgColor = NSColor.xyGrayDarkBlackBackground
         navigationClipView.backgColor = NSColor.xyGrayDarkBlackBackground
         

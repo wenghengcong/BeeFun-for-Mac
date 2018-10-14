@@ -38,4 +38,25 @@ class BFThemeManager: NSObject {
         return imgName
     }
     
+    func combineImageName(prefix: IconArea?, dark: Bool, iconName: String, selected: Bool) -> String {
+        var imgName = ""
+        let theme = dark ? "night" : "day"
+        if prefix != nil {
+            let prefixStr = prefix!.rawValue
+            if selected {
+                imgName = prefixStr + "_" + theme + "_" + iconName+"_sel"
+            } else {
+                imgName = prefixStr + "_" + theme + "_" + iconName
+            }
+        } else {
+            if selected {
+                imgName =  "_" + theme + "_" + iconName + "_sel"
+            } else {
+                imgName =  "_" + theme + "_" + iconName
+            }
+        }
+        
+        return imgName
+    }
+    
 }

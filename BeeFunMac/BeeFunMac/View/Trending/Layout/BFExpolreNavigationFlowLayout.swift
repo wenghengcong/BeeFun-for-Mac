@@ -15,7 +15,7 @@ class BFExpolreNavigationFlowLayout: NSCollectionViewFlowLayout {
         itemSize = NSMakeSize(260, 90)
         minimumInteritemSpacing = 15.0
         minimumLineSpacing = 15.0
-        sectionInset = NSEdgeInsetsMake(10.0, 10.0, 20.0, 10.0)
+        sectionInset = NSEdgeInsetsMake(10.0, 5, 20.0, 10.0)
     }
 
     required init?(coder aDecoder: NSCoder) {

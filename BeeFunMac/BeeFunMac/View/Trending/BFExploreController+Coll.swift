@@ -11,6 +11,7 @@ import Cocoa
 extension BFExploreController {
     
     func setupCollectionView() {
+        
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
         

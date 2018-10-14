@@ -200,7 +200,7 @@
                                         <rect key="frame" x="0.0" y="423" width="65" height="45"/>
                                         <subviews>
                                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-6f-9WM" userLabel="Web">
-                                                <rect key="frame" x="19" y="9" width="27" height="27"/>
+                                                <rect key="frame" x="20" y="10" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon_bar_day_browser_sel" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Cxx-cE-Dax">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
@@ -258,6 +258,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="broswerBackView" destination="IMP-9K-1cO" id="klO-fi-lG0"/>
                         <outlet property="browserButton" destination="Xda-6f-9WM" id="uNI-bc-Opa"/>
                         <outlet property="browserSepLine" destination="7FE-Pf-Q0E" id="5Me-Ba-T0u"/>
                         <outlet property="homeBackView" destination="YVL-AG-QWp" id="maZ-QI-Cum"/>

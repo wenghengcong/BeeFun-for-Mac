@@ -29,6 +29,7 @@ class BFMainController: BFBaseViewController {
     @IBOutlet weak var starLeftLine: NSView!
     @IBOutlet weak var settingButton: NSButton!
     
+    @IBOutlet weak var broswerBackView: NSView!
     @IBOutlet weak var browserButton: NSButton!
     @IBOutlet weak var browserSepLine: NSView!
     
@@ -53,20 +54,25 @@ class BFMainController: BFBaseViewController {
     }
     
     // MARK: - View
-    private func loadTheme() {
-        iconBar.backgColor = BFThemeManager.shared.iconBarBackgroundColor()
+    override func viewDidLayout() {
+        super.viewDidLayout()
         
+        iconBar.backgColor = NSColor.xyWhiteDarkBlack
+        
+        homeBackView.backgColor = NSColor.xyWhiteDarkBlack
         homeButton.alternateImage = BFThemeManager.shared.iconbarGitImage(selected: true)
         homeButton.image = BFThemeManager.shared.iconbarGitImage(selected: false)
-        homeLeftLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        homeLeftLine.backgColor = NSColor.iBlue
         
+        starBackView.backgColor = NSColor.xyWhiteDarkBlack
         starButton.alternateImage = BFThemeManager.shared.iconbarStarImage(selected: true)
         starButton.image = BFThemeManager.shared.iconbarStarImage(selected: false)
-        starLeftLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        starLeftLine.backgColor = NSColor.iBlue
         
+        broswerBackView.backgColor = NSColor.xyWhiteDarkBlack
         browserButton.alternateImage = BFThemeManager.shared.iconbarBrowserImage(selected: true)
         browserButton.image = BFThemeManager.shared.iconbarBrowserImage(selected: false)
-        browserSepLine.backgColor = BFThemeManager.shared.iconSelectedLeftLineColor()
+        browserSepLine.backgColor = NSColor.iBlue
     }
     
     /// 自定义左边icon 按钮
@@ -90,7 +96,6 @@ class BFMainController: BFBaseViewController {
         currentIcon = homeButton
 
         refreshViewWhenAppInReview()
-        loadTheme()
     }
     
     private func addNotification() {
@@ -168,10 +173,8 @@ class BFMainController: BFBaseViewController {
             if iconBtn.tag != type.rawValue {
                 //选中的不是当前的按钮
                 iconBtn.state = .off
-                iconBtn.superview?.backgColor = BFThemeManager.shared.iconSelectedBackgroundColor()
             } else {
                 iconBtn.state = .on
-                iconBtn.superview?.backgColor = BFThemeManager.shared.iconNormalBackgroundColor()
                 //set current
                 currentIcon = iconBtn
                 currentIndex = type.rawValue

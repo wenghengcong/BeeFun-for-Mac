@@ -64,6 +64,18 @@ extension NSColor {
         return NSColor.hex("f5f5f5", alpha: 1.0);
     }
     
+    /// 浅灰色背景
+    class var iLineGrayInDay: NSColor {
+        //        return NSColor(name: "iGrayBackground")
+        return NSColor.hex("c5c5c5", alpha: 1.0);
+    }
+    
+    /// 浅灰色背景: 深夜模式
+    class var iLineGrayInDark: NSColor {
+        //        return NSColor(name: "iGrayBackground")
+        return NSColor.hex("565656", alpha: 1.0);
+    }
+    
     /// 浅灰色线条
     class var iLineColor: NSColor {
         //        return NSColor(name: "iGrayBackground")

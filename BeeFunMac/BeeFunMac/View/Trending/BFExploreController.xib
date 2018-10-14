@@ -37,10 +37,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="11I-39-gsf" userLabel="Navitgation view" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="290" height="680"/>
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="680"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kTp-ok-bsx">
-                            <rect key="frame" x="30" y="623" width="254" height="41"/>
+                            <rect key="frame" x="21" y="623" width="254" height="41"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="41" id="UGu-FS-cuT"/>
                                 <constraint firstAttribute="width" constant="250" id="uaA-3Q-bw3"/>
@@ -85,9 +85,9 @@
                             </scroller>
                         </scrollView>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="DT5-BJ-Wie">
-                            <rect key="frame" x="30" y="620" width="150" height="5"/>
+                            <rect key="frame" x="25" y="620" width="151" height="5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="150" id="2NJ-Dp-BWR"/>
+                                <constraint firstAttribute="width" constant="151" id="2NJ-Dp-BWR"/>
                                 <constraint firstAttribute="height" constant="1" id="OXX-fI-M3N"/>
                             </constraints>
                         </box>
@@ -103,12 +103,12 @@
                         <constraint firstItem="z4f-Ko-MKH" firstAttribute="top" secondItem="kTp-ok-bsx" secondAttribute="bottom" constant="10" id="ATq-A4-IcA"/>
                         <constraint firstItem="z4f-Ko-MKH" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="leading" constant="11" id="Lqy-r0-dNE"/>
                         <constraint firstItem="kTp-ok-bsx" firstAttribute="top" secondItem="11I-39-gsf" secondAttribute="top" constant="16" id="OB4-K6-AX9"/>
-                        <constraint firstItem="DT5-BJ-Wie" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="leading" constant="30" id="PDJ-KM-z9g"/>
+                        <constraint firstItem="DT5-BJ-Wie" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="leading" constant="25" id="PDJ-KM-z9g"/>
                         <constraint firstAttribute="bottom" secondItem="hju-Yd-Q6Y" secondAttribute="bottom" id="XAR-18-ILE"/>
                         <constraint firstItem="DT5-BJ-Wie" firstAttribute="top" secondItem="kTp-ok-bsx" secondAttribute="bottom" id="btK-Mb-FaB"/>
-                        <constraint firstAttribute="width" constant="290" id="dN3-Uw-nws"/>
+                        <constraint firstAttribute="width" constant="300" id="dN3-Uw-nws"/>
                         <constraint firstItem="hju-Yd-Q6Y" firstAttribute="top" secondItem="11I-39-gsf" secondAttribute="top" id="eZM-h9-cmW"/>
-                        <constraint firstItem="kTp-ok-bsx" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="leading" constant="32" id="g3V-eZ-kJo"/>
+                        <constraint firstItem="kTp-ok-bsx" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="leading" constant="23" id="g3V-eZ-kJo"/>
                         <constraint firstAttribute="bottom" secondItem="z4f-Ko-MKH" secondAttribute="bottom" constant="20" id="yTA-Bg-6bA"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -118,7 +118,7 @@
                     </userDefinedRuntimeAttributes>
                 </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZyW-9F-VRU" userLabel="Detail view">
-                    <rect key="frame" x="300" y="0.0" width="980" height="680"/>
+                    <rect key="frame" x="300" y="0.0" width="985" height="680"/>
                     <subviews>
                         <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="gGT-YX-KPD" userLabel="Detail view">
                             <rect key="frame" x="6" y="12" width="961" height="601"/>
@@ -203,7 +203,7 @@
                             </popUpButtonCell>
                             <color key="contentTintColor" name="bfblack"/>
                         </popUpButton>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-Zj-V54">
+                        <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-Zj-V54">
                             <rect key="frame" x="278" y="635" width="164" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="push" title="Change Appearance" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nkz-Fc-PNc">
@@ -222,11 +222,11 @@
                         <constraint firstAttribute="bottom" secondItem="gGT-YX-KPD" secondAttribute="bottom" constant="12" id="TAH-9v-ctn"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="13" id="eMy-Uf-8gc"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
-                        <constraint firstAttribute="trailing" secondItem="niz-jn-GHc" secondAttribute="trailing" constant="20" id="ie2-m9-oa2"/>
+                        <constraint firstAttribute="trailing" secondItem="niz-jn-GHc" secondAttribute="trailing" constant="25" id="ie2-m9-oa2"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="16" id="jie-qI-5fh"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
                         <constraint firstItem="lGQ-Np-VRU" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="nBn-Qt-wXh"/>
-                        <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="13" id="nQK-UF-ZHY"/>
+                        <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="18" id="nQK-UF-ZHY"/>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="7" id="ulb-vn-RPS"/>
                     </constraints>
                 </customView>
@@ -244,10 +244,10 @@
                 <constraint firstItem="XlB-lg-gE8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="KHM-5g-swO"/>
                 <constraint firstItem="ZyW-9F-VRU" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="KT1-j9-Nby"/>
                 <constraint firstAttribute="bottom" secondItem="11I-39-gsf" secondAttribute="bottom" id="Xk9-Xm-WXM"/>
-                <constraint firstAttribute="trailing" secondItem="ZyW-9F-VRU" secondAttribute="trailing" constant="5" id="hAb-Dx-ii1"/>
+                <constraint firstAttribute="trailing" secondItem="ZyW-9F-VRU" secondAttribute="trailing" id="hAb-Dx-ii1"/>
                 <constraint firstAttribute="bottom" secondItem="ZyW-9F-VRU" secondAttribute="bottom" id="iXz-1y-Hx0"/>
-                <constraint firstItem="XlB-lg-gE8" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="trailing" constant="1" id="m8y-ii-c9o"/>
-                <constraint firstItem="ZyW-9F-VRU" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="trailing" constant="10" id="ozV-kL-Gax"/>
+                <constraint firstItem="XlB-lg-gE8" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="trailing" constant="-9" id="m8y-ii-c9o"/>
+                <constraint firstItem="ZyW-9F-VRU" firstAttribute="leading" secondItem="11I-39-gsf" secondAttribute="trailing" id="ozV-kL-Gax"/>
             </constraints>
             <point key="canvasLocation" x="138.5" y="169"/>
         </customView>

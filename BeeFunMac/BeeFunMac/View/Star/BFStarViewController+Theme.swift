@@ -22,7 +22,8 @@ extension BFStarViewController {
         refreshAllAndUntaggedButton()
         
         //分割线的颜色
-        tagManagerRightLine.backgColor = NSColor.xyLineGray
+        tagManagerRightLine.backgColor = NSColor.xyLineGrayDarkGray
+        tagManagerLeftLne.backgColor = NSColor.xyLineGrayDarkGray
         searchFilterRightLine.backgColor = NSColor.xyLineGray
         
         //显示点击按钮背景视图
