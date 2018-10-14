@@ -202,8 +202,10 @@
 		5EA4350D1FDB80C600034578 /* BFStarOrderFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4350C1FDB80C600034578 /* BFStarOrderFilterView.swift */; };
 		5EA4E1C321717F1D005D73F1 /* BFColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C221717F1D005D73F1 /* BFColor.xcassets */; };
 		5EA4E1C52171D477005D73F1 /* NSCoor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C42171D477005D73F1 /* NSCoor+Extension.swift */; };
-		5EA4E1C72171D633005D73F1 /* NSColor+DarkModeSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C62171D633005D73F1 /* NSColor+DarkModeSupport.swift */; };
+		5EA4E1C72171D633005D73F1 /* NSColor+DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C62171D633005D73F1 /* NSColor+DarkMode.swift */; };
 		5EA4E1C92172C1DB005D73F1 /* BFDarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */; };
+		5EA4E1CB2172ED3B005D73F1 /* NSColor+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1CA2172ED3B005D73F1 /* NSColor+Explore.swift */; };
+		5EA4E1CD2172F57A005D73F1 /* NSColor+Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4E1CC2172F57A005D73F1 /* NSColor+Single.swift */; };
 		5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */; };
 		5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA84B351FEB6025007AC06E /* BFTextField.swift */; };
 		5EAACF6B216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */; };
@@ -447,8 +449,10 @@
 		5EA4350C1FDB80C600034578 /* BFStarOrderFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarOrderFilterView.swift; sourceTree = "<group>"; };
 		5EA4E1C221717F1D005D73F1 /* BFColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BFColor.xcassets; sourceTree = "<group>"; };
 		5EA4E1C42171D477005D73F1 /* NSCoor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoor+Extension.swift"; sourceTree = "<group>"; };
-		5EA4E1C62171D633005D73F1 /* NSColor+DarkModeSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+DarkModeSupport.swift"; sourceTree = "<group>"; };
+		5EA4E1C62171D633005D73F1 /* NSColor+DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+DarkMode.swift"; sourceTree = "<group>"; };
 		5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDarkModeManager.swift; sourceTree = "<group>"; };
+		5EA4E1CA2172ED3B005D73F1 /* NSColor+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Explore.swift"; sourceTree = "<group>"; };
+		5EA4E1CC2172F57A005D73F1 /* NSColor+Single.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Single.swift"; sourceTree = "<group>"; };
 		5EA84B331FEB4DF5007AC06E /* BFTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextFieldCell.swift; sourceTree = "<group>"; };
 		5EA84B351FEB6025007AC06E /* BFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTextField.swift; sourceTree = "<group>"; };
 		5EAACF6A216A691900EDD430 /* BFExpolreNavigationFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExpolreNavigationFlowLayout.swift; sourceTree = "<group>"; };
@@ -843,8 +847,10 @@
 				5E75D701210D5E27007596E9 /* NSColor+Day.swift */,
 				5E75D703210D5F25007596E9 /* NSColor+Night.swift */,
 				5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */,
-				5EA4E1C62171D633005D73F1 /* NSColor+DarkModeSupport.swift */,
+				5EA4E1CC2172F57A005D73F1 /* NSColor+Single.swift */,
+				5EA4E1C62171D633005D73F1 /* NSColor+DarkMode.swift */,
 				5EA4E1C82172C1DB005D73F1 /* BFDarkModeManager.swift */,
+				5EA4E1CA2172ED3B005D73F1 /* NSColor+Explore.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1397,7 +1403,7 @@
 				5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */,
 				5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */,
 				5E9867E01FD05189007EE86F /* ObjMilestone.swift in Sources */,
-				5EA4E1C72171D633005D73F1 /* NSColor+DarkModeSupport.swift in Sources */,
+				5EA4E1C72171D633005D73F1 /* NSColor+DarkMode.swift in Sources */,
 				5E424D63212B10E700066967 /* BFStarViewController+Down.swift in Sources */,
 				5E2C9D3C21645A04001910F9 /* BFExploreController+Coll.swift in Sources */,
 				5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */,
@@ -1553,6 +1559,7 @@
 				5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */,
 				5E048A74213A10640098CBF6 /* BFExploreController.swift in Sources */,
 				5E2B26741FDC346B00600866 /* WKWebView+Extension.swift in Sources */,
+				5EA4E1CB2172ED3B005D73F1 /* NSColor+Explore.swift in Sources */,
 				5E09F6022019A5DF00CC3866 /* BFZipManager.swift in Sources */,
 				5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */,
 				5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */,
@@ -1561,6 +1568,7 @@
 				5E539C6E216F8FC0005257AF /* BFConfigModel.swift in Sources */,
 				5E9867EE1FD05189007EE86F /* ObjUser.swift in Sources */,
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
+				5EA4E1CD2172F57A005D73F1 /* NSColor+Single.swift in Sources */,
 				5E75D70B210DB7AE007596E9 /* BFTheme+StarTag.swift in Sources */,
 				5E9867E71FD05189007EE86F /* ObjSettings.swift in Sources */,
 				5EAB030C20041CCB00323A86 /* BFStarViewController+Table.swift in Sources */,
@@ -1775,7 +1783,7 @@
 					"-lstdc++",
 					"-lz",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG_DARK_AQUA";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luci.beefun.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1837,7 +1845,7 @@
 					"-lstdc++",
 					"-lz",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG_DARK_AQUA";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luci.beefun.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

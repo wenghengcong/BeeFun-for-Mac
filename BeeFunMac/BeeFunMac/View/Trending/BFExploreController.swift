@@ -28,6 +28,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var searchButton: NSButton!
     
+    @IBOutlet weak var navigationTitleLabel: NSTextField!
     @IBOutlet weak var navigationContainView: BFView!
     @IBOutlet weak var navigationScrollView: NSScrollView!
     @IBOutlet weak var navigationCollectionView: NSCollectionView!
@@ -43,6 +44,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var detailSepLine: NSBox!
     @IBOutlet weak var navAndDetailSepLine: NSBox!
     
+    @IBOutlet weak var detailTitleLabel: NSTextField!
     /// 复合选框
     @IBOutlet weak var timePopup: NSPopUpButton!
     @IBOutlet weak var languagePopup: NSPopUpButton!

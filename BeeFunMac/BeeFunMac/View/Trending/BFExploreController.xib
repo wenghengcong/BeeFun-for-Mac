@@ -14,12 +14,14 @@
                 <outlet property="detailLayout" destination="dUp-Y1-b66" id="otA-Tk-L81"/>
                 <outlet property="detailScrollView" destination="gGT-YX-KPD" id="bjL-vh-SZX"/>
                 <outlet property="detailSepLine" destination="REM-wE-8OS" id="ND7-pZ-3Sr"/>
+                <outlet property="detailTitleLabel" destination="3UM-ng-qTw" id="Sfh-Dm-Y7R"/>
                 <outlet property="languagePopup" destination="niz-jn-GHc" id="bac-6W-jfx"/>
                 <outlet property="navAndDetailSepLine" destination="XlB-lg-gE8" id="Kwh-Ow-l4K"/>
                 <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>
                 <outlet property="navigationContainView" destination="11I-39-gsf" id="y79-Jw-enF"/>
                 <outlet property="navigationScrollView" destination="z4f-Ko-MKH" id="Vc2-0z-F8Y"/>
                 <outlet property="navigationSepLine" destination="DT5-BJ-Wie" id="zNm-ka-MBe"/>
+                <outlet property="navigationTitleLabel" destination="kTp-ok-bsx" id="XLu-Sp-wbb"/>
                 <outlet property="searchButton" destination="pRO-C6-N13" id="Ba4-uu-koy"/>
                 <outlet property="searchTextField" destination="PT4-5j-FgO" id="FlQ-KX-DvW"/>
                 <outlet property="timePopup" destination="lGQ-Np-VRU" id="Bgb-OQ-E6T"/>

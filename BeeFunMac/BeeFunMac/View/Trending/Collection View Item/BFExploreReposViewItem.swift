@@ -66,11 +66,11 @@ class BFExploreReposViewItem: NSCollectionViewItem {
 //        starButton.borderWidth = 1.0
 //        starButton.borderColor = .red
         starButton.radius = 3.0
-        starButton.backgColor = NSColor.bfBlueDarkWhite
+        starButton.backgColor = NSColor.xyBlueDarkWhite
 
-        containBackView.backgColor = NSColor.bfWhite
-        view.backgColor = NSColor.bfWhite
-        view.borderColor = NSColor.bfWhite
+        containBackView.backgColor = NSColor.iWhite
+        view.backgColor = NSColor.iWhite
+        view.borderColor = NSColor.iWhite
         view.borderWidth = viewOriBorderWidth
         
         view.radius = 5.0

@@ -42,11 +42,11 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     
     override func viewDidLayout() {
         super.viewDidLayout()
-        view.backgColor = NSColor.bfWhiteDarkBlack
+        view.backgColor = NSColor.xyWhiteDarkBlack
         view.borderWidth = viewOriBorderWidth
-        view.borderColor = NSColor.bfWhiteDarkWhite
-        titleLabel.textColor = NSColor.bfBlackDarkWhite
-        descLabel.textColor = NSColor.bfLightBlackDarkWhite
+        view.borderColor = NSColor.xyWhiteDarkWhite
+        titleLabel.textColor = NSColor.xyBlackDarkWhite
+        descLabel.textColor = NSColor.xyLightBlackDarkWhite
     }
     
     override func viewDidAppear() {
@@ -55,9 +55,9 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     
     func setHighlight(selected: Bool) {
         view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
-        view.backgColor = selected ? NSColor.bfBlueDarkBlue : NSColor.bfWhiteDarkBlack
-        titleLabel.textColor = selected ? NSColor.bfWhiteDarkWhite :  NSColor.bfBlackDarkWhite
-        descLabel.textColor = selected ? NSColor.bfWhiteDarkWhite : NSColor.bfLightBlackDarkWhite
+        view.backgColor = selected ? NSColor.xyBlueDarkBlue : NSColor.xyWhiteDarkBlack
+        titleLabel.textColor = selected ? NSColor.xyWhiteDarkWhite :  NSColor.xyBlackDarkWhite
+        descLabel.textColor = selected ? NSColor.xyWhiteDarkWhite : NSColor.xyLightBlackDarkWhite
     }
     
     
