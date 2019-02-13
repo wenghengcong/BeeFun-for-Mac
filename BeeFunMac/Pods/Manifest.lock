@@ -1,34 +1,36 @@
 PODS:
-  - Alamofire (4.7.2)
-  - Crashlytics (3.10.3):
-    - Fabric (~> 1.7.8)
-  - Down (0.5.2)
-  - Fabric (1.7.8)
+  - Alamofire (4.8.1)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - CryptoSwift (0.14.0)
+  - Down (0.6.2)
+  - Fabric (1.9.0)
   - FlatButton (1.4)
-  - Kingfisher (4.8.0)
+  - Kingfisher (5.1.1)
   - MASPreferences (1.3)
   - MASShortcut (2.3.6)
-  - Moya (11.0.2):
-    - Moya/Core (= 11.0.2)
-  - Moya/Core (11.0.2):
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
+    - Result (~> 4.0)
   - OAuthSwift (1.2.2)
-  - ObjectMapper (3.3.0)
-  - ReachabilitySwift (4.1.0)
-  - Result (3.2.4)
-  - SnapKit (4.0.0)
+  - ObjectMapper (3.4.2)
+  - ReachabilitySwift (4.3.0)
+  - Result (4.1.0)
+  - SnapKit (4.2.0)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
-  - SwiftDate (4.5.1)
-  - SwiftyBeaver (1.6.0)
-  - SwiftyJSON (4.1.0)
+  - SwiftDate (5.1.0)
+  - SwiftyBeaver (1.6.2)
+  - SwiftyJSON (4.2.0)
   - Zip (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
+  - CryptoSwift
   - Down
   - Fabric
   - FlatButton (from `https://github.com/OskarGroth/FlatButton.git`)
@@ -50,6 +52,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Crashlytics
+    - CryptoSwift
     - Down
     - Fabric
     - Kingfisher
@@ -77,26 +80,27 @@ CHECKOUT OPTIONS:
     :git: https://github.com/OskarGroth/FlatButton.git
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  Crashlytics: 2aea305161a2122492698c75af27f2b98aa49a25
-  Down: 587371ad58002b06023d9c602519216862c3acbc
-  Fabric: fba4684a95df789565b0b27fc5b6e68f1755af32
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
+  Down: 8c59a03cb229ef28dfa774b2132da860f3dee0ac
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FlatButton: d894cd742a908be216ae1a3e90542fbe82ba3768
-  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
   MASPreferences: c08b8622dd17b47da87669e741efd7c92e970e8c
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
-  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   OAuthSwift: 27b34fe80b76b67cd8f45571e0be2432bc9f6de1
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
-  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
-  SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
+  SwiftyBeaver: 8e67ab3cd94389cbbb7a9c7cc02748d98bfee68e
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 5537e9e042083a84a32c6dcecd38a7c06bc628f2
+PODFILE CHECKSUM: 8d38e76aea15306cb5bfbbaeed5917110e5dbd37
 
 COCOAPODS: 1.5.3

@@ -22,6 +22,7 @@ target 'BeeFun' do
     pod 'Moya'
     pod 'ObjectMapper'
     pod 'Kingfisher'
+    pod 'CryptoSwift'
     pod 'SwiftyJSON'
     pod 'SwiftyBeaver'
     pod 'SwiftDate'
