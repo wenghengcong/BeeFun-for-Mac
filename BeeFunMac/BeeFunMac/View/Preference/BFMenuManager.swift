@@ -47,11 +47,15 @@ class BFMenuManager: NSObject {
         }
     }
     
+    // warning
     func openAbout(_ sender: Any) {
-        let infoStoryboard = NSStoryboard.init(name: NSStoryboard.Name( "Information"), bundle: nil)
-        let aboutWindow = infoStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "about_beefun")) as? BFWindowController
-        aboutWindow?.window?.center()
-        aboutWindow?.window?.makeKeyAndOrderFront(nil)
+        // 无法解决window变成key的问题，导致一旦关闭窗口，窗口打开后就是about
+        // 利用原生的About
+//        let infoStoryboard = NSStoryboard.init(name: NSStoryboard.Name( "Information"), bundle: nil)
+//        let aboutWindow = infoStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "about_beefun")) as? BFWindowController
+//        aboutWindow?.contentViewController?.identifier = NSUserInterfaceItemIdentifier(rawValue: "about_window")
+//        aboutWindow?.window?.center()
+//        aboutWindow?.showWindow(aboutWindow)
     }
     
     func openPreference(_ sender: Any) {

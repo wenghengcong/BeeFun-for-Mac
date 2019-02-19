@@ -49,6 +49,7 @@ class BFWindowManager: NSObject {
         let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "loginwindow")) as? BFWindowController
         var frame = loginWindow?.mainContentController?.view.window?.frame ?? NSRect.zero
         frame.size = NSSize(width: 260, height: 320)
+        
         loginWindow?.mainContentController?.view.window?.setFrame(frame , display: false)
         AppDelegate.sharedInstance.mainController = loginWindow
         AppDelegate.sharedInstance.mainController?.showWindow(self)

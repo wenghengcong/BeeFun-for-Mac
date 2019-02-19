@@ -72,9 +72,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if !flag{
             for window in sender.windows {
                 if !BFPopOverUtils.isCustomPopOver(window: window) {
-                    window.makeKeyAndOrderFront(self)
+//                    window.makeKeyAndOrderFront(self)
                 }
             }
+            mainController?.window?.makeKeyAndOrderFront(self)
         }
         return true
     }
