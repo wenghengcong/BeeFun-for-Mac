@@ -84,11 +84,11 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         
         repoDescLabel.textColor = NSColor.xyBlackDarkWhite
         
-        view.borderColor = NSColor.xyClearDarkWhite
+        view.viewBorderColor = NSColor.xyClearDarkWhite
         if NSApplication.shared.isDarkMode {
-            view.borderWidth = viewOriBorderWidth
+            view.viewBorderWidth = viewOriBorderWidth
         } else {
-            view.borderWidth = 0
+            view.viewBorderWidth = 0
         }
         
         let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 17.0))

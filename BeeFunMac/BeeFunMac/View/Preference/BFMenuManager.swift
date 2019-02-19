@@ -48,7 +48,10 @@ class BFMenuManager: NSObject {
     }
     
     func openAbout(_ sender: Any) {
-        
+        let infoStoryboard = NSStoryboard.init(name: NSStoryboard.Name( "Information"), bundle: nil)
+        let aboutWindow = infoStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "about_beefun")) as? BFWindowController
+        aboutWindow?.window?.center()
+        aboutWindow?.window?.makeKeyAndOrderFront(nil)
     }
     
     func openPreference(_ sender: Any) {

@@ -56,7 +56,7 @@ extension BFStarViewController {
 //        starTable.borderWidth = 0.5
         
         addTagContainView.backgColor = NSColor.xyWhiteDarkBlack
-        addTagContainView.borderColor = NSColor.lineGrayColor
+        addTagContainView.viewBorderColor = NSColor.lineGrayColor
 
         workingTagsView.backgroundColor = NSColor.xyWhiteDarkBlack
 

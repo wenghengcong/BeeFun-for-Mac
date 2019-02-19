@@ -27,7 +27,7 @@ extension BFStarViewController: NSTextFieldDelegate, NSControlTextEditingDelegat
         //TEST:
 //        workingTags = ["UI", "Swift", "iOS Developerment", "Objectivie-C", "Future", "ME", "Tools", "Quick", "Books", "awesome", "Guide", "View" ,"UI", "Swift", "iOS Developerment", "Objectivie-C", "Future", "ME", "Tools", "Quick", "Books", "awesome", "Guide", "View"]
         
-        addTagContainView.borderWidth = 1.0
+        addTagContainView.viewBorderWidth = 1.0
         addTagContainView.layer?.masksToBounds = false
         
         addTagContainView.radius = 2.0

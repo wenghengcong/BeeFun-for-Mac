@@ -9,5 +9,4 @@
 import Cocoa
 
 class LCBaseTableCellView: NSTableCellView {
-    
 }

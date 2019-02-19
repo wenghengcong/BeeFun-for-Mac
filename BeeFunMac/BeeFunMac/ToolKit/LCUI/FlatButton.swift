@@ -1,9 +1,9 @@
 //
-//  LCButton.swift
-//  BeeFunMac
+//  FlatButton.swift
+//  Disk Sensei
 //
-//  Created by WengHengcong on 2017/12/10.
-//  Copyright © 2017年 LuCi. All rights reserved.
+//  Created by Oskar Groth on 02/08/16.
+//  Copyright © 2016 Cindori. All rights reserved.
 //
 
 import Cocoa
@@ -34,13 +34,15 @@ internal extension NSColor {
     }
 }
 
-open class LCButton: NSButton, CALayerDelegate {
+@IBDesignable
+open class FlatButton: NSButton, CALayerDelegate {
     
     internal var containerLayer = CALayer()
     internal var iconLayer = CAShapeLayer()
     internal var alternateIconLayer = CAShapeLayer()
     internal var titleLayer = CATextLayer()
     internal var mouseDown = Bool()
+    
     @IBInspectable public var momentary: Bool = true {
         didSet {
             animateColor(state == .on)
@@ -65,16 +67,19 @@ open class LCButton: NSButton, CALayerDelegate {
             layer?.cornerRadius = cornerRadius
         }
     }
-//    @objc var borderWidth: CGFloat = 1 {
-//        didSet {
-//            layer?.borderWidth = borderWidth
-//        }
-//    }
-//    @objc @IBInspectable public var borderColor: NSColor = NSColor.darkGray {
-//        didSet {
-//            animateColor(state == .on)
-//        }
-//    }
+    
+    
+    @IBInspectable public var borderWidth: CGFloat = 1 {
+        didSet {
+            layer?.borderWidth = borderWidth
+        }
+    }
+
+    @IBInspectable public var borderColor: NSColor = NSColor.darkGray {
+        didSet {
+            animateColor(state == .on)
+        }
+    }
     
     @IBInspectable public var activeBorderColor: NSColor = NSColor.white {
         didSet {
@@ -317,7 +322,7 @@ open class LCButton: NSButton, CALayerDelegate {
     // MARK: Interaction
     
     public func setOn(_ isOn: Bool) {
-        //        let nextState = isOn ? .on : .off
+//        let nextState = isOn ? .on : .off
         let nextState = isOn ? NSControl.StateValue.on : NSControl.StateValue.off
         if nextState != state {
             state = nextState
@@ -370,10 +375,10 @@ open class LCButton: NSButton, CALayerDelegate {
         }
     }
     
-//    override open func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool {
-//        return true
-//    }
-//    
+    open func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool {
+        return true
+    }
+    
     override open func draw(_ dirtyRect: NSRect) {
         
     }
@@ -389,5 +394,4 @@ open class LCButton: NSButton, CALayerDelegate {
     
     
 }
-
 

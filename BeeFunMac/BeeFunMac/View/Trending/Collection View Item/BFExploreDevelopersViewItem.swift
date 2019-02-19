@@ -55,8 +55,8 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         
         view.backgColor = NSColor.xyWhiteDarkBlack
         posButton.backgColor = NSColor.thDayBlue
-        view.borderColor = NSColor.xyClearDarkWhite
-        view.borderWidth = viewOriBorderWidth
+        view.viewBorderColor = NSColor.xyClearDarkWhite
+        view.viewBorderWidth = viewOriBorderWidth
         
         if let pos = userModel?.pos {
             let posAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayWhite, backColor: NSColor.thDayBlue, alignment: .center, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 17.0))

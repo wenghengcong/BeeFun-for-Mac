@@ -44,8 +44,8 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
     override func viewDidLayout() {
         super.viewDidLayout()
         view.backgColor = NSColor.xyWhiteDarkBlack
-        view.borderWidth = viewOriBorderWidth
-        view.borderColor = NSColor.xyWhiteDarkWhite
+        view.viewBorderWidth = viewOriBorderWidth
+        view.viewBorderColor = NSColor.xyWhiteDarkWhite
         titleLabel.textColor = NSColor.xyBlackDarkWhite
         descLabel.textColor = NSColor.xyLightBlackDarkWhite
     }

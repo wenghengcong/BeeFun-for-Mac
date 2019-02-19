@@ -161,7 +161,7 @@ extension NSView {
     }
     
     /// 设置边框颜色
-    var borderColor: NSColor {
+    var viewBorderColor: NSColor {
         get {
             if let color = self.layer?.borderColor {
                 return NSColor(cgColor: color) ?? NSColor.lineGrayColor
@@ -175,7 +175,7 @@ extension NSView {
     }
     
     /// 设置边框颜色
-    var borderWidth: CGFloat {
+    var viewBorderWidth: CGFloat {
         get {
             return self.layer?.borderWidth ?? 0
         }

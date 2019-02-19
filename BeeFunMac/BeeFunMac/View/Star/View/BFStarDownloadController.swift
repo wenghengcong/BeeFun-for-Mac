@@ -99,14 +99,14 @@ class BFStarDownloadController: NSViewController {
         
         sshTitleLabel.backgroundColor = whiteDarkBlack
         sshContentLabel.backgColor = whiteDarkBlack
-        sshContentLabel.borderWidth = 1.0
-        sshContentLabel.borderColor = NSColor.xyLightGrayDarkWhite
+        sshContentLabel.viewBorderWidth = 1.0
+        sshContentLabel.viewBorderColor = NSColor.xyLightGrayDarkWhite
         sshImageBtn.backgColor = whiteDarkBlack
         
         httpsTitleLabel.backgroundColor = whiteDarkBlack
         httpsContentLabel.backgColor = whiteDarkBlack
-        httpsContentLabel.borderWidth = 1.0
-        httpsContentLabel.borderColor = NSColor.xyLightGrayDarkWhite
+        httpsContentLabel.viewBorderWidth = 1.0
+        httpsContentLabel.viewBorderColor = NSColor.xyLightGrayDarkWhite
         httpsImageBtn.backgColor = whiteDarkBlack
         
         openXcodeBtn.backgColor = whiteDarkBlack
