@@ -159,7 +159,7 @@ extension BFStarViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (keyPath == "estimatedProgress") {
             if let progress = repoWebView?.estimatedProgress {
-                print("repo load content ....\(String(describing: progress))")
+//                print("repo load content ....\(String(describing: progress))")
                 if progress == 1 {
                     self.webIndicator.stopAnimation(nil)
                     scaleContentPage()

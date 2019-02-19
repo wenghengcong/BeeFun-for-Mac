@@ -44,6 +44,7 @@
 		5E1C13681FD6F36300726A0C /* SQLStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135C1FD6F36300726A0C /* SQLStars.swift */; };
 		5E1C13691FD6F36300726A0C /* SQLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135D1FD6F36300726A0C /* SQLTags.swift */; };
 		5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135E1FD6F36300726A0C /* CloudTableName.swift */; };
+		5E20B753221BA84F001DF2A6 /* BFPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */; };
 		5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */; };
 		5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E267639201B0972006A3020 /* NSObject+Swizzle.swift */; };
 		5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */; };
@@ -289,6 +290,7 @@
 		5E1C135C1FD6F36300726A0C /* SQLStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLStars.swift; sourceTree = "<group>"; };
 		5E1C135D1FD6F36300726A0C /* SQLTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTags.swift; sourceTree = "<group>"; };
 		5E1C135E1FD6F36300726A0C /* CloudTableName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTableName.swift; sourceTree = "<group>"; };
+		5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFPopOverViewController.swift; sourceTree = "<group>"; };
 		5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Search.swift"; sourceTree = "<group>"; };
 		5E267639201B0972006A3020 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWKNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 				5E8A2AF51FD1573C00B246BD /* BFMainController+Noti.swift */,
 				5EC3CC612016A11300701C23 /* BFLoginController.swift */,
 				5EC3CC632016AAAE00701C23 /* BFLoginWindowController.swift */,
+				5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1445,6 +1448,7 @@
 				5E2C9D3E21645A26001910F9 /* BFExploreController+View.swift in Sources */,
 				5E7F6F6B1FDD845B0050B50F /* NSFont+Project.swift in Sources */,
 				5E2C9D45216469DA001910F9 /* BFGithubTrengingModel.swift in Sources */,
+				5E20B753221BA84F001DF2A6 /* BFPopOverViewController.swift in Sources */,
 				5E54DB85216E074F003136DC /* BFExploreReposViewItem+Action.swift in Sources */,
 				5E5E822320E4E2CE00E810E2 /* SEResponseIssues.swift in Sources */,
 				5E9867DE1FD05189007EE86F /* ObjIssue.swift in Sources */,

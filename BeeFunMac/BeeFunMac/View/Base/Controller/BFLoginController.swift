@@ -35,16 +35,6 @@ class BFLoginController: BFBaseViewController {
         OAuthManager.shared.beginOauth(onlyPublicRepo: true)
     }
     
-    lazy var downloadPopover: NSPopover = {
-        let popover = NSPopover()
-        popover.behavior = .semitransient
-        let contentController = NSViewController()
-        contentController.identifier = NSUserInterfaceItemIdentifier.init("downloadPopover")
-        popover.contentViewController = contentController
-        popover.delegate = self
-        return popover
-    }()
-    
     @IBAction func showInfo(_ sender: Any) {
         
     }

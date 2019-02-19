@@ -130,7 +130,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
         let popover = NSPopover()
         popover.behavior = .semitransient
         let contentController = BFStarDownloadController()
-        contentController.identifier = NSUserInterfaceItemIdentifier.init("downloadPopover")
+        contentController.identifier = NSUserInterfaceItemIdentifier.init(BFPopOverUtils.downloadPopOverIden)
         contentController.delegate = self
         popover.contentViewController = contentController
         popover.delegate = self

@@ -71,11 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //方法二：
         if !flag{
             for window in sender.windows {
-                if let view = window.contentView, view.identifier?.rawValue=="tagsTipPop" {
-                    print("tagsPop")
-                } else if let view = window.contentViewController, view.identifier?.rawValue=="downloadPopover" {
-                    print("download popover")
-                } else {
+                if !BFPopOverUtils.isCustomPopOver(window: window) {
                     window.makeKeyAndOrderFront(self)
                 }
             }
