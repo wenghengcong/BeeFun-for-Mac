@@ -21,9 +21,9 @@ class BFTimeHelper: NSObject {
     func internetTime(rare: String?, prefix: String?) -> String? {
         
         if let rareStr: String = rare {
-            let createAt: DateInRegion = rareStr.date(format: DateFormat.iso8601(options: .withInternetDateTime))!
-            
-            var internet = createAt.string()
+            let createAt: Date = rareStr.date(withFormat: DateFormats.iso8601)!
+
+            var internet = createAt.toString()
             if prefix != nil {
                 internet = prefix!.localized + ":" + internet
             }
@@ -42,12 +42,12 @@ class BFTimeHelper: NSObject {
     func shortDateTime(rare: String?, prefix: String?) -> String? {
         
         if let rareStr: String = rare {
-            let date = rareStr.date(format: DateFormat.iso8601(options: .withTimeZone))
-            let createdAt = date?.string(format: DateFormat.custom("dd-MM-yyyy"))
+            let date: Date = rareStr.date(withFormat: DateFormats.iso8601)!
+            let createdAt = date.toString(DateToStringStyles.dateTime(.short))
             
-            var internet = createdAt!
+            var internet = createdAt
             if prefix != nil {
-                internet = prefix!.localized + ":" + internet
+                internet = prefix!.localized + ":" + createdAt
             }
             return internet
             
@@ -64,22 +64,15 @@ class BFTimeHelper: NSObject {
     func readableTime(rare: String?, prefix: String?) -> String? {
         
         if let rareStr: String = rare {
-            do {
-                let createAt: DateInRegion =  rareStr.date(format: DateFormat.iso8601(options: .withInternetDateTime))!
-                
-                var (readable, _) = try createAt.colloquialSinceNow()
-                if prefix != nil {
-                    readable = prefix!.localized + " :"  + readable
-                }
-                return readable
-            } catch {
-                return nil
+            let createAt: DateInRegion =  rareStr.toDate()!
+            var readable = createAt.toRelative()
+            if prefix != nil {
+                readable = prefix!.localized + " :"  + readable
             }
+            return readable
         }
-        
         return nil
     }
-    
 }
 
 extension Date {

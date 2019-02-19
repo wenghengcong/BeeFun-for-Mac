@@ -21,7 +21,7 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
         //右边webview区域
         starPageCustomRightView()
         starPageCustomRepoInfoArea()
-        self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
+        self.windowDidResize(Notification(name: Notification.Name( "nil")))
         loadTheme()
         configMessageHud()
     }
@@ -130,6 +130,8 @@ extension BFStarViewController: WKUIDelegate, WKNavigationDelegate, NSWindowDele
 extension BFStarViewController {
     func starPageCustomSearchField() {
         searchField.delegate = self
+        // TODO:
+//        searchField.fieldeditor
         searchFieldCell.cancelButtonCell?.target = self
         searchFieldCell.cancelButtonCell?.action = #selector(searchCancelButtonClick)
     }

@@ -11,6 +11,6 @@ import Cocoa
 extension NSImage {
     
     convenience public init?(name: String) {
-        self.init(named: NSImage.Name(rawValue: "name"))
+        self.init(named: NSImage.Name("name"))
     }
 }

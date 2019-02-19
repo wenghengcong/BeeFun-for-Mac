@@ -44,8 +44,8 @@ class BFExploreDevelopersViewItem: NSCollectionViewItem {
         
         
         followedButton.isHidden = true
-        followedButton.image = NSImage(named: NSImage.Name(rawValue: "exp_detail_trend_follow"))
-        followedButton.alternateImage = NSImage(named: NSImage.Name(rawValue: "exp_detail_trend_unfollow"))
+        followedButton.image = NSImage(named: NSImage.Name( "exp_detail_trend_follow"))
+        followedButton.alternateImage = NSImage(named: NSImage.Name( "exp_detail_trend_unfollow"))
         
         addAction()
     }

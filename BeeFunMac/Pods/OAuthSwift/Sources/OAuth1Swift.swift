@@ -24,12 +24,12 @@ open class OAuth1Swift: OAuthSwift {
     var accessTokenUrl: String
 
     // MARK: init
-    public init(consumerKey: String, consumerSecret: String, requestTokenUrl: String, authorizeUrl: String, accessTokenUrl: String) {
+    public init(consumerKey: String, consumerSecret: String, requestTokenUrl: URLConvertible, authorizeUrl: URLConvertible, accessTokenUrl: URLConvertible) {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
-        self.requestTokenUrl = requestTokenUrl
-        self.authorizeUrl = authorizeUrl
-        self.accessTokenUrl = accessTokenUrl
+        self.requestTokenUrl = requestTokenUrl.string
+        self.authorizeUrl = authorizeUrl.string
+        self.accessTokenUrl = accessTokenUrl.string
         super.init(consumerKey: consumerKey, consumerSecret: consumerSecret)
         self.client.credential.version = .oauth1
     }
@@ -62,8 +62,11 @@ open class OAuth1Swift: OAuthSwift {
     // MARK: functions
     // 0. Start
     @discardableResult
-    open func authorize(withCallbackURL callbackURL: URL, success: @escaping TokenSuccessHandler, failure: FailureHandler?) -> OAuthSwiftRequestHandle? {
-
+    open func authorize(withCallbackURL url: URL, success: @escaping TokenSuccessHandler, failure: FailureHandler?) -> OAuthSwiftRequestHandle? {
+        guard let callbackURL = url.url else {
+            failure?(OAuthSwiftError.encodingError(urlString: url.string))
+            return nil
+        }
         self.postOAuthRequestToken(callbackURL: callbackURL, success: { [unowned self] credential, _, _ in
 
             self.observeCallback { [weak self] url in
@@ -114,15 +117,6 @@ open class OAuth1Swift: OAuthSwift {
         }, failure: failure)
 
         return self
-    }
-
-    @discardableResult
-    open func authorize(withCallbackURL urlString: String, success: @escaping TokenSuccessHandler, failure: FailureHandler?) -> OAuthSwiftRequestHandle? {
-        guard let url = URL(string: urlString) else {
-              failure?(OAuthSwiftError.encodingError(urlString: urlString))
-            return nil
-        }
-        return authorize(withCallbackURL: url, success: success, failure: failure)
     }
 
     // 1. Request token

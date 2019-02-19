@@ -14,32 +14,32 @@ extension Notification.Name {
         public static let appAppearanceChanged =
             NSNotification.Name("appAppearanceChanged")
         
-        public static let WillLogin = Notification.Name(rawValue:"com.luci.beefun.mac.willlogin")
-        public static let DidLogin = Notification.Name(rawValue:"com.luci.beefun.mac.didlogin")
+        public static let WillLogin = Notification.Name("com.luci.beefun.mac.willlogin")
+        public static let DidLogin = Notification.Name("com.luci.beefun.mac.didlogin")
         
         /// 获取到oauth token
-        public static let GetOAuthToken = Notification.Name(rawValue:"com.luci.beefun.mac.gettoken")
+        public static let GetOAuthToken = Notification.Name("com.luci.beefun.mac.gettoken")
         /// 登录后，获取到用户信息
-        public static let GetUserInfo = Notification.Name(rawValue:"com.luci.beefun.mac.getuserinfo")
+        public static let GetUserInfo = Notification.Name("com.luci.beefun.mac.getuserinfo")
         
-        public static let WillLogout = Notification.Name(rawValue:"com.luci.beefun.mac.willlogout")
-        public static let DidLogout = Notification.Name(rawValue:"com.luci.beefun.mac.didlogout")
-        public static let AddTag = Notification.Name(rawValue:"com.luci.beefun.mac.addtag")
-        public static let UpdateTag = Notification.Name(rawValue:"com.luci.beefun.mac.updatetag")
-        public static let DelTag = Notification.Name(rawValue:"com.luci.beefun.mac.deltag")
+        public static let WillLogout = Notification.Name("com.luci.beefun.mac.willlogout")
+        public static let DidLogout = Notification.Name("com.luci.beefun.mac.didlogout")
+        public static let AddTag = Notification.Name("com.luci.beefun.mac.addtag")
+        public static let UpdateTag = Notification.Name("com.luci.beefun.mac.updatetag")
+        public static let DelTag = Notification.Name("com.luci.beefun.mac.deltag")
         //同步GitHub数据到服务器端
-        public static let SyncStarRepoStart = Notification.Name(rawValue:"com.luci.beefun.mac.SyncStartGithubStar")
-        public static let SyncStarRepoEnd = Notification.Name(rawValue:"com.luci.beefun.mac.SyncEndGithubStar")
+        public static let SyncStarRepoStart = Notification.Name("com.luci.beefun.mac.SyncStartGithubStar")
+        public static let SyncStarRepoEnd = Notification.Name("com.luci.beefun.mac.SyncEndGithubStar")
 
-        public static let RepoUpdateTag = Notification.Name(rawValue:"com.luci.beefun.mac.repoupdatetag")
+        public static let RepoUpdateTag = Notification.Name("com.luci.beefun.mac.repoupdatetag")
         
         /// Star Action
-        public static let didStarRepo = Notification.Name(rawValue: "com.luci.beefun.mac.didStarRepo")
+        public static let didStarRepo = Notification.Name( "com.luci.beefun.mac.didStarRepo")
         
         /// UnStar Action
-        public static let didUnStarRepo = Notification.Name(rawValue: "com.luci.beefun.mac.ddiUnStarRepo")
+        public static let didUnStarRepo = Notification.Name( "com.luci.beefun.mac.ddiUnStarRepo")
         
-        public static let AppInReview = Notification.Name(rawValue: "com.luci.beefun.mac.AppInReview")
+        public static let AppInReview = Notification.Name( "com.luci.beefun.mac.AppInReview")
         
     }
     

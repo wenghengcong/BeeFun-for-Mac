@@ -24,7 +24,8 @@ class OAuthManager: NSObject {
     }()
     
     // MARK: - Github Oauth and save Token
-    func beginOauth(){
+    func beginOauth(onlyPublicRepo: Bool){
+        let scope = onlyPublicRepo ? GithubPublicAppScope : GithubAppScope
         //全局通知：将要登录
         NotificationCenter.default.post(name: NSNotification.Name.BeeFun.WillLogin, object:nil)
 
@@ -39,7 +40,7 @@ class OAuthManager: NSObject {
         oauthswift.authorizeURLHandler = getURLHandler(external: false)
         let state = generateState(withLength: 20)
         let _ = oauthswift.authorize(
-            withCallbackURL: URL(string: GithubAppRedirectUrl)!, scope: GithubAppScope, state: state,
+            withCallbackURL: URL(string: GithubAppRedirectUrl)!, scope: scope, state: state,
             success: { credential, response, parameters in
                 NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetOAuthToken, object:nil)
                 self.saveOauthToken(credential: credential, parameters: parameters)
@@ -50,20 +51,18 @@ class OAuthManager: NSObject {
         )
     }
 
-    
     func getURLHandler(external: Bool) -> OAuthSwiftURLHandlerType {
         if external {
             return OAuthSwiftOpenURLExternally.sharedInstance
         } else {
             if internalWebViewController.parent == nil {
-                AppDelegate.sharedInstance.mainController?.contentViewController?.addChildViewController(self.internalWebViewController)
+                AppDelegate.sharedInstance.mainController?.contentViewController?.addChild(self.internalWebViewController)
             }
             return internalWebViewController
         }
     }
 
     func saveOauthToken(credential: OAuthSwiftCredential, parameters: Dictionary<String, Any>) {
-        
         
         let token = AppToken.shared
         token.access_token = String(format: "token %@", credential.oauthToken)

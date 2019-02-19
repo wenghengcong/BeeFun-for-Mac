@@ -18,7 +18,7 @@ class SyncPreferenceController:NSViewController {
     
     
     init() {
-        super.init(nibName: NSNib.Name(rawValue: "SyncPreferenceController"), bundle: nil)
+        super.init(nibName: NSNib.Name("SyncPreferenceController"), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -38,10 +38,10 @@ class SyncPreferenceController:NSViewController {
         
         let paraStyle = NSMutableParagraphStyle()
         paraStyle.alignment = .center
-        let syncDic = [NSAttributedStringKey.foregroundColor: NSColor.black, NSAttributedStringKey.paragraphStyle: paraStyle]
+        let syncDic = [NSAttributedString.Key.foregroundColor: NSColor.black, NSAttributedString.Key.paragraphStyle: paraStyle]
         self.syncNowButton.attributedTitle = NSAttributedString(string: "Sync Now", attributes: syncDic)
         
-        let restoreDic = [NSAttributedStringKey.foregroundColor: NSColor.bfRedColor, NSAttributedStringKey.paragraphStyle: paraStyle]
+        let restoreDic = [NSAttributedString.Key.foregroundColor: NSColor.bfRedColor, NSAttributedString.Key.paragraphStyle: paraStyle]
         self.restoreDataButton.attributedTitle = NSAttributedString(string: "Restore", attributes: restoreDic)
     
     }

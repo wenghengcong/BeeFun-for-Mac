@@ -58,7 +58,7 @@ extension BFExploreController {
     @objc func handleSelectedTime(popBtn: NSPopUpButton) {
 
         if let _ = popBtn.selectedItem?.title {
-//            let time = BFGihubTrendingTimeEnum(rawValue: selTitle)
+//            let time = BFGihubTrendingTimeEnum( selTitle)
             reloadTimaAndLanguage()
         }
     }

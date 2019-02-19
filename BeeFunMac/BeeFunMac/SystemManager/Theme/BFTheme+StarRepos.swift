@@ -12,19 +12,19 @@ extension BFThemeManager {
     
     func starTimeImage(selected: Bool) -> NSImage? {
         let imgName: String = combineImageName(prefix: IconArea.starOrder, iconName: "time", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
     
     func starNumImage(selected: Bool) -> NSImage? {
         let imgName: String = combineImageName(prefix: IconArea.starOrder, iconName: "num", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
     
     func starA_ZImage(selected: Bool) -> NSImage? {
         let imgName: String = combineImageName(prefix: IconArea.starOrder, iconName: "a_z", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
 }

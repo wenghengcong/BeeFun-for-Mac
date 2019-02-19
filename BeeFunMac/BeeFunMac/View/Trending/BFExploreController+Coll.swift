@@ -16,7 +16,7 @@ extension BFExploreController {
         navigationCollectionView.delegate = self
         navigationCollectionView.isSelectable = true
         
-//        navigationCollectionView.register(NSNib(nibNamed: NSNib.Name(rawValue: "BFExpolreNavigationViewItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "BFExpolreNavigationViewItem"))
+//        navigationCollectionView.register(NSNib(nibNamed: NSNib.Name( "BFExpolreNavigationViewItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier( "BFExpolreNavigationViewItem"))
         
         detailCollectionView.dataSource = self
         detailCollectionView.delegate = self
@@ -161,7 +161,7 @@ extension BFExploreController {
     // MARK: click
     func clickNavigationArea(navigationItem: BFExpolreNavigationViewItem) {
         
-        navigationType = BFExploreNavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
+        navigationType = BFExploreNavigationProductType( rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
 
         switch navigationType {
         case .githubTrendingDevelopers:
@@ -175,7 +175,7 @@ extension BFExploreController {
     
     // MARK: double click
     func doubleClickNavigationItem(navigationItem: BFExpolreNavigationViewItem) {
-        navigationType = BFExploreNavigationProductType(rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
+        navigationType = BFExploreNavigationProductType( rawValue: (navigationItem.exploreNavModel?.navType)!) ?? .githubTrendingRepos
 
         switch navigationType {
         case .githubTrendingDevelopers:

@@ -19,7 +19,7 @@ extension NSView {
             rotationAnimation.toValue = Float.pi * 2.0
 //            NSNumber(value: (Double(arc4random() % 360) * Double.pi / 180.0))
             rotationAnimation.duration = duration
-            rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            rotationAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
 //            rotationAnimation.fillMode = kCAFillModeForwards
             rotationAnimation.repeatCount = Float.infinity
             layer?.anchorPoint = CGPoint(x: 0.5, y: 0.5)

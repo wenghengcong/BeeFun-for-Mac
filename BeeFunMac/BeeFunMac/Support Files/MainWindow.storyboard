@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZWO-Qj-oqw">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,22 +31,59 @@
             <objects>
                 <viewController id="lcN-W1-Hcx" customClass="BFLoginController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Ed2-mL-nXp" customClass="BFView" customModule="BeeFun" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="260" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="348"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="yna-d2-SNe">
-                                <rect key="frame" x="67" y="160" width="127" height="119"/>
+                                <rect key="frame" x="71" y="189" width="119" height="119"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="127" id="BHp-Kc-b09"/>
-                                    <constraint firstAttribute="height" constant="119" id="ky9-l0-8pZ"/>
+                                    <constraint firstAttribute="height" constant="119" id="KgM-yj-TV6"/>
+                                    <constraint firstAttribute="width" constant="119" id="PSJ-PW-DVP"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="logo_1024" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JNQ-hF-tiZ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dgd-G8-oZH">
+                                <rect key="frame" x="0.0" y="6" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="XkC-FF-oNA"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" title="@Copyright www.beefun.top" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="a2t-pM-e7U">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="oepnOfficeWebsite:" target="lcN-W1-Hcx" id="Buu-i4-rlJ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-uW-iV5">
+                                <rect key="frame" x="218" y="305" width="36" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="YZd-4U-nAy"/>
+                                    <constraint firstAttribute="height" constant="32" id="d3Y-iC-ohg"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSInfo" imagePosition="left" inset="2" id="eHi-X2-5D9">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showInfo:" target="lcN-W1-Hcx" id="9lR-WT-dwz"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j48-f4-7gK">
+                                <rect key="frame" x="45" y="62" width="170" height="25"/>
+                                <buttonCell key="cell" type="square" title="Sign in With Private Repos" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n6W-1M-EEd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loginPrivateAction:" target="lcN-W1-Hcx" id="cS3-jj-bh0"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vrh-sp-QYs">
-                                <rect key="frame" x="96" y="79" width="69" height="25"/>
+                                <rect key="frame" x="96" y="106" width="69" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="oHQ-kX-JUA"/>
                                     <constraint firstAttribute="height" constant="25" id="syi-PF-DFM"/>
@@ -59,38 +96,32 @@
                                     <action selector="loginAction:" target="lcN-W1-Hcx" id="Vhx-4P-veV"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dgd-G8-oZH">
-                                <rect key="frame" x="0.0" y="6" width="260" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="XkC-FF-oNA"/>
-                                </constraints>
-                                <buttonCell key="cell" type="bevel" title="www.beefun.top" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="a2t-pM-e7U">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="oepnOfficeWebsite:" target="lcN-W1-Hcx" id="Buu-i4-rlJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="yna-d2-SNe" firstAttribute="top" secondItem="Ed2-mL-nXp" secondAttribute="top" constant="41" id="AvN-K5-jIo"/>
+                            <constraint firstItem="yna-d2-SNe" firstAttribute="centerX" secondItem="Ed2-mL-nXp" secondAttribute="centerX" id="8AI-q1-dNM"/>
+                            <constraint firstItem="yna-d2-SNe" firstAttribute="top" secondItem="Ed2-mL-nXp" secondAttribute="top" constant="40" id="9NW-qI-YRy"/>
                             <constraint firstItem="vrh-sp-QYs" firstAttribute="centerX" secondItem="Ed2-mL-nXp" secondAttribute="centerX" id="BLJ-AQ-iKF"/>
                             <constraint firstAttribute="bottom" secondItem="Dgd-G8-oZH" secondAttribute="bottom" constant="6" id="GvW-TN-cj8"/>
+                            <constraint firstAttribute="trailing" secondItem="P7B-uW-iV5" secondAttribute="trailing" constant="6" id="Lvy-7S-AXm"/>
+                            <constraint firstItem="P7B-uW-iV5" firstAttribute="top" secondItem="Ed2-mL-nXp" secondAttribute="top" constant="11" id="N3e-Xi-hyc"/>
                             <constraint firstAttribute="trailing" secondItem="Dgd-G8-oZH" secondAttribute="trailing" id="NyJ-Ag-e7L"/>
-                            <constraint firstItem="yna-d2-SNe" firstAttribute="centerX" secondItem="Ed2-mL-nXp" secondAttribute="centerX" id="dZM-3D-Bvb"/>
+                            <constraint firstAttribute="trailing" secondItem="j48-f4-7gK" secondAttribute="trailing" constant="45" id="aNH-5S-gpW"/>
+                            <constraint firstItem="j48-f4-7gK" firstAttribute="top" secondItem="vrh-sp-QYs" secondAttribute="bottom" constant="19" id="eg1-LQ-2LM"/>
                             <constraint firstItem="Dgd-G8-oZH" firstAttribute="leading" secondItem="Ed2-mL-nXp" secondAttribute="leading" id="lBT-aZ-GSL"/>
-                            <constraint firstItem="vrh-sp-QYs" firstAttribute="top" secondItem="yna-d2-SNe" secondAttribute="bottom" constant="56" id="ue5-rz-vP9"/>
+                            <constraint firstItem="j48-f4-7gK" firstAttribute="leading" secondItem="Ed2-mL-nXp" secondAttribute="leading" constant="45" id="pCh-HC-Lhq"/>
+                            <constraint firstItem="vrh-sp-QYs" firstAttribute="top" secondItem="yna-d2-SNe" secondAttribute="bottom" constant="58" id="s9m-sL-ar5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="infoBtn" destination="P7B-uW-iV5" id="NE5-9I-5R8"/>
                         <outlet property="officeWebBtn" destination="Dgd-G8-oZH" id="GOt-gf-fOk"/>
                         <outlet property="signInBtn" destination="vrh-sp-QYs" id="wg5-z5-gco"/>
+                        <outlet property="signInPrivateBtn" destination="j48-f4-7gK" id="aR7-An-OOc"/>
                     </connections>
                 </viewController>
                 <customObject id="Q4D-aT-UXS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1740" y="-651"/>
+            <point key="canvasLocation" x="-1740" y="-637"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="qSM-Km-URk">
@@ -279,6 +310,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSInfo" width="32" height="32"/>
         <image name="icon_bar_day_browser_sel" width="120" height="120"/>
         <image name="icon_bar_day_git_sel" width="120" height="120"/>
         <image name="icon_bar_day_star_sel" width="120" height="120"/>

@@ -38,22 +38,22 @@ class AttributedDictionary {
         }
         
         var attributeDic: [NSAttributedString.Key : Any] = [:]
-        attributeDic[NSAttributedStringKey.foregroundColor] = foreColor
+        attributeDic[NSAttributedString.Key.foregroundColor] = foreColor
 
         if alignment != nil || lineBreak != nil {
-            attributeDic[NSAttributedStringKey.paragraphStyle] = style
+            attributeDic[NSAttributedString.Key.paragraphStyle] = style
         }
         
         if backColor != nil {
-            attributeDic[NSAttributedStringKey.backgroundColor] = backColor
+            attributeDic[NSAttributedString.Key.backgroundColor] = backColor
         }
         
         if baselineOffset != nil {
-            attributeDic[NSAttributedStringKey.baselineOffset] = baselineOffset!
+            attributeDic[NSAttributedString.Key.baselineOffset] = baselineOffset!
         }
         
         if font != nil {
-            attributeDic[NSAttributedStringKey.font] = font!
+            attributeDic[NSAttributedString.Key.font] = font!
         }
         return attributeDic
     }

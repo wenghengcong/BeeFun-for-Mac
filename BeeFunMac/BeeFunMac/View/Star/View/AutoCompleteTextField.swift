@@ -69,7 +69,7 @@ class AutoCompleteTextField: NSTextField {
     
     override func awakeFromNib() {
         
-        column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "text"))
+        column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier( "text"))
         column1?.isEditable = false
         column1?.width = popOverWidth - 2 * popOverPadding
         
@@ -87,7 +87,7 @@ class AutoCompleteTextField: NSTextField {
         }
         tableView.delegate = self
         tableView.dataSource = self
-        //        tableView.register(NSNib.init(nibNamed: NSNib.Name(rawValue: AutoCompleteTextFieldCellIdentifiers.TagTipCell), bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier(rawValue: AutoCompleteTextFieldCellIdentifiers.TagTipCell))
+        //        tableView.register(NSNib.init(nibNamed: NSNib.Name( AutoCompleteTextFieldCellIdentifiers.TagTipCell), bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier( AutoCompleteTextFieldCellIdentifiers.TagTipCell))
         self.autoCompleteTableView = tableView
         
         let tableSrollView = NSScrollView(frame: NSZeroRect)
@@ -226,7 +226,7 @@ extension AutoCompleteTextField:NSTableViewDelegate{
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        var cellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "MyView"), owner: self) as? NSTableCellView
+        var cellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier( "MyView"), owner: self) as? NSTableCellView
         if cellView == nil{
             cellView = NSTableCellView(frame: NSZeroRect)
             let textField = NSTextField(frame: NSZeroRect)
@@ -236,11 +236,11 @@ extension AutoCompleteTextField:NSTableViewDelegate{
             textField.isSelectable = false
             cellView!.addSubview(textField)
             cellView!.textField = textField
-            cellView!.identifier = NSUserInterfaceItemIdentifier(rawValue: "MyView")
+            cellView!.identifier = NSUserInterfaceItemIdentifier( "MyView")
         }
         //TODO: 注意： 文本背景色可以通过attributedStringValue来修改
-        let attrs = [NSAttributedStringKey.foregroundColor: NSColor.black, NSAttributedStringKey.font: NSFont.systemFont(ofSize: 13), NSAttributedStringKey.backgroundColor: NSColor.clear]
-        let mutableAttriStr = NSMutableAttributedString(string: self.matches![row], attributes: attrs as [NSAttributedStringKey : Any])
+        let attrs = [NSAttributedString.Key.foregroundColor: NSColor.black, NSAttributedString.Key.font: NSFont.systemFont(ofSize: 13), NSAttributedString.Key.backgroundColor: NSColor.clear]
+        let mutableAttriStr = NSMutableAttributedString(string: self.matches![row], attributes: attrs as [NSAttributedString.Key : Any])
         cellView!.textField!.attributedStringValue = mutableAttriStr
         
         return cellView

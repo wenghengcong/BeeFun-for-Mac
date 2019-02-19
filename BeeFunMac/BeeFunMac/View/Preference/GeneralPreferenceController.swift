@@ -15,7 +15,7 @@ class GeneralPreferenceController:NSViewController, MASPreferencesViewController
     @IBOutlet weak var shortcutView: MASShortcutView!
     
     init() {
-        super.init(nibName: NSNib.Name(rawValue: "GeneralPreferenceController"), bundle: nil)
+        super.init(nibName: NSNib.Name("GeneralPreferenceController"), bundle: nil)
     }
     
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class GeneralPreferenceController:NSViewController, MASPreferencesViewController
     }
     
     var toolbarItemImage: NSImage? {
-        return NSImage(named: NSImage.Name.preferencesGeneral)
+        return NSImage(named: NSImage.preferencesGeneralName)
     }
     
     func showWindow() {

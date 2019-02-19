@@ -7,10 +7,9 @@
 //
 
 import Cocoa
-import FlatButton
 import ObjectMapper
 
-extension BFStarViewController: NSTextFieldDelegate {
+extension BFStarViewController: NSTextFieldDelegate, NSControlTextEditingDelegate {
     
     func starPageCustomToolsView() {
     
@@ -83,7 +82,7 @@ extension BFStarViewController: NSTextFieldDelegate {
     func reLayoutWorkingLayout() {
         addWorkingTagsButtons()
         layoutWorkingTagsButton()
-//        self.windowDidResize(Notification(name: Notification.Name(rawValue: "nil")))
+//        self.windowDidResize(Notification(name: Notification.Name( "nil")))
         reLayoutRightContentViewAfterWorkingTagsChange()
     }
     
@@ -173,18 +172,18 @@ extension BFStarViewController: NSTextFieldDelegate {
             button.frame = nowF
         }
         
-        let fieldH: CGFloat = 18
+        let fieldH: CGFloat = 20
         var lastBtnY = (lineH-fieldH)/2.0
         if let lastButton = workingTagsButtongs.last {
             lastBtnY = lastButton.frame.minY+1.0
         }
     
-        let fieldX = firstColumnX
+        let fieldX = firstColumnX-3
         var fieldY = lastBtnY + lineH - 5
         if workingTagsButtongs.count == 0 {
             fieldY = lastBtnY
         }
-        repoTagsTextField.frame = CGRect(x: fieldX, y: fieldY, width: width-5, height: fieldH)
+        repoTagsTextField.frame = CGRect(x: fieldX, y: fieldY, width: width-8, height: fieldH)
     }
     
     //left距离左边边距，right距离右边边距
@@ -222,10 +221,11 @@ extension BFStarViewController: NSTextFieldDelegate {
      }
      */
     
-
+//    #ifndef MAC_OS_X_VERSION_10_14
+    //    #if compiler(>=5)
     // MARK: - Text field delegate callback
     // 点击搜索框时，输入字符后，controlTextDidBeginEditing (此时字符还未改变)-> controlTextDidChange（字符已改变） ->searchFieldDidStartSearching (字符以改变)
-    override func controlTextDidBeginEditing(_ obj: Notification) {
+    func controlTextDidBeginEditing(_ obj: Notification) {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchField {
                 print("controlTextDidBeginEditing search \(self.searchField.stringValue)")
@@ -235,23 +235,23 @@ extension BFStarViewController: NSTextFieldDelegate {
         }
     }
     
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchField {
                 print("controlTextDidChange search \(self.searchField.stringValue)")
                 //TODO: 评估下是否需要每次在输入文字时拿到最新的数据
-//                searchStarReposNow(allRefresh: true, scrollToTop: true)
+                //                searchStarReposNow(allRefresh: true, scrollToTop: true)
             } else if textfield == repoTagsTextField {
                 print("controlTextDidChange input new tag \(self.repoTagsTextField.stringValue)")
-//                inputTagsTipArr = ["Good", "Fine", "hahaha"]
-//                tagTipsTableShow()
+                //                inputTagsTipArr = ["Good", "Fine", "hahaha"]
+                //                tagTipsTableShow()
             }
         }
     }
     
     //离开输入框，调用该方法
     //搜索框，右边取消按钮：调用controlTextDidEndEditing->controlTextDidBeginEditing->searchFieldDidEndSearching->controlTextDidChange->controlTextDidEndEditing
-    override func controlTextDidEndEditing(_ obj: Notification) {
+    func controlTextDidEndEditing(_ obj: Notification) {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchField {
                 print("controlTextDidEndEditing search \(self.searchField.stringValue)")
@@ -260,6 +260,7 @@ extension BFStarViewController: NSTextFieldDelegate {
             }
         }
     }
+//    #endif
     
     //回车后，调用：doCommandBy-> searchFieldDidEndSearching
     //点击输入框，回到搜索，noop方法调用
@@ -315,7 +316,7 @@ extension BFStarViewController: NSTextFieldDelegate {
     // MARK: - Remove Tag From Repo
     /// 点击输入tag区域中的tag按钮，显示删除按钮
     @objc func clickWorkingTagsButton(sender: NSButton) {
-        let delImage = NSImage.init(named: NSImage.Name(rawValue: "tag_delete"))
+        let delImage = NSImage.init(named: NSImage.Name( "tag_delete"))
         if sender.state == .on {
             let delButton = NSButton()
             delButton.bezelStyle = .texturedSquare

@@ -14,7 +14,7 @@ class BFConfig: NSObject {
     static let shared = BFConfig()
     
     /// 是否在审核中
-    var appStoreInReview = false
+    var appStoreInReview = true
     
     func getConfig() {
         BeeFunProvider.sharedProvider.request(BeeFunAPI.config()) { (result) in

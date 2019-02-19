@@ -12,6 +12,9 @@ class BFLoginController: BFBaseViewController {
 
     @IBOutlet weak var signInBtn: NSButton!
     @IBOutlet weak var officeWebBtn: NSButton!
+    @IBOutlet weak var signInPrivateBtn: NSButton!
+    @IBOutlet weak var infoBtn: NSButton!
+    
     var loadingHud = MBProgressHUD()
     
     override func viewDidLoad() {
@@ -24,18 +27,41 @@ class BFLoginController: BFBaseViewController {
     
     @IBAction func loginAction(_ sender: Any) {
         BFWindowManager.shared.closeLoginWindow()
-        OAuthManager.shared.beginOauth()
+        OAuthManager.shared.beginOauth(onlyPublicRepo: false)
     }
     
+    @IBAction func loginPrivateAction(_ sender: Any) {
+        BFWindowManager.shared.closeLoginWindow()
+        OAuthManager.shared.beginOauth(onlyPublicRepo: true)
+    }
+    
+    lazy var downloadPopover: NSPopover = {
+        let popover = NSPopover()
+        popover.behavior = .semitransient
+        let contentController = NSViewController()
+        contentController.identifier = NSUserInterfaceItemIdentifier.init("downloadPopover")
+        popover.contentViewController = contentController
+        popover.delegate = self
+        return popover
+    }()
+    
+    @IBAction func showInfo(_ sender: Any) {
+        
+    }
+    
+    
     func configView() {
-        self.signInBtn.backgColor = NSColor.clear
+        signInBtn.backgColor = NSColor.clear
+        signInPrivateBtn.backgColor = NSColor.clear
+        infoBtn.backgColor = NSColor.clear
+        
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .center
-        let dic = [NSAttributedStringKey.foregroundColor : NSColor.cpBlueLinkColor, NSAttributedStringKey.paragraphStyle : pstyle] as [NSAttributedStringKey : Any]
+        let dic = [NSAttributedString.Key.foregroundColor : NSColor.cpBlueLinkColor, NSAttributedString.Key.paragraphStyle : pstyle] as [NSAttributedString.Key : Any]
         self.officeWebBtn.attributedTitle = NSAttributedString(string: BFWebsiteURL.AppOfficeSite, attributes: dic)
         
         let width: CGFloat = 260
-        let height: CGFloat = 320
+        let height: CGFloat = 348
         self.view.bounds = NSRect(x: 0, y: 0, width: width, height: height)
         self.view.window?.center()
     }
@@ -59,10 +85,30 @@ class BFLoginController: BFBaseViewController {
     }
 }
 
+extension BFLoginController: NSPopoverDelegate {
+    
+    // MARK: - Popover Delegate
+    func popoverShouldDetach(_ popover: NSPopover) -> Bool {
+        return true
+    }
+    
+    func popoverDidShow(_ notification: Notification) {
+        
+    }
+    
+    func popoverDidClose(_ notification: Notification) {
+        let closeReason = notification.userInfo![NSPopover.closeReasonUserInfoKey] as! String
+        if (closeReason == NSPopover.CloseReason.standard.rawValue) {
+            
+        }
+    }
+}
+
+
 extension BFLoginController: MBProgressHUDDelegate {
     
     @objc func getTokenSuccessful() {
-        signInBtn.isHidden = true
+//        signInBtn.isHidden = true
         self.view.addSubview(loadingHud)
         loadingHud.show(true)
     }

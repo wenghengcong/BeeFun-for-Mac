@@ -63,8 +63,8 @@ extension BFThemeManager {
     func allStarsAttributeTitle(selected: Bool) -> NSAttributedString {
        let attributeTitle =  NSAttributedString(string: "All Stars", attributes:
         [
-            NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected),
-            NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 15.0)
+            NSAttributedString.Key.foregroundColor: starShowTitleColor(selected: selected),
+            NSAttributedString.Key.font: NSFont.bfSystemFont(ofSize: 15.0)
         ])
         return attributeTitle
     }
@@ -72,8 +72,8 @@ extension BFThemeManager {
     /// untagged stars
     func untaggedStarsAttributeTitle(selected: Bool) -> NSAttributedString {
         let attributeTitle =  NSAttributedString(string: "Untagged Stars", attributes: [
-            NSAttributedStringKey.foregroundColor: starShowTitleColor(selected: selected),
-            NSAttributedStringKey.font: NSFont.bfSystemFont(ofSize: 15.0)
+            NSAttributedString.Key.foregroundColor: starShowTitleColor(selected: selected),
+            NSAttributedString.Key.font: NSFont.bfSystemFont(ofSize: 15.0)
             ])
         return attributeTitle
     }
@@ -152,35 +152,35 @@ extension BFThemeManager {
     /// all star icon
     func starAllStarImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.starTag, iconName: "all", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+        let image = NSImage(named: NSImage.Name( imageName))
         return image
     }
     
     /// untagged star icon
     func starUntaggedImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.starTag, iconName: "untagged", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+        let image = NSImage(named: NSImage.Name( imageName))
         return image
     }
     
     /// 同步按钮图片
     func starSyncImage(selected: Bool) -> NSImage? {
         let imgName: String = combineImageName(prefix: IconArea.starTag, iconName: "sync", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
     
     /// 保存Tag的icon
     func starSaveTagImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.starTag, iconName: "save", selected: false)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+        let image = NSImage(named: NSImage.Name( imageName))
         return image
     }
     
     /// Tag前面的icon
     func tagCellImage(selected: Bool) -> NSImage? {
         let imageName = combineImageName(prefix: IconArea.starTag, iconName: "tagcell", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imageName))
+        let image = NSImage(named: NSImage.Name( imageName))
         return image
     }
     

@@ -769,12 +769,12 @@ public extension String {
     
     /// SwifterSwift: Underlined string
     public var underline: NSAttributedString {
-        return NSAttributedString(string: self, attributes: [NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+        return NSAttributedString(string: self, attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
     }
     
     /// SwifterSwift: Strikethrough string.
     public var strikethrough: NSAttributedString {
-        return NSAttributedString(string: self, attributes: [NSAttributedStringKey.strikethroughStyle: NSNumber(value: NSUnderlineStyle.styleSingle.rawValue as Int)])
+        return NSAttributedString(string: self, attributes: [NSAttributedString.Key.strikethroughStyle: NSNumber(value: NSUnderlineStyle.single.rawValue as Int)])
     }
     
     #if os(iOS)
@@ -783,25 +783,6 @@ public extension String {
         return NSMutableAttributedString(string: self, attributes: [NSFontAttributeName: UIFont.italicSystemFont(ofSize: UIFont.systemFontSize)])
     }
     #endif
-    
-    #if os(macOS)
-    /// SwifterSwift: Add color to string.
-    ///
-    /// - Parameter color: text color.
-    /// - Returns: a NSAttributedString versions of string colored with given color.
-    public func colored(with color: NSColor) -> NSAttributedString {
-        return NSMutableAttributedString(string: self, attributes: [NSAttributedStringKey.foregroundColor: color])
-    }
-    #else
-    /// SwifterSwift: Add color to string.
-    ///
-    /// - Parameter color: text color.
-    /// - Returns: a NSAttributedString versions of string colored with given color.
-    public func colored(with color: UIColor) -> NSAttributedString {
-        return NSMutableAttributedString(string: self, attributes: [NSForegroundColorAttributeName: color])
-    }
-    #endif
-    
 }
 
 //MARK: - NSString extensions

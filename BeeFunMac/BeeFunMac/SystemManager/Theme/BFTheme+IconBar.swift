@@ -67,21 +67,21 @@ extension BFThemeManager {
     func iconbarStarImage(selected: Bool) -> NSImage? {
         let dark = NSApplication.shared.isDarkMode
         let imgName: String = combineImageName(prefix: IconArea.iconBar, dark: dark, iconName: "star", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
     
     func iconbarGitImage(selected: Bool) -> NSImage? {
         let dark = NSApplication.shared.isDarkMode
         let imgName: String = combineImageName(prefix: IconArea.iconBar, dark: dark, iconName: "git", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
     
     func iconbarBrowserImage(selected: Bool) -> NSImage? {
         let dark = NSApplication.shared.isDarkMode
         let imgName: String = combineImageName(prefix: IconArea.iconBar, dark: dark, iconName: "browser", selected: selected)
-        let image = NSImage(named: NSImage.Name(rawValue: imgName))
+        let image = NSImage(named: NSImage.Name( imgName))
         return image
     }
 

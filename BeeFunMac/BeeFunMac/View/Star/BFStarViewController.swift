@@ -9,7 +9,6 @@
 import Cocoa
 import SnapKit
 import WebKit
-import FlatButton
 import ObjectMapper
 import Down
 import Moya

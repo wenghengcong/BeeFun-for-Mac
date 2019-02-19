@@ -10,6 +10,6 @@ import Cocoa
 
 extension NSNib {
     public struct BeeFun {
-        public static let BFStarTableCellView = NSNib.Name(rawValue: "BFStarTableCellView")
+        public static let BFStarTableCellView = NSNib.Name( "BFStarTableCellView")
     }
 }

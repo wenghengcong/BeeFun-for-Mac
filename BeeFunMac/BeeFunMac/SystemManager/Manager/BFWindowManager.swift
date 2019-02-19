@@ -27,8 +27,8 @@ class BFWindowManager: NSObject {
             lastWindow.close()
         }
         NSApplication.shared.mainWindow?.close()
-        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainwindow")) as? BFWindowController
+        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name( "MainWindow"), bundle: nil)
+        let mainWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "mainwindow")) as? BFWindowController
         
         var frame = mainWindow?.mainContentController?.view.window?.frame ?? NSRect.zero
         frame.size = NSSize(width: 1350, height: 700)
@@ -45,8 +45,8 @@ class BFWindowManager: NSObject {
             lastWindow.close()
         }
         NSApplication.shared.mainWindow?.close()
-        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
+        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name( "MainWindow"), bundle: nil)
+        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "loginwindow")) as? BFWindowController
         var frame = loginWindow?.mainContentController?.view.window?.frame ?? NSRect.zero
         frame.size = NSSize(width: 260, height: 320)
         loginWindow?.mainContentController?.view.window?.setFrame(frame , display: false)
@@ -56,8 +56,8 @@ class BFWindowManager: NSObject {
     }
     
     func closeLoginWindow() {
-        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "MainWindow"), bundle: nil)
-        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "loginwindow")) as? BFWindowController
+        let mainStoryboard = NSStoryboard.init(name: NSStoryboard.Name( "MainWindow"), bundle: nil)
+        let loginWindow = mainStoryboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier( "loginwindow")) as? BFWindowController
         loginWindow?.close()
     }
 }

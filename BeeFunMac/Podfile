@@ -7,7 +7,7 @@ inhibit_all_warnings!
 target 'BeeFun' do
 	use_frameworks!
     #UI
-#    pod 'Sparkle'
+   pod 'Sparkle'
 
 #Uti
 #pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
@@ -19,6 +19,7 @@ target 'BeeFun' do
     pod 'Crashlytics'
 	pod 'Alamofire'
     pod 'SnapKit'
+    pod "PromiseKit"
     pod 'Moya'
     pod 'ObjectMapper'
     pod 'Kingfisher'
@@ -27,14 +28,13 @@ target 'BeeFun' do
     pod 'SwiftyBeaver'
     pod 'SwiftDate'
 #	pod 'Bugly'
-
 #    pod 'SwiftyStoreKit'
 #    pod 'AVOSCloud'
 #   pod 'SwiftLint'
     pod 'SQLite.swift'
 #    pod 'ITSwitch'
 #    pod 'p2.OAuth2'
-    pod 'OAuthSwift'
+    pod 'OAuthSwift', :git => 'https://github.com/OAuthSwift/OAuthSwift', :branch => 'master'
 #    pod 'CallbackURLKit'
 #    pod 'DJProgressHUD_OSX'
     #加密
@@ -43,7 +43,6 @@ target 'BeeFun' do
 #    pod 'AudioKit'
 #    pod 'SwifterSwift'
 #    pod 'KeychainAccess'
-    pod 'FlatButton', :git => 'https://github.com/OskarGroth/FlatButton.git'
 #    pod 'SwiftOCR'
 #    pod 'FlagKit'
     #动画
@@ -57,20 +56,14 @@ target 'BeeFun' do
     #    pod 'GodEye', '~> 1.0.0', :configurations => ['Debug']  
 end
 
-#post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-#        target.build_configurations.each do |config|
-#            if [ 'SwiftDate'].include?(target.name)
-#                config.build_settings['SWIFT_VERSION'] = "2.3"
-#            end
-#        end
-#    end
-#end
-
-#post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-#        target.build_configurations.each do |config|
-#            config.build_settings['SWIFT_VERSION'] = '3.2'
-#        end
-#    end
-#end
+# 优化编译速度
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            if config.name == 'Debug'
+                config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)', '-Onone']
+                config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+            end
+        end
+    end
+end

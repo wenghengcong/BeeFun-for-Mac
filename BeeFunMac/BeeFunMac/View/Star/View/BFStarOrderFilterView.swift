@@ -100,7 +100,7 @@ class BFStarOrderFilterView: BFView {
         
         currentIndex = button!.tag
         currentOrder = button
-        let orderType: StarOrderType = StarOrderType(rawValue: currentOrder!.tag) ?? .time
+        let orderType: StarOrderType = StarOrderType( rawValue: currentOrder!.tag) ?? .time
         delegate?.didSelected(button: button!, order: orderType)
     }
     

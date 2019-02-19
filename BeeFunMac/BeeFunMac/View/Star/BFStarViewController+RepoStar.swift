@@ -134,7 +134,7 @@ extension BFStarViewController {
     
     func toolsAddRepoWhenStarRepo(objRepo: ObjRepos) {
         let now = DateInRegion()
-        objRepo.starred_at = now.iso8601()
+        objRepo.starred_at = now.toISO()
         BeeFunProvider.sharedProvider.request(BeeFunAPI.addRepo(repo: objRepo)) { (result) in
             switch result {
             case let .success(response):
