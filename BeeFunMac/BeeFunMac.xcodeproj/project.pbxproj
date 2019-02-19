@@ -46,7 +46,6 @@
 		5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135E1FD6F36300726A0C /* CloudTableName.swift */; };
 		5E20B753221BA84F001DF2A6 /* BFPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */; };
 		5E20B757221BB510001DF2A6 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B756221BB510001DF2A6 /* FlatButton.swift */; };
-		5E20B75B221BDA37001DF2A6 /* BFAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B75A221BDA37001DF2A6 /* BFAboutViewController.swift */; };
 		5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */; };
 		5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E267639201B0972006A3020 /* NSObject+Swizzle.swift */; };
 		5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */; };
@@ -293,7 +292,6 @@
 		5E1C135E1FD6F36300726A0C /* CloudTableName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTableName.swift; sourceTree = "<group>"; };
 		5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFPopOverViewController.swift; sourceTree = "<group>"; };
 		5E20B756221BB510001DF2A6 /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
-		5E20B75A221BDA37001DF2A6 /* BFAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFAboutViewController.swift; sourceTree = "<group>"; };
 		5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Search.swift"; sourceTree = "<group>"; };
 		5E267639201B0972006A3020 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWKNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -744,7 +742,6 @@
 				5EC3CC612016A11300701C23 /* BFLoginController.swift */,
 				5EC3CC632016AAAE00701C23 /* BFLoginWindowController.swift */,
 				5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */,
-				5E20B75A221BDA37001DF2A6 /* BFAboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1464,7 +1461,6 @@
 				5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */,
 				5EA3BF3C20AA751A00D3CC79 /* BeeFunAPI.swift in Sources */,
 				5E9867EB1FD05189007EE86F /* ObjEmail.swift in Sources */,
-				5E20B75B221BDA37001DF2A6 /* BFAboutViewController.swift in Sources */,
 				5E98680A1FD0FE75007EE86F /* Response+ObjectMapper.swift in Sources */,
 				5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */,
 				5ECBD9152168CE5300F3C03E /* BFButton.swift in Sources */,

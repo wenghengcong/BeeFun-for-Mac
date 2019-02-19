@@ -33,9 +33,9 @@ class BFWindowManager: NSObject {
         var frame = mainWindow?.mainContentController?.view.window?.frame ?? NSRect.zero
         frame.size = NSSize(width: 1350, height: 700)
         mainWindow?.mainContentController?.view.window?.setFrame(frame , display: false)
-        
+        NSApplication.shared.mainWindow?.makeKeyAndOrderFront(mainWindow)
         AppDelegate.sharedInstance.mainController = mainWindow
-        AppDelegate.sharedInstance.mainController?.showWindow(self)
+        AppDelegate.sharedInstance.mainController?.showWindow(mainWindow)
         AppDelegate.sharedInstance.mainController?.window?.center()
     }
     
@@ -51,8 +51,9 @@ class BFWindowManager: NSObject {
         frame.size = NSSize(width: 260, height: 320)
         
         loginWindow?.mainContentController?.view.window?.setFrame(frame , display: false)
+        NSApplication.shared.mainWindow?.makeKeyAndOrderFront(loginWindow)
         AppDelegate.sharedInstance.mainController = loginWindow
-        AppDelegate.sharedInstance.mainController?.showWindow(self)
+        AppDelegate.sharedInstance.mainController?.showWindow(loginWindow)
         AppDelegate.sharedInstance.mainController?.window?.center()
     }
     
