@@ -46,6 +46,7 @@
 		5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135E1FD6F36300726A0C /* CloudTableName.swift */; };
 		5E20B753221BA84F001DF2A6 /* BFPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */; };
 		5E20B757221BB510001DF2A6 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B756221BB510001DF2A6 /* FlatButton.swift */; };
+		5E20B760221D6DFA001DF2A6 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5E20B75F221D6DFA001DF2A6 /* dsa_pub.pem */; };
 		5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */; };
 		5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E267639201B0972006A3020 /* NSObject+Swizzle.swift */; };
 		5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */; };
@@ -292,6 +293,7 @@
 		5E1C135E1FD6F36300726A0C /* CloudTableName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTableName.swift; sourceTree = "<group>"; };
 		5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFPopOverViewController.swift; sourceTree = "<group>"; };
 		5E20B756221BB510001DF2A6 /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
+		5E20B75F221D6DFA001DF2A6 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Search.swift"; sourceTree = "<group>"; };
 		5E267639201B0972006A3020 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWKNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -611,6 +613,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		5E20B75E221D6DEB001DF2A6 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				5E20B75F221D6DFA001DF2A6 /* dsa_pub.pem */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
 		5E28165D1FCBED62007A5159 = {
 			isa = PBXGroup;
 			children = (
@@ -683,6 +693,7 @@
 		5E2816901FCCFDE7007A5159 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E20B75E221D6DEB001DF2A6 /* Sparkle */,
 				5E54DB8F216F2828003136DC /* language */,
 			);
 			path = Resources;
@@ -1307,6 +1318,7 @@
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E048A75213A10640098CBF6 /* BFExploreController.xib in Resources */,
 				5E424D612127B11500066967 /* NightTheme.xcassets in Resources */,
+				5E20B760221D6DFA001DF2A6 /* dsa_pub.pem in Resources */,
 				5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,

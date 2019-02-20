@@ -190,6 +190,7 @@ class BFMainController: BFBaseViewController {
         if let URLString = UserManager.shared.user?.avatar_url {
             if let avatar = URL(string: URLString) {
                 profileButton.kf.setImage(with: avatar)
+            
             }
         }
     }

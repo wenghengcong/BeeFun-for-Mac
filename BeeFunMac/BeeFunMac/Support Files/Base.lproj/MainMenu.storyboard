@@ -21,6 +21,12 @@
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="jdB-Jp-wML"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Check for Updates..." id="i5D-MM-OdL">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="40F-wr-Mxl" id="EKk-ef-IE0"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
@@ -691,6 +697,7 @@
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="40F-wr-Mxl" customClass="SUUpdater"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>

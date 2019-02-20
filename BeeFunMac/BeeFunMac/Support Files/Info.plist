@@ -34,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>10316</string>
+	<string>101</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -74,5 +74,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://wenghengcong.com/beefunapp/beefun_update.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>+Z8jMvbBisCQRN/2c1e04M1zwNeacCYbsIdsCjglyis=</string>
 </dict>
 </plist>

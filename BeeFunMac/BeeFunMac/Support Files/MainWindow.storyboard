@@ -146,7 +146,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5zP-aE-nan"/>
                                         </constraints>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_p_normal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="d3R-Gw-Ob9">
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="iconbar_p_normal" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="d3R-Gw-Ob9">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>

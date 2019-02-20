@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+<channel>
+<title>BeeFun</title>
+<item>
+<title>1.0.10</title>
+<pubDate>周三, 20 2月 2019 22:58:22 +0800</pubDate>
+<sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
+<enclosure url="https://wenghengcong.com/beefunapp/BeeFun.app.zip" sparkle:version="101" sparkle:shortVersionString="1.0.10" length="13314694" type="application/octet-stream"/>
+</item>
+</channel></rss>

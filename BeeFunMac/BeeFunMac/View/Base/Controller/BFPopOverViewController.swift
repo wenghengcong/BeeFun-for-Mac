@@ -15,10 +15,10 @@ struct BFPopOverUtils {
     static let tagsTipPopOverIden: String = "tagsTipPopOver"
     
     static func isCustomPopOver(window: NSWindow) -> Bool {
-        if let view = window.contentView, view.identifier!.rawValue == tagsTipPopOverIden {
+        if let identifier = window.contentView?.identifier?.rawValue, identifier == tagsTipPopOverIden {
             print("tags popover view")
             return true
-        } else if let view = window.contentViewController, view.identifier!.rawValue == downloadPopOverIden {
+        } else if let identifier = window.contentViewController?.identifier?.rawValue, identifier == downloadPopOverIden {
             print("download popover viewcontroller")
             return true
         }
