@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.8</string>
+	<string>1.1.0</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -34,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>101</string>
+	<string>100</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -76,7 +76,7 @@
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
 	<string>https://wenghengcong.com/beefunapp/beefun_update.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>+Z8jMvbBisCQRN/2c1e04M1zwNeacCYbsIdsCjglyis=</string>
+	<key>SUPublicEDKey</key>
+	<string>QxnRmWASXnVPzHyUfsN2pvohdDDKyPYUA318CU4zBEQ=</string>
 </dict>
 </plist>

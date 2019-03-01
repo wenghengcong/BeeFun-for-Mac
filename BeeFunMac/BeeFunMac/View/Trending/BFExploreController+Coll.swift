@@ -12,6 +12,7 @@ extension BFExploreController {
     
     func setupCollectionView() {
         
+        navigationCollectionView.allowsMultipleSelection = false
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
         navigationCollectionView.isSelectable = true
@@ -64,6 +65,7 @@ extension BFExploreController {
     }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+        // 导航
         if collectionView == navigationCollectionView {
             if section < navigationdTitles.count {
                 let sectionTitle = navigationdTitles[section]
@@ -99,6 +101,7 @@ extension BFExploreController {
                     let model = sectionData[indexPath.item]
                     item.exploreNavModel = model
                 }
+//                item.setHighlight(selected: indexPath == navigationIndexPath)
                 item.itemDelegate = self
                 return item
             }
@@ -132,9 +135,11 @@ extension BFExploreController {
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         
         guard let indexPath = indexPaths.first else {return}
+        navigationIndexPath = indexPath
         guard let item = collectionView.item(at: indexPath) else {return}
         
         if collectionView == navigationCollectionView {
+            
             let navItem = item as! BFExpolreNavigationViewItem
             navItem.setHighlight(selected: true)
             clickNavigationArea(navigationItem: navItem)
@@ -148,12 +153,12 @@ extension BFExploreController {
     func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
         guard let indexPath = indexPaths.first else {return}
         guard let item = collectionView.item(at: indexPath) else {return}
-        
+
         if collectionView == navigationCollectionView {
             let navItem = item as! BFExpolreNavigationViewItem
             navItem.setHighlight(selected: false)
         } else if collectionView == detailCollectionView {
-            
+
         }
     }
     
@@ -198,8 +203,8 @@ extension BFExploreController {
         clickNavigationArea(navigationItem: navigationItem)
         changeFlowLayout()
 
-//        let indexSet:Set<IndexPath> = [indexPath ?? IndexPath(item: 0, section: 0)]
-//        collectionView(navigationCollectionView, didSelectItemsAt: indexSet)
+        let indexSet:Set<IndexPath> = [indexPath ?? IndexPath(item: 0, section: 0)]
+        collectionView(navigationCollectionView, didSelectItemsAt: indexSet)
     }
 }
 

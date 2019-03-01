@@ -16,6 +16,7 @@
                 <outlet property="detailScrollView" destination="gGT-YX-KPD" id="bjL-vh-SZX"/>
                 <outlet property="detailSepLine" destination="REM-wE-8OS" id="ND7-pZ-3Sr"/>
                 <outlet property="detailTitleLabel" destination="3UM-ng-qTw" id="Sfh-Dm-Y7R"/>
+                <outlet property="langSegment" destination="o4w-3S-eIh" id="J5Z-EB-WaF"/>
                 <outlet property="languagePopup" destination="niz-jn-GHc" id="bac-6W-jfx"/>
                 <outlet property="navAndDetailSepLine" destination="XlB-lg-gE8" id="Kwh-Ow-l4K"/>
                 <outlet property="navigationClipView" destination="Uk9-gZ-7W9" id="Bnq-t0-mZZ"/>
@@ -159,10 +160,10 @@
                             </textFieldCell>
                         </textField>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="REM-wE-8OS">
-                            <rect key="frame" x="14" y="619" width="500" height="5"/>
+                            <rect key="frame" x="14" y="619" width="200" height="5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="a05-Ug-IT1"/>
-                                <constraint firstAttribute="width" constant="500" id="fd2-dL-75Y"/>
+                                <constraint firstAttribute="width" constant="200" id="fd2-dL-75Y"/>
                             </constraints>
                         </box>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="niz-jn-GHc">
@@ -204,7 +205,7 @@
                             <color key="contentTintColor" name="bfblack"/>
                         </popUpButton>
                         <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-Zj-V54">
-                            <rect key="frame" x="278" y="635" width="164" height="32"/>
+                            <rect key="frame" x="155" y="652" width="164" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="push" title="Change Appearance" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nkz-Fc-PNc">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -214,6 +215,22 @@
                                 <action selector="changeAppearance:" target="-2" id="PDj-7z-8mn"/>
                             </connections>
                         </button>
+                        <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-3S-eIh">
+                            <rect key="frame" x="355" y="634" width="275" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="dKY-HS-9cw"/>
+                            </constraints>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="0cT-J2-Xdg">
+                                <font key="font" metaFont="system"/>
+                                <segments>
+                                    <segment label="All" alignment="left" selected="YES"/>
+                                    <segment label="Swift" tag="1"/>
+                                    <segment label="Java"/>
+                                    <segment label="Python"/>
+                                    <segment label="Dart"/>
+                                </segments>
+                            </segmentedCell>
+                        </segmentedControl>
                     </subviews>
                     <constraints>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="14" id="1qC-N9-5CV"/>
@@ -227,6 +244,8 @@
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
                         <constraint firstItem="lGQ-Np-VRU" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="nBn-Qt-wXh"/>
                         <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="18" id="nQK-UF-ZHY"/>
+                        <constraint firstItem="o4w-3S-eIh" firstAttribute="centerX" secondItem="ZyW-9F-VRU" secondAttribute="centerX" id="rU4-jv-N26"/>
+                        <constraint firstItem="o4w-3S-eIh" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="23" id="rd3-6Y-un0"/>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="7" id="ulb-vn-RPS"/>
                     </constraints>
                 </customView>
@@ -275,6 +294,7 @@
             </subviews>
             <point key="canvasLocation" x="207" y="-319"/>
         </customView>
+        <userDefaultsController representsSharedInstance="YES" id="wWh-Kf-8Wp"/>
     </objects>
     <resources>
         <namedColor name="bfBlackDarkWhite">

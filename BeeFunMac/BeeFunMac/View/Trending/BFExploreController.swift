@@ -32,6 +32,8 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var navigationCollectionView: NSCollectionView!
     @IBOutlet weak var navigationClipView: NSClipView!
     
+    // 语言筛选，最多五项
+    @IBOutlet weak var langSegment: NSSegmentedControl!
     @IBOutlet weak var detailContailView: NSView!
     @IBOutlet weak var detailScrollView: NSScrollView!
     @IBOutlet weak var detailCollectionView: NSCollectionView!
@@ -48,6 +50,9 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var timePopup: NSPopUpButton!
     @IBOutlet weak var languagePopup: NSPopUpButton!
     
+    
+    // 导航栏当前选择的index
+    var navigationIndexPath: IndexPath = IndexPath(item: 0, section: 0)
     var navigationType: BFExploreNavigationProductType = .githubTrendingRepos
     var requesRepostModel: BFGithubTrendingRequsetModel?
     var requesDeveloperModel: BFGithubTrendingRequsetModel?
@@ -86,7 +91,6 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     }
     
     deinit {
-        
         NotificationCenter.default.removeObserver(self)
         navigationCollectionView.delegate = nil
         navigationCollectionView.dataSource = nil

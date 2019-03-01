@@ -46,7 +46,6 @@
 		5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C135E1FD6F36300726A0C /* CloudTableName.swift */; };
 		5E20B753221BA84F001DF2A6 /* BFPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */; };
 		5E20B757221BB510001DF2A6 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B756221BB510001DF2A6 /* FlatButton.swift */; };
-		5E20B760221D6DFA001DF2A6 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5E20B75F221D6DFA001DF2A6 /* dsa_pub.pem */; };
 		5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */; };
 		5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E267639201B0972006A3020 /* NSObject+Swizzle.swift */; };
 		5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */; };
@@ -241,6 +240,7 @@
 		5ED37E391FF51EA100C14B72 /* BFStarViewController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */; };
 		5EE9900D1FD26354008711F4 /* BFCommonString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9900C1FD26354008711F4 /* BFCommonString.swift */; };
 		5EE9900F1FD54BBE008711F4 /* BFPathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9900E1FD54BBE008711F4 /* BFPathManager.swift */; };
+		5EE9E249221DB08D00C000A7 /* all_language.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EE9E248221DB08D00C000A7 /* all_language.json */; };
 		5EE9E78B1FCEB1F40012AE1C /* BFWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78A1FCEB1F40012AE1C /* BFWebView.swift */; };
 		5EE9E78D1FCEB7A20012AE1C /* IconBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78C1FCEB7A20012AE1C /* IconBarView.swift */; };
 		5EE9E78F1FCEC86D0012AE1C /* BFMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78E1FCEC86D0012AE1C /* BFMainView.swift */; };
@@ -293,7 +293,6 @@
 		5E1C135E1FD6F36300726A0C /* CloudTableName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTableName.swift; sourceTree = "<group>"; };
 		5E20B752221BA84F001DF2A6 /* BFPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFPopOverViewController.swift; sourceTree = "<group>"; };
 		5E20B756221BB510001DF2A6 /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
-		5E20B75F221D6DFA001DF2A6 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Search.swift"; sourceTree = "<group>"; };
 		5E267639201B0972006A3020 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWKNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -493,6 +492,7 @@
 		5ED37E381FF51EA100C14B72 /* BFStarViewController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Noti.swift"; sourceTree = "<group>"; };
 		5EE9900C1FD26354008711F4 /* BFCommonString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFCommonString.swift; sourceTree = "<group>"; };
 		5EE9900E1FD54BBE008711F4 /* BFPathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFPathManager.swift; sourceTree = "<group>"; };
+		5EE9E248221DB08D00C000A7 /* all_language.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_language.json; sourceTree = "<group>"; };
 		5EE9E78A1FCEB1F40012AE1C /* BFWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWebView.swift; sourceTree = "<group>"; };
 		5EE9E78C1FCEB7A20012AE1C /* IconBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBarView.swift; sourceTree = "<group>"; };
 		5EE9E78E1FCEC86D0012AE1C /* BFMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMainView.swift; sourceTree = "<group>"; };
@@ -613,14 +613,6 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		5E20B75E221D6DEB001DF2A6 /* Sparkle */ = {
-			isa = PBXGroup;
-			children = (
-				5E20B75F221D6DFA001DF2A6 /* dsa_pub.pem */,
-			);
-			path = Sparkle;
-			sourceTree = "<group>";
-		};
 		5E28165D1FCBED62007A5159 = {
 			isa = PBXGroup;
 			children = (
@@ -693,7 +685,6 @@
 		5E2816901FCCFDE7007A5159 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5E20B75E221D6DEB001DF2A6 /* Sparkle */,
 				5E54DB8F216F2828003136DC /* language */,
 			);
 			path = Resources;
@@ -808,6 +799,7 @@
 		5E54DB8F216F2828003136DC /* language */ = {
 			isa = PBXGroup;
 			children = (
+				5EE9E248221DB08D00C000A7 /* all_language.json */,
 				5E54DB90216F2841003136DC /* BFLanguage.plist */,
 				5E54DB91216F2842003136DC /* BFPopularLanguage.plist */,
 			);
@@ -1318,7 +1310,7 @@
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E048A75213A10640098CBF6 /* BFExploreController.xib in Resources */,
 				5E424D612127B11500066967 /* NightTheme.xcassets in Resources */,
-				5E20B760221D6DFA001DF2A6 /* dsa_pub.pem in Resources */,
+				5EE9E249221DB08D00C000A7 /* all_language.json in Resources */,
 				5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,

@@ -18,6 +18,7 @@ extension BFExploreController {
     
     
     override func viewDidLayout() {
+        
         super.viewDidLayout()
         view.backgColor = NSColor.xyGrayDarkBlack
         
@@ -38,6 +39,18 @@ extension BFExploreController {
         detailScrollView.backgColor = NSColor.xyGrayDarkBlackBackground
         detailCollectionView.backgColor = NSColor.xyGrayDarkBlackBackground
         detailClipView.backgColor = NSColor.xyGrayDarkBlackBackground
+        
+        setupLangSegmentcontrol()
+    }
+    
+    func setupLangSegmentcontrol() {
+        
+        let arr = ["swift", "c", "c++", "java"]
+        langSegment.segmentCount = arr.count
+        langSegment.selectedSegment = 0
+        for (index, lan) in arr.enumerated() {
+            langSegment.setLabel(lan, forSegment: index)
+        }
     }
     
     func setupSelectedTimeAndLanguagePopup() {
