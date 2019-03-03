@@ -166,22 +166,6 @@
                                 <constraint firstAttribute="width" constant="200" id="fd2-dL-75Y"/>
                             </constraints>
                         </box>
-                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
-                            <rect key="frame" x="749" y="630" width="98" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <popUpButtonCell key="cell" type="push" title="daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="T2G-eO-oBo" id="m7i-hQ-BqZ">
-                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="menu"/>
-                                <menu key="menu" id="bdw-TM-akE">
-                                    <items>
-                                        <menuItem title="daily" state="on" id="T2G-eO-oBo"/>
-                                        <menuItem title="weekly" id="WMO-TL-O1r"/>
-                                        <menuItem title="monthly" id="4kq-HY-uhr"/>
-                                    </items>
-                                </menu>
-                            </popUpButtonCell>
-                            <color key="contentTintColor" name="bfblack"/>
-                        </popUpButton>
                         <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-Zj-V54">
                             <rect key="frame" x="155" y="652" width="164" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -209,34 +193,64 @@
                                 </segments>
                             </segmentedCell>
                         </segmentedControl>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJ3-RA-I3p">
-                            <rect key="frame" x="874" y="628" width="93" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KJ3-RA-I3p">
+                            <rect key="frame" x="876" y="632" width="91" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="EIr-0K-8UN"/>
+                                <constraint firstAttribute="width" constant="87" id="HUq-nl-ze3"/>
+                            </constraints>
                             <buttonCell key="cell" type="bevel" title="Languages" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="ALy-Bt-BCw">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
-                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
-                            <rect key="frame" x="636" y="627" width="33" height="40"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ppe-Ss-3T2">
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
+                            <rect key="frame" x="638" y="638" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="ad0-Nj-Qyu"/>
+                                <constraint firstAttribute="width" constant="18" id="l7K-qZ-Eaw"/>
+                            </constraints>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_lan_day_edit" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ppe-Ss-3T2">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
+                            <rect key="frame" x="779" y="634" width="80" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="Te6-0e-BpA"/>
+                            </constraints>
+                            <popUpButtonCell key="cell" type="push" title="daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="T2G-eO-oBo" id="m7i-hQ-BqZ">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="bdw-TM-akE">
+                                    <items>
+                                        <menuItem title="daily" state="on" id="T2G-eO-oBo"/>
+                                        <menuItem title="weekly" id="WMO-TL-O1r"/>
+                                        <menuItem title="monthly" id="4kq-HY-uhr"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                            <color key="contentTintColor" name="bfblack"/>
+                        </popUpButton>
                     </subviews>
                     <constraints>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="14" id="1qC-N9-5CV"/>
+                        <constraint firstItem="KJ3-RA-I3p" firstAttribute="leading" secondItem="lGQ-Np-VRU" secondAttribute="trailing" constant="22" id="Emt-hD-j3Y"/>
+                        <constraint firstItem="lGQ-Np-VRU" firstAttribute="centerY" secondItem="KJ3-RA-I3p" secondAttribute="centerY" id="HZW-yU-sjp"/>
                         <constraint firstAttribute="bottom" secondItem="gGT-YX-KPD" secondAttribute="bottom" constant="12" id="TAH-9v-ctn"/>
+                        <constraint firstAttribute="trailing" secondItem="KJ3-RA-I3p" secondAttribute="trailing" constant="20" id="Vy9-1t-spj"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="13" id="eMy-Uf-8gc"/>
+                        <constraint firstItem="DNg-ng-RJe" firstAttribute="centerY" secondItem="o4w-3S-eIh" secondAttribute="centerY" id="gvk-ad-TNE"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
+                        <constraint firstItem="DNg-ng-RJe" firstAttribute="leading" secondItem="o4w-3S-eIh" secondAttribute="trailing" constant="10" id="iHP-8q-C7q"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="16" id="jie-qI-5fh"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
                         <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="18" id="nQK-UF-ZHY"/>
                         <constraint firstItem="o4w-3S-eIh" firstAttribute="centerX" secondItem="ZyW-9F-VRU" secondAttribute="centerX" id="rU4-jv-N26"/>
                         <constraint firstItem="o4w-3S-eIh" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="23" id="rd3-6Y-un0"/>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="7" id="ulb-vn-RPS"/>
+                        <constraint firstItem="KJ3-RA-I3p" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="20" id="vXO-fG-L9Q"/>
                     </constraints>
                 </customView>
                 <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="XlB-lg-gE8">
@@ -287,6 +301,7 @@
         <userDefaultsController representsSharedInstance="YES" id="wWh-Kf-8Wp"/>
     </objects>
     <resources>
+        <image name="exp_lan_day_edit" width="200" height="200"/>
         <namedColor name="bfBlackDarkWhite">
             <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -48,7 +48,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var detailTitleLabel: NSTextField!
     /// 复合选框
     @IBOutlet weak var timePopup: NSPopUpButton!
-    // 语言选择框
+    // 语言按钮，弹出语言框
     @IBOutlet weak var languageSelectedButton: NSButton!
     
     
@@ -66,8 +66,8 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     var githubTrendingReposData: [[BFGithubTrengingModel]] = []
     var githubTrendingDevelopserData: [[BFGithubTrengingModel]] = []
     
-    /// 全部/流行 语言数据
-    var allLanguage: [String]? = []
+    /// 流行 语言数据
+    var selectedLanguage: String = "all"
     var popularLanguage: [[String: String]]? = []
     
     override func viewDidLoad() {
@@ -76,6 +76,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
         view.size = NSSize(width: 1285, height: 680)
         setupData()
         setupView()
+        setupNotification()
     }
     
     @IBAction func changeAppearance(_ sender: Any) {

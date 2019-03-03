@@ -43,6 +43,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        BFiCloudManager.shared.startiCloudQuery()
         UserManager.shared.userSignIn()
         BeeFunDBManager.shared.updateServerDB(first: false)
+        
+        // 加载所有语言
+        LangPanelUtil.shared.loadAllLanguage()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

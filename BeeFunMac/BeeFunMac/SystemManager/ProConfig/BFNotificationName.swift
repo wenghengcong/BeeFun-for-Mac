@@ -41,6 +41,10 @@ extension Notification.Name {
         
         public static let AppInReview = Notification.Name( "com.luci.beefun.mac.AppInReview")
         
+        
+        /// 语言选择
+        public static let SelectionLanguage = Notification.Name( "com.luci.beefun.mac.sellanguage")
+        
     }
     
 }

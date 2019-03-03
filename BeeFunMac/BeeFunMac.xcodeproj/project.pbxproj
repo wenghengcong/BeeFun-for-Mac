@@ -72,6 +72,12 @@
 		5E3029E9222B654A00D81874 /* BFLangPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3029E8222B654A00D81874 /* BFLangPanel.storyboard */; };
 		5E3029EB222B66C600D81874 /* BFLangPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3029EA222B66C600D81874 /* BFLangPanel.swift */; };
 		5E3029EE222B676E00D81874 /* NSStoryboard+Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3029ED222B676E00D81874 /* NSStoryboard+Instantiation.swift */; };
+		5E3029F5222BAC6700D81874 /* BFLangModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3029F4222BAC6700D81874 /* BFLangModel.swift */; };
+		5E3029FA222BF35D00D81874 /* BFLanguageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3029F8222BF35D00D81874 /* BFLanguageViewItem.swift */; };
+		5E3029FB222BF35D00D81874 /* BFLanguageViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3029F9222BF35D00D81874 /* BFLanguageViewItem.xib */; };
+		5E3029FD222BF37A00D81874 /* BFLanguageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3029FC222BF37A00D81874 /* BFLanguageHeaderView.swift */; };
+		5E3029FF222BF38F00D81874 /* BFLanguageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3029FE222BF38F00D81874 /* BFLanguageHeaderView.xib */; };
+		5E302A01222C1BDF00D81874 /* BFExploreController+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E302A00222C1BDF00D81874 /* BFExploreController+Noti.swift */; };
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
 		5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */; };
@@ -324,6 +330,12 @@
 		5E3029E8222B654A00D81874 /* BFLangPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BFLangPanel.storyboard; sourceTree = "<group>"; };
 		5E3029EA222B66C600D81874 /* BFLangPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLangPanel.swift; sourceTree = "<group>"; };
 		5E3029ED222B676E00D81874 /* NSStoryboard+Instantiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStoryboard+Instantiation.swift"; sourceTree = "<group>"; };
+		5E3029F4222BAC6700D81874 /* BFLangModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLangModel.swift; sourceTree = "<group>"; };
+		5E3029F8222BF35D00D81874 /* BFLanguageViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLanguageViewItem.swift; sourceTree = "<group>"; };
+		5E3029F9222BF35D00D81874 /* BFLanguageViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFLanguageViewItem.xib; sourceTree = "<group>"; };
+		5E3029FC222BF37A00D81874 /* BFLanguageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLanguageHeaderView.swift; sourceTree = "<group>"; };
+		5E3029FE222BF38F00D81874 /* BFLanguageHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFLanguageHeaderView.xib; sourceTree = "<group>"; };
+		5E302A00222C1BDF00D81874 /* BFExploreController+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+Noti.swift"; sourceTree = "<group>"; };
 		5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagMan.swift"; sourceTree = "<group>"; };
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
 		5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TextField.swift"; sourceTree = "<group>"; };
@@ -527,13 +539,14 @@
 		5E048A71213A0E8F0098CBF6 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				5EE6F689222A5953007F69C2 /* View */,
 				5EEAC28C2169FF4F0060E253 /* Layout */,
+				5EE6F689222A5953007F69C2 /* View */,
 				5E2C9D43216469C0001910F9 /* Model */,
 				5E048A7C21436BEB0098CBF6 /* Collection View Item */,
 				5E048A73213A10640098CBF6 /* BFExploreController.xib */,
 				5E048A72213A10640098CBF6 /* BFExploreController.swift */,
 				5E2C9D4121646859001910F9 /* BFExploreController+Data.swift */,
+				5E302A00222C1BDF00D81874 /* BFExploreController+Noti.swift */,
 				5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */,
 				5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */,
 				5E2C9D3B21645A04001910F9 /* BFExploreController+Coll.swift */,
@@ -1191,8 +1204,13 @@
 		5EE6F689222A5953007F69C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E3029F4222BAC6700D81874 /* BFLangModel.swift */,
 				5E3029EA222B66C600D81874 /* BFLangPanel.swift */,
 				5E3029E8222B654A00D81874 /* BFLangPanel.storyboard */,
+				5E3029F8222BF35D00D81874 /* BFLanguageViewItem.swift */,
+				5E3029F9222BF35D00D81874 /* BFLanguageViewItem.xib */,
+				5E3029FC222BF37A00D81874 /* BFLanguageHeaderView.swift */,
+				5E3029FE222BF38F00D81874 /* BFLanguageHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1326,6 +1344,7 @@
 				5E44C63F20E53A5C00CDEAEE /* githubReadMe.css in Resources */,
 				5E54DB93216F2842003136DC /* BFPopularLanguage.plist in Resources */,
 				5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */,
+				5E3029FB222BF35D00D81874 /* BFLanguageViewItem.xib in Resources */,
 				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
 				5E4833521FD252BA00CEB336 /* Browser.xcassets in Resources */,
@@ -1336,6 +1355,7 @@
 				5EE9E249221DB08D00C000A7 /* all_language.json in Resources */,
 				5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
+				5E3029FF222BF38F00D81874 /* BFLanguageHeaderView.xib in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 				5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */,
 			);
@@ -1520,6 +1540,7 @@
 				5E89DF5821740926004CC931 /* BFWindowManager.swift in Sources */,
 				5EC584991FE75B81008A44C9 /* BFStarViewController+TagInput.swift in Sources */,
 				5E09F606201A156B00CC3866 /* BFMonitor+Handle.swift in Sources */,
+				5E3029FA222BF35D00D81874 /* BFLanguageViewItem.swift in Sources */,
 				5E8D8E891FD7E39400C1F6CF /* Array+Extension.swift in Sources */,
 				5E5E820820E4E19E00E810E2 /* SearchAPI.swift in Sources */,
 				5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */,
@@ -1571,10 +1592,12 @@
 				5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */,
 				5E54DB8C216EDF95003136DC /* BFBrowserManager.swift in Sources */,
 				5E09F608201A1D6400CC3866 /* SyncPreferenceController.swift in Sources */,
+				5E3029FD222BF37A00D81874 /* BFLanguageHeaderView.swift in Sources */,
 				5E9867D01FD05189007EE86F /* ObjCommit.swift in Sources */,
 				5E5E822120E4E2CE00E810E2 /* SEResponseRepos.swift in Sources */,
 				5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */,
 				5E91319D20AE70B40056EF9F /* ObjLanguage.swift in Sources */,
+				5E302A01222C1BDF00D81874 /* BFExploreController+Noti.swift in Sources */,
 				5ECBD9112168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift in Sources */,
 				5E80F746211B284500756B30 /* BFTheme+StarWeb.swift in Sources */,
 				5E9868091FD0FE75007EE86F /* JSConnectivity.swift in Sources */,
@@ -1598,6 +1621,7 @@
 				5EA3BF4720AAA4E500D3CC79 /* BFStatusCode.swift in Sources */,
 				5E2C9D4221646859001910F9 /* BFExploreController+Data.swift in Sources */,
 				5EA3BF4520AAA41C00D3CC79 /* ObjTag.swift in Sources */,
+				5E3029F5222BAC6700D81874 /* BFLangModel.swift in Sources */,
 				5E2B26721FDC346B00600866 /* NSColor+Extension.swift in Sources */,
 				5EC1B1A82018D6DC00186A67 /* BFWebsiteURL.swift in Sources */,
 				5E5E822820E4E2CE00E810E2 /* SESearchRepoModel.swift in Sources */,

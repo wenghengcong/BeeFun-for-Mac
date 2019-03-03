@@ -78,13 +78,7 @@ extension BFExploreController {
     
     /// 选中语言
     @objc func handleSelectedLanguage(button: NSButton) {
-        LangPanel.shared.panelController.showWindow(button)
-        
-//        self.view.sheet
-//        //1. 存储
-//        BFLanguageManager.shared.saveLangugePlistFile(languages: popularLanguage)
-//        //2. 重新请求
-//        reloadTimaAndLanguage()
+        BFLangPanel.shared.panelController(source: "All").showWindow(button)
     }
     
     /// 重新加载语言列表

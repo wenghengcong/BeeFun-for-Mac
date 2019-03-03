@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="BFLanguageHeaderView" id="c22-O7-iKe" customClass="BFLanguageHeaderView" customModule="BeeFun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="agJ-KU-BLJ">
+                    <rect key="frame" x="0.0" y="-2" width="435" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="zHa-Nk-vmH"/>
+                    </constraints>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LhO-5A-qYK">
+                    <rect key="frame" x="18" y="6" width="224" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="AR7-yq-LCP"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="VnS-gF-4kE">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="agJ-KU-BLJ" secondAttribute="bottom" id="48a-PO-sTr"/>
+                <constraint firstAttribute="bottom" secondItem="LhO-5A-qYK" secondAttribute="bottom" constant="6" id="B7A-wX-5Tv"/>
+                <constraint firstAttribute="trailing" secondItem="agJ-KU-BLJ" secondAttribute="trailing" id="Rqg-ck-cIo"/>
+                <constraint firstItem="agJ-KU-BLJ" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="UN4-V3-cyB"/>
+                <constraint firstItem="LhO-5A-qYK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="h1e-P0-FjJ"/>
+                <constraint firstItem="LhO-5A-qYK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="kNb-JK-86W"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="LhO-5A-qYK" id="Qi2-zq-uKE"/>
+            </connections>
+            <point key="canvasLocation" x="112.5" y="123"/>
+        </customView>
+    </objects>
+</document>
