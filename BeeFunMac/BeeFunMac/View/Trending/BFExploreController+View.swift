@@ -54,9 +54,9 @@ extension BFExploreController {
     }
     
     func setupSelectedTimeAndLanguagePopup() {
-        languagePopup.target = self
-        languagePopup.action = #selector(handleSelectedLanguage(popBtn:))
-        
+        languageSelectedButton.target = self
+        languageSelectedButton.action = #selector(handleSelectedLanguage(button:))
+    
         timePopup.target = self
         timePopup.action = #selector(handleSelectedTime(popBtn:))
         firstLoadLanguage()
@@ -77,27 +77,14 @@ extension BFExploreController {
     }
     
     /// 选中语言
-    @objc func handleSelectedLanguage(popBtn: NSPopUpButton) {
-        if let selTitle = popBtn.selectedItem?.title {
-            print(selTitle)
-            let index = popBtn.indexOfItem(withTitle: selTitle)
-            if popularLanguage != nil {
-                if index < popularLanguage!.count && index >= 0 {
-                    var getRepoLanguageVar = popularLanguage![index]
-                    if let count = getRepoLanguageVar["count"] {
-                        if let newCount = count.int  {
-                            let addcount = newCount + 1
-                            getRepoLanguageVar["count"] = "\(addcount)"
-                        }
-                    }
-                    popularLanguage![index] = getRepoLanguageVar
-                    //1. 存储
-                    BFLanguageManager.shared.saveLangugePlistFile(languages: popularLanguage)
-                    //2. 重新请求
-                    reloadTimaAndLanguage()
-                }
-            }
-        }
+    @objc func handleSelectedLanguage(button: NSButton) {
+        LangPanel.shared.panelController.showWindow(button)
+        
+//        self.view.sheet
+//        //1. 存储
+//        BFLanguageManager.shared.saveLangugePlistFile(languages: popularLanguage)
+//        //2. 重新请求
+//        reloadTimaAndLanguage()
     }
     
     /// 重新加载语言列表
@@ -116,7 +103,5 @@ extension BFExploreController {
                 langueseArr.append(lan)
             }
         })
-        languagePopup.removeAllItems()
-        languagePopup.addItems(withTitles: langueseArr)
     }
 }

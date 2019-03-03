@@ -41,7 +41,7 @@ target 'BeeFun' do
 #    pod 'CryptoSwift'
 #    pod 'ProgressKit'
 #    pod 'AudioKit'
-#    pod 'SwifterSwift'
+    pod 'SwifterSwift'
 #    pod 'KeychainAccess'
 #    pod 'SwiftOCR'
 #    pod 'FlagKit'

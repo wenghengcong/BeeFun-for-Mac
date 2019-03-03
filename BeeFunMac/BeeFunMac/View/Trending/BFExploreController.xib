@@ -17,7 +17,7 @@
                 <outlet property="detailSepLine" destination="REM-wE-8OS" id="ND7-pZ-3Sr"/>
                 <outlet property="detailTitleLabel" destination="3UM-ng-qTw" id="Sfh-Dm-Y7R"/>
                 <outlet property="langSegment" destination="o4w-3S-eIh" id="J5Z-EB-WaF"/>
-                <outlet property="languagePopup" destination="niz-jn-GHc" id="bac-6W-jfx"/>
+                <outlet property="languageSelectedButton" destination="KJ3-RA-I3p" id="U7Z-TT-63f"/>
                 <outlet property="navAndDetailSepLine" destination="XlB-lg-gE8" id="Kwh-Ow-l4K"/>
                 <outlet property="navigationClipView" destination="Uk9-gZ-7W9" id="Bnq-t0-mZZ"/>
                 <outlet property="navigationCollectionView" destination="3jR-vT-3Pd" id="XWu-sp-unB"/>
@@ -166,30 +166,11 @@
                                 <constraint firstAttribute="width" constant="200" id="fd2-dL-75Y"/>
                             </constraints>
                         </box>
-                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="niz-jn-GHc">
-                            <rect key="frame" x="831" y="630" width="132" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="127" id="PIG-Fe-W6f"/>
-                                <constraint firstAttribute="height" constant="21" id="ag2-xE-Xuf"/>
-                            </constraints>
-                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kbf-Sh-G7b" id="cCg-0c-Ia0">
-                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="menu"/>
-                                <menu key="menu" id="y9H-Mb-r8q">
-                                    <items>
-                                        <menuItem title="Item 1" state="on" id="Kbf-Sh-G7b"/>
-                                        <menuItem title="Item 2" id="yB7-PU-avW"/>
-                                        <menuItem title="Item 3" id="tKO-aK-t3o"/>
-                                    </items>
-                                </menu>
-                            </popUpButtonCell>
-                            <color key="contentTintColor" name="bfblack"/>
-                        </popUpButton>
-                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
+                        <popUpButton verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
                             <rect key="frame" x="710" y="630" width="98" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="a5T-Jp-EsY"/>
-                                <constraint firstAttribute="width" constant="93" id="ysq-9M-Ioh"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="gkH-cy-RXP"/>
                             </constraints>
                             <popUpButtonCell key="cell" type="push" title="daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="T2G-eO-oBo" id="m7i-hQ-BqZ">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -231,15 +212,20 @@
                                 </segments>
                             </segmentedCell>
                         </segmentedControl>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJ3-RA-I3p">
+                            <rect key="frame" x="868" y="628" width="93" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="bevel" title="All language" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="ALy-Bt-BCw">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="14" id="1qC-N9-5CV"/>
-                        <constraint firstItem="niz-jn-GHc" firstAttribute="leading" secondItem="lGQ-Np-VRU" secondAttribute="trailing" constant="28" id="4Zm-uz-Ibc"/>
-                        <constraint firstItem="niz-jn-GHc" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="NT8-7I-gai"/>
                         <constraint firstAttribute="bottom" secondItem="gGT-YX-KPD" secondAttribute="bottom" constant="12" id="TAH-9v-ctn"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="13" id="eMy-Uf-8gc"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
-                        <constraint firstAttribute="trailing" secondItem="niz-jn-GHc" secondAttribute="trailing" constant="25" id="ie2-m9-oa2"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="16" id="jie-qI-5fh"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
                         <constraint firstItem="lGQ-Np-VRU" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="nBn-Qt-wXh"/>
@@ -295,6 +281,27 @@
             <point key="canvasLocation" x="207" y="-319"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="wWh-Kf-8Wp"/>
+        <window identifier="languagePanel" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Glz-0t-Pyy" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="139" y="81" width="276" height="378"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="8DV-38-TuG">
+                <rect key="frame" x="0.0" y="0.0" width="276" height="378"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1C-aO-E7i">
+                        <rect key="frame" x="86" y="243" width="81" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sjg-HC-DzC">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="1032" y="43"/>
+        </window>
     </objects>
     <resources>
         <namedColor name="bfBlackDarkWhite">

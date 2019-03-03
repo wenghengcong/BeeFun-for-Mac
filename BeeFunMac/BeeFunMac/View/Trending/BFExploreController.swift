@@ -48,7 +48,8 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var detailTitleLabel: NSTextField!
     /// 复合选框
     @IBOutlet weak var timePopup: NSPopUpButton!
-    @IBOutlet weak var languagePopup: NSPopUpButton!
+    // 语言选择框
+    @IBOutlet weak var languageSelectedButton: NSButton!
     
     
     // 导航栏当前选择的index

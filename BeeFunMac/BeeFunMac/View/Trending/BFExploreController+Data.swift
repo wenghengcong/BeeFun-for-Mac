@@ -81,10 +81,10 @@ extension BFExploreController {
     
     /// 重新加载数据
     func reloadTimaAndLanguage() {
-        if let timeTitle = timePopup.selectedItem?.title, let lanTitle = languagePopup.selectedItem?.title {
+        if let timeTitle = timePopup.selectedItem?.title {
             let time: BFGihubTrendingTimeEnum = BFGihubTrendingTimeEnum(rawValue: timeTitle) ?? .daily
-            let language = lanTitle.lowercased().replacing(" ", with: "-")
-            setRequestModel(time: time, language: language)
+//            let language = lanTitle.lowercased().replacing(" ", with: "-")
+//            setRequestModel(time: time, language: language)
             
             if navigationType == .githubTrendingDevelopers {
                 getGithubTrendingDeveloper(refresh: true)
