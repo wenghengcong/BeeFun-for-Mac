@@ -23,6 +23,7 @@ extension BFExploreController {
                     else {return}
                 if source == "All" {
                     selectedLanguage = language.name ?? "all"
+                    languageSelectedButton.title = selectedLanguage
                     reloadTimaAndLanguage()
                 } else if source == "Edit" {
                     

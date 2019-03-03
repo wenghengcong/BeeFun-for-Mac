@@ -50,7 +50,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     @IBOutlet weak var timePopup: NSPopUpButton!
     // 语言按钮，弹出语言框
     @IBOutlet weak var languageSelectedButton: NSButton!
-    
+    @IBOutlet weak var editLanguage: NSButton!
     
     // 导航栏当前选择的index
     var navigationIndexPath: IndexPath = IndexPath(item: 0, section: 0)
@@ -68,7 +68,6 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     
     /// 流行 语言数据
     var selectedLanguage: String = "all"
-    var popularLanguage: [[String: String]]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

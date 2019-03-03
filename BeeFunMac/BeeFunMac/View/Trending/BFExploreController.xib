@@ -16,6 +16,7 @@
                 <outlet property="detailScrollView" destination="gGT-YX-KPD" id="bjL-vh-SZX"/>
                 <outlet property="detailSepLine" destination="REM-wE-8OS" id="ND7-pZ-3Sr"/>
                 <outlet property="detailTitleLabel" destination="3UM-ng-qTw" id="Sfh-Dm-Y7R"/>
+                <outlet property="editLanguage" destination="DNg-ng-RJe" id="ZIO-md-koc"/>
                 <outlet property="langSegment" destination="o4w-3S-eIh" id="J5Z-EB-WaF"/>
                 <outlet property="languageSelectedButton" destination="KJ3-RA-I3p" id="U7Z-TT-63f"/>
                 <outlet property="navAndDetailSepLine" destination="XlB-lg-gE8" id="Kwh-Ow-l4K"/>
@@ -177,7 +178,7 @@
                                 <action selector="changeAppearance:" target="-2" id="PDj-7z-8mn"/>
                             </connections>
                         </button>
-                        <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-3S-eIh">
+                        <segmentedControl hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-3S-eIh">
                             <rect key="frame" x="355" y="634" width="275" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="dKY-HS-9cw"/>
@@ -199,12 +200,12 @@
                                 <constraint firstAttribute="height" constant="25" id="EIr-0K-8UN"/>
                                 <constraint firstAttribute="width" constant="87" id="HUq-nl-ze3"/>
                             </constraints>
-                            <buttonCell key="cell" type="bevel" title="Languages" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="ALy-Bt-BCw">
+                            <buttonCell key="cell" type="bevel" title="Languages" bezelStyle="regularSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="ALy-Bt-BCw">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
-                        <button translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
+                        <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
                             <rect key="frame" x="638" y="638" width="18" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="ad0-Nj-Qyu"/>
@@ -216,9 +217,9 @@
                             </buttonCell>
                         </button>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
-                            <rect key="frame" x="779" y="634" width="80" height="25"/>
+                            <rect key="frame" x="764" y="634" width="95" height="25"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="75" id="Te6-0e-BpA"/>
+                                <constraint firstAttribute="width" constant="90" id="Te6-0e-BpA"/>
                             </constraints>
                             <popUpButtonCell key="cell" type="push" title="daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="T2G-eO-oBo" id="m7i-hQ-BqZ">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>

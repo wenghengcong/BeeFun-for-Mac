@@ -58,6 +58,20 @@ final class LangPanelUtil {
                         languages.append(sectionArr)
                     }
                 }
+                
+                //添加两种，一种是All，一种是Unknown
+                let allModel = BFLangModel()
+                allModel.name = "All"
+                allModel.color = "#000000"
+                
+                let unknownModel = BFLangModel()
+                unknownModel.name = "Unknown"
+                unknownModel.color = "#000000"
+                
+                let sepModels = [allModel, unknownModel]
+                languages.insert(sepModels, at: 0)
+                languageIndexs.insert("#", at: 0)
+                
                print("log")
             } catch {
                 // handle error

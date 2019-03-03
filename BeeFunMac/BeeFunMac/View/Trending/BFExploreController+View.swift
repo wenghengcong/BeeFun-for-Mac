@@ -59,19 +59,10 @@ extension BFExploreController {
     
         timePopup.target = self
         timePopup.action = #selector(handleSelectedTime(popBtn:))
-        firstLoadLanguage()
-    }
-    
-    func firstLoadLanguage() {
-        //语言数据加载
-        popularLanguage = BFLanguageManager.shared.popLanguages()
-        refreshLanguagePop()
     }
     
     @objc func handleSelectedTime(popBtn: NSPopUpButton) {
-
         if let _ = popBtn.selectedItem?.title {
-//            let time = BFGihubTrendingTimeEnum( selTitle)
             reloadTimaAndLanguage()
         }
     }
@@ -81,21 +72,4 @@ extension BFExploreController {
         BFLangPanel.shared.panelController(source: "All").showWindow(button)
     }
     
-    /// 重新加载语言列表
-    func refreshLanguagePop() {
-        popularLanguage?.sort(by: { (first, second) -> Bool in
-            if let first = first["count"]?.int , let sec = second["count"]?.int   {
-                return first > sec
-            }
-            return false
-        })
-        
-        var langueseArr: [String] = []
-        popularLanguage?.forEachEnumerated({ (index, dic) in
-            if let lan = dic["lan"] {
-                print("add lan to pop \(lan)")
-                langueseArr.append(lan)
-            }
-        })
-    }
 }
