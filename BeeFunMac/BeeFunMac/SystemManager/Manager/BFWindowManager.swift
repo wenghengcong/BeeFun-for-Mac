@@ -32,7 +32,7 @@ class BFWindowManager: NSObject {
         
         var frame = mainWindow?.mainContentController?.view.window?.frame ?? NSRect.zero
         frame.size = NSSize(width: 1350, height: 700)
-        mainWindow?.mainContentController?.view.window?.setFrame(frame , display: false)
+        mainWindow?.mainContentController?.view.window?.setFrame(frame , display: true)
         NSApplication.shared.mainWindow?.makeKeyAndOrderFront(mainWindow)
         AppDelegate.sharedInstance.mainController = mainWindow
         AppDelegate.sharedInstance.mainController?.showWindow(mainWindow)

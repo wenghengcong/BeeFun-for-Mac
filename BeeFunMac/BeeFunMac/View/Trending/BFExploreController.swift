@@ -73,6 +73,7 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        view.size = NSSize(width: 1285, height: 680)
         setupData()
         setupView()
     }

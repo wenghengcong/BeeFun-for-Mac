@@ -553,7 +553,6 @@
 				5E54DB7C216DB444003136DC /* BFBrowserViewController+Utils.swift */,
 				5E54DB7E216DB47D003136DC /* BFBrowserViewControlle+Noti.swift */,
 				5E54DB80216DB488003136DC /* BFBrowserViewController+Web.swift */,
-				5E4833511FD252BA00CEB336 /* Browser.xcassets */,
 			);
 			path = Broswer;
 			sourceTree = "<group>";
@@ -630,7 +629,6 @@
 				5E2816931FCCFDE7007A5159 /* ToolKit */,
 				5E28168F1FCCFDE7007A5159 /* View */,
 				5E2816691FCBED62007A5159 /* AppDelegate.swift */,
-				5E28166D1FCBED62007A5159 /* Assets.xcassets */,
 				5E2816871FCBED7E007A5159 /* Support Files */,
 			);
 			path = BeeFunMac;
@@ -674,6 +672,8 @@
 		5E2816901FCCFDE7007A5159 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E3029F0222B79BA00D81874 /* Theme */,
+				5E3029EF222B796700D81874 /* Image */,
 				5E54DB8F216F2828003136DC /* language */,
 			);
 			path = Resources;
@@ -783,6 +783,29 @@
 			path = AppKit;
 			sourceTree = "<group>";
 		};
+		5E3029EF222B796700D81874 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5E28166D1FCBED62007A5159 /* Assets.xcassets */,
+				5EA435071FDADF4400034578 /* Star.xcassets */,
+				5E09F60B201A1FB500CC3866 /* Preference.xcassets */,
+				5E4833511FD252BA00CEB336 /* Browser.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		5E3029F0222B79BA00D81874 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5E365EAA2115DDEC00C45B93 /* Theme.md */,
+				5E75D6FD210CBE8D007596E9 /* BlueTheme.xcassets */,
+				5E424D5E2127B10400066967 /* DayTheme.xcassets */,
+				5E424D602127B11500066967 /* NightTheme.xcassets */,
+				5EA4E1C221717F1D005D73F1 /* BFColor.xcassets */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		5E539C6C216F8F91005257AF /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,11 +872,6 @@
 		5E75D707210D60DE007596E9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				5E365EAA2115DDEC00C45B93 /* Theme.md */,
-				5E75D6FD210CBE8D007596E9 /* BlueTheme.xcassets */,
-				5E424D5E2127B10400066967 /* DayTheme.xcassets */,
-				5E424D602127B11500066967 /* NightTheme.xcassets */,
-				5EA4E1C221717F1D005D73F1 /* BFColor.xcassets */,
 				5E75D6FB210CBAA2007596E9 /* BFThemeManager.swift */,
 				5E75D6FF210D569B007596E9 /* BFTheme+IconBar.swift */,
 				5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */,
@@ -1136,7 +1154,6 @@
 				5E2D29FD1FD97FAF0043A665 /* BFStarViewController+Data.swift */,
 				5E9131A020AEA8DA0056EF9F /* BFStarViewController+Utils.swift */,
 				5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */,
-				5EA435071FDADF4400034578 /* Star.xcassets */,
 			);
 			path = Star;
 			sourceTree = "<group>";
@@ -1151,7 +1168,6 @@
 				5E09F607201A1D6400CC3866 /* SyncPreferenceController.swift */,
 				5E09F609201A1D8200CC3866 /* SyncPreferenceController.xib */,
 				5E09F60D201A2F9600CC3866 /* SyncPreferenceManager.swift */,
-				5E09F60B201A1FB500CC3866 /* Preference.xcassets */,
 			);
 			path = Preference;
 			sourceTree = "<group>";

@@ -157,6 +157,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        view.size = NSSize(width: 1285, height: 680)
         starPageReloadAllData()
         starPageCustomAllView()
         firstLoadStarPage()

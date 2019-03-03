@@ -166,12 +166,9 @@
                                 <constraint firstAttribute="width" constant="200" id="fd2-dL-75Y"/>
                             </constraints>
                         </box>
-                        <popUpButton verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
-                            <rect key="frame" x="710" y="630" width="98" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="21" id="a5T-Jp-EsY"/>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="gkH-cy-RXP"/>
-                            </constraints>
+                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-Np-VRU">
+                            <rect key="frame" x="749" y="630" width="98" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="push" title="daily" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="T2G-eO-oBo" id="m7i-hQ-BqZ">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
@@ -213,9 +210,17 @@
                             </segmentedCell>
                         </segmentedControl>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJ3-RA-I3p">
-                            <rect key="frame" x="868" y="628" width="93" height="31"/>
+                            <rect key="frame" x="874" y="628" width="93" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="bevel" title="All language" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="ALy-Bt-BCw">
+                            <buttonCell key="cell" type="bevel" title="Languages" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="ALy-Bt-BCw">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
+                            <rect key="frame" x="636" y="627" width="33" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ppe-Ss-3T2">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -228,7 +233,6 @@
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="top" secondItem="3UM-ng-qTw" secondAttribute="bottom" constant="16" id="jie-qI-5fh"/>
                         <constraint firstItem="gGT-YX-KPD" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="6" id="jwj-Bl-P51"/>
-                        <constraint firstItem="lGQ-Np-VRU" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="26" id="nBn-Qt-wXh"/>
                         <constraint firstAttribute="trailing" secondItem="gGT-YX-KPD" secondAttribute="trailing" constant="18" id="nQK-UF-ZHY"/>
                         <constraint firstItem="o4w-3S-eIh" firstAttribute="centerX" secondItem="ZyW-9F-VRU" secondAttribute="centerX" id="rU4-jv-N26"/>
                         <constraint firstItem="o4w-3S-eIh" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="23" id="rd3-6Y-un0"/>
@@ -281,27 +285,6 @@
             <point key="canvasLocation" x="207" y="-319"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="wWh-Kf-8Wp"/>
-        <window identifier="languagePanel" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Glz-0t-Pyy" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="139" y="81" width="276" height="378"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <view key="contentView" id="8DV-38-TuG">
-                <rect key="frame" x="0.0" y="0.0" width="276" height="378"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1C-aO-E7i">
-                        <rect key="frame" x="86" y="243" width="81" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sjg-HC-DzC">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
-                </subviews>
-            </view>
-            <point key="canvasLocation" x="1032" y="43"/>
-        </window>
     </objects>
     <resources>
         <namedColor name="bfBlackDarkWhite">

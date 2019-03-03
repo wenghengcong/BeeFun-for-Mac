@@ -27,5 +27,13 @@ final class BFLangWindowController: NSWindowController {
 
 final class BFLangViewController: NSViewController {
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.size = NSSize(width: 350, height: 560)
+    }
 }
 
