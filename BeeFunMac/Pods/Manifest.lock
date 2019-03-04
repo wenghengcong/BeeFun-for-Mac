@@ -25,7 +25,6 @@ PODS:
   - ReachabilitySwift (4.3.0)
   - Result (4.1.0)
   - SnapKit (4.2.0)
-  - Sparkle (1.21.3)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
@@ -66,7 +65,6 @@ DEPENDENCIES:
   - PromiseKit
   - ReachabilitySwift
   - SnapKit
-  - Sparkle
   - SQLite.swift
   - SwiftDate
   - SwifterSwift
@@ -90,7 +88,6 @@ SPEC REPOS:
     - ReachabilitySwift
     - Result
     - SnapKit
-    - Sparkle
     - SQLite.swift
     - SwiftDate
     - SwifterSwift
@@ -124,7 +121,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  Sparkle: 3f75576db8b0265adef36c43249d747f22d0b708
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
@@ -132,6 +128,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 661ece75a27a5ac33bad6eefb71ea872d1dfb113
+PODFILE CHECKSUM: b8d87af0cd707acca453d41e94b4f4dfa8e6f624
 
 COCOAPODS: 1.5.2

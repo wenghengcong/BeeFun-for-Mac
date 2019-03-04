@@ -7,7 +7,7 @@ inhibit_all_warnings!
 target 'BeeFun' do
 	use_frameworks!
     #UI
-   pod 'Sparkle'
+#   pod 'Sparkle'
 
 #Uti
 #pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
