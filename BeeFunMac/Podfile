@@ -41,7 +41,11 @@ target 'BeeFun' do
 #    pod 'CryptoSwift'
 #    pod 'ProgressKit'
 #    pod 'AudioKit'
-    pod 'SwifterSwift'
+# 不要导入多余的库
+    pod 'SwifterSwift/SwiftStdlib'
+    pod 'SwifterSwift/Foundation'
+    pod 'SwifterSwift/AppKit'
+    pod 'SwifterSwift/CoreGraphics'
 #    pod 'KeychainAccess'
 #    pod 'SwiftOCR'
 #    pod 'FlagKit'

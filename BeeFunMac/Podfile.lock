@@ -29,23 +29,10 @@ PODS:
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
   - SwiftDate (5.1.0)
-  - SwifterSwift (4.6.0):
-    - SwifterSwift/AppKit (= 4.6.0)
-    - SwifterSwift/CoreGraphics (= 4.6.0)
-    - SwifterSwift/CoreLocation (= 4.6.0)
-    - SwifterSwift/Foundation (= 4.6.0)
-    - SwifterSwift/MapKit (= 4.6.0)
-    - SwifterSwift/SpriteKit (= 4.6.0)
-    - SwifterSwift/SwiftStdlib (= 4.6.0)
-    - SwifterSwift/UIKit (= 4.6.0)
   - SwifterSwift/AppKit (4.6.0)
   - SwifterSwift/CoreGraphics (4.6.0)
-  - SwifterSwift/CoreLocation (4.6.0)
   - SwifterSwift/Foundation (4.6.0)
-  - SwifterSwift/MapKit (4.6.0)
-  - SwifterSwift/SpriteKit (4.6.0)
   - SwifterSwift/SwiftStdlib (4.6.0)
-  - SwifterSwift/UIKit (4.6.0)
   - SwiftyBeaver (1.6.2)
   - SwiftyJSON (4.2.0)
   - Zip (1.1.0)
@@ -67,7 +54,10 @@ DEPENDENCIES:
   - SnapKit
   - SQLite.swift
   - SwiftDate
-  - SwifterSwift
+  - SwifterSwift/AppKit
+  - SwifterSwift/CoreGraphics
+  - SwifterSwift/Foundation
+  - SwifterSwift/SwiftStdlib
   - SwiftyBeaver
   - SwiftyJSON
   - Zip
@@ -128,6 +118,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: b8d87af0cd707acca453d41e94b4f4dfa8e6f624
+PODFILE CHECKSUM: 29f9f33326da753889ad7b29e6173f92127de7f8
 
 COCOAPODS: 1.5.2
