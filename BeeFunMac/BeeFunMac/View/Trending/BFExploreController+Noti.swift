@@ -12,10 +12,11 @@ extension BFExploreController {
     
     func setupNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(selectedLanguageDone(_:)), name: Notification.Name.BeeFun.SelectShowLanguage, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(editLanguageDone(_:)), name: Notification.Name.BeeFun.DoneFavouriteLanguage, object: nil)
+
     }
     
     @objc func selectedLanguageDone(_ notification: Notification) {
-        
         if let userInfo = notification.userInfo {
 //            print(userInfo)
             if let state: LangPanelState = userInfo["state"] as? LangPanelState {
@@ -28,6 +29,18 @@ extension BFExploreController {
                 }
             }
         }
+    }
+    
+    @objc func editLanguageDone(_ notification: Notification) {
+        languageSelectedButton.title = "Languages"
+        reloadLangSegmentcontrol()
+        reloadTimaAndLanguage()
+    }
+    
+    
+    /// 是否选择了某一个语言，而不是在segment中选中
+    func isSelectedLanguage() -> Bool {
+        return languageSelectedButton.title == "Languages"
     }
 
 }

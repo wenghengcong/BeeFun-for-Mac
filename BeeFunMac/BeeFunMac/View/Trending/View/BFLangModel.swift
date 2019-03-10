@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-public class BFLangModel: NSObject, Mappable {
+public class BFLangModel: NSObject, Mappable, NSCoding {
 
     @objc dynamic var name: String?
     // 语言类型：programming\data
@@ -49,6 +49,7 @@ public class BFLangModel: NSObject, Mappable {
     @objc dynamic var codemirror_mime_type: String?
     
     struct LanguageKey {
+        static let name = "name"
         static let type = "type"
         static let extensions = "extensions"
         static let tm_scope = "tm_scope"
@@ -74,7 +75,8 @@ public class BFLangModel: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        
+        //name
+        name <- map[LanguageKey.name]
         type <- map[LanguageKey.type]
         extensions <- map[LanguageKey.extensions]
         tm_scope <- map[LanguageKey.tm_scope]
@@ -92,6 +94,50 @@ public class BFLangModel: NSObject, Mappable {
         
         codemirror_mode <- map[LanguageKey.codemirror_mode]
         codemirror_mime_type <- map[LanguageKey.codemirror_mime_type]
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init()
+        name = aDecoder.decodeObject(forKey: LanguageKey.name) as? String
+        type = aDecoder.decodeObject(forKey: LanguageKey.type) as? String
+        extensions = aDecoder.decodeObject(forKey: LanguageKey.extensions) as? [String]
+        tm_scope = aDecoder.decodeObject(forKey: LanguageKey.tm_scope) as? String
+        ace_mode = aDecoder.decodeObject(forKey: LanguageKey.ace_mode) as? String
+        if let lanID = aDecoder.decodeObject(forKey: LanguageKey.language_id) as? Int {
+            language_id = lanID
+        }
+        aliases = aDecoder.decodeObject(forKey: LanguageKey.aliases) as? [String]
+
+        color = aDecoder.decodeObject(forKey: LanguageKey.color) as? String
+        if let wrapBool = aDecoder.decodeObject(forKey: LanguageKey.wrap) as? Bool {
+            wrap = wrapBool
+        }
+        filenames = aDecoder.decodeObject(forKey: LanguageKey.filenames) as? [String]
+        interpreters = aDecoder.decodeObject(forKey: LanguageKey.interpreters) as? [String]
+        group = aDecoder.decodeObject(forKey: LanguageKey.group) as? String
+        searchable = aDecoder.decodeObject(forKey: LanguageKey.searchable) as? String
+
+        codemirror_mode = aDecoder.decodeObject(forKey: LanguageKey.codemirror_mode) as? String
+        codemirror_mime_type = aDecoder.decodeObject(forKey: LanguageKey.codemirror_mime_type) as? String
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: LanguageKey.name)
+        aCoder.encode(type, forKey: LanguageKey.type)
+        aCoder.encode(extensions, forKey: LanguageKey.extensions)
+        aCoder.encode(tm_scope, forKey: LanguageKey.tm_scope)
+        aCoder.encode(ace_mode, forKey: LanguageKey.ace_mode)
+        aCoder.encode(language_id, forKey: LanguageKey.language_id)
+        aCoder.encode(aliases, forKey: LanguageKey.aliases)
+        aCoder.encode(color, forKey: LanguageKey.color)
+        aCoder.encode(wrap, forKey: LanguageKey.wrap)
+
+        aCoder.encode(filenames, forKey: LanguageKey.filenames)
+        aCoder.encode(interpreters, forKey: LanguageKey.interpreters)
+        aCoder.encode(group, forKey: LanguageKey.group)
+        aCoder.encode(searchable, forKey: LanguageKey.searchable)
+        aCoder.encode(codemirror_mode, forKey: LanguageKey.codemirror_mode)
+        aCoder.encode(codemirror_mime_type, forKey: LanguageKey.codemirror_mime_type)
     }
     
 }

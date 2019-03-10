@@ -22,7 +22,10 @@ enum BFExploreTrendingTime: String {
 }
 
 class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, BFExpolreNavigationViewItemDelete, BFExploreReposViewItemDelete {
-
+    
+    /// 进度条
+    @IBOutlet weak var webProgress: NSProgressIndicator!
+    
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var searchButton: NSButton!
     
@@ -67,11 +70,12 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
     var githubTrendingDevelopserData: [[BFGithubTrengingModel]] = []
     
     /// 流行 语言数据
-    var selectedLanguage: String = "all"
+    var selectedLanguage: String = "All"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        webProgress.isHidden = true
         view.size = NSSize(width: 1285, height: 680)
         setupData()
         setupView()
@@ -98,6 +102,5 @@ class BFExploreController: NSViewController, NSCollectionViewDelegate, NSCollect
         navigationCollectionView.dataSource = nil
         detailCollectionView.delegate = nil
         detailCollectionView.dataSource = nil
-        
     }
 }

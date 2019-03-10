@@ -47,6 +47,9 @@ extension Notification.Name {
         public static let AddFavouriteLanguage = Notification.Name( "com.luci.beefun.mac.AddFavouriteLanguage")
         public static let EditFavouriteLanguage = Notification.Name( "com.luci.beefun.mac.EditFavouriteLanguage")
 
+        /// 完成喜欢语言的选择
+        public static let DoneFavouriteLanguage = Notification.Name( "com.luci.beefun.mac.DoneFavouriteLanguage")
+        
     }
     
 }

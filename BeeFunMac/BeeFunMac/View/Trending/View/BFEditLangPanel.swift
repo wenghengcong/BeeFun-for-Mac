@@ -36,8 +36,9 @@ final class BFEditLangViewController: NSViewController {
     @IBOutlet weak var faviourLangTableView: NSTableView!
     @IBOutlet weak var addLanButton: NSButton!
     @IBOutlet weak var delLanButton: NSButton!
+    @IBOutlet weak var tipsLabel: NSTextField!
     
-    var favourLanguage: [BFLangModel]?
+    var favourLanguage: [BFLangModel] = []
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -45,18 +46,9 @@ final class BFEditLangViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let allModel = BFLangModel()
-        allModel.name = "All"
-        allModel.color = "#000000"
-        
-        let unknownModel = BFLangModel()
-        unknownModel.name = "Unknown"
-        unknownModel.color = "#000000"
-        favourLanguage = [allModel, unknownModel]
-        
-        languageArrayController.content = favourLanguage
+        tipsLabel.isHidden = true
+        loadUserFavouriteLanguages()
         faviourLangTableView.doubleAction = #selector(doubleEditLanguage)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(addFavouriteLanguageDone(_:)), name: Notification.Name.BeeFun.AddFavouriteLanguage, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(editFavouriteLanguageDone(_:)), name: Notification.Name.BeeFun.EditFavouriteLanguage, object: nil)
     }
@@ -67,8 +59,10 @@ final class BFEditLangViewController: NSViewController {
             guard let selectedRow = faviourLangTableView?.selectedRow, selectedRow != -1 else { return }
             guard let language: BFLangModel = userInfo["language"] as? BFLangModel
                 else {return}
-            favourLanguage?[selectedRow] = language
-            languageArrayController.content = favourLanguage
+            if selectedRow < favourLanguage.count {
+                favourLanguage[selectedRow] = language
+                languageArrayController.content = favourLanguage
+            }
         }
     }
     
@@ -78,8 +72,9 @@ final class BFEditLangViewController: NSViewController {
             //            print(userInfo)
             guard let language: BFLangModel = userInfo["language"] as? BFLangModel
                 else {return}
-            favourLanguage?.append(language)
+            favourLanguage.append(language)
             languageArrayController.content = favourLanguage
+            showTips()
         }
     }
         
@@ -100,12 +95,52 @@ final class BFEditLangViewController: NSViewController {
     
     @IBAction func delLanAction(_ sender: Any) {
         guard let selectedRow = faviourLangTableView?.selectedRow, selectedRow != -1 else { return }
-        favourLanguage?.remove(at: selectedRow)
+        favourLanguage.remove(at: selectedRow)
         languageArrayController.content = favourLanguage
+        showTips()
     }
     
     @IBAction func doneEditAction(_ sender: Any) {
-        self.view.window?.close()
-        UserDefaults.standard.set(favourLanguage, forKey: BFUserDefaultKey.FavouriteLanguages)
+        saveUserFavouriteLanguages()
     }
+    
+    func loadUserFavouriteLanguages() {
+        if let langs = BFLangPanelUtil.shared.favouriteLanguages() {
+            favourLanguage = langs
+        }
+        
+        if favourLanguage.isEmpty {
+            let allModel = BFLangModel()
+            allModel.name = "All"
+            allModel.color = "#000000"
+            favourLanguage = [allModel]
+        }
+        
+        languageArrayController.content = favourLanguage
+    }
+
+    func saveUserFavouriteLanguages() {
+        showTips()
+        if favourLanguage.isEmpty {
+            
+        } else {
+            let _ = BFLangPanelUtil.shared.saveFavouriteLanguages(languages: favourLanguage)
+            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.DoneFavouriteLanguage, object: nil, userInfo: nil)
+            view.window?.close()
+        }
+    }
+    
+    func showTips() {
+        tipsLabel.isHidden = validFavouriteLanguages()
+    }
+    
+    /// 喜爱语言的数目校验，1-4个
+    func validFavouriteLanguages() -> Bool {
+        var valid = false
+        if (favourLanguage.count <= 4)  && (favourLanguage.count >= 1) {
+            valid = true
+        }
+        return valid
+    }
+    
 }

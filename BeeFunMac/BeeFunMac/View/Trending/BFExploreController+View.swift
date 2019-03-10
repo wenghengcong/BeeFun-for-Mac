@@ -14,6 +14,16 @@ extension BFExploreController {
     func setupView() {
         setupCollectionView()
         setupSelectedTimeAndLanguagePopup()
+        
+        langSegment.target = self
+        langSegment.action = #selector(clickLanguageSegment)
+        reloadLangSegmentcontrol()
+        
+        
+        webProgress.minValue = 0.0
+        webProgress.maxValue = 1.0
+        webProgress.usesThreadedAnimation = true
+        webProgress.controlTint = NSControlTint.defaultControlTint
     }
     
     
@@ -39,18 +49,30 @@ extension BFExploreController {
         detailScrollView.backgColor = NSColor.xyGrayDarkBlackBackground
         detailCollectionView.backgColor = NSColor.xyGrayDarkBlackBackground
         detailClipView.backgColor = NSColor.xyGrayDarkBlackBackground
-        
-        setupLangSegmentcontrol()
+
     }
     
-    func setupLangSegmentcontrol() {
-        
-        let arr = ["swift", "c", "c++", "java"]
-        langSegment.segmentCount = arr.count
-        langSegment.selectedSegment = 0
-        for (index, lan) in arr.enumerated() {
-            langSegment.setLabel(lan, forSegment: index)
+    
+    /// 选中segment语言
+    @objc func clickLanguageSegment() {
+        let sel = langSegment.selectedSegment
+        let lang = langSegment.label(forSegment: sel)
+        selectedLanguage = lang ?? "All"
+        reloadTimaAndLanguage()
+    }
+    
+    func reloadLangSegmentcontrol() {
+        if let langs = BFLangPanelUtil.shared.favouriteLanguages() {
+            langSegment.segmentCount = langs.count
+            langSegment.selectedSegment = 0
+            for (index, lan) in langs.enumerated() {
+                langSegment.setLabel(lan.name ?? "All", forSegment: index)
+            }
+            if let lan = langSegment.label(forSegment: 0) {
+                selectedLanguage = lan
+            }
         }
+        clickLanguageSegment()
     }
     
     func setupSelectedTimeAndLanguagePopup() {

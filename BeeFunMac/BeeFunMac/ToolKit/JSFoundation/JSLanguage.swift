@@ -40,13 +40,13 @@ class JSLanguage: NSObject {
     class var userLanguage: String? {
         set {
             let def = UserDefaults.standard
-            def.set(newValue, forKey: kAppUserLanguageKey)
+            def.set(newValue, forKey: BFUserDefaultKey.kAppUserLanguageKey)
             def.synchronize()
         }
 
         get {
             let def = UserDefaults.standard
-            let choose = def.object(forKey: kAppUserLanguageKey)
+            let choose = def.object(forKey: BFUserDefaultKey.kAppUserLanguageKey)
             return choose as? String
         }
     }
@@ -55,13 +55,13 @@ class JSLanguage: NSObject {
     class var appLanguage: String {
         set {
             let def = UserDefaults.standard
-            def.set([newValue], forKey: kAppleLanguageKey)
+            def.set([newValue], forKey: BFUserDefaultKey.kAppleLanguageKey)
             def.synchronize()
         }
 
         get {
             let def = UserDefaults.standard
-            let langArray = def.object(forKey: kAppleLanguageKey) as? NSArray
+            let langArray = def.object(forKey: BFUserDefaultKey.kAppleLanguageKey) as? NSArray
             var current = kEnglishLanguage
             if let lan = langArray?.firstObject as? String {
                 current = lan

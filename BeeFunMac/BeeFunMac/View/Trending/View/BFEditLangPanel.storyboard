@@ -113,7 +113,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="doneEditAction:" target="RWA-I6-RCJ" id="wdo-W9-5aw"/>
+                                    <action selector="addLanAction:" target="RWA-I6-RCJ" id="cxH-fj-Mi5"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-eb-Xbe">
@@ -124,11 +124,11 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="doneEditAction:" target="RWA-I6-RCJ" id="Gap-P6-qyN"/>
+                                    <action selector="delLanAction:" target="RWA-I6-RCJ" id="9tm-n1-Opy"/>
                                 </connections>
                             </button>
                             <textField toolTip="Choose language your favourite,it will show in Explre" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-vM-8R7">
-                                <rect key="frame" x="1" y="221" width="146" height="24"/>
+                                <rect key="frame" x="4" y="221" width="146" height="24"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Favourite Languages" id="3UH-yZ-x1g">
                                     <font key="font" metaFont="system" size="15"/>
@@ -137,9 +137,9 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hma-YI-3FK">
-                                <rect key="frame" x="363" y="7" width="82" height="32"/>
+                                <rect key="frame" x="368" y="7" width="72" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F4A-TK-icx">
+                                <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F4A-TK-icx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -150,6 +150,15 @@ Gw
                                     <action selector="doneEditAction:" target="RWA-I6-RCJ" id="gGi-6c-ZOq"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9F-Us-Gh1">
+                                <rect key="frame" x="231" y="227" width="210" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Choose 1~4 languages" id="rZ4-W7-9OF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -157,6 +166,7 @@ Gw
                         <outlet property="delLanButton" destination="iPJ-eb-Xbe" id="rVd-c3-FXk"/>
                         <outlet property="faviourLangTableView" destination="0pH-Bw-x8s" id="1U2-Qe-Yr7"/>
                         <outlet property="languageArrayController" destination="22j-kV-QdE" id="NrI-69-4s2"/>
+                        <outlet property="tipsLabel" destination="b9F-Us-Gh1" id="4k3-a0-Cli"/>
                     </connections>
                 </viewController>
                 <customObject id="1aD-Ta-5nd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

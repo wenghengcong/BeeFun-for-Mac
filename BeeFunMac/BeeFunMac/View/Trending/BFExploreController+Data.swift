@@ -100,8 +100,9 @@ extension BFExploreController {
             detailCollectionView.reloadData()
             return
         }
-        
+        self.beginRequestProgress()
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesDeveloperModel!)) { (result) in
+            self.endRequestProgress()
             switch result {
             case let .success(response):
                 do {
@@ -134,19 +135,23 @@ extension BFExploreController {
             detailCollectionView.reloadData()
             return
         }
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesRepostModel!)) { (result) in
+        self.beginRequestProgress()
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesRepostModel!), callbackQueue: DispatchQueue.main, progress: { (progress) in
+            print(progress.progress)
+        }) { (result) in
+            self.endRequestProgress()
             switch result {
             case let .success(response):
                 do {
                     if let reposResponse = Mapper<BeeFunResponseModel<BFGithubTrengingModel>>().map(JSONObject: try response.mapJSON()) {
                         if let code = reposResponse.codeEnum, code == BFStatusCode.bfOk {
                             if let data = reposResponse.data {
-//                                if self.githubTrendingReposData.count > 0 {
-//                                    self.githubTrendingReposData[0] = data
-//                                } else {
-                                    self.githubTrendingReposData.removeAll()
-                                    self.githubTrendingReposData.append(data)
-//                                }
+                                //                                if self.githubTrendingReposData.count > 0 {
+                                //                                    self.githubTrendingReposData[0] = data
+                                //                                } else {
+                                self.githubTrendingReposData.removeAll()
+                                self.githubTrendingReposData.append(data)
+                                //                                }
                                 self.detailCollectionView.reloadData()
                                 self.detailCollectionView.scroll(NSPoint.zero)
                             }
@@ -159,8 +164,17 @@ extension BFExploreController {
                 break
             }
         }
-        
     }
     
+    
+    func beginRequestProgress() {
+        self.webProgress.isHidden = false
+        self.webProgress.startAnimation(nil)
+    }
+    
+    func endRequestProgress() {
+        self.webProgress.isHidden = true
+        self.webProgress.stopAnimation(nil)
+    }
  
 }

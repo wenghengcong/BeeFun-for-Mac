@@ -37,6 +37,34 @@ final class BFLangPanelUtil {
     var languages: [ [BFLangModel] ] = []
     var languageIndexs: [ String ] = []
 
+    static let documentDirectory = BFPathManager.shared.localDocumentURL()!
+    static let archiveURL = documentDirectory.appendingPathComponent("favouriteLanguage")
+    
+    /// 用户选择的喜欢语言
+    func favouriteLanguages() -> [BFLangModel]? {
+        NSKeyedUnarchiver.setClass(BFLangModel.self, forClassName: "BFLangModel")
+        let fileM = FileManager.default
+//        do  { try fileM.removeItem(at: BFLangPanelUtil.archiveURL) } catch { }
+        if fileM.fileExists(atPath: BFLangPanelUtil.archiveURL.path) {
+            if let array = NSKeyedUnarchiver.unarchiveObject(withFile: BFLangPanelUtil.archiveURL.path) as? [BFLangModel] {
+                return array
+            }
+        }
+        return nil
+    }
+    
+    
+    /// 保存用户选择的喜欢语言
+    func saveFavouriteLanguages(languages: [BFLangModel]) -> Bool {
+        NSKeyedArchiver.setClassName("BFLangModel", for: BFLangModel.self)
+        let isScuessfulSave = NSKeyedArchiver.archiveRootObject(languages, toFile: BFLangPanelUtil.archiveURL.path)
+        if !isScuessfulSave {
+            print("failed to save favourite languages ...")
+        }
+        return isScuessfulSave
+    }
+    
+    /// 返回全部语言
     func loadAllLanguage() {
         if let path = Bundle.main.path(forResource: "all_language", ofType: "json") {
             

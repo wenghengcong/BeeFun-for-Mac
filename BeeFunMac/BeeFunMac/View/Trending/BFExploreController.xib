@@ -30,6 +30,7 @@
                 <outlet property="searchTextField" destination="PT4-5j-FgO" id="FlQ-KX-DvW"/>
                 <outlet property="timePopup" destination="lGQ-Np-VRU" id="Bgb-OQ-E6T"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webProgress" destination="orF-Sv-Vst" id="l8u-PG-TLV"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -179,7 +180,7 @@
                             </connections>
                         </button>
                         <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-3S-eIh">
-                            <rect key="frame" x="355" y="634" width="275" height="24"/>
+                            <rect key="frame" x="442" y="634" width="102" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="dKY-HS-9cw"/>
                             </constraints>
@@ -188,9 +189,6 @@
                                 <segments>
                                     <segment label="All" alignment="left" selected="YES"/>
                                     <segment label="Swift" tag="1"/>
-                                    <segment label="Java"/>
-                                    <segment label="Python"/>
-                                    <segment label="Dart"/>
                                 </segments>
                             </segmentedCell>
                         </segmentedControl>
@@ -206,7 +204,7 @@
                             </buttonCell>
                         </button>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
-                            <rect key="frame" x="638" y="638" width="18" height="18"/>
+                            <rect key="frame" x="552" y="638" width="18" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="ad0-Nj-Qyu"/>
                                 <constraint firstAttribute="width" constant="18" id="l7K-qZ-Eaw"/>
@@ -234,14 +232,23 @@
                             </popUpButtonCell>
                             <color key="contentTintColor" name="bfblack"/>
                         </popUpButton>
+                        <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="orF-Sv-Vst">
+                            <rect key="frame" x="198" y="635" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="Cd8-cI-aZU"/>
+                                <constraint firstAttribute="height" constant="16" id="xgN-tc-pd3"/>
+                            </constraints>
+                        </progressIndicator>
                     </subviews>
                     <constraints>
                         <constraint firstItem="REM-wE-8OS" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="14" id="1qC-N9-5CV"/>
+                        <constraint firstItem="orF-Sv-Vst" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="29" id="6FI-Yf-fb9"/>
                         <constraint firstItem="KJ3-RA-I3p" firstAttribute="leading" secondItem="lGQ-Np-VRU" secondAttribute="trailing" constant="22" id="Emt-hD-j3Y"/>
                         <constraint firstItem="lGQ-Np-VRU" firstAttribute="centerY" secondItem="KJ3-RA-I3p" secondAttribute="centerY" id="HZW-yU-sjp"/>
                         <constraint firstAttribute="bottom" secondItem="gGT-YX-KPD" secondAttribute="bottom" constant="12" id="TAH-9v-ctn"/>
                         <constraint firstAttribute="trailing" secondItem="KJ3-RA-I3p" secondAttribute="trailing" constant="20" id="Vy9-1t-spj"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="13" id="eMy-Uf-8gc"/>
+                        <constraint firstItem="orF-Sv-Vst" firstAttribute="leading" secondItem="ZyW-9F-VRU" secondAttribute="leading" constant="198" id="fec-tg-077"/>
                         <constraint firstItem="DNg-ng-RJe" firstAttribute="centerY" secondItem="o4w-3S-eIh" secondAttribute="centerY" id="gvk-ad-TNE"/>
                         <constraint firstItem="3UM-ng-qTw" firstAttribute="top" secondItem="ZyW-9F-VRU" secondAttribute="top" constant="15" id="hze-kC-fGr"/>
                         <constraint firstItem="DNg-ng-RJe" firstAttribute="leading" secondItem="o4w-3S-eIh" secondAttribute="trailing" constant="10" id="iHP-8q-C7q"/>
