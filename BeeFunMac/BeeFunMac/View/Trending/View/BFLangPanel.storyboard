@@ -10,7 +10,7 @@
         <scene sceneID="kmK-jR-Pbk">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="xaL-ba-NPU" customClass="BFLangWindowController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="All Language" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="glk-OO-VC5" customClass="NSPanel">
+                    <window key="window" title="All Language" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="glk-OO-VC5" customClass="NSPanel">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="360" height="540"/>

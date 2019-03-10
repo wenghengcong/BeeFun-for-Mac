@@ -84,21 +84,28 @@ final class BFEditLangViewController: NSViewController {
     }
         
     @objc func doubleEditLanguage() {
-        if let viewController = BFLangPanel.shared.panelController(state: .EditFavouriteLanguage).contentViewController {
-            presentAsSheet(viewController)
-        }
+        BFLangPanel.shared.panelController(state: .EditFavouriteLanguage).showWindow(nil)
+//        if let viewController = BFLangPanel.shared.panelController(state: .EditFavouriteLanguage).contentViewController {
+//            presentAsSheet(viewController)
+//        }
     }
     
     @IBAction func addLanAction(_ sender: Any) {
         // WARN: 让viewcontroller变成modal展示
-        if let viewController = BFLangPanel.shared.panelController(state: .AddFavouriteLanguage).contentViewController {
-            presentAsSheet(viewController)
-        }
+        BFLangPanel.shared.panelController(state: .AddFavouriteLanguage).showWindow(sender)
+//        if let viewController = BFLangPanel.shared.panelController(state: .AddFavouriteLanguage).contentViewController {
+//            presentAsSheet(viewController)
+//        }
     }
     
     @IBAction func delLanAction(_ sender: Any) {
         guard let selectedRow = faviourLangTableView?.selectedRow, selectedRow != -1 else { return }
         favourLanguage?.remove(at: selectedRow)
         languageArrayController.content = favourLanguage
+    }
+    
+    @IBAction func doneEditAction(_ sender: Any) {
+        self.view.window?.close()
+        UserDefaults.standard.set(favourLanguage, forKey: BFUserDefaultKey.FavouriteLanguages)
     }
 }

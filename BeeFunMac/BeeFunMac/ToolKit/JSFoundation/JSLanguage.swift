@@ -8,12 +8,6 @@
 
 import Cocoa
 
-/// 这个key不能修改
-let kAppleLanguageKey = "AppleLanguages"
-
-/// 用户选择的语言
-let kAppUserLanguageKey = "kAppUserLanguageKey"
-
 /// 语言管理类，分为系统语言、APP语言、用户选择语言
 class JSLanguage: NSObject {
 

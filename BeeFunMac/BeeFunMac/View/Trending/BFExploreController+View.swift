@@ -74,7 +74,9 @@ extension BFExploreController {
 //            NSApp.beginModalSession(for: wind)
 //        }
         
-        BFEditLangPanel.shared.panelController().showWindow(button)
+        if let viewController = BFEditLangPanel.shared.panelController().contentViewController {
+            presentAsSheet(viewController)
+        }        
     }
     
     @objc func handleSelectedTime(popBtn: NSPopUpButton) {
