@@ -11,42 +11,42 @@ import ObjectMapper
 
 public class BFLangModel: NSObject, Mappable {
 
-    var name: String?
+    @objc dynamic var name: String?
     // 语言类型：programming\data
-    var type: String?
+    @objc dynamic var type: String?
     
     // 颜色
-    var color: String?
+    @objc dynamic var color: String?
     // 对应的文件后缀
-    var extensions: [String]?
+    @objc dynamic var extensions: [String]?
     // source.isabelle.theory\source.json\source.js
-    var tm_scope: String?
+    @objc dynamic var tm_scope: String?
     
     // 语言：text\json\yaml
-    var ace_mode: String?
-    var language_id: Int?
+    @objc dynamic var ace_mode: String?
+    @objc dynamic var language_id: Int = 0
 
     // 别名
-    var aliases: [String]?
+    @objc dynamic var aliases: [String]?
     
-    var wrap: Bool?
+    @objc dynamic var wrap: Bool = false
     
-    var filenames: [String]?
+    @objc dynamic var filenames: [String]?
     
-    var interpreters: [String]?
+    @objc dynamic var interpreters: [String]?
     
     // 分组:JavaScript\Java\Lex\CoffeeScript
-    var group: String?
+    @objc dynamic var group: String?
     
     //
-    var searchable: String?
+    @objc dynamic var searchable: String?
     
     // 针对Code Mirror
     // javascript
-    var codemirror_mode: String?
+    @objc dynamic var codemirror_mode: String?
     
     // codemirror对应的mime类型application/json
-    var codemirror_mime_type: String?
+    @objc dynamic var codemirror_mime_type: String?
     
     struct LanguageKey {
         static let type = "type"

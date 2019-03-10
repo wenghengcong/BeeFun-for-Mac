@@ -59,6 +59,22 @@ extension BFExploreController {
     
         timePopup.target = self
         timePopup.action = #selector(handleSelectedTime(popBtn:))
+        
+        editLanguage.target = self
+        editLanguage.action = #selector(showEditLanguageWindow(button:))
+    }
+    
+    @objc func showEditLanguageWindow(button: NSButton) {
+        // 下面代码也可以弹窗model window
+//        let wc = NSWindowController()
+//        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 400), styleMask: .borderless, backing: .buffered, defer: true)
+//        wc.window = window
+//        if let wind = wc.window {
+//            NSApp.runModal(for: wind)
+//            NSApp.beginModalSession(for: wind)
+//        }
+        
+        BFEditLangPanel.shared.panelController().showWindow(button)
     }
     
     @objc func handleSelectedTime(popBtn: NSPopUpButton) {
@@ -69,7 +85,7 @@ extension BFExploreController {
     
     /// 选中语言
     @objc func handleSelectedLanguage(button: NSButton) {
-        BFLangPanel.shared.panelController(source: "All").showWindow(button)
+        BFLangPanel.shared.panelController(state: LangPanelState.SelectShowLanguage).showWindow(button)
     }
     
 }

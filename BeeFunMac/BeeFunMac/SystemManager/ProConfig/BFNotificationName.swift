@@ -43,8 +43,10 @@ extension Notification.Name {
         
         
         /// 语言选择
-        public static let SelectionLanguage = Notification.Name( "com.luci.beefun.mac.sellanguage")
-        
+        public static let SelectShowLanguage = Notification.Name( "com.luci.beefun.mac.SelectShowLanguage")
+        public static let AddFavouriteLanguage = Notification.Name( "com.luci.beefun.mac.AddFavouriteLanguage")
+        public static let EditFavouriteLanguage = Notification.Name( "com.luci.beefun.mac.EditFavouriteLanguage")
+
     }
     
 }

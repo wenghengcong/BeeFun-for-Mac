@@ -178,7 +178,7 @@
                                 <action selector="changeAppearance:" target="-2" id="PDj-7z-8mn"/>
                             </connections>
                         </button>
-                        <segmentedControl hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-3S-eIh">
+                        <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-3S-eIh">
                             <rect key="frame" x="355" y="634" width="275" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="dKY-HS-9cw"/>
@@ -205,13 +205,13 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
-                        <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="DNg-ng-RJe">
                             <rect key="frame" x="638" y="638" width="18" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="ad0-Nj-Qyu"/>
                                 <constraint firstAttribute="width" constant="18" id="l7K-qZ-Eaw"/>
                             </constraints>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_lan_day_edit" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ppe-Ss-3T2">
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_lan_edit" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ppe-Ss-3T2">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -302,7 +302,7 @@
         <userDefaultsController representsSharedInstance="YES" id="wWh-Kf-8Wp"/>
     </objects>
     <resources>
-        <image name="exp_lan_day_edit" width="200" height="200"/>
+        <image name="exp_lan_edit" width="60" height="60"/>
         <namedColor name="bfBlackDarkWhite">
             <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

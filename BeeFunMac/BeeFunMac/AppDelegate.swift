@@ -45,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         BeeFunDBManager.shared.updateServerDB(first: false)
         
         // 加载所有语言
-        LangPanelUtil.shared.loadAllLanguage()
+        BFLangPanelUtil.shared.loadAllLanguage()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

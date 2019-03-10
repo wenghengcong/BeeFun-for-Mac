@@ -136,6 +136,8 @@
 		5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */; };
 		5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */; };
 		5E75D70B210DB7AE007596E9 /* BFTheme+StarTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */; };
+		5E7E267E22338DBE006D366D /* BFEditLangPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E267D22338DBE006D366D /* BFEditLangPanel.swift */; };
+		5E7E268022338DD0006D366D /* BFEditLangPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7E267F22338DD0006D366D /* BFEditLangPanel.storyboard */; };
 		5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */; };
 		5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */; };
 		5E7F6F6B1FDD845B0050B50F /* NSFont+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */; };
@@ -395,6 +397,8 @@
 		5E75D705210D5FCA007596E9 /* NSColor+Blue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Blue.swift"; sourceTree = "<group>"; };
 		5E75D708210D658B007596E9 /* BFStarViewController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Theme.swift"; sourceTree = "<group>"; };
 		5E75D70A210DB7AE007596E9 /* BFTheme+StarTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFTheme+StarTag.swift"; sourceTree = "<group>"; };
+		5E7E267D22338DBE006D366D /* BFEditLangPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFEditLangPanel.swift; sourceTree = "<group>"; };
+		5E7E267F22338DD0006D366D /* BFEditLangPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BFEditLangPanel.storyboard; sourceTree = "<group>"; };
 		5E7EA9D520081F18008E0818 /* BFStarViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Network.swift"; sourceTree = "<group>"; };
 		5E7F6F661FDCF95E0050B50F /* BFStarViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+View.swift"; sourceTree = "<group>"; };
 		5E7F6F6A1FDD845B0050B50F /* NSFont+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+Project.swift"; sourceTree = "<group>"; };
@@ -545,9 +549,9 @@
 				5E048A7C21436BEB0098CBF6 /* Collection View Item */,
 				5E048A73213A10640098CBF6 /* BFExploreController.xib */,
 				5E048A72213A10640098CBF6 /* BFExploreController.swift */,
+				5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */,
 				5E2C9D4121646859001910F9 /* BFExploreController+Data.swift */,
 				5E302A00222C1BDF00D81874 /* BFExploreController+Noti.swift */,
-				5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */,
 				5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */,
 				5E2C9D3B21645A04001910F9 /* BFExploreController+Coll.swift */,
 			);
@@ -1205,6 +1209,8 @@
 			isa = PBXGroup;
 			children = (
 				5E3029F4222BAC6700D81874 /* BFLangModel.swift */,
+				5E7E267D22338DBE006D366D /* BFEditLangPanel.swift */,
+				5E7E267F22338DD0006D366D /* BFEditLangPanel.storyboard */,
 				5E3029EA222B66C600D81874 /* BFLangPanel.swift */,
 				5E3029E8222B654A00D81874 /* BFLangPanel.storyboard */,
 				5E3029F8222BF35D00D81874 /* BFLanguageViewItem.swift */,
@@ -1348,6 +1354,7 @@
 				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
 				5E4833521FD252BA00CEB336 /* Browser.xcassets in Resources */,
+				5E7E268022338DD0006D366D /* BFEditLangPanel.storyboard in Resources */,
 				5E44C63D20E53A5600CDEAEE /* readmeTemplate.html in Resources */,
 				5E048A75213A10640098CBF6 /* BFExploreController.xib in Resources */,
 				5E3029E9222B654A00D81874 /* BFLangPanel.storyboard in Resources */,
@@ -1609,6 +1616,7 @@
 				5E9131A120AEA8DA0056EF9F /* BFStarViewController+Utils.swift in Sources */,
 				5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */,
 				5EC1B1A62018D62100186A67 /* BFJumpWebStie.swift in Sources */,
+				5E7E267E22338DBE006D366D /* BFEditLangPanel.swift in Sources */,
 				5E9867D11FD05189007EE86F /* ObjDeployment.swift in Sources */,
 				5E9ECE251FE0325300C02B3F /* BFStarViewController+Web.swift in Sources */,
 				5EEAC2902169FF920060E253 /* BFExploreDeveloperFlowLayout.swift in Sources */,

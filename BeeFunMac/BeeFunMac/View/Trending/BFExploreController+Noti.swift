@@ -11,22 +11,20 @@ import Foundation
 extension BFExploreController {
     
     func setupNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(selectedLanguageDone(_:)), name: Notification.Name.BeeFun.SelectionLanguage, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(selectedLanguageDone(_:)), name: Notification.Name.BeeFun.SelectShowLanguage, object: nil)
     }
     
     @objc func selectedLanguageDone(_ notification: Notification) {
         
         if let userInfo = notification.userInfo {
 //            print(userInfo)
-            if let source: String = userInfo["source"] as? String {
+            if let state: LangPanelState = userInfo["state"] as? LangPanelState {
                 guard let language: BFLangModel = userInfo["language"] as? BFLangModel
                     else {return}
-                if source == "All" {
+                if state == .SelectShowLanguage {
                     selectedLanguage = language.name ?? "all"
                     languageSelectedButton.title = selectedLanguage
                     reloadTimaAndLanguage()
-                } else if source == "Edit" {
-                    
                 }
             }
         }

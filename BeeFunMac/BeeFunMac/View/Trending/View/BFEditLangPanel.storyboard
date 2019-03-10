@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="oh3-hV-e0Q">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="34M-Rb-wCy">
+            <objects>
+                <windowController id="oh3-hV-e0Q" customClass="BFEditLangWindowController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="6LU-40-Ud7" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" documentModal="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="oh3-hV-e0Q" id="BXh-1x-YmG"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="RWA-I6-RCJ" kind="relationship" relationship="window.shadowedContentViewController" id="D9R-68-Ovx"/>
+                    </connections>
+                </windowController>
+                <customObject id="3vS-Cf-BIn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="59"/>
+        </scene>
+        <!--Edit Lang View Controller-->
+        <scene sceneID="Znj-cy-wie">
+            <objects>
+                <viewController id="RWA-I6-RCJ" customClass="BFEditLangViewController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="NFr-a4-UlY">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="359"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-vo-6d3">
+                                <rect key="frame" x="1" y="166" width="248" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <clipView key="contentView" ambiguous="YES" id="RU5-Va-mYh">
+                                    <rect key="frame" x="1" y="0.0" width="246" height="172"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="PbW-KU-HPf" viewBased="YES" id="0pH-Bw-x8s">
+                                            <rect key="frame" x="0.0" y="0.0" width="249" height="147"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="246" minWidth="40" maxWidth="999" id="SdY-PZ-K7q">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="UpN-bE-Mwd">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="gMz-Y3-1GG">
+                                                            <rect key="frame" x="1" y="1" width="246" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-Pz-wKY">
+                                                                    <rect key="frame" x="0.0" y="-7" width="251" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="aZd-MN-mcL">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="gMz-Y3-1GG" name="value" keyPath="objectValue.name" id="K5N-ci-aXD"/>
+                                                                    </connections>
+                                                                </textField>
+                                                            </subviews>
+                                                            <connections>
+                                                                <outlet property="textField" destination="hDP-Pz-wKY" id="0rU-Rc-K8d"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <binding destination="22j-kV-QdE" name="content" keyPath="arrangedObjects" id="9H7-SN-2J5"/>
+                                                <binding destination="22j-kV-QdE" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="9H7-SN-2J5" id="VOS-8F-czy"/>
+                                                <binding destination="22j-kV-QdE" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="VOS-8F-czy" id="nY2-rU-fju"/>
+                                                <outlet property="dataSource" destination="RWA-I6-RCJ" id="EAC-Yr-qRL"/>
+                                                <outlet property="delegate" destination="RWA-I6-RCJ" id="SuB-Ju-GKG"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="y0i-dI-jtE">
+                                    <rect key="frame" x="1" y="156" width="246" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7sZ-Zw-sJe">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="PbW-KU-HPf">
+                                    <rect key="frame" x="0.0" y="0.0" width="249" height="25"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-DD-b41">
+                                <rect key="frame" x="0.0" y="125" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="er4-dS-Lcd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addLanAction:" target="RWA-I6-RCJ" id="wdo-W9-5aw"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-eb-Xbe">
+                                <rect key="frame" x="20" y="125" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cQr-z0-YbI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="delLanAction:" target="RWA-I6-RCJ" id="Gap-P6-qyN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="addLanButton" destination="6FP-DD-b41" id="MfK-2d-ZeS"/>
+                        <outlet property="delLanButton" destination="iPJ-eb-Xbe" id="rVd-c3-FXk"/>
+                        <outlet property="faviourLangTableView" destination="0pH-Bw-x8s" id="1U2-Qe-Yr7"/>
+                        <outlet property="languageArrayController" destination="22j-kV-QdE" id="NrI-69-4s2"/>
+                    </connections>
+                </viewController>
+                <customObject id="1aD-Ta-5nd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="BFLangModel" id="22j-kV-QdE"/>
+            </objects>
+            <point key="canvasLocation" x="-50.5" y="496.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+    </resources>
+</document>

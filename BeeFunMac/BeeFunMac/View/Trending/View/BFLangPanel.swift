@@ -15,18 +15,25 @@ final class BFLangPanel {
     
     static let shared = BFLangPanel()
     
-    func panelController(source: String) -> NSWindowController {
+    func panelController() -> NSWindowController {
         let panelController = NSWindowController.instantiate(storyboard: "BFLangPanel")
         if let viewCont = panelController.contentViewController as? BFLangViewController {
-            viewCont.source = source
+        }
+        return panelController
+    }
+    
+    func panelController(state: LangPanelState) -> NSWindowController {
+        let panelController = NSWindowController.instantiate(storyboard: "BFLangPanel")
+        if let viewCont = panelController.contentViewController as? BFLangViewController {
+            viewCont.state = state
         }
         return panelController
     }
 }
 
-final class LangPanelUtil {
+final class BFLangPanelUtil {
     
-    static let shared = LangPanelUtil()
+    static let shared = BFLangPanelUtil()
     var languages: [ [BFLangModel] ] = []
     var languageIndexs: [ String ] = []
 
@@ -42,7 +49,7 @@ final class LangPanelUtil {
 
                 if let jsonResult = jsonResult as? Dictionary<String, AnyObject>  {
                     for (key, value) in jsonResult {
-                        print("\(key)")
+//                        print("\(key)")
                         if let model = Mapper<BFLangModel>().map(JSON: value as! Dictionary) {
                             model.name = key
                             allData.append(model)
@@ -72,7 +79,7 @@ final class LangPanelUtil {
                 languages.insert(sepModels, at: 0)
                 languageIndexs.insert("#", at: 0)
                 
-               print("log")
+//               print("log")
             } catch {
                 // handle error
             }
@@ -88,17 +95,26 @@ final class BFLangWindowController: NSWindowController {
     }
 }
 
+enum LangPanelState: String {
+    // 用户临时选择一种语言进行展示
+    case SelectShowLanguage
+    // 添加喜欢的语言
+    case AddFavouriteLanguage
+    // 编辑喜欢的语言
+    case EditFavouriteLanguage
+}
+
 final class BFLangViewController: NSViewController {
     
     var searching: Bool = false
     @IBOutlet weak var langCollectionView: NSCollectionView!
     @IBOutlet weak var searchTextField: NSSearchField!
     @IBOutlet weak var searchTextFieldCell: NSSearchFieldCell!
-    var source: String?
+    var state: LangPanelState = LangPanelState.SelectShowLanguage
     
     // 全量数据
-    var languages = LangPanelUtil.shared.languages
-    var languageIndexs = LangPanelUtil.shared.languageIndexs
+    var languages = BFLangPanelUtil.shared.languages
+    var languageIndexs = BFLangPanelUtil.shared.languageIndexs
     
     // 搜索数据
     var waitSelectionLanguages: [BFLangModel] = []
@@ -129,7 +145,7 @@ extension BFLangViewController: NSSearchFieldDelegate {
     func controlTextDidBeginEditing(_ obj: Notification) {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchTextField {
-                print("controlTextDidBeginEditing search \(searchTextField.stringValue)")
+//                print("controlTextDidBeginEditing search \(searchTextField.stringValue)")
             }
         }
     }
@@ -137,7 +153,7 @@ extension BFLangViewController: NSSearchFieldDelegate {
     func controlTextDidChange(_ obj: Notification) {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchTextField {
-                print("controlTextDidChange search \(searchTextField.stringValue)")
+//                print("controlTextDidChange search \(searchTextField.stringValue)")
                 searching = !textfield.stringValue.isEmpty
                 searchAllDataWithKey()
             }
@@ -147,7 +163,7 @@ extension BFLangViewController: NSSearchFieldDelegate {
     func controlTextDidEndEditing(_ obj: Notification) {
         if let textfield = obj.object as? NSTextField {
             if textfield == searchTextField {
-                print("controlTextDidEndEditing search \(searchTextField.stringValue)")
+//                print("controlTextDidEndEditing search \(searchTextField.stringValue)")
             }
         }
     }
@@ -184,7 +200,7 @@ extension BFLangViewController: NSSearchFieldDelegate {
             }
         }
         langCollectionView.reloadData()
-        print(waitSelectionLanguages)
+//        print(waitSelectionLanguages)
     }
     
 }
@@ -199,8 +215,15 @@ extension BFLangViewController: NSCollectionViewDelegate {
             } else {
                 language = languages[selIndexPath.section][selIndexPath.item]
             }
-            let userInfo: [String : Any] = ["language": language!, "source": source ?? "All"]
-            NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SelectionLanguage, object: nil, userInfo: userInfo)
+            let userInfo: [String : Any] = ["language": language!, "state": state]
+            switch state {
+            case .SelectShowLanguage:
+                NotificationCenter.default.post(name: NSNotification.Name.BeeFun.SelectShowLanguage, object: nil, userInfo: userInfo)
+            case .AddFavouriteLanguage:
+                NotificationCenter.default.post(name: NSNotification.Name.BeeFun.AddFavouriteLanguage, object: nil, userInfo: userInfo)
+            case .EditFavouriteLanguage:
+                NotificationCenter.default.post(name: NSNotification.Name.BeeFun.EditFavouriteLanguage, object: nil, userInfo: userInfo)
+            }
             view.window?.close()
         }
     }
