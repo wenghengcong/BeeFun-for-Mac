@@ -209,7 +209,7 @@
                                 <constraint firstAttribute="height" constant="18" id="ad0-Nj-Qyu"/>
                                 <constraint firstAttribute="width" constant="18" id="l7K-qZ-Eaw"/>
                             </constraints>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_lan_edit" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ppe-Ss-3T2">
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exp_lan_edit" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Ppe-Ss-3T2">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>

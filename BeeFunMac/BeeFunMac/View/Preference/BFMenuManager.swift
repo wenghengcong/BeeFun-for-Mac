@@ -21,7 +21,7 @@ class BFMenuManager: NSObject {
     
     static let shared = BFMenuManager()
     
-    lazy var preferencesWindowController:MASPreferencesWindowController = {
+    lazy var preferencesWindowController: MASPreferencesWindowController = {
         let generalController = GeneralPreferenceController()
 //        let syncController = SyncPreferenceController()
 //        let controllers = [generalController, syncController]
@@ -60,8 +60,9 @@ class BFMenuManager: NSObject {
     
     func openPreference(_ sender: Any) {
         self.preferencesWindowController.window?.level = NSWindow.Level.popUpMenu
+        self.preferencesWindowController.window?.center()
         self.preferencesWindowController.showWindow(nil)
-        AppDelegate.sharedInstance.mainController?.window?.center()
+//        AppDelegate.sharedInstance.mainController?.window?.center()
     }
     
     
