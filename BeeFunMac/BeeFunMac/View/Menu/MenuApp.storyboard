@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu App View Controller-->
+        <scene sceneID="JTl-44-iSg">
+            <objects>
+                <viewController storyboardIdentifier="MenuAppViewController" id="JXw-TW-41h" customClass="MenuAppViewController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="sz4-M4-kVa">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="490"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVG-YE-2tI">
+                                <rect key="frame" x="13" y="2" width="318" height="459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="Trending" identifier="" id="ffh-lm-ZQP">
+                                        <view key="view" ambiguous="YES" id="5FJ-3m-fiX">
+                                            <rect key="frame" x="10" y="33" width="298" height="413"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="qsb-82-EzS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="508"/>
+        </scene>
+    </scenes>
+</document>

@@ -46,6 +46,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // 加载所有语言
         BFLangPanelUtil.shared.loadAllLanguage()
+        
+        // 菜单栏app
+        MenuAppManage.shared.setupMainMenu()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="119" id="KgM-yj-TV6"/>
                                     <constraint firstAttribute="width" constant="119" id="PSJ-PW-DVP"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="logo_1024" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JNQ-hF-tiZ">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="logo_160" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="JNQ-hF-tiZ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -301,6 +301,6 @@
         <image name="icon_bar_day_star_sel" width="120" height="120"/>
         <image name="iconbar_p_normal" width="160" height="160"/>
         <image name="iconbar_setting" width="100" height="100"/>
-        <image name="logo_1024" width="1024" height="1024"/>
+        <image name="logo_160" width="160" height="160"/>
     </resources>
 </document>
