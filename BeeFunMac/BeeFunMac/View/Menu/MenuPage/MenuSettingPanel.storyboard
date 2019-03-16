@@ -14,23 +14,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="340" height="30"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmh-Ub-RGN">
-                                <rect key="frame" x="308" y="4" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="kmh-Ub-RGN">
+                                <rect key="frame" x="308" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ULb-Ik-BPl"/>
+                                    <constraint firstAttribute="width" constant="20" id="bLS-E8-Z5M"/>
+                                </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSActionTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PZa-KV-YA5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTQ-1s-e0s">
-                                <rect key="frame" x="15" y="4" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="OTQ-1s-e0s">
+                                <rect key="frame" x="15" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="dCD-eE-jY7"/>
+                                    <constraint firstAttribute="height" constant="20" id="osi-hU-amd"/>
+                                </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="menu_logo_40" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="BKO-sy-jun">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kmh-Ub-RGN" secondAttribute="trailing" constant="12" id="EMu-00-JXN"/>
+                            <constraint firstItem="kmh-Ub-RGN" firstAttribute="centerY" secondItem="uM7-TE-PkA" secondAttribute="centerY" id="ire-IN-8BG"/>
+                            <constraint firstItem="OTQ-1s-e0s" firstAttribute="centerY" secondItem="uM7-TE-PkA" secondAttribute="centerY" id="rUh-Gr-17R"/>
+                            <constraint firstItem="OTQ-1s-e0s" firstAttribute="leading" secondItem="uM7-TE-PkA" secondAttribute="leading" constant="15" id="sl7-VE-rDx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="dDD-l9-B0S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

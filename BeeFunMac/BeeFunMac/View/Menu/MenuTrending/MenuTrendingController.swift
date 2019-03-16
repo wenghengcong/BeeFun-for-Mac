@@ -50,15 +50,15 @@ class MenuTrendingController: NSViewController, NSCollectionViewDelegate, NSColl
         }
         
         if let language = UserDefaults.standard[.lastMenuTrendingLanguage], let lastIndex = Int(language) {
-            languageSegmentControl.setSelected(false, forSegment: lastIndex)
+            languageSegmentControl.setSelected(true, forSegment: lastIndex)
         } else {
-            languageSegmentControl.setSelected(false, forSegment: 0)
+            languageSegmentControl.setSelected(true, forSegment: 0)
         }
         
         if let type = UserDefaults.standard[.lastMenuTrendingType], let lastIndex = Int(type) {
-            typeSegmentControl.setSelected(false, forSegment: lastIndex)
+            typeSegmentControl.setSelected(true, forSegment: lastIndex)
         } else {
-            typeSegmentControl.setSelected(false, forSegment: 0)
+            typeSegmentControl.setSelected(true, forSegment: 0)
         }
     }
 }

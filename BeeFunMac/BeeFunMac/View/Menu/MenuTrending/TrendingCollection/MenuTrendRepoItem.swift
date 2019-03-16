@@ -31,6 +31,29 @@ class MenuTrendRepoItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        menu_trend_repo_item_setupExploreViewItem()
+        menu_trend_repo_item_addAction()
+    }
+    
+    func menu_trend_repo_item_addAction() {
+        
+        repoNameButton.target = self
+        repoNameButton.action = #selector(menu_trend_repo_item_clickRepoName)
+        
+        starButton.target = self
+        starButton.action = #selector(menu_trend_repo_item_clickStarRequest)
+    }
+    
+    @objc func menu_trend_repo_item_clickRepoName() {
+        BFBrowserManager.shared.openUrl(url: repoModel?.repo_url)
+    }
+    
+    @objc func menu_trend_repo_item_clickStarRequest() {
+        if starButton.title == "Star" {
+            menu_trend_repo_item_starRequest()
+        } else if starButton.title == "Unstar" {
+            menu_trend_repo_item_unstarRequest()
+        }
     }
     
     func menu_trend_repo_item_setupExploreViewItem() {
@@ -66,7 +89,7 @@ class MenuTrendRepoItem: NSCollectionViewItem {
             view.viewBorderWidth = 0
         }
         
-        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 17.0))
+        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 15.0))
         if let name = repoModel?.repo_name {
             repoNameButton.attributedTitle = NSAttributedString(string: name, attributes: diction)
         }
@@ -187,7 +210,7 @@ extension MenuTrendRepoItem {
         if let starred = repoModel?.starred {
             starButton.isHidden = false
             
-            let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyWhiteDarkBlack, backColor: nil, alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 16.0))
+            let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyWhiteDarkBlack, backColor: nil, alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 12.0))
             let title = starred ?  "Unstar" : "Star"
             starButton.attributedTitle = NSAttributedString(string: title, attributes: dic)
         } else {

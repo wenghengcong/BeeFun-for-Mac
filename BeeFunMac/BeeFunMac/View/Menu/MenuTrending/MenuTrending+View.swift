@@ -15,6 +15,7 @@ extension MenuTrendingController {
         trendingCollectionView.dataSource = self
         trendingCollectionView.delegate = self
         trendingCollectionView.isSelectable = true
+        menu_trending_changeFlowLayout()
     }
     
     func menu_trending_changeFlowLayout() {
@@ -69,5 +70,19 @@ extension MenuTrendingController {
             }
         }
         return NSCollectionViewItem()
+    }
+    
+//    func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: NSCollectionView.SupplementaryElementKind, at indexPath: IndexPath) -> NSView {
+//        return nil
+//    }
+}
+
+extension MenuTrendingController: NSCollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForFooterInSection section: Int) -> NSSize {
+        return NSSize.zero
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
+        return NSSize.zero
     }
 }

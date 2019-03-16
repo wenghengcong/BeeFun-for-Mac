@@ -73,7 +73,7 @@
 		5E2BADC0223BE91C00F569F0 /* GeneralPaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADBF223BE91C00F569F0 /* GeneralPaneController.swift */; };
 		5E2BADC2223CACF300F569F0 /* MenuPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADC1223CACF300F569F0 /* MenuPanelController.swift */; };
 		5E2BADC4223CCB6C00F569F0 /* MenuPanelSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADC3223CCB6C00F569F0 /* MenuPanelSplitView.swift */; };
-		5E2BADC6223CDED000F569F0 /* MenuTrendindPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADC5223CDED000F569F0 /* MenuTrendindPanel.storyboard */; };
+		5E2BADC6223CDED000F569F0 /* MenuTrendingPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADC5223CDED000F569F0 /* MenuTrendingPanel.storyboard */; };
 		5E2BADC8223CDF3300F569F0 /* MenuTrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADC7223CDF3300F569F0 /* MenuTrendingController.swift */; };
 		5E2BADCA223CE08000F569F0 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADC9223CE08000F569F0 /* MenuTabViewController.swift */; };
 		5E2BADCD223CE32B00F569F0 /* MenuSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADCC223CE32B00F569F0 /* MenuSettingController.swift */; };
@@ -359,7 +359,7 @@
 		5E2BADBF223BE91C00F569F0 /* GeneralPaneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPaneController.swift; sourceTree = "<group>"; };
 		5E2BADC1223CACF300F569F0 /* MenuPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelController.swift; sourceTree = "<group>"; };
 		5E2BADC3223CCB6C00F569F0 /* MenuPanelSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelSplitView.swift; sourceTree = "<group>"; };
-		5E2BADC5223CDED000F569F0 /* MenuTrendindPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuTrendindPanel.storyboard; sourceTree = "<group>"; };
+		5E2BADC5223CDED000F569F0 /* MenuTrendingPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuTrendingPanel.storyboard; sourceTree = "<group>"; };
 		5E2BADC7223CDF3300F569F0 /* MenuTrendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTrendingController.swift; sourceTree = "<group>"; };
 		5E2BADC9223CE08000F569F0 /* MenuTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
 		5E2BADCC223CE32B00F569F0 /* MenuSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSettingController.swift; sourceTree = "<group>"; };
@@ -875,7 +875,7 @@
 				5E2BADD9223CF70F00F569F0 /* MenuTrending+Data.swift */,
 				5E2BADD7223CF50900F569F0 /* MenuTrending+View.swift */,
 				5E2BADDB223CF85700F569F0 /* MenuTrending+Action.swift */,
-				5E2BADC5223CDED000F569F0 /* MenuTrendindPanel.storyboard */,
+				5E2BADC5223CDED000F569F0 /* MenuTrendingPanel.storyboard */,
 				5E2BADD0223CF39000F569F0 /* TrendingCollection */,
 			);
 			path = MenuTrending;
@@ -1470,7 +1470,7 @@
 				5E2BADA9223BB60400F569F0 /* MenuApp.storyboard in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
 				5E2BADAD223BD49700F569F0 /* PreferencesWindow.storyboard in Resources */,
-				5E2BADC6223CDED000F569F0 /* MenuTrendindPanel.storyboard in Resources */,
+				5E2BADC6223CDED000F569F0 /* MenuTrendingPanel.storyboard in Resources */,
 				5E3029FF222BF38F00D81874 /* BFLanguageHeaderView.xib in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 				5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */,

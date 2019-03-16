@@ -98,7 +98,7 @@ class MenuTabViewController: NSTabViewController {
 private extension MenuTabViewController {
     
     private static let ibIdentifiers: [String: String] = [
-        "Trendind": "Nt8-vs-J0f",
+        "Trending": "Nt8-vs-J0f",
         ]
     
     

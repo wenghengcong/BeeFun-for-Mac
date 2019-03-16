@@ -11,7 +11,12 @@ import Cocoa
 class MenuTrendRepoLayout: NSCollectionViewFlowLayout {
     override init() {
         super.init()
-        itemSize = NSMakeSize(330, 60)
+        itemSize = NSMakeSize(338, 55)
+        minimumInteritemSpacing = 0
+        minimumLineSpacing = 0
+        sectionInset = NSEdgeInsetsZero
+        headerReferenceSize = NSSize.zero
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
