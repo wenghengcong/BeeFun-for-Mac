@@ -1,46 +1,27 @@
 //
-//  GeneralPreferenceController.swift
+//  GeneralPaneController.swift
 //  BeeFun
 //
-//  Created by WengHengcong on 2018/1/24.
-//  Copyright © 2018年 LuCi. All rights reserved.
+//  Created by Hunt on 2019/3/15.
+//  Copyright © 2019 LuCi. All rights reserved.
 //
 
 import Cocoa
-import MASPreferences
-import MASShortcut
 
-class GeneralPreferenceController:NSViewController, MASPreferencesViewController {
-    
+class GeneralPaneController: NSViewController {
+
     @IBOutlet weak var shortcutView: MASShortcutView!
-    
-    init() {
-        super.init(nibName: NSNib.Name("GeneralPreferenceController"), bundle: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do view setup here.
+        
         self.shortcutView.associatedUserDefaultsKey = "GlobalShortcut"
         MASShortcutBinder.shared().bindShortcut(withDefaultsKey: "GlobalShortcut") {
             self.showWindow()
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    var toolbarItemLabel: String? {
-        return "General"
-    }
-    
-    var viewIdentifier: String {
-            return "GeneralPreferences"
-    }
-    
-    var toolbarItemImage: NSImage? {
-        return NSImage(named: NSImage.preferencesGeneralName)
-    }
     
     func showWindow() {
         DispatchQueue.main.async {
@@ -52,7 +33,7 @@ class GeneralPreferenceController:NSViewController, MASPreferencesViewController
                     NSApp.activate(ignoringOtherApps: true)
                 }
             }
-
+            
         }
     }
 }

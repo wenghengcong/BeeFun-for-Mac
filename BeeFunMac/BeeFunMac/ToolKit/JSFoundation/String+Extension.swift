@@ -45,6 +45,12 @@ extension String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.cnBundle, value: "", comment: withComment)
     }
 
+    /// returns a localized string, using the main bundle if one is not specified.
+    func localized(tableName: String? = nil, bundle: Bundle = .main, value: String = "", comment: String = "") -> String {
+        
+        return NSLocalizedString(self, tableName: tableName, bundle: bundle, value: value, comment: comment)
+    }
+
 }
 
 // MARK: - count

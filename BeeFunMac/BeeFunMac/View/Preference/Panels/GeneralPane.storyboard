@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tbw-q7-hmL">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--General Pane Controller-->
+        <scene sceneID="vUD-6I-F7U">
+            <objects>
+                <viewController id="Tbw-q7-hmL" customClass="GeneralPaneController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="XJj-Au-1dw">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="400"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wvu-4b-z1S">
+                                <rect key="frame" x="26" y="287" width="123" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BeeFun Hotkey" id="jAp-xc-hMA">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-CM-8Jk" customClass="MASShortcutView">
+                                <rect key="frame" x="155" y="285" width="158" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="shortcutView" destination="Xdt-CM-8Jk" id="S4c-it-XHG"/>
+                    </connections>
+                </viewController>
+                <customObject id="vxx-w8-ZQU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="-131"/>
+        </scene>
+    </scenes>
+</document>

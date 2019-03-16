@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="eCG-zA-hqF">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="KuJ-W9-Ocu">
+            <objects>
+                <windowController id="eCG-zA-hqF" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" id="si0-1M-BLX" customClass="PreferencesWindow" customModule="BeeFun" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="560" height="320"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="eCG-zA-hqF" id="e2I-wU-tLf"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="6k0-pD-MRd" kind="relationship" relationship="window.shadowedContentViewController" id="oRY-i4-tFk"/>
+                    </connections>
+                </windowController>
+                <customObject id="aCv-pc-fQF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139" y="414"/>
+        </scene>
+        <!--Preferences Tab View Controller-->
+        <scene sceneID="jUc-9J-iAi">
+            <objects>
+                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" id="6k0-pD-MRd" customClass="PreferencesTabViewController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="General" identifier="General" image="NSPreferencesGeneral" id="1nC-PT-jaB"/>
+                        <tabViewItem label="Menu" identifier="Menu" image="PreferenceMenu" id="k0d-1H-saL"/>
+                    </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions"/>
+                    <tabView key="tabView" type="noTabsNoBorder" id="20x-dQ-6U4">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="320"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="6k0-pD-MRd" id="SPd-OZ-giK"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="20x-dQ-6U4" id="NfZ-ok-vX8"/>
+                        <segue destination="KKg-7x-vW9" kind="relationship" relationship="tabItems" id="HHr-PX-11P"/>
+                        <segue destination="EZP-p8-CXz" kind="relationship" relationship="tabItems" id="hWq-QY-xtO"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="FuH-zR-Lr4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="414"/>
+        </scene>
+        <!--GeneralPane-->
+        <scene sceneID="RoS-BK-iaw">
+            <objects>
+                <controllerPlaceholder storyboardName="GeneralPane" id="KKg-7x-vW9" sceneMemberID="viewController"/>
+                <customObject id="sgg-yh-dEb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="743"/>
+        </scene>
+        <!--MenuPanel-->
+        <scene sceneID="vo8-Ae-EiC">
+            <objects>
+                <controllerPlaceholder storyboardName="MenuPanel" id="EZP-p8-CXz" sceneMemberID="viewController"/>
+                <customObject id="r0S-0t-b0y" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570" y="743"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="PreferenceMenu" width="60" height="60"/>
+    </resources>
+</document>

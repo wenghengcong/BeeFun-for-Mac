@@ -21,13 +21,7 @@ class BFMenuManager: NSObject {
     
     static let shared = BFMenuManager()
     
-    lazy var preferencesWindowController: MASPreferencesWindowController = {
-        let generalController = GeneralPreferenceController()
-//        let syncController = SyncPreferenceController()
-//        let controllers = [generalController, syncController]
-        let controllers = [generalController]
-        return MASPreferencesWindowController(viewControllers:controllers,title: nil)
-    }()
+    private lazy var preferencesWindowController = NSWindowController.instantiate(storyboard: "PreferencesWindow")
     
     func openMenuItem(_ item: NSMenuItem, menu: NSMenu) {
         print("click menu title: \(item.title)")
@@ -59,10 +53,11 @@ class BFMenuManager: NSObject {
     }
     
     func openPreference(_ sender: Any) {
-        self.preferencesWindowController.window?.level = NSWindow.Level.popUpMenu
-        self.preferencesWindowController.window?.center()
-        self.preferencesWindowController.showWindow(nil)
+//        self.preferencesWindowController.window?.level = NSWindow.Level.popUpMenu
+//        self.preferencesWindowController.window?.center()
+//        self.preferencesWindowController.showWindow(nil)
 //        AppDelegate.sharedInstance.mainController?.window?.center()
+        self.preferencesWindowController.showWindow(sender)
     }
     
     

@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct BFUserDefaultKey {
     
     public static let FavouriteLanguages = "com.luci.userdefault.FavouriteLanguages"

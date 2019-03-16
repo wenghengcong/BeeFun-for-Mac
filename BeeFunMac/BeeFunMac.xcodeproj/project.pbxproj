@@ -24,15 +24,11 @@
 		5E048A8C21436C6B0098CBF6 /* BFHackerNewsViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E048A8A21436C6B0098CBF6 /* BFHackerNewsViewItem.xib */; };
 		5E065FAD1FF3353000721926 /* ObjStarRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E065FAC1FF3353000721926 /* ObjStarRepos.swift */; };
 		5E098DC42017F3C900AD50BA /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DC32017F3C900AD50BA /* OAuthManager.swift */; };
-		5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */; };
 		5E098DCC20182C4400AD50BA /* MASPreferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E098DCD20182C4400AD50BA /* MASPreferences.framework */; };
 		5E09F6022019A5DF00CC3866 /* BFZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F6012019A5DF00CC3866 /* BFZipManager.swift */; };
 		5E09F604201A153300CC3866 /* BFMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F603201A153300CC3866 /* BFMonitor.swift */; };
 		5E09F606201A156B00CC3866 /* BFMonitor+Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F605201A156B00CC3866 /* BFMonitor+Handle.swift */; };
-		5E09F608201A1D6400CC3866 /* SyncPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F607201A1D6400CC3866 /* SyncPreferenceController.swift */; };
-		5E09F60A201A1D8200CC3866 /* SyncPreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E09F609201A1D8200CC3866 /* SyncPreferenceController.xib */; };
 		5E09F60C201A1FB500CC3866 /* Preference.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E09F60B201A1FB500CC3866 /* Preference.xcassets */; };
-		5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F60D201A2F9600CC3866 /* SyncPreferenceManager.swift */; };
 		5E0B832B1FDCCFDE00EDC29E /* BFStarTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0B832A1FDCCFDE00EDC29E /* BFStarTableCellView.xib */; };
 		5E1C135F1FD6F36300726A0C /* ObjList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C13521FD6F36300726A0C /* ObjList.swift */; };
 		5E1C13621FD6F36300726A0C /* CloudObjectId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C13551FD6F36300726A0C /* CloudObjectId.swift */; };
@@ -67,6 +63,16 @@
 		5E2B26761FDC34AC00600866 /* LCBaseTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2B26751FDC34AC00600866 /* LCBaseTableCellView.swift */; };
 		5E2BADA9223BB60400F569F0 /* MenuApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADA8223BB60400F569F0 /* MenuApp.storyboard */; };
 		5E2BADAB223BB65800F569F0 /* MenuAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADAA223BB65800F569F0 /* MenuAppViewController.swift */; };
+		5E2BADAD223BD49700F569F0 /* PreferencesWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADAC223BD49700F569F0 /* PreferencesWindow.storyboard */; };
+		5E2BADB1223BD53600F569F0 /* GeneralPane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADB0223BD53600F569F0 /* GeneralPane.storyboard */; };
+		5E2BADB3223BD54700F569F0 /* MenuPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADB2223BD54700F569F0 /* MenuPanel.storyboard */; };
+		5E2BADB5223BD59E00F569F0 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADB4223BD59E00F569F0 /* PreferencesWindow.swift */; };
+		5E2BADB7223BD5C300F569F0 /* PreferencesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADB6223BD5C300F569F0 /* PreferencesTabViewController.swift */; };
+		5E2BADBA223BE42800F569F0 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADB9223BE42800F569F0 /* DefaultKeys.swift */; };
+		5E2BADBC223BE45F00F569F0 /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADBB223BE45F00F569F0 /* DefaultSettings.swift */; };
+		5E2BADBE223BE4FD00F569F0 /* DefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADBD223BE4FD00F569F0 /* DefaultKey.swift */; };
+		5E2BADC0223BE91C00F569F0 /* GeneralPaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADBF223BE91C00F569F0 /* GeneralPaneController.swift */; };
+		5E2BADC2223CACF300F569F0 /* MenuPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADC1223CACF300F569F0 /* MenuPanelController.swift */; };
 		5E2C9D3C21645A04001910F9 /* BFExploreController+Coll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D3B21645A04001910F9 /* BFExploreController+Coll.swift */; };
 		5E2C9D3E21645A26001910F9 /* BFExploreController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */; };
 		5E2C9D4021645A34001910F9 /* BFExploreController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */; };
@@ -263,7 +269,6 @@
 		5EE9E78F1FCEC86D0012AE1C /* BFMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9E78E1FCEC86D0012AE1C /* BFMainView.swift */; };
 		5EEAC28E2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEAC28D2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift */; };
 		5EEAC2902169FF920060E253 /* BFExploreDeveloperFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEAC28F2169FF920060E253 /* BFExploreDeveloperFlowLayout.swift */; };
-		5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB14D1201833B400304AD3 /* GeneralPreferenceController.xib */; };
 		5EFB14D420185C9C00304AD3 /* BFMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */; };
 		9C160C48E67F7D29462F7C6C /* Pods_BeeFun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D572D7F257BFDE1CD24E6E07 /* Pods_BeeFun.framework */; };
 /* End PBXBuildFile section */
@@ -288,15 +293,11 @@
 		5E065FAC1FF3353000721926 /* ObjStarRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjStarRepos.swift; sourceTree = "<group>"; };
 		5E098DC32017F3C900AD50BA /* OAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 		5E098DC920182A7F00AD50BA /* BeeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeeFun-Bridging-Header.h"; sourceTree = "<group>"; };
-		5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferenceController.swift; sourceTree = "<group>"; };
 		5E098DCD20182C4400AD50BA /* MASPreferences.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MASPreferences.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E09F6012019A5DF00CC3866 /* BFZipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFZipManager.swift; sourceTree = "<group>"; };
 		5E09F603201A153300CC3866 /* BFMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMonitor.swift; sourceTree = "<group>"; };
 		5E09F605201A156B00CC3866 /* BFMonitor+Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFMonitor+Handle.swift"; sourceTree = "<group>"; };
-		5E09F607201A1D6400CC3866 /* SyncPreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPreferenceController.swift; sourceTree = "<group>"; };
-		5E09F609201A1D8200CC3866 /* SyncPreferenceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncPreferenceController.xib; sourceTree = "<group>"; };
 		5E09F60B201A1FB500CC3866 /* Preference.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Preference.xcassets; sourceTree = "<group>"; };
-		5E09F60D201A2F9600CC3866 /* SyncPreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPreferenceManager.swift; sourceTree = "<group>"; };
 		5E0B832A1FDCCFDE00EDC29E /* BFStarTableCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarTableCellView.xib; sourceTree = "<group>"; };
 		5E1C13521FD6F36300726A0C /* ObjList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjList.swift; sourceTree = "<group>"; };
 		5E1C13551FD6F36300726A0C /* CloudObjectId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudObjectId.swift; sourceTree = "<group>"; };
@@ -334,6 +335,16 @@
 		5E2B26751FDC34AC00600866 /* LCBaseTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCBaseTableCellView.swift; sourceTree = "<group>"; };
 		5E2BADA8223BB60400F569F0 /* MenuApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuApp.storyboard; sourceTree = "<group>"; };
 		5E2BADAA223BB65800F569F0 /* MenuAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppViewController.swift; sourceTree = "<group>"; };
+		5E2BADAC223BD49700F569F0 /* PreferencesWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreferencesWindow.storyboard; sourceTree = "<group>"; };
+		5E2BADB0223BD53600F569F0 /* GeneralPane.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralPane.storyboard; sourceTree = "<group>"; };
+		5E2BADB2223BD54700F569F0 /* MenuPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuPanel.storyboard; sourceTree = "<group>"; };
+		5E2BADB4223BD59E00F569F0 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		5E2BADB6223BD5C300F569F0 /* PreferencesTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTabViewController.swift; sourceTree = "<group>"; };
+		5E2BADB9223BE42800F569F0 /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		5E2BADBB223BE45F00F569F0 /* DefaultSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettings.swift; sourceTree = "<group>"; };
+		5E2BADBD223BE4FD00F569F0 /* DefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKey.swift; sourceTree = "<group>"; };
+		5E2BADBF223BE91C00F569F0 /* GeneralPaneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPaneController.swift; sourceTree = "<group>"; };
+		5E2BADC1223CACF300F569F0 /* MenuPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanelController.swift; sourceTree = "<group>"; };
 		5E2C9D3B21645A04001910F9 /* BFExploreController+Coll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+Coll.swift"; sourceTree = "<group>"; };
 		5E2C9D3D21645A26001910F9 /* BFExploreController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+View.swift"; sourceTree = "<group>"; };
 		5E2C9D3F21645A34001910F9 /* BFExploreController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFExploreController+Search.swift"; sourceTree = "<group>"; };
@@ -532,7 +543,6 @@
 		5EE9E78E1FCEC86D0012AE1C /* BFMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMainView.swift; sourceTree = "<group>"; };
 		5EEAC28D2169FF7A0060E253 /* BFExploreRepositiesFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreRepositiesFlowLayout.swift; sourceTree = "<group>"; };
 		5EEAC28F2169FF920060E253 /* BFExploreDeveloperFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreDeveloperFlowLayout.swift; sourceTree = "<group>"; };
-		5EFB14D1201833B400304AD3 /* GeneralPreferenceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferenceController.xib; sourceTree = "<group>"; };
 		5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMenuManager.swift; sourceTree = "<group>"; };
 		6393F5C2089AFD6AB1F713A8 /* Pods_BeeFunMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeFunMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3AE7371CD815C3272AC5E7 /* Pods-BeeFunMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeFunMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeeFunMac/Pods-BeeFunMac.release.xcconfig"; sourceTree = "<group>"; };
@@ -734,11 +744,8 @@
 			isa = PBXGroup;
 			children = (
 				5E3029EC222B674900D81874 /* AppKit */,
-				5E2B266E1FDC346A00600866 /* LCAppKit */,
 				5E928C431FCE4C680066CAE4 /* JSBridge */,
 				5E928C441FCE4C680066CAE4 /* JSFoundation */,
-				5E928C461FCE4C680066CAE4 /* JSModel */,
-				5E928C451FCE4C680066CAE4 /* JSNetwork */,
 			);
 			path = ToolKit;
 			sourceTree = "<group>";
@@ -787,11 +794,24 @@
 			path = Window;
 			sourceTree = "<group>";
 		};
-		5E2B266E1FDC346A00600866 /* LCAppKit */ = {
+		5E2BADAF223BD51100F569F0 /* Panels */ = {
 			isa = PBXGroup;
 			children = (
+				5E2BADB0223BD53600F569F0 /* GeneralPane.storyboard */,
+				5E2BADBF223BE91C00F569F0 /* GeneralPaneController.swift */,
+				5E2BADB2223BD54700F569F0 /* MenuPanel.storyboard */,
+				5E2BADC1223CACF300F569F0 /* MenuPanelController.swift */,
 			);
-			path = LCAppKit;
+			path = Panels;
+			sourceTree = "<group>";
+		};
+		5E2BADB8223BE40B00F569F0 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				5E2BADB9223BE42800F569F0 /* DefaultKeys.swift */,
+				5E2BADBB223BE45F00F569F0 /* DefaultSettings.swift */,
+			);
+			path = Defaults;
 			sourceTree = "<group>";
 		};
 		5E2C9D43216469C0001910F9 /* Model */ = {
@@ -951,22 +971,9 @@
 				5EAD75E21FDED71300D8C128 /* NSString+Size.swift */,
 				5E267639201B0972006A3020 /* NSObject+Swizzle.swift */,
 				5E1F73092235031E00F5D2C1 /* DraggableArrayController.swift */,
+				5E2BADBD223BE4FD00F569F0 /* DefaultKey.swift */,
 			);
 			path = JSFoundation;
-			sourceTree = "<group>";
-		};
-		5E928C451FCE4C680066CAE4 /* JSNetwork */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSNetwork;
-			sourceTree = "<group>";
-		};
-		5E928C461FCE4C680066CAE4 /* JSModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSModel;
 			sourceTree = "<group>";
 		};
 		5E928C4C1FCE52EC0066CAE4 /* Manager */ = {
@@ -1022,6 +1029,7 @@
 		5E928C4F1FCE52EC0066CAE4 /* ProConfig */ = {
 			isa = PBXGroup;
 			children = (
+				5E2BADB8223BE40B00F569F0 /* Defaults */,
 				5E8A2AF31FD1568D00B246BD /* BFNotificationName.swift */,
 				5EC1B1A72018D6DC00186A67 /* BFWebsiteURL.swift */,
 				5EE9900C1FD26354008711F4 /* BFCommonString.swift */,
@@ -1207,13 +1215,12 @@
 		5EBF53F01FCFE68F00D7A2A5 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
+				5E2BADB4223BD59E00F569F0 /* PreferencesWindow.swift */,
+				5E2BADB6223BD5C300F569F0 /* PreferencesTabViewController.swift */,
+				5E2BADAC223BD49700F569F0 /* PreferencesWindow.storyboard */,
+				5E2BADAF223BD51100F569F0 /* Panels */,
 				5E539C6C216F8F91005257AF /* Config */,
 				5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */,
-				5E098DCA20182BA700AD50BA /* GeneralPreferenceController.swift */,
-				5EFB14D1201833B400304AD3 /* GeneralPreferenceController.xib */,
-				5E09F607201A1D6400CC3866 /* SyncPreferenceController.swift */,
-				5E09F609201A1D8200CC3866 /* SyncPreferenceController.xib */,
-				5E09F60D201A2F9600CC3866 /* SyncPreferenceManager.swift */,
 			);
 			path = Preference;
 			sourceTree = "<group>";
@@ -1364,13 +1371,14 @@
 				5EA4E1C321717F1D005D73F1 /* BFColor.xcassets in Resources */,
 				5E048A7A213A11770098CBF6 /* BFBrowserViewController.xib in Resources */,
 				5E54DB92216F2842003136DC /* BFLanguage.plist in Resources */,
+				5E2BADB3223BD54700F569F0 /* MenuPanel.storyboard in Resources */,
 				5E042D0020B1125E00767E56 /* BFTagsTipCellView.xib in Resources */,
 				5E28168E1FCCF23C007A5159 /* MainWindow.storyboard in Resources */,
 				5E048A8021436C2B0098CBF6 /* BFExploreReposViewItem.xib in Resources */,
 				5E0B832B1FDCCFDE00EDC29E /* BFStarTableCellView.xib in Resources */,
 				5E048A8821436C550098CBF6 /* BFProductHuntViewItem.xib in Resources */,
-				5E09F60A201A1D8200CC3866 /* SyncPreferenceController.xib in Resources */,
 				5E048A8421436C3D0098CBF6 /* BFExploreDevelopersViewItem.xib in Resources */,
+				5E2BADB1223BD53600F569F0 /* GeneralPane.storyboard in Resources */,
 				5EBF53FC1FCFF83000D7A2A5 /* BFStarViewController.xib in Resources */,
 				5EA435081FDADF4400034578 /* Star.xcassets in Resources */,
 				5E048A8C21436C6B0098CBF6 /* BFHackerNewsViewItem.xib in Resources */,
@@ -1381,7 +1389,6 @@
 				5E54DB93216F2842003136DC /* BFPopularLanguage.plist in Resources */,
 				5E424D5F2127B10400066967 /* DayTheme.xcassets in Resources */,
 				5E3029FB222BF35D00D81874 /* BFLanguageViewItem.xib in Resources */,
-				5EFB14D2201833B400304AD3 /* GeneralPreferenceController.xib in Resources */,
 				5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */,
 				5E4833521FD252BA00CEB336 /* Browser.xcassets in Resources */,
 				5E7E268022338DD0006D366D /* BFEditLangPanel.storyboard in Resources */,
@@ -1393,6 +1400,7 @@
 				5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */,
 				5E2BADA9223BB60400F569F0 /* MenuApp.storyboard in Resources */,
 				5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */,
+				5E2BADAD223BD49700F569F0 /* PreferencesWindow.storyboard in Resources */,
 				5E3029FF222BF38F00D81874 /* BFLanguageHeaderView.xib in Resources */,
 				5E60060C20D12A55008FB100 /* AutoCompleteTextField.xib in Resources */,
 				5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */,
@@ -1500,12 +1508,14 @@
 				5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */,
 				5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */,
 				5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */,
+				5E2BADBC223BE45F00F569F0 /* DefaultSettings.swift in Sources */,
 				5E9867E01FD05189007EE86F /* ObjMilestone.swift in Sources */,
 				5EA4E1C72171D633005D73F1 /* NSColor+DarkMode.swift in Sources */,
 				5E424D63212B10E700066967 /* BFStarViewController+Down.swift in Sources */,
 				5E2C9D3C21645A04001910F9 /* BFExploreController+Coll.swift in Sources */,
 				5E5E820720E4E19E00E810E2 /* EventAPI.swift in Sources */,
 				5ECBD90F2168976100F3C03E /* BFExploreNavigationModel.swift in Sources */,
+				5E2BADC0223BE91C00F569F0 /* GeneralPaneController.swift in Sources */,
 				5EAC2F1E2022D82D000442FE /* SQLStar+Delete.swift in Sources */,
 				5E9867DD1FD05189007EE86F /* ObjSubject.swift in Sources */,
 				5E80F74A211C89AD00756B30 /* BFStarViewController+Tools.swift in Sources */,
@@ -1541,7 +1551,6 @@
 				5E048A79213A11770098CBF6 /* BFBrowserViewController.swift in Sources */,
 				5E2C9D4921659B58001910F9 /* BFGithubTrendingRequsetModel.swift in Sources */,
 				5E048A8321436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift in Sources */,
-				5E09F60E201A2F9600CC3866 /* SyncPreferenceManager.swift in Sources */,
 				5E5E821F20E4E2CE00E810E2 /* SEResponseCommits.swift in Sources */,
 				5E9867D91FD05189007EE86F /* ObjPage.swift in Sources */,
 				5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */,
@@ -1614,6 +1623,7 @@
 				5E9868071FD0FE75007EE86F /* CPHttpStatusCode.swift in Sources */,
 				5ECBD90A21686CA300F3C03E /* BFExpolreNavigationViewItem.swift in Sources */,
 				5E8A2AF41FD1568D00B246BD /* BFNotificationName.swift in Sources */,
+				5E2BADC2223CACF300F569F0 /* MenuPanelController.swift in Sources */,
 				5E1C136A1FD6F36300726A0C /* CloudTableName.swift in Sources */,
 				5E8A2AF21FD1461C00B246BD /* BFGithubWebsite.swift in Sources */,
 				5E75D6FA210C64A5007596E9 /* NSColor+Project.swift in Sources */,
@@ -1628,7 +1638,6 @@
 				5E5E822A20E4E2CE00E810E2 /* SESearchBaseModel.swift in Sources */,
 				5E75D6FC210CBAA2007596E9 /* BFThemeManager.swift in Sources */,
 				5E54DB8C216EDF95003136DC /* BFBrowserManager.swift in Sources */,
-				5E09F608201A1D6400CC3866 /* SyncPreferenceController.swift in Sources */,
 				5E3029FD222BF37A00D81874 /* BFLanguageHeaderView.swift in Sources */,
 				5E9867D01FD05189007EE86F /* ObjCommit.swift in Sources */,
 				5E5E822120E4E2CE00E810E2 /* SEResponseRepos.swift in Sources */,
@@ -1636,8 +1645,10 @@
 				5E91319D20AE70B40056EF9F /* ObjLanguage.swift in Sources */,
 				5E302A01222C1BDF00D81874 /* BFExploreController+Noti.swift in Sources */,
 				5ECBD9112168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift in Sources */,
+				5E2BADBA223BE42800F569F0 /* DefaultKeys.swift in Sources */,
 				5E80F746211B284500756B30 /* BFTheme+StarWeb.swift in Sources */,
 				5E9868091FD0FE75007EE86F /* JSConnectivity.swift in Sources */,
+				5E2BADB7223BD5C300F569F0 /* PreferencesTabViewController.swift in Sources */,
 				5E9867D71FD05189007EE86F /* ObjMember.swift in Sources */,
 				5E9867DF1FD05189007EE86F /* ObjLabel.swift in Sources */,
 				5EAC2F1C2022D79E000442FE /* SQLStar+Update.swift in Sources */,
@@ -1667,6 +1678,7 @@
 				5E9867D61FD05189007EE86F /* ObjLinks.swift in Sources */,
 				5E9867D31FD05189007EE86F /* ObjEvent.swift in Sources */,
 				5EE9900D1FD26354008711F4 /* BFCommonString.swift in Sources */,
+				5E2BADB5223BD59E00F569F0 /* PreferencesWindow.swift in Sources */,
 				5E75D709210D658B007596E9 /* BFStarViewController+Theme.swift in Sources */,
 				5E048A74213A10640098CBF6 /* BFExploreController.swift in Sources */,
 				5E2B26741FDC346B00600866 /* WKWebView+Extension.swift in Sources */,
@@ -1675,7 +1687,6 @@
 				5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */,
 				5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */,
 				5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */,
-				5E098DCB20182BA700AD50BA /* GeneralPreferenceController.swift in Sources */,
 				5E539C6E216F8FC0005257AF /* BFConfigModel.swift in Sources */,
 				5E9867EE1FD05189007EE86F /* ObjUser.swift in Sources */,
 				5E9867F71FD052AE007EE86F /* Bundle+Extension.swift in Sources */,
@@ -1686,6 +1697,7 @@
 				5E54DB7D216DB444003136DC /* BFBrowserViewController+Utils.swift in Sources */,
 				5EA84B361FEB6025007AC06E /* BFTextField.swift in Sources */,
 				5EE9E78F1FCEC86D0012AE1C /* BFMainView.swift in Sources */,
+				5E2BADBE223BE4FD00F569F0 /* DefaultKey.swift in Sources */,
 				5E048A7F21436C2B0098CBF6 /* BFExploreReposViewItem.swift in Sources */,
 				5E1C135F1FD6F36300726A0C /* ObjList.swift in Sources */,
 				5E7F6F671FDCF95E0050B50F /* BFStarViewController+View.swift in Sources */,
