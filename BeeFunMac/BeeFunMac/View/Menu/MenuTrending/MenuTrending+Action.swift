@@ -22,6 +22,7 @@ extension MenuTrendingController {
     }
     
     @objc func handleLanguageChanged(sender: Any) {
+        UserDefaults.standard[.lastMenuTrendingLanguage] = "\(languageSegmentControl.selectedSegment)"
         menu_updateCurrentLanguage()
         menu_updateCurrentData()
     }

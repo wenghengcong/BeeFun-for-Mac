@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MenuTrendRepoItem" customModule="BeeFun" customModuleProvider="target">
+            <connections>
+                <outlet property="repoColorLabel" destination="xcf-om-Of9" id="F0G-MJ-nOy"/>
+                <outlet property="repoDescLabel" destination="46l-Ze-392" id="VNe-wa-obl"/>
+                <outlet property="repoNameButton" destination="1eO-yq-Rhu" id="Lwt-qA-DCB"/>
+                <outlet property="repoUpLabel" destination="4J4-wc-Iig" id="hh3-Jx-ogE"/>
+                <outlet property="starButton" destination="hUJ-WH-W96" id="xlA-Zo-wFc"/>
+                <outlet property="upImageView" destination="GJN-fc-x0M" id="eR1-Vi-Fxe"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iy3-2p-VCm">
+                    <rect key="frame" x="238" y="6" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJN-fc-x0M">
+                            <rect key="frame" x="11" y="17" width="18" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exp_detail_trend_up" id="lhf-30-Cwu"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4J4-wc-Iig">
+                            <rect key="frame" x="0.0" y="1" width="40" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="12790" id="OOa-gP-2at">
+                                <font key="font" metaFont="miniSystem"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcf-om-Of9" customClass="BFButton" customModule="BeeFun" customModuleProvider="target">
+                    <rect key="frame" x="317" y="44" width="12" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NiE-Zu-Gcf">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <color key="contentTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bfBackgroundColor">
+                            <color key="value" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUJ-WH-W96">
+                    <rect key="frame" x="275" y="0.0" width="65" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Star" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MkC-IC-3MB">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46l-Ze-392">
+                    <rect key="frame" x="6" y="5" width="230" height="30"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="x8F-np-0aJ">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-yq-Rhu">
+                    <rect key="frame" x="6" y="35" width="199" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" title="BeeFunFeedback" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="tqp-JX-jam">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <color key="contentTintColor" name="iBlack"/>
+                </button>
+            </subviews>
+        </customView>
+        <collectionViewItem identifier="MenuTrendRepoItem" id="XtY-w1-aXk" customClass="MenuTrendRepoItem" customModule="BeeFun" customModuleProvider="target">
+            <connections>
+                <outlet property="repoColorLabel" destination="xcf-om-Of9" id="TnF-ha-USy"/>
+                <outlet property="repoDescLabel" destination="46l-Ze-392" id="y9G-LB-Rwp"/>
+                <outlet property="repoNameButton" destination="1eO-yq-Rhu" id="oez-jh-83I"/>
+                <outlet property="repoUpLabel" destination="4J4-wc-Iig" id="TOy-gP-q9l"/>
+                <outlet property="starButton" destination="hUJ-WH-W96" id="49Z-qi-xJl"/>
+                <outlet property="upImageView" destination="GJN-fc-x0M" id="Req-WR-nQq"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="exp_detail_trend_up" width="100" height="100"/>
+        <namedColor name="iBlack">
+            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

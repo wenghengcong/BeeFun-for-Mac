@@ -55,7 +55,7 @@ extension MenuTrendingController {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         if isRepository() {
-            if let item =  trendingCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreReposViewItem, for: indexPath) as? BFExploreReposViewItem {
+            if let item =  trendingCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.MenuApp.MenuTrendRepoItem, for: indexPath) as? MenuTrendRepoItem {
                 let sectionIndexData = githubTrendingReposData[indexPath.section][indexPath.item]
                 //                item.delegate = self as! BFExploreReposViewItemDelete
                 item.repoModel = sectionIndexData
