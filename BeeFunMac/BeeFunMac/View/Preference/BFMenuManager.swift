@@ -53,10 +53,6 @@ class BFMenuManager: NSObject {
     }
     
     func openPreference(_ sender: Any) {
-//        self.preferencesWindowController.window?.level = NSWindow.Level.popUpMenu
-//        self.preferencesWindowController.window?.center()
-//        self.preferencesWindowController.showWindow(nil)
-//        AppDelegate.sharedInstance.mainController?.window?.center()
         self.preferencesWindowController.showWindow(sender)
     }
     

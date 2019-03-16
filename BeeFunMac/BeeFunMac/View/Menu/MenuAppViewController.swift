@@ -8,11 +8,12 @@
 
 import Cocoa
 
-class MenuAppViewController: NSViewController {
+class MenuAppViewController: NSSplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
     }
     
 }

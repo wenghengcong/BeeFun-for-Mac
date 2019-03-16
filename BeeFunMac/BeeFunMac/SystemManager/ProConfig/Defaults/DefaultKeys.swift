@@ -10,4 +10,5 @@ import Foundation
 
 extension DefaultKeys {
     static let lastPreferencesPaneIdentifier = DefaultKey<String>("lastPreferencesPaneIdentifier")
+    static let lastMenuPaneIdentifier = DefaultKey<String>("lastMenuPaneIdentifier")
 }

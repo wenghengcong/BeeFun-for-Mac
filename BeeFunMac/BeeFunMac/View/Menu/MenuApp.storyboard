@@ -7,32 +7,84 @@
     </dependencies>
     <scenes>
         <!--Menu App View Controller-->
-        <scene sceneID="JTl-44-iSg">
+        <scene sceneID="aLe-wZ-Tpd">
             <objects>
-                <viewController storyboardIdentifier="MenuAppViewController" id="JXw-TW-41h" customClass="MenuAppViewController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="sz4-M4-kVa">
-                        <rect key="frame" x="0.0" y="0.0" width="344" height="490"/>
+                <splitViewController storyboardIdentifier="MenuAppViewController" id="HGK-ji-gqh" customClass="MenuAppViewController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="Qzd-PY-rtM"/>
+                        <splitViewItem id="aRA-uO-pfW"/>
+                        <splitViewItem id="PDw-kO-jLb"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" id="DkH-k2-4Td" customClass="MenuPanelSplitView" customModule="BeeFun" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="560"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVG-YE-2tI">
-                                <rect key="frame" x="13" y="2" width="318" height="459"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <font key="font" metaFont="system"/>
-                                <tabViewItems>
-                                    <tabViewItem label="Trending" identifier="" id="ffh-lm-ZQP">
-                                        <view key="view" ambiguous="YES" id="5FJ-3m-fiX">
-                                            <rect key="frame" x="10" y="33" width="298" height="413"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </view>
-                                    </tabViewItem>
-                                </tabViewItems>
-                            </tabView>
-                        </subviews>
+                        <connections>
+                            <outlet property="delegate" destination="HGK-ji-gqh" id="4fu-Ws-Yz8"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="DkH-k2-4Td" id="veL-V2-gbH"/>
+                        <segue destination="FqW-7b-Pq2" kind="relationship" relationship="splitItems" id="yHx-Hn-4ii"/>
+                        <segue destination="wrw-zW-a5a" kind="relationship" relationship="splitItems" id="GzX-8h-Mb6"/>
+                        <segue destination="QyG-s1-dXb" kind="relationship" relationship="splitItems" id="fKs-Wn-BH2"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="GGB-cJ-hDI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="-354"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YVn-yJ-1Ex">
+            <objects>
+                <viewController id="FqW-7b-Pq2" sceneMemberID="viewController">
+                    <view key="view" id="FxA-xJ-BFx">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="5"/>
+                        <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="qsb-82-EzS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="xaB-TM-AAJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="508"/>
+            <point key="canvasLocation" x="1326" y="-644"/>
+        </scene>
+        <!--Menu Tab View Controller-->
+        <scene sceneID="MOv-NB-0ZZ">
+            <objects>
+                <tabViewController id="wrw-zW-a5a" customClass="MenuTabViewController" customModule="BeeFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="Trendind" identifier="Trendind" id="2l8-e8-O0D"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Ged-zl-AN2">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="520"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="wrw-zW-a5a" id="Lb0-sg-rDc"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="Ged-zl-AN2" id="Ujr-NG-KVG"/>
+                        <segue destination="l9D-bP-lPc" kind="relationship" relationship="tabItems" id="zha-vS-6yj"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="HiP-lW-Ahk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="-176"/>
+        </scene>
+        <!--MenuSettingPanel-->
+        <scene sceneID="ggX-Uf-fGj">
+            <objects>
+                <controllerPlaceholder storyboardName="MenuSettingPanel" id="QyG-s1-dXb" sceneMemberID="viewController"/>
+                <customObject id="USt-RR-z59" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="238"/>
+        </scene>
+        <!--MenuTrendindPanel-->
+        <scene sceneID="HSf-YH-A5w">
+            <objects>
+                <controllerPlaceholder storyboardName="MenuTrendindPanel" id="l9D-bP-lPc" sceneMemberID="viewController"/>
+                <customObject id="3rf-eX-9yY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707" y="-341"/>
         </scene>
     </scenes>
 </document>
