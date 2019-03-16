@@ -1,42 +1,32 @@
 //
-//  MenuTrendingController.swift
+//  MenuTrending+Data.swift
 //  BeeFun
 //
 //  Created by Hunt on 2019/3/16.
 //  Copyright © 2019 LuCi. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 import ObjectMapper
-
-class MenuTrendingController: NSViewController {
-    @IBOutlet weak var topLineView: NSBox!
-    
-    @IBOutlet weak var trendingCollectionView: NSCollectionView!
-    @IBOutlet weak var languageSegmentControl: NSSegmentedControl!
-    @IBOutlet weak var typeSegmentControl: NSSegmentedControl!
-    
-    @IBOutlet weak var refreshButton: NSButton!
-    
-    
-    private var requesRepostModel: BFGithubTrendingRequsetModel?
-    private var requesDeveloperModel: BFGithubTrendingRequsetModel?
-    
-    //Detail data: 均是二维数组
-    private var githubTrendingReposData: [[BFGithubTrengingModel]] = []
-    private var githubTrendingDevelopserData: [[BFGithubTrengingModel]] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
-    
-    
-    
-}
 
 // MARK: - Request
 extension MenuTrendingController {
+    
+    func menu_trengding_setupData() {
+        requesRepostModel = BFGithubTrendingRequsetModel()
+        requesDeveloperModel = BFGithubTrendingRequsetModel()
+        setRequestModel(language: menu_trending_selectedLanguage())
+        
+        menu_updateCurrentData()
+    }
+    
+    func menu_updateCurrentData() {
+        if isRepository() {
+            menu_getGithubTrendingReopsitories(refresh: true)
+        } else {
+            menu_getGithubTrendingDeveloper(refresh: true)
+        }
+    }
     
     func setRequestModel(language: String) {
         let source = 2
@@ -60,15 +50,14 @@ extension MenuTrendingController {
     }
     
     
-    func getGithubTrendingDeveloper(refresh: Bool) {
+    func menu_getGithubTrendingDeveloper(refresh: Bool) {
         
         if !refresh && githubTrendingDevelopserData.count > 0  {
-            detailCollectionView.reloadData()
+            trendingCollectionView.reloadData()
             return
         }
-
+        
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesDeveloperModel!)) { (result) in
-            self.endRequestProgress()
             switch result {
             case let .success(response):
                 do {
@@ -95,17 +84,15 @@ extension MenuTrendingController {
         }
     }
     
-    func getGithubTrendingReopsitories(refresh: Bool) {
+    func menu_getGithubTrendingReopsitories(refresh: Bool) {
         
         if !refresh && githubTrendingDevelopserData.count > 0  {
-            detailCollectionView.reloadData()
+            trendingCollectionView.reloadData()
             return
         }
-        self.beginRequestProgress()
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesRepostModel!), callbackQueue: DispatchQueue.main, progress: { (progress) in
-            print(progress.progress)
+            //            print(progress.progress)
         }) { (result) in
-            self.endRequestProgress()
             switch result {
             case let .success(response):
                 do {
