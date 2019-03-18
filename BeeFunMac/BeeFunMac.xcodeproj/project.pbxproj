@@ -78,8 +78,6 @@
 		5E2BADCA223CE08000F569F0 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADC9223CE08000F569F0 /* MenuTabViewController.swift */; };
 		5E2BADCD223CE32B00F569F0 /* MenuSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADCC223CE32B00F569F0 /* MenuSettingController.swift */; };
 		5E2BADCF223CE33500F569F0 /* MenuSettingPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BADCE223CE33500F569F0 /* MenuSettingPanel.storyboard */; };
-		5E2BADD2223CF3B800F569F0 /* MenuTrendRepoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADD1223CF3B800F569F0 /* MenuTrendRepoLayout.swift */; };
-		5E2BADD4223CF3CB00F569F0 /* MenuTrendDevLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADD3223CF3CB00F569F0 /* MenuTrendDevLayout.swift */; };
 		5E2BADD8223CF50900F569F0 /* MenuTrending+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADD7223CF50900F569F0 /* MenuTrending+View.swift */; };
 		5E2BADDA223CF70F00F569F0 /* MenuTrending+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADD9223CF70F00F569F0 /* MenuTrending+Data.swift */; };
 		5E2BADDC223CF85700F569F0 /* MenuTrending+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BADDB223CF85700F569F0 /* MenuTrending+Action.swift */; };
@@ -265,6 +263,7 @@
 		5EC3CC622016A11300701C23 /* BFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3CC612016A11300701C23 /* BFLoginController.swift */; };
 		5EC3CC642016AAAE00701C23 /* BFLoginWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3CC632016AAAE00701C23 /* BFLoginWindowController.swift */; };
 		5EC584991FE75B81008A44C9 /* BFStarViewController+TagInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */; };
+		5EC8C060223F831100728935 /* NumberConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8C05F223F831100728935 /* NumberConvert.swift */; };
 		5ECBD90A21686CA300F3C03E /* BFExpolreNavigationViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */; };
 		5ECBD90B21686CA300F3C03E /* BFExpolreNavigationViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */; };
 		5ECBD90F2168976100F3C03E /* BFExploreNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBD90E2168976100F3C03E /* BFExploreNavigationModel.swift */; };
@@ -364,8 +363,6 @@
 		5E2BADC9223CE08000F569F0 /* MenuTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
 		5E2BADCC223CE32B00F569F0 /* MenuSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSettingController.swift; sourceTree = "<group>"; };
 		5E2BADCE223CE33500F569F0 /* MenuSettingPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSettingPanel.storyboard; sourceTree = "<group>"; };
-		5E2BADD1223CF3B800F569F0 /* MenuTrendRepoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTrendRepoLayout.swift; sourceTree = "<group>"; };
-		5E2BADD3223CF3CB00F569F0 /* MenuTrendDevLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTrendDevLayout.swift; sourceTree = "<group>"; };
 		5E2BADD7223CF50900F569F0 /* MenuTrending+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuTrending+View.swift"; sourceTree = "<group>"; };
 		5E2BADD9223CF70F00F569F0 /* MenuTrending+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuTrending+Data.swift"; sourceTree = "<group>"; };
 		5E2BADDB223CF85700F569F0 /* MenuTrending+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuTrending+Action.swift"; sourceTree = "<group>"; };
@@ -553,6 +550,7 @@
 		5EC3CC612016A11300701C23 /* BFLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLoginController.swift; sourceTree = "<group>"; };
 		5EC3CC632016AAAE00701C23 /* BFLoginWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFLoginWindowController.swift; sourceTree = "<group>"; };
 		5EC584981FE75B81008A44C9 /* BFStarViewController+TagInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TagInput.swift"; sourceTree = "<group>"; };
+		5EC8C05F223F831100728935 /* NumberConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConvert.swift; sourceTree = "<group>"; };
 		5ECBD90821686CA300F3C03E /* BFExpolreNavigationViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExpolreNavigationViewItem.swift; sourceTree = "<group>"; };
 		5ECBD90921686CA300F3C03E /* BFExpolreNavigationViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFExpolreNavigationViewItem.xib; sourceTree = "<group>"; };
 		5ECBD90E2168976100F3C03E /* BFExploreNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFExploreNavigationModel.swift; sourceTree = "<group>"; };
@@ -858,8 +856,6 @@
 		5E2BADD0223CF39000F569F0 /* TrendingCollection */ = {
 			isa = PBXGroup;
 			children = (
-				5E2BADD1223CF3B800F569F0 /* MenuTrendRepoLayout.swift */,
-				5E2BADD3223CF3CB00F569F0 /* MenuTrendDevLayout.swift */,
 				5E2BADDD223D094E00F569F0 /* MenuTrendRepoItem.swift */,
 				5E2BADDE223D094E00F569F0 /* MenuTrendRepoItem.xib */,
 				5E2BADE1223D095F00F569F0 /* MenuTrendDevItem.swift */,
@@ -1106,6 +1102,7 @@
 				5E75D6F9210C64A5007596E9 /* NSColor+Project.swift */,
 				5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */,
 				5ECBD9122168B27200F3C03E /* BFNibName.swift */,
+				5EC8C05F223F831100728935 /* NumberConvert.swift */,
 			);
 			path = ProConfig;
 			sourceTree = "<group>";
@@ -1577,7 +1574,6 @@
 				5E9867EF1FD05189007EE86F /* ObjUserSum.swift in Sources */,
 				5E60060820D0C68B008FB100 /* AutoCompleteTextField.swift in Sources */,
 				5EA84B341FEB4DF5007AC06E /* BFTextFieldCell.swift in Sources */,
-				5E2BADD2223CF3B800F569F0 /* MenuTrendRepoLayout.swift in Sources */,
 				5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */,
 				5E2BADBC223BE45F00F569F0 /* DefaultSettings.swift in Sources */,
 				5E9867E01FD05189007EE86F /* ObjMilestone.swift in Sources */,
@@ -1661,7 +1657,6 @@
 				5E1F730F223BB25B00F5D2C1 /* EventMonitor.swift in Sources */,
 				5E09F606201A156B00CC3866 /* BFMonitor+Handle.swift in Sources */,
 				5E3029FA222BF35D00D81874 /* BFLanguageViewItem.swift in Sources */,
-				5E2BADD4223CF3CB00F569F0 /* MenuTrendDevLayout.swift in Sources */,
 				5E8D8E891FD7E39400C1F6CF /* Array+Extension.swift in Sources */,
 				5E5E820820E4E19E00E810E2 /* SearchAPI.swift in Sources */,
 				5E7EA9D620081F18008E0818 /* BFStarViewController+Network.swift in Sources */,
@@ -1761,6 +1756,7 @@
 				5E2B26741FDC346B00600866 /* WKWebView+Extension.swift in Sources */,
 				5EA4E1CB2172ED3B005D73F1 /* NSColor+Explore.swift in Sources */,
 				5E09F6022019A5DF00CC3866 /* BFZipManager.swift in Sources */,
+				5EC8C060223F831100728935 /* NumberConvert.swift in Sources */,
 				5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */,
 				5ED37E371FF4E36900C14B72 /* SQLConnection.swift in Sources */,
 				5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */,

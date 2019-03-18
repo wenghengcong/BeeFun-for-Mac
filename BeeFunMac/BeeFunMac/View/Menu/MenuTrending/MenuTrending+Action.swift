@@ -29,7 +29,6 @@ extension MenuTrendingController {
     
     @objc func handleTypeChanged(sender: Any) {
         UserDefaults.standard[.lastMenuTrendingType] = "\(typeSegmentControl.selectedSegment)"
-        menu_trending_changeFlowLayout()
         menu_updateCurrentData()
     }
     

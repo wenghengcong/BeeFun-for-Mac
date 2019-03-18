@@ -6,13 +6,92 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="MenuTrendDevItem" customModule="BeeFun" customModuleProvider="target"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="MenuTrendDevItem" customModule="BeeFun" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="BHG-PK-SMm" id="ZQh-O2-q5z"/>
+                <outlet property="repoLabel" destination="4Qx-ZS-Brh" id="UhV-9Z-QWV"/>
+                <outlet property="userNameLabel" destination="lRg-dQ-lWd" id="vdj-DC-BW3"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <collectionViewItem id="0Zx-23-ILf"/>
         <customView id="HTO-PI-Ftl">
-            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <rect key="frame" x="0.0" y="0.0" width="165" height="91"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="J0g-7m-5Mu">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="91"/>
+                    <subviews>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BHG-PK-SMm">
+                            <rect key="frame" x="7" y="44" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="logo_160" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="u39-Ki-Qmj">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Px4-TR-W0k">
+                            <rect key="frame" x="53" y="45" width="15" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="exp_detail_trend_repo" id="PHl-6K-MYJ"/>
+                        </imageView>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qx-ZS-Brh">
+                            <rect key="frame" x="69" y="46" width="83" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" title="BeeFun" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="5hf-aT-kJ4">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="10"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-dQ-lWd">
+                            <rect key="frame" x="51" y="68" width="113" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" title="wenghengcong" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Fex-KO-c5b">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-3N-B92">
+                            <rect key="frame" x="11" y="10" width="15" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="menu_logo_40" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="bYO-Lz-W93">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afX-5a-RRw">
+                            <rect key="frame" x="29" y="10" width="27" height="17"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="610" id="dwZ-7m-Y9U">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2L7-ac-FOM">
+                            <rect key="frame" x="81" y="1" width="77" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" title="Follow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nTi-L2-6ws">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="J0g-7m-5Mu" firstAttribute="top" secondItem="HTO-PI-Ftl" secondAttribute="top" id="TtO-dh-lGd"/>
+                <constraint firstItem="J0g-7m-5Mu" firstAttribute="leading" secondItem="HTO-PI-Ftl" secondAttribute="leading" id="XmL-XF-5bF"/>
+                <constraint firstAttribute="bottom" secondItem="J0g-7m-5Mu" secondAttribute="bottom" id="fZ5-qh-T9b"/>
+                <constraint firstAttribute="trailing" secondItem="J0g-7m-5Mu" secondAttribute="trailing" id="pS1-D5-kcb"/>
+            </constraints>
+            <point key="canvasLocation" x="70.5" y="175"/>
         </customView>
     </objects>
+    <resources>
+        <image name="exp_detail_trend_repo" width="100" height="100"/>
+        <image name="logo_160" width="160" height="160"/>
+        <image name="menu_logo_40" width="40" height="40"/>
+    </resources>
 </document>

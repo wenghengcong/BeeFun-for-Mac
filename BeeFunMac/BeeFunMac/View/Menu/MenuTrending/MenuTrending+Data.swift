@@ -56,8 +56,9 @@ extension MenuTrendingController {
             trendingCollectionView.reloadData()
             return
         }
-        
+        progressStartAnimation()
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesDeveloperModel!)) { (result) in
+            self.progressStopAnimation()
             switch result {
             case let .success(response):
                 do {
@@ -90,9 +91,11 @@ extension MenuTrendingController {
             trendingCollectionView.reloadData()
             return
         }
+        progressStartAnimation()
         BeeFunProvider.sharedProvider.request(BeeFunAPI.getGithubTrending(model: requesRepostModel!), callbackQueue: DispatchQueue.main, progress: { (progress) in
             //            print(progress.progress)
         }) { (result) in
+            self.progressStopAnimation()
             switch result {
             case let .success(response):
                 do {

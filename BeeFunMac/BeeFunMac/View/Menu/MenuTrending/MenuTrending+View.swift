@@ -15,18 +15,8 @@ extension MenuTrendingController {
         trendingCollectionView.dataSource = self
         trendingCollectionView.delegate = self
         trendingCollectionView.isSelectable = true
-        menu_trending_changeFlowLayout()
-    }
-    
-    func menu_trending_changeFlowLayout() {
-        var layout: NSCollectionViewFlowLayout? = isRepository() ? MenuTrendRepoLayout() : MenuTrendDevLayout()
-        // 假如直接调用detailCollectionView.collectionViewLayout = layout会crash
-        // 必须先调用下面两句
-        trendingCollectionView.reloadData()
-        trendingCollectionView.collectionViewLayout?.invalidateLayout()
-        trendingCollectionView.collectionViewLayout = layout
-        //设置滚动区域大小
-        trendingCollectionView.size = layout?.collectionViewContentSize ?? CGSize.zero
+        // 先将loading隐藏
+        progressStopAnimation()
     }
     
     // MARK: - Collection view datasource
@@ -72,6 +62,25 @@ extension MenuTrendingController {
         return NSCollectionViewItem()
     }
     
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
+        var itemSize = NSSize.zero
+        if isRepository() {
+            itemSize = NSMakeSize(338, 55)
+        } else {
+            
+        }
+        return itemSize
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return isRepository() ? 0 : 5
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return isRepository() ? 0 : 5
+    }
+    
+    
 //    func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: NSCollectionView.SupplementaryElementKind, at indexPath: IndexPath) -> NSView {
 //        return nil
 //    }
@@ -84,5 +93,20 @@ extension MenuTrendingController: NSCollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
         return NSSize.zero
+    }
+}
+
+extension MenuTrendingController {
+    
+    /// 开始加载loading
+    func progressStartAnimation() {
+        progressIndicator.isHidden = false
+        progressIndicator.startAnimation(nil)
+    }
+    
+    /// 停止加载loading
+    func progressStopAnimation() {
+        progressIndicator.isHidden = true
+        progressIndicator.stopAnimation(nil)
     }
 }

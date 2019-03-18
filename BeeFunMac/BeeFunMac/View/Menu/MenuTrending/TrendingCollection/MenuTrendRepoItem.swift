@@ -10,12 +10,18 @@ import Cocoa
 
 class MenuTrendRepoItem: NSCollectionViewItem {
 
+    @IBOutlet weak var upBackView: NSView!
+    
+    @IBOutlet weak var starBackView: NSView!
     @IBOutlet weak var repoUpLabel: NSTextField!
     @IBOutlet weak var repoNameButton: NSButton!
     @IBOutlet weak var repoDescLabel: NSTextField!
     @IBOutlet weak var repoColorLabel: BFButton!
     @IBOutlet weak var starButton: NSButton!
     @IBOutlet weak var upImageView: NSImageView!
+    
+    @IBOutlet weak var repoStarLabel: NSTextField!
+    
     
     let viewOriBorderWidth: CGFloat = 1.0
     let viewSelBorderWidth: CGFloat = 5.0
@@ -65,9 +71,10 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         //        starButton.borderWidth = 1.0
         //        starButton.borderColor = .red
         starButton.radius = 3.0
+        repoStarLabel.isBezeled = false
+        repoUpLabel.isBezeled = false
         
         view.radius = 5.0
-        
         repoColorLabel.isBordered = false
         repoColorLabel.size = CGSize(width: 8.0, height: 8.0)
         repoColorLabel.radius = repoColorLabel.size.width/2.0
@@ -76,9 +83,15 @@ class MenuTrendRepoItem: NSCollectionViewItem {
     
     override func viewDidLayout() {
         super.viewDidLayout()
-        starButton.backgColor = NSColor.xyBlueDarkWhite
         
-        view.backgColor = NSColor.xyWhiteDarkBlack
+        starButton.backgColor = NSColor.xyBlueDarkWhite
+
+        view.backgColor = NSColor.xyWhiteDarkWhite
+        starBackView.backgColor = NSColor.xyWhiteDarkWhite
+        upBackView.backgColor = NSColor.xyWhiteDarkWhite
+        
+        repoUpLabel.backgColor = NSColor.xyClearDarkWhite
+        repoStarLabel.backgColor = NSColor.xyClearDarkWhite
         
         repoDescLabel.textColor = NSColor.xyBlackDarkWhite
         
@@ -89,12 +102,10 @@ class MenuTrendRepoItem: NSCollectionViewItem {
             view.viewBorderWidth = 0
         }
         
-        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 15.0))
+        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 13.0))
         if let name = repoModel?.repo_name {
             repoNameButton.attributedTitle = NSAttributedString(string: name, attributes: diction)
         }
-        
-        menu_trend_repo_item_starRequest()
     }
     
     
@@ -120,7 +131,14 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         
         if let upNum = repoModel?.up_star_num {
             upImageView.isHidden = false
-            repoUpLabel.stringValue = "\(upNum)"
+            repoUpLabel.stringValue = NumberConvert.readableNumber(upNum)!
+        } else {
+            upImageView.isHidden = true
+            repoUpLabel.stringValue = "0"
+        }
+        
+        if let star = repoModel?.star_num {
+            repoStarLabel.stringValue = NumberConvert.readableNumber(star)!
         } else {
             upImageView.isHidden = true
             repoUpLabel.stringValue = "0"
@@ -209,8 +227,7 @@ extension MenuTrendRepoItem {
     func menu_trend_repo_item_refreshStarButtonState() {
         if let starred = repoModel?.starred {
             starButton.isHidden = false
-            
-            let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyWhiteDarkBlack, backColor: nil, alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 12.0))
+            let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyWhiteDarkBlack, backColor: nil, alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 11.0))
             let title = starred ?  "Unstar" : "Star"
             starButton.attributedTitle = NSAttributedString(string: title, attributes: dic)
         } else {

@@ -16,6 +16,8 @@ class MenuTrendingController: NSViewController, NSCollectionViewDelegate, NSColl
     @IBOutlet weak var languageSegmentControl: NSSegmentedControl!
     @IBOutlet weak var typeSegmentControl: NSSegmentedControl!
     @IBOutlet weak var refreshButton: NSButton!
+        
+    @IBOutlet weak var progressIndicator: NSProgressIndicator!
     
     var requesRepostModel: BFGithubTrendingRequsetModel?
     var requesDeveloperModel: BFGithubTrendingRequsetModel?

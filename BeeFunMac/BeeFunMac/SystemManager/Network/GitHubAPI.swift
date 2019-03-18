@@ -328,6 +328,8 @@ extension GitHubAPI: TargetType {
             return .delete
 
         //starring
+        case .checkStarred(_, _):
+            return .get
         case .starRepo(_, _):
             return .put
         case .unstarRepo(_, _):

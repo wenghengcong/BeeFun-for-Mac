@@ -97,7 +97,7 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="4nx-l0-xXR">
-                                <rect key="frame" x="312" y="471" width="20" height="20"/>
+                                <rect key="frame" x="315" y="471" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="4RW-1J-Jkx"/>
                                     <constraint firstAttribute="width" constant="20" id="w63-0O-dE3"/>
@@ -108,7 +108,7 @@
                                 </buttonCell>
                             </button>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ENQ-Y7-mrN">
-                                <rect key="frame" x="312" y="496" width="16" height="16"/>
+                                <rect key="frame" x="316" y="496" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="Dl9-ip-q39"/>
                                     <constraint firstAttribute="height" constant="16" id="kYw-bx-P7i"/>
@@ -129,17 +129,18 @@
                             <constraint firstItem="soo-od-AUK" firstAttribute="top" secondItem="SQg-fd-eTQ" secondAttribute="bottom" constant="6" id="XFe-2R-bY2"/>
                             <constraint firstAttribute="bottom" secondItem="hUe-bU-pKu" secondAttribute="bottom" id="aAh-R2-Uod"/>
                             <constraint firstItem="w0j-jr-6Gs" firstAttribute="top" secondItem="UX0-9o-jmX" secondAttribute="bottom" constant="6" id="eAE-b3-rbw"/>
-                            <constraint firstItem="4nx-l0-xXR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="w0j-jr-6Gs" secondAttribute="trailing" constant="95" id="fLn-yq-szh"/>
+                            <constraint firstItem="4nx-l0-xXR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="w0j-jr-6Gs" secondAttribute="trailing" constant="96" id="fLn-yq-szh"/>
                             <constraint firstItem="j4x-Od-wH7" firstAttribute="leading" secondItem="Gq2-j5-8Xo" secondAttribute="leading" id="h5b-8o-nmn"/>
                             <constraint firstItem="ENQ-Y7-mrN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UX0-9o-jmX" secondAttribute="trailing" constant="184" id="kJt-kQ-r7M"/>
-                            <constraint firstAttribute="trailing" secondItem="ENQ-Y7-mrN" secondAttribute="trailing" constant="12" id="kND-nI-ONh"/>
+                            <constraint firstAttribute="trailing" secondItem="ENQ-Y7-mrN" secondAttribute="trailing" constant="8" id="kND-nI-ONh"/>
                             <constraint firstItem="hUe-bU-pKu" firstAttribute="leading" secondItem="Gq2-j5-8Xo" secondAttribute="leading" id="oZN-5W-kbZ"/>
                             <constraint firstItem="UX0-9o-jmX" firstAttribute="leading" secondItem="SQg-fd-eTQ" secondAttribute="trailing" id="oe6-mt-C4h"/>
-                            <constraint firstAttribute="trailing" secondItem="4nx-l0-xXR" secondAttribute="trailing" constant="8" id="zIQ-VK-kdE"/>
+                            <constraint firstAttribute="trailing" secondItem="4nx-l0-xXR" secondAttribute="trailing" constant="5" id="zIQ-VK-kdE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="languageSegmentControl" destination="UX0-9o-jmX" id="fPP-sB-aDo"/>
+                        <outlet property="progressIndicator" destination="ENQ-Y7-mrN" id="Laj-TP-YmL"/>
                         <outlet property="refreshButton" destination="4nx-l0-xXR" id="Wev-Gw-hw0"/>
                         <outlet property="topLineView" destination="j4x-Od-wH7" id="CaW-zi-YXe"/>
                         <outlet property="trendingCollectionView" destination="OpY-VR-tGl" id="67S-tP-6zT"/>
