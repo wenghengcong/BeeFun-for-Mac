@@ -111,6 +111,7 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         if let name = repoModel?.repo_name {
             repoNameButton.attributedTitle = NSAttributedString(string: name, attributes: diction)
         }
+        menu_trend_repo_item_refreshStarButtonState()
     }
     
     
