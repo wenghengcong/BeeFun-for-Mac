@@ -17,7 +17,8 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
 
     @IBOutlet weak var logoImageView: NSImageView!
     @IBOutlet weak var titleLabel: NSTextField!
-    @IBOutlet weak var descLabel: NSTextField!
+//    @IBOutlet weak var descLabel: NSTextField!
+    @IBOutlet weak var sourceImageView: NSImageView!
     
     open weak var itemDelegate: BFExpolreNavigationViewItemDelete?
     
@@ -30,7 +31,7 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
                 logoImageView.image = NSImage(named: NSImage.Name(logoImage))
             }
             titleLabel.stringValue = exploreNavModel?.title ?? ""
-            descLabel.stringValue = exploreNavModel?.desc ?? ""
+//            descLabel.stringValue = exploreNavModel?.desc ?? ""
         }
     }
     
@@ -47,7 +48,7 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
         view.viewBorderWidth = viewOriBorderWidth
         view.viewBorderColor = NSColor.xyWhiteDarkWhite
         titleLabel.textColor = NSColor.xyBlackDarkWhite
-        descLabel.textColor = NSColor.xyLightBlackDarkWhite
+//        descLabel.textColor = NSColor.xyLightBlackDarkWhite
     }
     
     override func viewDidAppear() {
@@ -58,7 +59,7 @@ class BFExpolreNavigationViewItem: NSCollectionViewItem {
         view.layer?.borderWidth = selected ? viewSelBorderWidth : viewOriBorderWidth
         view.backgColor = selected ? NSColor.xyBlueDarkBlue : NSColor.xyWhiteDarkBlack
         titleLabel.textColor = selected ? NSColor.xyWhiteDarkWhite :  NSColor.xyBlackDarkWhite
-        descLabel.textColor = selected ? NSColor.xyWhiteDarkWhite : NSColor.xyLightBlackDarkWhite
+//        descLabel.textColor = selected ? NSColor.xyWhiteDarkWhite : NSColor.xyLightBlackDarkWhite
     }
     
     

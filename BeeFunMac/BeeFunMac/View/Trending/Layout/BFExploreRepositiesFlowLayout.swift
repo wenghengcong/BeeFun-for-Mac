@@ -12,9 +12,9 @@ class BFExploreRepositiesFlowLayout: NSCollectionViewFlowLayout {
 
     override init() {
         super.init()
-        itemSize = NSMakeSize(270, 131)
+        itemSize = NSMakeSize(270, 138)
         minimumInteritemSpacing = 10.0
-        minimumLineSpacing = 10.0
+        minimumLineSpacing = 20.0
         sectionInset = NSEdgeInsetsMake(5.0, 5.0, 5.0, 5.0)
     }
     

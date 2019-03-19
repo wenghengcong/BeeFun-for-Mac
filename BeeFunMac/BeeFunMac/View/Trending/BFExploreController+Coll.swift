@@ -16,6 +16,7 @@ extension BFExploreController {
         navigationCollectionView.dataSource = self
         navigationCollectionView.delegate = self
         navigationCollectionView.isSelectable = true
+        navigationCollectionView.enclosingScrollView?.horizontalScrollElasticity = NSScrollView.Elasticity.none
         
 //        navigationCollectionView.register(NSNib(nibNamed: NSNib.Name( "BFExpolreNavigationViewItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier( "BFExpolreNavigationViewItem"))
         

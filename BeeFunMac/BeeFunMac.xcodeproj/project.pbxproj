@@ -108,6 +108,7 @@
 		5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */; };
 		5E3A5CB32240F11E00D28525 /* ShortcutKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A5CB22240F11E00D28525 /* ShortcutKey.swift */; };
 		5E3A5CB52240F48300D28525 /* ReadPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A5CB42240F48300D28525 /* ReadPreference.swift */; };
+		5E3A5CBA2241272000D28525 /* BFScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A5CB92241272000D28525 /* BFScrollView.swift */; };
 		5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */; };
 		5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */; };
 		5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */; };
@@ -396,6 +397,7 @@
 		5E365EAA2115DDEC00C45B93 /* Theme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Theme.md; sourceTree = "<group>"; };
 		5E3A5CB22240F11E00D28525 /* ShortcutKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutKey.swift; sourceTree = "<group>"; };
 		5E3A5CB42240F48300D28525 /* ReadPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPreference.swift; sourceTree = "<group>"; };
+		5E3A5CB92241272000D28525 /* BFScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFScrollView.swift; sourceTree = "<group>"; };
 		5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+RepoStar.swift"; sourceTree = "<group>"; };
 		5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarDownloadController.swift; sourceTree = "<group>"; };
 		5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarDownloadController.xib; sourceTree = "<group>"; };
@@ -909,6 +911,7 @@
 				5E2B26701FDC346A00600866 /* NSView+Extension.swift */,
 				5E2B26711FDC346A00600866 /* WKWebView+Extension.swift */,
 				5E75D6F7210C597C007596E9 /* UIView+Animation.swift */,
+				5E3A5CB92241272000D28525 /* BFScrollView.swift */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -1643,6 +1646,7 @@
 				5E9867ED1FD05189007EE86F /* ObjPlan.swift in Sources */,
 				5E2B266D1FDC33CC00600866 /* BFStarTableCellView.swift in Sources */,
 				5E75D704210D5F25007596E9 /* NSColor+Night.swift in Sources */,
+				5E3A5CBA2241272000D28525 /* BFScrollView.swift in Sources */,
 				5E2BADDC223CF85700F569F0 /* MenuTrending+Action.swift in Sources */,
 				5E1C13661FD6F36300726A0C /* SQLManager.swift in Sources */,
 				5E1C13641FD6F36300726A0C /* SQLHelper.swift in Sources */,
