@@ -28,7 +28,7 @@ class MenuTabViewController: NSTabViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+//        view.backgColor = NSColor.white
         // workaround for that NSTabViewItem is not localized by storyboard (2018-11 macOS 10.14)
         self.localizeTabViewItems()
         

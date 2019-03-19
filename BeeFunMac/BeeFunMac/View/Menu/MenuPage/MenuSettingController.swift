@@ -11,9 +11,21 @@ import Cocoa
 
 class MenuSettingController: NSViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        view.backgColor = NSColor.white
+    }
+    
+    @IBAction func openPreference(_ sender: Any) {
+        MenuAppManage.shared.closePopover(sender: nil)
+        BFMenuManager.shared.openPreference(nil)
+    }
+    
+    
+    @IBAction func quitApplication(_ sender: Any) {
+        MenuAppManage.shared.remove()
     }
     
 }

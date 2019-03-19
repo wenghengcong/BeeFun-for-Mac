@@ -52,16 +52,16 @@ class BFMenuManager: NSObject {
 //        aboutWindow?.showWindow(aboutWindow)
     }
     
-    func openPreference(_ sender: Any) {
+    func openPreference(_ sender: Any?) {
         self.preferencesWindowController.showWindow(sender)
     }
     
     
-    func openHelp(_ sender: Any) {
+    func openHelp(_ sender: Any?) {
         BFJumpWebStie.shared.jump(BFWebsiteURL.AppOfficeSite)
     }
     
-    func openSignOut(_ sender: Any) {
+    func openSignOut(_ sender: Any?) {
         UserManager.shared.userSignOut()
     }
     

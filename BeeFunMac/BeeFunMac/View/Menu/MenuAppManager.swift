@@ -49,5 +49,9 @@ class MenuAppManage {
         popover.performClose(sender)
         eventMonitor?.stop()
     }
+    
+    func remove() {
+        NSStatusBar.system.removeStatusItem(statusItem)
+    }
 }
 

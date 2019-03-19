@@ -12,6 +12,7 @@ import Foundation
 extension MenuTrendingController {
     
     func menu_trengding_setupView() {
+//        view.backgColor = NSColor.white
         trendingCollectionView.dataSource = self
         trendingCollectionView.delegate = self
         trendingCollectionView.isSelectable = true
