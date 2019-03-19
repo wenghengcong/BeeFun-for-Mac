@@ -28,4 +28,14 @@ class MenuSettingController: NSViewController {
         MenuAppManage.shared.remove()
     }
     
+    @IBAction func quitMainApp(_ sender: Any) {
+        NSApplication.shared.terminate(nil)
+    }
+    
+    
+    @IBAction func openMainApp(_ sender: Any) {
+        MenuAppManage.shared.closePopover(sender: nil)
+        BFWindowManager.shared.openWindow()
+    }
+    
 }

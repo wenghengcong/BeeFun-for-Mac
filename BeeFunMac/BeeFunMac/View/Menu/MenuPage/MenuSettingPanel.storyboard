@@ -24,11 +24,14 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="openMainApp:" target="kJH-yl-cNX" id="qom-6x-jPB"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bwp-mU-U3q">
                                 <rect key="frame" x="299" y="3" width="35" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="zh6-64-O4g" id="yQ6-7E-Qgn">
+                                <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="yQ6-7E-Qgn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="T96-Si-2W7">
@@ -39,9 +42,14 @@
                                                     <action selector="openPreference:" target="kJH-yl-cNX" id="6IB-Yl-If2"/>
                                                 </connections>
                                             </menuItem>
-                                            <menuItem title="Quit" id="iqZ-0i-zsd">
+                                            <menuItem title="Quit Menubar" id="iqZ-0i-zsd">
                                                 <connections>
                                                     <action selector="quitApplication:" target="kJH-yl-cNX" id="1cj-NI-Kuv"/>
+                                                </connections>
+                                            </menuItem>
+                                            <menuItem title="Quit BeeFun" id="Gte-uA-sRy">
+                                                <connections>
+                                                    <action selector="quitMainApp:" target="kJH-yl-cNX" id="Ud8-kd-kyi"/>
                                                 </connections>
                                             </menuItem>
                                         </items>
