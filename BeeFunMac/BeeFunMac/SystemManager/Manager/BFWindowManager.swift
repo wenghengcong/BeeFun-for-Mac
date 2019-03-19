@@ -8,6 +8,8 @@
 
 import Cocoa
 
+
+/// 窗口：打开窗口、管理窗口、主窗口、登录窗口
 class BFWindowManager: NSObject {
 
     static let shared = BFWindowManager()

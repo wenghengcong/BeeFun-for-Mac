@@ -47,11 +47,9 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         repoNameButton.target = self
         repoNameButton.action = #selector(menu_trend_repo_item_clickRepoName)
         
-        
         repoDescLabel.addSingleLeftClickGesture(action:  #selector(menu_trend_repo_item_clickRepoName))
         repoDescLabel.target = self
         repoDescLabel.action = #selector(menu_trend_repo_item_clickRepoName)
-        
         
         starButton.target = self
         starButton.action = #selector(menu_trend_repo_item_clickStarRequest)
@@ -81,7 +79,7 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         repoStarLabel.isBezeled = false
         repoUpLabel.isBezeled = false
         bottomLine.backgColor = NSColor.lineGrayColor
-        view.radius = 5.0
+        
         repoColorLabel.isBordered = false
         repoColorLabel.size = CGSize(width: 8.0, height: 8.0)
         repoColorLabel.radius = repoColorLabel.size.width/2.0
@@ -93,9 +91,9 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         
         starButton.backgColor = NSColor.xyBlueDarkWhite
 
-        view.backgColor = NSColor.xyWhiteDarkWhite
-        starBackView.backgColor = NSColor.xyWhiteDarkWhite
-        upBackView.backgColor = NSColor.xyWhiteDarkWhite
+        view.backgColor = NSColor.xyWhiteDarkBlack
+        starBackView.backgColor = NSColor.xyWhiteDarkBlack
+        upBackView.backgColor = NSColor.xyWhiteDarkBlack
         
         repoUpLabel.backgColor = NSColor.xyClearDarkWhite
         repoStarLabel.backgColor = NSColor.xyClearDarkWhite

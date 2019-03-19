@@ -15,7 +15,12 @@ class MenuSettingController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        view.backgColor = NSColor.white
+        view.backgColor = NSColor.xyWhiteDarkBlack
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        view.backgColor = NSColor.xyWhiteDarkBlack
     }
     
     @IBAction func openPreference(_ sender: Any) {

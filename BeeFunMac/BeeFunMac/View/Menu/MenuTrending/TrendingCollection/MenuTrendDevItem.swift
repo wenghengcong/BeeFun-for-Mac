@@ -42,8 +42,8 @@ class MenuTrendDevItem: NSCollectionViewItem {
         avatarImageView.isBordered = false
         avatarImageView.radius = 5.0
         posButton.radius = 5.0
-        bottomLine.backgColor = NSColor.lineGrayColor
-        view.radius = 5.0
+        bottomLine.backgColor = NSColor.xyLightGrayDarkWhite
+//        view.radius = 5.0
         menu_tringding_dev_item_addAction()
     }
     
@@ -62,7 +62,7 @@ class MenuTrendDevItem: NSCollectionViewItem {
         
         if let repoName = userModel?.repo_name {
             
-            let repoAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayGray, backColor: NSColor.xyClearDarkBlack, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
+            let repoAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyGrayDarkWhite, backColor: NSColor.xyClearDarkBlack, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 12.0))
             repoLabel.attributedTitle = NSAttributedString(string: repoName, attributes: repoAtt)
         }
     }
@@ -93,7 +93,7 @@ class MenuTrendDevItem: NSCollectionViewItem {
         }
         
         if let login = userModel?.login {
-            let loginAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.thDayBlack, backColor: NSColor.xyWhiteDarkBlack, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 14.0))
+            let loginAtt = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: NSColor.xyWhiteDarkBlack, alignment: .left, lineBreak: NSLineBreakMode.byTruncatingTail, baselineOffset: nil, font: NSFont.bfSystemFont(ofSize: 14.0))
             userNameLabel.attributedTitle = NSAttributedString(string: login, attributes: loginAtt)
         }
     }
