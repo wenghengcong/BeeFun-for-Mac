@@ -24,6 +24,7 @@ class MenuTrendDevItem: NSCollectionViewItem {
     @IBOutlet weak var repoImageView: NSImageView!
     @IBOutlet weak var repoLabel: NSButton!
 
+    @IBOutlet weak var bottomLine: NSBox!
     private let viewOriBorderWidth: CGFloat = 1.0
     private let viewSelBorderWidth: CGFloat = 5.0
     
@@ -41,6 +42,7 @@ class MenuTrendDevItem: NSCollectionViewItem {
         avatarImageView.isBordered = false
         avatarImageView.radius = 5.0
         posButton.radius = 5.0
+        bottomLine.backgColor = NSColor.lineGrayColor
         view.radius = 5.0
         menu_tringding_dev_item_addAction()
     }
@@ -83,7 +85,7 @@ class MenuTrendDevItem: NSCollectionViewItem {
     private func menu_tringding_dev_item_fillDataToUI() {
         
         //检查是否关注该用户
-        menu_tringding_dev_item_checkFollowed()
+//        menu_tringding_dev_item_checkFollowed()
         
         if let avatar = userModel?.user_avatar, let userAvatarUrl = URL(string: avatar) {
             avatarImageView.kf.setImage(with: userAvatarUrl)
@@ -107,6 +109,9 @@ class MenuTrendDevItem: NSCollectionViewItem {
         repoImageView.addSingleLeftClickGesture(action:  #selector(menu_tringding_dev_item_clickRepo))
         repoImageView.target = self
         repoImageView.action = #selector(menu_tringding_dev_item_clickRepo)
+        
+        repoLabel.target = self
+        repoLabel.action = #selector(menu_tringding_dev_item_clickRepo)
         
         followButton.target = self
         followButton.action = #selector(menu_tringding_dev_item_clickFollowButton)

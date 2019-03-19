@@ -20,6 +20,7 @@ class MenuTrendRepoItem: NSCollectionViewItem {
     @IBOutlet weak var starButton: NSButton!
     @IBOutlet weak var upImageView: NSImageView!
     
+    @IBOutlet weak var bottomLine: NSBox!
     @IBOutlet weak var repoStarLabel: NSTextField!
     
     
@@ -45,6 +46,12 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         
         repoNameButton.target = self
         repoNameButton.action = #selector(menu_trend_repo_item_clickRepoName)
+        
+        
+        repoDescLabel.addSingleLeftClickGesture(action:  #selector(menu_trend_repo_item_clickRepoName))
+        repoDescLabel.target = self
+        repoDescLabel.action = #selector(menu_trend_repo_item_clickRepoName)
+        
         
         starButton.target = self
         starButton.action = #selector(menu_trend_repo_item_clickStarRequest)
@@ -73,7 +80,7 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         starButton.radius = 3.0
         repoStarLabel.isBezeled = false
         repoUpLabel.isBezeled = false
-        
+        bottomLine.backgColor = NSColor.lineGrayColor
         view.radius = 5.0
         repoColorLabel.isBordered = false
         repoColorLabel.size = CGSize(width: 8.0, height: 8.0)

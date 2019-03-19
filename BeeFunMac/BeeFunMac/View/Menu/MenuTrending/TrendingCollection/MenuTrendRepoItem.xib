@@ -9,6 +9,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MenuTrendRepoItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
+                <outlet property="bottomLine" destination="fIZ-MW-kpD" id="7r8-uF-WGM"/>
                 <outlet property="repoColorLabel" destination="xcf-om-Of9" id="F0G-MJ-nOy"/>
                 <outlet property="repoDescLabel" destination="46l-Ze-392" id="VNe-wa-obl"/>
                 <outlet property="repoNameButton" destination="1eO-yq-Rhu" id="Lwt-qA-DCB"/>
@@ -123,7 +124,7 @@
                     <color key="contentTintColor" name="iBlack"/>
                 </button>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fIZ-MW-kpD">
-                    <rect key="frame" x="0.0" y="-2" width="340" height="5"/>
+                    <rect key="frame" x="0.0" y="-4" width="340" height="5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="zQi-QU-WcQ"/>
                     </constraints>
@@ -134,7 +135,7 @@
                 <constraint firstItem="1eO-yq-Rhu" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="Ahb-OO-g8n"/>
                 <constraint firstAttribute="bottom" secondItem="Iy3-2p-VCm" secondAttribute="bottom" constant="28" id="BqY-zn-Cqd"/>
                 <constraint firstItem="9SD-Kk-QTm" firstAttribute="leading" secondItem="46l-Ze-392" secondAttribute="trailing" constant="4" id="JP7-BR-gpa"/>
-                <constraint firstAttribute="bottom" secondItem="fIZ-MW-kpD" secondAttribute="bottom" id="LtB-bt-Cf7"/>
+                <constraint firstAttribute="bottom" secondItem="fIZ-MW-kpD" secondAttribute="bottom" constant="-2" id="LtB-bt-Cf7"/>
                 <constraint firstAttribute="bottom" secondItem="46l-Ze-392" secondAttribute="bottom" constant="3" id="MC4-OT-d9D"/>
                 <constraint firstItem="1eO-yq-Rhu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="PYu-2x-e9t"/>
                 <constraint firstItem="9SD-Kk-QTm" firstAttribute="top" secondItem="Iy3-2p-VCm" secondAttribute="bottom" constant="3" id="Qt4-oI-Vze"/>
@@ -153,6 +154,7 @@
         </customView>
         <collectionViewItem identifier="MenuTrendRepoItem" id="XtY-w1-aXk" customClass="MenuTrendRepoItem" customModule="BeeFun" customModuleProvider="target">
             <connections>
+                <outlet property="bottomLine" destination="fIZ-MW-kpD" id="CpS-Dh-9Th"/>
                 <outlet property="repoColorLabel" destination="xcf-om-Of9" id="TnF-ha-USy"/>
                 <outlet property="repoDescLabel" destination="46l-Ze-392" id="y9G-LB-Rwp"/>
                 <outlet property="repoNameButton" destination="1eO-yq-Rhu" id="oez-jh-83I"/>
