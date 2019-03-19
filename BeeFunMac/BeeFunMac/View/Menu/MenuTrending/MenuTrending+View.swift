@@ -53,7 +53,7 @@ extension MenuTrendingController {
                 return item
             }
         } else {
-            if let item =  trendingCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.BeeFun.BFExploreDevelopersViewItem, for: indexPath) as? BFExploreDevelopersViewItem {
+            if let item =  trendingCollectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.MenuApp.MenuTrendDevItem, for: indexPath) as? MenuTrendDevItem {
                 let sectionIndexData = githubTrendingDevelopserData[indexPath.section][indexPath.item]
                 item.userModel = sectionIndexData
                 return item
@@ -67,17 +67,17 @@ extension MenuTrendingController {
         if isRepository() {
             itemSize = NSMakeSize(338, 55)
         } else {
-            
+            itemSize = NSMakeSize(338, 55)
         }
         return itemSize
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return isRepository() ? 0 : 5
+        return isRepository() ? 0 : 0
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return isRepository() ? 0 : 5
+        return isRepository() ? 0 : 0
     }
     
     

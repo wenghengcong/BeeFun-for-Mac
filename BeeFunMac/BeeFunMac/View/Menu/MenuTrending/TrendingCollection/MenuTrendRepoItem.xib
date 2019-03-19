@@ -50,10 +50,10 @@
                     </constraints>
                 </customView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xcf-om-Of9" customClass="BFButton" customModule="BeeFun" customModuleProvider="target">
-                    <rect key="frame" x="311" y="39" width="12" height="12"/>
+                    <rect key="frame" x="311" y="37" width="14" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="8" id="in5-mJ-7vg"/>
-                        <constraint firstAttribute="height" constant="7" id="jTI-9m-zFS"/>
+                        <constraint firstAttribute="width" constant="10" id="in5-mJ-7vg"/>
+                        <constraint firstAttribute="height" constant="9" id="jTI-9m-zFS"/>
                     </constraints>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NiE-Zu-Gcf">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -90,7 +90,7 @@
                     </constraints>
                 </customView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hUJ-WH-W96">
-                    <rect key="frame" x="281" y="8" width="55" height="32"/>
+                    <rect key="frame" x="281" y="3" width="55" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="43" id="W3E-sE-0gd"/>
                         <constraint firstAttribute="height" constant="21" id="XSi-zI-XUG"/>
@@ -118,7 +118,7 @@
                     </constraints>
                     <buttonCell key="cell" type="bevel" title="BeeFunFeedback" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="tqp-JX-jam">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="12"/>
+                        <font key="font" metaFont="cellTitle"/>
                     </buttonCell>
                     <color key="contentTintColor" name="iBlack"/>
                 </button>
@@ -144,9 +144,9 @@
                 <constraint firstAttribute="trailing" secondItem="fIZ-MW-kpD" secondAttribute="trailing" id="nSW-Gg-ZB0"/>
                 <constraint firstItem="46l-Ze-392" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="pJK-RE-6jo"/>
                 <constraint firstItem="hUJ-WH-W96" firstAttribute="leading" secondItem="Iy3-2p-VCm" secondAttribute="trailing" constant="-1" id="qCd-M3-FRA"/>
-                <constraint firstAttribute="trailing" secondItem="xcf-om-Of9" secondAttribute="trailing" constant="19" id="sUk-yw-GE1"/>
+                <constraint firstAttribute="trailing" secondItem="xcf-om-Of9" secondAttribute="trailing" constant="17" id="sUk-yw-GE1"/>
                 <constraint firstItem="Iy3-2p-VCm" firstAttribute="leading" secondItem="1eO-yq-Rhu" secondAttribute="trailing" constant="15" id="wdf-pH-vcW"/>
-                <constraint firstItem="hUJ-WH-W96" firstAttribute="top" secondItem="xcf-om-Of9" secondAttribute="bottom" constant="6" id="wgP-Dt-Gtd"/>
+                <constraint firstItem="hUJ-WH-W96" firstAttribute="top" secondItem="xcf-om-Of9" secondAttribute="bottom" constant="9" id="wgP-Dt-Gtd"/>
                 <constraint firstAttribute="trailing" secondItem="hUJ-WH-W96" secondAttribute="trailing" constant="10" id="x6K-Qg-gCc"/>
             </constraints>
             <point key="canvasLocation" x="139" y="154.5"/>

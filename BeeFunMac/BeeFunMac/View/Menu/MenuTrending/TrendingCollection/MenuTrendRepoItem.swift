@@ -93,7 +93,7 @@ class MenuTrendRepoItem: NSCollectionViewItem {
         repoUpLabel.backgColor = NSColor.xyClearDarkWhite
         repoStarLabel.backgColor = NSColor.xyClearDarkWhite
         
-        repoDescLabel.textColor = NSColor.xyBlackDarkWhite
+        repoDescLabel.textColor = NSColor.xyGrayDarkWhite
         
         view.viewBorderColor = NSColor.xyClearDarkWhite
         if NSApplication.shared.isDarkMode {
