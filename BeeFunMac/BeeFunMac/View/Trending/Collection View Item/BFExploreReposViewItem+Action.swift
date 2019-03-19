@@ -137,7 +137,7 @@ extension BFExploreReposViewItem {
         if let starred = repoModel?.starred {
             starButton.isHidden = false
             
-            let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyWhiteDarkBlack, backColor: nil, alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 16.0))
+            let dic = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyWhiteDarkBlack, backColor: nil, alignment: .center, lineBreak: nil, baselineOffset: NSNumber(value: 0), font: NSFont.bfSystemFont(ofSize: 14.5))
             let title = starred ?  "Unstar" : "Star"
             starButton.attributedTitle = NSAttributedString(string: title, attributes: dic)
         } else {

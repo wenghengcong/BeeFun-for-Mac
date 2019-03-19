@@ -70,7 +70,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         view.radius = 5.0
         
         repoColorLabel.isBordered = false
-        repoColorLabel.size = CGSize(width: 8.0, height: 8.0)
+        repoColorLabel.size = CGSize(width: 7, height: 7)
         repoColorLabel.radius = repoColorLabel.size.width/2.0
         repoColorLabel.stringValue = ""
     }
@@ -91,7 +91,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
             view.viewBorderWidth = 0
         }
         
-        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 17.0))
+        let diction = AttributedDictionary.attributeDictionary(foreColor: NSColor.xyBlackDarkWhite, backColor: nil, alignment: nil, lineBreak: nil, baselineOffset: nil, font: NSFont.systemFont(ofSize: 15.0))
         if let name = repoModel?.repo_name {
             repoNameLabel.attributedTitle = NSAttributedString(string: name, attributes: diction)
         }
@@ -113,14 +113,14 @@ class BFExploreReposViewItem: NSCollectionViewItem {
             repoColorLabel.backgColor = lanColor
             
             //language label
-            let dic = AttributedDictionary.attributeDictionary(foreColor: lanColor, alignment: .right, font: NSFont.bfSystemFont(ofSize: 10.0))
+            let dic = AttributedDictionary.attributeDictionary(foreColor: lanColor, alignment: .right, font: NSFont.bfSystemFont(ofSize: 9))
             if let language = repoModel?.repo_language {
                 repoLanguageLabel.isHidden = false
                 repoLanguageLabel.attributedTitle = NSAttributedString(string: language, attributes: dic)
                 repoLanguageLabel.sizeToFit()
                 let width = repoLanguageLabel.width
                 repoLanguageLabel.snp.remakeConstraints { (make) in
-                    make.top.equalTo(8)
+                    make.top.equalTo(4)
                     make.trailing.equalTo(-5.0)
                     make.width.equalTo(width)
                     make.height.equalTo(18.0)
@@ -129,8 +129,8 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                 repoColorLabel.snp.remakeConstraints { (make) in
                     make.centerY.equalTo(self.repoLanguageLabel.snp.centerY).offset(0)
                     make.trailing.equalTo(self.repoLanguageLabel.snp.leading).offset(-3.0)
-                    make.width.equalTo(10.0)
-                    make.height.equalTo(10.0)
+                    make.width.equalTo(7)
+                    make.height.equalTo(7)
                 }
                 repoNameLabel.snp.remakeConstraints { (make) in
                     make.trailing.equalTo(repoColorLabel.snp.leading).offset(-10.0)
@@ -154,7 +154,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         
         if let upNum = repoModel?.up_star_num {
             upImageView.isHidden = false
-            upLabel.stringValue = "\(upNum)"
+            upLabel.stringValue = NumberConvert.readableNumber(upNum)!
         } else {
             upImageView.isHidden = true
             upLabel.stringValue = "0"
@@ -162,7 +162,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         
         if let starNum = repoModel?.star_num {
             starImageView.isHidden = false
-            starLabel.stringValue = "\(starNum)"
+            starLabel.stringValue = NumberConvert.readableNumber(starNum)!
         } else {
             starImageView.isHidden = true
             starLabel.stringValue = "0"
@@ -170,7 +170,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
         
         if let forkNum = repoModel?.fork_num {
             forkImageView.isHidden = false
-            forkLabel.stringValue = "\(forkNum)"
+            forkLabel.stringValue = NumberConvert.readableNumber(forkNum)!
         } else {
             forkImageView.isHidden = true
             forkLabel.stringValue = "0"
@@ -188,6 +188,7 @@ class BFExploreReposViewItem: NSCollectionViewItem {
                     userButton.kf.setImage(with: userAvatarUrl)
                     userButton.tag = index
                     userButton.target = self
+                    userButton.radius = 3.0
                     userButton.action = #selector(clickBuiltByUser(sender:))
                     userButton.imagePosition = .imageOnly
                     userButton.isBordered = false
