@@ -56,6 +56,12 @@ class BFMenuManager: NSObject {
         self.preferencesWindowController.showWindow(sender)
     }
     
+    func openPreference(index: Int) {
+        if let preferenceContentVC = self.preferencesWindowController.contentViewController as? PreferencesTabViewController {
+            self.preferencesWindowController.showWindow(nil)
+            preferenceContentVC.selectedTabViewItemIndex = index
+        }
+    }
     
     func openHelp(_ sender: Any?) {
         BFJumpWebStie.shared.jump(BFWebsiteURL.AppOfficeSite)

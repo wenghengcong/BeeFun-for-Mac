@@ -106,6 +106,8 @@
 		5E31903C20050C9900FCA18C /* BFStarViewController+TagMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903B20050C9900FCA18C /* BFStarViewController+TagMan.swift */; };
 		5E31903E20050F6B00FCA18C /* BFStarViewController+Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */; };
 		5E365EA92115BDB900C45B93 /* BFStarViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */; };
+		5E3A5CB32240F11E00D28525 /* ShortcutKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A5CB22240F11E00D28525 /* ShortcutKey.swift */; };
+		5E3A5CB52240F48300D28525 /* ReadPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A5CB42240F48300D28525 /* ReadPreference.swift */; };
 		5E424D55212638ED00066967 /* BFStarViewController+RepoStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */; };
 		5E424D5C2127AC0B00066967 /* BFStarDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */; };
 		5E424D5D2127AC0B00066967 /* BFStarDownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */; };
@@ -392,6 +394,8 @@
 		5E31903D20050F6B00FCA18C /* BFStarViewController+Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Repo.swift"; sourceTree = "<group>"; };
 		5E365EA82115BDB900C45B93 /* BFStarViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+TextField.swift"; sourceTree = "<group>"; };
 		5E365EAA2115DDEC00C45B93 /* Theme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Theme.md; sourceTree = "<group>"; };
+		5E3A5CB22240F11E00D28525 /* ShortcutKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutKey.swift; sourceTree = "<group>"; };
+		5E3A5CB42240F48300D28525 /* ReadPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPreference.swift; sourceTree = "<group>"; };
 		5E424D54212638ED00066967 /* BFStarViewController+RepoStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+RepoStar.swift"; sourceTree = "<group>"; };
 		5E424D5A2127AC0B00066967 /* BFStarDownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFStarDownloadController.swift; sourceTree = "<group>"; };
 		5E424D5B2127AC0B00066967 /* BFStarDownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BFStarDownloadController.xib; sourceTree = "<group>"; };
@@ -1103,6 +1107,7 @@
 				5ECBD9102168B16A00F3C03E /* BFUserInterfaceItemIdentifier.swift */,
 				5ECBD9122168B27200F3C03E /* BFNibName.swift */,
 				5EC8C05F223F831100728935 /* NumberConvert.swift */,
+				5E3A5CB22240F11E00D28525 /* ShortcutKey.swift */,
 			);
 			path = ProConfig;
 			sourceTree = "<group>";
@@ -1279,6 +1284,7 @@
 			isa = PBXGroup;
 			children = (
 				5EFB14D320185C9C00304AD3 /* BFMenuManager.swift */,
+				5E3A5CB42240F48300D28525 /* ReadPreference.swift */,
 				5E2BADB4223BD59E00F569F0 /* PreferencesWindow.swift */,
 				5E2BADB6223BD5C300F569F0 /* PreferencesTabViewController.swift */,
 				5E2BADAC223BD49700F569F0 /* PreferencesWindow.storyboard */,
@@ -1620,6 +1626,7 @@
 				5E048A8321436C3D0098CBF6 /* BFExploreDevelopersViewItem.swift in Sources */,
 				5E5E821F20E4E2CE00E810E2 /* SEResponseCommits.swift in Sources */,
 				5E9867D91FD05189007EE86F /* ObjPage.swift in Sources */,
+				5E3A5CB52240F48300D28525 /* ReadPreference.swift in Sources */,
 				5E75D706210D5FCA007596E9 /* NSColor+Blue.swift in Sources */,
 				5EA3BF3C20AA751A00D3CC79 /* BeeFunAPI.swift in Sources */,
 				5E9867EB1FD05189007EE86F /* ObjEmail.swift in Sources */,
@@ -1736,6 +1743,7 @@
 				5E9867D11FD05189007EE86F /* ObjDeployment.swift in Sources */,
 				5E9ECE251FE0325300C02B3F /* BFStarViewController+Web.swift in Sources */,
 				5EEAC2902169FF920060E253 /* BFExploreDeveloperFlowLayout.swift in Sources */,
+				5E3A5CB32240F11E00D28525 /* ShortcutKey.swift in Sources */,
 				5E9867DB1FD05189007EE86F /* ObjRelease.swift in Sources */,
 				5E2C9D4D2165B316001910F9 /* BFGihubTrendingTimeEnum.swift in Sources */,
 				5EA3BF4720AAA4E500D3CC79 /* BFStatusCode.swift in Sources */,

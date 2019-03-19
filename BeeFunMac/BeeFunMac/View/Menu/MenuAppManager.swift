@@ -11,22 +11,24 @@ import Foundation
 class MenuAppManage {
     
     static let shared = MenuAppManage()
-    let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+    var statusItem: NSStatusItem?
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     
     func setupMainMenu() {
-        if let button = statusItem.button {
+        if ReadPreference.shard.registerMenuWhenAppOpen() {
+            statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+        }
+        if let button = statusItem?.button {
             button.image = NSImage(named: NSImage.Name("menu_logo_40"))
             button.target = self
             button.action = #selector(togglePopover(_:))
+            popover.contentViewController = MenuAppViewController.menuAppController()
+            eventMonitor = EventMonitor(mask: .leftMouseDown) { [weak self] event in
+                if self?.popover.isShown == true { self?.closePopover(sender: event) }
+            }
+            eventMonitor?.start()
         }
-        
-        popover.contentViewController = MenuAppViewController.menuAppController()
-        eventMonitor = EventMonitor(mask: .leftMouseDown) { [weak self] event in
-            if self?.popover.isShown == true { self?.closePopover(sender: event) }
-        }
-        eventMonitor?.start()
     }
     
     
@@ -39,7 +41,7 @@ class MenuAppManage {
     }
     
     func showPopover(sender: Any?) {
-        if let button = statusItem.button {
+        if let button = statusItem?.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             eventMonitor?.start()
         }
@@ -51,7 +53,9 @@ class MenuAppManage {
     }
     
     func remove() {
-        NSStatusBar.system.removeStatusItem(statusItem)
+        if let status = statusItem {
+            NSStatusBar.system.removeStatusItem(status)
+        }
     }
 }
 

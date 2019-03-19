@@ -16,8 +16,8 @@ class GeneralPaneController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         
-        self.shortcutView.associatedUserDefaultsKey = "GlobalShortcut"
-        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: "GlobalShortcut") {
+        self.shortcutView.associatedUserDefaultsKey = ShortcutKey.OpenGlobal
+        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: ShortcutKey.OpenGlobal) {
             self.showWindow()
         }
     }

@@ -23,6 +23,10 @@ extension DefaultKeys {
     /// 用户选择喜爱的语言
     static let FavouriteLanguages = "com.luci.userdefault.FavouriteLanguages"
    
+    /// 是否在启动时，注册menu app
+    static let RegisterMenuWhenAppOpen = DefaultKey<String>("com.luci.userdefault.RegisterMenuWhenAppOpen")
+    
+    // deprecated
     /// 从iphone app带过来的，这个key不能修改
     static let kAppleLanguageKey = "AppleLanguages"
     /// 从iphone app带过来的，用户选择的语言
