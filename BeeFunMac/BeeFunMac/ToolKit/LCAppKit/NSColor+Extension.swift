@@ -19,16 +19,26 @@ extension NSColor {
         self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
     }
     
-    public convenience init?(hex: String, alpha: CGFloat = 1.0) {
-        var formatted = hex.replacingOccurrences(of: "0x", with: "")
-        formatted = formatted.replacingOccurrences(of: "#", with: "")
-        if let hex = Int(formatted, radix: 16) {
-            let red = CGFloat(CGFloat((hex & 0xFF0000) >> 16)/255.0)
-            let green = CGFloat(CGFloat((hex & 0x00FF00) >> 8)/255.0)
-            let blue = CGFloat(CGFloat((hex & 0x0000FF) >> 0)/255.0)
-            self.init(red: red, green: green, blue: blue, alpha: alpha)        } else {
-            return nil
+    public convenience init?(hex hexString: String, alpha: CGFloat = 1.0) {
+        let hexInt = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt32()
+        Scanner(string: hexInt).scanHexInt32(&int)
+        if (hexInt.count>0) {
+            let r, g, b: UInt32
+            switch hexInt.count {
+            case 3: // RGB (12-bit)
+                (r, g, b) = ((int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+            case 6: // RGB (24-bit)
+                (r, g, b) = (int >> 16, int >> 8 & 0xFF, int & 0xFF)
+            case 8: // ARGB (32-bit)
+                (r, g, b) = (int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+            default:
+                (r, g, b) = (0, 0, 0)
+            }
+            self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: alpha)
+            return
         }
+        return nil
     }
     
     public convenience init(gray: CGFloat, alpha: CGFloat = 1) {

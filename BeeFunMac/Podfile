@@ -46,6 +46,8 @@ target 'BeeFun' do
     pod 'SwifterSwift/Foundation'
     pod 'SwifterSwift/AppKit'
     pod 'SwifterSwift/CoreGraphics'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 #    pod 'KeychainAccess'
 #    pod 'SwiftOCR'
 #    pod 'FlagKit'
@@ -53,6 +55,7 @@ target 'BeeFun' do
 #    pod 'YapAnimator'
     pod 'MASPreferences'
     pod 'MASShortcut'
+    pod "SkeletonView"
 #    pod 'ShortcutRecorder'
     pod 'ReachabilitySwift'
 #    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
