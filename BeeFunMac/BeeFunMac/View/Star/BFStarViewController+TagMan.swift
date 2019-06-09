@@ -218,8 +218,20 @@ extension BFStarViewController {
     func updateTagRefreshTagsAndRepos(noti: NSNotification) {
         
         if let userinfo = noti.userInfo, let renameTag = userinfo["to"] as? String {
-            getTagsPage = 1
-            BeeFunProvider.sharedProvider.request(BeeFunAPI.getAllTags(page: 0  , perpage: 0, sort: tagSortPara, direction: tagDirectionPara, containAll: "false")) { (result) in
+            tagFilter.owner = UserManager.shared.login
+            tagFilter.page = 1
+            tagFilter.pageSize = UInt.max
+            tagFilter.sord = tagDirectionPara
+            tagFilter.sidx = tagSortPara
+            
+            var dict: [String: Any] = [:]
+            do {
+                dict = try JSONSerialization.jsonObject(with: try JSONEncoder().encode(tagFilter), options: []) as! [String: Any]
+            } catch {
+                print("tag filter is error")
+            }
+            
+            BeeFunProvider.sharedProvider.request(BeeFunAPI.getAllTags(filter: dict) ) { (result) in
                 self.getTagsNextPageLoading = false
                 switch result {
                 case let .success(response):

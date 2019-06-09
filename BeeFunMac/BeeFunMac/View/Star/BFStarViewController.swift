@@ -57,6 +57,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     //tag管理区域
     var clickAllStar: Bool = true
     var clickUntaggedStar: Bool = false
+    var tagFilter: TagFilter = TagFilter()
     var tagSortPara = "name"
     var tagDirectionPara = "desc"
     

@@ -24,8 +24,22 @@ extension BFStarViewController {
     
     // MARK: 获取所有Tag列表
     func getAllTagsDataNetwork() {
+        if let owner = UserManager.shared.login {
+            tagFilter.owner = owner
+        }
+        tagFilter.page = 1
+        tagFilter.pageSize = 100000
+        tagFilter.sord = tagDirectionPara
+        tagFilter.sidx = tagSortPara
         
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.getAllTags(page: 0  , perpage: 0, sort: tagSortPara, direction: tagDirectionPara, containAll: "false")) { (result) in
+        var dict: [String: Any] = [:]
+        do {
+            dict = try JSONSerialization.jsonObject(with: try JSONEncoder().encode(tagFilter), options: []) as! [String: Any]
+        } catch {
+            print("tag filter is error")
+        }
+        
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.getAllTags(filter: dict) ) { (result) in
             self.getTagsNextPageLoading = false
             switch result {
             case let .success(response):

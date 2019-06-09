@@ -67,8 +67,7 @@ public enum BeeFunAPI {
     case addRepo(repo: ObjRepos)
     
 // MARK: - tag
-    //page或perpage传0，就返回所有数据
-    case getAllTags(page:Int, perpage:Int, sort:String, direction:String, containAll: String)
+    case getAllTags(filter: [String: Any])
     case getTag(name: String)
     case addTag(tagModel: ObjTag)
     case addTagToRepo(change:Bool, star_tags: String, delete_tags:[String], repoId: Int)
@@ -110,8 +109,8 @@ extension BeeFunAPI: TargetType {
     public var baseURL: URL {
         switch self {
         default:
-            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
-//            return URL(string: "http://localhost:8082")!                                  //本地测试环境
+//            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
+            return URL(string: "http://localhost:8082")!                                  //本地测试环境
         }
     }
     
@@ -134,18 +133,20 @@ extension BeeFunAPI: TargetType {
             return "/v1/repo/\(repoid)"
             
         // tag操作
-        case .getAllTags(_, _, _, _, _):
-            return "/v1/tags"
+        case .getAllTags(_):
+            return "/v2/tags"
         case .getTag(let name):
-            return "/v1/tag/\(name)"
+            return "/v2/tag/\(name)"
         case .addTag(_):
-            return "/v1/tag"
+            return "/v2/tag"
         case .addTagToRepo(_, _, _, let repoId):
-            return "/v1/repo/tag/\(repoId)"
+            return "/v2/repo/tag/\(repoId)"
         case .updateTag(let name, _):
-            return "/v1/tag/\(name)"
+            return "/v2/tag/\(name)"
         case .deleteTag(let name):
-            return "/v1/tag/\(name)"
+            return "/v2/tag/\(name)"
+            
+            
         case .getLanguages(_, _, _, _):
             return "/v1/lans"
             
@@ -190,14 +191,8 @@ extension BeeFunAPI: TargetType {
             return user.toJSON()
         case .addRepo(let repo):
             return repo.toJSON()
-        case .getAllTags(let page, let perpage, let sort, let direction, let containAll):
-            return [
-                "page": page as AnyObject,
-                "perpage": perpage as AnyObject,
-                "sort": sort as AnyObject,
-                "direction": direction as AnyObject,
-                "containAll": containAll as AnyObject
-            ]
+        case .getAllTags(let filter):
+            return filter
         case .updateTag(_, let to):
             return [
                 "to": to

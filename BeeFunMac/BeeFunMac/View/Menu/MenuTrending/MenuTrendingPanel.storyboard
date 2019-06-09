@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Nt8-vs-J0f">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Nt8-vs-J0f">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,6 +21,11 @@
                                     <constraint firstAttribute="width" constant="340" id="9Rb-c8-Q0t"/>
                                     <constraint firstAttribute="height" constant="1" id="kl0-nY-NfP"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="iWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </box>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-bU-pKu">
                                 <rect key="frame" x="0.0" y="0.0" width="340" height="467"/>
@@ -73,27 +79,27 @@
                                 </segmentedCell>
                             </segmentedControl>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="soo-od-AUK">
-                                <rect key="frame" x="7" y="474" width="38" height="17"/>
+                                <rect key="frame" x="9" y="474" width="34" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="OVJ-fl-z4s"/>
                                     <constraint firstAttribute="width" constant="34" id="vIk-vX-RiU"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Type:" id="IPN-on-cSl">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Type:" drawsBackground="YES" id="IPN-on-cSl">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="iClear"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SQg-fd-eTQ">
-                                <rect key="frame" x="2" y="497" width="50" height="17"/>
+                                <rect key="frame" x="4" y="497" width="46" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="N2H-Wf-QBW"/>
                                     <constraint firstAttribute="height" constant="17" id="zYt-iZ-KEH"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Langs:" id="IWi-em-H1X">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Langs:" drawsBackground="YES" id="IWi-em-H1X">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="iClear"/>
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="4nx-l0-xXR">
@@ -113,6 +119,11 @@
                                     <constraint firstAttribute="width" constant="16" id="Dl9-ip-q39"/>
                                     <constraint firstAttribute="height" constant="16" id="kYw-bx-P7i"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="iClear"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </progressIndicator>
                         </subviews>
                         <constraints>
@@ -137,6 +148,11 @@
                             <constraint firstItem="UX0-9o-jmX" firstAttribute="leading" secondItem="SQg-fd-eTQ" secondAttribute="trailing" id="oe6-mt-C4h"/>
                             <constraint firstAttribute="trailing" secondItem="4nx-l0-xXR" secondAttribute="trailing" constant="5" id="zIQ-VK-kdE"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="iWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="languageSegmentControl" destination="UX0-9o-jmX" id="fPP-sB-aDo"/>
@@ -154,5 +170,11 @@
     </scenes>
     <resources>
         <image name="NSRefreshTemplate" width="11" height="15"/>
+        <namedColor name="iClear">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="iWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

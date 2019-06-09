@@ -18,8 +18,8 @@ public class ObjTag: NSObject, Mappable, NSCopying {
         newCopy.count = count
         newCopy.sort = sort
         newCopy.repos = repos
-        newCopy.created_at = created_at
-        newCopy.updated_at = updated_at
+        newCopy.createdAt = createdAt
+        newCopy.updatedAt = updatedAt
         return newCopy
     }
     
@@ -28,8 +28,8 @@ public class ObjTag: NSObject, Mappable, NSCopying {
     var count: Int?
     var sort: Int?
     var repos: String?
-    var created_at: Int64?
-    var updated_at: Int64?
+    var createdAt: Int64?
+    var updatedAt: Int64?
     
     required public init?(map: Map) {
     }
@@ -44,8 +44,7 @@ public class ObjTag: NSObject, Mappable, NSCopying {
         count <- map["count"]
         sort <- map["sort"]
         repos <- map["repos"]
-        created_at <- map["created_at"]
-        updated_at <- map["updated_at"]
+        createdAt <- map["createdAt"]
+        updatedAt <- map["updatedAt"]
     }
-    
 }

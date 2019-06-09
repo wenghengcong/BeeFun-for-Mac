@@ -19,6 +19,7 @@ extension MenuTrendingController {
         
         refreshButton.target = self
         refreshButton.action = #selector(handleRefresh(sender:))
+        refreshButton.backgColor = NSColor.clear
     }
     
     @objc func handleLanguageChanged(sender: Any) {

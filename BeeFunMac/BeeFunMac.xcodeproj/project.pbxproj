@@ -49,6 +49,7 @@
 		5E25A21A1FEE419A00298E40 /* BFStarViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */; };
 		5E26763A201B0972006A3020 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E267639201B0972006A3020 /* NSObject+Swizzle.swift */; };
 		5E26763C201B130D006A3020 /* BFWKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */; };
+		5E279E4922AC86D900B116CF /* NetFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E279E4822AC86D900B116CF /* NetFilter.swift */; };
 		5E28166A1FCBED62007A5159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2816691FCBED62007A5159 /* AppDelegate.swift */; };
 		5E28166E1FCBED62007A5159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E28166D1FCBED62007A5159 /* Assets.xcassets */; };
 		5E2816711FCBED62007A5159 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E28166F1FCBED62007A5159 /* MainMenu.storyboard */; };
@@ -334,6 +335,7 @@
 		5E25A2191FEE419A00298E40 /* BFStarViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BFStarViewController+Search.swift"; sourceTree = "<group>"; };
 		5E267639201B0972006A3020 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		5E26763B201B130D006A3020 /* BFWKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFWKNavigationDelegate.swift; sourceTree = "<group>"; };
+		5E279E4822AC86D900B116CF /* NetFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetFilter.swift; sourceTree = "<group>"; };
 		5E2816661FCBED62007A5159 /* BeeFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2816691FCBED62007A5159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E28166D1FCBED62007A5159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -687,6 +689,14 @@
 				5E2BADC3223CCB6C00F569F0 /* MenuPanelSplitView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		5E279E4A22AC86E000B116CF /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				5E279E4822AC86D900B116CF /* NetFilter.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		5E28165D1FCBED62007A5159 = {
@@ -1171,6 +1181,7 @@
 		5E9867B71FD05189007EE86F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5E279E4A22AC86E000B116CF /* Filter */,
 				5EA3BF4620AAA4E500D3CC79 /* BFStatusCode.swift */,
 				5E9867B81FD05189007EE86F /* AppToken.swift */,
 				5E9867B91FD05189007EE86F /* ObjErropReponse.swift */,
@@ -1756,6 +1767,7 @@
 				5E3029F5222BAC6700D81874 /* BFLangModel.swift in Sources */,
 				5E2B26721FDC346B00600866 /* NSColor+Extension.swift in Sources */,
 				5EC1B1A82018D6DC00186A67 /* BFWebsiteURL.swift in Sources */,
+				5E279E4922AC86D900B116CF /* NetFilter.swift in Sources */,
 				5E5E822820E4E2CE00E810E2 /* SESearchRepoModel.swift in Sources */,
 				5E9867D61FD05189007EE86F /* ObjLinks.swift in Sources */,
 				5E9867D31FD05189007EE86F /* ObjEvent.swift in Sources */,
