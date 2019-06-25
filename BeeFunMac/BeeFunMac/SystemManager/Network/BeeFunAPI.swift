@@ -109,8 +109,8 @@ extension BeeFunAPI: TargetType {
     public var baseURL: URL {
         switch self {
         default:
-//            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
-            return URL(string: "http://localhost:8082")!                                  //本地测试环境
+            return URL(string: "https://www.beefun.top:8082/beefun")!                    //远程环境
+//            return URL(string: "http://localhost:8082")!                                  //本地测试环境
         }
     }
     
