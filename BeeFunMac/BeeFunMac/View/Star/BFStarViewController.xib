@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,8 @@
                 <outlet property="newTagBackView" destination="4jO-N3-phY" id="XKD-MJ-C0x"/>
                 <outlet property="newTagTextField" destination="TcX-2a-Qhf" id="Izt-4n-qjh"/>
                 <outlet property="orderFilterView" destination="hEo-Cc-YIc" id="l2R-v7-sP1"/>
-                <outlet property="refreshButton" destination="5ot-qA-3Bl" id="39C-3f-YuK"/>
+                <outlet property="refreshRepoButton" destination="5ot-qA-3Bl" id="39C-3f-YuK"/>
+                <outlet property="refreshTagButton" destination="jwM-a9-laL" id="V9z-V1-fKv"/>
                 <outlet property="repoDescLbl" destination="5As-XG-dge" id="MPh-ly-xHG"/>
                 <outlet property="repoDwnBtn" destination="FSx-qo-OmR" id="hmJ-Jp-lyt"/>
                 <outlet property="repoInfoLbl" destination="kwa-tJ-jH2" id="Js8-kf-r2e"/>
@@ -219,8 +220,19 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwM-a9-laL">
+                                            <rect key="frame" x="167" y="6" width="23" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="VZL-9t-UI6"/>
+                                                <constraint firstAttribute="height" constant="23" id="lbP-lJ-6XT"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="Rdu-h4-rTF">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaY-st-0O5">
-                                            <rect key="frame" x="99" y="4" width="99" height="26"/>
+                                            <rect key="frame" x="63" y="5" width="99" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="00:10" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Klh-J1-oPk" id="3gV-7Q-7kD">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -236,9 +248,11 @@
                                         </popUpButton>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="jwM-a9-laL" firstAttribute="top" secondItem="g3E-aS-Bm8" secondAttribute="top" constant="6" id="7XE-Jg-DB0"/>
                                         <constraint firstItem="afE-yY-Ppg" firstAttribute="leading" secondItem="g3E-aS-Bm8" secondAttribute="leading" id="7pg-Am-fXy"/>
                                         <constraint firstItem="959-bl-xb0" firstAttribute="top" secondItem="g3E-aS-Bm8" secondAttribute="top" constant="2" id="DuR-Gb-WfX"/>
                                         <constraint firstAttribute="trailing" secondItem="afE-yY-Ppg" secondAttribute="trailing" id="QKc-bF-Tck"/>
+                                        <constraint firstAttribute="trailing" secondItem="jwM-a9-laL" secondAttribute="trailing" constant="10" id="Vts-sT-8hH"/>
                                         <constraint firstAttribute="bottom" secondItem="afE-yY-Ppg" secondAttribute="bottom" id="bMP-bJ-0u1"/>
                                         <constraint firstItem="959-bl-xb0" firstAttribute="leading" secondItem="g3E-aS-Bm8" secondAttribute="leading" constant="7" id="fgi-i4-T1H"/>
                                         <constraint firstAttribute="height" constant="35" id="onR-Xt-KEC"/>
@@ -590,7 +604,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
                     <clipView key="contentView" id="rfv-Yt-sFD">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="gFc-Ii-BNl">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="537"/>
@@ -862,7 +876,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="Zei-gx-zVJ">
                 <rect key="frame" x="1" y="0.0" width="632" height="166"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Hdh-go-ksf" viewBased="YES" id="hYT-Xu-Uuz">
                         <rect key="frame" x="0.0" y="0.0" width="632" height="143"/>
@@ -904,23 +918,23 @@
         </scrollView>
     </objects>
     <resources>
-        <image name="star_order_day_a_z" width="40" height="40"/>
-        <image name="star_order_day_a_z_sel" width="40" height="40"/>
-        <image name="star_order_day_num" width="40" height="40"/>
+        <image name="star_order_day_a_z" width="20" height="20"/>
+        <image name="star_order_day_a_z_sel" width="20" height="20"/>
+        <image name="star_order_day_num" width="20" height="20"/>
         <image name="star_order_day_num_sel" width="21" height="20"/>
         <image name="star_order_day_time" width="21" height="19.5"/>
-        <image name="star_order_day_time_sel" width="40" height="40"/>
+        <image name="star_order_day_time_sel" width="20" height="20"/>
         <image name="star_tag_day_all_sel" width="786" height="821"/>
         <image name="star_tag_day_untagged" width="714" height="716"/>
-        <image name="star_tool_day_web_arrow_left" width="80" height="80"/>
-        <image name="star_tool_day_web_arrow_right" width="80" height="80"/>
+        <image name="star_tool_day_web_arrow_left" width="40" height="40"/>
+        <image name="star_tool_day_web_arrow_right" width="40" height="40"/>
         <image name="star_tool_day_web_download" width="100" height="100"/>
         <image name="star_tool_day_web_readme" width="184" height="62"/>
-        <image name="star_tool_day_web_refresh" width="120" height="120"/>
+        <image name="star_tool_day_web_refresh" width="60" height="60"/>
         <image name="star_tool_day_web_repopage" width="100" height="100"/>
         <image name="star_tool_day_web_star" width="100" height="100"/>
         <image name="star_tool_day_web_star_sel" width="100" height="100"/>
-        <image name="star_tool_day_web_tag" width="120" height="120"/>
+        <image name="star_tool_day_web_tag" width="60" height="60"/>
         <namedColor name="xyBlackDarkWhite">
             <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

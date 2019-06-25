@@ -16,14 +16,18 @@ extension BFStarViewController {
     func starButtonsReady() {
         
 //        self.refreshButton.isHidden = true
-        refreshButton.target = self
-        refreshButton.action = #selector(refreshDataFromNetwork)
+        refreshRepoButton.target = self
+        refreshRepoButton.action = #selector(refreshRepoDataFromNetwork)
         
         allStarsBtn.target = self
         allStarsBtn.action = #selector(clickAllStarButton)
         
         untaggedStarBtn.target = self
         untaggedStarBtn.action = #selector(clickUntaggedStarButton)
+        
+        
+        refreshTagButton.target = self
+        refreshTagButton.action = #selector(refreshTagDataFromNetwork)
         
         tagSortButton.target = self
         tagSortButton.action = #selector(clickSortTagButton)
@@ -42,19 +46,24 @@ extension BFStarViewController {
     }
     
     //刷新按钮
-    @objc func refreshDataFromNetwork() {
+    @objc func refreshRepoDataFromNetwork() {
         //启动从Github拉取数据，更新服务端数据库
         BeeFunDBManager.shared.updateServerDB(first: false)
     }
     
+    //刷新按钮
+    @objc func refreshTagDataFromNetwork() {
+        getAllTagsDataNetwork()
+    }
+    
     //刷新按钮开始转动
     func refreshStartRotate() {
-        self.refreshButton.rotate()
+        self.refreshRepoButton.rotate()
     }
     
     //刷新按钮停止转动
     func refreshStopRotate() {
-        self.refreshButton.stopRotating()
+        self.refreshRepoButton.stopRotating()
     }
     
     //点击All Star
@@ -220,7 +229,7 @@ extension BFStarViewController {
         if let userinfo = noti.userInfo, let renameTag = userinfo["to"] as? String {
             tagFilter.owner = UserManager.shared.login
             tagFilter.page = 1
-            tagFilter.pageSize = UInt.max
+            tagFilter.pageSize = 100000
             tagFilter.sord = tagDirectionPara
             tagFilter.sidx = tagSortPara
             

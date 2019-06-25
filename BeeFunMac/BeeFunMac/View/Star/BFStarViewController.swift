@@ -74,7 +74,7 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     //tag管理区域右边的线
     @IBOutlet weak var tagManagerRightLine: NSView!
     
-    @IBOutlet weak var refreshButton: BFImageButton!
+    @IBOutlet weak var refreshRepoButton: BFImageButton!
     @IBOutlet weak var starSyncLabel: NSTextField!
     
     @IBOutlet weak var allStarsBtn: NSButton!
@@ -82,6 +82,8 @@ class BFStarViewController: NSViewController, NSTableViewDataSource, NSTableView
     @IBOutlet weak var untaggedStarBtn: NSButton!
     @IBOutlet weak var untaggedStarsImageView: NSImageView!
     
+    
+    @IBOutlet weak var refreshTagButton: NSButton!
     @IBOutlet weak var tagSortButton: NSPopUpButton!
     @IBOutlet weak var tagTextLabel: NSTextField!
     

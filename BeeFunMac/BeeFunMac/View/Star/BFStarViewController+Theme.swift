@@ -37,10 +37,12 @@ extension BFStarViewController {
         tagTextLabel.backgroundColor = NSColor.xyWhiteDarkBlack
         tagTextLabel.textColor = NSColor.xyBlackDarkWhite
         
-        refreshButton.image = thManager.starSyncImage(selected: false)
+        refreshRepoButton.image = thManager.starSyncImage(selected: false)
         starSyncLabel.backgroundColor = NSColor.xyWhiteDarkBlack
         starSyncLabel.textColor = NSColor.xyBlackDarkWhite
         starSyncBackView.backgColor = NSColor.xyWhiteDarkBlack
+        
+        refreshTagButton.image = thManager.starSyncImage(selected: false)
                 
         //保存新Tag按钮
         saveNewTagBtn.image = thManager.starSaveTagImage(selected: false)
