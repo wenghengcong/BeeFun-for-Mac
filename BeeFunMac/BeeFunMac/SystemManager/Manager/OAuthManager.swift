@@ -40,16 +40,15 @@ class OAuthManager: NSObject {
         oauthswift.authorizeURLHandler = getURLHandler(external: false)
         let state = generateState(withLength: 20)
         
-        let _ = oauthswift.authorize(
-            withCallbackURL: URL(string: GithubAppRedirectUrl)!, scope: scope, state: state,
-            success: { credential, response, parameters in
-                NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetOAuthToken, object:nil)
-                self.saveOauthToken(credential: credential, parameters: parameters)
-        },
-            failure: { error in
-                print(error.description)
+        let _ = oauthswift.authorize(withCallbackURL:  URL(string: GithubAppRedirectUrl)!, scope: scope, state: state) { (result) in
+            switch result {
+                case .success(let response):
+                    NotificationCenter.default.post(name: NSNotification.Name.BeeFun.GetOAuthToken, object:nil)
+                    self.saveOauthToken(credential: response.credential, parameters: response.parameters)
+                case .failure(let error):
+                    print(error.description)
             }
-        )
+        }
     }
 
     func getURLHandler(external: Bool) -> OAuthSwiftURLHandlerType {
