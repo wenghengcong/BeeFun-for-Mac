@@ -112,7 +112,7 @@ class JSApp: NSObject {
         if appId == UnKnown {
             appId = AppleAppID
         }
-        let appstroreUrl = ("itms-apps://itunes.apple.com/app/id\(appId)")
+        _ = ("itms-apps://itunes.apple.com/app/id\(appId)")
 //        UIApplication.shared.openURL(  URL(string: appstroreUrl)! )
     }
 

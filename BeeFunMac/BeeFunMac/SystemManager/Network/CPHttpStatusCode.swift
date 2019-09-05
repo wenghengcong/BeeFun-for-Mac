@@ -94,23 +94,23 @@ public enum CPHttpStatusCode: Int {
 
 public extension CPHttpStatusCode {
     /// Informational - Request received, continuing process.
-    public var isInformational: Bool {
+    var isInformational: Bool {
         return inRange( (100...199) )
     }
     /// Success - The action was successfully received, understood, and accepted.
-    public var isSuccess: Bool {
+    var isSuccess: Bool {
         return inRange( (200...299) )
     }
     /// Redirection - Further action must be taken in order to complete the request.
-    public var isRedirection: Bool {
+    var isRedirection: Bool {
         return inRange( (300...399) )
     }
     /// Client Error - The request contains bad syntax or cannot be fulfilled.
-    public var isClientError: Bool {
+    var isClientError: Bool {
         return inRange(400...499)
     }
     /// Server Error - The server failed to fulfill an apparently valid request.
-    public var isServerError: Bool {
+    var isServerError: Bool {
         return inRange(500...599)
     }
 
