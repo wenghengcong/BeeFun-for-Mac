@@ -14,7 +14,7 @@ final class BFEditLangPanel {
     
     func panelController() -> NSWindowController {
         let panelController = NSWindowController.instantiate(storyboard: "BFEditLangPanel")
-        if let viewCont = panelController.contentViewController as? BFEditLangViewController {
+        if (panelController.contentViewController as? BFEditLangViewController) != nil {
             
         }
         return panelController

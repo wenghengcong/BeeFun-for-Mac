@@ -17,7 +17,7 @@ final class BFLangPanel {
     
     func panelController() -> NSWindowController {
         let panelController = NSWindowController.instantiate(storyboard: "BFLangPanel")
-        if let viewCont = panelController.contentViewController as? BFLangViewController {
+        if (panelController.contentViewController as? BFLangViewController) != nil {
         }
         return panelController
     }

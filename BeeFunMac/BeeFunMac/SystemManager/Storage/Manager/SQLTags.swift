@@ -209,9 +209,9 @@ extension SQLTags {
         let query = starTagsTable.filter(tagObj.name! == nameId)
         do {
             if try SQLManager.githubDB(tmp: false).run(query.delete()) > 0 {
-                print("deleted tag id:\(tagObj.name)")
+                print("deleted tag id:\(String(describing: tagObj.name))")
             } else {
-                print("not found tag id:\(tagObj.name)")
+                print("not found tag id:\(String(describing: tagObj.name))")
             }
         } catch {
             print("delete tag failed: \(error)")

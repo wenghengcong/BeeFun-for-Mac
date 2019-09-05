@@ -25,7 +25,7 @@ extension NSFont {
     }
     
     class func bfBoldSystemFont(ofSize: CGFloat) -> NSFont {
-        return NSFont.boldSystemFont(ofSize: ofSize)
+//        return NSFont.boldSystemFont(ofSize: ofSize)
         return NSFont(name: "PingFang-SC-Medium", size: ofSize)!
     }
     
