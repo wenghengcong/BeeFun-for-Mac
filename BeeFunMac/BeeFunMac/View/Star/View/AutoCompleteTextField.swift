@@ -169,7 +169,7 @@ class AutoCompleteTextField: NSTextField {
     
     override func complete(_ sender: Any?) {
         
-        let lengthOfWord = self.stringValue.characters.count
+        let lengthOfWord = self.stringValue.count
         let subStringRange = NSMakeRange(0, lengthOfWord)
         
         //This happens when we just started a new word or if we have already typed the entire word

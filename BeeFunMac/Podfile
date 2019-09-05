@@ -55,7 +55,7 @@ target 'BeeFun' do
 #    pod 'YapAnimator'
     pod 'MASPreferences'
     pod 'MASShortcut'
-    pod "SkeletonView"
+#    pod "SkeletonView"
 #    pod 'ShortcutRecorder'
     pod 'ReachabilitySwift'
 #    pod 'Kanna', :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
