@@ -17,7 +17,7 @@ class BFConfig: NSObject {
     var appStoreInReview = true
     
     func getConfig() {
-        BeeFunProvider.sharedProvider.request(BeeFunAPI.config()) { (result) in
+        BeeFunProvider.sharedProvider.request(BeeFunAPI.config) { (result) in
             switch result {
             case let .success(response):
                 do {

@@ -1,40 +1,46 @@
 PODS:
-  - Alamofire (4.8.1)
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
-  - CryptoSwift (0.14.0)
-  - Down (0.6.2)
-  - Fabric (1.9.0)
-  - Kingfisher (5.2.0)
+  - Alamofire (4.9.0)
+  - Crashlytics (3.13.4):
+    - Fabric (~> 1.10.2)
+  - CryptoSwift (1.0.0)
+  - Down (0.8.6)
+  - Fabric (1.10.2)
+  - Kingfisher (5.7.1)
   - MASPreferences (1.3)
-  - MASShortcut (2.3.6)
-  - Moya (12.0.1):
-    - Moya/Core (= 12.0.1)
-  - Moya/Core (12.0.1):
+  - MASShortcut (2.4.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 4.0)
-  - OAuthSwift (1.3.0)
-  - ObjectMapper (3.4.2)
-  - PromiseKit (6.8.3):
-    - PromiseKit/CorePromise (= 6.8.3)
-    - PromiseKit/Foundation (= 6.8.3)
-    - PromiseKit/UIKit (= 6.8.3)
-  - PromiseKit/CorePromise (6.8.3)
-  - PromiseKit/Foundation (6.8.3):
+    - Result (~> 4.1)
+  - OAuthSwift (2.0.0)
+  - ObjectMapper (3.5.1)
+  - PromiseKit (6.11.0):
+    - PromiseKit/CorePromise (= 6.11.0)
+    - PromiseKit/Foundation (= 6.11.0)
+    - PromiseKit/UIKit (= 6.11.0)
+  - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
     - PromiseKit/CorePromise
-  - ReachabilitySwift (4.3.0)
+  - ReachabilitySwift (4.3.1)
   - Result (4.1.0)
-  - SnapKit (4.2.0)
-  - SQLite.swift (0.11.5):
-    - SQLite.swift/standard (= 0.11.5)
-  - SQLite.swift/standard (0.11.5)
-  - SwiftDate (5.1.0)
-  - SwifterSwift/AppKit (4.6.0)
-  - SwifterSwift/CoreGraphics (4.6.0)
-  - SwifterSwift/Foundation (4.6.0)
-  - SwifterSwift/SwiftStdlib (4.6.0)
-  - SwiftyBeaver (1.6.2)
-  - SwiftyJSON (4.2.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SnapKit (5.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftDate (6.0.3)
+  - SwifterSwift/AppKit (5.0.0)
+  - SwifterSwift/CoreGraphics (5.0.0)
+  - SwifterSwift/Foundation (5.0.0)
+  - SwifterSwift/SwiftStdlib (5.0.0)
+  - SwiftyBeaver (1.7.1)
+  - SwiftyJSON (5.0.0)
   - Zip (1.1.0)
 
 DEPENDENCIES:
@@ -51,6 +57,8 @@ DEPENDENCIES:
   - ObjectMapper
   - PromiseKit
   - ReachabilitySwift
+  - RxCocoa
+  - RxSwift
   - SnapKit
   - SQLite.swift
   - SwiftDate
@@ -77,6 +85,9 @@ SPEC REPOS:
     - PromiseKit
     - ReachabilitySwift
     - Result
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
     - SQLite.swift
     - SwiftDate
@@ -92,32 +103,35 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   OAuthSwift:
-    :commit: e41e5e18566e065bd4fb3d7b6a94388bafd8fa26
+    :commit: b8941a23d1584ba17426c312bb957de355341f4a
     :git: https://github.com/OAuthSwift/OAuthSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
-  Down: 8c59a03cb229ef28dfa774b2132da860f3dee0ac
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  Down: 3c758f2388fa739663023f400e742a988fa1e21d
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   MASPreferences: c08b8622dd17b47da87669e741efd7c92e970e8c
-  MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
-  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  OAuthSwift: 7ef2f74cb570e1e30e2aeddc58fccc0f3891d057
-  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
-  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  MASShortcut: d9e4909e878661cc42877cc9d6efbe638273ab57
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  OAuthSwift: 6805456763cf1c7ae0c16765257ed430b7aacae7
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
-  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
-  SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
-  SwiftyBeaver: 8e67ab3cd94389cbbb7a9c7cc02748d98bfee68e
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
+  SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
+  SwiftyBeaver: da5e573ad583586c18236324c36900990afe1733
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 29f9f33326da753889ad7b29e6173f92127de7f8
+PODFILE CHECKSUM: 731d4a60403e4ba5299bab705fc976fcbb7840cc
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.7.5

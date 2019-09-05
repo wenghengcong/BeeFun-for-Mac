@@ -2,19 +2,20 @@
 [![Build Status](https://travis-ci.org/iwasrobbed/Down.svg?branch=master)](https://travis-ci.org/iwasrobbed/Down)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/iwasrobbed/Down/blob/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Down.svg?maxAge=10800)]()
-[![Swift 4](https://img.shields.io/badge/language-Swift-blue.svg)](https://swift.org)
+[![Swift 5](https://img.shields.io/badge/language-Swift-blue.svg)](https://swift.org)
 [![macOS](https://img.shields.io/badge/OS-macOS-orange.svg)](https://developer.apple.com/macos/)
 [![iOS](https://img.shields.io/badge/OS-iOS-orange.svg)](https://developer.apple.com/ios/)
 [![tvOS](https://img.shields.io/badge/OS-tvOS-orange.svg)](https://developer.apple.com/tvos/)
 [![Coverage Status](https://coveralls.io/repos/github/iwasrobbed/Down/badge.svg?branch=master)](https://coveralls.io/github/iwasrobbed/Down?branch=master)
 
-Blazing fast Markdown (CommonMark) rendering in Swift, built upon [cmark v0.28.3](https://github.com/commonmark/cmark).
+Blazing fast Markdown (CommonMark) rendering in Swift, built upon [cmark v0.29.0](https://github.com/commonmark/cmark).
 
 Is your app using it? [Let us know!](mailto:rob@robphillips.me)
 
 #### Maintainers
 
 - [Rob Phillips](https://github.com/iwasrobbed)
+- [John Nguyen](https://github.com/johnxnguyen)
 - [Keaton Burleson](https://github.com/128keaton)
 - [phoney](https://github.com/phoney)
 - [Tony Arnold](https://github.com/tonyarnold)
@@ -24,7 +25,7 @@ Is your app using it? [Let us know!](mailto:rob@robphillips.me)
 
 ### Installation
 
-Note: Swift 4 support is now on the `master` branch and any tag >= 0.4.x (Swift 3 is 0.3.x)
+Note: Swift 5 support is now on the `master` branch and any tag >= 0.8.1 (Swift 4 is >= 0.4.x, Swift 3 is 0.3.x)
 
 Quickly install using [CocoaPods](https://cocoapods.org):
 
@@ -46,8 +47,8 @@ e.g.
 Or manually install:
 
 1. Clone this repository
-2. Build the Down project
-3. Add the resulting framework file to your project
+2. Drag and drop the Down project into your workspace file, adding the framework in the embedded framework section
+2. Build and run your app
 4. ?
 5. Profit
 
@@ -198,9 +199,17 @@ public static let hardBreaks = DownOptions(rawValue: 1 << 2)
  `file:`, and `data:`, except for `image/png`, `image/gif`,
  `image/jpeg`, or `image/webp` mime types).  Raw HTML is replaced
  by a placeholder HTML comment. Unsafe links are replaced by
- empty strings.
+ empty strings. Note that this option is provided for backwards
+ compatibility, but safe mode is now the default. 
 */
 public static let safe = DownOptions(rawValue: 1 << 3)
+
+/**
+ Allow raw HTML and unsafe links. Note that safe mode is now 
+ the default, and the unsafe option must be used if rendering
+ of raw HTML and unsafe links is desired. 
+*/
+public static let unsafe = DownOptions(rawValue: 1 << 17)
 
 // MARK: - Parsing Options
 
@@ -219,6 +228,11 @@ public static let validateUTF8 = DownOptions(rawValue: 1 << 5)
  Convert straight quotes to curly, --- to em dashes, -- to en dashes.
 */
 public static let smart = DownOptions(rawValue: 1 << 6)
+
+/**
+ Combine smart typography with HTML rendering. 
+*/
+public static let smartUnsaFe = DownOptions(rawValue: (1 << 17) + (1 << 6))
 ```
 
 ### Supports
@@ -234,4 +248,4 @@ Please feel free to fork and create a pull request for bug fixes or improvements
 ### Credit
 This library is a wrapper around [cmark](https://github.com/commonmark/cmark), which is built upon the [CommonMark](http://commonmark.org) Markdown specification.
 
-[cmark](https://github.com/commonmark/cmark) is Copyright (c) 2014 - 2017, John MacFarlane. View [full license](https://github.com/commonmark/cmark/blob/master/COPYING).
+[cmark](https://github.com/commonmark/cmark) is Copyright (c) 2014, John MacFarlane. View [full license](https://github.com/commonmark/cmark/blob/master/COPYING).

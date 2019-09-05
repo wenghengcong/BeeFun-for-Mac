@@ -39,6 +39,7 @@ class OAuthManager: NSObject {
         self.oauthswift = oauthswift
         oauthswift.authorizeURLHandler = getURLHandler(external: false)
         let state = generateState(withLength: 20)
+        
         let _ = oauthswift.authorize(
             withCallbackURL: URL(string: GithubAppRedirectUrl)!, scope: scope, state: state,
             success: { credential, response, parameters in

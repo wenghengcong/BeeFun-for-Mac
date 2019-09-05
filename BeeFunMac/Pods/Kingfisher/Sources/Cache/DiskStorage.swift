@@ -190,17 +190,32 @@ public enum DiskStorage {
             }
         }
 
-        func cacheFileURL(forKey key: String) -> URL {
+        /// The URL of the cached file with a given computed `key`.
+        ///
+        /// - Note:
+        /// This method does not guarantee there is an image already cached in the returned URL. It just gives your
+        /// the URL that the image should be if it exists in disk storage, with the give key.
+        ///
+        /// - Parameter key: The final computed key used when caching the image. Please note that usually this is not
+        /// the `cacheKey` of an image `Source`. It is the computed key with processor identifier considered.
+        public func cacheFileURL(forKey key: String) -> URL {
             let fileName = cacheFileName(forKey: key)
             return directoryURL.appendingPathComponent(fileName)
         }
 
         func cacheFileName(forKey key: String) -> String {
-            let hashedKey = key.kf.md5
-            if let ext = config.pathExtension {
-                return "\(hashedKey).\(ext)"
+            if config.usesHashedFileName {
+                let hashedKey = key.kf.md5
+                if let ext = config.pathExtension {
+                    return "\(hashedKey).\(ext)"
+                }
+                return hashedKey
+            } else {
+                if let ext = config.pathExtension {
+                    return "\(key).\(ext)"
+                }
+                return key
             }
-            return hashedKey
         }
 
         func allFileURLs(for propertyKeys: [URLResourceKey]) throws -> [URL] {
@@ -309,6 +324,9 @@ extension DiskStorage {
         /// The preferred extension of cache item. It will be appended to the file name as its extension.
         /// Default is `nil`, means that the cache file does not contain a file extension.
         public var pathExtension: String? = nil
+
+        /// Default is `true`, means that the cache file name will be hashed before storing.
+        public var usesHashedFileName = true
 
         let name: String
         let fileManager: FileManager

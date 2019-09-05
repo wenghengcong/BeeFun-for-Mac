@@ -81,7 +81,7 @@ public enum BeeFunAPI {
     case getGithubTrending(model: BFGithubTrendingRequsetModel)
     
     // MARK: - Config
-    case config()
+    case config
 }
 extension BeeFunAPI: TargetType {
     
@@ -152,7 +152,7 @@ extension BeeFunAPI: TargetType {
             
         case .getGithubTrending(_):
             return "/v1/explore/trending"
-        case .config():
+        case .config:
             return "/v1/configs"
         }
         
