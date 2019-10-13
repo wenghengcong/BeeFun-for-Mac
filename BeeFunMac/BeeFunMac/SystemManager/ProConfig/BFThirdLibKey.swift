@@ -13,13 +13,13 @@ public let AppBundleIdentifier = "com.luci.beefun.mac"
 public let APNsAuthKeyID = "QW2AYPNFMK"
 
 // MARK: - BeeFun
-public let AppOfficeSite = "http://www.beefun.top"
-public let AppOfficeShortSite = "www.beefun.top"
+public let AppOfficeSite = "https://bf.54nemo.com"
+public let AppOfficeShortSite = "https://bf.54nemo.com"
 
 // MARK: - Github
 public let GithubAppClientId = "bab3eeee52719de361c9"
 public let GithubAppClientSecret = "d1e37c17f81d0d3f7de4c592523d1bf7eebb4832"
-public let GithubAppRedirectUrl = "beefunmac://www.beefun.top"
+public let GithubAppRedirectUrl = "beefunmac://bf.54nemo.com"
 //https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/
 public let GithubAppScope = "user,repo,notifications,gist,admin:repo_hook,admin:org_hook,admin:org"
-public let GithubPublicAppScope = "user,public_repository,notifications,gist,admin:repo_hook,admin:org_hook,admin:org"
+public let GithubPublicAppScope = "user,public_repo,notifications,gist,admin:repo_hook,admin:org_hook,admin:org"

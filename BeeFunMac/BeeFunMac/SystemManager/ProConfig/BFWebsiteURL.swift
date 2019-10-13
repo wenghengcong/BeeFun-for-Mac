@@ -9,5 +9,5 @@
 import Cocoa
 
 public struct BFWebsiteURL {
-    public static let AppOfficeSite = "http://www.beefun.top"
+    public static let AppOfficeSite = "https://bf.54nemo.com"
 }

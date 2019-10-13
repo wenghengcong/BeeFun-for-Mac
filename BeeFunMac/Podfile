@@ -17,7 +17,7 @@ target 'BeeFun' do
     pod 'Fabric'
 #    pod 'HotKey'
     pod 'Crashlytics'
-	pod 'Alamofire'
+	  pod 'Alamofire'
     pod 'SnapKit'
     pod "PromiseKit"
     pod 'Moya'

@@ -54,7 +54,7 @@ class BFLoginController: BFBaseViewController {
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .center
         let dic = [NSAttributedString.Key.foregroundColor : NSColor.cpBlueLinkColor, NSAttributedString.Key.paragraphStyle : pstyle] as [NSAttributedString.Key : Any]
-        self.officeWebBtn.attributedTitle = NSAttributedString(string: "@2017-2019 www.beefun.top", attributes: dic)
+        self.officeWebBtn.attributedTitle = NSAttributedString(string: "@2017-2019 54nemo.com", attributes: dic)
         
         
         let width: CGFloat = 260

@@ -152,6 +152,7 @@ extension GitHubAPI: TargetType {
         case .checkStarred( _, _):
             return header
         case .starRepo( _, _):
+            header = ["User-Agent": "BeeFunMac","Authorization": AppToken.shared.access_token ?? "", "timeoutInterval": "15.0", "Accept": "application/vnd.github.VERSION.html", "Content-Length": "0"]
             return header
         case .unstarRepo( _, _):
             return header
