@@ -44,8 +44,8 @@ extension Date: DateRepresentable {
 	/// optimize the formatting process. By default is `nil`.
 	public var customFormatter: DateFormatter? {
 		get {
-			let fomatter: DateFormatter? = getAssociatedValue(key: AssociatedKeys.customDateFormatter.rawValue, object: self as AnyObject)
-			return fomatter
+			let formatter: DateFormatter? = getAssociatedValue(key: AssociatedKeys.customDateFormatter.rawValue, object: self as AnyObject)
+			return formatter
 		}
 		set {
 			set(associatedValue: newValue, key: AssociatedKeys.customDateFormatter.rawValue, object: self as AnyObject)
@@ -145,14 +145,14 @@ extension Date: DateRepresentable {
 		return DateInRegion(self, region: region)
 	}
 
-	/// Return a date in the distant future.
+	/// Return a date in the distant past.
 	///
 	/// - Returns: Date instance.
 	public static func past() -> Date {
 		return Date.distantPast
 	}
 
-	/// Return a date in the distant past.
+	/// Return a date in the distant future.
 	///
 	/// - Returns: Date instance.
 	public static func future() -> Date {

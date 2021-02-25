@@ -20,10 +20,10 @@ target 'BeeFun' do
 	  pod 'Alamofire'
     pod 'SnapKit'
     pod "PromiseKit"
-    pod 'Moya'
-    pod 'ObjectMapper'
+    pod 'Moya', '~> 13.0.1'
+    pod 'ObjectMapper', '~> 3.5.1'
     pod 'Kingfisher'
-    pod 'CryptoSwift'
+#    pod 'CryptoSwift'
     pod 'SwiftyJSON'
     pod 'SwiftyBeaver'
     pod 'SwiftDate'

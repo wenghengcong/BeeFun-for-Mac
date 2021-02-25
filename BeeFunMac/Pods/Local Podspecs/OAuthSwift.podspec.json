@@ -1,6 +1,6 @@
 {
   "name": "OAuthSwift",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "summary": "Swift based OAuth library for iOS and macOS.",
   "homepage": "https://github.com/OAuthSwift/OAuthSwift",
@@ -11,10 +11,13 @@
   },
   "source": {
     "git": "https://github.com/OAuthSwift/OAuthSwift.git",
-    "tag": "2.0.0"
+    "tag": "2.1.0"
   },
-  "source_files": "Sources/*.swift",
-  "swift_versions": "5.0",
+  "source_files": "Sources/**/*.swift",
+  "swift_versions": [
+    "5.0",
+    "5.1"
+  ],
   "platforms": {
     "ios": "9.0",
     "osx": "10.10",
@@ -22,5 +25,5 @@
     "watchos": "3.0"
   },
   "requires_arc": false,
-  "swift_version": "5.0"
+  "swift_version": "5.1"
 }

@@ -34,69 +34,23 @@ public extension Array {
         swapAt(index, otherIndex)
     }
 
-    /// SwifterSwift: Separates array into 2 arrays based on a given predicate.
+    /// SwifterSwift: Sort an array like another array based on a key path. If the other array doesn't contain a certain value, it will be sorted last.
     ///
-    ///     [0, 1, 2, 3, 4, 5].divided { $0 % 2 == 0 } -> ( [0, 2, 4], [1, 3, 5] )
+    ///        [MyStruct(x: 3), MyStruct(x: 1), MyStruct(x: 2)].sorted(like: [1, 2, 3], keyPath: \.x)
+    ///            -> [MyStruct(x: 1), MyStruct(x: 2), MyStruct(x: 3)]
     ///
-    /// - Parameter condition: condition to evaluate each element against.
-    /// - Returns: Two arrays, the first containing the elements for which the specified condition evaluates to true, the second containing the rest.
-    func divided(by condition: (Element) throws -> Bool) rethrows -> (matching: [Element], nonMatching: [Element]) {
-        //Inspired by: http://ruby-doc.org/core-2.5.0/Enumerable.html#method-i-partition
-        var matching = [Element]()
-        var nonMatching = [Element]()
-        for element in self {
-            try condition(element) ? matching.append(element) : nonMatching.append(element)
+    /// - Parameters:
+    ///   - otherArray: array containing elements in the desired order.
+    ///   - keyPath: keyPath indiciating the property that the array should be sorted by
+    /// - Returns: sorted array.
+    func sorted<T: Hashable>(like otherArray: [T], keyPath: KeyPath<Element, T>) -> [Element] {
+        let dict = otherArray.enumerated().reduce(into: [:]) { $0[$1.element] = $1.offset }
+        return sorted {
+            guard let thisIndex = dict[$0[keyPath: keyPath]] else { return false }
+            guard let otherIndex = dict[$1[keyPath: keyPath]] else { return true }
+            return thisIndex < otherIndex
         }
-        return (matching, nonMatching)
     }
-
-    /// SwifterSwift: Returns a sorted array based on an optional keypath.
-    ///
-    /// - Parameter path: Key path to sort. The key path type must be Comparable.
-    /// - Parameter ascending: If order must be ascending.
-    /// - Returns: Sorted array based on keyPath.
-    func sorted<T: Comparable>(by path: KeyPath<Element, T?>, ascending: Bool = true) -> [Element] {
-        return sorted(by: { (lhs, rhs) -> Bool in
-            guard let lhsValue = lhs[keyPath: path], let rhsValue = rhs[keyPath: path] else { return false }
-            return ascending ? (lhsValue < rhsValue) : (lhsValue > rhsValue)
-        })
-    }
-
-    /// SwifterSwift: Returns a sorted array based on a keypath.
-    ///
-    /// - Parameter path: Key path to sort. The key path type must be Comparable.
-    /// - Parameter ascending: If order must be ascending.
-    /// - Returns: Sorted array based on keyPath.
-    func sorted<T: Comparable>(by path: KeyPath<Element, T>, ascending: Bool = true) -> [Element] {
-        return sorted(by: { (lhs, rhs) -> Bool in
-            return ascending ? (lhs[keyPath: path] < rhs[keyPath: path]) : (lhs[keyPath: path] > rhs[keyPath: path])
-        })
-    }
-
-    /// SwifterSwift: Sort the array based on an optional keypath.
-    ///
-    /// - Parameters:
-    ///   - path: Key path to sort, must be Comparable.
-    ///   - ascending: whether order is ascending or not.
-    /// - Returns: self after sorting.
-    @discardableResult
-    mutating func sort<T: Comparable>(by path: KeyPath<Element, T?>, ascending: Bool = true) -> [Element] {
-        self = sorted(by: path, ascending: ascending)
-        return self
-    }
-
-    /// SwifterSwift: Sort the array based on a keypath.
-    ///
-    /// - Parameters:
-    ///   - path: Key path to sort, must be Comparable.
-    ///   - ascending: whether order is ascending or not.
-    /// - Returns: self after sorting.
-    @discardableResult
-    mutating func sort<T: Comparable>(by path: KeyPath<Element, T>, ascending: Bool = true) -> [Element] {
-        self = sorted(by: path, ascending: ascending)
-        return self
-    }
-
 }
 
 // MARK: - Methods (Equatable)
@@ -162,4 +116,24 @@ public extension Array where Element: Equatable {
         }
     }
 
+    /// SwifterSwift: Returns an array with all duplicate elements removed using KeyPath to compare.
+    ///
+    /// - Parameter path: Key path to compare, the value must be Equatable.
+    /// - Returns: an array of unique elements.
+    func withoutDuplicates<E: Equatable>(keyPath path: KeyPath<Element, E>) -> [Element] {
+        return reduce(into: [Element]()) { (result, element) in
+            if !result.contains(where: { $0[keyPath: path] == element[keyPath: path] }) {
+                result.append(element)
+            }
+        }
+    }
+
+    /// SwifterSwift: Returns an array with all duplicate elements removed using KeyPath to compare.
+    ///
+    /// - Parameter path: Key path to compare, the value must be Hashable.
+    /// - Returns: an array of unique elements.
+    func withoutDuplicates<E: Hashable>(keyPath path: KeyPath<Element, E>) -> [Element] {
+        var set = Set<E>()
+        return filter { set.insert($0[keyPath: path]).inserted }
+    }
 }

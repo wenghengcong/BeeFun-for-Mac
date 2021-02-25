@@ -3,7 +3,7 @@
 //  Down
 //
 //  Created by Rob Phillips on 5/31/16.
-//  Copyright © 2016-2019 Glazed Donut, LLC. All rights reserved.
+//  Copyright © 2016-2019 Down. All rights reserved.
 //
 
 import Foundation
@@ -21,6 +21,21 @@ extension DownASTRenderable {
     /// - Throws: `MarkdownToASTError` if conversion fails
     public func toAST(_ options: DownOptions = .default) throws -> UnsafeMutablePointer<cmark_node> {
         return try DownASTRenderer.stringToAST(markdownString, options: options)
+    }
+
+    /// Parses the `markdownString` property into an abstract syntax tree and returns the root `Document` node.
+    ///
+    /// - Parameter options: `DownOptions` to modify parsing or rendering, defaulting to `.default`
+    /// - Returns: The root Document node for the abstract syntax tree representation of the Markdown input
+    /// - Throws: `MarkdownToASTError` if conversion fails
+    public func toDocument(_ options: DownOptions = .default) throws -> Document {
+        let tree = try toAST(options)
+
+        guard tree.type == CMARK_NODE_DOCUMENT else {
+            throw DownErrors.astRenderingError
+        }
+
+        return Document(cmarkNode: tree)
     }
 }
 

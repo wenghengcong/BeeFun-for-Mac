@@ -16,22 +16,32 @@ internal class RelativeFormatterLanguagesCache {
 
     static let shared = RelativeFormatterLanguagesCache()
 
+    @Atomic
     private(set) var cachedValues = [String: [String: Any]]()
-
+    
     func flavoursForLocaleID(_ langID: String) -> [String: Any]? {
         do {
-            guard let fullURL = Bundle(for: RelativeFormatter.self).resourceURL?.appendingPathComponent("langs/\(langID).json") else {
-                return nil
-            }
-            let data = try Data(contentsOf: fullURL)
-            let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+            
+            guard let cachedValue = cachedValues[langID] else {
+                var fileURL = Bundle.appModule?.url(forResource: langID, withExtension: "json", subdirectory: "langs")
+                if fileURL == nil {
+                    fileURL = Bundle(for: RelativeFormatter.self).resourceURL?.appendingPathComponent("langs/\(langID).json")
+                }
+                
+                guard let fullURL = fileURL else {
+                    return nil
+                }
+                let data = try Data(contentsOf: fullURL)
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
 
-            if let value = json as? [String: Any] {
-                cachedValues[langID] = value
-                return value
-            } else {
+                if let value = json as? [String: Any] {
+                    cachedValues[langID] = value
+                    return value
+                }
                 return nil
             }
+            
+            return cachedValue
 
         } catch {
             debugPrint("Failed to read data for language id: \(langID)")
@@ -92,7 +102,7 @@ public enum RelativeFormatterLanguage: String, CaseIterable {
     case id = "id" // Indonesian
     case `is` = "is" // Icelandic
     case it = "it" // Locales.italian
-    case js = "js" // Japanese
+    case ja = "ja" // Japanese
     case jgo = "jgo" // Ngomba
     case ka = "ka" // Georgian
     case kea = "kea" // Kabuverdianu
@@ -162,6 +172,7 @@ public enum RelativeFormatterLanguage: String, CaseIterable {
     case zh_Hans_SG = "zh_Hans_SG" // Chinese (Simplified, Singapore)
     case zh_Hant_HK = "zh_Hant_HK" // Chinese (Traditional, Hong Kong [China])
     case zh_Hant_MO = "zh_Hant_MO" // Chinese (Traditional, Macau [China])
+    case zh_Hans = "zh_Hans" // Chinese (Simplified)
     case zh_Hant = "zh_Hant" // Chinese (Traditional)
     case zh = "zh" // Chinese
     case zu = "zu" // Zulu
@@ -311,7 +322,7 @@ public enum RelativeFormatterLanguage: String, CaseIterable {
 
             return .many
 
-        case .id, .js, .ms, .my, .mzn, .sah, .se_FI, .si, .th, .yue_Hans, .yue_Hant,
+        case .id, .ja, .ms, .my, .mzn, .sah, .se_FI, .si, .th, .yue_Hans, .yue_Hant,
              .zh_Hans_HK, .zh_Hans_MO, .zh_Hans_SG, .zh_Hant_HK, .zh_Hant_MO, .zh:
 
             return .other

@@ -6,11 +6,11 @@
 //  Copyright © 2017 SwifterSwift
 //
 
-#if canImport(Cocoa)
-import Cocoa
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+import AppKit
 
 // MARK: - Methods
-extension NSImage {
+public extension NSImage {
 
     /// SwifterSwift: NSImage scaled to maximum size with respect to aspect ratio
     ///
@@ -37,10 +37,10 @@ extension NSImage {
         let newHeight = imageHeight * ratio
 
         // Create a new NSSize object with the newly calculated size
-        let newSize: NSSize = NSSize(width: Int(newWidth), height: Int(newHeight))
+        let newSize = NSSize(width: Int(newWidth), height: Int(newHeight))
 
         // Cast the NSImage to a CGImage
-        var imageRect: CGRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        var imageRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         let imageRef = cgImage(forProposedRect: &imageRect, context: nil, hints: nil)
 
         // Create NSImage from the CGImage using the new size

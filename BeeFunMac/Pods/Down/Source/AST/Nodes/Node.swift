@@ -23,6 +23,11 @@ public extension Node {
     var hasSuccessor: Bool {
         return cmark_node_next(cmarkNode) != nil
     }
+
+    /// Sequence of wrapped child nodes.
+    var childSequence: ChildSequence {
+        return ChildSequence(node: cmarkNode)
+    }
 }
 
 // MARK: - Helper extensions
@@ -57,7 +62,11 @@ public extension UnsafeMutablePointer where Pointee == cmark_node {
         default:                        return nil
         }
     }
-    
+
+    var parent: CMarkNode? {
+        return cmark_node_parent(self)
+    }
+
     var type: cmark_node_type {
         return cmark_node_get_type(self)
     }
@@ -92,6 +101,7 @@ public extension UnsafeMutablePointer where Pointee == cmark_node {
 }
 
 private extension String {
+    
     init?(cString: UnsafePointer<Int8>?) {
         guard let unwrapped = cString else { return nil }
         let result = String(cString: unwrapped)

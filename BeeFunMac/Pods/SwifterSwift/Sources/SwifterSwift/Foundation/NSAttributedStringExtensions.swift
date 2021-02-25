@@ -6,15 +6,15 @@
 //  Copyright © 2016 SwifterSwift
 //
 
-#if canImport(Foundation) && !os(Linux)
+#if canImport(Foundation)
 import Foundation
 
 #if canImport(UIKit)
 import UIKit
 #endif
 
-#if canImport(Cocoa)
-import Cocoa
+#if canImport(AppKit)
+import AppKit
 #endif
 
 // MARK: - Properties
@@ -27,10 +27,12 @@ public extension NSAttributedString {
     }
     #endif
 
+    #if !os(Linux)
     /// SwifterSwift: Underlined string.
     var underlined: NSAttributedString {
         return applying(attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
     }
+    #endif
 
     #if os(iOS)
     /// SwifterSwift: Italicized string.
@@ -39,22 +41,27 @@ public extension NSAttributedString {
     }
     #endif
 
+    #if !os(Linux)
     /// SwifterSwift: Struckthrough string.
     var struckthrough: NSAttributedString {
         return applying(attributes: [.strikethroughStyle: NSNumber(value: NSUnderlineStyle.single.rawValue as Int)])
     }
+    #endif
 
+    #if !os(Linux)
     /// SwifterSwift: Dictionary of the attributes applied across the whole string
     var attributes: [NSAttributedString.Key: Any] {
         guard self.length > 0 else { return [:] }
         return attributes(at: 0, effectiveRange: nil)
     }
+    #endif
 
 }
 
 // MARK: - Methods
 public extension NSAttributedString {
 
+    #if !os(Linux)
     /// SwifterSwift: Applies given attributes to the new instance of NSAttributedString initialized with self object
     ///
     /// - Parameter attributes: Dictionary of attributes
@@ -66,33 +73,30 @@ public extension NSAttributedString {
 
         return copy
     }
+    #endif
 
-    #if os(macOS)
+    #if canImport(AppKit) || canImport(UIKit)
     /// SwifterSwift: Add color to NSAttributedString.
     ///
     /// - Parameter color: text color.
     /// - Returns: a NSAttributedString colored with given color.
-    func colored(with color: NSColor) -> NSAttributedString {
-        return applying(attributes: [.foregroundColor: color])
-    }
-    #else
-    /// SwifterSwift: Add color to NSAttributedString.
-    ///
-    /// - Parameter color: text color.
-    /// - Returns: a NSAttributedString colored with given color.
-    func colored(with color: UIColor) -> NSAttributedString {
+    func colored(with color: Color) -> NSAttributedString {
         return applying(attributes: [.foregroundColor: color])
     }
     #endif
 
+    #if !os(Linux)
     /// SwifterSwift: Apply attributes to substrings matching a regular expression
     ///
     /// - Parameters:
     ///   - attributes: Dictionary of attributes
     ///   - pattern: a regular expression to target
+    ///   - options: The regular expression options that are applied to the expression during matching. See NSRegularExpression.Options for possible values.
     /// - Returns: An NSAttributedString with attributes applied to substrings matching the pattern
-    func applying(attributes: [NSAttributedString.Key: Any], toRangesMatching pattern: String) -> NSAttributedString {
-        guard let pattern = try? NSRegularExpression(pattern: pattern, options: []) else { return self }
+    func applying(attributes: [NSAttributedString.Key: Any],
+                  toRangesMatching pattern: String,
+                  options: NSRegularExpression.Options = []) -> NSAttributedString {
+        guard let pattern = try? NSRegularExpression(pattern: pattern, options: options) else { return self }
 
         let matches = pattern.matches(in: string, options: [], range: NSRange(0..<length))
         let result = NSMutableAttributedString(attributedString: self)
@@ -115,6 +119,7 @@ public extension NSAttributedString {
 
         return applying(attributes: attributes, toRangesMatching: pattern)
     }
+    #endif
 
 }
 

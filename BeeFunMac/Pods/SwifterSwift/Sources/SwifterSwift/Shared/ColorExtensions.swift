@@ -10,13 +10,13 @@
 
 #if canImport(UIKit)
 import UIKit
-/// Color
+/// SwifterSwift: Color
 public typealias Color = UIColor
 #endif
 
-#if canImport(Cocoa)
-import Cocoa
-/// Color
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+import AppKit
+/// SwifterSwift: Color
 public typealias Color = NSColor
 #endif
 
@@ -35,13 +35,13 @@ public extension Color {
         return Color(red: red, green: green, blue: blue)!
     }
 
+    // swiftlint:disable large_tuple
     /// SwifterSwift: RGB components for a Color (between 0 and 255).
     ///
     ///     UIColor.red.rgbComponents.red -> 255
     ///     NSColor.green.rgbComponents.green -> 255
     ///     UIColor.blue.rgbComponents.blue -> 255
     ///
-    // swiftlint:disable:next large_tuple
     var rgbComponents: (red: Int, green: Int, blue: Int) {
         var components: [CGFloat] {
             let comps = cgColor.components!
@@ -53,14 +53,15 @@ public extension Color {
         let blue = components[2]
         return (red: Int(red * 255.0), green: Int(green * 255.0), blue: Int(blue * 255.0))
     }
+    // swiftlint:enable large_tuple
 
+    // swiftlint:disable large_tuple
     /// SwifterSwift: RGB components for a Color represented as CGFloat numbers (between 0 and 1)
     ///
     ///     UIColor.red.rgbComponents.red -> 1.0
     ///     NSColor.green.rgbComponents.green -> 1.0
     ///     UIColor.blue.rgbComponents.blue -> 1.0
     ///
-    // swiftlint:disable:next large_tuple
     var cgFloatComponents: (red: CGFloat, green: CGFloat, blue: CGFloat) {
         var components: [CGFloat] {
             let comps = cgColor.components!
@@ -72,9 +73,10 @@ public extension Color {
         let blue = components[2]
         return (red: red, green: green, blue: blue)
     }
+    // swiftlint:enable large_tuple
 
+    // swiftlint:disable large_tuple
     /// SwifterSwift: Get components of hue, saturation, and brightness, and alpha (read-only).
-    // swiftlint:disable:next large_tuple
     var hsbaComponents: (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
         var hue: CGFloat = 0.0
         var saturation: CGFloat = 0.0
@@ -84,6 +86,7 @@ public extension Color {
         getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
         return (hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
+    // swiftlint:enable large_tuple
 
     /// SwifterSwift: Hexadecimal value string (read-only).
     var hexString: String {
@@ -366,85 +369,85 @@ public extension Color {
 
         private init() {}
 
-        /// red: 59, green: 89, blue: 152
+        /// SwifterSwift: red: 59, green: 89, blue: 152
         public static let facebook = Color(red: 59, green: 89, blue: 152)!
 
-        /// red: 0, green: 182, blue: 241
+        /// SwifterSwift: red: 0, green: 182, blue: 241
         public static let twitter = Color(red: 0, green: 182, blue: 241)!
 
-        /// red: 223, green: 74, blue: 50
+        /// SwifterSwift: red: 223, green: 74, blue: 50
         public static let googlePlus = Color(red: 223, green: 74, blue: 50)!
 
-        /// red: 0, green: 123, blue: 182
+        /// SwifterSwift: red: 0, green: 123, blue: 182
         public static let linkedIn = Color(red: 0, green: 123, blue: 182)!
 
-        /// red: 69, green: 187, blue: 255
+        /// SwifterSwift: red: 69, green: 187, blue: 255
         public static let vimeo = Color(red: 69, green: 187, blue: 255)!
 
-        /// red: 179, green: 18, blue: 23
+        /// SwifterSwift: red: 179, green: 18, blue: 23
         public static let youtube = Color(red: 179, green: 18, blue: 23)!
 
-        /// red: 195, green: 42, blue: 163
+        /// SwifterSwift: red: 195, green: 42, blue: 163
         public static let instagram = Color(red: 195, green: 42, blue: 163)!
 
-        /// red: 203, green: 32, blue: 39
+        /// SwifterSwift: red: 203, green: 32, blue: 39
         public static let pinterest = Color(red: 203, green: 32, blue: 39)!
 
-        /// red: 244, green: 0, blue: 131
+        /// SwifterSwift: red: 244, green: 0, blue: 131
         public static let flickr = Color(red: 244, green: 0, blue: 131)!
 
-        /// red: 67, green: 2, blue: 151
+        /// SwifterSwift: red: 67, green: 2, blue: 151
         public static let yahoo = Color(red: 67, green: 2, blue: 151)!
 
-        /// red: 67, green: 2, blue: 151
+        /// SwifterSwift: red: 67, green: 2, blue: 151
         public static let soundCloud = Color(red: 67, green: 2, blue: 151)!
 
-        /// red: 44, green: 71, blue: 98
+        /// SwifterSwift: red: 44, green: 71, blue: 98
         public static let tumblr = Color(red: 44, green: 71, blue: 98)!
 
-        /// red: 252, green: 69, blue: 117
+        /// SwifterSwift: red: 252, green: 69, blue: 117
         public static let foursquare = Color(red: 252, green: 69, blue: 117)!
 
-        /// red: 255, green: 176, blue: 0
+        /// SwifterSwift: red: 255, green: 176, blue: 0
         public static let swarm = Color(red: 255, green: 176, blue: 0)!
 
-        /// red: 234, green: 76, blue: 137
+        /// SwifterSwift: red: 234, green: 76, blue: 137
         public static let dribbble = Color(red: 234, green: 76, blue: 137)!
 
-        /// red: 255, green: 87, blue: 0
+        /// SwifterSwift: red: 255, green: 87, blue: 0
         public static let reddit = Color(red: 255, green: 87, blue: 0)!
 
-        /// red: 74, green: 93, blue: 78
+        /// SwifterSwift: red: 74, green: 93, blue: 78
         public static let devianArt = Color(red: 74, green: 93, blue: 78)!
 
-        /// red: 238, green: 64, blue: 86
+        /// SwifterSwift: red: 238, green: 64, blue: 86
         public static let pocket = Color(red: 238, green: 64, blue: 86)!
 
-        /// red: 170, green: 34, blue: 182
+        /// SwifterSwift: red: 170, green: 34, blue: 182
         public static let quora = Color(red: 170, green: 34, blue: 182)!
 
-        /// red: 247, green: 146, blue: 30
+        /// SwifterSwift: red: 247, green: 146, blue: 30
         public static let slideShare = Color(red: 247, green: 146, blue: 30)!
 
-        /// red: 0, green: 153, blue: 229
+        /// SwifterSwift: red: 0, green: 153, blue: 229
         public static let px500 = Color(red: 0, green: 153, blue: 229)!
 
-        /// red: 223, green: 109, blue: 70
+        /// SwifterSwift: red: 223, green: 109, blue: 70
         public static let listly = Color(red: 223, green: 109, blue: 70)!
 
-        /// red: 0, green: 180, blue: 137
+        /// SwifterSwift: red: 0, green: 180, blue: 137
         public static let vine = Color(red: 0, green: 180, blue: 137)!
 
-        /// red: 0, green: 175, blue: 240
+        /// SwifterSwift: red: 0, green: 175, blue: 240
         public static let skype = Color(red: 0, green: 175, blue: 240)!
 
-        /// red: 235, green: 73, blue: 36
+        /// SwifterSwift: red: 235, green: 73, blue: 36
         public static let stumbleUpon = Color(red: 235, green: 73, blue: 36)!
 
-        /// red: 255, green: 252, blue: 0
+        /// SwifterSwift: red: 255, green: 252, blue: 0
         public static let snapchat = Color(red: 255, green: 252, blue: 0)!
 
-        /// red: 37, green: 211, blue: 102
+        /// SwifterSwift: red: 37, green: 211, blue: 102
         public static let whatsApp = Color(red: 37, green: 211, blue: 102)!
     }
 
@@ -453,8 +456,8 @@ public extension Color {
 // MARK: - Material colors
 public extension Color {
 
+    // swiftlint:disable type_body_length
     /// SwifterSwift: Google Material design colors palette.
-    // swiftlint:disable:next type_body_length
     struct Material {
         // https://material.google.com/style/color.html
 
@@ -1811,6 +1814,7 @@ public extension Color {
         /// SwifterSwift: hex #95A5A6
         public static let concerte              = Color(hex: 0x95a5a6)!
     }
+    // swiftlint:enable type_body_length
 
 }
 #endif

@@ -19,7 +19,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
 
     // Using NSLock for Linux compatible locking 
     let requestLock = NSLock()
-    
+
     public typealias CompletionHandler = (_ result: Result<OAuthSwiftResponse, OAuthSwiftError>) -> Void
 
     /// HTTP request method
@@ -80,6 +80,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
             self.requestLock.lock()
             defer { self.requestLock.unlock() }
             if self.cancelRequested {
+                completion?(.failure(.cancelled))
                 return
             }
 
@@ -104,7 +105,9 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
 
             #if os(iOS)
                 #if !OAUTH_APP_EXTENSIONS
+                #if !targetEnvironment(macCatalyst)
                     UIApplication.shared.isNetworkActivityIndicatorVisible = self.config.sessionFactory.isNetworkActivityIndicatorVisible
+                    #endif
                 #endif
             #endif
         }
@@ -114,7 +117,9 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
     public static func completionHandler(completionHandler completion: CompletionHandler?, request: URLRequest, data: Data?, resp: URLResponse?, error: Error?) {
         #if os(iOS)
         #if !OAUTH_APP_EXTENSIONS
+        #if !targetEnvironment(macCatalyst)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        #endif
         #endif
         #endif
 
@@ -221,6 +226,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
 
     open class func makeRequest(config: Config) throws -> URLRequest {
         var request = config.urlRequest
+        OAuthSwift.log?.trace("URLRequest is created: \(request)")
         return try setupRequestForOAuth(request: &request,
                                         parameters: config.parameters,
                                         dataEncoding: config.dataEncoding,
@@ -242,6 +248,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
+        OAuthSwift.log?.trace("URLRequest is created: \(request)")
 
         return try setupRequestForOAuth(
             request: &request,

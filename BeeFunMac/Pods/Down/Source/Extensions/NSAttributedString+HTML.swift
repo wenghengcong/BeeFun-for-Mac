@@ -3,8 +3,10 @@
 //  Down
 //
 //  Created by Rob Phillips on 6/1/16.
-//  Copyright © 2016-2019 Glazed Donut, LLC. All rights reserved.
+//  Copyright © 2016-2019 Down. All rights reserved.
 //
+
+#if !os(Linux)
 
 #if os(macOS)
     import AppKit
@@ -32,3 +34,4 @@ extension NSAttributedString {
     }
 
 }
+#endif // !os(Linux)

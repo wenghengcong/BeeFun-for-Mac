@@ -173,7 +173,7 @@ public extension DateInRegion {
 			return compare(.isSameMonth(lastMonth))
 
 		case .isSameMonth(let refDate):
-			return (date.year == refDate.date.year) && (date.month == refDate.date.month)
+			return (year == refDate.year) && (month == refDate.month)
 
 		case .isThisYear:
 			return compare(.isSameYear(region.nowInThisRegion()))
@@ -187,7 +187,7 @@ public extension DateInRegion {
 			return compare(.isSameYear(lastYear))
 
 		case .isSameYear(let refDate):
-			return (date.year == refDate.date.year)
+			return (year == refDate.year)
 
 		case .isInTheFuture:
 			return compare(.isLater(than: region.nowInThisRegion()))
@@ -280,6 +280,24 @@ public extension DateInRegion {
 		return (compare(toDate: date, granularity: granularity) == .orderedSame)
 	}
 
+	/// Returns a value between 0.0 and 1.0 or nil, that is the position of current date between 2 other dates.
+	///
+	/// - Parameters:
+	///   - startDate: range upper bound date
+	///   - endDate: range lower bound date
+	/// - Returns: `nil` if current date is not between `startDate` and `endDate`. Otherwise returns position between `startDate` and `endDate`.
+	func positionInRange(date startDate: DateInRegion, and endDate: DateInRegion) -> Double? {
+		let diffCurrentDateAndStartDate = self - startDate
+		guard diffCurrentDateAndStartDate >= 0 else {
+			return nil
+		}
+		let diffEndDateAndStartDate = endDate - startDate
+		guard diffEndDateAndStartDate > 0, diffCurrentDateAndStartDate <= diffEndDateAndStartDate else {
+			return nil
+		}
+		return diffCurrentDateAndStartDate / diffEndDateAndStartDate
+	}
+
 	/// Return `true` if receiver data is contained in the range specified by two dates.
 	///
 	/// - Parameters:
@@ -299,7 +317,7 @@ public extension DateInRegion {
 	/// - Parameter date: The date to compare to self
 	/// - Returns: The date that is earlier
 	func earlierDate(_ date: DateInRegion) -> DateInRegion {
-		return (self.date.timeIntervalSince1970 <= date.date.timeIntervalSince1970) ? self : date
+		return self.date.timeIntervalSince(date.date) <= 0 ? self : date
 	}
 
 	/// Return the later of two dates, between self and a given date.
@@ -307,7 +325,20 @@ public extension DateInRegion {
 	/// - Parameter date: The date to compare to self
 	/// - Returns: The date that is later
 	func laterDate(_ date: DateInRegion) -> DateInRegion {
-		return (self.date.timeIntervalSince1970 >= date.date.timeIntervalSince1970) ? self : date
+		return self.date.timeIntervalSince(date.date) >= 0 ? self : date
 	}
+
+    /// Returns the difference in the calendar component given (like day, month or year)
+    /// with respect to the other date as a positive integer
+    func difference(in component: Calendar.Component, from other: DateInRegion) -> Int? {
+        return self.date.difference(in: component, from: other.date)
+    }
+
+    /// Returns the differences in the calendar components given (like day, month and year)
+    /// with respect to the other date as dictionary with the calendar component as the key
+    /// and the diffrence as a positive integer as the value
+    func differences(in components: Set<Calendar.Component>, from other: DateInRegion) -> [Calendar.Component: Int] {
+        return self.date.differences(in: components, from: other.date)
+    }
 
 }

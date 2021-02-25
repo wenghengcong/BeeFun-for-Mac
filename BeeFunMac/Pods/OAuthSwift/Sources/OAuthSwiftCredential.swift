@@ -27,7 +27,12 @@ public enum OAuthSwiftHashMethod: String {
         switch self {
         case .sha1:
             let mac = SHA1(data).calculate()
-            return Data(bytes: UnsafePointer<UInt8>(mac), count: mac.count)
+            var hashedData: Data?
+            mac.withUnsafeBufferPointer { pointer in
+                guard let baseAddress = pointer.baseAddress else { return }
+                hashedData = Data(bytes: baseAddress, count: mac.count)
+            }
+            return hashedData
         case .none:
             return data
         }
@@ -223,6 +228,8 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
         if case .oauth1 = version {
             self.signatureMethod = SignatureMethod(rawValue: (decoder.decodeObject(of: NSString.self, forKey: NSCodingKeys.signatureMethod) as String?) ?? "HMAC_SHA1") ?? .HMAC_SHA1
         }
+
+        OAuthSwift.log?.trace("Credential object is decoded")
     }
 
     open func encode(with coder: NSCoder) {
@@ -237,6 +244,8 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
         if case .oauth1 = version {
             coder.encode(self.signatureMethod.rawValue, forKey: NSCodingKeys.signatureMethod)
         }
+        OAuthSwift.log?.trace("Credential object is encoded")
+
     }
     // } // End NSCoding extension
 
@@ -266,6 +275,8 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
         if case .oauth1 = version {
             try container.encode(self.signatureMethod.rawValue, forKey: .signatureMethodRawValue)
         }
+        OAuthSwift.log?.trace("Credential object is encoded")
+
     }
 
     public required convenience init(from decoder: Decoder) throws {
@@ -328,6 +339,7 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
             }
         }
 
+        OAuthSwift.log?.trace("Authorization headers: \(headerComponents.joined(separator: ", "))")
         return "OAuth " + headerComponents.joined(separator: ", ")
     }
 
@@ -388,6 +400,10 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
         let encodedParameterString = parameterString.urlEncoded
 
         let encodedURL = url.absoluteString.urlEncoded
+        
+        guard self.signatureMethod != .PLAINTEXT else {
+            return "\(consumerSecret)&\(oauthTokenSecret)"
+        }
 
         let signatureBaseString = "\(method)&\(encodedURL)&\(encodedParameterString)"
 

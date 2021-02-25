@@ -14,8 +14,8 @@ import Foundation
 import UIKit
 #endif
 
-#if canImport(Cocoa)
-import Cocoa
+#if canImport(AppKit)
+import AppKit
 #endif
 
 #if canImport(CoreGraphics)
@@ -31,9 +31,17 @@ public extension String {
     ///		"SGVsbG8gV29ybGQh".base64Decoded = Optional("Hello World!")
     ///
     var base64Decoded: String? {
-        // https://github.com/Reza-Rg/Base64-Swift-Extension/blob/master/Base64.swift
-        guard let decodedData = Data(base64Encoded: self) else { return nil }
-        return String(data: decodedData, encoding: .utf8)
+        let remainder = count % 4
+
+        var padding = ""
+        if remainder > 0 {
+            padding = String(repeating: "=", count: 4 - remainder)
+        }
+
+        guard let data = Data(base64Encoded: self + padding,
+                              options: .ignoreUnknownCharacters) else { return nil }
+
+        return String(data: data, encoding: .utf8)
     }
     #endif
 
@@ -154,6 +162,22 @@ public extension String {
         return comps.joined(separator: "").count == 0 && hasLetters && hasNumbers
     }
 
+    /// SwifterSwift: Check if string is palindrome.
+    ///
+    ///     "abcdcba".isPalindrome -> true
+    ///     "Mom".isPalindrome -> true
+    ///     "A man a plan a canal, Panama!".isPalindrome -> true
+    ///     "Mama".isPalindrome -> false
+    ///
+    var isPalindrome: Bool {
+        let letters = filter { $0.isLetter }
+        guard !letters.isEmpty else { return false }
+        let midIndex = letters.index(letters.startIndex, offsetBy: letters.count / 2)
+        let firstHalf = letters[letters.startIndex..<midIndex]
+        let secondHalf = letters[midIndex..<letters.endIndex].reversed()
+        return !zip(firstHalf, secondHalf).contains(where: { $0.lowercased() != $1.lowercased() })
+    }
+
     #if canImport(Foundation)
     /// SwifterSwift: Check if string is valid email format.
     ///
@@ -222,12 +246,8 @@ public extension String {
     }
     #endif
 
-    #if canImport(Foundation) && !os(Linux)
-    /// SwifterSwift: Check if string is a valid Swift number.
-    ///
-    /// Note:
-    /// In North America, "." is the decimal separator,
-    /// while in many parts of Europe "," is used,
+    #if canImport(Foundation)
+    /// SwifterSwift: Check if string is a valid Swift number. Note: In North America, "." is the decimal separator, while in many parts of Europe "," is used,
     ///
     ///		"123".isNumeric -> true
     ///     "1.3".isNumeric -> true (en_US)
@@ -237,7 +257,11 @@ public extension String {
     var isNumeric: Bool {
         let scanner = Scanner(string: self)
         scanner.locale = NSLocale.current
+        #if os(Linux) || targetEnvironment(macCatalyst)
+        return scanner.scanDecimal() != nil && scanner.isAtEnd
+        #else
         return scanner.scanDecimal(nil) && scanner.isAtEnd
+        #endif
     }
     #endif
 
@@ -421,7 +445,7 @@ public extension String {
 public extension String {
 
     #if canImport(Foundation)
-    /// Float value from string (if applicable).
+    /// SwifterSwift: Float value from string (if applicable).
     ///
     /// - Parameter locale: Locale (default is Locale.current)
     /// - Returns: Optional Float value from given string.
@@ -434,7 +458,7 @@ public extension String {
     #endif
 
     #if canImport(Foundation)
-    /// Double value from string (if applicable).
+    /// SwifterSwift: Double value from string (if applicable).
     ///
     /// - Parameter locale: Locale (default is Locale.current)
     /// - Returns: Optional Double value from given string.
@@ -447,7 +471,7 @@ public extension String {
     #endif
 
     #if canImport(CoreGraphics) && canImport(Foundation)
-    /// CGFloat value from string (if applicable).
+    /// SwifterSwift: CGFloat value from string (if applicable).
     ///
     /// - Parameter locale: Locale (default is Locale.current)
     /// - Returns: Optional CGFloat value from given string.
@@ -577,27 +601,23 @@ public extension String {
         return self[self.index(startIndex, offsetBy: index)]
     }
 
-    /// SwifterSwift: Safely subscript string within a half-open range.
+    /// SwifterSwift: Safely subscript string within a given range.
     ///
-    ///		"Hello World!"[safe: 6..<11] -> "World"
-    ///		"Hello World!"[safe: 21..<110] -> nil
+    ///        "Hello World!"[safe: 6..<11] -> "World"
+    ///        "Hello World!"[safe: 21..<110] -> nil
     ///
-    /// - Parameter range: Half-open range.
-    subscript(safe range: CountableRange<Int>) -> String? {
-        guard let lowerIndex = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) else { return nil }
-        guard let upperIndex = index(lowerIndex, offsetBy: range.upperBound - range.lowerBound, limitedBy: endIndex) else { return nil }
-        return String(self[lowerIndex..<upperIndex])
-    }
+    ///        "Hello World!"[safe: 6...11] -> "World!"
+    ///        "Hello World!"[safe: 21...110] -> nil
+    ///
+    /// - Parameter range: Range expression.
+    subscript<R>(safe range: R) -> String? where R: RangeExpression, R.Bound == Int {
+        let range = range.relative(to: Int.min..<Int.max)
+        guard range.lowerBound >= 0,
+            let lowerIndex = index(startIndex, offsetBy: range.lowerBound, limitedBy: endIndex),
+            let upperIndex = index(startIndex, offsetBy: range.upperBound, limitedBy: endIndex) else {
+                return nil
+        }
 
-    /// SwifterSwift: Safely subscript string within a closed range.
-    ///
-    ///		"Hello World!"[safe: 6...11] -> "World!"
-    ///		"Hello World!"[safe: 21...110] -> nil
-    ///
-    /// - Parameter range: Closed range.
-    subscript(safe range: ClosedRange<Int>) -> String? {
-        guard let lowerIndex = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) else { return nil }
-        guard let upperIndex = index(lowerIndex, offsetBy: range.upperBound - range.lowerBound + 1, limitedBy: endIndex) else { return nil }
         return String(self[lowerIndex..<upperIndex])
     }
 
@@ -1032,6 +1052,17 @@ public extension String {
         return String(dropLast(suffix.count))
     }
 
+    /// SwifterSwift: Adds prefix to the string.
+    ///
+    ///     "www.apple.com".withPrefix("https://") -> "https://www.apple.com"
+    ///
+    /// - Parameter prefix: Prefix to add to the string.
+    /// - Returns: The string with the prefix prepended.
+    func withPrefix(_ prefix: String) -> String {
+        // https://www.hackingwithswift.com/articles/141/8-useful-swift-extensions
+        guard !hasPrefix(prefix) else { return self }
+        return prefix + self
+    }
 }
 
 // MARK: - Initializers
@@ -1081,7 +1112,7 @@ public extension String {
     private typealias Font = UIFont
     #endif
 
-    #if canImport(Cocoa)
+    #if canImport(AppKit) && !targetEnvironment(macCatalyst)
     private typealias Font = NSFont
     #endif
 
@@ -1113,22 +1144,12 @@ public extension String {
     }
     #endif
 
-    #if canImport(UIKit)
+    #if canImport(AppKit) || canImport(UIKit)
     /// SwifterSwift: Add color to string.
     ///
     /// - Parameter color: text color.
     /// - Returns: a NSAttributedString versions of string colored with given color.
-    func colored(with color: UIColor) -> NSAttributedString {
-        return NSMutableAttributedString(string: self, attributes: [.foregroundColor: color])
-    }
-    #endif
-
-    #if canImport(Cocoa)
-    /// SwifterSwift: Add color to string.
-    ///
-    /// - Parameter color: text color.
-    /// - Returns: a NSAttributedString versions of string colored with given color.
-    func colored(with color: NSColor) -> NSAttributedString {
+    func colored(with color: Color) -> NSAttributedString {
         return NSMutableAttributedString(string: self, attributes: [.foregroundColor: color])
     }
     #endif
@@ -1168,7 +1189,7 @@ public extension String {
 
 }
 
-#if canImport(Foundation) && !os(Linux)
+#if canImport(Foundation)
 
 // MARK: - NSString extensions
 public extension String {
@@ -1205,6 +1226,8 @@ public extension String {
 
     /// SwifterSwift: NSString appendingPathComponent(str: String)
     ///
+    /// - Note: This method only works with file paths (not, for example, string representations of URLs.
+    ///   See NSString [appendingPathComponent(_:)](https://developer.apple.com/documentation/foundation/nsstring/1417069-appendingpathcomponent)
     /// - Parameter str: the path component to append to the receiver.
     /// - Returns: a new string made by appending aString to the receiver, preceded if necessary by a path separator.
     func appendingPathComponent(_ str: String) -> String {
